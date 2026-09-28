@@ -442,4 +442,18 @@ only partial disclosure. Do not repeat that.
   (no precedent) — headline stays unadjusted; step vs no step still his call. parallel_gross_vac.R (Sam's request): the full battery
   with main = UNADJUSTED gross inflows (mig_gross, no step, no rescaling) + L_ln_vac_wap, unemployment retained; both samples; last in
   run_all_1964.R; tables numbered G2-G27 to mirror B2-B25. Not in any manuscript. Sam has NOT yet decided on log vacancies in the headline.
+- 28 Sep 2026 (night, 3; Sam): ONE DATASET — Sam: do NOT delete the pasted BoE columns; all data go INTO the workbook. export_dataset.R
+  writes sheets data_1964 / data_1977 (assembled canonical variables, pre-lag) into Dissertation_Dataset_Final.xlsx via openxlsx
+  (Sam's sheets and 113 formulas verified unchanged); data_common.R reads them when present, CSVs only under REBUILD_DATA <- TRUE.
+  RE-RUN export_dataset.R after any determinants/*.csv or assembly change, then commit the workbook. Naturalisations cit_nat_k
+  (cz_03 residence + marriage) added: null for British inflows on both samples and in every region; B15/G15 carry grants / nat / reg.
+- 28 Sep 2026 (night, 3; Sam): (1) DO NOT update the manuscript text/tables (or rebuild documents) on every code run — Sam is testing;
+  outputs change only when he decides. (2) ONE DATASET: keep the pasted BoE columns; export_dataset.R writes sheets data_1964 /
+  data_1977 (assembled canonical variables, pre-lag) into Dissertation_Dataset_Final.xlsx via openxlsx (Sam's sheets + 113 formulas
+  verified unchanged); data_common.R reads them when present (CSVs only under REBUILD_DATA <- TRUE). RE-RUN export_dataset.R after any
+  determinants/*.csv or assembly change and commit the workbook. Code must run locally in RStudio (wd = diss_replication/).
+  (3) Grants / naturalisations / registrations of citizenship enter for the CURRENT year (cit_grants_k, cit_nat_k, cit_reg_k), never
+  lagged; series end 2018. All null for British inflows on both samples and in every region. (4) Three parallel specifications:
+  parallel_spec.R engine (GROSS, VAC switches) + parallel_gross_vac.R, parallel_gross.R (gross, no vacancy term), parallel_rate_vac.R
+  (published DV + log vacancies); Tables G2-G27; in run_all_1964.R. Nothing from them is in any manuscript.
 

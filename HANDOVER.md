@@ -33,7 +33,14 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
    Sam's DV stance: the DV is the outcome of immigration policy overall, "non-EU" a convenient label, no model-based adjustment (no
    precedent); step vs no step still his call. **`parallel_gross_vac.R`** (Sam's request) reruns every test with main = unadjusted
    gross inflows + log vacancies/WAP (Tables G2–G27, both samples; last in `run_all_1964.R`); nothing from it is in a manuscript.
-5. Earlier open decisions remain in §9.
+5. **Later that night (Sam):** do NOT update manuscript text/tables on every code run (he is testing). The pasted BoE columns stay;
+   instead `export_dataset.R` writes the assembled dataset of each sample into the workbook (sheets `data_1964`, `data_1977`) and
+   `data_common.R` reads them when present — every script that sources it needs only `Dissertation_Dataset_Final.xlsx` and runs in
+   RStudio with the working directory set to `diss_replication/`. Re-run `export_dataset.R` (`REBUILD_DATA`) after any source change
+   and commit the workbook. Citizenship grants / naturalisations / registrations enter for the current year (Sam), all null for
+   British inflows. Three parallel specifications: engine `parallel_spec.R` (GROSS, VAC) with wrappers `parallel_gross_vac.R`,
+   `parallel_gross.R`, `parallel_rate_vac.R` (Tables G2–G27, both samples). Manuscript and run_all outputs not regenerated.
+6. Earlier open decisions remain in §9.
 
 ---
 
@@ -133,7 +140,8 @@ Workbook `Dissertation_Dataset_Final.xlsx`: sheets `ReformSPA` (core data 1975�
 | `gad_obr_tests.R` | further controls part 3: F6 GAD contribution pressure; F7 OBR borrowing forecasts; F8 debt dynamics |
 | **`no_projection.R`** | the fiscal model without the projection (both samples): A candidate screen on Sam's two-part criterion (fiscal candidates included), B pre-stated selection, C1/C2 models (int_tme, inflation, both), D OOS forecasts, E gross + EU placebo. **`primary_int_tme.R`**: exploratory int_tme-as-primary pipeline |
 | `replication_1977.R` | core pipeline; 28 Sep: DR/pub-dated 1977–78 from `dr_corrected.csv`, pub-dated N = 42, `SKIP_VINTAGE_CHECK=1` skips the .xls reconstruction |
-| `parallel_gross_vac.R` | PARALLEL RUN (Sam, 28 Sep): the whole battery with main = log unadjusted gross inflows (no denominator/step/rescaling) + `L_ln_vac_wap`, unemployment retained; both samples; Tables G2–G27 mirror B2–B25 (gross counterparts of every alternative DV built inside the script; `fit()` defaults to `mig_gross` there) |
+| `export_dataset.R` | writes sheets `data_1964`/`data_1977` (the assembled dataset) into the workbook; `data_common.R` reads them when present, CSVs only under `REBUILD_DATA <- TRUE` |
+| `parallel_spec.R` (+ `parallel_gross_vac.R`, `parallel_gross.R`, `parallel_rate_vac.R`) | PARALLEL SPECIFICATIONS (Sam, 28 Sep): the whole battery with main chosen by GROSS (log unadjusted gross inflows, no denominator/step/rescaling, vs published mig_rate) and VAC (+`L_ln_vac_wap`), unemployment retained; both samples; Tables G2–G27 mirror B2–B25 (alternative DVs built on the main's basis inside the engine; `fit()` defaults to the main DV there) |
 | `manuscript_1964.R` | writes `tables_1964.json` (Tables 2/3/4/B2, bounds with step as fixed regressor, 24 Figure 4 rows, timing placebo, second lag, bootstrap bias correction, permits, British, stability) |
 | `permits_check.R`, `appendix_permits.R`, `appendix_british.R`, `stability_check.R`, `spending_check.R`, `determinants_check.R`, `tax_grid.R` | thesis Section 9 / Appendix A exhibits |
 

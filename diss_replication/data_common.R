@@ -3,9 +3,10 @@
 # for either sample. Sourced by boe_tests.R, boe_appendix.R, extra_tests.R, gad_obr_tests.R.
 #     SAMPLE == "1964": extended sample (sheet `1964`; mig_rate = series B), Y0 = 1965, STEP = "basis_pre1975"
 #     SAMPLE == "1977": core sample (sheet ReformSPA; mig_rate = non-EU citizens), Y0 = 1977, STEP = NULL
-# Inputs: Dissertation_Dataset_Final.xlsx; determinants/boe_extras_1962_2019.csv;
-# determinants/boe_a27_tax_variants_1956_2019.csv; determinants/extension_1962_2019_extras.csv;
-# determinants/gad/gad_pressure_series_1959_2019.csv; determinants/work_permits.csv.
+# ONE DATASET (Sam, 28 Sep 2026): the assembled variables live in the workbook itself, sheets `data_1964` and `data_1977`
+# (written by export_dataset.R), so a run needs nothing but Dissertation_Dataset_Final.xlsx. When that sheet exists it is read
+# as is; the determinants/*.csv sources are used only when the sheet is absent or REBUILD_DATA <- TRUE (export_dataset.R),
+# which is how the sheet is regenerated after any source changes.
 # =============================================================================
 suppressPackageStartupMessages(library(readxl))
 if (!exists("SAMPLE")) SAMPLE <- "1964"
@@ -14,6 +15,11 @@ num_df <- function(d) { d <- d[, !vapply(d, function(x) all(is.na(x)) || is.char
   for (v in setdiff(names(d), "year")) d[[v]] <- suppressWarnings(as.numeric(d[[v]])); d }
 ext <- num_df(as.data.frame(read_excel(WB, sheet = "1964"))); ext <- ext[!is.na(ext$year), ]
 ref <- as.data.frame(read_excel(WB, sheet = "ReformSPA")); ref <- ref[!is.na(ref$year), ]
+if (SAMPLE == "1964") { STEP <- "basis_pre1975"; Y0 <- 1965; LAB <- "extended sample, 1965-" } else { STEP <- NULL; Y0 <- 1977; LAB <- "core sample, 1977-" }
+DATA_SHEET <- paste0("data_", SAMPLE); FROM_SHEET <- !isTRUE(get0("REBUILD_DATA", ifnotfound = FALSE)) && DATA_SHEET %in% excel_sheets(WB)
+if (FROM_SHEET) {
+  raw <- num_df(as.data.frame(read_excel(WB, sheet = DATA_SHEET))); raw <- raw[!is.na(raw$year), ]; SPLICE_LOGRATIO <- raw$splice_logratio[1]
+} else {
 boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")
 exs <- read.csv("determinants/extension_1962_2019_extras.csv"); exs$dr_note <- NULL
 gad <- read.csv("determinants/gad/gad_pressure_series_1959_2019.csv"); gad <- gad[gad$rule == "base", ]
@@ -29,13 +35,11 @@ take <- function(d, src, cols) { for (v in intersect(cols, names(src))) if (!(v 
 if (SAMPLE == "1964") {
   raw <- ext; wl <- c(NA, head(raw$workpop, -1))
   raw$mig_rate <- log(1000 * (1000 * raw$dv_B_splice_raw) / wl); raw$mig_gross <- log(1000 * raw$dv_B_splice_raw)
-  STEP <- "basis_pre1975"; Y0 <- 1965; LAB <- "extended sample, 1965-"
 } else {
   raw <- data.frame(year = ref$year, mig_rate = ref$loglev_nEU_WAPlagK, mig_gross = log(ref$nEU_inflows), delta_oadr_10 = ref$delta_oadr_10,
                     tax_workpop = ref$tax_workpop, ln_debt_gdp = ref$ln_debt_gdp, unem = ref$unem, workpop = ref$workpop,
                     inflation = 100 * c(NA, diff(log(ref$`deflator24_25=100`))))
   raw <- take(raw, ext, c("lt_inf_exp", "st_inf_exp", "tfp_growth", "delta_dr_10"))
-  STEP <- NULL; Y0 <- 1977; LAB <- "core sample, 1977-"
 }
 # 2017-19 from ONS / BoE / BIS / Land Registry / OBR, spliced onto the Millennium 2016 values (Sam, 27 Sep 2026: main results
 # run to 2019; the secondary check ends in 2016 with Millennium data only). Method and sources: the 'source' column of the file.
@@ -57,6 +61,7 @@ raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (
 raw$ltim_rate <- log(as.numeric(ref$ltim_nEU_inflows_WAPlagK)[match(y, ref$year)])
 raw$cit_grants_k <- cit$cit_grants[match(y, cit$year)] / 1000; raw$cit_reg_k <- (cit$cit_reg_minor + cit$cit_reg_other)[match(y, cit$year)] / 1000
 raw$cit_overseas_k <- cit$cit_overseas[match(y, cit$year)] / 1000
+raw$cit_nat_k <- (cit$cit_nat_res + cit$cit_nat_marr)[match(y, cit$year)] / 1000   # naturalisations (residence + marriage), the discretionary route (Sam, 28 Sep 2026)
 for (r in c("OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFRICA", "REST OF THE WORLD")) {   # British citizens by region of last residence (IPS 3.01)
   v <- 1000 * (1000 * ips[[paste0("Inflow_", r, "_brit")]][match(y, ips$year)]) / wl; v[!is.finite(v) | v <= 0] <- NA
   raw[[paste0("brit_", tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
@@ -123,8 +128,10 @@ defl <- if (SAMPLE == "1964") ifelse(y < 1975, pre("deflator_2024_25_100", f62),
 if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) & !is.na(raw$wage_inflation) & y >= 2017)) awe[i] <- awe[i - 1] * (1 + raw$wage_inflation[i] / 100)
   raw$tax_earn <- (raw$tax_workpop * 1000 * raw$workpop) / (52 * awe / defl * 100) / 1e6 }
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
+raw$splice_logratio <- SPLICE_LOGRATIO   # carried in the data sheet so the FROM_SHEET path recovers it
+}
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",

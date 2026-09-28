@@ -111,6 +111,6 @@ for (k in names(SMP)) { d <- SMP[[k]]$df; S <- SMP[[k]]$S; STEP <- SMP[[k]]$STEP
   if (EXT) { st <- c(1965, 1968, 1971, 1974, 1977, 1979); cat("Sample starts (end 2019), delta_oadr_10:", paste(vapply(st, function(y) { m <- fit(subset(d, year >= y & year <= 2019), fbase(k, TRUE)); sprintf("%d %.4f", y, coef(m)["delta_oadr_10"]) }, character(1)), collapse = "; "), "\n") } }
 # --- P10 grants of citizenship made outside the UK (cz_04, 1962-82) and the British inflow ------------------------------------
 for (k in names(SMP)) { S <- SMP[[k]]$S; CT <- c("L_tax_workpop", "L_ln_debt_gdp", "L_unem")
-  m <- fit(subset(S, year <= 1983), c("L_brit_rate", "delta_oadr_10", CT, "L_cit_overseas_k"), "brit_rate")
-  if (!is.null(m)) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("P10 %s brit_rate to 1983 +cit_overseas_k: %.4f (p %s), delta_oadr_10 %.4f (p %s), N %d\n", k, ct["L_cit_overseas_k", 1], pf(ct["L_cit_overseas_k", 4]), ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) } }
+  m <- fit(subset(S, year <= 1983), c("L_brit_rate", "delta_oadr_10", CT, "cit_overseas_k"), "brit_rate")
+  if (!is.null(m)) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("P10 %s brit_rate to 1983 +cit_overseas_k: %.4f (p %s), delta_oadr_10 %.4f (p %s), N %d\n", k, ct["cit_overseas_k", 1], pf(ct["cit_overseas_k", 4]), ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) } }
 
