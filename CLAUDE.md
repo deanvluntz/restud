@@ -419,4 +419,15 @@ only partial disclosure. Do not repeat that.
   Online Appendix docx rebuilt from tables_1977.json (manuscript_variants/tables.json had been empty). Splice sources in
   determinants/SOURCES_2017_2019.md; four ONS BoP/national-accounts columns and debt_interest_tme lack series IDs -- Sam to confirm.
   Combined manuscript 57 pp. 1964-only manuscript untouched (Sam: ignore for now). Sam reads everything at the end.
+- 28 Sep 2026 (night, Sam's table notes): TABLE RULES — first column "main"; "+name" adds; bare "name" replaces the baseline variable
+  the notes name; NO columns replacing the projection except level/horizon/total-DR; candidate screens, selection, sub-samples,
+  second lag, sample starts are PRIVATE (private_tests.R), never published; every table defines its variables (screens run last).
+  Published set = B6-B14 robustness_tables.R, B15-B17 without_projection.R, B18-B24 controls_tables.R (categorical: labour market
+  with log vacancies, growth, trade, inflation/expectations/money, current+projected spending incl. GAD, borrowing/plans/rules incl.
+  psnb for ln_debt_gdp, debt dynamics incl. Bank Rate/bill/10y gilt/consols). Treasury-view variables folded into categories (no own
+  table); Macpherson cited as Institute for Government (2024a). New variables: tax_earn, level_dr_10, tot_rate, bank_rate, consol,
+  growth_pc, growth_fc (HMT start-of-year forecast), lab_prod. DATA FIX: 2017-19 splices now applied on the extended sample too
+  (sheet paste had blocked them) — extended BoE-column numbers changed slightly (N 55). Emigration = text line under B11.
+  Sam has NOT yet decided on log vacancies in the headline rule; decision pending. Combined manuscript rewritten (7.1 short: B15/B16/B17;
+  7.2 by category); Dynamics paragraph and split-sample sentence removed at Sam's request.
 

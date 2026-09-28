@@ -40,7 +40,9 @@ if (SAMPLE == "1964") {
 onsx <- read.csv("determinants/ons_extension_2017_2019.csv"); onsx$source <- NULL
 for (v in setdiff(names(onsx), "year")) { for (src in c("boe", "p1")) { d0 <- get(src); if (v %in% names(d0)) { i <- match(onsx$year, d0$year); ok <- !is.na(i) & is.na(d0[[v]][i]); d0[[v]][i[ok]] <- onsx[[v]][ok]; assign(src, d0) } } }
 raw <- take(raw, boe, setdiff(names(boe), "year")); raw <- take(raw, tax, setdiff(names(tax), "year"))
-raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, tvw, c("openness", "m4_growth", "workforce_k")); raw <- take(raw, fbk, c("psnb_gdp", "psnd_gdp", "tax_gdp")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
+# the `1964` sheet carries Sam's paste of the BoE extras to 2016, which take() keeps; the 2017-19 splices apply to both samples (28 Sep 2026)
+for (v in setdiff(names(onsx), "year")) if (v %in% names(raw)) { i <- match(onsx$year, raw$year); ok <- !is.na(i) & is.na(raw[[v]][i]); raw[[v]][i[ok]] <- onsx[[v]][ok] }
+raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, tvw, c("openness", "m4_growth", "workforce_k", "bank_rate")); raw <- take(raw, fbk, c("psnb_gdp", "psnd_gdp", "tax_gdp")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
@@ -51,7 +53,7 @@ ren <- c(unem_boe = "unem_spliced_boe", unem_claim = "unem_cc", growth = "uk_gro
          tax_inc = "cg_income_tax_real_pw", tax_nics = "cg_nics_real_pw", tax_nics_emp = "cg_nics_employees_real_pw", tax_nics_er = "cg_nics_employers_real_pw",
          tax_direct = "cg_direct_taxes_real_pw", tax_indirect = "cg_tax_products_production_real_pw", tax_vat = "cg_vat_real_pw",
          tax_corp = "cg_corporation_tax_real_pw", tax_receipts = "cg_receipts_real_pw", int_gdp = "debt_interest_gdp", int_tme = "debt_interest_tme",
-         gilt = "gilt10_yield", r_g = "r_minus_g", fc_budget = "fc_psnb_gdp_h0", fc_planned = "fc_psnb_surprise", fc_medium = "fc_psnb_gdp_hmax",
+         gilt = "gilt10_yield", consol = "consol_yield", r_g = "r_minus_g", fc_budget = "fc_psnb_gdp_h0", fc_planned = "fc_psnb_surprise", fc_medium = "fc_psnb_gdp_hmax",
          grants_gdp = "grants_gdp", tme_gdp = "tme_gdp", days_lost_k = "days_lost_k")
 for (k in names(ren)) if (ren[[k]] %in% names(raw)) raw[[k]] <- raw[[ren[[k]]]]
 if (!"vac_wap" %in% names(raw)) raw$vac_wap <- NA
@@ -87,13 +89,29 @@ raw$particip <- 100 * (1000 * raw$workforce_k) / raw$workpop
 raw$tax_ceiling <- vapply(seq_along(y), function(i) { w <- which(y >= y[i] - 10 & y < y[i]); if (length(w) < 5) NA_real_ else raw$tax_gdp[i] - max(raw$tax_gdp[w], na.rm = TRUE) }, numeric(1))
 raw$tme_real_growth <- if ("tme_gbp_m" %in% names(raw)) 100 * c(NA, diff(log(raw$tme_gbp_m))) - raw$inflation else NA
 raw$boe_indep <- as.numeric(y >= 1998); raw$golden_rule <- as.numeric(y >= 1998 & y <= 2009); raw$obr_era <- as.numeric(y >= 2010)
+# growth per head, the Treasury's start-of-year growth forecast, labour productivity, the level of the total DR, total inflows
+raw$totpop_all <- if (SAMPLE == "1964") raw$totpop else as.numeric(ref$totpop)[match(y, ref$year)]
+raw$growth_pc <- raw$growth - 100 * c(NA, diff(log(raw$totpop_all)))
+raw$growth_fc <- as.numeric(ref$growth_fc_yr0)[match(y, ref$year)]                          # HM Treasury forecast of growth in year t, made at the start of t (from 1976)
+raw$lab_prod <- if ("lab_prod_hour_growth" %in% names(raw)) raw$lab_prod_hour_growth else NA
+tvb <- tv[tv$year == tv$vintage, ]; dr0_pre <- 1000 * (tvb$totpop_k - tvb$workpop_k) / tvb$workpop_k   # total dependants per 1,000 WAP in the vintage base year
+vint_pre <- o63$vintage[match(y, o63$year)]                                                          # vintage in force before 1975
+drc <- read.csv("dr_corrected.csv"); dr10_post <- gref("dr_10"); i <- is.na(dr10_post) & y >= 1975; dr10_post[i] <- as.numeric(drc$dr_10[match(y[i], drc$year)])   # 1977-78 from the generated file
+raw$level_dr_10 <- ifelse(y < 1975, dr0_pre[match(vint_pre, tvb$vintage)] + raw$delta_dr_10, dr10_post)
+raw$level_oadr_10 <- raw$oadr_10
+raw$tot_rate <- log(1000 * (1000 * (as.numeric(ref$nEU_inflows)[match(y, ref$year)] + as.numeric(ref$EU_inflows)[match(y, ref$year)])) / wl)   # all inflows (EU + non-EU), from 1975
+# national accounts taxes over alternative denominators: per resident (tax_res), % of GDP (tax_gdp), and in millions of average
+# annual earnings (tax_earn: real taxes / (52 x real average weekly earnings), Millennium A47 AWE to 2016, KAB9 growth 2017-19)
+defl <- if (SAMPLE == "1964") ifelse(y < 1975, pre("deflator_2024_25_100", f62), as.numeric(ref$`deflator24_25=100`)[match(y, ref$year)]) else as.numeric(ref$`deflator24_25=100`)[match(y, ref$year)]
+if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) & !is.na(raw$wage_inflation) & y >= 2017)) awe[i] <- awe[i - 1] * (1 + raw$wage_inflation[i] / 100)
+  raw$tax_earn <- (raw$tax_workpop * 1000 * raw$workpop) / (52 * awe / defl * 100) / 1e6 }
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 df <- raw
 LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",
-          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth")
+          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth", "bank_rate", "growth_pc", "lab_prod", "tax_earn", "tot_rate", "consol")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
 # log forms of the positive-valued controls (Sam, 28 Sep 2026): L_ln_x = log of the lagged level
 LOGV <- c("vac_wap", "vac_unem", "int_tme", "int_gdp", "tbill", "gilt", "tme_gdp", "grants_gdp", "grants_wap", "psnd_gdp", "tax_gdp", "real_eri", "tot", "labour_share", "openness", "particip", "wage_infl_pos")

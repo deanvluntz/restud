@@ -1,37 +1,10 @@
 # =============================================================================
-# no_projection.R -- MANUSCRIPT (Sam, 27-28 Sep 2026): what the fiscal model predicts WITHOUT the projection, and whether
-# any observed fiscal or macroeconomic variable can either replace the projection or improve the model beside it.
-# Runs BOTH samples in one go (the selection rule needs both):  source("no_projection.R")
-# Names and definitions: tables_common.R; data: data_common.R. Samples end 2019 (Millennium series extended by ONS/BoE/BIS/OBR
-# for 2017-19); columns using extended series are re-estimated to 2016 under each panel.
-# Scope (Sam, 27 Sep 2026): the question is about FISCAL policy, so origin-country supply variables (youth share, relative
-# income) and the party in government are not candidates; they are not part of the Treasury framework.
-# Sam's criterion for an extension of the fiscal model (28 Sep 2026): a missing variable should (a) improve the model's ability
-# to determine inflows on its own, without the projection, AND (b) still improve the model once the projection is added.
-#
-#   A  Candidate screens (B18 levels, B19 log forms, B20 gross inflows): each candidate added alone to the fiscal model without the
-#      projection (half a), then with it (half b). Log forms (Sam, 28 Sep 2026): L_ln_x for every positive-valued control.
-#      Candidates and a-priori reasons (all t-1 unless start-of-year information):
-#        fiscal: debt service   L_int_tme (+), L_int_gdp                          debt-service squeeze on the room for manoeuvre
-#        fiscal: balance/plans  L_psnb_gdp, L_psnd_gdp, L_tax_gdp, fc_budget, fc_planned, fc_medium, L_grants_gdp, L_grants_wap, L_tme_gdp
-#        fiscal: actuarial      gad_earn, gad_policy                              the Government Actuary's projected contribution pressure
-#        rates                  L_tbill, L_gilt, L_r_g, L_real_rate
-#        labour demand          L_vac_wap (+), L_vac_unem (+)                      Hatton (2005); Mitchell, Pain and Riley (2011)
-#        wage / price pressure  L_wage_infl, L_inflation, L_cpi_infl (A47, Sam 28 Sep), st_inf_exp, lt_inf_exp  imported labour as anti-inflation supply policy
-#        external balance       L_real_eri, L_ca_gdp, L_trade_bal, L_tot          1960s-70s balance-of-payments constraint (Brittan, 1969)
-#        distribution / housing L_labour_share (-), L_real_house (-)             employer demand; housing as a political cost
-#        activity               L_growth
-#      Screened but not selectable: L_eu_rate (core sample only), inf_exp_5_10y (from 1985), st_inf_exp and lt_inf_exp (end 2016).
-#   B  Selection rule, fixed in advance: forward selection from the fiscal model WITHOUT the projection; a candidate is
-#      admissible only if it is observed throughout both samples, has HAC p < 0.10 in BOTH samples and the same sign
-#      in both; the admissible candidate with the lowest summed change in AIC enters; stop when none is admissible
-#      or after 5 additions. (R run of 27 Sep: L_inflation alone; wage inflation is not observed throughout the extended sample.)
-#   C  Models, each sample: fiscal without and with the projection; the a-priori fiscal addition (L_int_tme) without and with;
-#      the selected variable (inflation) without and with; both additions together without and with.
-#   D  Recursive one-step-ahead forecasts (expanding window): RMSE of the models in C.
-#   E  Gross inflows, and the EU placebo (core) for every addition: a policy-pressure variable should not move the EU flow.
-# History (disclose if written up): with the origin youth share and a party dummy admitted, the rule had picked youth + terms
-# of trade, which absorbed the projection on the core sample; Sam then restricted the pool to fiscal and macro variables.
+# private_tests.R -- PRIVATE TESTS, NOT FOR PUBLICATION (Sam, 28 Sep 2026): the candidate screens (levels, log forms, gross inflows),
+# the pre-stated forward-selection rule, the augmented models (debt interest, inflation, CPI), the out-of-sample comparison of the
+# augmented models, sub-samples, the second lag and the sample starts. Both samples in one run:  source("private_tests.R")
+# Criterion (Sam): a variable extends the fiscal model only if it (a) improves the model without the projection AND (b) improves
+# the model beside the projection. The published tables are B6-B24 (robustness_tables.R, without_projection.R, controls_tables.R).
+# Runs LAST in run_all_1964.R so that variable definitions print under the published tables first.
 # =============================================================================
 source("tables_common.R")
 load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); list(df = df, STEP = STEP, Y0 = Y0, LAB = LAB, END = BOE_END) }
@@ -65,9 +38,9 @@ screen <- function(cands, dv = "mig_rate", title) {
   cat("(a): the candidate added to the fiscal model without the projection, dAIC against that model on the same rows, RESET p of the augmented model;\n",
       "(b): the candidate added beside the projection, dAIC against the baseline on the same rows. A variable that extends the fiscal model must improve both.\n", sep = "")
 }
-screen(c(FISCAL, MACRO, TREASURY, EXTRA_SCREEN), "mig_rate", paste0("Table B18. Candidate screen, levels: each variable added alone, without the projection (a) and beside it (b) (samples to ", SMP$core$END, ")"))
-screen(LOGS, "mig_rate", paste0("Table B19. Candidate screen, log forms of the positive-valued controls (samples to ", SMP$core$END, ")"))
-screen(c(FISCAL, MACRO, TREASURY, LOGS), "mig_gross", paste0("Table B20. Candidate screen for GROSS inflows (mig_gross), levels and log forms (samples to ", SMP$core$END, ")"))
+screen(c(FISCAL, MACRO, TREASURY, EXTRA_SCREEN), "mig_rate", paste0("P1. Candidate screen, levels: each variable added alone, without the projection (a) and beside it (b) (samples to ", SMP$core$END, ")"))
+screen(LOGS, "mig_rate", paste0("P2. Candidate screen, log forms of the positive-valued controls (samples to ", SMP$core$END, ")"))
+screen(c(FISCAL, MACRO, TREASURY, LOGS), "mig_gross", paste0("P3. Candidate screen for GROSS inflows (mig_gross), levels and log forms (samples to ", SMP$core$END, ")"))
 defs(c(FISCAL, MACRO, TREASURY, LOGS, EXTRA_SCREEN))
 
 # --- B. selection ----------------------------------------------------------------------------------
@@ -96,18 +69,18 @@ for (k in names(SMP)) {
                "selected, no proj" = fit(S, c(fbase(k), SEL)), "selected" = fit(S, c(fbase(k, TRUE), SEL)),
                "selected +int_tme, no proj" = fit(S, c(fbase(k), SEL, APR)), "selected +int_tme" = fit(S, c(fbase(k, TRUE), SEL, APR)),
                "+cpi_infl, no proj" = fit(S, c(fbase(k), "L_cpi_infl")), "+cpi_infl" = fit(S, c(fbase(k, TRUE), "L_cpi_infl")))
-  panel(mods[1:4], paste0("Table B21. The fiscal model without and with the projection, and with debt interest (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", APR, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP),
+  panel(mods[1:4], paste0("P4. The fiscal model without and with the projection, and with debt interest (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", APR, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP),
         w = 18, lw = 16, nested_F = TRUE,
         c("no proj = delta_oadr_10 omitted. L_int_tme is added a priori (debt service as a claim on the budget), not by fit: it is null without the projection and",
           "positive beside it, because the interest burden and the projected ageing are negatively correlated over the sample."))
-  panel(mods[5:10], paste0("Table B22. The selected control, alone and with debt interest; CPI inflation for comparison (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", SEL, "L_cpi_infl", APR, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP),
+  panel(mods[5:10], paste0("P5. The selected control, alone and with debt interest; CPI inflation for comparison (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", SEL, "L_cpi_infl", APR, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP),
         w = 26, lw = 16, nested_F = TRUE,
         paste0("selected = the variable chosen in B (", paste(SEL, collapse = ", "), "), chosen without the projection. The projection's contribution (F vs no proj, dAIC) is the test. L_cpi_infl: the CPI measure of the same pressure (Sam, 28 Sep 2026)."))
   SMP[[k]]$mods <- mods
 }
 
 # --- D. out-of-sample ---------------------------------------------------------------------------------
-cat("\n===== Table B23. Recursive one-step-ahead forecasts (expanding window; actual lagged mig_rate) =====\n")
+cat("\n===== P6. Recursive one-step-ahead forecasts of the augmented models (expanding window; actual lagged mig_rate) =====\n")
 oos <- function(S, xs, from) { e <- c()
   for (t in from:max(S$year)) { tr <- S[S$year < t, ]; te <- S[S$year == t, ]; if (!nrow(te)) next
     m <- lm(reformulate(xs, "mig_rate"), data = tr[complete.cases(tr[, c("mig_rate", xs)]), ]); e <- c(e, te$mig_rate - predict(m, newdata = te)) }
@@ -124,9 +97,15 @@ for (k in names(SMP)) { S <- SMP[[k]]$S; GB <- c("L_mig_gross", setdiff(fbase(k)
   panel(list("fiscal, no proj" = fit(S, GB, "mig_gross"), "fiscal" = fit(S, c(GB, "delta_oadr_10"), "mig_gross"),
              "+int_tme, no proj" = fit(S, c(GB, APR), "mig_gross"), "+int_tme" = fit(S, c(GB, APR, "delta_oadr_10"), "mig_gross"),
              "selected, no proj" = fit(S, c(GB, SEL), "mig_gross"), "selected" = fit(S, c(GB, SEL, "delta_oadr_10"), "mig_gross")),
-        paste0("Table B24. Gross inflows: the fiscal, debt-interest and selected models (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", APR, SEL, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_gross", SMP[[k]]$STEP), w = 18) }
+        paste0("P7. Gross inflows: the fiscal, debt-interest and selected models (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", APR, SEL, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_gross", SMP[[k]]$STEP), w = 18) }
 S <- subset(SMP$core$S, !is.na(eu_rate)); EUB <- c("L_eu_rate", "L_tax_workpop", "L_ln_debt_gdp", "L_unem")
 panel(list("eu_rate" = fit(S, c(EUB, "delta_oadr_10"), "eu_rate"), "eu_rate +int_tme" = fit(S, c(EUB, "delta_oadr_10", APR), "eu_rate"),
            "eu_rate, selected" = fit(S, c(EUB, SEL), "eu_rate"), "eu_rate, selected +proj" = fit(S, c(EUB, SEL, "delta_oadr_10"), "eu_rate")),
-      paste0("Table B25. The uncontrolled EU margin (core sample, 1977-", SMP$core$END, ")"), c("delta_oadr_10", APR, SEL, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_eu_rate"), w = 24,
+      paste0("P8. The uncontrolled EU margin with the augmented models (core sample, 1977-", SMP$core$END, ")"), c("delta_oadr_10", APR, SEL, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_eu_rate"), w = 24,
       "A general migration determinant should move the EU flow as well; a policy-pressure variable should not.")
+# --- P9 sub-samples, second lag, sample starts (from robustness_tables.R, 28 Sep 2026) ----------------------------------------
+for (k in names(SMP)) { d <- SMP[[k]]$df; S <- SMP[[k]]$S; STEP <- SMP[[k]]$STEP; EXT <- k == "extended"
+  sub <- if (EXT) list("1965-1991" = c(1965, 1991), "1992-2019" = c(1992, 2019), "1965-2003" = c(1965, 2003), "1975-2019" = c(1975, 2019)) else list("1977-1997" = c(1977, 1997), "1998-2019" = c(1998, 2019), "1977-2003" = c(1977, 2003))
+  p <- c(list("main" = fit(S, fbase(k, TRUE))), lapply(sub, function(r) fit(subset(d, year >= r[1] & year <= r[2]), fbase(k, TRUE)))); p[["+L2_mig_rate"]] <- fit(S, c(fbase(k, TRUE), "L2_mig_rate"))
+  panel(p, paste0("P9. Sub-samples and a second lag (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L2_mig_rate", STEP), w = 14)
+  if (EXT) { st <- c(1965, 1968, 1971, 1974, 1977, 1979); cat("Sample starts (end 2019), delta_oadr_10:", paste(vapply(st, function(y) { m <- fit(subset(d, year >= y & year <= 2019), fbase(k, TRUE)); sprintf("%d %.4f", y, coef(m)["delta_oadr_10"]) }, character(1)), collapse = "; "), "\n") } }
