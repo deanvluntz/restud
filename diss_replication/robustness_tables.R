@@ -84,14 +84,25 @@ hh <- vapply(names(p), function(k) hacF(p[[k]], if (k == "main") "delta_oadr_10"
 panel(p, paste0("Table B14. The projection horizon (", TAG, ")"), c("delta_oadr_10", H, "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 14,
       c("Each column replaces the ten-year projected change (main) with the projected change over the horizon named, same vintages.",
         sprintf("HAC F of the horizon term: %s.", paste(sprintf("%s %.2f (p %s)", names(p), hh[1, ], vapply(hh[2, ], pf, character(1))), collapse = "; "))))
-# --- B14 --------------------------------------------------------------------------------------------------
+# --- B15 British citizens and Commonwealth: inflows, citizenship policy and emigration -------------------------------
+BR <- c("L_brit_rate", "delta_oadr_10", CT)
 p <- list("main" = fit(S, BASE)); if (EXT) p[["+Act steps"]] <- fit(S, c(BASE, "post1968", "post1973"))
-p[["brit_rate"]] <- fit(S, c("L_brit_rate", "delta_oadr_10", CT), "brit_rate"); p[["+brit_rate"]] <- fit(S, c(BASE, "brit_rate"))
-panel(p, paste0("Table B15. British citizens and Commonwealth: inflows and policy (", TAG, ")"), c("delta_oadr_10", "post1968", "post1973", "brit_rate", "L_brit_rate", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 14,
-      c(if (EXT) c("+Act steps: indicators for the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973). Given the intercept and basis_pre1975, they are identified",
-                   "inside the pre-1975 window only (post1968 contrasts 1965-67 with 1968-74; post1973 is numerically an indicator for 1973-74, the Ugandan Asian admissions, the rush",
-                   "of dependants before the Act bit, and EEC nationals free to enter from accession), so the column lets the pre-1975 level float; the projection is unchanged.") else NULL,
-        "brit_rate: the fiscal specification for British-citizen inflows, all origins (LTIM 2.00), the uncontrolled flow, as placebo (no basis step). +brit_rate: the British flow held",
-        "constant in the controlled-flow equation, a lower bound on the projection."))
+p[["brit_rate"]] <- fit(S, BR, "brit_rate"); p[["brit_rate +cit_grants"]] <- fit(S, c(BR, "L_cit_grants_k"), "brit_rate"); p[["brit_rate +cit_reg"]] <- fit(S, c(BR, "L_cit_reg_k"), "brit_rate")
+p[["+brit_rate"]] <- fit(S, c(BASE, "brit_rate")); p[["+emig_all"]] <- fit(S, c(BASE, "L_emig_all")); p[["+emig_brit"]] <- fit(S, c(BASE, "L_emig_brit"))
+panel(p, paste0("Table B15. British citizens and Commonwealth: inflows, citizenship policy and emigration (", TAG, ")"),
+      c("delta_oadr_10", "post1968", "post1973", "L_cit_grants_k", "L_cit_reg_k", "brit_rate", "L_emig_all", "L_emig_brit", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L_brit_rate", STEP), w = 13, lw = 16,
+      c(if (EXT) c("+Act steps: indicators for the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973). Given the intercept and basis_pre1975 they are identified inside",
+                   "the pre-1975 window only (post1968 contrasts 1965-67 with 1968-74; post1973 is numerically an indicator for 1973-74), so the column lets the pre-1975 level float.") else NULL,
+        "brit_rate columns: the fiscal specification for British-citizen inflows, all origins (LTIM 2.00), the uncontrolled flow, as placebo (no basis step), then with lagged grants of",
+        "British citizenship (all grants; registrations only) as the citizenship-policy channel. +brit_rate holds the British flow constant in the controlled-flow equation (a lower",
+        "bound on the projection). +emig_all / +emig_brit: lagged emigrants per working-age person, all citizens / British citizens, added to the main column.",
+        "Grants made outside the UK (cz_04) exist for 1962-82 only and are in the private tests."))
 if (EXT) line("+trend (VIF 63, sign only)", fit(S, c(BASE, "trend")), c("delta_oadr_10", "trend"))
 line("+L_brit_rate", fit(S, c(BASE, "L_brit_rate")), c("delta_oadr_10", "L_brit_rate"))
+if (!EXT) {   # by region of last residence, with the citizenship-grants channel (IPS 3.01, core sample)
+  REG <- c("brit_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res")
+  p <- setNames(lapply(REG, function(v) fit(S, c(paste0("L_", v), "delta_oadr_10", CT, "L_cit_grants_k"), v)), c("non-EU", "Oceania", "N America", "Oth Europe", "Asia", "SS Africa", "Rest"))
+  panel(p, "Table B15 (continued). British citizens arriving from outside the EU, by region of last residence, with grants of citizenship (core sample, 1977-2019)",
+        c("delta_oadr_10", "L_cit_grants_k", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", paste0("L_", REG)), w = 13, lw = 16,
+        c("Each column: British citizens arriving from that region of last residence (IPS 3.01), with the fiscal specification's right-hand side and lagged UK grants of citizenship.",
+          "A response concentrated in regions of the former Empire, and to grants, points to citizens by descent or registration rather than returning emigrants.")) }

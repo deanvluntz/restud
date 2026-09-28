@@ -12,7 +12,7 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
 
 ---
 
-## 0. Where things stand right now (28 Sep 2026, evening) — pick up here
+## 0. Where things stand right now (28 Sep 2026, night) — pick up here
 
 1. **The project now lives in GitHub** (`deanvluntz/restud`, branch `claude/research-paper-synthesis-wqysr9`); the cloud
    container runs R (4.3.3, ARDL 0.2.5) and reproduces Sam's outputs to the last digit. Sam pulls with `git pull` on the Mac.
@@ -27,7 +27,13 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
    the debt-interest splice (`determinants/SOURCES_2017_2019.md`); (c) read Section 7 (7.1/7.2; 57 pp; cuts are his); (d) the
    1964-only manuscript is parked; the Online Appendix is rebuilt (B6–B35) from `tables_1977.json`; `run_all_1977.R` needs
    `SKIP_VINTAGE_CHECK=1` only in the container.
-4. Earlier open decisions remain in §9.
+4. **Night of 28 Sep:** Home Office citizenship grants (cz_03/cz_04 → `determinants/citizenship_grants_1962_2018.csv`; overseas grants
+   1962–82 only) and British inflows by region (IPS 3.01) are in `data_common.R`; Table B15 now = British inflows with/without grants,
+   +brit_rate, +emig_all, +emig_brit (emigration lives only there) and a core-only region panel with grants — grants are null everywhere.
+   Sam's DV stance: the DV is the outcome of immigration policy overall, "non-EU" a convenient label, no model-based adjustment (no
+   precedent); step vs no step still his call. **`parallel_gross_vac.R`** (Sam's request) reruns every test with main = unadjusted
+   gross inflows + log vacancies/WAP (Tables G2–G27, both samples; last in `run_all_1964.R`); nothing from it is in a manuscript.
+5. Earlier open decisions remain in §9.
 
 ---
 
@@ -127,6 +133,7 @@ Workbook `Dissertation_Dataset_Final.xlsx`: sheets `ReformSPA` (core data 1975�
 | `gad_obr_tests.R` | further controls part 3: F6 GAD contribution pressure; F7 OBR borrowing forecasts; F8 debt dynamics |
 | **`no_projection.R`** | the fiscal model without the projection (both samples): A candidate screen on Sam's two-part criterion (fiscal candidates included), B pre-stated selection, C1/C2 models (int_tme, inflation, both), D OOS forecasts, E gross + EU placebo. **`primary_int_tme.R`**: exploratory int_tme-as-primary pipeline |
 | `replication_1977.R` | core pipeline; 28 Sep: DR/pub-dated 1977–78 from `dr_corrected.csv`, pub-dated N = 42, `SKIP_VINTAGE_CHECK=1` skips the .xls reconstruction |
+| `parallel_gross_vac.R` | PARALLEL RUN (Sam, 28 Sep): the whole battery with main = log unadjusted gross inflows (no denominator/step/rescaling) + `L_ln_vac_wap`, unemployment retained; both samples; Tables G2–G27 mirror B2–B25 (gross counterparts of every alternative DV built inside the script; `fit()` defaults to `mig_gross` there) |
 | `manuscript_1964.R` | writes `tables_1964.json` (Tables 2/3/4/B2, bounds with step as fixed regressor, 24 Figure 4 rows, timing placebo, second lag, bootstrap bias correction, permits, British, stability) |
 | `permits_check.R`, `appendix_permits.R`, `appendix_british.R`, `stability_check.R`, `spending_check.R`, `determinants_check.R`, `tax_grid.R` | thesis Section 9 / Appendix A exhibits |
 

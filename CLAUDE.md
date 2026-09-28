@@ -434,4 +434,12 @@ only partial disclosure. Do not repeat that.
   non-British x 0.820, the 1975-80 overlap ratio) as an ALTERNATIVE, headline unchanged until Sam decides after seeing the data
   (determinants/dv_series_comparison_1964_1982.csv). New Table B6 on both samples = DV under the other sample's classification;
   B7-B25 renumbered. Core under the non-British classification: 0.0048 (p .03), 1977-2003 alone 0.0059 n.s. — reported honestly.
+- 28 Sep 2026 (night, 2; Sam): Home Office cz_03/cz_04 -> determinants/citizenship_grants_1962_2018.csv (grants overseas 1962-82 ONLY);
+  data_common.R has cit_grants_k / cit_reg_k / cit_overseas_k and British inflows by region (IPS 3.01). Table B15 = main | +Act steps (ext)
+  | brit_rate | +cit_grants | +cit_reg | +brit_rate | +emig_all | +emig_brit, plus a core-only region panel with grants; emigration lives
+  ONLY in B15 now. Grants null everywhere (B15, private P10). SAM'S DV STANCE (record, do not revisit): the DV measures the outcome of
+  immigration policy overall; "non-EU" is a convenient label chosen before the extended sample; NO model-based adjustment of the series
+  (no precedent) — headline stays unadjusted; step vs no step still his call. parallel_gross_vac.R (Sam's request): the full battery
+  with main = UNADJUSTED gross inflows (mig_gross, no step, no rescaling) + L_ln_vac_wap, unemployment retained; both samples; last in
+  run_all_1964.R; tables numbered G2-G27 to mirror B2-B25. Not in any manuscript. Sam has NOT yet decided on log vacancies in the headline.
 

@@ -18,7 +18,9 @@ boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.cs
 exs <- read.csv("determinants/extension_1962_2019_extras.csv"); exs$dr_note <- NULL
 gad <- read.csv("determinants/gad/gad_pressure_series_1959_2019.csv"); gad <- gad[gad$rule == "base", ]
 cpi <- read.csv("determinants/boe_a47_cpi_1955_2019.csv")
-tvw <- read.csv("determinants/treasury_view_1955_2016.csv")   # openness, broad money growth, workforce (Millennium A36/A9/A24/A50; build_treasury_view.R)
+tvw <- read.csv("determinants/treasury_view_1955_2016.csv")
+cit <- read.csv("determinants/citizenship_grants_1962_2018.csv")   # Home Office cz_03/cz_04: grants of British citizenship 1962-2018
+ips <- read.csv("determinants/ips_301_citizenship_by_residence_1975_2019.csv", check.names = FALSE)   # openness, broad money growth, workforce (Millennium A36/A9/A24/A50; build_treasury_view.R)
 fbk <- rbind(read.csv("determinants/fiscal_block_1962_1974.csv")[, c("year", "psnb_gdp", "psnd_gdp", "tax_nat_gdp")], read.csv("fiscal_block_HPFD.csv")[, c("year", "psnb_gdp", "psnd_gdp", "tax_nat_gdp")]); fbk <- fbk[!duplicated(fbk$year), ]; names(fbk)[4] <- "tax_gdp"   # CPI inflation, Millennium A47 col E (preferred CPI), ONS D7G7 for 2017-19
 p1 <- read.csv("determinants/boe_prop1_1955_2019.csv")   # claimant count (A50), exchange rates, BoP, labour share, house prices, Q7 expectations, party in government
 wp <- if (file.exists("determinants/work_permits.csv")) read.csv("determinants/work_permits.csv") else NULL
@@ -53,6 +55,12 @@ raw$brit_rate <- log(1000 * (1000 * raw$brit_in) / wl)
 raw$dv_A <- ext$dv_A_non_british[match(y, ext$year)]; raw$dv_C <- ext$dv_C_non_british_to_2003[match(y, ext$year)]; raw$dv_nonEU <- ext$non_eu[match(y, ext$year)]
 raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (1000 * raw$dv_C) / wl)
 raw$ltim_rate <- log(as.numeric(ref$ltim_nEU_inflows_WAPlagK)[match(y, ref$year)])
+raw$cit_grants_k <- cit$cit_grants[match(y, cit$year)] / 1000; raw$cit_reg_k <- (cit$cit_reg_minor + cit$cit_reg_other)[match(y, cit$year)] / 1000
+raw$cit_overseas_k <- cit$cit_overseas[match(y, cit$year)] / 1000
+for (r in c("OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFRICA", "REST OF THE WORLD")) {   # British citizens by region of last residence (IPS 3.01)
+  v <- 1000 * (1000 * ips[[paste0("Inflow_", r, "_brit")]][match(y, ips$year)]) / wl; v[!is.finite(v) | v <= 0] <- NA
+  raw[[paste0("brit_", tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
+raw$brit_noneu <- log(1000 * (1000 * ips[["Inflow_NON-EU_brit"]][match(y, ips$year)]) / wl)
 ov <- y >= 1975 & y <= 1980; SPLICE_LOGRATIO <- mean(log(raw$dv_nonEU[ov] / raw$dv_A[ov]))   # log ratio where the two series overlap
 raw$dv_B_scaled <- ifelse(y < 1975, raw$dv_A * exp(SPLICE_LOGRATIO), raw$dv_nonEU)
 raw$mig_rate_s <- log(1000 * (1000 * raw$dv_B_scaled) / wl); raw$mig_gross_s <- log(1000 * raw$dv_B_scaled)
@@ -116,7 +124,7 @@ if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) 
   raw$tax_earn <- (raw$tax_workpop * 1000 * raw$workpop) / (52 * awe / defl * 100) / 1e6 }
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",

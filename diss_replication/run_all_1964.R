@@ -3,14 +3,14 @@
 # output captured to run_all_1964_output.txt. Run from diss_replication/:
 #     source("run_all_1964.R")
 # Order (Sam, 28 Sep 2026): the fiscal specification with the basis step; the robustness tables; the fiscal model without the
-# projection; further economic and fiscal controls (parts 1-3); appendix tables; the exploratory int_tme-as-primary run; the JSON.
+# projection; further economic and fiscal controls (parts 1-3); appendix tables; the private tests; the exploratory int_tme-as-primary run; the parallel gross-inflows + log-vacancies run.
 # Prerequisites: sheet `1964` of Dissertation_Dataset_Final.xlsx (extension + extras),
 # determinants/extension_1962_2019_extras.csv, tables_1977.json (from run_all_1977.R
 # + build_tables_1977.R) for the core-sample columns of the combined document.
 # Afterwards copy tables_1964.json to ../manuscript_1964/ and run
 #     node build_docx_1964.js        (1964-2019 document)
 #     node build_docx_combined.js    (combined document)
-run_all <- function(scripts = c("extension_1964.R", "robustness_tables.R", "without_projection.R", "controls_tables.R", "manuscript_1964.R", "private_tests.R", "primary_int_tme.R"),
+run_all <- function(scripts = c("extension_1964.R", "robustness_tables.R", "without_projection.R", "controls_tables.R", "manuscript_1964.R", "private_tests.R", "primary_int_tme.R", "parallel_gross_vac.R"),
                     out = "run_all_1964_output.txt") {
   con <- file(out, open = "wt"); sink(con, split = TRUE); sink(con, type = "message")
   on.exit({ sink(type = "message"); sink(); close(con) }, add = TRUE)
