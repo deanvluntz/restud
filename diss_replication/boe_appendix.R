@@ -22,11 +22,11 @@ for (k in names(tx)) { ct <- coeftest(tx[[k]], vcov. = vcovHAC(tx[[k]])); extra 
   for (e in extra) cat(sprintf(" | %s %.4f (p %s)", e, ct[e, 1], pf(ct[e, 4]))); cat("\n") }
 defs(c("L_tax_nics_er", "L_ln_wap"))
 # --- B7 ------------------------------------------------------------------------------------
-S77 <- subset(df, year >= 1977 & year <= BOE_END); P <- subset(df, year >= 1965 & year <= 2008)
-EUB <- swap(BASE, c("L_mig_rate", STEP), "L_eu_rate"); PB <- swap(BASE, "L_mig_rate", "L_permits")
+S77 <- subset(df, year >= 1977 & year <= BOE_END); P0 <- max(Y0, 1965); P <- subset(df, year >= P0 & year <= 2008)
+EUB <- swap(BASE, c("L_mig_rate", STEP), "L_eu_rate"); PB <- swap(BASE, c("L_mig_rate", STEP), "L_permits")   # permits: no basis step (Sam, 28 Sep 2026)
 b7 <- list("eu_rate" = fit(S77, EUB, "eu_rate"), "eu_rate +vac_wap" = fit(S77, c(EUB, "L_vac_wap"), "eu_rate"),
            "permits" = fit(P, PB, "permits"), "permits +vac_wap" = fit(P, c(PB, "L_vac_wap"), "permits"))
-panel(b7, paste0("Table B7. Where labour demand shows up: the EU margin (1977-", BOE_END, ") and the permit lever (1965-2008)"),
+panel(b7, paste0("Table B7. Where labour demand shows up: the EU margin (1977-", BOE_END, ") and the permit lever (", P0, "-2008)"),
       c("delta_oadr_10", "L_vac_wap", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_eu_rate", "L_permits", STEP), w = 17,
       c("The uncontrolled EU margin should respond to vacancies and not to the projection; permits (the lever) respond to both.",
         "Permits before 1965 cannot be used: the earliest projection vintage held is the 1963-based."))

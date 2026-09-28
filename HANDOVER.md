@@ -12,22 +12,20 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
 
 ---
 
-## 0. Where things stand right now (28 Sep 2026) — pick up here
+## 0. Where things stand right now (28 Sep 2026, evening) — pick up here
 
-1. **Sam must run R** before anything new is written into the manuscripts:
-   `setwd("~/quiet-instruments/diss_replication"); source("run_all_1964.R"); source("run_all_1977.R")`
-   and paste the output. Every number quoted below for the newest work is from the assistant's **Python replica**
-   (`outputs/pyrep/`), which has matched R to 4 dp all project long, but R is authoritative.
-2. The last three turns refactored the table scripts (shared `tables_common.R` + `data_common.R`), moved the **main
-   results to 2019** (2017–19 spliced from ONS/BoE/BIS/Land Registry/OBR; 2016 re-estimate printed under each panel),
-   added the **Proposition 1 / Proposition 2** analysis (`prop1_model.R`), the **long permits test** (`permits_long.R`),
-   the **headline-unemployment-of-the-day** variable, and dropped the **party-in-government** dummy and the
-   **origin-country supply variables** from the fiscal model (Sam: not part of the Treasury framework).
-   None of this has been run in R yet and none of it is in the manuscripts.
-3. After the R run: compare with the replica numbers in §7; update the manuscript paragraphs that say "to 2016"
-   (1964, combined and 1977 manuscripts, and the Figure 4 row labels in `manuscript_1964.R`), rebuild the documents
-   (§3.3), and ask Sam how he wants Proposition 1/2 written up (nothing drafted yet).
-4. Open decisions awaiting Sam are listed in §9.
+1. **The project now lives in GitHub** (`deanvluntz/restud`, branch `claude/research-paper-synthesis-wqysr9`); the cloud
+   container runs R (4.3.3, ARDL 0.2.5) and reproduces Sam's outputs to the last digit. Sam pulls with `git pull` on the Mac.
+2. **Done today (all R-run, both samples):** table conventions (definitions once per document, step sentence first, widths);
+   `robustness_tables.R` in Sam's panel order; `no_projection.R` (fiscal model without the projection, Sam's two-part criterion,
+   inflation vs debt interest, EU placebo for each); further controls F1–F8 across `boe_tests.R`/`extra_tests.R`/`gad_obr_tests.R`;
+   `primary_int_tme.R` (exploratory); permits without the basis step everywhere; `replication_1977.R` repaired; Figure 4 (1964)
+   re-rendered; **combined manuscript Section 7 rewritten** (core first, extended corroboration, new 7.1 and 7.2) and rebuilt
+   (55 pp; `Hamdane_ReStud_Manuscript_combined.docx/.pdf` at the project root and in `manuscript_1964/`).
+3. **Open for Sam:** read the new Section 7 (7.1/7.2 add ~2,000 words; cuts are his); confirm the OBR forecasts reference
+   (year/title); decide whether the 1964-only manuscript gets the same Section 7 (not done); the Online Appendix still carries
+   the old table numbering (B6–B8) — panels are now F1–F8; `run_all_1977.R` needs `SKIP_VINTAGE_CHECK=1` only in the container.
+4. Earlier open decisions remain in §9.
 
 ---
 
@@ -116,17 +114,17 @@ Workbook `Dissertation_Dataset_Final.xlsx`: sheets `ReformSPA` (core data 1975�
 | `replication.R` / `replication_1977.R`, `build_tables*.R` → `tables.json` / `tables_1977.json`, `verify*.R` | thesis (1979) / core manuscript (1977) numbers for the builders |
 | `appendix_exhibits.R` / `_1977.R` / `_labpop_1977.R` | console panels (thesis Appendix A screenshots; manuscript exhibits) |
 | `run_all.R`, `run_all_1977.R`, `run_all_thesis_extras.R` | runners (functions wrapping sink/on.exit). `run_all_1977.R` now also runs `core_1977_boe.R`, `boe_appendix.R`, `extra_tests.R`, `gad_obr_tests.R` with SAMPLE = "1977" set globally |
-| `run_all_1964.R` | runs `extension_1964.R`, `extension_1964_robustness.R`, `extension_1964_boe.R`, `boe_appendix.R`, `extra_tests.R`, `gad_obr_tests.R`, `permits_long.R`, `prop1_model.R`, `manuscript_1964.R` with SAMPLE = "1964" set globally (fixes a bug where Sam's session SAMPLE = "1977" leaked in) |
+| `run_all_1964.R` | runs `extension_1964.R`, `robustness_tables.R`, `no_projection.R`, `extension_1964_boe.R`, `extra_tests.R`, `gad_obr_tests.R`, `boe_appendix.R`, `primary_int_tme.R`, `manuscript_1964.R` with SAMPLE = "1964" set globally and `DEFINED` reset (definitions once per run). `run_all_1977.R` now also runs `robustness_tables.R` |
 | **`tables_common.R`** | shared printer + **variable dictionary `DEFS`** (every name shown in a panel is defined under it); `fit()` (drops constant columns, stores data as attr "dd"); `panel()`; `SEC_END = 2016`, `ONS_VARS` — any column using a 2017–19-extended series is re-estimated to 2016 and printed as "proj, to 2016" |
 | **`data_common.R`** | builds `df` with canonical names for `SAMPLE` "1964" (extended, `mig_rate` = series B, `STEP = basis_pre1975`, Y0 1965) or "1977" (core, non-EU, Y0 1977); merges BoE extras, A27 taxes, GAD, prop1 file, ONS extension; `BASE` = fiscal spec; `BOE_END = 2019` (main); `SIX` = the six macro controls |
 | `extension_1964.R` | extended sample table: `mig_rate` vs `mig_rate (no step)` + alternative series as one text line |
-| `extension_1964_robustness.R` | trend/Act steps, total-DR placebo, added regressors, origin determinants, sample starts, sub-samples, **Panel 6 horizons 1/3/5/7/10**, **Panel 7 British placebo** (all on 1965–2019) |
-| `boe_tests.R` (wrappers `extension_1964_boe.R`, `core_1977_boe.R`) | 1a unemployment measures (ILO baseline, `unem_head`, `unem_head +post98`, `unem_boe`, `unem_claim`); 1b vacancies; 2 gross inflows + emigration; 3 wages/rates/expectations/TFP/institutions; 4 A27 tax types; 5 all six together |
+| **`robustness_tables.R`** | both samples, Sam's order (28 Sep): 1 tax burden (a/b), 2 unemployment measures, 3 level vs change, 4 permits (no step), 5 gross, 6 total DR, 7 emigration, 8 pre-1975 regime steps (ext), 9 horizons, 10 British, 11 sub-samples + second lag |
+| `boe_tests.R` (wrappers `extension_1964_boe.R`, `core_1977_boe.R`) | further controls part 1: F1 labour demand beside unemployment (substitutions as text), F2 wages/rates/expectations/TFP/institutions, F3 all six |
 | `boe_appendix.R` | Online Appendix Tables B6 (labour demand, NICs) and B7 (EU margin, permits) + revisions check |
-| `extra_tests.R` | 1 realised spending (A28 grants/TME); 2 without the projection (+six, +significant, +L2); 2b gross; 3 current fiscal balance (PSNB/PSND/tax %GDP) |
-| `gad_obr_tests.R` | 1 GAD contribution pressure; 2 OBR borrowing forecasts; 3 debt dynamics |
-| **`prop1_model.R`** | Proposition 1 (fiscal/macro model without projection, pre-stated selection rule on both samples) then Proposition 2 (projection added); OOS forecasts; gross; EU placebo |
-| **`permits_long.R`** | policy lever 1959–2008 (1958-based projection) and permits + Commonwealth vouchers 1964–2008 |
+| `extra_tests.R` | further controls part 2: F4 realised spending (A28), F5 current fiscal balance |
+| `gad_obr_tests.R` | further controls part 3: F6 GAD contribution pressure; F7 OBR borrowing forecasts; F8 debt dynamics |
+| **`no_projection.R`** | the fiscal model without the projection (both samples): A candidate screen on Sam's two-part criterion (fiscal candidates included), B pre-stated selection, C1/C2 models (int_tme, inflation, both), D OOS forecasts, E gross + EU placebo. **`primary_int_tme.R`**: exploratory int_tme-as-primary pipeline |
+| `replication_1977.R` | core pipeline; 28 Sep: DR/pub-dated 1977–78 from `dr_corrected.csv`, pub-dated N = 42, `SKIP_VINTAGE_CHECK=1` skips the .xls reconstruction |
 | `manuscript_1964.R` | writes `tables_1964.json` (Tables 2/3/4/B2, bounds with step as fixed regressor, 24 Figure 4 rows, timing placebo, second lag, bootstrap bias correction, permits, British, stability) |
 | `permits_check.R`, `appendix_permits.R`, `appendix_british.R`, `stability_check.R`, `spending_check.R`, `determinants_check.R`, `tax_grid.R` | thesis Section 9 / Appendix A exhibits |
 

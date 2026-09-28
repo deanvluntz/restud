@@ -60,9 +60,12 @@ df$brit <- log(1000 * (1000 * g(ips, "Inflow_NON-EU_brit")) / wl)
 boe <- read.csv("determinants/boe_extras_1962_2019.csv"); a27 <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")
 df$vac_per_wap <- 1000 * (1000 * g(boe, "vacancies_k")) / df$workpop; df$dln_vu <- c(NA, diff(log(g(boe, "vu_ratio"))))
 df$nics_pw <- g(a27, "cg_nics_real_pw"); df$nics_emp_pw <- g(a27, "cg_nics_employees_real_pw")
-df$permits_k <- g(wp, "permits") / 1000
+wp$permits[wp$basis != "WP+FP"] <- NA; df$permits_k <- g(wp, "permits") / 1000   # Tier 2 (2009-) is a different basis
+# debt interest as a share of total managed expenditure (Millennium A28; 2017-19 spliced from ONS/OBR as in data_common.R)
+onsx <- read.csv("determinants/ons_extension_2017_2019.csv"); boe$debt_interest_tme[match(onsx$year, boe$year)] <- ifelse(is.na(boe$debt_interest_tme[match(onsx$year, boe$year)]), onsx$debt_interest_tme, boe$debt_interest_tme[match(onsx$year, boe$year)])
+df$int_tme <- g(boe, "debt_interest_tme")
 for (v in c("y", "g", "eu", "ltim", "un", "tax", "labtax", "taxres", "debt", "uk_growth", "inflation", "brit_out", "vac_per_wap", "dln_vu", "nics_pw", "nics_emp_pw",
-            "relinc_dev", "relinc_rich", "youth_origin", "brit", "permits_k")) df[[paste0("L_", v)]] <- lag1(df[[v]])
+            "relinc_dev", "relinc_rich", "youth_origin", "brit", "permits_k", "int_tme")) df[[paste0("L_", v)]] <- lag1(df[[v]])
 df$L2_y <- lag1(df$L_y); df$L_brit_out_rate <- 1000 * (1000 * df$L_brit_out) / wl
 df$POL97 <- as.integer(df$year >= 1998); df$POL02 <- as.integer(df$year >= 2002); df$EXP04 <- as.integer(df$year >= 2004)
 df$ENL86 <- as.integer(df$year >= 1986); df$ENL95 <- as.integer(df$year >= 1995)
@@ -140,7 +143,7 @@ R <- rbind(
   est("+ all five MPR indicators", S, "y", c(FISC, "POL97", "POL02", "EXP04", "ENL86", "ENL95"), "p"),
   est("+ 1968 and 1973 Act steps", S, "y", c(FISC, "post1968", "post1973"), "p"),
   est("+ linear trend", S, "y", c(FISC, "trend"), "p"),
-  est("+ supply-side controls (3)", S, "y", c(FISC, "L_relinc_dev", "L_relinc_rich", "L_youth_origin"), "p"),
+  est("+ debt interest share of spending", S, "y", c(FISC, "L_int_tme"), "p"),
   est("+ growth, inflation, British emigration", S, "y", c(FISC, "L_uk_growth", "L_inflation", "L_brit_out_rate"), "p"),
   est("Second lag of dependent variable", S, "y", c("L_y", "L2_y", "L_tax", "p", "step", CTRL), "p"),
   est("Sample from 1971", subset(S, year >= 1971), "y", FISC, "p"),
@@ -187,8 +190,9 @@ cat(sprintf("Bias: rho %.3f, bootstrap bias %.3f (analytic %.3f), corrected rho 
             b[iy], bias, out$bias$analytic, rho_c, out$bias$lr_uncorrected, lr_c, out$bias$ci[1], out$bias$ci[2]))
 
 # --- permits (1965-2008), British citizens (1977-2019), stability -----------------------
-P <- subset(df, year >= 1965 & year <= 2008); mp <- fit(P, "permits_k", c("L_permits_k", "p", "step", "L_tax", CTRL)); cp <- hac(mp)
-mp2 <- fit(P, "permits_k", c("L_permits_k", "p", "dr", "step", "L_tax", CTRL)); cp2 <- hac(mp2)
+# permits carry NO basis step (Sam, 28 Sep 2026): the step belongs to the spliced inflow series, the permit series has no change of basis
+P <- subset(df, year >= 1965 & year <= 2008); mp <- fit(P, "permits_k", c("L_permits_k", "p", "L_tax", CTRL)); cp <- hac(mp)
+mp2 <- fit(P, "permits_k", c("L_permits_k", "p", "dr", "L_tax", CTRL)); cp2 <- hac(mp2)
 mp79 <- fit(subset(df, year >= 1979 & year <= 2008), "permits_k", c("L_permits_k", "p", "L_tax", CTRL)); cp79 <- hac(mp79)
 out$permits <- list(n = nobs(mp), coef = cp["p", 1], p = cp["p", 4], both_p = cp2["p", 1], both_p_p = cp2["p", 4], both_dr = cp2["dr", 1], both_dr_p = cp2["dr", 4],
                     n79 = nobs(mp79), coef79 = cp79["p", 1], p79 = cp79["p", 4])

@@ -197,6 +197,12 @@ reg_df <- with(raw, data.frame(
   gilt_10yr       = gilt_10yr, growth_fc_yr0 = growth_fc_yr0
 ))
 
+# The ReformSPA sheet carries the total-dependency columns from 1979 only; 1977-78 (the 1975- and 1977-based vintages) come
+# from dr_corrected.csv, the file the sheet's own 1979+ values were pasted from (28 Sep 2026: fixes the N = 41 stop on 1977-2019).
+if (file.exists("dr_corrected.csv")) { .drc <- read.csv("dr_corrected.csv")
+  for (.v in c("delta_dr_10", "delta_dr_1", "delta_dr_3", "delta_dr_5")) if (.v %in% names(.drc)) { .i <- is.na(reg_df[[.v]]); reg_df[[.v]][.i] <- as.numeric(.drc[[.v]][match(reg_df$year[.i], .drc$year)]) }
+  if ("dr_10" %in% names(.drc)) { .i <- is.na(reg_df$level_dr_10); reg_df$level_dr_10[.i] <- as.numeric(.drc$dr_10[match(reg_df$year[.i], .drc$year)]) } }
+
 # Lags (no L_ columns exist in the workbook; they are constructed here)
 reg_df$L_log_mig_rate     <- lag1(reg_df$log_mig_rate)
 reg_df$L_alt_log_mig_rate <- lag1(reg_df$alt_log_mig_rate)
@@ -778,21 +784,26 @@ reg_df$delta_dr_10_pub   <- if ("delta_dr_10_pub" %in% names(pub)) {
   drc <- read.csv("dr_corrected.csv")
   num(drc$delta_dr_10_pub[match(reg_df$year, drc$year)])
 } else rep(NA_real_, nrow(reg_df))
+if (file.exists("dr_corrected.csv")) {   # the sheet carries the column from 1979; 1978 comes from the generated file (28 Sep 2026)
+  .drc <- read.csv("dr_corrected.csv"); .i <- is.na(reg_df$delta_dr_10_pub) & !is.na(reg_df$delta_oadr_10_pub); reg_df$delta_dr_10_pub[.i] <- num(.drc$delta_dr_10_pub[match(reg_df$year[.i], .drc$year)]) }
 
 # All three must be complete over 1979-2019. An incomplete column means the
 # spreadsheet paste is misaligned: a series pasted one row high runs off the end
 # and leaves the final year blank, which is how a one-year shift announces
 # itself. N = 40 instead of 41 is the symptom.
-stopifnot(!any(is.na(reg_df$delta_oadr_10_pub)),
-          !any(is.na(reg_df$delta_zm_10_pub)),
-          !any(is.na(reg_df$delta_dr_10_pub)))
+# On the 1977 start the publication-dated columns legitimately begin in 1978 (the first vintage PUBLISHED after the
+# sample starts), so completeness is asserted from 1978 on (28 Sep 2026).
+.pubrows <- reg_df$year >= 1978
+stopifnot(!any(is.na(reg_df$delta_oadr_10_pub[.pubrows])),
+          !any(is.na(reg_df$delta_zm_10_pub[.pubrows])),
+          !any(is.na(reg_df$delta_dr_10_pub[.pubrows])))
 
 # Cross-check the sheet against the generated file where both are present. A
 # shift wholly inside the sample would pass the NA test but fail this one.
 if ("delta_dr_10_pub" %in% names(pub) && file.exists("dr_corrected.csv")) {
   .ref <- read.csv("dr_corrected.csv")
   .gap <- max(abs(reg_df$delta_dr_10_pub -
-                    .ref$delta_dr_10_pub[match(reg_df$year, .ref$year)]))
+                    .ref$delta_dr_10_pub[match(reg_df$year, .ref$year)]), na.rm = TRUE)   # 1977 is blank on the 1977 start
   if (.gap > 1e-6)
     stop(sprintf("delta_dr_10_pub disagrees with dr_corrected.csv by %.3e - check row alignment in PubShiftOADR_ZM", .gap))
   cat("delta_dr_10_pub: sheet matches dr_corrected.csv\n")
@@ -808,34 +819,34 @@ cat(sprintf("Publication-dated columns merged: %d years, all numeric\n",
 
 pub_trend <- run_model(log_mig_rate ~ L_log_mig_rate + trend +
                          delta_oadr_10_pub + L_ln_debt_gdp + L_unem,
-                       reg_df, "Section 7 pub-dated: trend spec", n_expect = 43)      # 0.0075
+                       reg_df, "Section 7 pub-dated: trend spec", n_expect = 42)      # 0.0075
 pub_fisc  <- run_model(log_mig_rate ~ L_log_mig_rate + L_tax_workpop +
                          delta_oadr_10_pub + L_ln_debt_gdp + L_unem,
-                       reg_df, "Section 7 pub-dated: fiscal spec", n_expect = 43)     # 0.0086
+                       reg_df, "Section 7 pub-dated: fiscal spec", n_expect = 42)     # 0.0086
 pub_zm    <- run_model(log_mig_rate ~ L_log_mig_rate + trend +
                          delta_zm_10_pub + L_ln_debt_gdp + L_unem,
-                       reg_df, "Section 7 pub-dated: zero-migration (trend)", n_expect = 43)  # 0.0067
+                       reg_df, "Section 7 pub-dated: zero-migration (trend)", n_expect = 42)  # 0.0067
 # Fiscal-specification counterparts (the text quotes the fiscal specification).
 pub_zm_f  <- run_model(log_mig_rate ~ L_log_mig_rate + L_tax_workpop +
                          delta_zm_10_pub + L_ln_debt_gdp + L_unem,
-                       reg_df, "Section 7 pub-dated: zero-migration (fiscal)", n_expect = 43)
+                       reg_df, "Section 7 pub-dated: zero-migration (fiscal)", n_expect = 42)
 
 # Placebos under the same dating convention, so the robustness check and the
 # falsification tests share a timing assumption.
 if (!all(is.na(reg_df$delta_dr_10_pub)))
   pub_dr <- run_model(log_mig_rate ~ L_log_mig_rate + trend + delta_dr_10_pub +
                         L_ln_debt_gdp + L_unem,
-                      reg_df, "Section 7 pub-dated: total DR placebo", n_expect = 43) # -0.0001
+                      reg_df, "Section 7 pub-dated: total DR placebo", n_expect = 42) # -0.0001
 pub_eu <- run_model(eu_log_mig_rate ~ L_eu_log_mig_rate + trend +
                       delta_oadr_10_pub + L_ln_debt_gdp + L_unem,
-                    reg_df, "Section 7 pub-dated: EU placebo (trend)", n_expect = 43)         # p = 0.40
+                    reg_df, "Section 7 pub-dated: EU placebo (trend)", n_expect = 42)         # p = 0.40
 if (!all(is.na(reg_df$delta_dr_10_pub)))
   pub_dr_f <- run_model(log_mig_rate ~ L_log_mig_rate + L_tax_workpop + delta_dr_10_pub +
                           L_ln_debt_gdp + L_unem,
-                        reg_df, "Section 7 pub-dated: total DR placebo (fiscal)", n_expect = 43)
+                        reg_df, "Section 7 pub-dated: total DR placebo (fiscal)", n_expect = 42)
 pub_eu_f <- run_model(eu_log_mig_rate ~ L_eu_log_mig_rate + L_tax_workpop +
                         delta_oadr_10_pub + L_ln_debt_gdp + L_unem,
-                      reg_df, "Section 7 pub-dated: EU placebo (fiscal)", n_expect = 43)
+                      reg_df, "Section 7 pub-dated: EU placebo (fiscal)", n_expect = 42)
 
 # Base-dated vs publication-dated, as reported in Section 7.
 pub_compare <- function() {
@@ -1146,6 +1157,9 @@ parse_vintage <- function(path, expect_base) {
        oadr = oadr[1:n], wa = wa[1:n], mig = mig)
 }
 
+# The reconstruction re-reads the original NPP .xls vintages (Mac Roman text); on a machine whose iconv lacks that encoding
+# readxl aborts R, so the check can be skipped with SKIP_VINTAGE_CHECK=1 (28 Sep 2026). It never affects the tables above.
+if (Sys.getenv("SKIP_VINTAGE_CHECK") == "1") { cat("\n[Online Appendix A vintage reconstruction skipped: SKIP_VINTAGE_CHECK=1]\n") } else {
 # --- read all vintages --------------------------------------------------------
 # Each vintage is parsed inside tryCatch so that a single awkward workbook
 # reports itself instead of aborting the run.
@@ -1322,6 +1336,7 @@ if (exists("reg_df")) {
 }
 }   # end of the guarded reconstruction block
 
+}   # end of the vintage reconstruction (SKIP_VINTAGE_CHECK guard)
 # -----------------------------------------------------------------------------
 # 8. Figures 1 and 2
 # -----------------------------------------------------------------------------

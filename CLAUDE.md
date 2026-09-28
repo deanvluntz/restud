@@ -388,3 +388,19 @@ only partial disclosure. Do not repeat that.
   now picks L_wage_infl, L_real_house, L_real_eri -> projection on top 0.0059 (p .002, dAIC -7.2) ext; 0.0055 (p .06, dAIC -2.7)
   core; to 2016: 0.0057 / 0.0046 (p .10). Manuscript text/Figure 4 labels still say 'to 2016' -- update after Sam's R run.
 - 28 Sep 2026: consolidated handover written to quiet-instruments/HANDOVER.md (supersedes HANDOVER_ReStud_Project.md); keep it current.
+- 28 Sep 2026 (cloud session, repo deanvluntz/restud, branch claude/research-paper-synthesis-wqysr9): quiet-instruments pushed
+  to GitHub; R 4.3.3 + ARDL 0.2.5 in the container reproduce Sam's run_all_1964 output to the last digit. Sam's decisions:
+  definitions only for variables not yet defined (once per document; step sentence first); robustness order = step table, tax
+  burden, unemployment measures (ILO/BoE/claimant only), level vs change, permits (no 1959 data, NO basis step), gross, total DR,
+  emigration, then regime steps/horizons/British/sub-samples; origin determinants, network (has further inflow lags) and the
+  sample-start panel dropped; British panel loses its total-DR column; manuscript body reports CORE checks, extended as
+  corroboration with differences named; the ">4 AIC" rule of 27 Sep was the assistant's, not Sam's — his criterion for extending
+  the fiscal model is (a) improves the no-projection model on its own AND (b) improves the model beside the projection;
+  L_inflation = GDP-deflator inflation; L_emig_all = all-citizenship emigrants per 1,000 WAP (t-1, LTIM 2.00). int_tme:
+  ROBUSTNESS ONLY (lead column of the debt panel; augmented model reported in 7.1); primary_int_tme.R written out of curiosity.
+  No proposition language in the text. Scripts: robustness_tables.R, no_projection.R, primary_int_tme.R (new); boe_tests.R /
+  extra_tests.R / gad_obr_tests.R = further controls F1-F8; extension_1964_robustness.R, permits_long.R removed;
+  replication_1977.R fixed (see README change log). Combined manuscript rebuilt (55 pp) with the new Section 7 (7.1, 7.2);
+  Table 4 from tables_1977.json; reference 'OBR (2025) Historical Official Forecasts Database' added — Sam to confirm year/title.
+  1964-only manuscript text NOT updated. HANDOVER.md §0/§7 updated.
+

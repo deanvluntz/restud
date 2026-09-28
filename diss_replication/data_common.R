@@ -37,10 +37,10 @@ if (SAMPLE == "1964") {
 onsx <- read.csv("determinants/ons_extension_2017_2019.csv"); onsx$source <- NULL
 for (v in setdiff(names(onsx), "year")) { for (src in c("boe", "p1")) { d0 <- get(src); if (v %in% names(d0)) { i <- match(onsx$year, d0$year); ok <- !is.na(i) & is.na(d0[[v]][i]); d0[[v]][i[ok]] <- onsx[[v]][ok]; assign(src, d0) } } }
 raw <- take(raw, boe, setdiff(names(boe), "year")); raw <- take(raw, tax, setdiff(names(tax), "year"))
-raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
+raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
-if (!is.null(wp)) raw$permits <- wp$permits[match(y, wp$year)] / 1000
+if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
 raw$brit_rate <- log(1000 * (1000 * raw$brit_in) / wl)
 # canonical names for the BoE / A27 / OBR / GAD columns
 ren <- c(unem_boe = "unem_spliced_boe", unem_claim = "unem_cc", growth = "uk_growth", youth = "youth_origin", tot = "terms_of_trade", trade_bal = "trade_bal_gdp", vac_wap = "vac_per_wap", vac_unem = "vu_ratio",
@@ -61,9 +61,25 @@ if ("days_lost_k" %in% names(raw)) raw$days_lost <- raw$days_lost_k / (raw$workp
 # Denman and Macdonald, 1996, to 1995; claimant count 1996-97) until the ONS made the LFS (ILO) rate the headline in 1998
 raw$unem_head <- ifelse(raw$year <= 1997, raw$admin_unem_rate, raw$unem)
 raw$real_house <- 100 * c(NA, diff(log(raw$house_price_index))) - raw$inflation   # real house-price growth, %
+# levels of the ratio, alternative tax denominators and the shorter horizons: ReformSPA from 1975; the pre-1975 vintages
+# (npp_1963_1974_oadr.csv, npp_1963_1973_totals_by_vintage.csv) and fiscal_block_1962_1974.csv before (extended sample only)
+o63 <- read.csv("determinants/npp_1963_1974_oadr.csv"); f62 <- read.csv("determinants/fiscal_block_1962_1974.csv")
+tv <- read.csv("determinants/npp_1963_1973_totals_by_vintage.csv"); tv <- tv[!is.na(tv$oadr), ]
+gref <- function(col) as.numeric(ref[[col]])[match(y, ref$year)]
+pre <- function(col, src) src[[col]][match(y, src$year)]
+raw$oadr_10 <- ifelse(y < 1975, pre("oadr_10", o63), gref("oadr_10")); raw$oadr_0 <- ifelse(y < 1975, pre("oadr_0", o63), gref("oadr_0"))
+raw$tax_lab <- ifelse(y < 1975, pre("tax_lab_pw", f62), gref("lab_tax_workpop"))
+raw$tax_res <- ifelse(y < 1975, pre("tax_nat_real_gbp_bn", f62) / pre("totpop_m", f62), gref("tax_totpop"))
+oadr_v <- function(v, yr) { t <- tv[tv$vintage == v, ]; approx(t$year, t$oadr, xout = yr, rule = 2)$y }
+for (h in c(1, 3, 5, 7)) { nm <- paste0("delta_oadr_", h)
+  pre_h <- vapply(seq_len(nrow(o63)), function(i) oadr_v(o63$vintage[i], o63$year[i] + h) - oadr_v(o63$vintage[i], o63$year[i]), numeric(1))
+  raw[[nm]] <- ifelse(y <= 1974, pre_h[match(y, o63$year)], gref(nm)) }
+vo <- read.csv("determinants/commonwealth_vouchers_1962_1972.csv")
+if (!is.null(wp)) { raw$vouchers <- ifelse(y >= 1962 & y <= 1972, vo$vouchers[match(y, vo$year)] / 1000, 0); raw$lever <- raw$permits + raw$vouchers }
+raw$trend <- y - min(y)
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",

@@ -68,6 +68,16 @@ DEFS <- c(
   L_tax_vat     = "VAT per working-age person, t-1 (A27; from 1975)",
   L_tax_corp    = "corporation tax per working-age person, t-1 (A27)",
   L_tax_receipts= "total central government receipts per working-age person, t-1 (A27)",
+  L_tax_res     = "national accounts taxes per resident, GBP 000, 2024-25 prices, t-1",
+  L_tax_lab     = "labour taxes (income tax and National Insurance contributions) per working-age person, GBP 000, 2024-25 prices, t-1",
+  oadr_10       = "projected LEVEL of the old-age dependency ratio ten years ahead (pensioners per 1,000 working-age persons), same vintages: the current ratio plus delta_oadr_10",
+  oadr_0        = "old-age dependency ratio in the base year of the vintage in force (the current ratio)",
+  delta_oadr_1  = "projected one-year change in the old-age dependency ratio, same vintages",
+  delta_oadr_3  = "projected three-year change in the old-age dependency ratio, same vintages",
+  delta_oadr_5  = "projected five-year change in the old-age dependency ratio, same vintages",
+  delta_oadr_7  = "projected seven-year change in the old-age dependency ratio, same vintages",
+  lever         = "work permits and first permissions plus Commonwealth employment vouchers (1962-72), thousands",
+  L_lever       = "lever lagged one year",
   L_ln_wap      = "log working-age population, t-1 (Kronmal, 1993: the denominator of mig_rate as its own regressor)",
   L_grants_gdp  = "current grants to the personal sector (cash social benefits), % of GDP, t-1 (Millennium A28)",
   L_grants_wap  = "current grants to the personal sector per working-age person, GBP 000, 2024-25 prices, t-1 (A28)",
@@ -93,16 +103,21 @@ DEFS <- c(
   L_permits     = "permits lagged one year",
   trend         = "linear trend (1965 = 0)",
   post1968      = "indicator from 1968: Commonwealth Immigrants Act 1968",
-  post1973      = "indicator from 1973: Immigration Act 1971 in force",
+  post1973      = "indicator from 1973: Immigration Act 1971 in force on 1 January 1973 (Commonwealth workers move from vouchers to permits; EEC accession the same day)",
   L_growth      = "real GDP growth, %, t-1 (ONS ABMI)",
   L_inflation   = "GDP-deflator inflation, %, t-1 (HM Treasury)",
-  network       = "inflows in t-2 to t-4 per 1,000 working-age persons (t-1)",
   L_relinc_dev  = "log UK GDP per head minus its mean over India, Pakistan, Bangladesh, China, Nigeria, the Philippines and South Africa, t-1 (Maddison Project Database 2023)",
   L_relinc_rich = "log UK GDP per head minus its mean over the US and Australia, t-1 (Maddison)",
   L_youth       = "mean share aged 15-24 in the seven origin countries, %, t-1 (UN World Population Prospects 2024)"
 )
-defs <- function(vars) { v <- vars[vars %in% names(DEFS)]; if (!length(v)) return(invisible())
-  cat("Definitions: ", paste(sprintf("%s = %s", v, DEFS[v]), collapse = "; "), ".\n", sep = "") }
+# Definitions are printed ONCE per document run (Sam, 28 Sep 2026): the body text defines the baseline names (BODY_DEFINED); every
+# other name is defined under the first panel that shows it and never again. The set of names already defined lives in the global
+# environment (DEFINED) so it carries across the scripts of one run_all; a script run on its own starts from BODY_DEFINED.
+BODY_DEFINED <- c("mig_rate", "L_mig_rate", "delta_oadr_10", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "basis_pre1975")
+if (!exists("DEFINED", envir = globalenv())) assign("DEFINED", BODY_DEFINED, envir = globalenv())
+defs <- function(vars) { v <- unique(vars); v <- v[v %in% names(DEFS) & !(v %in% get("DEFINED", envir = globalenv()))]; if (!length(v)) return(invisible())
+  cat("Definitions: ", paste(sprintf("%s = %s", v, DEFS[v]), collapse = "; "), ".\n", sep = "")
+  assign("DEFINED", union(get("DEFINED", envir = globalenv()), v), envir = globalenv()) }
 
 # fit(): OLS on complete cases; constant columns dropped (e.g. basis_pre1975 when the sample starts in 1975)
 fit <- function(d, xs, dv = "mig_rate", min_extra = 5) {
@@ -115,6 +130,7 @@ hacF <- function(m, term = "delta_oadr_10") if (term %in% names(coef(m))) { lh <
 # then the definitions of every variable shown and any extra notes.
 panel <- function(models, title, rows, notes = NULL, w = 14, lw = 16, reset = TRUE, nested_F = FALSE) {
   models <- Filter(Negate(is.null), models); if (!length(models)) { cat("\n", title, ": no estimable column\n"); return(invisible()) }
+  w <- max(w, max(nchar(names(models))) + 2)   # column titles never run together
   cat(sprintf("\n===== %s =====\n\n", title)); cts <- lapply(models, function(m) coeftest(m, vcov. = vcovHAC(m)))
   hdr <- sprintf("%-*s%s", lw, "", paste(sprintf("%*s", w, names(models)), collapse = "")); rule <- strrep("-", nchar(hdr)); cat(hdr, "\n", rule, "\n", sep = "")
   shown <- character(0)
