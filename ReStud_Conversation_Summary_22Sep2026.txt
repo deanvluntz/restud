@@ -1,0 +1,178 @@
+RESTUD / THESIS WORKING SESSION: CONDENSED CONVERSATION LOG
+Sam Hamdane with Claude (Cowork), finishing 22 September 2026
+Documents: ReStud manuscript "Death, taxes, and immigration: how Britain's Treasury
+delayed the inevitable (1977-2019)", with 45pp and 30pp variants and an Online
+Appendix; Humboldt MA thesis (Masters_Thesis_Draft_updated.docx, 1979-2019).
+For the technical reference, see HANDOVER_ReStud_Project.md. This file records
+what was asked, what was decided and what was done, in order.
+
+======================================================================
+1. SAMPLE START, GROSS INFLOWS, ARDL CITATION
+======================================================================
+ASKED: Should the sample start in 1975? The code still says the DR data start in
+1979. What is the case against gross inflows in the fiscal model? Add the ARDL
+package citation.
+ANSWER / DONE:
+- 1977 is the earliest possible start. L_ln_debt_gdp (the annual log change in
+  debt/GDP, lagged) needs debt/GDP for 1975 and 1976, and the HPFD debt series
+  starts in 1974-75. A 1976 start works only if the debt control is dropped
+  (coefficient 0.0063). sample_start_1977.R was written to show this.
+- Against gross inflows: the scaled rate matches the model's per-worker fiscal
+  logic and removes the mechanical effect of population growth. The AIC gap
+  (1.2) is not meaningful, an encompassing test rejects neither form, and the
+  projection coefficient is the same. Gross inflows stay a robustness check.
+- Added Natsiopoulos, Tzeremes and Finnan (2026), R package ARDL v0.2.5, to both
+  reference lists and wherever the bounds test is described.
+
+======================================================================
+2. TITLE / PERIOD, VIF, O'BRIEN
+======================================================================
+SAM: I want the title to cover the whole period with immigration data; a start
+in 1976 at the latest takes in the Dell affair. How do I play down the fiscal
+model's VIF?
+DECISIONS (Sam):
+- Only the MANUSCRIPT moves to 1977-2019 (title and period references). The
+  THESIS stays on 1979-2019.
+- Add the VIF paragraph to both documents, WITHOUT the sentence "Collinearity
+  inflates the variance ... regardless". Add O'Brien (2007) to both reference
+  lists.
+- Make 1977 versions of the R code (*_1977.R, tables_1977.json).
+DONE: VIF paragraph in the thesis (after ¶418; 1979 values 12.7/12.7/9.8/1.4)
+and in manuscript §6.2. Created replication_1977.R, build_tables_1977.R,
+verify_1977.R, appendix_exhibits_1977.R, robustness_both_specs_1977.R,
+mpr_dummies_replication_1977.R and run_all_1977.R.
+
+======================================================================
+3. PAGE TRIMS, ABSTRACT
+======================================================================
+SAM: The thesis and manuscript go to different institutions, so they need not
+match. Change the manuscript abstract to "nearly quintupled". 45pp: cut the
+4th proposed trim and abbreviate the other 3. 30pp: leave them, Sam will cut.
+DONE as asked. The thesis abstract keeps "tripled".
+
+======================================================================
+4. THESIS TABLES
+======================================================================
+SAM: The Online Appendix belongs to the manuscript (1977 run). I want the most
+up-to-date tables in the THESIS. Change "Lab. tax + VAT" to "Lab. tax+VAT".
+DONE: regenerated the thesis Appendix A panels from run_all_output.txt (1979).
+Fixed a bug in panel(): blocks sharing the name "  p" printed the wrong
+p-values. The label change was applied everywhere. hh_tax_gdp is now built in
+build_tables.R from fiscal_block_HPFD.csv. verify.R: 615 values, no
+differences.
+¶358: rewritten to match the ratio panel.
+
+======================================================================
+5. THESIS REFERENCES
+======================================================================
+SAM (uploaded new thesis copy 6ec39f17):
+- Remove references that are no longer cited.
+- Access dates only for news articles, web pages, datasets and official
+  online publications. None for academic sources.
+- Every access date randomly "20 June 2026" or "21 June 2026" (some still said
+  15 June).
+DONE: 33 entries dated 20 June and 21 dated 21 June; academic access dates
+removed; uncited entries removed. Your hand edits (the §5.2.4 heading, ¶190,
+the Higgs date, the trimmed Natsiopoulos entry, removed blank lines) were kept.
+FOLLOW-UPS (Sam said yes): "(ONS, 2026e)" added in ¶358; table citations
+changed to ONS 2026a-d and OBR 2026 (the old OBR 2026a entry deleted, 2026b
+renamed); ONS 2016a deleted, 2016b renamed 2016; stray "`0" deleted.
+
+======================================================================
+6. MANUSCRIPT: 1977 RESULTS AND CHECKS
+======================================================================
+DONE: every manuscript number updated to the 1977 run and checked against Sam's
+R output (run_all_1977_output.txt).
+- A (precision check): wrote precision_check.R. Result: 0.00824 -> 0.00826
+  (1977) and 0.00813 -> 0.00815 (1979). Quoted in Online Appendix A.
+- C (Appendix C with a 1977 start): wrote delay_counterfactual_1977.R and
+  added 1975-78 rows to net_migration.csv (-41, -19, -46, -5). Gap 41.1 OADR
+  points; cumulative net migration 5.08m (12.2% of working-age population).
+- "27 years" explained: the gap divided by the zero-migration pace of ageing
+  (1.53 points/yr). At Sam's request the text now says this is a
+  simplification, and that the points gap is the robust statistic.
+- "on the order of 19 per cent" changed to "about 20 per cent" (Sam).
+
+======================================================================
+7. RECOMMENDATIONS AND RESTRUCTURE
+======================================================================
+SAM asked what ReStud-style improvements to make and what the conventions are
+for a thesis conclusion. Then: "yes please [draft the conclusion], and also
+amend the manuscript(s) with the first 5 points."
+DONE:
+- Thesis §12 Conclusion redrafted (7 paragraphs, 641 words). The original is
+  saved as Thesis_Conclusion_original_22Sep2026.txt.
+- Manuscript: (1) headline result and Figure 1 moved into the introduction;
+  (2) Section 2 condensed (5,052 -> 2,956 words), full text now Online
+  Appendix E; (3) Figure 3 (coefficient by horizon) and Figure 4 (robustness
+  coefficient plot); (4) circular-shift timing placebo and a second-lag check
+  (manuscript_extras_1977.R); (5) Proposition 1 (P1-P7) in Section 3 with the
+  proof in Online Appendix D. Flagged: P2 needs condition (A2).
+- Sam's manuscript_extras_1977.R output applied: actual t 5.68 vs largest
+  |t| 3.97 across rotations, p = 1/43 = 0.023. Second lag: -0.06 (p 0.65),
+  AIC worse (-68.32 vs -70.10). Effect significant from horizon 3 (h=1
+  p .47, h=2 p .11).
+- The Online Appendix is now A-F (D proof, E background, F digital
+  references), 25 pages.
+
+======================================================================
+8. RESTRUCTURE CARRIED INTO THE VARIANTS
+======================================================================
+SAM: do the restructure for each variant before the handover.
+DONE:
+- 45pp: new assemble_r45v2.py builds from the full manuscript -> 45 pages.
+  It drops §2.6, including Sam's principal-agent paragraph (the earlier 45pp
+  did the same; Sam may want this reviewed). Several paragraphs shortened.
+- 30pp: assemble_r30.py then the new restructure_r30.py, with Figures 3-4 at
+  90% (MS_FIGSCALE=0.9) -> 30 pages. It drops the Recognition and
+  Read-through paragraphs and shortens the history, post-2019, limitations and
+  conclusion text.
+- Full manuscript: 48 pages (over the 45 limit; Sam said he would cut it
+  himself).
+- The References heading now starts its own page (removes an empty page).
+
+======================================================================
+9. HANDOVER
+======================================================================
+DONE: HANDOVER_ReStud_Project.md. It covers the objective and status, the
+architecture and stack, the rules, lessons learned, open tasks, schemas and
+reference snippets.
+
+======================================================================
+KEY NUMBERS (manuscript 1977-2019, N = 43 | thesis 1979-2019, N = 41)
+======================================================================
+Projection coefficient (HAC s.e.):  0.0082 (0.0015)       | 0.0081 (0.0014)
+Trend specification:                0.0073                | 0.0075
+Tax / debt / unemployment:          0.052 / 0.54 / -0.020 | 0.048 / 0.57 / -0.021
+rho:                                0.47                  | 0.49
+Bounds test F / t:                  6.16 (p<.01) / -4.09  | 4.94 (.03) / -3.83 (.07)
+Total-dependency-ratio placebo:     0.0020 (p .16)        | 0.0015 (p .26)
+EU placebo:                         0.0030 (p .41)        | 0.0028 (p .42)
+Max VIF:                            13.0                  | 12.7
+Long run: 1.5% uncorrected, about 2.0% bias-corrected (manuscript)
+
+======================================================================
+STANDING RULES (full text in CLAUDE.md)
+======================================================================
+- Every copy Sam uploads becomes the new base. Never reverse his hand edits
+  without asking first, item by item, and disclose every divergence.
+- Oxford commas (not in Harvard author lists or quotations). Quotations are
+  never altered.
+- Thesis: first person singular; reference hanging indent; access dates as in
+  section 5.
+- The two abstracts differ on purpose. Do not trim the full manuscript unless
+  Sam asks.
+- The debt regressor is a LOG CHANGE (ln_debt_gdp / L_ln_debt_gdp), never a
+  log level.
+
+======================================================================
+OPEN ITEMS
+======================================================================
+1. Full manuscript at 48 pages: Sam's cuts.
+2. Thesis Appendix A: a cropped strip and a duplicated gross-inflows panel
+   (awaiting Sam's decision).
+3. Thesis wording flags not yet answered (¶457 says "1976" as the earliest
+   start; ¶62/¶64).
+4. Whether the 45pp should keep the principal-agent paragraph.
+5. Literature additions to verify; a README for the replication package;
+   whether the Online Appendix needs its own reference list.

@@ -1,0 +1,213 @@
+# Replication package: "Death, taxes, and immigration: how Britain's Treasury delayed the inevitable (1977–2019)"
+
+Sam Hamdane. **Living document.** It follows the Social Science Data Editors template
+(https://social-science-data-editors.github.io/template_README/) and is updated whenever data,
+scripts or results change. See the change log at the end.
+Items marked **[TO DO]** must be finished before the package goes to the ReStud data editor.
+
+---
+
+## 1. Overview
+
+The code rebuilds every table and figure in the manuscript and its Online Appendix (1977–2019,
+N = 43). It also rebuilds the companion MA thesis (1979–2019, N = 41). Everything is in R and
+runs from this folder. The main script is `run_all_1977.R` (manuscript) or `run_all.R` (thesis).
+A full manuscript run takes about 5 minutes on a standard laptop.
+
+The main regressor is the ten-year change in the old-age dependency ratio (OADR) projected by
+the official National Population Projection (NPP) in force in each year. It is rebuilt from
+every vintage from 1975-based to 2018-based. The dependent variable is the log of non-EU
+long-term inflows per 1,000 of the previous year's working-age population.
+
+## 2. Data availability and provenance
+
+All data are public. No confidential or licensed data are used.
+
+| Data | Source | Files in this folder | Access |
+|---|---|---|---|
+| National Population Projections, 1975-based to 2018-based | Government Actuary's Department and ONS (1975–2018). Earlier vintages come from the ONS "National Population Projections, Historic Series" page, now discontinued (National Archives web archive capture) | `wuk75cc…xls` to `wuk12cc…xls`, `2014 npp.xls`, `2016 NPP.xls`, `ukpppsummary18.xls` | Free download. Open Government Licence |
+| Long-term international migration (IPS inflows by citizenship; net migration) | ONS (2020), LTIM table 2.00, "2.00ltimcitizenship1964to2019.xls" | Built into `Dissertation_Dataset_Final.xlsx`; `net_migration.csv` | Free, OGL |
+| Fiscal block (taxes, labour taxes, VAT, debt/GDP, GDP) | OBR Historical Public Finances Database (2026) | `fiscal_block_HPFD.csv` (built from the OBR workbook `Historical-public-finances-database.xlsx`, not yet in this folder: **[TO DO]** add it) | Free, OGL |
+| GDP deflators (2024–25 prices) | HM Treasury (2026), March 2026 Spring Statement update | Used in `fiscal_block_HPFD.csv` | Free, OGL |
+| Income-tax payer counts | HMRC Tables 2.1 and 2.1a | Built into the dataset | Free, OGL |
+| Compensation of employees (DTWM); unemployment | ONS time series | Built into the dataset | Free, OGL |
+| GDP per head, 1963–2019 (UK and nine non-EU origins) | Bolt and van Zanden (2024), Maddison Project Database 2023, via the Our World in Data grapher | `determinants/maddison_gdppc.csv` | Free (CC BY) |
+| Population by age group, seven non-EU origins, 1963–2019 (1963–75 added 25 Sep 2026 from the OWID grapher CSV in persons) | United Nations (2024), World Population Prospects 2024, via Our World in Data | `determinants/unwpp_agegroups_m.py` (millions, 1 d.p.) → `determinants/unwpp_youth_share.csv` | Free (CC BY) |
+| Work permits and first permissions (long-term), 1946–2008; Tier 2 visa issues 2009–2018 | Bauer and Salt (2020), Figure 1, read off the chart by pixel measurement (bar tops against the 20,000 gridlines; resolution ≈ 400 permits). Checked against the paper's Annex 1 totals: within 1% in 8 of 13 listed years; 1960, 1976, 1984, 1988 differ by 10–17% and 1979–80 by more, where the Annex nationality table is incomplete | `determinants/work_permits.csv` (column `flag` marks bars whose top is crossed by the unemployment line) | Published figure |
+| Home Office Migrant Journey 2025, initial grants of leave by type, non-EU main applicants, 2008–2025 | Home Office (2026), Migrant Journey detailed dataset MJ_D01, summed here | `determinants/home_office_initial_leave_nonEU_2008_2025.csv` | Free, OGL |
+| IPS inflows by main reason, non-EU citizens, 1977–2019 (thousands) | ONS (2020), LTIM table 3.08, 'Raw Data' sheet, NON-EU columns, inflow rows | `determinants/ips_nonEU_inflow_by_reason_1977_2019.csv` | Free, OGL |
+| IPS citizenship by country of last/next residence, 1975–2019 (Sam's DV source: non-EU citizens from non-EU countries) | ONS (2020), LTIM table 3.01, 'Raw Data' sheet | `determinants/ips_301_citizenship_by_residence_1975_2019.csv` (ALL / EU / NON-EU residence × British / non-EU / EU / all citizenship, inflow and outflow) | Free, OGL |
+| National Population Projections, 1963- to 1973-based (pre-sample vintages for the 1964 extension) | GAD, via the ONS historic series | `wuk635y…xls`, `wuk655y…xls`, `wuk675y…xls`, `wuk695y…xls` (five-year age groups by sex; years base…base+7 then selected years to base+37), `wuk71cc…xls`, `wuk73cc…xls` (annual to base+40, published working-age/pension-age rows) → `determinants/npp_1963_1974_oadr.csv` (current-year values, vintage in force) and `determinants/npp_1963_1973_totals_by_vintage.csv` (total, working-age and pension-age population for every published projection year of each vintage) | Free, OGL |
+| Non-British citizen inflows 1964–2019, one basis | LTIM 2.00 (1964–74, all minus British), IPS 3.24 old/new country groupings (1975–2015), IPS 3.01 (2016–19) | `determinants/inflows_non_british_1964_2019.csv`; notes and ready footnotes in `determinants/README_1964_extension.md` | Free, OGL |
+| GDP, chained volume (ABMI), 1948– | ONS series ABMI, UKEA | `../series-070426.xls` | Free, OGL |
+| Extension inputs 1962–1974 (fiscal block, chain-linked deflator, Bank of England unemployment) and assembled 1962–2019 dataset | OBR HPFD; HMT GDP deflator March 2026 update, which runs from 1955–56 (`determinants/deflator_1956_1975_HMT.csv`); BoE A50 unemployment (Thomas and Dimsdale, 2017) | `determinants/fiscal_block_1962_1974.csv`, `determinants/deflator_1962_1975_chainlinked.csv`, `determinants/extension_1962_2019_dataset.csv`; method and results in `determinants/README_1964_extension.md` | Free, OGL / BoE terms |
+| Extension extras 1962–2019 | Pre-1975 vintages (total DR), `dr_corrected.csv`, LTIM 2.00 all/British flows, ONS ABMI, HMT deflator | `determinants/extension_1962_2019_extras.csv` | Free, OGL |
+| Bank of England *Millennium of macroeconomic data* v3.1 (Thomas and Dimsdale, 2017), annual averages of monthly series: administrative/claimant unemployment rate (M5 C to 1995, E from 1996), BoE spliced rate (M5 G), vacancies (M5 AB), average weekly earnings and wage inflation (M6 Z, AA), Treasury bill rate (M1 N); annual: unemployed and workforce (A50 G, I), replacement ratio and union density (A52b P, C), days lost (A52b Q), real short rate (A31 Q), current grants to persons and TME (A28 D, I), labour productivity per hour growth (A56 R) | Sam's upload `a-millennium-of-macroeconomic-data-for-the-uk.xlsx` | `determinants/boe_millennium_annual_1955_2017.csv` (all series), `determinants/boe_extras_1962_2019.csv` (aligned to the extension dataset; 2017–19 blank pending ONS BCJE/AP2Y/KAB9 and the BoE bill rate) | BoE terms |
+| Central government receipts by tax (A27, financial years → year t = FY t−1/t, as the fiscal block; deflated with the HMT deflator; per WAP): income tax, NICs, direct taxes, taxes on products and production, VAT, corporation tax, total receipts | BoE Millennium v3.1 sheet A27 | `determinants/boe_a27_tax_variants_1956_2019.csv` (CG receipts ≈ 0.97–1.00 × HPFD national accounts taxes) | BoE terms |
+| Working-age and total population | National Population Projections (GAD and ONS), population estimates from the most recent vintage | Built into the dataset (`workpop`, `totpop`; `wap_m`, `totpop_m` in `fiscal_block_HPFD.csv`) | Free, OGL |
+
+**Analysis dataset.** `Dissertation_Dataset_Final.xlsx`:
+
+- Sheet `ReformSPA` (main, one row per year, 1975–2020);
+- `PubShiftOADR_ZM` (publication-dated series);
+- `FixedSPA` and `ReformSPA (2)` (alternative pension-age conventions).
+
+**[TO DO]**
+
+- Record the download date and exact URL for each source file.
+- Add a short script or note that builds `Dissertation_Dataset_Final.xlsx` from the raw files. At present the NPP-derived columns are rebuilt and checked in code (CHECKs 1–4 in `replication.R`), but the workbook itself was assembled by hand.
+
+## 3. Computational requirements
+
+- R 4.6.1 (2026-06-24). Packages: `ARDL` 0.2.5 (Natsiopoulos, Tzeremes and Finnan, 2026), `sandwich`, `lmtest`, `car`, `tseries`, `urca`, `readxl`, `jsonlite`.
+- **[TO DO]** Pin exact package versions, for example with `renv::snapshot()` or a `packages.R` that installs them.
+- Hardware: any laptop. Memory under 1 GB.
+- Runtime (22 Sep 2026 run): `replication_1977.R` 130 s, `appendix_exhibits_1977.R` 137 s, the rest under 5 s each.
+- Randomness: every stochastic step (bootstrap, exact bounds-test p-values) calls `set.seed(20260802)` immediately before it, so results are reproduced exactly.
+
+## 4. Description of programs
+
+| Script | Purpose | Output |
+|---|---|---|
+| `replication_1977.R` | Main models, bounds tests, bootstrap, placebos, publication dating, NPP reconstruction checks, Figures 1–2 | console; `figure1_1977.png`, `figure2_1977.png`; `zero_migration_deltas_R_1977.csv` |
+| `build_tables_1977.R` | Runs `replication_1977.R` and writes every table cell | `tables_1977.json` |
+| `verify_1977.R` | Compares `tables_1977.json` with `tables_expected_1977.json`; `verify_accept()` re-baselines | console |
+| `appendix_exhibits_1977.R` | Online Appendix B panels | console |
+| `robustness_both_specs_1977.R`, `mpr_dummies_replication_1977.R` | Robustness exhibits | console |
+| `sample_start_1977.R` | Starts in 1977, 1978 and 1979; 1976 start without the debt term | console |
+| `manuscript_extras_1977.R` | Figures 3 (horizons) and 4 (robustness), timing placebo, second-lag check | `figure3_1977.png`, `figure4_1977.png`; console |
+| `delay_counterfactual_1977.R` | Online Appendix C | console |
+| `precision_check.R` | Online Appendix A precision check | console |
+| `appendix_exhibits_labpop_1977.R` | Every Online Appendix exhibit re-run with labour taxes per head of total population as the tax term (1977-2019); tax-measure panels unchanged | console |
+| `labtax_battery.R` | Labour taxes per total population vs the Table 2 measure through the robustness battery, non-nested tests (J, Cox, encompassing), recursive forecasts and bounds test; set `START` first | console |
+| `tax_grid.R` | Tax-burden term measured all 18 ways (3 numerators x 6 denominators); set `START <- 1979` (thesis) or `1977` (manuscript) first | console |
+| `spending_check.R` | Realised spending (health, pensioner and non-pensioner social security, from `Sheet2`) added to, or swapped for, the projection; set `START` first | console |
+| `determinants_check.R` | Balance test (do literature determinants predict the projection's vintage revisions?) and horse race (each determinant added to tax_spec); needs the NPP vintage workbooks and `determinants/` | console |
+| `stability_check.R` | Recursive and rolling estimates of the projection coefficient; OLS-CUSUM, sup-F and Bai–Perron break tests (needs `strucchange`); writes `stability*.png` | console; `stability.png` |
+| `permits_check.R` | Policy-lever test: work permits on the projection (with zero-migration and total-DR variants, and in differences); inflows on permits with and without the projection; timing | console |
+| `appendix_permits.R` | Appendix A panel 'Policy lever', 1979–2008: gross permits (thousands, primary) | permits/WAP | log permits/WAP | zero-migration | total DR | console |
+| `manuscript_1964.R` | MANUSCRIPT 1964–2019 version: Tables 2, 3 (ARDL bounds, basis step as fixed regressor), 4, B2, Figure 4 rows, timing placebo, second lag, bootstrap bias correction, permits 1965–2008, British placebo 1977–2019, recursive/rolling/CUSUM → `tables_1964.json` for `manuscript_1964/build_docx_1964.js` | `tables_1964.json` |
+| `extension_1964_boe.R` | MANUSCRIPT: labour-market state (admin/claimant, BoE spliced, vacancies, V/U) and macro controls (wage inflation, real wages, T-bill, real rate, inflation expectations, TFP, replacement ratio, union density) on 1965–2016 and 1977–2016 | console |
+| `boe_tests.R` | One script for both samples (`SAMPLE <- "1964"` or `"1977"`): labour-market state (ILO / BoE spliced / admin C-E / vacancies / V/U / Δln V/U), gross inflows with lagged emigration, wages-rates-expectations-TFP-institutions, tax burden by type from A27, all-together; PRIMARY to 2016, SECONDARY to 2019 when ONS values are added to the CSV; wrappers `extension_1964_boe.R`, `core_1977_boe.R` | console |
+| `boe_appendix.R` | Online Appendix Tables B6 (labour demand and the tax base: Δln V/U, vacancies, NICs total/employee/employer, Kronmal) and B7 (EU placebo with vacancies; permits 1965–2008 with vacancies; do vacancies predict revisions) for either sample | console |
+| `extra_tests.R` | Further influences on both samples: realised spending across the sample (A28 grants/TME), disputes, election cycle, OBR era, and 'without the projection' comparison (Panel 3 = Online Appendix Table B8) | console |
+| `tables_common.R`, `data_common.R` | Shared by every manuscript table script: variable dictionary (one short name per variable, defined under each panel), printing conventions, and the two-sample data frame (`SAMPLE` = "1964" / "1977") | -- |
+| `prop1_model.R` | Proposition 1 (fiscal/macro-political model without the projection: candidate screen, pre-stated forward-selection rule on both samples, models, recursive forecasts, gross inflows, EU placebo) then Proposition 2 (the projection added) | console |
+| `permits_long.R` | The policy lever 1959-2008 (1958-based projection from the 1960 Quinquennial Review) and permits + Commonwealth vouchers 1964-2008 | console |
+| `gad_obr_tests.R` | Forward-looking non-demographic pressures on both samples: GAD Quinquennial Review contribution pressure (determinants/gad/), OBR historical official borrowing forecasts, debt interest and r-g | console |
+| `run_all_1964.R` | Sources the three 1964 scripts in clean environments, output to `run_all_1964_output.txt` | console |
+| `run_all_thesis_extras.R` | Sources the September-2026 thesis additions (spending, determinants, stability, permits, appendix panels, tax grid) | console |
+| `extension_1964_robustness.R` | MANUSCRIPT: robustness of the 1964 extension on series B — trend and Act steps, total-DR placebo, added regressors (growth, inflation, British emigration, network), sample starts 1965–1979, sub-samples; HAC Wald F | console |
+| `extension_1964.R` | MANUSCRIPT: the fiscal specification on the 1964 extension, read from sheet `1964` of the workbook (fallback: `determinants/extension_1962_2019_dataset.csv`): non-British 1965–2019 (A), spliced non-British/non-EU with and without a basis step (B), non-British to 2003 (C), the thesis estimate for reference, and A on 1965–78 and 1979–2019; then total population by pre-1975 vintage | console |
+| `appendix_british.R` | Appendix A panels: uncontrolled flows (non-EU in, British in from non-EU/EU, British out, non-EU out, EU in from non-EU); British inflows by region of last residence; non-EU inflows with the British flow as control and the British equation by half-sample; IPS sampling-error comparison | console |
+| `run_all_1977.R` | Runs the manuscript set and captures the output | `run_all_1977_output.txt` |
+| Thesis versions (no suffix): `replication.R`, `build_tables.R`, `verify.R`, `appendix_exhibits.R`, `robustness_both_specs.R`, `mpr_dummies_replication.R`, `thesis_replication.R`, `delay_counterfactual.R`, `run_all.R` | Same as above on 1979–2019 | `tables.json`, `run_all_output.txt` |
+
+The documents are built outside R: `build_docx.js` and `build_online_appendix.js` (Node) read
+`tables_1977.json` and the figure files. They are not needed to verify the numbers.
+
+
+### Documents and the scripts that feed them (26 Sep 2026)
+
+| Document | Sample | Scripts (in order) | Numbers file |
+|---|---|---|---|
+| Thesis `Masters_Thesis_Draft_updated.docx` | 1979–2019, N = 41 | `run_all.R` (replication.R, appendix_exhibits.R, robustness_both_specs.R, mpr_dummies_replication.R, sample_start.R), `build_tables.R`, `verify.R`, `stationarity_bounds_replication.R`, `delay_counterfactual.R`; then `run_all_thesis_extras.R` (spending, determinants, stability, permits, British, tax grid) | `tables.json` |
+| Manuscript 1977 `Hamdane_ReStud_Manuscript.docx` (+ 45pp/30pp variants) | 1977–2019, N = 43 | `run_all_1977.R`, `build_tables_1977.R`, `verify_1977.R`, `stationarity_bounds_replication_1977.R`, `manuscript_extras_1977.R`, `delay_counterfactual_1977.R` | `tables_1977.json` |
+| Manuscript 1964 `Hamdane_ReStud_Manuscript_1964.docx` | 1965–2019, N = 55 (series B) | `run_all_1964.R` (extension_1964.R, extension_1964_robustness.R, manuscript_1964.R) | `tables_1964.json` |
+| Combined `Hamdane_ReStud_Manuscript_combined.docx` | core 1977–2019 and extended 1965–2019 side by side | both of the above rows | `tables_1977.json` + `tables_1964.json` |
+
+Builders live in `../outputs/` (1977: `build_docx.js`) and `../manuscript_1964/` (`build_docx_1964.js`, `build_docx_combined.js`); sources in `manuscript_part1/2.md` and `manuscript_1964/ms1964/`.
+
+## 5. Instructions to replicators
+
+In a fresh R session, with this folder as the working directory:
+
+```r
+source("build_tables_1977.R")      # writes tables_1977.json
+source("verify_1977.R")            # should report no differences
+source("run_all_1977.R")           # all console exhibits -> run_all_1977_output.txt
+source("manuscript_extras_1977.R") # Figures 3-4, timing placebo, second lag
+source("delay_counterfactual_1977.R")
+source("precision_check.R")
+```
+
+**[TO DO]** Replace these steps with a single `master.R`.
+
+## 6. List of tables and figures
+
+| Exhibit | Script | Where the numbers come from |
+|---|---|---|
+| Table 1 (descriptive statistics) | `build_tables_1977.R` | `tables_1977.json` → `table1` |
+| Table 2 (main estimates) | `build_tables_1977.R` | `table2` |
+| Table 3 (bounds test, long-run) | `build_tables_1977.R` | `table3` |
+| Table 4 (falsification and robustness) | `build_tables_1977.R` | `table4` |
+| Figure 1 | `replication_1977.R` | `figure1_1977.png` |
+| Figure 2 (added-variable plots) | `replication_1977.R` | `figure2_1977.png` |
+| Figure 3 (horizons) | `manuscript_extras_1977.R` | `figure3_1977.png` |
+| Figure 4 (robustness summary) | `manuscript_extras_1977.R` | `figure4_1977.png` |
+| Online Appendix A, precision check | `precision_check.R` | console |
+| Online Appendix B, Tables B1–B5 | `appendix_exhibits_1977.R`, `robustness_both_specs_1977.R`, `mpr_dummies_replication_1977.R` | `run_all_1977_output.txt` |
+| Online Appendix C, Tables C1–C2 | `delay_counterfactual_1977.R` | console |
+| Timing placebo, second lag (Section 7 text) | `manuscript_extras_1977.R` | console |
+
+## 7. Housekeeping before submission [TO DO]
+
+- Remove `replication copy.R`, the Excel lock file `~$Dissertation_Dataset_Final.xlsx` and the duplicate `wuk75cc_tcm77-395111 (1).xls`. These need Sam's confirmation before deletion.
+- Fix or remove `stationarity_bounds_replication.R` and `stationarity_bounds_replication_1977.R`. Both call the removed column `borrow_gdp`. Their panels are already produced by `appendix_exhibits*.R`.
+- Move the thesis (1979) scripts into a `thesis/` subfolder, or document them as secondary.
+- Merge `README.txt` into this file.
+- `../archive_march2026/` holds a superseded run. Leave it out of the package.
+
+## 8. References
+
+- Natsiopoulos, K., Tzeremes, N. and Finnan, D. (2026). *ARDL: ARDL, ECM and Bounds-Test for Cointegration*. R package version 0.2.5.
+- Office for Budget Responsibility (2026). *Historical Public Finances Database*.
+- Office for National Statistics (2020). *Long-term international migration 2.00, citizenship, 1964 to 2019*.
+- Office for National Statistics (2020). *International Passenger Survey 3.01, citizenship by country of last or next residence, UK, 1975 to 2019* (discontinued after 2019). https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration/datasets/internationalpassengersurveycitizenshipbycountryoflastornextresidencetable301
+- Government Actuary's Department and Office for National Statistics (1975–2018). *National Population Projections*, 1975-based to 2018-based.
+
+---
+
+## Change log
+
+| Date | Change |
+|---|---|
+| 23 Sep 2026 | README created from the handover notes. The 1977 run is the manuscript baseline: fiscal coefficient 0.0082 (HAC s.e. 0.0015), N = 43. |
+| 23 Sep 2026 | Added `tax_grid.R`. `appendix_exhibits*.R`: baseline panel now five columns (no OADR/no tax; no OADR + tax; OADR fiscal; OADR trend; OADR fiscal+trend) with an "F added term" row; "Tax burden per resident" renamed "Tax burden per total population". |
+| 23 Sep 2026 | Added `labtax_battery.R`. Online Appendix tax table headings: "resident" -> "total pop.". |
+| 23 Sep 2026 | "Comp" relabelled "Wages" (compensation of employees): `tax_grid.R` rows `*/Wages`; `appendix_exhibits*.R` ratio panel column "Lab. tax/wages", regressor `L_lab_tax_wages`. |
+| 23 Sep 2026 | `tax_grid.R`: "PenPop" rows relabelled "WAP/OADR" (tax per working-age person / current OADR). 1979 grid added to thesis Appendix A ("Tax burden: all numerator and denominator combinations"). |
+| 23 Sep 2026 | CORRECTION: the pension-age measure is Sam's L_tax_oadr_0 = tax (GBP bn) / lagged current OADR, not tax per WAP / OADR. `tax_grid.R` rows now "*/OADR"; `appendix_exhibits*.R` panel "Tax burden relative to the current OADR" rebuilt on that definition (checked against L_tax_oadr_0). |
+| 23 Sep 2026 | `tax_grid.R`: "LabVAT" shown as "Lab+VAT"; OADR footnote now "current old-age dependency ratio (per 1,000), lagged one year". |
+| 23 Sep 2026 | Added `appendix_exhibits_labpop_1977.R` (Lab/Pop variant of the 1977 appendix exhibits). |
+| 23 Sep 2026 | F rows: `appendix_exhibits.R` (thesis) footer labels them classical nested F; `appendix_exhibits_1977.R` and `_labpop_1977.R` now compute HAC Wald F (`hac_F`). Manuscript text updated to HAC Wald F(1,37) = 32.23 and 2.11. |
+| 23 Sep 2026 | `Sheet2` (spending, OBR HPFD / IFS; year = fiscal year ending): `health_gdp` corrected. It had held total social security as a share of GDP; it is now health spending as a share of GDP. Added `health_real_£bn` (2024–25 prices, HMT March 2026 deflator), `health_pw` and `health_pop` (GBP thousand per working-age / total person). Added `spending_check.R`. No headline result changes. |
+| 23 Sep 2026 | Added `determinants_check.R` and `determinants/` (Maddison GDP per head; UN WPP youth shares). Results (1979): revisions not predicted by the determinants (F(4,16) = 1.96, p = 0.15; with networks F(5,14) = 1.55, p = 0.24); projection 0.0076–0.0103 with each added; 0.0075 (p = 0.002) with four together; 0.0059 (p = 0.076) with all five on 1980–2019. Thesis 6.3 rewritten; new Section 9 subsection. **[TO DO]** record OWID download dates. |
+| 25 Sep 2026 | Added `stability_check.R`. Thesis 8.2 now reports the one-SD magnitude (7.7% impact, ~16% long run) and the Kendall/bootstrap correction of the persistence term (Kendall reference added); manuscript §6 gets the one-SD sentence (rebuilt, still 49 pp). Work-permit test planned: see `../Guide_policy_lever_and_stability_tests.md`; data file `determinants/work_permits.csv` to be collected. |
+| 25 Sep 2026 | `stability_check.R`: sup-F trimming and Bai–Perron minimum segment set to 8 years (0.15 fraction was below the regressor count). Results (1979): CUSUM p = 0.94, sup-F p = 0.46; rolling windows 0.006–0.013, 16/17 significant. Thesis Section 9 'Stability over time' added. |
+| 25 Sep 2026 | Added `determinants/work_permits.csv` (digitised from Bauer and Salt 2020, Fig. 1), `determinants/home_office_initial_leave_nonEU_2008_2025.csv`, and `permits_check.R`. Replica results 1979–2008: log permit rate on lagged permits + projection + controls, projection 0.0094 (p = 0.03), 0.0097 (p = 0.01) without controls, zero-migration 0.0115 (p = 0.004), total-DR placebo −0.002 (p = 0.63), first differences 0.0088 (p = 0.05). Inflows on permits 0.22 (p = 0.02); with projection added permits 0.08 (p = 0.48), projection 0.0085 (p = 0.005). Not yet in the thesis text. |
+| 25 Sep 2026 | Added `determinants/ips_nonEU_inflow_by_reason_1977_2019.csv` (ONS table 3.08). Replica composition test (each reason as DV, tax_spec RHS, 1979–2019): work +0.0069 (p .04) without controls but sensitive to controls (+0.0255 with tax term, no persistence); study +0.0056 (p .07) / +0.0025 (p .42) with controls, +0.007 (p .04) in differences; accompany/join (from 1983) +0.007–0.008 (p .02–.06); 'other' +0.014 (p <.001). Noted: reasons split the projection's effect across all routes rather than isolating work; reported to Sam, not in text. |
+| 25 Sep 2026 | `permits` and IPS-by-reason columns added to `ReformSPA` by Sam. `appendix_permits.R` added (level form reported: projection 0.0152, p = 0.007, ≈550 permits per point; logs 0.0091, p = 0.039). Thesis Section 9 'The policy lever' added; 'Davies, 2022' corrected to 'Davis, 2022'; two full-name ONS/OBR citations abbreviated for consistency. |
+| 25 Sep 2026 | `appendix_permits.R`: gross-permit columns added (levels 0.539 thousand per point, p = 0.010; logs 0.0089, p = 0.050). One clause added to the Section 9 text. |
+| 25 Sep 2026 | Gross permits (thousands) made the primary form in `appendix_permits.R` (columns reordered and renamed) and in the Section 9 text: 0.539 (p = 0.010), ≈540 permits per point; zero-migration 0.590 (p = 0.003); total DR −0.15 (p = 0.44). Unscaled log-permits column removed (no precedent in the thesis). |
+| 25 Sep 2026 | Uncontrolled-flow placebos on table 3.01 (same basis as the DV). British citizens IN from non-EU countries respond to the projection (+0.0070, p = 0.03; total-DR null); British OUT to non-EU null; non-EU OUT marginal (+0.0038, p = 0.08); EU citizens from non-EU and non-EU citizens from EU null. Non-EU inflows with the British-from-non-EU inflow as a control: projection 0.0057 (p < 0.001). Longer horizons: 20-year −0.0016 (p 0.26), 25-year 0.0000 (p 0.97), neither displaces the 10-year term. Reported to Sam; not in text. |
+| 25 Sep 2026 | Thesis: British-citizen placebo paragraph added to Section 9 (after 'EU vs. non-EU migration'): British from non-EU 0.0070 (p .034), ΔAIC −2.8 vs −15.6, null in both half-samples, null for Oceania/North America, concentrated in Sub-Saharan Africa (0.0178) and Asia (0.0074); projection 0.0057 with the British flow controlled. Horizon sentence added to 8.1 (20-year only; 25-year dropped as adding nothing; 30/40-year not testable because the 1996–2012 vintages project only 25 years, leaving 23 and 15 usable years that exclude the period in which projections vary). IPS sampling error of the British-from-non-EU series: CI ±17% vs ±9% for non-EU; sampling SD is 45% of the series' log variation vs 9%; re-drawing the series 1,000× from its published CIs gives coefficient 5–95% range 0.0049–0.0106, p < 0.05 in 60% of draws, never ≤ 0. |
+| 25 Sep 2026 | `determinants/ips_301_citizenship_by_residence_1975_2019.csv` rebuilt with every residence region × citizenship group, inflow and outflow, with CIs. `appendix_british.R` added. Sampling-error clause added to the Section 9 British paragraph. |
+| 25 Sep 2026 | Pre-1975 NPP vintages parsed (1963–1973, biennial). For the 1963–1969 files OADR is computed from five-year age groups: working age = males 16–64 + females 16–59, with 15-year-olds taken as one-fifth of the 15–19 group (checked: the 1971 file's published 'children under 16' implies 412k male 15-year-olds against 404k by this rule); pension age = males 65+, females 60+. The 1971 and 1973 files carry published rows. Continuity with the 1975-based workbook values is close (1974 OADR 288.7 → 1975 292.0; WAP 32,568k → 32,594k). Where a vintage does not publish year y+10, the ten-year-ahead OADR is linearly interpolated between the nearest published projection years (flagged in the CSV); on the annual 1971 vintage this interpolation over 7-year gaps errs by 1.4 points on average, 3.8 at most. Zero-net-migration reconstruction is not possible for the 1963–1969 vintages (no components of change). `appendix_british.R` nested-F error fixed (refit on model.frame instead of update()). |
+| 25 Sep 2026 | Sam's `1964` sheet (inflows 1964–1990) identified as non-British citizens (matches 3.24 NON-BRITISH exactly); extended to 2019 in `determinants/inflows_non_british_1964_2019.csv`. DV-definition options for the extension set out in `determinants/README_1964_extension.md`, with the interpolation footnote. |
+| 25 Sep 2026 | Extension dataset 1962–2019 assembled (`determinants/extension_1962_2019_dataset.csv`). Replica results: spliced DV (non-British to 1974, non-EU from 1975) gives projection 0.0080 (p < 0.001) on 1965–2019, 0.0081 with a basis step; non-British to 2003 gives 0.0081; non-British to 2019 gives 0.0054 (EU dilution). Details in README_1964_extension.md. Deflator for 1962–74 replaced by the HMT series itself (runs from 1955–56); results unchanged. |
+| 25 Sep 2026 | `extension_1964.R` written (reads Sam's `1964` sheet; checks the 1979–2019 rows against ReformSPA; reproduces the panel above). `totpop` added to the extension dataset (vintage in force 1963–74, workbook 1975–). `determinants/npp_1963_1973_totals_by_vintage.csv` added: total, working-age and pension-age population for every published projection year of the 1963- to 1973-based vintages (age detail is not published for 1971/72, 1981, 1991, 2001 in the 1965- and 1967-based files, so only the total is given there). `appendix_british.R` Panel 2 notes shortened to one line (regional explanation moved to the thesis text). Sam's saved `1964` sheet now carries `year` for every row and `totpop`. Sam's R run of `extension_1964.R` reproduces the replica panel exactly (A 0.0054, B 0.0080, B + step 0.0081 with step 0.133 p .013, C 0.0081, non-EU 0.0081, A 1965–78 0.0072 p .086, A 1979–2019 0.0050). Thesis ONS (2020) reference entry changed by Sam to IPS table 3.01 (the DV source); the LTIM 2.00 entry is no longer in the thesis. |
+| 25 Sep 2026 | Thesis references: ONS (2020a) IPS 3.01 and ONS (2020b) LTIM 2.00 in the house form with ONS URLs; in-text citations relabelled; 2020b cited in the IPS-vs-LTIM paragraph. `extension_1964_robustness.R` and `determinants/extension_1962_2019_extras.csv` added (total-DR placebo extended to 1963 from the pre-1975 vintages; LTIM 2.00 flows; ABMI growth; deflator inflation; network; Act steps). Replica: projection 0.0078–0.0087 across every check; total DR significant alone on the extended sample (0.0015) but 0.0004 (p 0.48) beside the OADR. Manuscript notes for the extension section recorded in README_1964_extension.md. Maddison and UN WPP determinants extended back to 1963 (OWID grapher, one call per year for Maddison; 1976 cross-checks exact); Panel 3b added to the robustness script (projection 0.0078–0.0094 with the origin determinants). |
+| 26 Sep 2026 | Manuscript 1964–2019 version built (`../manuscript_1964/`): series B on 1965–2019 as headline; new Section 7 material (extension, stability, permits 1965–2008 = 0.62k per point, realised spending, supply-side controls, British citizens); Healey/Benn/Rogers, pre-1973 instruments and Hemming–Kay horizon in Section 2; Data section rewritten for the splice and pre-1975 vintages. Numbers provisional from the Python replica; `manuscript_1964.R` added as the authoritative run; Sam's run (R 4.6.1) reproduced the replica in every cell and supplied Table 3 on 1965–2019 (bounds F = 7.18, p = 0.003; t = −4.95, p = 0.007); `tables_1964.json` in this folder is that run. Permits placebo note: on 1965–2008 the total DR alone is significant for permits too, but beside the OADR it is 0.035 (p 0.35). |
+| 26 Sep 2026 | Brittan (1969) *Steering the Economy* OCR'd (173 spreads → `../Brittan_1969_Steering_the_Economy_OCR.txt`; brief `../Brittan_1969_research_brief.md`); added to thesis §5.1.2, §5.1.3, §5.2.2, §6.1 and to both manuscripts' §2.1, §2.2, §2.4. Combined manuscript built (`../Hamdane_ReStud_Manuscript_combined.docx`, 58 pp): Table 2 and Table 3 carry the core (1977–2019) and extended (1965–2019) samples side by side; Section 4 defines both; 6.2/6.3 discuss both. `run_all_1964.R` and `run_all_thesis_extras.R` added; document→script map added to Section 4 of this README. |
+| 26 Sep 2026 | BoE Millennium dataset annualised (`determinants/boe_millennium_annual_1955_2017.csv`, `boe_extras_1962_2019.csv`); `extension_1964_boe.R` added and wired into `run_all_1964.R`; manuscript (1964 and combined) Section 7 gained 'The labour-market state and the macroeconomic environment' (replica: projection 0.0064–0.0087 across every substitution/addition; vacancies per WAP and ln V/U positive and significant when substituted for unemployment, projection 0.0067/0.0071; wage inflation −0.007 p .06; all six together 0.0073, core 0.0074). BoE series end 2016. |
+| 26 Sep 2026 | `extension_1964_boe.R` merge error fixed (Sam had pasted the BoE extras into the `1964` sheet, leaving nothing to merge; text columns now dropped); `core_1977_boe.R` added for the 1977–2019 sample. |
+| 27 Sep 2026 | `boe_tests.R` replaces the two BoE scripts (constant-column and empty-merge errors fixed; A27 tax variants; emigration control; Δln V/U; unem + vacancies). Replica: unemployment measure irrelevant (0.0080–0.0084); vacancies/WAP substituted 0.0067, Δln V/U beside unemployment 0.068 (p .05) with projection 0.0077; emigration null (projection 0.0083); tax by type: NICs 0.0092, income tax 0.0079, direct 0.0079, receipts 0.0074, indirect 0.0055, VAT 0.0072, corporation 0.0062. Manuscript paragraph rewritten. |
+| 27 Sep 2026 | Sam's R runs of `boe_tests.R` confirmed on both samples. Inflation expectations now enter contemporaneously (NIESR forecasts made at the start of year t). `boe_appendix.R` (Tables B6/B7) and three Figure 4 rows in `manuscript_1964.R` (+Δln V/U; vacancies for unemployment; employee NICs for taxes) added; `determinants/projection_revisions_1975_2019.csv` exported for the revisions check. ONS 2017–19 extension dropped as unnecessary (secondary run stays dormant). Replica: employee NICs 0.70 (p<.001) vs employer 0.37; Kronmal ln WAP null; EU placebo responds to vacancies (0.045, p .01) not the projection (−0.004); permits respond to both (0.56 / 0.60). |
+| 27 Sep 2026 | Sam's R run of `manuscript_1964.R` (24 Figure 4 rows) and `boe_appendix.R` (both samples) confirmed against the replica; Figure 4 re-rendered; `boe_appendix.R` reduced to five B6 and four B7 columns with the remaining variants printed for the text. Decision: primary specification unchanged. |
+| 27 Sep 2026 | Documents synced: BoE paragraph added to the 1977 manuscript (core-sample numbers); 1964 and combined manuscripts state the decision not to alter the headline specification; combined Section 4 states each sample's advantages and limits. Online Appendix Tables B6/B7 are the two `boe_appendix.R` blocks (screenshots), one per sample. |
+| 27 Sep 2026 | `extra_tests.R` added (grants/TME from A28 as % GDP and per WAP, days lost, election-year and pre-election indicators, post-2010 interaction, no-projection comparisons); `boe_extras_1962_2019.csv` gained grants_gdp, tme_gdp, grants_real_gbp_bn, elec_year, pre_elec. Replica: grants/TME null beside the projection (projection 0.0072–0.0081) and cannot replace it (AIC worse by 15–23); days lost, election indicators, OBR interaction null; without the projection the six macro/labour controls leave AIC 14 (ext) / 9 (core) points worse than the baseline with the projection and RESET rejects (p .03 / .007). |
+| 27 Sep 2026 | `gad_obr_tests.R` added. New data: `determinants/gad/` (13 GAD NI Fund reports 1960-2017 uploaded by Sam; scans OCR'd, text in `text/`; row-level extraction in `gad_extraction_text.csv` / `gad_extraction_scans.csv`; `build_gad_series.py` -> `gad_pressure_series_1959_2019.csv`: projected 10-year change in the joint Class 1 rate required, earnings basis (E), price basis (P), policy in force (POL), vintage by review base year); `determinants/obr_psnb_forecasts_by_vintage_1970_2025.csv` (spring and latest vintages, horizons 0-4, PSNB/GDP; £ forecasts before 1977 scaled by latest GDP outturn); `boe_extras_1962_2019.csv` gained debt_interest_gbp_m/_gdp/_tme, gilt10_yield, consol_yield, nom_gdp_growth, r_minus_g, fc_psnb_gdp_h0/h1/hmax, fc_horizon_max, fc_psnb_surprise. Replica: GAD earnings-basis pressure predicts inflows alone (0.0103 ext p .005; 0.044 core p .024) but is null beside the projection (0.0075/0.0075 unchanged) and 11-18 AIC worse in its place; policy-basis pressure null everywhere; borrowing forecasts null beside the projection and wrong-signed in its place; debt interest/TME (t-1) +0.019 (p .05) ext / +0.023 (p .01) core with projection 0.0096/0.0109; r-g, gilt yield, interest/GDP null. NOTE gadqqreview1992.pdf is the July 1999 review (Cm 4406). |
+| 27 Sep 2026 | Table scripts refactored on Sam's instructions: `tables_common.R` (variable dictionary + panel printer; L_mig_rate / mig_gross replace L_y / L_g and lr_B; unem_boe, unem_claim, vac_wap, vac_unem, dln_vac_unem, wage_infl, tbill, tax_nics_emp ... defined under every panel) and `data_common.R` (one data frame for either sample). `boe_tests.R` panel 1 split into 1a unemployment measures and 1b vacancies; `extension_1964.R` prints only mig_rate | mig_rate (no step) (alternative series as a text line; population table dropped); `extra_tests.R` drops the election-cycle panel and gains '+significant', '+significant +L2_mig_rate' and a gross-inflow version of the augmented model; `extension_1964_robustness.R` gains Panel 6 (projection horizon 1/3/5/7/10 on 1965-2019, pre-1975 horizons interpolated from the vintage tables) and Panel 7 (British-citizen placebo and control, LTIM 2.00, 1965-2019). BUG FIXED: `run_all_1964.R` / `run_all_1977.R` now set SAMPLE in the global environment before each script (Sam's 27 Sep run had executed the shared scripts on the core sample inside run_all_1964 because SAMPLE was left at "1977" in his session). `boe_appendix.R`, `extra_tests.R`, `gad_obr_tests.R` added to both run_all files. |
+| 27 Sep 2026 | New data: `determinants/boe_prop1_1955_2019.csv` (Millennium A50 claimant count 1945-2016 and rate; A1/A33 real and nominal effective exchange rates; A36 current account and trade balance % GDP; A56 labour share; A35 terms of trade; A32 house prices; Q7 inflation expectations, Q1 values: 1-year composite from 1965, 5-10 years from 1985; share of each year under a Labour government); `determinants/pre1963_block_1956_1962.csv` (HPFD fiscal block 1956-62; 1958-based WAP and OADR from GAD QR 1960 Table B); `determinants/commonwealth_vouchers_1962_1972.csv` (Bauer and Salt, 2020, Table 9). `data_common.R`: L_unem_claim is now the A50 claimant-count rate (was the M5 administrative splice). New scripts `prop1_model.R`, `permits_long.R` (both in run_all_1964.R). Replica: claimant count vs ILO indistinguishable (projection 0.0083/0.0085 vs 0.0080/0.0081; AIC 0.5 worse); permits 1959-2008 0.58 (p<.001), permits+vouchers 1964-2008 0.61; Prop-1 selection picks L_wage_infl, L_youth, L_tbill, L_tot, L_int_tme; the projection then 0.0056 (p<.001, dAIC -8.5) extended but 0.0022 (p .18) core; with the a-priori fiscal/political block it stays 0.0083-0.0087. ESCoE Historical Data UK checked: its digital series are the Millennium dataset; other holdings are scanned publications (Registrar General's Statistical Reviews carry the pre-1963 GAD projections). |
+| 27 Sep 2026 | MAIN RESULTS NOW TO 2019 (Sam): `determinants/ons_extension_2017_2019.csv` extends the Millennium series for 2017-19 (ONS AP2Y, MGSC, MGSX, KAB9; BoE IUMAAJNB/IUMABEDR T-bill proxy; BIS real narrow EER; Land Registry UK HPI; ONS AA6H, IKBJ, IKBH/IKBK/IKBI/IKBL, DTWM/YBHA; OBR PSF debt interest/TME), each spliced on the 2016 Millennium value (method in the file's `source` column). `data_common.R` fills from it and sets BOE_END = 2019; `tables_common.R` re-estimates every column that uses an extended series to 2016 and prints 'proj, to 2016' under the panel. Not extendable (end 2016; N row shows it): claimant count (ONS discontinued BCJD/BCJE under Universal Credit), real short rate, replacement ratio, union density, grants/TME, A27 tax detail, gilt/r-g, NIESR inflation expectations and TFP (sheet 1964 -- Sam to supply 2017-19 if wanted). New `L_unem_head` (headline measure of the day: M5 administrative/claimant count to 1997, ILO from 1998) and `L_post98` step in boe_tests.R panel 1a. `prop1_model.R`: party in government and origin-country supply variables removed from the candidate pool (Sam: not part of the Treasury framework); a-priori block = L_int_tme only. `permits_long.R`: labour_gov column removed. |

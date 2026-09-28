@@ -1,0 +1,145 @@
+# =============================================================================
+# tables_common.R -- shared printing conventions and the VARIABLE DICTIONARY for every
+# manuscript table script (extension_1964.R, extension_1964_robustness.R, boe_tests.R,
+# boe_appendix.R, extra_tests.R, gad_obr_tests.R). Sourced by each of them; do not run alone.
+#
+# Naming rule (Sam, 27 Sep 2026): one short name per variable, used identically as a row label,
+# as a column title ("+name" = added to the baseline; "name for X" = in place of X; "name only"
+# = in place of the projection) and in the text. L_ prefix = lagged one year. Every name that
+# appears in a panel is defined in the notes printed under that panel (from DEFS below).
+# =============================================================================
+suppressPackageStartupMessages({library(lmtest); library(sandwich); library(car)})
+# Main results run to 2019. Variables whose 2017-19 values are spliced from ONS/BoE/BIS/Land Registry/OBR onto the Millennium dataset
+# (determinants/ons_extension_2017_2019.csv); any column using one is re-estimated to SEC_END and reported under the panel.
+SEC_END <- 2016
+ONS_VARS <- c("L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_tbill", "L_unem_boe", "L_int_tme", "L_real_eri",
+              "L_ca_gdp", "L_trade_bal", "L_tot", "L_labour_share", "L_real_house")
+stars <- function(p) ifelse(p < 0.01, "***", ifelse(p < 0.05, "**", ifelse(p < 0.10, "*", "")))
+pf <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
+lag1 <- function(x) c(NA, head(x, -1))
+
+DEFS <- c(
+  mig_rate      = "log inflow of controlled migrants per 1,000 working-age persons (t-1): non-EU citizens (core sample); non-British citizens to 1974 spliced with non-EU citizens from 1975 (extended sample)",
+  L_mig_rate    = "mig_rate lagged one year",
+  mig_gross     = "log gross inflow (persons), same citizenship series as mig_rate",
+  L_mig_gross   = "mig_gross lagged one year",
+  L2_mig_rate   = "mig_rate lagged two years",
+  delta_oadr_10 = "projected ten-year change in the old-age dependency ratio (pensioners per 1,000 working-age persons), national population projection in force by base year",
+  delta_dr_10   = "projected ten-year change in the TOTAL dependency ratio (children + pensioners per 1,000 working-age persons), same vintages",
+  basis_pre1975 = "indicator = 1 before 1975: the pre-1975 observations of mig_rate are non-British rather than non-EU citizens",
+  L_tax_workpop = "national accounts taxes per working-age person, GBP 000, 2024-25 prices, t-1",
+  L_ln_debt_gdp = "annual log change in public sector net debt / GDP, t-1",
+  L_unem        = "unemployment rate, %, t-1: ILO measure (LFS; BoE Millennium A50 before 1975) -- the baseline measure",
+  L_unem_boe    = "unemployment rate, %, t-1: Bank of England spliced series (Millennium M5, col G)",
+  L_unem_claim  = "claimant-count unemployment rate, %, t-1: claimants of unemployment-related benefits (Millennium A50; ONS BCJE from 1971, Ministry of Labour Gazette before, rate on the A50 workforce), 1945-2016",
+  L_real_eri    = "real effective exchange rate of sterling, 1913 = 100, t-1 (Millennium A33)",
+  L_ca_gdp      = "current account balance of the balance of payments, % of GDP, t-1 (Millennium A36; negative = deficit)",
+  L_trade_bal   = "visible trade balance, % of GDP, t-1 (Millennium A36)",
+  L_labour_share= "labour share of GDP excluding rents, %, t-1 (Millennium A56)",
+  L_tot         = "terms of trade (export over import prices), 2013 = 100, t-1 (Millennium A35)",
+  L_real_house  = "real house-price growth, %, t-1 (Millennium A32 house prices less GDP-deflator inflation)",
+  L_unem_head   = "the headline unemployment rate of the day, %, t-1: administrative/claimant count as published (Millennium M5, Denman and Macdonald, 1996) to 1997, the LFS (ILO) rate from 1998, when the ONS made it the headline",
+  L_post98      = "indicator from 1999: L_unem_head measured by the ILO rate (step for the change of headline measure)",
+  inf_exp_1y    = "one-year-ahead inflation expectation, spliced composite, start of year t (Millennium Q7, Q1 value)",
+  inf_exp_5_10y = "inflation expectation 5-10 years ahead, start of year t (Millennium Q7, Q1 value; from 1985)",
+  L_vac_wap     = "notified vacancies per 1,000 working-age persons, t-1 (Millennium M5)",
+  L_vac_unem    = "vacancies / unemployed ratio, t-1 (M5 vacancies over A50 unemployed)",
+  L_dln_vac_unem= "annual change in log(vacancies / unemployed), t-1",
+  L_emig_all    = "emigrants of all citizenships per 1,000 working-age persons, t-1 (LTIM 2.00)",
+  L_emig_brit   = "British-citizen emigrants per 1,000 working-age persons, t-1 (LTIM 2.00)",
+  brit_rate     = "log inflow of British citizens per 1,000 working-age persons (t-1), all countries of origin (LTIM 2.00)",
+  L_brit_rate   = "brit_rate lagged one year",
+  L_wage_infl   = "growth of average weekly earnings, %, t-1 (Millennium M6)",
+  L_real_wage   = "wage_infl minus GDP-deflator inflation, t-1",
+  L_tbill       = "Treasury bill rate, %, t-1 (Millennium M1)",
+  L_real_rate   = "tbill minus GDP-deflator inflation, t-1",
+  st_inf_exp    = "one-year-ahead inflation expectation at the start of year t, % (NIESR)",
+  lt_inf_exp    = "long-term inflation expectation at the start of year t, % (NIESR)",
+  L_tfp         = "total factor productivity growth, %, t-1",
+  L_replace     = "benefit replacement ratio, t-1 (Millennium A52b)",
+  L_union       = "trade union density, %, t-1 (Millennium A52b)",
+  L_tax_inc     = "central government income tax receipts per working-age person, GBP 000, 2024-25 prices, t-1 (Millennium A27; FY t-1/t assigned to t)",
+  L_tax_nics    = "National Insurance contributions per working-age person, GBP 000, 2024-25 prices, t-1 (A27; employee + employer)",
+  L_tax_nics_emp= "employee National Insurance contributions per working-age person, GBP 000, 2024-25 prices, t-1 (A27)",
+  L_tax_nics_er = "employer National Insurance contributions per working-age person, GBP 000, 2024-25 prices, t-1 (A27)",
+  L_tax_inc_nics= "income tax + National Insurance contributions per working-age person, t-1 (A27)",
+  L_tax_direct  = "direct taxes per working-age person, t-1 (A27)",
+  L_tax_indirect= "taxes on products and production per working-age person, t-1 (A27)",
+  L_tax_vat     = "VAT per working-age person, t-1 (A27; from 1975)",
+  L_tax_corp    = "corporation tax per working-age person, t-1 (A27)",
+  L_tax_receipts= "total central government receipts per working-age person, t-1 (A27)",
+  L_ln_wap      = "log working-age population, t-1 (Kronmal, 1993: the denominator of mig_rate as its own regressor)",
+  L_grants_gdp  = "current grants to the personal sector (cash social benefits), % of GDP, t-1 (Millennium A28)",
+  L_grants_wap  = "current grants to the personal sector per working-age person, GBP 000, 2024-25 prices, t-1 (A28)",
+  L_tme_gdp     = "total managed expenditure, % of GDP, t-1 (A28)",
+  L_int_gdp     = "public sector debt interest, % of GDP, t-1 (A28)",
+  L_int_tme     = "public sector debt interest, % of total managed expenditure, t-1 (A28)",
+  L_gilt        = "10-year gilt yield, %, t-1 (Millennium A31)",
+  L_r_g         = "10-year gilt yield minus nominal GDP growth, percentage points, t-1",
+  L_days_lost   = "working days lost through industrial disputes per working-age person, t-1 (A52b)",
+  L_psnb_gdp    = "public sector net borrowing, % of GDP, t-1 (OBR HPFD; negative = surplus)",
+  L_psnd_gdp    = "public sector net debt, % of GDP, t-1 (OBR HPFD)",
+  L_tax_gdp     = "national accounts taxes, % of GDP, t-1 (OBR HPFD)",
+  fc_budget     = "spring Budget forecast (year t) of public sector net borrowing for the coming financial year, % of GDP (OBR historical official forecasts; PSBR before 1994; GBP forecasts before 1977 over the latest GDP outturn)",
+  L_fc_budget   = "fc_budget lagged one year",
+  fc_planned    = "fc_budget minus the latest borrowing outturn: the change in borrowing the Budget planned",
+  fc_medium     = "the same Budget's furthest-horizon borrowing forecast (1-4 years ahead), % of GDP",
+  gad_earn      = "Government Actuary: projected change over the next ten years in the joint Class 1 contribution rate required to balance the National Insurance Fund with earnings-linked benefits (percentage points; % of contribution income for the flat-rate reviews of 1960-72), Quinquennial Review in force by base year",
+  gad_policy    = "as gad_earn, under the uprating policy in force (price indexation 1980-2010, triple lock after)",
+  gad_gap       = "Government Actuary: contribution rate required in ten years minus the rate actually in force, percentage points",
+  eu_rate       = "log inflow of EU citizens per 1,000 working-age persons (t-1)",
+  L_eu_rate     = "eu_rate lagged one year",
+  permits       = "work permits and first permissions issued, thousands (Bauer and Salt, 2020)",
+  L_permits     = "permits lagged one year",
+  trend         = "linear trend (1965 = 0)",
+  post1968      = "indicator from 1968: Commonwealth Immigrants Act 1968",
+  post1973      = "indicator from 1973: Immigration Act 1971 in force",
+  L_growth      = "real GDP growth, %, t-1 (ONS ABMI)",
+  L_inflation   = "GDP-deflator inflation, %, t-1 (HM Treasury)",
+  network       = "inflows in t-2 to t-4 per 1,000 working-age persons (t-1)",
+  L_relinc_dev  = "log UK GDP per head minus its mean over India, Pakistan, Bangladesh, China, Nigeria, the Philippines and South Africa, t-1 (Maddison Project Database 2023)",
+  L_relinc_rich = "log UK GDP per head minus its mean over the US and Australia, t-1 (Maddison)",
+  L_youth       = "mean share aged 15-24 in the seven origin countries, %, t-1 (UN World Population Prospects 2024)"
+)
+defs <- function(vars) { v <- vars[vars %in% names(DEFS)]; if (!length(v)) return(invisible())
+  cat("Definitions: ", paste(sprintf("%s = %s", v, DEFS[v]), collapse = "; "), ".\n", sep = "") }
+
+# fit(): OLS on complete cases; constant columns dropped (e.g. basis_pre1975 when the sample starts in 1975)
+fit <- function(d, xs, dv = "mig_rate", min_extra = 5) {
+  if (!all(c(dv, xs) %in% names(d))) return(NULL); cc <- complete.cases(d[, c(dv, xs)]); dd <- d[cc, ]
+  xs <- xs[vapply(xs, function(v) sd(dd[[v]]) > 0, logical(1))]
+  m <- lm(reformulate(xs, dv), data = dd); if (nobs(m) < length(xs) + min_extra) return(NULL); attr(m, "dd") <- dd; m }
+hacF <- function(m, term = "delta_oadr_10") if (term %in% names(coef(m))) { lh <- linearHypothesis(m, paste0(term, " = 0"), vcov. = vcovHAC(m)); c(lh$F[2], lh$`Pr(>F)`[2]) } else c(NA, NA)
+
+# panel(): several models side by side -- focal coefficients with HAC p-values, a diagnostics block,
+# then the definitions of every variable shown and any extra notes.
+panel <- function(models, title, rows, notes = NULL, w = 14, lw = 16, reset = TRUE, nested_F = FALSE) {
+  models <- Filter(Negate(is.null), models); if (!length(models)) { cat("\n", title, ": no estimable column\n"); return(invisible()) }
+  cat(sprintf("\n===== %s =====\n\n", title)); cts <- lapply(models, function(m) coeftest(m, vcov. = vcovHAC(m)))
+  hdr <- sprintf("%-*s%s", lw, "", paste(sprintf("%*s", w, names(models)), collapse = "")); rule <- strrep("-", nchar(hdr)); cat(hdr, "\n", rule, "\n", sep = "")
+  shown <- character(0)
+  for (v in rows) { if (!any(vapply(cts, function(ct) v %in% rownames(ct), logical(1)))) next; shown <- c(shown, v)
+    cell <- function(ct, what) { if (!(v %in% rownames(ct))) return(if (what == "b") "--" else ""); if (what == "b") sprintf("%.4f%s", ct[v, 1], stars(ct[v, 4])) else paste0("(", pf(ct[v, 4]), ")") }
+    cat(sprintf("%-*s%s\n", lw, v, paste(sprintf("%*s", w, vapply(cts, cell, character(1), what = "b")), collapse = "")))
+    cat(sprintf("%-*s%s\n", lw, "", paste(sprintf("%*s", w, vapply(cts, cell, character(1), what = "p")), collapse = ""))) }
+  cat(rule, "\n", sep = "")
+  stat <- function(lab, f) cat(sprintf("%-*s%s\n", lw, lab, paste(vapply(models, function(m) sprintf("%*s", w, tryCatch(f(m), error = function(e) "--")), character(1)), collapse = "")))
+  stat("N", function(m) sprintf("%d", nobs(m))); stat("adj. R2", function(m) sprintf("%.4f", summary(m)$adj.r.squared)); stat("AIC", function(m) sprintf("%.2f", AIC(m)))
+  if (reset) stat("RESET p", function(m) pf(resettest(m)$p.value))
+  stat("BG(1) p", function(m) pf(bgtest(m, order = 1)$p.value)); stat("max VIF", function(m) sprintf("%.1f", max(vif(m))))
+  stat("HAC F (proj)", function(m) { a <- hacF(m); if (is.na(a[1])) "--" else sprintf("%.2f", a[1]) }); stat("  p", function(m) { a <- hacF(m); if (is.na(a[1])) "" else paste0("(", pf(a[2]), ")") })
+  if (nested_F) { nf <- function(m) { if (!("delta_oadr_10" %in% names(coef(m)))) return(c(NA, NA, NA)); r <- lm(update(formula(m), . ~ . - delta_oadr_10), data = model.frame(m)); a <- anova(r, m); c(a$F[2], a$`Pr(>F)`[2], AIC(m) - AIC(r)) }
+    stat("F vs no proj", function(m) sprintf("%.2f", nf(m)[1])); stat("  p", function(m) paste0("(", pf(nf(m)[2]), ")")); stat("  dAIC", function(m) sprintf("%+.2f", nf(m)[3])) }
+  sec <- function(m) { dd <- attr(m, "dd"); if (is.null(dd) || !("year" %in% names(dd)) || max(dd$year) <= SEC_END || !any(ONS_VARS %in% names(coef(m)))) return(NULL)
+    d2 <- subset(dd, year <= SEC_END); xs <- attr(terms(m), "term.labels"); xs <- xs[vapply(xs, function(v) sd(d2[[v]]) > 0, logical(1))]
+    lm(reformulate(xs, all.vars(formula(m))[1]), data = d2) }
+  secs <- lapply(models, sec)
+  if (any(!vapply(secs, is.null, logical(1)))) {
+    stat(paste0("proj, to ", SEC_END), function(m) { s2 <- sec(m); if (is.null(s2)) return("same"); a <- coeftest(s2, vcov. = vcovHAC(s2)); if (!("delta_oadr_10" %in% rownames(a))) return("--"); sprintf("%.4f%s", a["delta_oadr_10", 1], stars(a["delta_oadr_10", 4])) })
+    stat(paste0("  N, to ", SEC_END), function(m) { s2 <- sec(m); if (is.null(s2)) "" else sprintf("%d", nobs(s2)) }) }
+  cat(rule, "\nHAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance",
+      if (nested_F) "; F vs no proj: classical nested F against the column without delta_oadr_10." else ".", "\n", sep = "")
+  if (any(!vapply(secs, is.null, logical(1)))) cat("proj, to ", SEC_END, ": delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).\n", sep = "")
+  dvs <- unique(vapply(models, function(m) all.vars(formula(m))[1], character(1))); defs(c(dvs, shown)); if (!is.null(notes)) cat(notes, sep = "\n")
+  invisible(models)
+}

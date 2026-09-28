@@ -1,0 +1,390 @@
+# Project rules — Sam Hamdane (Quiet Instruments / ReStud manuscript & Humboldt thesis)
+
+## RULE 0 — Every uploaded thesis/manuscript copy IS the new foundation
+Standing instruction (Sam, 12 Sep 2026): whenever Sam uploads a copy of the
+thesis or manuscript, that copy becomes the new foundation. Diff it against the
+current version first; carry recent pipeline-side work forward onto HIS copy,
+never the reverse. If the upload appears to be built on a stale base (earlier
+merges missing), say so and adjudicate rather than silently adopting either.
+
+## RULE 1 — NEVER reverse manual edits without consent (hardcoded, non-negotiable)
+When Sam uploads or supplies a document he has edited by hand, his edits are the
+foundation. Do NOT revert, "improve", or overwrite any of them — including
+wording, layout, line breaks, spacing, capitalisation and punctuation choices —
+without asking him FIRST and receiving explicit consent, item by item.
+This applies even when:
+- the edit contradicts earlier advice he accepted, or an earlier instruction
+  (his latest manual edit wins; if in doubt, ask);
+- the edit looks like an accident or artifact (ask — do not assume);
+- the edit appears to be a factual mistake (flag it and ask; correct only after
+  a yes).
+After every merge, disclose EVERY divergence between his copy and the produced
+document, stating which side won and why. Purely typographic normalisations
+(curly quotes, en dashes) may be applied but must be disclosed and are
+reversible on his word.
+History: this rule exists because manual edits were once silently reverted with
+only partial disclosure. Do not repeat that.
+
+## Standing document facts (September 2026)
+- Canonical pipeline: outputs/build_docx.js + manuscript_part1.md /
+  manuscript_part2.md; appendix via build_online_appendix.js. Manuscript must
+  stay ≤ 45 pages. CURRENTLY 47 (14 Sep 2026): Sam added the principal-agent
+  paragraph to §2.6 knowingly and will make the offsetting cuts himself —
+  do not trim anything for him unasked.
+- Title (Sam's choice, size 12pt ALWAYS, single line, Oxford comma): "Death,
+  taxes, and immigration: how Britain’s Treasury delayed the inevitable
+  (1977–2019)" for the MANUSCRIPT (Sam, 22 Sep 2026: manuscript sample moved to
+  1977–2019, N = 43; the THESIS stays on 1979–2019). Manuscript figures come
+  from the *_1977.R scripts (tables_1977.json); thesis figures from the canonical
+  scripts (tables.json). period_1977.py applies the period wording to the
+  45pp/30pp variants.
+- Abstract: Sam's ~150-word version, one paragraph; installed verbatim from his
+  latest wording. Manuscript and thesis go to different institutions and MAY
+  differ (Sam, 22 Sep 2026): manuscript says "nearly quintupled" (1977-2019),
+  thesis keeps "tripled" (1979-2019) — do not "fix" it without
+  asking (he declined fixes to "social-security", "lags;", "1970s-onwards").
+- Oxford commas: house style everywhere in prose and headings/title, EXCEPT
+  citation author lists (Harvard style) and quotations, which never change.
+  (Thesis headings briefly had the commas removed on 12 Sep 2026, then restored
+  the same day — Oxford commas apply in BOTH documents' headings.)
+- Thesis draft: first-person singular voice (We/our/us → I/my/me applied
+  throughout; one "us" retained inside a historical quotation).
+- Quotations from sources are never altered.
+- Accessed dates (REVISED, Sam 22 Sep 2026): in the thesis, ONLY web pages,
+  news articles, datasets and official/online publications carry an accessed
+  date, randomly "(Accessed: 20 June 2026)" or "(Accessed: 21 June 2026)".
+  Academic sources (journal articles, books, chapters, working papers) carry
+  NO accessed date. Uncited references are removed.
+- Reference indentation (NEW RULE, Sam 15 Sep 2026): every thesis reference
+  entry carries the list's hanging indent (left 457200 EMU, first-line
+  -457200) so continuation lines are indented; apply to ALL new entries.
+- Replication folders (22 Sep 2026): `diss_replication/` is CANONICAL (single-
+  source fiscal block from the OBR Historical Public Finances Database + HMT
+  March 2026 deflators; dataset Dissertation_Dataset_Final.xlsx; scripts and
+  tables.json there feed every document). `archive_march2026/` holds the
+  superseded March-databank run. Model objects are named tax_spec / trend_spec.
+- Variable naming (Sam, 22 Sep 2026): the debt regressor is the ANNUAL LOG CHANGE
+  in debt/GDP; it is called `ln_debt_gdp` everywhere in the code (no `d_` prefix)
+  and `L_ln_debt_gdp` when lagged. Text must describe it as a log change, never a
+  log level. The 1975-based NPP vintage is now held; dataset rows 1975-78 carry
+  the DR/zero-migration/pub-dated columns from the 1975 and 1977 vintages.
+- Sample start (22 Sep 2026): 1977 is the earliest estimable start for the full
+  specification (L_ln_debt_gdp needs debt/GDP for 1975 and 1976; HPFD debt starts
+  1974-75). THESIS estimation sample stays 1979-2019 (1977 start reported as
+  robustness, fiscal 0.0082, N = 43); MANUSCRIPT sample is 1977-2019. R package ARDL (Natsiopoulos, Tzeremes and Finnan,
+  2026, v0.2.5) is cited wherever the bounds test is described.
+- Manuscript restructure (Sam, 22 Sep 2026): full manuscript (manuscript_part1/2.md)
+  now has the headline result + Figure 1 in the introduction, a condensed Section 2
+  (full text in Online Appendix E), Proposition 1 in Section 3 (proof in Online
+  Appendix D), Figures 3 (horizons) and 4 (robustness summary), and the timing-
+  placebo and second-lag paragraphs in Section 7 (manuscript_extras_1977.R).
+  Online Appendix: A, B, C, D proof, E background, F digital references.
+  The 45pp/30pp variants are assembled from the FROZEN pre-restructure sources
+  manuscript_part1/2_variantsrc.md until Sam approves propagating the restructure.
+
+- Replication README (Sam, 23 Sep 2026): `diss_replication/README.md` is a LIVING document
+  (Social Science Data Editors template). Update it, and its change log, whenever data,
+  scripts, exhibits or headline results change.
+- Thesis front matter (Sam, 23 Sep 2026, per HU Economic History guidelines): cover (degree
+  "M.Sc. Economics", supervisor Professor Nikolaus Wolf, second supervisor Professor Michael Burda) -> abstract -> Contents -> List of
+  Figures -> List of Abbreviations, all in section 1 with upper-Roman page numbers (cover
+  unnumbered); section break before the Introduction, which is page 1. Contents/figure-list
+  page numbers are PAGEREF fields to _Toc_h*/_Fig* bookmarks. Do NOT set updateFields (Word
+  updated them before pagination and showed '1' everywhere); cached values come from the
+  LibreOffice render and Sam refreshes with Select All + F9. List of Figures and List of
+  Abbreviations share ONE page (entries 11pt, as Sam set the Contents). Figures
+  are numbered by chapter (5.1, 5.2, 8.1-8.3); add any new figure to the List of Figures.
+- Tax-burden measures (Sam, 23 Sep 2026): headline is NAT/WAP (national accounts taxes per
+  working-age person). Sam's OADR-denominated measure is L_tax_oadr_0 = tax in GBP bn divided by
+  the lagged CURRENT OADR - never tax per WAP divided by OADR (that construction was wrongly
+  assumed twice). Do not invent denominators or measures Sam has not asked for; ask first.
+  The 18-way grid (tax_grid.R, 1979) is in thesis Appendix A as a robustness check.
+- F-test convention (Sam, 23 Sep 2026): THESIS appendix keeps the classical nested F ('F vs no
+  proj'), labelled as classical in each panel footer (text quotes those values). MANUSCRIPT
+  scripts (appendix_exhibits_1977.R, _labpop_1977.R) report HAC Wald F (hac_F); manuscript text
+  now quotes HAC Wald F(1,37) = 32.23 (projection) and 2.11, p = 0.16 (total-DR placebo).
+- Thesis Appendix A (Sam, 23 Sep 2026, upload ba2dfd25): Sam's OWN R screenshots; sections now Baseline, 18-way tax grid, OADR vs DR, Level vs Delta, Gross, EU, Zero-migration, Policy dummies, Diagnostics, Stationarity, Bounds. The per-capita/OADR/ratio/taxpayer tax panels were removed by Sam (grid replaces them). Do not re-insert rendered panels.
+- Thesis structure (Sam, 23 Sep 2026): 6.2 opens with the estimating equation; DV construction paragraph lives in 7.1; 7.3 (IV proxy) shortened; tax-measure robustness paragraph moved to Section 9 under 'Tax burden measures'; candidate list is Table 7.1 (bookmark _Tab7_1), listed under 'List of Figures and Tables' (contents entry 'List of Figures, Tables, and Abbreviations.'). Healey (1990, Penguin paperback) reference; cited in §5.2.4.
+- Thesis (23 Sep 2026, upload 713bf057 adopted): Table 7.2 descriptive statistics (bookmark _Tab7_2, 1979-2019, N=41) follows Table 7.1; §5.2.4 Dell section rewritten by Sam (upload abccc5ac, highlight removed by him); publication-dating check removed by Sam (¶307 no longer promises it). Population figures (workpop/totpop) are NPP estimates, cited as GAD and ONS (1975-2018).
+- Thesis section order (Sam, 23 Sep 2026): 1 Introduction, 2 Literature Review, 3 Demographics/Dependency/Migration, 4 Documentary Evidence (auto-numbered list numId 20, startOverride 4), 5 Treasury, 6 Methodology... Roadmap in ¶115 updated accordingly.
+- Section 4 (Sam, 23 Sep 2026): new 4.3 "The Government Actuary’s horizon, 1974–1982" (Hemming and Kay,
+  1982; bookmark _Toc_h18a) between the 2000 report and the 1984 Green Paper; old 4.3–4.6 are now 4.4–4.7.
+  Framing: the projection HORIZON hid SERPS costs — H&K do not allege falsification; never claim they do.
+  §7.4 keeps a one-line pointer. SERPS added to the List of Abbreviations.
+- Identification (Sam, 23 Sep 2026): 6.3 now states the identifying assumption + threats
+  (Sam's zero-migration paragraph kept verbatim); his sample-start paragraph moved verbatim to
+  the end of 7.1. Section 9 gained 'Realised spending' (spending_check.R; Sheet2 health_gdp
+  corrected) and 'Other determinants of migration' (determinants_check.R). NPP vintages are
+  used by BASE year (vintage_for(y) = latest base <= y), NOT publication date — never claim
+  the projection was published before the year it explains.
+- Fluff pass (Sam, 23 Sep 2026): Thesis_cuts_for_approval.md lists proposed cuts; rows marked
+  APPLIED were approved (IV repeats, textbook test explanations, named tangents, signposting,
+  #30, #134). Remaining rows (Treasury/OBR/Truss/DEA repeats etc.) are NOT approved — ask.
+  One-year horizon p = 0.57 (fiscal, 0.566) is correct; the 0.56 in Section 9 was removed.
+- Dell (1991) checked against Sam's OCR'd copy (24 Sep 2026; Dell_1991_research_brief.md): Dell was
+  Trade Secretary (Cabinet) from Apr 1976, Paymaster General Mar 1974-Apr 1976; the book does NOT
+  support "misrepresented"/"admitted" (PSBR £10.5bn forecast vs £8.5bn outturn, blamed on unknown
+  underspending, p.274; deliberate-overstatement charge is Healey's, disputed by Dell, p.185).
+  §5.2.4 wording is Sam's — flagged, not changed; await his decision.
+- Dell additions (Sam, 25 Sep 2026; page refs on Sam's reading of the book, accept them):
+  §6.1 BoP-exclusion ¶ cites Dell p.4 (Bretton Woods dead by Mar 1974, same year as Heclo &
+  Wildavsky); §5.1.2 'Insiders concur' sentence (Dell p.24); §5.1.3 Benn "written by the Treasury
+  and not by Ministers" (quoted in Dell, 1991, p.34). Barnett (1992) review not cited.
+- Citation style (Sam, 25 Sep 2026): NO page numbers in in-text citations (removed from the
+  Dell and Hemming & Kay citations). §5.1 Treasury origins now also cites Healey (1990): Richard,
+  appointed 1170, first 'Treasurer of England', running the Exchequer.
+- 5.1.2 (Sam, 25 Sep 2026): Dell detail cut to one clause ("felt on both sides of the divide
+  (Dell, 1991)") followed by the Benn quote; the Benn quote was removed from 5.1.3 to avoid
+  repeating it (5.1.3 keeps the Cabinet-saw-it-hours-before point).
+- Items 4/5/7 (Sam, 25 Sep 2026): VIF was ALREADY addressed in thesis ¶449 (my item 4 was wrong).
+  Thesis 8.2 now has the one-SD magnitude sentence (¶ Delta_OADR_10) and the Kendall/bootstrap
+  sentence (¶ lagged migration rate; Kendall 1954 added to references). Manuscript §6 got the
+  one-SD sentence (outputs/manuscript_part2.md, rebuilt Hamdane_ReStud_Manuscript.docx, 49 pp;
+  copies in manuscript_variants/). stability_check.R + Guide_policy_lever_and_stability_tests.md
+  added; Sam is collecting reason-for-migration data (test 2) and work permits (test 1).
+  Item 6 (fiscal-impact literature) declined by Sam: OBR evidence + §3.2 suffice.
+- 25 Sep 2026 (later): §5.2.4 gained a Rogers (2010) precedent paragraph (Wass/£6 pay norm,
+  parsimonious sterling intervention; reference added). Section 9 gained 'Stability over time'
+  (recursive/rolling/CUSUM/sup-F from Sam's stability_check.R run; script trimming fixed to
+  from = 8 / h = 8 after Bai-Perron errored). stability.png NOT yet in Appendix A / List of Figures.
+- Work permits (Sam, 25 Sep 2026): series digitised from Bauer & Salt (2020) Fig. 1 into
+  determinants/work_permits.csv (WP+FP 1946-2008; Tier 2 2009-18, different basis — never splice).
+  Sam declined splicing onto IPS reason data. permits_check.R: permits DO respond to the projection
+  (0.0094, p .03; zm 0.0115; DR placebo null) but permits do not absorb the projection in the inflow
+  equation (proj 0.0085 vs 0.0094). Not yet written into thesis/manuscript — ask Sam. Sam may email
+  Salt/Bauer for raw figures; swap them in if received. Home Office MJ_D01 non-EU initial leave by
+  type 2008-25 saved (Work/Study/Asylum; no Family group in that table).
+- IPS by reason (Sam, 25 Sep 2026): ONS table 3.08 gives non-EU inflows by main reason from 1977
+  (not 1991) -> determinants/ips_nonEU_inflow_by_reason_1977_2019.csv. Composition test does NOT
+  give a clean work/study vs family split (all routes respond to some degree; study weak in levels,
+  significant in differences; 'other' strongest). Reported honestly; Sam to decide whether to use.
+  LTIM 2.00 from 1964 covers all citizenships only; non-EU starts 1975 (Sam already has it); Sam's
+  nEU_inflows = IPS 3.08 non-EU (LTIM 2.00 non-EU differs from 1991 by the LTIM adjustments).
+- Permits write-up (Sam, 25 Sep 2026): Section 9 'The policy lever' inserted after 'Stability over
+  time' (level form reported, logs for consistency; no first differences; no Tier 2 extension).
+  appendix_permits.R produces the Appendix A panel (levels | logs | zero-mig | total DR); Sam adds
+  the screenshot under 'Policy lever'. Citation audit: all in-text citations now have entries;
+  'Davies, 2022' -> 'Davis, 2022'; ONS/OBR full-name citations abbreviated. Sam: thesis stays
+  1979 (title); pre-1979 extension (non-British = all - British from 1964) is manuscript work.
+- Permits form (Sam, 25 Sep 2026): GROSS permits in thousands is the primary form (Section 9 text
+  and appendix_permits.R col 1 'permits (k)'); then permits/WAP, log permits/WAP, zero-mig, total DR
+  (unscaled log permits column removed at Sam's request). Column names must be defined/consistent — never 'rate' unqualified.
+- Placebos on uncontrolled flows (25 Sep 2026): Sam's DV = table 3.01 non-EU citizens from non-EU
+  residence (exact match). British citizens IN from non-EU respond (+0.0070, p .03) — a PARTIAL
+  placebo failure; with that flow as a control the projection is 0.0057 (p<.001) (lower bound);
+  log-difference spec null. British OUT, EU-from-non-EU, non-EU-from-EU all null. Sam has not yet
+  decided how to write this up. Longer horizons (20/25y) null alongside 10y. Sam rejected: cross-
+  country (7), age composition (6); asymmetry/OOS/interaction explained, undecided.
+- 25 Sep 2026: British-placebo paragraph now IN Section 9 (after EU vs non-EU); 20/25-year horizon
+  clause in 8.1. FLAG for Sam: the ONS (2020) reference entry describes LTIM table 2.00, but the DV
+  and the placebo come from IPS table 3.01 (citizenship x country of last residence) — his call.
+- appendix_british.R (25 Sep 2026): three Appendix A panels for the British/uncontrolled-flow
+  placebos + IPS sampling-error lines; Sam pastes screenshots under a 'British citizens and
+  uncontrolled flows' heading. Section 9 British paragraph now has the ±17%/±9% sampling clause.
+- British placebo wording (Sam, 25 Sep 2026): descent claim softened to "former parts of the Empire
+  ... citizens by descent or registration ... likely" and cited to Sriskandarajah and Drew (2006,
+  IPPR; reference added, accessed date). No public data on descent vs UK-born by country exists;
+  do not state the descent composition as fact.
+- Nationality-law sentence (Sam, 25 Sep 2026) added to the Section 9 British paragraph: BNA 1981
+  (Tyler, 2010, Citizenship Studies 14(1) — reference added), BN (Hong Kong) Act 1990 (50,000
+  households), NIA Act 2002 (BOCs with no other nationality; children of British mothers pre-1983).
+  Sam judged the British Overseas Territories Act 2002 not worth citing. Acts are named in text
+  only, no reference entries (house practice, cf. Immigration Act 1971).
+- 1964 extension (Sam, 25 Sep 2026, MANUSCRIPT work): pre-1975 vintages copied into diss_replication/
+  and parsed -> determinants/npp_1963_1974_oadr.csv (year, vintage, totpop, workpop, pension, oadr_0,
+  oadr_10, delta_oadr_10, interpolation note). Method in README change log. Sam's '1964' workbook
+  sheet was NOT in the saved xlsx (Excel lock file present) — ask him to save. appendix_british.R
+  update() bug fixed.
+- 1964 sheet (Sam, 25 Sep 2026): 'inflows' 1964-1990 = NON-BRITISH citizens (3.24), not non-EU.
+  Extended series + footnote text + DV options in determinants/README_1964_extension.md; Sam to
+  choose option (recommended: non-British to 1972, non-EU from 1975). ONS ABMI GDP file added
+  by Sam (series-070426.xls). Manuscript 1964 section not yet written.
+- 1964 extension results (25 Sep 2026, replica): dataset determinants/extension_1962_2019_dataset.csv;
+  spliced DV B (non-British to 1974 / non-EU from 1975) proj 0.0080-0.0081 on 1965-2019 (N=55), C
+  (non-British to 2003) 0.0081, A (non-British to 2019) 0.0054. Deflator pre-1975 = HMT March 2026 series itself
+  (runs from 1955-56; uploads/GDP_Deflators_Spring_Statement_March_2026_update.xlsx); unemployment pre-1975 from BoE A50 (joins LF2Q within 0.2pp).
+  PSF databank '2024-25 prices' sheet NOT usable as deflator. R script for the extension still to write.
+- extension_1964.R (25 Sep 2026): reads sheet '1964' (Sam pasted the extension CSV there; year blank for
+  1962/63 rows -> filled by sequence in R; column B empty). Panel A | B | B+step | C | non-EU 1979-2019 |
+  A 1965-78 | A 1979-2019. totpop added to extension dataset; npp_1963_1973_totals_by_vintage.csv holds
+  total/WAP/pension for every published projection year of the 1963-1973 vintages.
+- Thesis upload df5f7f95 adopted (25 Sep 2026): Sam added Appendix A 'Work permit reconstruction' (1 panel)
+  and 'British citizen migration' (3 panels) screenshots and removed blank paragraphs after the conclusion
+  and the references. His copy pre-dated the IPPR softening and nationality-law sentence in the Section 9
+  British paragraph; Sam chose to re-apply both (+ Tyler and Sriskandarajah references). appendix_british.R
+  Panel 2 notes cut to one line at Sam's request (explanation belongs in the text, not the appendix).
+  Workbook '1964' sheet now saved with years filled and totpop; extension_1964.R reads it directly.
+- Thesis upload 38fa2ec4 adopted (25 Sep 2026): only change = ONS (2020) reference now IPS table 3.01
+  (Sam's wording: 'International Passenger Survey 3.01: Citizenship, by Country of Last or Next Residence UK,
+  1975 to 2019 [dataset]. Newport: ONS.' — no URL, full stop after year; format suggestions offered, not
+  applied). LTIM 2.00 entry no longer in thesis; ¶546 IPS-vs-LTIM robustness carries no citation.
+  extension_1964.R confirmed in Sam's R: identical to replica.
+- ONS 2020a/b (Sam, 25 Sep 2026): thesis references now 'Office for National Statistics (2020a) International
+  Passenger Survey 3.01, citizenship by country of last or next residence, UK, 1975 to 2019. Available at: [ONS
+  URL] (Accessed: 20 June 2026)' and '(2020b) Long-term international migration 2.00, citizenship, UK, 1964 to
+  2019. Available at: [ONS URL] (Accessed: 21 June 2026)'. In-text: 2020a in ¶128, Table 7.2 source note, and the
+  British paragraph; 2020b added in the IPS-vs-LTIM paragraph (¶546). Sam's R run of extension_1964.R = replica.
+- 1964 extension, MANUSCRIPT NOTES (Sam, 25 Sep 2026; full list in diss_replication/determinants/
+  README_1964_extension.md 'Manuscript notes'): headline = series B (+ step column) 0.0080/0.0081, N 55;
+  C as pre-accession check; A only to show EU dilution. Step = definitional change (long-run 0.25 = 1975-80 EU
+  share). Claim 'unchanged when extended to 1965', NOT 'visible in the 1960s' (1965-78 projection collinear
+  with time, r = -0.97; trend alone kills the short-sample coefficient). Strength: 14 years under a different
+  regime/DV basis/unemployment source/deflator/projection construction, coefficient moves 0.0001; sample now
+  spans net emigration and net immigration. VIF caveat for A 1979-2019 (38) and the N=14 column (19).
+  extension_1964_robustness.R + determinants/extension_1962_2019_extras.csv: trend/Act steps, total-DR placebo
+  (extended to 1963), growth/inflation/British emigration/network, starts 1965-79, sub-samples; projection
+  0.0078-0.0087 throughout; total DR alone 0.0015 (p .001) on the extended sample but 0.0004 (p .48) beside the
+  OADR — report both. Maddison/UNWPP determinants NOW extended to 1963 (maddison_gdppc.csv, unwpp_youth_share.csv rebuilt; extras
+  carry relinc_dev/relinc_rich/youth_origin); Panel 3b: projection 0.0078-0.0094 with them.
+- Robustness R run confirmed (Sam, 25 Sep 2026) = replica. Sam's framing: relinc/youth/network are SUPPLY-SIDE
+  determinants, not policy variables — present them in the manuscript as supply-side controls (omitted-variable
+  check), never as mechanism. Trend columns: VIF 63-74, sign check only. DR-alone column fails BG(1).
+- MANUSCRIPT 1964-2019 VERSION (Sam, 26 Sep 2026): new document quiet-instruments/Hamdane_ReStud_Manuscript_1964.docx
+  (57 pp; sources, builder, tables_1964.json, figures and Python replica in manuscript_1964/; README there lists
+  status). Title "(1964–2019)"; headline = series B on 1965-2019, N = 55, basis step reported; abstract edited.
+  The 1977-2019 manuscript (outputs/manuscript_part1/2.md, Hamdane_ReStud_Manuscript.docx) is UNCHANGED.
+  Provisional numbers = Python replica; diss_replication/manuscript_1964.R is the authoritative run (writes
+  tables_1964.json incl. bounds test via ARDL with basis step as fixed regressor) -- Sam to run, then rebuild.
+  Table 3 + Figure 3 still 1977-2019 (flagged in text). Cuts to 45 pp are Sam's. Bias correction re-run:
+  rho 0.46 -> 0.56, long run 1.5 -> 1.8 per cent [1.2, 2.6].
+- 26 Sep 2026: Sam ran manuscript_1964.R; tables_1964.json (R) adopted everywhere (identical to replica; bounds
+  1965-2019: F = 7.18 p .003, t = -4.95 p .007; LR projection 0.0155). Manuscript_1964 rebuilt (57 pp): 6.3 rewritten,
+  Table 3 now 1965-2019, flags removed. Figure 3 (horizons) still 1977-2019 by design (stated in text).
+  Thesis conclusion FULL REDRAFT delivered as Thesis_Conclusion_redraft_26Sep2026.md (NOT installed; awaits Sam's
+  approval; thesis numbers 1979-2019; refers to Sections 4, 5, 11).
+- Brittan (1969) Steering the Economy (Sam, 26 Sep 2026; upload IMG_2833.pdf, 173 spreads OCR'd -> Brittan_1969_
+  Steering_the_Economy_OCR.txt; brief Brittan_1969_research_brief.md, page refs from running heads). Book has NO
+  mention of immigration/ageing/GAD -- never cite it for demographic interest; use for institutional character,
+  secrecy (forecasts unpublished until 1968; 5-yr projections published only 1963/1966; 'Cabinet itself hears the
+  Budget only the day before'; 'Budget secrecy has become a cult'), ministers unable to question analysis, DEA
+  defeat ('power gradually shifted back to the Treasury'), medium-term projections with working population as
+  input. Brittan warns against a monolithic reading ('a collection of individuals') -- thesis text says so.
+  Reference: Brittan, S. (1969) Steering the economy: the role of the Treasury. London: Secker & Warburg
+  (imprint page missing from scan; Sam to confirm edition/year). Added to thesis 5.1.2 (new ¶ after Benn quote),
+  5.1.3 (sentence), 5.2.2 (DEA sentence), 6.1 (forecasting sentence after Hood et al.) + reference; and to both
+  manuscripts (2.1 new ¶, 2.2 sentence, 2.4 sentence, reference). Backup outputs/Thesis_before_brittan.docx.
+- COMBINED MANUSCRIPT (26 Sep 2026): Hamdane_ReStud_Manuscript_combined.docx (58 pp; builder manuscript_1964/
+  build_docx_combined.js; sources ms1964/manuscript_part1/2_combined.md): title 1964-2019; Section 4 defines a CORE
+  sample 1977-2019 (N 43) and an EXTENDED sample 1965-2019 (N 55); Table 2 four columns (fiscal/trend x samples),
+  Table 3 both samples' LR multipliers and bounds; Table 4/Figures as the 1964 document. Text quotes both
+  estimates (0.0082 / 0.0081; LR 2.0 [0.9,2.8] / 1.8 [1.2,2.6]). 1977 manuscript rebuilt with Brittan only (49 pp).
+  Replication: run_all_1964.R, run_all_thesis_extras.R; README section 'Documents and the scripts that feed them'.
+- BoE Millennium data (Sam, 26 Sep 2026): annual averages built (determinants/boe_millennium_annual_1955_2017.csv;
+  boe_extras_1962_2019.csv aligned to the extension). Admin unemployment = M5 col C to 1995 + col E claimant count
+  from 1996; vacancies M5 AB; AWE/wage inflation M6 Z/AA (Sam said M7 -- it is M6 in v3.1); T-bill M1 N. ALL END
+  2016 -> tests run 1965-2016 / 1977-2016; 2017-19 need ONS BCJE, AP2Y, KAB9 + BoE bill rate (Sam to add to CSV).
+  Sam's own additions in the 1964 sheet: lt_inf_exp, st_inf_exp, tfp_growth. extension_1964_boe.R (3 panels) in
+  run_all_1964.R. Manuscript (1964 + combined) Section 7 paragraph added; replica numbers pending Sam's R run.
+  Findings: projection 0.0064-0.0087 throughout; vacancies/WAP (+0.015 p .02) and ln V/U (+0.11 p .01) matter
+  when substituted for unemployment (proj 0.0067/0.0071); wage inflation -0.007 (p .06); rates, expectations,
+  TFP, replacement ratio, union density null. Other BoE variables saved but untested: days lost, current grants
+  to persons/TME (realised welfare spending from 1900), labour productivity per hour.
+- BoE tests v2 (Sam, 27 Sep 2026): boe_tests.R (SAMPLE 1964/1977; wrappers extension_1964_boe.R, core_1977_boe.R).
+  PRIMARY sample ends 2016 (BoE data end); SECONDARY to 2019 auto-runs once ONS 2017-19 values are in
+  boe_extras_1962_2019.csv. 'Admin' unemployment = M5 col G spliced (primary), C-to-1995/E-from-1996 for
+  reference. Added: gross inflows + lagged emigration (LTIM all/British per WAP) -> null; dln V/U beside
+  unemployment 0.068 (p .05), proj 0.0077; unem + vac/WAP: vac 0.012 (p .08), proj 0.0071; A27 tax variants
+  (determinants/boe_a27_tax_variants_1956_2019.csv, FY t-1/t -> t): NICs 0.0092, inc tax 0.0079, direct 0.0079,
+  receipts 0.0074, indirect 0.0055, VAT 0.0072 (1975+), corporation 0.0062. Errors fixed: constant columns
+  (step when VAT restricts sample) now dropped in fit(); empty merge when extras already pasted in sheet.
+  Manuscript paragraph (1964 + combined) rewritten with these; replica numbers pending Sam's R run.
+- boe_tests.R R runs confirmed (Sam, 27 Sep 2026) = replica on both samples. Key readings: vacancies/WAP is the one
+  control that lowers the projection (0.0080->0.0067 ext; 0.0081->0.0059 core) and has the best AIC in panel 1;
+  unem + dln V/U best HAC F. Tax term on the core sample loses significance with all six controls (VIF 34-46).
+  Denominator question raised by Sam (tax/WAP and DV share WAP(t-1)): answered via gross-inflow column (tax term
+  survives without any population on the LHS) and tax per resident; suggested Kronmal fix (add ln WAP as regressor).
+- 27 Sep 2026 (later): Sam: inflation expectations (NIESR, start-of-year) enter CONTEMPORANEOUSLY, never lagged
+  (boe_tests.R updated; with that, core all-six model: ST exp +0.034 p .005, wage infl -0.027 p .01, proj 0.0105).
+  Sam: do NOT chase ONS 2017-19 values; primary = to 2016 (secondary machinery dormant). Permits cannot go before
+  1963 (earliest vintage). boe_appendix.R = Tables B6/B7; manuscript_1964.R Figure 4 gained 3 rows (Sam must re-run
+  and I re-render figure4_1964.png via pyrep/m1964_figs.py). Employee NICs (0.70) >> employer (0.37); EU placebo
+  responds to vacancies not projection; Kronmal (ln WAP) null. Kronmal (1993) reference added to manuscripts.
+- 27 Sep 2026 (final BoE round): Sam's tables_1964.json (24 Figure 4 rows) adopted; figure4_1964.png re-rendered;
+  1964 + combined docs rebuilt. boe_appendix.R slimmed at Sam's request: B6 = baseline | +dln V/U | vacancies for
+  unem | NICs total | NICs employee; B7 = EU baseline | EU + vacancies | permits | permits + vacancies; unem+vac,
+  employer NICs, emp+er and Kronmal printed as one-line 'text-only variants'. VERDICT given to Sam: primary spec
+  unchanged (no candidate is both theory-prior and a >~4-AIC improvement on both samples; vacancies and NICs are
+  the two substantive robustness results, reported as such).
+- 27 Sep 2026: Sam: NICs fund the state pension (NI Fund) -> employee-NICs result is central to the mechanism;
+  manuscript paragraph now says so. Sam had intended vacancies a priori (did not know a long series existed), so a
+  vacancies variant is NOT post-hoc tuning; proposed (awaiting his yes): Table 2 gains a 'fiscal + vacancies'
+  column per sample (6 columns in the combined doc) with its own bounds test, primary text unchanged otherwise.
+  Column names in boe_appendix.R: 'log V/U' (= annual change in log V/U, explained in notes), 'vac.(no unem)',
+  'EU+vac.', 'permits+vac.'; width 15. Column names must never run together -- widen or shorten.
+- 27 Sep 2026: Sam rejects dropping unemployment for vacancies (documented Treasury input vs not; p-hacking risk).
+  Agreed. The 'both' model is unemployment + dln V/U (level of unemployment = political cost; change in tightness
+  = labour demand): ext proj 0.0077, dln V/U 0.068 (p .05), unem -0.019 (p .04), best HAC F; core 0.0077, dln V/U
+  0.090 (p .12), unem -0.018 (p .13). Levels of unem + vac/WAP are collinear (V/U inverse by construction) so both
+  go insignificant together -- never report that as 'both matter'. If a Table 2 column is added it is
+  'fiscal + dln V/U', unemployment retained. Awaiting Sam's decision.
+- 27 Sep 2026 FINAL: no Table 2 change. Fiscal + dln V/U judged NOT an improvement (AIC +1.7 ext / +1.0 core;
+  dln V/U p .12 and unem p .13 on core; loses 2017-19; adds a regressor at N=40). Stays as Figure 4 row + B6 column.
+  Primary specification unchanged, full stop.
+- 27 Sep 2026 (docs sync): 1977 manuscript (50 pp) now has the BoE paragraph on the core sample (1977-2016) before
+  Figure 4, + Kronmal and Thomas & Dimsdale references. 1964 + combined paragraphs end with the 'no addition carried
+  into the headline; demand share bounded at ~a quarter' sentence. Combined Section 4 now states each sample's claim
+  and limits (core = cleaner object, every check; extended = harder test, spliced DV, coarser early vintages,
+  1965-78 collinear). Combined = 60 pp, 1964 = 57-58 pp. All three docs + PDFs in quiet-instruments/.
+  NOTE: the variant files manuscript_variants/manuscript_part1/2.md were overwritten with the 1977 sources
+  (they had been identical copies since 22 Sep); the FROZEN 45pp/30pp sources (*_variantsrc.md) are untouched.
+- extra_tests.R (27 Sep 2026): realised spending (A28 grants/TME, whole sample), disputes, election cycle, OBR
+  interaction, and the 'without the projection' comparison. Replica: all null; the projection cannot be replaced
+  by realised spending (AIC -70 vs -93 ext) or by the six macro/labour controls (no-proj+six AIC -79 ext / -55 core
+  vs baseline -93 / -64; RESET rejects without projection .03/.007 -- the misspecification is the projection's
+  absence, not a missing macro control). Election-cycle and OBR-era indicators null (post-2010 x proj -0.014 p .13).
+  Sam's reporting question answered: 'first to test migration as fiscal instrument' and 'first to use DR projection'
+  are one claim (the second is the operationalisation of the first), justified jointly by the falsification design.
+- extra_tests.R R runs confirmed (Sam, 27 Sep 2026) = replica on both samples; manuscript paragraph 'Can anything
+  else do the projection's work?' (1964 + combined, Section 7, cites Table B8 = Panel 3) stands. Panel 4 added
+  (current fiscal balance: PSNB/GDP, PSND/GDP, tax/GDP, t-1, to 2019): all null beside the projection (0.0078-0.0088);
+  PSNB INSTEAD of the projection has the WRONG sign (-0.024/-0.028, higher deficit -> fewer inflows) and fails RESET
+  -> the non-demographic 'close the deficit' story does not carry the result. Sam's question (is the baseline missing
+  current/projected expenditure?) answered with data suggestions: OBR historical official forecasts database,
+  GAD Quinquennial Reviews / annual up-rating reports (projected NI contribution rate), PEWP plans, MTFS, LTPFR/FSR.
+- GAD / OBR / debt-dynamics tests (27 Sep 2026): gad_obr_tests.R (SAMPLE 1964/1977), data in determinants/gad/ and
+  boe_extras. GAD series = projected 10-yr change in the required joint Class 1 NI rate from the Quinquennial Reviews
+  (Sam's uploads; file 'gadqqreview1992.pdf' is the JULY 1999 review, Cm 4406; 2000 Bill report not used as a vintage).
+  Earnings basis (E) = demographic cost; price/policy basis (POL) projected the required rate to FALL 1981-2009 (price
+  indexation made pensions 'affordable' on the actuary's numbers -- the thesis's H&K/indexation point in data).
+  Replica: GAD E predicts inflows ALONE (p .005/.024) but is null beside delta_oadr_10 (projection unchanged 0.0075) and
+  11-18 AIC worse in its place; POL null; OBR Budget/medium-term borrowing forecasts null beside the projection, wrong
+  sign in its place (as realised PSNB); debt interest/TME (t-1) +0.019 p .05 ext, +0.023 p .01 core, projection UP to
+  0.0096/0.0109, AIC -2/-3 -> the one non-demographic forward pressure with a signal; report as robustness, primary
+  spec unchanged. r-g, gilt yield, interest/GDP null. Nothing written into manuscripts yet -- Sam to decide after R run.
+- TABLE CONVENTIONS (Sam, 27 Sep 2026, binding for every manuscript table): one short name per variable, used identically
+  as row label, column title and in text; every name shown is defined in the notes under the panel (tables_common.R DEFS).
+  mig_rate / L_mig_rate / mig_gross / L2_mig_rate; L_unem (ILO = baseline), L_unem_boe, L_unem_claim; L_vac_wap, L_vac_unem,
+  L_dln_vac_unem; L_wage_infl, L_tbill, st_inf_exp; L_tax_nics(_emp/_er); gad_earn/gad_policy/gad_gap; fc_budget/fc_medium;
+  L_int_tme, L_r_g. Column titles: '+name' (added), 'name for X' (replaces X), 'name only' (replaces the projection). Never
+  'unem' and 'U' in one table; never mix unemployment measures and vacancy controls in one panel (1a vs 1b). No references
+  to 'the thesis' in manuscript scripts -- say 'core sample, 1977-2019'. Population-by-vintage and election-cycle tables dropped.
+  data_common.R builds df for SAMPLE 1964/1977; run_all_1964.R/_1977.R set SAMPLE globally (bug: Sam's 27 Sep run_all_1964
+  ran the shared scripts on the core sample).
+- Extended-sample coverage (27 Sep 2026): extension_1964_robustness.R Panel 6 horizons (replica 1965-2019: h=1 0.0018 p .81;
+  3 0.0071 p .04; 5 0.0072 p .001; 7 0.0074; 10 0.0081; AIC -74 -> -99 monotone) and Panel 7 British placebo (LTIM 2.00 British
+  inflows all origins: 0.0031 p .08 on 1965-2019; 0.0064 p .03 on 1977-2019; total-DR null; as control projection 0.0076).
+  Still core-only by data: zero-migration reconstruction (needs components of change, 1975+ vintages), EU placebo (from 1975),
+  publication-dated projection (1978+), IPS-by-reason and permits-by-type. Figure 3 (horizons) could now be drawn for 1965-2019.
+- Augmented model (replica, core 1977-2016): 'significant' = L_vac_unem, L_wage_infl, st_inf_exp, L_vac_wap; baseline + these:
+  AIC -72.5 vs -64.2, RESET .78, BG .16 (no L2 needed), proj 0.0124; gross inflows AIC -75.9 vs -65.5. Does NOT replicate on the
+  extended sample (none of the six significant; +six AIC worse). vac_unem + vac_wap + unem together are collinear by
+  construction -> in-sample improvement, not a specification change. GAD up-rating reports (annual, next-year outgo only)
+  judged not worth collecting.
+- Prop 1 / Prop 2 framing (Sam, 27 Sep 2026): build a fiscal/macro model WITHOUT the projection first, then add it.
+  prop1_model.R: pre-stated rule (forward selection, no projection, HAC p<.10 + same sign on BOTH samples, lowest summed dAIC,
+  max 5 additions). Replica selects L_wage_infl, L_youth, L_tbill, L_tot, L_int_tme -> projection on top 0.0056 (p<.001,
+  dAIC -8.5) extended; 0.0022 (p .18, dAIC +0.5) CORE -- absorbed by L_youth + L_tot (drop either -> 0.0092/0.0067). OOS RMSE:
+  extended selected+proj best (0.090 vs 0.104); core selected-no-proj marginally best (0.101 vs 0.106). A-priori fiscal/political
+  block (L_int_tme, L_labour_gov) leaves projection 0.0083-0.0087 (dAIC -11 to -18). Exchange rate, current account,
+  trade balance, 5-10y inflation expectations null. Claimant count (A50, 1945-2016) tested as baseline: indistinguishable from
+  ILO; recommended ILO stays (2017-19, 1980s redefinitions) -- Sam's decision. Permits 1959-2008 via 1958-based projection
+  (GAD QR1960 Table B) 0.58; permits+Commonwealth vouchers 1964-2008 0.61. ESCoE adds no digital migration series.
+- 27 Sep 2026 (Sam): MAIN results run to 2019 using ONS/BoE/BIS/OBR 2017-19 splices (determinants/ons_extension_2017_2019.csv);
+  2016 = SECONDARY check printed under each panel for columns using extended series. Supersedes 'do not chase ONS 2017-19'.
+  Party dummy DROPPED from the theory model and pool (not Treasury framework); origin-country youth share/relative income not
+  Prop-1 candidates. Unemployment 'of the day' = L_unem_head (M5 admin/claimant as published to 1997, ILO from 1998) + L_post98
+  step, tested in boe_tests.R 1a. Replica to 2019: headline fits slightly worse than ILO (AIC +1.8/+1.4); with step, step +0.16-0.17
+  (p .04/.07), proj 0.0070-0.0072. Fiscal + int_tme: proj 0.0096 ext / 0.0108 core, dAIC -27/-19. Prop-1 selection (rule unchanged)
+  now picks L_wage_infl, L_real_house, L_real_eri -> projection on top 0.0059 (p .002, dAIC -7.2) ext; 0.0055 (p .06, dAIC -2.7)
+  core; to 2016: 0.0057 / 0.0046 (p .10). Manuscript text/Figure 4 labels still say 'to 2016' -- update after Sam's R run.
+- 28 Sep 2026: consolidated handover written to quiet-instruments/HANDOVER.md (supersedes HANDOVER_ReStud_Project.md); keep it current.

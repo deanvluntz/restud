@@ -1,0 +1,2788 @@
+run_all.R -- 2026-09-22 22:05:19 -- wd: /Users/samyhamdane/quiet-instruments/diss_replication 
+
+
+####################################################################################################
+##  replication_1977.R
+####################################################################################################
+
+data: /Users/samyhamdane/quiet-instruments/diss_replication/Dissertation_Dataset_Final.xlsx 
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+=== Table 2 col (1): fiscal specification ===
+  N=43  Adj.R2=0.9562  AIC=-70.10
+  (Intercept)                0.0774  se= 0.1545  t= 0.501  p=0.6194 
+  L_log_mig_rate             0.4650  se= 0.0788  t= 5.899  p=0.0000 ***
+  L_tax_workpop              0.0518  se= 0.0105  t= 4.953  p=0.0000 ***
+  delta_oadr_10              0.0082  se= 0.0015  t= 5.677  p=0.0000 ***
+  L_ln_debt_gdp              0.5351  se= 0.1941  t= 2.756  p=0.0090 ***
+  L_unem                    -0.0199  se= 0.0088  t=-2.268  p=0.0292 **
+  BG(1)=0.3537  BP=0.2552  RESET=0.4089  JB=0.9336  maxVIF=13.0
+
+======== FULL DIAGNOSTICS: tax_spec ========
+
+Call:
+lm(formula = formula, data = data, na.action = na.omit)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.203793 -0.049700 -0.002221  0.054067  0.188608 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.077397   0.136104   0.569 0.573020    
+L_log_mig_rate  0.465010   0.118018   3.940 0.000348 ***
+L_tax_workpop   0.051830   0.012897   4.019 0.000276 ***
+delta_oadr_10   0.008241   0.001952   4.221 0.000151 ***
+L_ln_debt_gdp   0.535100   0.200955   2.663 0.011404 *  
+L_unem         -0.019923   0.009693  -2.055 0.046947 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09811 on 37 degrees of freedom
+Multiple R-squared:  0.9614,	Adjusted R-squared:  0.9562 
+F-statistic: 184.3 on 5 and 37 DF,  p-value: < 0.00000000000000022
+
+--- HAC coefficients ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value     Pr(>|t|)    
+(Intercept)     0.0773975  0.1544959  0.5010     0.619361    
+L_log_mig_rate  0.4650104  0.0788259  5.8992 0.0000008597 ***
+L_tax_workpop   0.0518298  0.0104641  4.9531 0.0000163036 ***
+delta_oadr_10   0.0082412  0.0014516  5.6772 0.0000017184 ***
+L_ln_debt_gdp   0.5350998  0.1941283  2.7564     0.009019 ** 
+L_unem         -0.0199233  0.0087832 -2.2683     0.029236 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Newey-West (lag=1) comparison ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value    Pr(>|t|)    
+(Intercept)     0.0773975  0.1549617  0.4995    0.620411    
+L_log_mig_rate  0.4650104  0.0842997  5.5162 0.000002839 ***
+L_tax_workpop   0.0518298  0.0109687  4.7253 0.000032859 ***
+delta_oadr_10   0.0082412  0.0014488  5.6881 0.000001661 ***
+L_ln_debt_gdp   0.5350998  0.1936564  2.7631    0.008867 ** 
+L_unem         -0.0199233  0.0090248 -2.2076    0.033551 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- BG(1) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 1
+
+data:  mod
+LM test = 0.86017, df = 1, p-value = 0.3537
+
+--- BG(2) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 2
+
+data:  mod
+LM test = 5.5771, df = 2, p-value = 0.06151
+
+--- BG(3) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 3
+
+data:  mod
+LM test = 8.2088, df = 3, p-value = 0.04189
+
+--- BG(4) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 4
+
+data:  mod
+LM test = 10.364, df = 4, p-value = 0.03472
+
+--- BP ---
+
+	studentized Breusch-Pagan test
+
+data:  mod
+BP = 6.5631, df = 5, p-value = 0.2552
+
+--- RESET ---
+
+	RESET test
+
+data:  mod
+RESET = 0.91766, df1 = 2, df2 = 35, p-value = 0.4089
+
+--- VIF ---
+L_log_mig_rate  L_tax_workpop  delta_oadr_10  L_ln_debt_gdp         L_unem 
+     13.013518      10.416944       1.323176       1.596506       2.112864 
+--- JB ---
+
+	Jarque Bera Test
+
+data:  residuals(mod)
+X-squared = 0.13743, df = 2, p-value = 0.9336
+
+--- ADF on residuals (DF critical values: diagnostic only) ---
+
+	Augmented Dickey-Fuller Test
+
+data:  residuals(mod)
+Dickey-Fuller = -3.9118, Lag order = 3, p-value = 0.02245
+alternative hypothesis: stationary
+
+=== Table 2 col (2): trend specification ===
+  N=43  Adj.R2=0.9494  AIC=-63.92
+  (Intercept)                0.3957  se= 0.1265  t= 3.129  p=0.0034 ***
+  L_log_mig_rate             0.6914  se= 0.0617  t=11.203  p=0.0000 ***
+  trend                      0.0082  se= 0.0022  t= 3.759  p=0.0006 ***
+  delta_oadr_10              0.0073  se= 0.0016  t= 4.687  p=0.0000 ***
+  L_ln_debt_gdp              0.3662  se= 0.1980  t= 1.849  p=0.0724 *
+  L_unem                    -0.0181  se= 0.0086  t=-2.101  p=0.0425 **
+  BG(1)=0.3737  BP=0.1696  RESET=0.0781  JB=0.7771  maxVIF=6.0
+
+======== FULL DIAGNOSTICS: trend_spec ========
+
+Call:
+lm(formula = formula, data = data, na.action = na.omit)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.198300 -0.054703 -0.009699  0.071998  0.203156 
+
+Coefficients:
+                Estimate Std. Error t value      Pr(>|t|)    
+(Intercept)     0.395713   0.146209   2.706       0.01023 *  
+L_log_mig_rate  0.691410   0.086174   8.023 0.00000000129 ***
+trend           0.008204   0.002730   3.005       0.00474 ** 
+delta_oadr_10   0.007279   0.002060   3.533       0.00112 ** 
+L_ln_debt_gdp   0.366173   0.213873   1.712       0.09525 .  
+L_unem         -0.018105   0.010385  -1.743       0.08958 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1054 on 37 degrees of freedom
+Multiple R-squared:  0.9554,	Adjusted R-squared:  0.9494 
+F-statistic: 158.6 on 5 and 37 DF,  p-value: < 0.00000000000000022
+
+--- HAC coefficients ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value           Pr(>|t|)    
+(Intercept)     0.3957132  0.1264517  3.1294          0.0034103 ** 
+L_log_mig_rate  0.6914098  0.0617138 11.2035 0.0000000000001896 ***
+trend           0.0082043  0.0021825  3.7591          0.0005885 ***
+delta_oadr_10   0.0072786  0.0015531  4.6865 0.0000369940517040 ***
+L_ln_debt_gdp   0.3661729  0.1979992  1.8494          0.0724061 .  
+L_unem         -0.0181053  0.0086156 -2.1014          0.0424709 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Newey-West (lag=1) comparison ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value          Pr(>|t|)    
+(Intercept)     0.3957132  0.1358343  2.9132          0.006035 ** 
+L_log_mig_rate  0.6914098  0.0659522 10.4835 0.000000000001247 ***
+trend           0.0082043  0.0024931  3.2908          0.002201 ** 
+delta_oadr_10   0.0072786  0.0016188  4.4965 0.000066019899739 ***
+L_ln_debt_gdp   0.3661729  0.2023084  1.8100          0.078428 .  
+L_unem         -0.0181053  0.0094506 -1.9158          0.063146 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- BG(1) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 1
+
+data:  mod
+LM test = 0.79136, df = 1, p-value = 0.3737
+
+--- BG(2) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 2
+
+data:  mod
+LM test = 3.9796, df = 2, p-value = 0.1367
+
+--- BG(3) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 3
+
+data:  mod
+LM test = 5.7817, df = 3, p-value = 0.1227
+
+--- BG(4) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 4
+
+data:  mod
+LM test = 6.8564, df = 4, p-value = 0.1437
+
+--- BP ---
+
+	studentized Breusch-Pagan test
+
+data:  mod
+BP = 7.7655, df = 5, p-value = 0.1696
+
+--- RESET ---
+
+	RESET test
+
+data:  mod
+RESET = 2.7448, df1 = 2, df2 = 35, p-value = 0.07811
+
+--- VIF ---
+L_log_mig_rate          trend  delta_oadr_10  L_ln_debt_gdp         L_unem 
+      6.009215       4.440345       1.276076       1.566217       2.100723 
+--- JB ---
+
+	Jarque Bera Test
+
+data:  residuals(mod)
+X-squared = 0.50428, df = 2, p-value = 0.7771
+
+--- ADF on residuals (DF critical values: diagnostic only) ---
+
+	Augmented Dickey-Fuller Test
+
+data:  residuals(mod)
+Dickey-Fuller = -3.5803, Lag order = 3, p-value = 0.04618
+alternative hypothesis: stationary
+
+
+--- Section 7: nested baseline (no projection term) ---
+=== no projection, trend spec ===
+  N=43  Adj.R2=0.9341  AIC=-53.42
+  (Intercept)                0.4077  se= 0.1772  t= 2.300  p=0.0270 **
+  L_log_mig_rate             0.7397  se= 0.0859  t= 8.606  p=0.0000 ***
+  trend                      0.0068  se= 0.0032  t= 2.155  p=0.0375 **
+  L_ln_debt_gdp              0.1143  se= 0.1956  t= 0.584  p=0.5625 
+  L_unem                    -0.0221  se= 0.0127  t=-1.736  p=0.0907 *
+  BG(1)=0.6024  BP=0.6974  RESET=0.0477  JB=0.4143  maxVIF=5.9
+
+=== no projection, fiscal spec ===
+  N=43  Adj.R2=0.9368  AIC=-55.20
+  (Intercept)                0.1596  se= 0.1822  t= 0.876  p=0.3865 
+  L_log_mig_rate             0.5866  se= 0.1107  t= 5.299  p=0.0000 ***
+  L_tax_workpop              0.0391  se= 0.0126  t= 3.102  p=0.0036 ***
+  L_ln_debt_gdp              0.2214  se= 0.1787  t= 1.239  p=0.2229 
+  L_unem                    -0.0235  se= 0.0109  t=-2.155  p=0.0376 **
+  BG(1)=0.2710  BP=0.5759  RESET=0.1205  JB=0.5982  maxVIF=12.2
+
+=== + dOADR10, trend ===
+  N=43  Adj.R2=0.9494  AIC=-63.92
+  (Intercept)                0.3957  se= 0.1265  t= 3.129  p=0.0034 ***
+  L_log_mig_rate             0.6914  se= 0.0617  t=11.203  p=0.0000 ***
+  trend                      0.0082  se= 0.0022  t= 3.759  p=0.0006 ***
+  delta_oadr_10              0.0073  se= 0.0016  t= 4.687  p=0.0000 ***
+  L_ln_debt_gdp              0.3662  se= 0.1980  t= 1.849  p=0.0724 *
+  L_unem                    -0.0181  se= 0.0086  t=-2.101  p=0.0425 **
+  BG(1)=0.3737  BP=0.1696  RESET=0.0781  JB=0.7771  maxVIF=6.0
+
+=== + dOADR10, fiscal ===
+  N=43  Adj.R2=0.9562  AIC=-70.10
+  (Intercept)                0.0774  se= 0.1545  t= 0.501  p=0.6194 
+  L_log_mig_rate             0.4650  se= 0.0788  t= 5.899  p=0.0000 ***
+  L_tax_workpop              0.0518  se= 0.0105  t= 4.953  p=0.0000 ***
+  delta_oadr_10              0.0082  se= 0.0015  t= 5.677  p=0.0000 ***
+  L_ln_debt_gdp              0.5351  se= 0.1941  t= 2.756  p=0.0090 ***
+  L_unem                    -0.0199  se= 0.0088  t=-2.268  p=0.0292 **
+  BG(1)=0.3537  BP=0.2552  RESET=0.4089  JB=0.9336  maxVIF=13.0
+
+=== + dDR10, trend (placebo) ===
+  N=43  Adj.R2=0.9354  AIC=-53.41
+  (Intercept)                0.6928  se= 0.2631  t= 2.634  p=0.0123 **
+  L_log_mig_rate             0.6650  se= 0.1035  t= 6.422  p=0.0000 ***
+  trend                      0.0063  se= 0.0030  t= 2.107  p=0.0420 **
+  delta_dr_10                0.0020  se= 0.0014  t= 1.450  p=0.1555 
+  L_ln_debt_gdp              0.3661  se= 0.2105  t= 1.739  p=0.0903 *
+  L_unem                    -0.0426  se= 0.0187  t=-2.276  p=0.0287 **
+  BG(1)=0.2921  BP=0.6058  RESET=0.0149  JB=0.5457  maxVIF=7.9
+
+=== + dDR10, fiscal (placebo) ===
+  N=43  Adj.R2=0.9381  AIC=-55.28
+  (Intercept)                0.4605  se= 0.2568  t= 1.793  p=0.0812 *
+  L_log_mig_rate             0.5175  se= 0.1320  t= 3.919  p=0.0004 ***
+  L_tax_workpop              0.0369  se= 0.0125  t= 2.953  p=0.0054 ***
+  delta_dr_10                0.0020  se= 0.0014  t= 1.451  p=0.1552 
+  L_ln_debt_gdp              0.4658  se= 0.2192  t= 2.125  p=0.0403 **
+  L_unem                    -0.0441  se= 0.0180  t=-2.455  p=0.0189 **
+  BG(1)=0.0816  BP=0.5963  RESET=0.0442  JB=0.7123  maxVIF=14.0
+
+trend: add dOADR10             F(1,37)= 12.480  p=0.00112  dAIC= -10.50  adjR2 0.9341 -> 0.9494
+trend: add dDR10               F(1,37)=  1.753  p=0.19357  dAIC=  +0.01  adjR2 0.9341 -> 0.9354
+fiscal: add dOADR10            F(1,37)= 17.816  p=0.00015  dAIC= -14.90  adjR2 0.9368 -> 0.9562
+fiscal: add dDR10              F(1,37)=  1.835  p=0.18379  dAIC=  -0.08  adjR2 0.9368 -> 0.9381
+
+--- Section 7: policy-era indicator, step vs window ---
+=== policy era: POL97 ===
+  N=43  Adj.R2=0.9514  AIC=-64.82
+  (Intercept)                0.4659  se= 0.1351  t= 3.449  p=0.0014 ***
+  L_log_mig_rate             0.6074  se= 0.0754  t= 8.054  p=0.0000 ***
+  trend                      0.0058  se= 0.0026  t= 2.235  p=0.0317 **
+  POL97                      0.1560  se= 0.0796  t= 1.961  p=0.0577 *
+  delta_oadr_10              0.0057  se= 0.0018  t= 3.109  p=0.0037 ***
+  L_ln_debt_gdp              0.3258  se= 0.1984  t= 1.642  p=0.1093 
+  L_unem                    -0.0145  se= 0.0082  t=-1.766  p=0.0858 *
+  BG(1)=0.3596  BP=0.1959  RESET=0.2068  JB=0.6511  maxVIF=9.7
+
+=== policy era: L_POL97 ===
+  N=42 (1 dropped)  Adj.R2=0.9551  AIC=-67.44
+  (Intercept)                0.6526  se= 0.1611  t= 4.050  p=0.0003 ***
+  L_log_mig_rate             0.5334  se= 0.0879  t= 6.072  p=0.0000 ***
+  trend                      0.0045  se= 0.0028  t= 1.637  p=0.1107 
+  L_POL97                    0.2053  se= 0.0920  t= 2.231  p=0.0322 **
+  delta_oadr_10              0.0054  se= 0.0017  t= 3.088  p=0.0039 ***
+  L_ln_debt_gdp              0.4627  se= 0.2040  t= 2.268  p=0.0296 **
+  L_unem                    -0.0239  se= 0.0091  t=-2.625  p=0.0128 **
+  BG(1)=0.9479  BP=0.2156  RESET=0.3344  JB=0.6885  maxVIF=11.0
+
+=== policy era: liberal ===
+  N=43  Adj.R2=0.9481  AIC=-62.01
+  (Intercept)                0.4015  se= 0.1278  t= 3.143  p=0.0033 ***
+  L_log_mig_rate             0.6801  se= 0.0713  t= 9.539  p=0.0000 ***
+  trend                      0.0085  se= 0.0024  t= 3.578  p=0.0010 ***
+  liberal                    0.0220  se= 0.0573  t= 0.384  p=0.7030 
+  delta_oadr_10              0.0065  se= 0.0028  t= 2.288  p=0.0281 **
+  L_ln_debt_gdp              0.3530  se= 0.2139  t= 1.650  p=0.1076 
+  L_unem                    -0.0179  se= 0.0090  t=-1.982  p=0.0552 *
+  BG(1)=0.4058  BP=0.2428  RESET=0.0657  JB=0.7374  maxVIF=7.3
+
+=== all five MPR dummies ===
+  N=43  Adj.R2=0.9505  AIC=-61.06
+  (Intercept)                0.6713  se= 0.1866  t= 3.598  p=0.0011 ***
+  L_log_mig_rate             0.4134  se= 0.1345  t= 3.074  p=0.0043 ***
+  trend                      0.0002  se= 0.0049  t= 0.049  p=0.9611 
+  delta_oadr_10              0.0072  se= 0.0026  t= 2.769  p=0.0093 ***
+  L_ln_debt_gdp              0.2673  se= 0.2461  t= 1.086  p=0.2856 
+  L_unem                    -0.0140  se= 0.0095  t=-1.463  p=0.1533 
+  POL97                      0.1946  se= 0.0881  t= 2.208  p=0.0345 **
+  POL02                      0.1096  se= 0.0674  t= 1.628  p=0.1134 
+  EXP04                      0.1296  se= 0.0651  t= 1.992  p=0.0550 *
+  ENL86                      0.0632  se= 0.0637  t= 0.991  p=0.3290 
+  ENL95                      0.0377  se= 0.0563  t= 0.669  p=0.5085 
+  BG(1)=0.5377  BP=0.2903  RESET=0.1737  JB=0.4304  maxVIF=17.9
+
+-- joint test of the five dummies (classical) --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_ln_debt_gdp + 
+    L_unem
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_ln_debt_gdp + 
+    L_unem + POL97 + POL02 + EXP04 + ENL86 + ENL95
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.41119                           
+2     32 0.34825  5  0.062945 1.1568 0.3516
+-- joint test of the five dummies (HAC), trend spec --
+
+Linear hypothesis test:
+POL97 = 0
+POL02 = 0
+EXP04 = 0
+ENL86 = 0
+ENL95 = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_ln_debt_gdp + 
+    L_unem + POL97 + POL02 + EXP04 + ENL86 + ENL95
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F Pr(>F)
+1     37                 
+2     32  5 1.9219 0.1181
+=== all five MPR dummies, fiscal spec ===
+  N=43  Adj.R2=0.9527  AIC=-63.08
+  (Intercept)                0.3839  se= 0.2831  t= 1.356  p=0.1846 
+  L_log_mig_rate             0.3781  se= 0.1240  t= 3.049  p=0.0046 ***
+  L_tax_workpop              0.0302  se= 0.0179  t= 1.686  p=0.1016 
+  delta_oadr_10              0.0080  se= 0.0022  t= 3.564  p=0.0012 ***
+  L_ln_debt_gdp              0.4168  se= 0.2708  t= 1.539  p=0.1335 
+  L_unem                    -0.0165  se= 0.0094  t=-1.754  p=0.0890 *
+  POL97                      0.1384  se= 0.0691  t= 2.003  p=0.0537 *
+  POL02                      0.0461  se= 0.0619  t= 0.744  p=0.4625 
+  EXP04                      0.0818  se= 0.0910  t= 0.898  p=0.3759 
+  ENL86                      0.0214  se= 0.0564  t= 0.379  p=0.7069 
+  ENL95                      0.0044  se= 0.0546  t= 0.081  p=0.9363 
+  BG(1)=0.5346  BP=0.1846  RESET=0.3941  JB=0.5996  maxVIF=34.4
+
+-- joint test of the five dummies (HAC), fiscal spec --
+
+Linear hypothesis test:
+POL97 = 0
+POL02 = 0
+EXP04 = 0
+ENL86 = 0
+ENL95 = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + L_tax_workpop + delta_oadr_10 + 
+    L_ln_debt_gdp + L_unem + POL97 + POL02 + EXP04 + ENL86 + 
+    ENL95
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F Pr(>F)
+1     37                 
+2     32  5 1.0944 0.3826
+=== step + interaction ===
+  N=43  Adj.R2=0.9510  AIC=-63.66
+  (Intercept)                0.5274  se= 0.1755  t= 3.006  p=0.0049 ***
+  L_log_mig_rate             0.5918  se= 0.0808  t= 7.325  p=0.0000 ***
+  trend                      0.0057  se= 0.0026  t= 2.178  p=0.0362 **
+  delta_oadr_10              0.0122  se= 0.0067  t= 1.832  p=0.0754 *
+  L_ln_debt_gdp              0.3612  se= 0.2076  t= 1.739  p=0.0908 *
+  L_unem                    -0.0200  se= 0.0118  t=-1.693  p=0.0994 *
+  POL97                      0.1599  se= 0.0761  t= 2.101  p=0.0429 **
+  delta_oadr_10:POL97       -0.0072  se= 0.0074  t=-0.965  p=0.3413 
+G3;there are higher-order terms (interactions) in this model
+consider setting type = 'predictor'; see ?vif
+g  BG(1)=0.3718  BP=0.2036  RESET=0.2364  JB=0.6909  maxVIF=21.9
+
+
+--- Section 7: differenced DV, as in Mitchell, Pain and Riley ---
+=== differenced: d_log_mig ===
+  N=42 (1 dropped)  Adj.R2=0.0467  AIC=-50.08
+  (Intercept)                0.1236  se= 0.1239  t= 0.998  p=0.3253 
+  delta_oadr_10              0.0050  se= 0.0037  t= 1.368  p=0.1800 
+  L_unem                    -0.0111  se= 0.0124  t=-0.891  p=0.3791 
+  L_ln_debt_gdp              0.3397  se= 0.1817  t= 1.870  p=0.0699 *
+  L_POL97                   -0.0012  se= 0.0772  t=-0.015  p=0.9879 
+  POL02                     -0.0373  se= 0.0545  t=-0.684  p=0.4982 
+  EXP04                     -0.0284  se= 0.0940  t=-0.302  p=0.7643 
+  BG(1)=0.5592  BP=0.2403  RESET=0.7177  JB=0.6901  maxVIF=10.1
+
+=== differenced: d_tot_mig ===
+  N=42 (1 dropped)  Adj.R2=0.0324  AIC=-56.15
+  (Intercept)                0.0612  se= 0.1297  t= 0.471  p=0.6403 
+  delta_oadr_10              0.0057  se= 0.0034  t= 1.700  p=0.0980 *
+  L_unem                    -0.0028  se= 0.0133  t=-0.213  p=0.8329 
+  L_ln_debt_gdp              0.3967  se= 0.2018  t= 1.965  p=0.0573 *
+  L_POL97                   -0.0558  se= 0.0657  t=-0.850  p=0.4013 
+  POL02                      0.0131  se= 0.0341  t= 0.384  p=0.7034 
+  EXP04                     -0.0041  se= 0.0776  t=-0.053  p=0.9581 
+  BG(1)=0.6555  BP=0.4251  RESET=0.4563  JB=0.9531  maxVIF=10.1
+
+--- Bounds F-test (ARDL package, case 3, exact) ---
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(log_mig_rate) ~ L(log_mig_rate, 1) + L(delta_oadr_10, 1) +     L(unem, 1) + L(ln_debt_gdp, 1) + L(tax_workpop, 1) + d(delta_oadr_10) +     d(unem) + d(ln_debt_gdp) + d(tax_workpop)
+F = 6.1643, p-value = 0.0092
+alternative hypothesis: Possible cointegration
+null values:
+ k  T 
+ 4 42 
+
+--- Bounds t-test (ARDL package, case 3, exact) ---
+
+	Bounds t-test for no cointegration
+
+data:  d(log_mig_rate) ~ L(log_mig_rate, 1) + L(delta_oadr_10, 1) +     L(unem, 1) + L(ln_debt_gdp, 1) + L(tax_workpop, 1) + d(delta_oadr_10) +     d(unem) + d(ln_debt_gdp) + d(tax_workpop)
+t = -4.0868, p-value = 0.04753
+alternative hypothesis: Possible cointegration
+null values:
+ k  T 
+ 4 42 
+
+--- Long-run multipliers (Table 3) ---
+           Term    Estimate  Std. Error   t value        Pr(>|t|)
+1   (Intercept)  0.62723774 0.350966181  1.787174 0.0833854930756
+2 delta_oadr_10  0.01504084 0.004410125  3.410525 0.0017721582954
+3          unem -0.06432094 0.020722708 -3.103887 0.0039771426560
+4   ln_debt_gdp  1.06541066 0.423286630  2.516996 0.0170418565837
+5   tax_workpop  0.08075493 0.013020803  6.201993 0.0000006056236
+--- Step 1: manual Wald F (statistic only) ---
+
+Linear hypothesis test:
+L_y = 0
+L_oadr = 0
+L_un = 0
+L_debt = 0
+L_tax = 0
+
+Model 1: restricted model
+Model 2: d_y ~ L_y + L_oadr + L_un + L_debt + L_tax + d_oadr + d_un + 
+    d_debt + d_tax
+
+  Res.Df     RSS Df Sum of Sq      F    Pr(>F)    
+1     37 0.50526                                  
+2     32 0.25737  5   0.24789 6.1643 0.0004162 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Manual F = 6.1643  vs package F = 6.1643  | difference -0.0000
+Manual t on L_y = -4.0868  vs package t = -4.0868  | difference 0.0000
+N used = 42 (expect 42), k = 4
+             Estimate        SE     2.5 % 97.5 %
+-L_oadr/L_y 0.0150408 0.0044101 0.0063972 0.0237
+           Estimate        SE     2.5 %  97.5 %
+-L_un/L_y -0.064321  0.020723 -0.104937 -0.0237
+            Estimate      SE   2.5 % 97.5 %
+-L_debt/L_y  1.06541 0.42329 0.23578  1.895
+           Estimate       SE    2.5 % 97.5 %
+-L_tax/L_y 0.080755 0.013021 0.055235 0.1063
+Kendall correction: rho 0.4650 -> 0.5207;  LR 0.0154 -> 0.0172
+rho: OLS 0.4650 | boot mean 0.3535 | bias -0.1115 | corrected 0.5765
+LR:  point 0.0154 | bias-corrected 0.0195 | 95% CI (recentred) [0.0090, 0.0282]
+
+moving-block bootstrap, block length 2:
+rho: OLS 0.4650 | boot mean 0.3346 | bias -0.1304 | corrected 0.5954
+LR:  point 0.0154 | bias-corrected 0.0204 | 95% CI (recentred) [0.0092, 0.0290]
+
+moving-block bootstrap, block length 4:
+rho: OLS 0.4650 | boot mean 0.3323 | bias -0.1327 | corrected 0.5977
+LR:  point 0.0154 | bias-corrected 0.0205 | 95% CI (recentred) [0.0100, 0.0274]
+
+moving-block bootstrap, block length 5:
+rho: OLS 0.4650 | boot mean 0.3443 | bias -0.1207 | corrected 0.5857
+LR:  point 0.0154 | bias-corrected 0.0199 | 95% CI (recentred) [0.0099, 0.0265]
+
+L = 5 is the length matched to BG(4). Compare its interval with the iid 
+interval [0.0092, 0.0294]: agreement -- overlap, with a lower bound no 
+smaller -- means the Section 5.2 figures are not an artefact of the iid 
+assumption.
+true rho 0.5000 | mean OLS 0.4435 (bias -0.0565; analytic -0.0581) | mean corrected 0.4925 (bias -0.0075)
+RMSE: raw 0.1513 -> corrected 0.1509
+=== Table 4 (1): total DR placebo (fiscal) ===
+  N=43  Adj.R2=0.9381  AIC=-55.28
+  (Intercept)                0.4605  se= 0.2568  t= 1.793  p=0.0812 *
+  L_log_mig_rate             0.5175  se= 0.1320  t= 3.919  p=0.0004 ***
+  L_tax_workpop              0.0369  se= 0.0125  t= 2.953  p=0.0054 ***
+  delta_dr_10                0.0020  se= 0.0014  t= 1.451  p=0.1552 
+  L_ln_debt_gdp              0.4658  se= 0.2192  t= 2.125  p=0.0403 **
+  L_unem                    -0.0441  se= 0.0180  t=-2.455  p=0.0189 **
+  BG(1)=0.0816  BP=0.5963  RESET=0.0442  JB=0.7123  maxVIF=14.0
+
+=== Table B3 (1): total DR placebo (trend) ===
+  N=43  Adj.R2=0.9354  AIC=-53.41
+  (Intercept)                0.6928  se= 0.2631  t= 2.634  p=0.0123 **
+  L_log_mig_rate             0.6650  se= 0.1035  t= 6.422  p=0.0000 ***
+  trend                      0.0063  se= 0.0030  t= 2.107  p=0.0420 **
+  delta_dr_10                0.0020  se= 0.0014  t= 1.450  p=0.1555 
+  L_ln_debt_gdp              0.3661  se= 0.2105  t= 1.739  p=0.0903 *
+  L_unem                    -0.0426  se= 0.0187  t=-2.276  p=0.0287 **
+  BG(1)=0.2921  BP=0.6058  RESET=0.0149  JB=0.5457  maxVIF=7.9
+
+=== Table 4 (2): EU inflows placebo (fiscal) ===
+  N=43  Adj.R2=0.9453  AIC=-5.36
+  (Intercept)               -0.9014  se= 0.4351  t=-2.072  p=0.0453 **
+  L_eu_log_mig_rate          0.7401  se= 0.1221  t= 6.059  p=0.0000 ***
+  L_tax_workpop              0.0566  se= 0.0292  t= 1.935  p=0.0606 *
+  delta_oadr_10              0.0030  se= 0.0036  t= 0.831  p=0.4116 
+  L_ln_debt_gdp              0.6675  se= 0.4249  t= 1.571  p=0.1247 
+  L_unem                     0.0179  se= 0.0187  t= 0.959  p=0.3440 
+  BG(1)=0.8322  BP=0.7164  RESET=0.2518  JB=0.4670  maxVIF=14.9
+
+=== Table B3 (2): EU inflows placebo (trend) ===
+  N=43  Adj.R2=0.9476  AIC=-7.17
+  (Intercept)               -0.3452  se= 0.1718  t=-2.009  p=0.0519 *
+  L_eu_log_mig_rate          0.6484  se= 0.1620  t= 4.003  p=0.0003 ***
+  trend                      0.0226  se= 0.0117  t= 1.940  p=0.0600 *
+  delta_oadr_10              0.0017  se= 0.0038  t= 0.457  p=0.6506 
+  L_ln_debt_gdp              0.5363  se= 0.3630  t= 1.477  p=0.1481 
+  L_unem                     0.0036  se= 0.0141  t= 0.260  p=0.7966 
+  BG(1)=0.4276  BP=0.8217  RESET=0.0780  JB=0.5803  maxVIF=19.0
+
+=== gross, log, fiscal ===
+  N=43  Adj.R2=0.9658  AIC=-71.37
+  (Intercept)                6.2350  se= 0.9022  t= 6.911  p=0.0000 ***
+  L_alt_log_mig_rate         0.3965  se= 0.0889  t= 4.460  p=0.0001 ***
+  delta_oadr_10              0.0082  se= 0.0015  t= 5.600  p=0.0000 ***
+  L_unem                    -0.0199  se= 0.0089  t=-2.231  p=0.0318 **
+  L_tax_workpop              0.0693  se= 0.0127  t= 5.472  p=0.0000 ***
+  L_ln_debt_gdp              0.5567  se= 0.1967  t= 2.830  p=0.0075 ***
+  BG(1)=0.3230  BP=0.2892  RESET=0.4740  JB=0.9524  maxVIF=19.8
+
+=== gross, log, trend ===
+  N=43  Adj.R2=0.9595  AIC=-64.17
+  (Intercept)                3.6665  se= 0.7618  t= 4.813  p=0.0000 ***
+  L_alt_log_mig_rate         0.6856  se= 0.0642  t=10.677  p=0.0000 ***
+  delta_oadr_10              0.0071  se= 0.0015  t= 4.637  p=0.0000 ***
+  L_unem                    -0.0178  se= 0.0087  t=-2.043  p=0.0482 **
+  trend                      0.0101  se= 0.0025  t= 4.095  p=0.0002 ***
+  L_ln_debt_gdp              0.3391  se= 0.1986  t= 1.707  p=0.0962 *
+  BG(1)=0.3883  BP=0.1802  RESET=0.0709  JB=0.7838  maxVIF=7.8
+
+=== gross, level, fiscal ===
+  N=43  Adj.R2=0.9497  AIC=980.48
+  (Intercept)              -39191.8526  se=22827.1801  t=-1.717  p=0.0944 *
+  L_alt_mig_rate             0.4271  se= 0.1115  t= 3.830  p=0.0005 ***
+  delta_oadr_10            1379.3784  se=318.4670  t= 4.331  p=0.0001 ***
+  L_unem                   -4300.6892  se=1367.8689  t=-3.144  p=0.0033 ***
+  L_tax_workpop            10607.6674  se=2307.3783  t= 4.597  p=0.0000 ***
+  L_ln_debt_gdp            111792.7225  se=40600.1842  t= 2.754  p=0.0091 ***
+  BG(1)=0.0914  BP=0.1099  RESET=0.0838  JB=0.3209  maxVIF=12.4
+
+=== gross, level, trend ===
+  N=43  Adj.R2=0.9411  AIC=987.24
+  (Intercept)              50609.5328  se=17003.0493  t= 2.976  p=0.0051 ***
+  L_alt_mig_rate             0.6807  se= 0.0927  t= 7.344  p=0.0000 ***
+  delta_oadr_10            1269.9736  se=333.5337  t= 3.808  p=0.0005 ***
+  L_unem                   -4136.9591  se=1477.6657  t=-2.800  p=0.0081 ***
+  trend                    1649.9650  se=523.3314  t= 3.153  p=0.0032 ***
+  L_ln_debt_gdp            71034.7325  se=40546.6504  t= 1.752  p=0.0881 *
+  BG(1)=0.1295  BP=0.0137  RESET=0.0618  JB=0.6937  maxVIF=5.7
+
+=== eu_gross ===
+  N=43  Adj.R2=0.9658  AIC=-71.37
+  (Intercept)                6.2350  se= 0.9022  t= 6.911  p=0.0000 ***
+  L_alt_log_mig_rate         0.3965  se= 0.0889  t= 4.460  p=0.0001 ***
+  delta_oadr_10              0.0082  se= 0.0015  t= 5.600  p=0.0000 ***
+  L_unem                    -0.0199  se= 0.0089  t=-2.231  p=0.0318 **
+  L_tax_workpop              0.0693  se= 0.0127  t= 5.472  p=0.0000 ***
+  L_ln_debt_gdp              0.5567  se= 0.1967  t= 2.830  p=0.0075 ***
+  BG(1)=0.3230  BP=0.2892  RESET=0.4740  JB=0.9524  maxVIF=19.8
+
+=== eu_gross2 ===
+  N=43  Adj.R2=0.9629  AIC=-67.92
+  (Intercept)                4.6034  se= 0.7588  t= 6.066  p=0.0000 ***
+  L_alt_log_mig_rate         0.5692  se= 0.0685  t= 8.315  p=0.0000 ***
+  delta_oadr_10              0.0074  se= 0.0016  t= 4.774  p=0.0000 ***
+  L_unem                    -0.0148  se= 0.0097  t=-1.529  p=0.1347 
+  L_tax_oadr_0               0.3285  se= 0.0650  t= 5.054  p=0.0000 ***
+  L_ln_debt_gdp              0.5385  se= 0.2045  t= 2.634  p=0.0123 **
+  BG(1)=0.2812  BP=0.2052  RESET=0.2250  JB=0.8906  maxVIF=11.7
+
+=== Table 4 (4): OADR level (fiscal) ===
+  N=43  Adj.R2=0.9493  AIC=-63.86
+  (Intercept)               -2.2357  se= 0.6037  t=-3.703  p=0.0007 ***
+  L_log_mig_rate             0.3830  se= 0.1276  t= 3.002  p=0.0048 ***
+  L_tax_workpop              0.0496  se= 0.0156  t= 3.175  p=0.0030 ***
+  level_oadr_10              0.0085  se= 0.0020  t= 4.329  p=0.0001 ***
+  L_unem                    -0.0304  se= 0.0113  t=-2.684  p=0.0108 **
+  L_ln_debt_gdp              0.3954  se= 0.1623  t= 2.437  p=0.0197 **
+  BG(1)=0.8376  BP=0.4092  RESET=0.2975  JB=0.5625  maxVIF=15.5
+
+=== Table B3 (4): OADR level (trend) ===
+  N=43  Adj.R2=0.9451  AIC=-60.42
+  (Intercept)               -1.7833  se= 0.6095  t=-2.926  p=0.0058 ***
+  L_log_mig_rate             0.5857  se= 0.0789  t= 7.424  p=0.0000 ***
+  trend                      0.0086  se= 0.0032  t= 2.659  p=0.0115 **
+  level_oadr_10              0.0080  se= 0.0020  t= 4.018  p=0.0003 ***
+  L_unem                    -0.0282  se= 0.0113  t=-2.494  p=0.0172 **
+  L_ln_debt_gdp              0.2507  se= 0.1808  t= 1.387  p=0.1739 
+  BG(1)=0.7567  BP=0.3849  RESET=0.0667  JB=0.6216  maxVIF=7.9
+
+=== Section 7 / Table 4 (5): zero-mig, fiscal spec ===
+  N=43  Adj.R2=0.9560  AIC=-69.90
+  (Intercept)                0.2135  se= 0.1433  t= 1.490  p=0.1448 
+  L_log_mig_rate             0.4674  se= 0.0859  t= 5.443  p=0.0000 ***
+  delta_zm_10                0.0075  se= 0.0013  t= 5.567  p=0.0000 ***
+  L_unem                    -0.0187  se= 0.0091  t=-2.051  p=0.0474 **
+  L_tax_workpop              0.0395  se= 0.0108  t= 3.661  p=0.0008 ***
+  L_ln_debt_gdp              0.4035  se= 0.1897  t= 2.127  p=0.0401 **
+  BG(1)=0.6939  BP=0.2808  RESET=0.2114  JB=0.8586  maxVIF=13.0
+
+======== FULL DIAGNOSTICS: zm fiscal spec ========
+
+Call:
+lm(formula = formula, data = data, na.action = na.omit)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.201702 -0.060373 -0.000244  0.060325  0.173208 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.213535   0.135619   1.575 0.123880    
+L_log_mig_rate  0.467449   0.118177   3.955 0.000332 ***
+delta_zm_10     0.007500   0.001789   4.191 0.000165 ***
+L_unem         -0.018745   0.009744  -1.924 0.062103 .  
+L_tax_workpop   0.039469   0.012567   3.141 0.003309 ** 
+L_ln_debt_gdp   0.403503   0.192105   2.100 0.042565 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09833 on 37 degrees of freedom
+Multiple R-squared:  0.9612,	Adjusted R-squared:  0.956 
+F-statistic: 183.4 on 5 and 37 DF,  p-value: < 0.00000000000000022
+
+--- HAC coefficients ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value    Pr(>|t|)    
+(Intercept)     0.2135352  0.1433447  1.4897   0.1447889    
+L_log_mig_rate  0.4674493  0.0858774  5.4432 0.000003564 ***
+delta_zm_10     0.0075000  0.0013471  5.5674 0.000002420 ***
+L_unem         -0.0187455  0.0091406 -2.0508   0.0474192 *  
+L_tax_workpop   0.0394689  0.0107799  3.6614   0.0007792 ***
+L_ln_debt_gdp   0.4035033  0.1896823  2.1273   0.0401287 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Newey-West (lag=1) comparison ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value    Pr(>|t|)    
+(Intercept)     0.2135352  0.1410736  1.5136   0.1386123    
+L_log_mig_rate  0.4674493  0.0876073  5.3357 0.000004980 ***
+delta_zm_10     0.0075000  0.0013206  5.6791 0.000001708 ***
+L_unem         -0.0187455  0.0091213 -2.0551   0.0469766 *  
+L_tax_workpop   0.0394689  0.0108820  3.6270   0.0008595 ***
+L_ln_debt_gdp   0.4035033  0.1885757  2.1397   0.0390373 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- BG(1) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 1
+
+data:  mod
+LM test = 0.15487, df = 1, p-value = 0.6939
+
+--- BG(2) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 2
+
+data:  mod
+LM test = 2.9929, df = 2, p-value = 0.2239
+
+--- BG(3) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 3
+
+data:  mod
+LM test = 4.8992, df = 3, p-value = 0.1793
+
+--- BG(4) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 4
+
+data:  mod
+LM test = 6.1315, df = 4, p-value = 0.1895
+
+--- BP ---
+
+	studentized Breusch-Pagan test
+
+data:  mod
+BP = 6.2701, df = 5, p-value = 0.2808
+
+--- RESET ---
+
+	RESET test
+
+data:  mod
+RESET = 1.625, df1 = 2, df2 = 35, p-value = 0.2114
+
+--- VIF ---
+L_log_mig_rate    delta_zm_10         L_unem  L_tax_workpop  L_ln_debt_gdp 
+     12.989789       1.861804       2.125575       9.845796       1.452406 
+--- JB ---
+
+	Jarque Bera Test
+
+data:  residuals(mod)
+X-squared = 0.30487, df = 2, p-value = 0.8586
+
+--- ADF on residuals (DF critical values: diagnostic only) ---
+
+	Augmented Dickey-Fuller Test
+
+data:  residuals(mod)
+Dickey-Fuller = -3.5602, Lag order = 3, p-value = 0.04777
+alternative hypothesis: stationary
+
+=== Table 4 (5): zero-mig, trend spec ===
+  N=43  Adj.R2=0.9503  AIC=-64.70
+  (Intercept)                0.4394  se= 0.1237  t= 3.551  p=0.0011 ***
+  L_log_mig_rate             0.6590  se= 0.0641  t=10.277  p=0.0000 ***
+  delta_zm_10                0.0070  se= 0.0013  t= 5.187  p=0.0000 ***
+  L_unem                    -0.0169  se= 0.0087  t=-1.937  p=0.0604 *
+  trend                      0.0057  se= 0.0022  t= 2.572  p=0.0143 **
+  L_ln_debt_gdp              0.2942  se= 0.1964  t= 1.498  p=0.1426 
+  BG(1)=0.5370  BP=0.1728  RESET=0.0578  JB=0.7795  maxVIF=6.3
+
+======== FULL DIAGNOSTICS: zm trend spec ========
+
+Call:
+lm(formula = formula, data = data, na.action = na.omit)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.21160 -0.05574 -0.00834  0.07985  0.20286 
+
+Coefficients:
+                Estimate Std. Error t value      Pr(>|t|)    
+(Intercept)     0.439385   0.145109   3.028      0.004468 ** 
+L_log_mig_rate  0.658988   0.087152   7.561 0.00000000513 ***
+delta_zm_10     0.007000   0.001913   3.659      0.000785 ***
+L_unem         -0.016889   0.010329  -1.635      0.110507    
+trend           0.005729   0.002695   2.126      0.040262 *  
+L_ln_debt_gdp   0.294221   0.205780   1.430      0.161169    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1045 on 37 degrees of freedom
+Multiple R-squared:  0.9562,	Adjusted R-squared:  0.9503 
+F-statistic: 161.7 on 5 and 37 DF,  p-value: < 0.00000000000000022
+
+--- HAC coefficients ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value         Pr(>|t|)    
+(Intercept)     0.4393853  0.1237190  3.5515         0.001065 ** 
+L_log_mig_rate  0.6589880  0.0641257 10.2765 0.00000000000217 ***
+delta_zm_10     0.0069998  0.0013494  5.1874 0.00000789386670 ***
+L_unem         -0.0168889  0.0087178 -1.9373         0.060373 .  
+trend           0.0057293  0.0022278  2.5717         0.014272 *  
+L_ln_debt_gdp   0.2942211  0.1963848  1.4982         0.142569    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Newey-West (lag=1) comparison ---
+
+t test of coefficients:
+
+                 Estimate Std. Error t value         Pr(>|t|)    
+(Intercept)     0.4393853  0.1315163  3.3409         0.001917 ** 
+L_log_mig_rate  0.6589880  0.0668017  9.8648 0.00000000000664 ***
+delta_zm_10     0.0069998  0.0013936  5.0227 0.00001314851017 ***
+L_unem         -0.0168889  0.0094912 -1.7794         0.083384 .  
+trend           0.0057293  0.0025480  2.2485         0.030585 *  
+L_ln_debt_gdp   0.2942211  0.1996208  1.4739         0.148966    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- BG(1) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 1
+
+data:  mod
+LM test = 0.38109, df = 1, p-value = 0.537
+
+--- BG(2) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 2
+
+data:  mod
+LM test = 2.9158, df = 2, p-value = 0.2327
+
+--- BG(3) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 3
+
+data:  mod
+LM test = 4.675, df = 3, p-value = 0.1972
+
+--- BG(4) ---
+
+	Breusch-Godfrey test for serial correlation of order up to 4
+
+data:  mod
+LM test = 5.4761, df = 4, p-value = 0.2418
+
+--- BP ---
+
+	studentized Breusch-Pagan test
+
+data:  mod
+BP = 7.713, df = 5, p-value = 0.1728
+
+--- RESET ---
+
+	RESET test
+
+data:  mod
+RESET = 3.0953, df1 = 2, df2 = 35, p-value = 0.05784
+
+--- VIF ---
+L_log_mig_rate    delta_zm_10         L_unem          trend  L_ln_debt_gdp 
+      6.258876       1.885650       2.115947       4.407533       1.476482 
+--- JB ---
+
+	Jarque Bera Test
+
+data:  residuals(mod)
+X-squared = 0.4981, df = 2, p-value = 0.7795
+
+--- ADF on residuals (DF critical values: diagnostic only) ---
+
+	Augmented Dickey-Fuller Test
+
+data:  residuals(mod)
+Dickey-Fuller = -3.4499, Lag order = 3, p-value = 0.06234
+alternative hypothesis: stationary
+
+=== Horse race: baseline (fiscal) ===
+  N=43  Adj.R2=0.9562  AIC=-70.10
+  (Intercept)                0.0774  se= 0.1545  t= 0.501  p=0.6194 
+  L_log_mig_rate             0.4650  se= 0.0788  t= 5.899  p=0.0000 ***
+  delta_oadr_10              0.0082  se= 0.0015  t= 5.677  p=0.0000 ***
+  L_unem                    -0.0199  se= 0.0088  t=-2.268  p=0.0292 **
+  L_ln_debt_gdp              0.5351  se= 0.1941  t= 2.756  p=0.0090 ***
+  L_tax_workpop              0.0518  se= 0.0105  t= 4.953  p=0.0000 ***
+  BG(1)=0.3537  BP=0.2552  RESET=0.4089  JB=0.9336  maxVIF=13.0
+
+=== Horse race: + liberal dummy (fiscal) ===
+  N=43  Adj.R2=0.9558  AIC=-68.93
+  (Intercept)                0.0672  se= 0.1602  t= 0.420  p=0.6771 
+  L_log_mig_rate             0.4146  se= 0.1021  t= 4.060  p=0.0003 ***
+  delta_oadr_10              0.0061  se= 0.0028  t= 2.203  p=0.0341 **
+  L_unem                    -0.0194  se= 0.0092  t=-2.114  p=0.0416 **
+  L_ln_debt_gdp              0.5119  se= 0.2107  t= 2.429  p=0.0203 **
+  L_tax_workpop              0.0561  se= 0.0124  t= 4.540  p=0.0001 ***
+  liberal                    0.0627  se= 0.0592  t= 1.058  p=0.2973 
+  BG(1)=0.4537  BP=0.3884  RESET=0.3175  JB=0.8713  maxVIF=16.3
+
+=== Horse race: + dummy + interaction (fiscal) ===
+  N=43  Adj.R2=0.9552  AIC=-67.51
+  (Intercept)                0.0687  se= 0.1592  t= 0.432  p=0.6685 
+  L_log_mig_rate             0.4035  se= 0.1013  t= 3.985  p=0.0003 ***
+  delta_oadr_10              0.0045  se= 0.0037  t= 1.212  p=0.2337 
+  L_unem                    -0.0192  se= 0.0092  t=-2.094  p=0.0436 **
+  L_ln_debt_gdp              0.5066  se= 0.2134  t= 2.374  p=0.0232 **
+  L_tax_workpop              0.0568  se= 0.0120  t= 4.725  p=0.0000 ***
+  liberal                    0.0289  se= 0.0481  t= 0.600  p=0.5526 
+  delta_oadr_10:liberal      0.0042  se= 0.0039  t= 1.076  p=0.2893 
+G3;there are higher-order terms (interactions) in this model
+consider setting type = 'predictor'; see ?vif
+g  BG(1)=0.3924  BP=0.4868  RESET=0.3771  JB=0.8451  maxVIF=16.6
+
+-- joint F, liberal + interaction (classical) --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    L_tax_workpop
+Model 2: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    L_tax_workpop + liberal + delta_oadr_10:liberal
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.35613                           
+2     35 0.34465  2  0.011479 0.5828 0.5636
+-- joint F, liberal + interaction (HAC) --
+
+Linear hypothesis test:
+liberal = 0
+delta_oadr_10:liberal = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    L_tax_workpop + liberal + delta_oadr_10:liberal
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F Pr(>F)
+1     37                 
+2     35  2 0.7624 0.4741
+=== Horse race: baseline (trend) ===
+  N=43  Adj.R2=0.9494  AIC=-63.92
+  (Intercept)                0.3957  se= 0.1265  t= 3.129  p=0.0034 ***
+  L_log_mig_rate             0.6914  se= 0.0617  t=11.203  p=0.0000 ***
+  delta_oadr_10              0.0073  se= 0.0016  t= 4.687  p=0.0000 ***
+  L_unem                    -0.0181  se= 0.0086  t=-2.101  p=0.0425 **
+  L_ln_debt_gdp              0.3662  se= 0.1980  t= 1.849  p=0.0724 *
+  trend                      0.0082  se= 0.0022  t= 3.759  p=0.0006 ***
+  BG(1)=0.3737  BP=0.1696  RESET=0.0781  JB=0.7771  maxVIF=6.0
+
+=== Horse race: + liberal dummy (trend) ===
+  N=43  Adj.R2=0.9481  AIC=-62.01
+  (Intercept)                0.4015  se= 0.1278  t= 3.143  p=0.0033 ***
+  L_log_mig_rate             0.6801  se= 0.0713  t= 9.539  p=0.0000 ***
+  delta_oadr_10              0.0065  se= 0.0028  t= 2.288  p=0.0281 **
+  L_unem                    -0.0179  se= 0.0090  t=-1.982  p=0.0552 *
+  L_ln_debt_gdp              0.3530  se= 0.2139  t= 1.650  p=0.1076 
+  trend                      0.0085  se= 0.0024  t= 3.578  p=0.0010 ***
+  liberal                    0.0220  se= 0.0573  t= 0.384  p=0.7030 
+  BG(1)=0.4058  BP=0.2428  RESET=0.0657  JB=0.7374  maxVIF=7.3
+
+=== Horse race: + dummy + interaction (trend) ===
+  N=43  Adj.R2=0.9469  AIC=-60.27
+  (Intercept)                0.4049  se= 0.1291  t= 3.137  p=0.0035 ***
+  L_log_mig_rate             0.6753  se= 0.0716  t= 9.433  p=0.0000 ***
+  delta_oadr_10              0.0054  se= 0.0041  t= 1.304  p=0.2006 
+  L_unem                    -0.0177  se= 0.0092  t=-1.923  p=0.0627 *
+  L_ln_debt_gdp              0.3482  se= 0.2169  t= 1.605  p=0.1175 
+  trend                      0.0085  se= 0.0023  t= 3.633  p=0.0009 ***
+  liberal                   -0.0032  se= 0.0417  t=-0.076  p=0.9399 
+  delta_oadr_10:liberal      0.0030  se= 0.0039  t= 0.782  p=0.4396 
+G3;there are higher-order terms (interactions) in this model
+consider setting type = 'predictor'; see ?vif
+g  BG(1)=0.3997  BP=0.3062  RESET=0.0776  JB=0.6990  maxVIF=7.9
+
+-- joint F, liberal + interaction (classical) --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    trend
+Model 2: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    trend + liberal + delta_oadr_10:liberal
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.41119                           
+2     35 0.40785  2 0.0033446 0.1435 0.8668
+-- joint F, liberal + interaction (HAC) --
+
+Linear hypothesis test:
+liberal = 0
+delta_oadr_10:liberal = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + delta_oadr_10 + L_unem + L_ln_debt_gdp + 
+    trend + liberal + delta_oadr_10:liberal
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df     F Pr(>F)
+1     37                
+2     35  2 0.335 0.7176
+    period level_oadr_10 delta_oadr_10
+1  pre1998      296.5619     0.5581168
+2  liberal      312.6302    14.9402400
+3 post2007      302.2294    -4.5317800
+=== Section 7: LTIM basis (fiscal) ===
+  N=28 (1 dropped)  Adj.R2=0.9053  AIC=-46.83
+  (Intercept)                0.0488  se= 0.4283  t= 0.114  p=0.9104 
+  L_ltim_log_mig_rate        0.3077  se= 0.1327  t= 2.319  p=0.0301 **
+  L_tax_workpop              0.0642  se= 0.0212  t= 3.026  p=0.0062 ***
+  delta_oadr_10              0.0159  se= 0.0040  t= 3.933  p=0.0007 ***
+  L_unem                     0.0087  se= 0.0264  t= 0.331  p=0.7440 
+  L_ln_debt_gdp              0.6981  se= 0.1937  t= 3.604  p=0.0016 ***
+  BG(1)=0.9691  BP=0.6876  RESET=0.0498  JB=0.4535  maxVIF=14.8
+
+=== Section 7: LTIM basis (trend) ===
+  N=28 (1 dropped)  Adj.R2=0.8925  AIC=-43.29
+  (Intercept)                0.6523  se= 0.3400  t= 1.919  p=0.0681 *
+  L_ltim_log_mig_rate        0.5551  se= 0.0862  t= 6.438  p=0.0000 ***
+  trend                      0.0106  se= 0.0054  t= 1.973  p=0.0611 *
+  delta_oadr_10              0.0104  se= 0.0038  t= 2.701  p=0.0130 **
+  L_unem                    -0.0218  se= 0.0241  t=-0.905  p=0.3753 
+  L_ln_debt_gdp              0.5684  se= 0.2245  t= 2.532  p=0.0190 **
+  BG(1)=0.8983  BP=0.9394  RESET=0.0671  JB=0.4607  maxVIF=8.4
+
+=== Section 7: sample start 1983 (fiscal) ===
+  N=37  Adj.R2=0.9572  AIC=-62.72
+  (Intercept)                0.0530  se= 0.2643  t= 0.200  p=0.8425 
+  L_log_mig_rate             0.4748  se= 0.0904  t= 5.255  p=0.0000 ***
+  L_tax_workpop              0.0514  se= 0.0162  t= 3.168  p=0.0034 ***
+  delta_oadr_10              0.0087  se= 0.0023  t= 3.832  p=0.0006 ***
+  L_ln_debt_gdp              0.5684  se= 0.1898  t= 2.995  p=0.0054 ***
+  L_unem                    -0.0179  se= 0.0115  t=-1.556  p=0.1299 
+  BG(1)=0.4177  BP=0.5372  RESET=0.5333  JB=0.9934  maxVIF=15.1
+
+=== Section 7: sample start 1983 (trend) ===
+  N=37  Adj.R2=0.9496  AIC=-56.66
+  (Intercept)                0.4441  se= 0.2252  t= 1.972  p=0.0576 *
+  L_log_mig_rate             0.7055  se= 0.0620  t=11.376  p=0.0000 ***
+  trend                      0.0067  se= 0.0038  t= 1.740  p=0.0917 *
+  delta_oadr_10              0.0069  se= 0.0025  t= 2.710  p=0.0109 **
+  L_ln_debt_gdp              0.4075  se= 0.1853  t= 2.199  p=0.0355 **
+  L_unem                    -0.0220  se= 0.0147  t=-1.497  p=0.1445 
+  BG(1)=0.4301  BP=0.2587  RESET=0.0840  JB=0.8951  maxVIF=7.1
+
+=== Section 7: sample start 1987 (fiscal) ===
+  N=33  Adj.R2=0.9484  AIC=-52.18
+  (Intercept)                0.1027  se= 0.2640  t= 0.389  p=0.7002 
+  L_log_mig_rate             0.4879  se= 0.0935  t= 5.216  p=0.0000 ***
+  L_tax_workpop              0.0488  se= 0.0169  t= 2.887  p=0.0076 ***
+  delta_oadr_10              0.0082  se= 0.0022  t= 3.805  p=0.0007 ***
+  L_ln_debt_gdp              0.5627  se= 0.2020  t= 2.786  p=0.0096 ***
+  L_unem                    -0.0214  se= 0.0129  t=-1.659  p=0.1086 
+  BG(1)=0.5269  BP=0.6786  RESET=0.6342  JB=0.9874  maxVIF=12.6
+
+=== Section 7: sample start 1987 (trend) ===
+  N=33  Adj.R2=0.9408  AIC=-47.68
+  (Intercept)                0.5201  se= 0.2106  t= 2.469  p=0.0202 **
+  L_log_mig_rate             0.6916  se= 0.0585  t=11.817  p=0.0000 ***
+  trend                      0.0067  se= 0.0041  t= 1.639  p=0.1128 
+  delta_oadr_10              0.0062  se= 0.0024  t= 2.582  p=0.0156 **
+  L_ln_debt_gdp              0.4231  se= 0.2060  t= 2.054  p=0.0498 **
+  L_unem                    -0.0299  se= 0.0150  t=-1.985  p=0.0574 *
+  BG(1)=0.6118  BP=0.3727  RESET=0.1739  JB=0.9203  maxVIF=6.7
+
+=== Section 7 horizon: delta_oadr_1 (fiscal) ===
+  N=43  Adj.R2=0.9358  AIC=-53.67
+  (Intercept)                0.1641  se= 0.1703  t= 0.964  p=0.3415 
+  L_log_mig_rate             0.5141  se= 0.1472  t= 3.492  p=0.0013 ***
+  L_tax_workpop              0.0468  se= 0.0168  t= 2.785  p=0.0084 ***
+  delta_oadr_1               0.0064  se= 0.0087  t= 0.738  p=0.4654 
+  L_unem                    -0.0266  se= 0.0105  t=-2.541  p=0.0154 **
+  L_ln_debt_gdp              0.2724  se= 0.1784  t= 1.527  p=0.1353 
+  BG(1)=0.1410  BP=0.4956  RESET=0.0704  JB=0.6388  maxVIF=20.4
+
+=== Section 7 horizon: delta_oadr_1 (trend) ===
+  N=43  Adj.R2=0.9332  AIC=-51.96
+  (Intercept)                0.4814  se= 0.1776  t= 2.711  p=0.0101 **
+  L_log_mig_rate             0.6761  se= 0.1086  t= 6.228  p=0.0000 ***
+  trend                      0.0090  se= 0.0043  t= 2.092  p=0.0434 **
+  delta_oadr_1               0.0078  se= 0.0091  t= 0.849  p=0.4015 
+  L_unem                    -0.0258  se= 0.0126  t=-2.047  p=0.0478 **
+  L_ln_debt_gdp              0.1458  se= 0.1941  t= 0.751  p=0.4574 
+  BG(1)=0.4279  BP=0.5108  RESET=0.0223  JB=0.4518  maxVIF=11.1
+
+=== Section 7 horizon: delta_oadr_3 (fiscal) ===
+  N=43  Adj.R2=0.9428  AIC=-58.63
+  (Intercept)                0.1297  se= 0.1676  t= 0.774  p=0.4439 
+  L_log_mig_rate             0.3100  se= 0.1322  t= 2.345  p=0.0245 **
+  L_tax_workpop              0.0698  se= 0.0161  t= 4.343  p=0.0001 ***
+  delta_oadr_3               0.0090  se= 0.0035  t= 2.538  p=0.0155 **
+  L_unem                    -0.0323  se= 0.0099  t=-3.262  p=0.0024 ***
+  L_ln_debt_gdp              0.3817  se= 0.1793  t= 2.128  p=0.0400 **
+  BG(1)=0.1126  BP=0.7362  RESET=0.0058  JB=0.8179  maxVIF=23.2
+
+=== Section 7 horizon: delta_oadr_3 (trend) ===
+  N=43  Adj.R2=0.9425  AIC=-58.39
+  (Intercept)                0.6655  se= 0.1627  t= 4.090  p=0.0002 ***
+  L_log_mig_rate             0.4786  se= 0.1139  t= 4.203  p=0.0002 ***
+  trend                      0.0161  se= 0.0039  t= 4.182  p=0.0002 ***
+  delta_oadr_3               0.0120  se= 0.0043  t= 2.779  p=0.0085 ***
+  L_unem                    -0.0335  se= 0.0108  t=-3.106  p=0.0036 ***
+  L_ln_debt_gdp              0.1958  se= 0.2089  t= 0.937  p=0.3546 
+  BG(1)=0.2864  BP=0.9273  RESET=0.0020  JB=0.6120  maxVIF=13.3
+
+=== Section 7 horizon: delta_oadr_5 (fiscal) ===
+  N=43  Adj.R2=0.9492  AIC=-63.72
+  (Intercept)                0.0938  se= 0.1777  t= 0.528  p=0.6007 
+  L_log_mig_rate             0.3350  se= 0.1104  t= 3.034  p=0.0044 ***
+  L_tax_workpop              0.0674  se= 0.0127  t= 5.303  p=0.0000 ***
+  delta_oadr_5               0.0074  se= 0.0022  t= 3.329  p=0.0020 ***
+  L_unem                    -0.0275  se= 0.0107  t=-2.565  p=0.0145 **
+  L_ln_debt_gdp              0.4319  se= 0.1827  t= 2.364  p=0.0234 **
+  BG(1)=0.4373  BP=0.7076  RESET=0.0156  JB=0.8365  maxVIF=17.2
+
+=== Section 7 horizon: delta_oadr_5 (trend) ===
+  N=43  Adj.R2=0.9485  AIC=-63.15
+  (Intercept)                0.5700  se= 0.1469  t= 3.881  p=0.0004 ***
+  L_log_mig_rate             0.5345  se= 0.0872  t= 6.128  p=0.0000 ***
+  trend                      0.0143  se= 0.0030  t= 4.766  p=0.0000 ***
+  delta_oadr_5               0.0085  se= 0.0024  t= 3.610  p=0.0009 ***
+  L_unem                    -0.0265  se= 0.0099  t=-2.667  p=0.0113 **
+  L_ln_debt_gdp              0.2505  se= 0.2000  t= 1.253  p=0.2181 
+  BG(1)=0.7558  BP=0.7968  RESET=0.0058  JB=0.8491  maxVIF=8.7
+
+=== Section 7 horizon: delta_oadr_7 (fiscal) ===
+  N=43  Adj.R2=0.9525  AIC=-66.64
+  (Intercept)                0.0677  se= 0.1609  t= 0.421  p=0.6762 
+  L_log_mig_rate             0.4005  se= 0.0981  t= 4.082  p=0.0002 ***
+  L_tax_workpop              0.0603  se= 0.0119  t= 5.069  p=0.0000 ***
+  delta_oadr_7               0.0069  se= 0.0020  t= 3.394  p=0.0017 ***
+  L_unem                    -0.0220  se= 0.0098  t=-2.256  p=0.0301 **
+  L_ln_debt_gdp              0.5059  se= 0.1795  t= 2.819  p=0.0077 ***
+  BG(1)=0.8584  BP=0.4056  RESET=0.1004  JB=0.9327  maxVIF=14.4
+
+=== Section 7 horizon: delta_oadr_7 (trend) ===
+  N=43  Adj.R2=0.9496  AIC=-64.11
+  (Intercept)                0.4670  se= 0.1285  t= 3.634  p=0.0008 ***
+  L_log_mig_rate             0.6130  se= 0.0639  t= 9.586  p=0.0000 ***
+  trend                      0.0115  se= 0.0022  t= 5.179  p=0.0000 ***
+  delta_oadr_7               0.0070  se= 0.0020  t= 3.565  p=0.0010 ***
+  L_unem                    -0.0203  se= 0.0088  t=-2.301  p=0.0271 **
+  L_ln_debt_gdp              0.3352  se= 0.1916  t= 1.750  p=0.0885 *
+  BG(1)=0.7974  BP=0.3424  RESET=0.0577  JB=0.9383  maxVIF=6.9
+
+=== Section 7 DR placebo: delta_dr_1 (fiscal) ===
+  N=43  Adj.R2=0.9352  AIC=-53.28
+  (Intercept)                0.1292  se= 0.2005  t= 0.644  p=0.5233 
+  L_log_mig_rate             0.5949  se= 0.1173  t= 5.070  p=0.0000 ***
+  L_tax_workpop              0.0392  se= 0.0129  t= 3.043  p=0.0043 ***
+  delta_dr_1                -0.0014  se= 0.0049  t=-0.283  p=0.7784 
+  L_ln_debt_gdp              0.2039  se= 0.1650  t= 1.236  p=0.2243 
+  L_unem                    -0.0219  se= 0.0113  t=-1.945  p=0.0594 *
+  BG(1)=0.3161  BP=0.5967  RESET=0.1050  JB=0.5884  maxVIF=12.8
+
+=== Section 7 DR placebo: delta_dr_1 (trend) ===
+  N=43  Adj.R2=0.9326  AIC=-51.58
+  (Intercept)                0.3665  se= 0.1874  t= 1.956  p=0.0581 *
+  L_log_mig_rate             0.7506  se= 0.0888  t= 8.453  p=0.0000 ***
+  trend                      0.0070  se= 0.0032  t= 2.162  p=0.0371 **
+  delta_dr_1                -0.0020  se= 0.0049  t=-0.408  p=0.6856 
+  L_ln_debt_gdp              0.0877  se= 0.1843  t= 0.476  p=0.6369 
+  L_unem                    -0.0198  se= 0.0126  t=-1.565  p=0.1262 
+  BG(1)=0.6816  BP=0.6608  RESET=0.0395  JB=0.3897  maxVIF=6.4
+
+=== Section 7 DR placebo: delta_dr_3 (fiscal) ===
+  N=43  Adj.R2=0.9354  AIC=-53.41
+  (Intercept)                0.2178  se= 0.2095  t= 1.039  p=0.3054 
+  L_log_mig_rate             0.5680  se= 0.1233  t= 4.605  p=0.0000 ***
+  L_tax_workpop              0.0391  se= 0.0124  t= 3.160  p=0.0031 ***
+  delta_dr_3                 0.0009  se= 0.0023  t= 0.397  p=0.6936 
+  L_ln_debt_gdp              0.2583  se= 0.1627  t= 1.588  p=0.1208 
+  L_unem                    -0.0269  se= 0.0119  t=-2.265  p=0.0295 **
+  BG(1)=0.2159  BP=0.6732  RESET=0.0104  JB=0.6322  maxVIF=13.5
+
+=== Section 7 DR placebo: delta_dr_3 (trend) ===
+  N=43  Adj.R2=0.9325  AIC=-51.51
+  (Intercept)                0.4459  se= 0.2090  t= 2.134  p=0.0396 **
+  L_log_mig_rate             0.7284  se= 0.0916  t= 7.950  p=0.0000 ***
+  trend                      0.0068  se= 0.0031  t= 2.176  p=0.0360 **
+  delta_dr_3                 0.0006  se= 0.0023  t= 0.267  p=0.7908 
+  L_ln_debt_gdp              0.1397  se= 0.1870  t= 0.747  p=0.4597 
+  L_unem                    -0.0243  se= 0.0137  t=-1.770  p=0.0850 *
+  BG(1)=0.5519  BP=0.7210  RESET=0.0034  JB=0.4411  maxVIF=6.8
+
+=== Section 7 DR placebo: delta_dr_5 (fiscal) ===
+  N=43  Adj.R2=0.9374  AIC=-54.74
+  (Intercept)                0.3320  se= 0.2231  t= 1.488  p=0.1452 
+  L_log_mig_rate             0.5454  se= 0.1074  t= 5.079  p=0.0000 ***
+  L_tax_workpop              0.0376  se= 0.0118  t= 3.173  p=0.0030 ***
+  delta_dr_5                 0.0017  se= 0.0016  t= 1.080  p=0.2871 
+  L_ln_debt_gdp              0.3417  se= 0.1683  t= 2.030  p=0.0496 **
+  L_unem                    -0.0335  se= 0.0127  t=-2.641  p=0.0120 **
+  BG(1)=0.1663  BP=0.6988  RESET=0.0025  JB=0.6469  maxVIF=13.1
+
+=== Section 7 DR placebo: delta_dr_5 (trend) ===
+  N=43  Adj.R2=0.9343  AIC=-52.70
+  (Intercept)                0.5565  se= 0.2128  t= 2.615  p=0.0128 **
+  L_log_mig_rate             0.7005  se= 0.0838  t= 8.356  p=0.0000 ***
+  trend                      0.0064  se= 0.0028  t= 2.265  p=0.0294 **
+  delta_dr_5                 0.0016  se= 0.0016  t= 0.971  p=0.3379 
+  L_ln_debt_gdp              0.2327  se= 0.1877  t= 1.240  p=0.2230 
+  L_unem                    -0.0314  se= 0.0143  t=-2.189  p=0.0349 **
+  BG(1)=0.4569  BP=0.6987  RESET=0.0007  JB=0.5113  maxVIF=6.7
+
+=== Section 7 DR placebo: level_dr_10 (fiscal) ===
+  N=43  Adj.R2=0.9358  AIC=-53.71
+  (Intercept)                0.8299  se= 0.8441  t= 0.983  p=0.3319 
+  L_log_mig_rate             0.6233  se= 0.1373  t= 4.538  p=0.0001 ***
+  L_tax_workpop              0.0324  se= 0.0170  t= 1.904  p=0.0647 *
+  level_dr_10               -0.0011  se= 0.0013  t=-0.790  p=0.4347 
+  L_ln_debt_gdp              0.1537  se= 0.2204  t= 0.697  p=0.4900 
+  L_unem                    -0.0181  se= 0.0144  t=-1.258  p=0.2161 
+  BG(1)=0.5267  BP=0.7979  RESET=0.1033  JB=0.5529  maxVIF=14.2
+
+=== Section 7 DR placebo: level_dr_10 (trend) ===
+  N=43  Adj.R2=0.9331  AIC=-51.88
+  (Intercept)                1.0779  se= 0.9137  t= 1.180  p=0.2456 
+  L_log_mig_rate             0.7630  se= 0.1103  t= 6.918  p=0.0000 ***
+  trend                      0.0051  se= 0.0048  t= 1.051  p=0.2999 
+  level_dr_10               -0.0011  se= 0.0016  t=-0.719  p=0.4769 
+  L_ln_debt_gdp              0.0654  se= 0.2167  t= 0.302  p=0.7646 
+  L_unem                    -0.0162  se= 0.0165  t=-0.986  p=0.3305 
+  BG(1)=0.9289  BP=0.7879  RESET=0.0447  JB=0.4013  maxVIF=7.8
+
+-/                                                                                                            /                                                                                                            -                                                                                                            delta_dr_10_pub: sheet matches dr_corrected.csv
+Publication-dated columns merged: 43 years, all numeric
+=== Section 7 pub-dated: trend spec ===
+  N=43  Adj.R2=0.9494  AIC=-63.88
+  (Intercept)                0.4443  se= 0.1307  t= 3.399  p=0.0016 ***
+  L_log_mig_rate             0.6759  se= 0.0730  t= 9.259  p=0.0000 ***
+  trend                      0.0079  se= 0.0024  t= 3.257  p=0.0024 ***
+  delta_oadr_10_pub          0.0076  se= 0.0017  t= 4.411  p=0.0001 ***
+  L_ln_debt_gdp              0.3252  se= 0.2059  t= 1.579  p=0.1228 
+  L_unem                    -0.0213  se= 0.0090  t=-2.369  p=0.0232 **
+  BG(1)=0.5214  BP=0.2715  RESET=0.0884  JB=0.7193  maxVIF=6.1
+
+=== Section 7 pub-dated: fiscal spec ===
+  N=43  Adj.R2=0.9578  AIC=-71.75
+  (Intercept)                0.1361  se= 0.1451  t= 0.938  p=0.3545 
+  L_log_mig_rate             0.4256  se= 0.0937  t= 4.544  p=0.0001 ***
+  L_tax_workpop              0.0531  se= 0.0115  t= 4.604  p=0.0000 ***
+  delta_oadr_10_pub          0.0090  se= 0.0015  t= 5.850  p=0.0000 ***
+  L_ln_debt_gdp              0.4985  se= 0.2023  t= 2.463  p=0.0185 **
+  L_unem                    -0.0239  se= 0.0090  t=-2.649  p=0.0118 **
+  BG(1)=0.5497  BP=0.4738  RESET=0.4591  JB=0.7673  maxVIF=13.5
+
+=== Section 7 pub-dated: zero-migration (trend) ===
+  N=43  Adj.R2=0.9469  AIC=-61.81
+  (Intercept)                0.4981  se= 0.1350  t= 3.689  p=0.0007 ***
+  L_log_mig_rate             0.6433  se= 0.0767  t= 8.385  p=0.0000 ***
+  trend                      0.0055  se= 0.0025  t= 2.180  p=0.0357 **
+  delta_zm_10_pub            0.0069  se= 0.0017  t= 4.158  p=0.0002 ***
+  L_ln_debt_gdp              0.2648  se= 0.2082  t= 1.272  p=0.2114 
+  L_unem                    -0.0208  se= 0.0094  t=-2.203  p=0.0339 **
+  BG(1)=0.6060  BP=0.4783  RESET=0.0820  JB=0.7225  maxVIF=6.6
+
+=== Section 7 pub-dated: zero-migration (fiscal) ===
+  N=43  Adj.R2=0.9530  AIC=-67.05
+  (Intercept)                0.2857  se= 0.1465  t= 1.950  p=0.0587 *
+  L_log_mig_rate             0.4431  se= 0.1017  t= 4.356  p=0.0001 ***
+  L_tax_workpop              0.0391  se= 0.0117  t= 3.353  p=0.0019 ***
+  delta_zm_10_pub            0.0076  se= 0.0016  t= 4.764  p=0.0000 ***
+  L_ln_debt_gdp              0.3721  se= 0.2034  t= 1.830  p=0.0753 *
+  L_unem                    -0.0230  se= 0.0096  t=-2.398  p=0.0217 **
+  BG(1)=0.7848  BP=0.7442  RESET=0.2817  JB=0.7197  maxVIF=13.5
+
+=== Section 7 pub-dated: total DR placebo ===
+  N=43  Adj.R2=0.9323  AIC=-51.42
+  (Intercept)                0.4135  se= 0.2987  t= 1.384  p=0.1745 
+  L_log_mig_rate             0.7383  se= 0.1023  t= 7.216  p=0.0000 ***
+  trend                      0.0068  se= 0.0031  t= 2.210  p=0.0334 **
+  delta_dr_10_pub            0.0000  se= 0.0016  t= 0.026  p=0.9797 
+  L_ln_debt_gdp              0.1197  se= 0.2639  t= 0.454  p=0.6528 
+  L_unem                    -0.0225  se= 0.0220  t=-1.024  p=0.3127 
+  BG(1)=0.5954  BP=0.7714  RESET=0.0323  JB=0.4134  maxVIF=7.7
+
+=== Section 7 pub-dated: EU placebo (trend) ===
+  N=43  Adj.R2=0.9482  AIC=-7.68
+  (Intercept)               -0.3339  se= 0.1768  t=-1.888  p=0.0668 *
+  L_eu_log_mig_rate          0.6722  se= 0.1608  t= 4.181  p=0.0002 ***
+  trend                      0.0208  se= 0.0119  t= 1.749  p=0.0886 *
+  delta_oadr_10_pub          0.0035  se= 0.0044  t= 0.780  p=0.4402 
+  L_ln_debt_gdp              0.5569  se= 0.3534  t= 1.576  p=0.1236 
+  L_unem                     0.0053  se= 0.0121  t= 0.439  p=0.6632 
+  BG(1)=0.5543  BP=0.7057  RESET=0.1054  JB=0.4971  maxVIF=18.7
+
+=== Section 7 pub-dated: total DR placebo (fiscal) ===
+  N=43  Adj.R2=0.9351  AIC=-53.21
+  (Intercept)                0.1893  se= 0.3195  t= 0.593  p=0.5571 
+  L_log_mig_rate             0.5811  se= 0.1235  t= 4.706  p=0.0000 ***
+  L_tax_workpop              0.0387  se= 0.0129  t= 3.005  p=0.0047 ***
+  delta_dr_10_pub            0.0002  se= 0.0016  t= 0.116  p=0.9083 
+  L_ln_debt_gdp              0.2447  se= 0.2478  t= 0.987  p=0.3299 
+  L_unem                    -0.0256  se= 0.0211  t=-1.209  p=0.2342 
+  BG(1)=0.2520  BP=0.6619  RESET=0.0892  JB=0.5865  maxVIF=13.7
+
+=== Section 7 pub-dated: EU placebo (fiscal) ===
+  N=43  Adj.R2=0.9464  AIC=-6.23
+  (Intercept)               -0.8436  se= 0.4121  t=-2.047  p=0.0478 **
+  L_eu_log_mig_rate          0.7554  se= 0.1158  t= 6.520  p=0.0000 ***
+  L_tax_workpop              0.0520  se= 0.0276  t= 1.886  p=0.0672 *
+  delta_oadr_10_pub          0.0048  se= 0.0044  t= 1.096  p=0.2803 
+  L_ln_debt_gdp              0.6733  se= 0.4049  t= 1.663  p=0.1048 
+  L_unem                     0.0183  se= 0.0193  t= 0.947  p=0.3500 
+  BG(1)=0.7624  BP=0.5792  RESET=0.3575  JB=0.4288  maxVIF=14.3
+
+
+--- base-dated vs publication-dated (HAC), Section 7 ---
+                       base-dated            publication-dated
+  OADR, trend           0.007279 (p=0.0000)   0.007579 (p=0.0001)
+  OADR, fiscal          0.008241 (p=0.0000)   0.008991 (p=0.0000)
+  zero-mig, trend       0.007000 (p=0.0000)   0.006925 (p=0.0002)
+  zero-mig, fiscal      0.007500 (p=0.0000)   0.007587 (p=0.0000)
+  total DR, trend       0.001973 (p=0.1555)   0.000041 (p=0.9797)
+  total DR, fiscal      0.001971 (p=0.1552)   0.000188 (p=0.9083)
+  EU placebo, fiscal    0.002955 (p=0.4116)   0.004849 (p=0.2803)
+mig_rate                     ADF lvl >0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+log_mig_rate                 ADF lvl >0.10  diff <0.01  | KPSS lvl   0.10 diff  >0.10 | I(1)
+alt_log_mig_rate             ADF lvl >0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+eu_log_mig_rate              ADF lvl >0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+oadr_0                       ADF lvl >0.10  diff >0.10  | KPSS lvl  >0.10 diff  >0.10 | I(2)? investigate
+delta_oadr_10                ADF lvl >0.10  diff <0.05  | KPSS lvl   0.09 diff  >0.10 | I(1)
+level_oadr_10                ADF lvl >0.10  diff <0.01  | KPSS lvl   0.04 diff  >0.10 | I(1)
+tax_workpop                  ADF lvl >0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+debt_gdp                     ADF lvl >0.10  diff <0.05  | KPSS lvl  <0.01 diff   0.08 | I(1)
+ln_debt_gdp                  ADF lvl <0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+unem                         ADF lvl <0.05  diff <0.05  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+inactivity                   ADF lvl >0.10  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(1)
+ln_rgdp_pc                   ADF lvl <0.05  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+ln_gdp                       ADF lvl <0.05  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+ln_workprod                  ADF lvl <0.01  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+gilt_10yr                    ADF lvl <0.01  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+growth_fc_yr0                ADF lvl <0.05  diff <0.01  | KPSS lvl  >0.10 diff  >0.10 | I(0)
+OADR, current                  level  -2.398 (>0.10) | diff  -0.844 (>0.10)
+Debt/GDP (level, not used)     level  -1.755 (>0.10) | diff  -1.776 (<0.10)
+Projected 10-yr OADR change    level  -3.622 (<0.05) | diff  -1.789 (<0.10)
+
+--- ADF-GLS lag sensitivity (Online Appendix Table B1 note) ---
+lag.max = 1
+  OADR, current                level  -1.873 (>0.10) | diff  -2.453 (<0.05)
+  Debt/GDP (level, not used)   level  -1.874 (>0.10) | diff  -2.569 (<0.05)
+  Projected 10-yr OADR change  level  -1.725 (>0.10) | diff  -3.421 (<0.01)
+lag.max = 2
+  OADR, current                level  -1.707 (>0.10) | diff  -1.975 (<0.05)
+  Debt/GDP (level, not used)   level  -1.541 (>0.10) | diff  -2.159 (<0.05)
+  Projected 10-yr OADR change  level  -2.072 (>0.10) | diff  -2.478 (<0.05)
+lag.max = 4
+  OADR, current                level  -2.398 (>0.10) | diff  -0.844 (>0.10)
+  Debt/GDP (level, not used)   level  -1.755 (>0.10) | diff  -1.776 (<0.10)
+  Projected 10-yr OADR change  level  -3.622 (<0.05) | diff  -1.789 (<0.10)
+--- Online Appendix Table B2 (fiscal specification) ---
+               Coefficient OLS.se HAC.se  NW.se
+(Intercept)         0.0774 0.1361 0.1545 0.1550
+L_log_mig_rate      0.4650 0.1180 0.0788 0.0843
+L_tax_workpop       0.0518 0.0129 0.0105 0.0110
+delta_oadr_10       0.0082 0.0020 0.0015 0.0014
+L_ln_debt_gdp       0.5351 0.2010 0.1941 0.1937
+L_unem             -0.0199 0.0097 0.0088 0.0090
+-/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            G3;  note: wuk89cc_tcm77-383486.xls published OADR departs from 1000*PA/WA (max 701.6)
+g-/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            -/                                                                                                            /                                                                                                            -                                                                                                            G3;  note: ukpppsummary18.xls published OADR departs from 1000*PA/WA (max 6.3)
+gparsed 23 vintages: 1975-2018
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+
+CHECK 1  published 10-yr delta, R rebuild vs delta_oadr_10 in sheet : max |diff| = 0.262979
+CHECK 2  zero-migration 10-yr delta, R rebuild vs delta_zm_10 in sheet: max |diff| = 0.000087
+         (1997 published = 6.14, expected 6.14; 1997 zero-mig = 11.57, expected 11.57)
+
+Both series reproduce within their expected tolerances:
+  published    max |diff| = 0.262979  (tolerance 0.30, transcription)
+  zero-migration max |diff| = 0.000087  (tolerance 0.01, arithmetic)
+The zero-migration regressor is verified in R.
+
+CHECK 3  re-estimated with the R-built series:
+      Estimate     Std. Error        t value       Pr(>|t|) 
+0.007499971987 0.001347128181 5.567378140784 0.000002420333 
+
+CHECK 4  news test: projection split into inherited and revised parts
+  revision years: 22 of 43; revision mean -1.13, sd 5.25, range [-15.62, 9.78] points
+  full delta vs sheet delta_oadr_10: max |diff| = 0.263 (transcription)
+  fiscal  inherited 0.0092 (p 0.0000012)   revision 0.0029 (p 0.53)   equal-coef F(1,36) = 1.64, p = 0.21
+  trend   inherited 0.0078 (p 0.000073)   revision 0.0040 (p 0.41)   equal-coef F(1,36) = 0.61, p = 0.44
+  Reading: a revision coefficient of the same sign and size as the inherited one
+  means inflows respond to what the projections newly report, not only to their level.
+AVP slopes: non-EU 0.0073 (Table 2 col (2) coefficient 0.0075) | EU 0.0017 (Table 4 col (2), 0.0022)
+
+[replication_1977.R completed in 130 s]
+
+
+####################################################################################################
+##  appendix_exhibits_1977.R
+####################################################################################################
+
+data: /Users/samyhamdane/quiet-instruments/diss_replication/Dissertation_Dataset_Final.xlsx 
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+sample: 1977 - 2019  N = 43 
+
+===== Baseline specification =====
+
+                  no proj, no tax    +OADR, no tax  no proj (trend)    +OADR (trend)   +OADR (fiscal)+OADR (tax+trend)
+----------------------------------------------------------------------------------------------------------------------
+delta_oadr_10                  --        0.0064***               --        0.0073***        0.0082***        0.0085***
+                                           (0.002)                           (<.001)          (<.001)          (<.001)
+trend                          --               --         0.0068**        0.0082***               --          -0.0051
+                                                            (0.038)          (<.001)                           (0.229)
+L_tax_workpop                  --               --               --               --        0.0518***        0.0752***
+                                                                                              (<.001)          (<.001)
+L_ln_debt_gdp              0.1780         0.4108**           0.1143          0.3662*        0.5351***        0.6191***
+                          (0.353)          (0.036)          (0.562)          (0.072)          (0.009)          (0.010)
+L_unem                    -0.0179          -0.0137         -0.0221*        -0.0181**        -0.0199**        -0.0200**
+                          (0.245)          (0.244)          (0.091)          (0.042)          (0.029)          (0.027)
+----------------------------------------------------------------------------------------------------------------------
+N                              43               43               43               43               43               43
+adj. R2                    0.9275           0.9387           0.9341           0.9494           0.9562           0.9559
+AIC                        -50.18           -56.52           -53.42           -63.92           -70.10           -69.01
+RESET p                     0.023            0.025            0.048            0.078            0.409            0.580
+BG(1) p                     0.997            0.337            0.602            0.374            0.354            0.247
+max VIF                       2.2              2.2              5.9              6.0             13.0             54.5
+F vs no proj                   --             8.14               --            12.48            17.82             9.24
+  p                                        (0.007)                           (0.001)          (<.001)          (<.001)
+  dAIC                         --            -6.34               --           -10.50           -14.90           -13.81
+----------------------------------------------------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+
+===== Tax burden per working-age person =====
+
+                                 NAT          Lab. tax      Lab. tax+VAT
+------------------------------------------------------------------------
+delta_oadr_10              0.0082***         0.0098***         0.0083***
+                             (<.001)           (<.001)           (<.001)
+L_tax_workpop              0.0518***                --                --
+                             (<.001)                                    
+L_lab_tax_workpop                 --         0.1280***                --
+                                               (<.001)                  
+L_hh_tax_workpop                  --                --         0.0664***
+                                                                 (<.001)
+L_ln_debt_gdp              0.5351***            0.3157           0.3836*
+                             (0.009)           (0.186)           (0.089)
+L_unem                     -0.0199**           -0.0071           -0.0149
+                             (0.029)           (0.505)           (0.115)
+------------------------------------------------------------------------
+N                                 43                43                43
+adj. R2                       0.9562            0.9543            0.9542
+AIC                           -70.10            -68.32            -68.16
+RESET p                        0.409             0.592             0.355
+BG(1) p                        0.354             0.284             0.319
+max VIF                         13.0              14.4              11.2
+F vs no proj                   17.82             20.88             17.00
+  p                          (<.001)           (<.001)           (<.001)
+  dAIC                        -14.90            -17.24            -14.26
+------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+NAT = national accounts taxes; WAP = working-age population; Lab. tax = income
+tax and National Insurance contributions. All columns: OBR Historical Public
+Finances Database, 2024-25 prices (HMT March 2026 deflator), lagged one year.
+GBP thousand per working-age person. Lab. tax+VAT = income tax, National
+Insurance contributions and VAT, the taxes borne directly by households.
+Column (1) is the Table 2 specification.
+
+===== Tax burden per resident =====
+
+                                 NAT          Lab. tax      Lab. tax+VAT
+------------------------------------------------------------------------
+delta_oadr_10              0.0081***         0.0096***         0.0081***
+                             (<.001)           (<.001)           (<.001)
+L_tax_totpop               0.0783***                --                --
+                             (<.001)                                    
+L_lab_tax_totpop                  --         0.2061***                --
+                                               (<.001)                  
+L_hh_tax_totpop                   --                --         0.1026***
+                                                                 (<.001)
+L_ln_debt_gdp              0.5490***            0.3472           0.4045*
+                             (0.006)           (0.135)           (0.067)
+L_unem                     -0.0215**           -0.0103          -0.0166*
+                             (0.020)           (0.317)           (0.089)
+------------------------------------------------------------------------
+N                                 43                43                43
+adj. R2                       0.9562            0.9559            0.9544
+AIC                           -70.09            -69.78            -68.40
+RESET p                        0.341             0.613             0.318
+BG(1) p                        0.382             0.290             0.345
+max VIF                         12.7              14.7              11.2
+F vs no proj                   17.22             21.59             16.73
+  p                          (<.001)           (<.001)           (<.001)
+  dAIC                        -14.43            -17.76            -14.04
+------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+NAT = national accounts taxes; WAP = working-age population; Lab. tax = income
+tax and National Insurance contributions. All columns: OBR Historical Public
+Finances Database, 2024-25 prices (HMT March 2026 deflator), lagged one year.
+GBP thousand per resident (total population).
+
+===== Tax burden per pension-age person =====
+
+                                 NAT          Lab. tax      Lab. tax+VAT
+------------------------------------------------------------------------
+delta_oadr_10              0.0069***         0.0082***         0.0072***
+                             (<.001)           (<.001)           (<.001)
+L_tax_penpop               0.0154***                --                --
+                             (<.001)                                    
+L_lab_tax_penpop                  --         0.0374***                --
+                                               (<.001)                  
+L_hh_tax_penpop                   --                --         0.0197***
+                                                                 (<.001)
+L_ln_debt_gdp              0.5580***            0.3468           0.4030*
+                             (0.008)           (0.156)           (0.080)
+L_unem                      -0.0173*           -0.0041           -0.0128
+                             (0.062)           (0.698)           (0.173)
+------------------------------------------------------------------------
+N                                 43                43                43
+adj. R2                       0.9552            0.9530            0.9534
+AIC                           -69.16            -67.05            -67.42
+RESET p                        0.292             0.453             0.273
+BG(1) p                        0.341             0.307             0.314
+max VIF                         11.7              12.9              10.1
+F vs no proj                   12.96             16.44             13.24
+  p                          (<.001)           (<.001)           (<.001)
+  dAIC                        -10.91            -13.81            -11.15
+------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+NAT = national accounts taxes; WAP = working-age population; Lab. tax = income
+tax and National Insurance contributions. All columns: OBR Historical Public
+Finances Database, 2024-25 prices (HMT March 2026 deflator), lagged one year.
+GBP thousand per person of pension age: tax per working-age person divided by the
+current OADR (per 1,000), lagged. The ratio embeds the current dependency level in
+the fiscal term, so the measure mixes the demographic and fiscal channels.
+
+===== Tax burden: ratio measures =====
+
+                           NAT/GDP  Lab. tax+VAT/GDP    Lab. tax/comp.
+----------------------------------------------------------------------
+delta_oadr_10            0.0065***         0.0068***         0.0064***
+                           (0.002)           (<.001)           (0.001)
+L_tax_gdp                   0.0061                --                --
+                           (0.697)                                    
+L_hh_tax_gdp                    --            0.0197                --
+                                             (0.433)                  
+L_lab_tax_comp                  --                --          0.0295**
+                                                               (0.017)
+L_ln_debt_gdp               0.4536           0.4088*           0.3533*
+                           (0.110)           (0.059)           (0.097)
+L_unem                     -0.0151           -0.0136           -0.0210
+                           (0.289)           (0.256)           (0.112)
+----------------------------------------------------------------------
+N                               43                43                43
+adj. R2                     0.9373            0.9385            0.9428
+AIC                         -54.70            -55.53            -58.61
+RESET p                      0.026             0.045             0.124
+BG(1) p                      0.319             0.277             0.208
+max VIF                        3.2               3.5               3.2
+F vs no proj                  8.10              8.86              8.63
+  p                        (0.007)           (0.005)           (0.006)
+  dAIC                       -6.51             -7.23             -7.01
+----------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+NAT = national accounts taxes; WAP = working-age population; Lab. tax = income
+tax and National Insurance contributions. All columns: OBR Historical Public
+Finances Database, 2024-25 prices (HMT March 2026 deflator), lagged one year.
+Shares in per cent. Lab. tax/comp. is the average effective tax rate on
+labour (Mendoza, Razin and Tesar, 1994): income tax + NICs over compensation
+of employees (ONS series DTWM), the one column with an ONS denominator.
+
+===== Tax burden per income-tax payer, 1992-2019 =====
+
+                      NAT/WAP, 1992-        NAT/taxpayer   Lab. tax/taxpayer
+----------------------------------------------------------------------------
+delta_oadr_10              0.0134***            0.0073**           0.0085***
+                             (<.001)             (0.039)             (0.002)
+L_tax_workpop              0.0777***                  --                  --
+                             (0.001)                                        
+L_tax_payer                       --             0.0288*                  --
+                                                 (0.092)                    
+L_lab_tax_payer                   --                  --            0.0885**
+                                                                     (0.025)
+L_ln_debt_gdp              1.0042***           0.8467***           0.7639***
+                             (<.001)             (<.001)             (<.001)
+L_unem                       -0.0044             -0.0339             -0.0288
+                             (0.861)             (0.243)             (0.270)
+----------------------------------------------------------------------------
+N                                 28                  28                  28
+adj. R2                       0.9486              0.9350              0.9383
+AIC                           -47.94              -41.37              -42.82
+RESET p                        0.288               0.130               0.132
+BG(1) p                        0.050               0.081               0.083
+max VIF                         19.1                10.7                11.2
+F vs no proj                    9.78                3.47                4.66
+  p                          (0.005)             (0.076)             (0.042)
+  dAIC                         -8.30               -2.11               -3.38
+----------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+Taxpayer counts: HMRC Table 2.1 (Survey of Personal Incomes), thousands, from
+1990-91; 2008-09 interpolated. GBP thousand per income-tax payer, 2024-25 prices,
+lagged. Column (1) re-estimates the Table 2 measure on the same sub-sample.
+
+===== Tax burden per income-tax payer, 1980-2019 =====
+
+                            NAT/WAP+step        NAT/taxpayer   Lab. tax/taxpayer
+--------------------------------------------------------------------------------
+delta_oadr_10                  0.0097***           0.0077***           0.0082***
+                                 (<.001)             (<.001)             (<.001)
+L_tax_workpop                  0.0641***                  --                  --
+                                 (<.001)                                        
+L_tax_payer_all                       --           0.0363***                  --
+                                                     (<.001)                    
+L_lab_tax_payer_all                   --                  --           0.0999***
+                                                                         (<.001)
+indep                          -0.0979**           -0.0958**           -0.0828**
+                                 (0.024)             (0.034)             (0.044)
+L_ln_debt_gdp                  0.7860***           0.7828***           0.6216***
+                                 (<.001)             (<.001)             (<.001)
+L_unem                         -0.0237**          -0.0271***           -0.0262**
+                                 (0.014)             (0.006)             (0.010)
+--------------------------------------------------------------------------------
+N                                     40                  40                  40
+adj. R2                           0.9641              0.9599              0.9608
+AIC                               -72.44              -68.04              -68.96
+RESET p                            0.259               0.162               0.134
+BG(1) p                            0.308               0.173               0.239
+max VIF                             13.8                 7.8                10.8
+F vs no proj                       25.03               15.95               18.21
+  p                              (<.001)             (<.001)             (<.001)
+  dAIC                            -20.58              -13.78              -15.58
+--------------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+Counts: HMRC Table 2.1a (Inland Revenue Statistics 1994) for 1978-79 to 1989-90
+and Table 2.1 from 1990-91, individuals paying Income Tax; 2008-09 interpolated.
+'indep' = 1 from 1991: wives' investment income counted separately under
+independent taxation. Column (1) adds the same indicator to the Table 2 measure;
+that it is significant there too, with no taxpayer count in the model, shows it is
+absorbing a 1991 level shift in inflows rather than the change of basis.
+
+===== Old-age vs. total dependency projection =====
+
+                         +OADR             +DR
+----------------------------------------------
+delta_oadr_10        0.0082***              --
+                       (<.001)                
+delta_dr_10                 --          0.0020
+                                       (0.155)
+L_tax_workpop        0.0518***       0.0369***
+                       (<.001)         (0.005)
+L_ln_debt_gdp        0.5351***        0.4658**
+                       (0.009)         (0.040)
+L_unem               -0.0199**       -0.0441**
+                       (0.029)         (0.019)
+----------------------------------------------
+N                           43              43
+adj. R2                 0.9562          0.9381
+AIC                     -70.10          -55.28
+RESET p                  0.409           0.044
+BG(1) p                  0.354           0.082
+max VIF                   13.0            14.0
+F vs no proj             17.82            1.83
+  p                    (<.001)         (0.184)
+  dAIC                  -14.90           -0.08
+----------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+
+===== Projected level vs. projected change =====
+
+                         delta           level delta + current
+--------------------------------------------------------------
+delta_oadr_10        0.0082***              --       0.0083***
+                       (<.001)                         (<.001)
+level_oadr_10               --       0.0085***              --
+                                       (<.001)                
+oadr_0                      --              --          0.0002
+                                                       (0.952)
+L_tax_workpop        0.0518***       0.0496***       0.0519***
+                       (<.001)         (0.003)         (<.001)
+L_ln_debt_gdp        0.5351***        0.3954**        0.5343**
+                       (0.009)         (0.020)         (0.011)
+L_unem               -0.0199**       -0.0304**        -0.0201*
+                       (0.029)         (0.011)         (0.055)
+--------------------------------------------------------------
+N                           43              43              43
+adj. R2                 0.9562          0.9493          0.9550
+AIC                     -70.10          -63.86          -68.10
+RESET p                  0.409           0.297           0.408
+BG(1) p                  0.354           0.838           0.346
+max VIF                   13.0            15.5            16.5
+restr. F(1,34)              --              --            8.28
+  p                                                    (0.007)
+F vs no proj             17.82           10.41           11.19
+  p                    (<.001)         (0.003)         (0.002)
+  dAIC                  -14.90           -8.66           -9.63
+--------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+Column (2) restricts the current ratio and the projected change to a common
+coefficient; the F row tests that restriction in column (3).
+
+===== Scaled rate vs. gross non-EU inflows =====
+
+                   scaled rate   gross inflows
+----------------------------------------------
+delta_oadr_10        0.0082***       0.0082***
+                       (<.001)         (<.001)
+L_tax_workpop        0.0518***       0.0693***
+                       (<.001)         (<.001)
+L_ln_debt_gdp        0.5351***       0.5567***
+                       (0.009)         (0.007)
+L_unem               -0.0199**       -0.0199**
+                       (0.029)         (0.032)
+----------------------------------------------
+N                           43              43
+adj. R2                 0.9562          0.9658
+AIC                     -70.10          -71.37
+RESET p                  0.409           0.474
+BG(1) p                  0.354           0.323
+max VIF                   13.0            19.8
+F vs no proj             17.82           18.13
+  p                    (<.001)         (<.001)
+  dAIC                  -14.90          -15.15
+----------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+
+===== Controlled (non-EU) vs. uncontrolled (EU) margin =====
+
+                        non-EU              EU
+----------------------------------------------
+delta_oadr_10        0.0082***          0.0030
+                       (<.001)         (0.412)
+L_tax_workpop        0.0518***         0.0566*
+                       (<.001)         (0.061)
+L_ln_debt_gdp        0.5351***          0.6675
+                       (0.009)         (0.125)
+L_unem               -0.0199**          0.0179
+                       (0.029)         (0.344)
+----------------------------------------------
+N                           43              43
+adj. R2                 0.9562          0.9453
+AIC                     -70.10           -5.36
+RESET p                  0.409           0.252
+BG(1) p                  0.354           0.832
+max VIF                   13.0            14.9
+F vs no proj             17.82            0.46
+  p                    (<.001)         (0.504)
+  dAIC                  -14.90           +1.47
+----------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+
+===== Published vs. zero-net-migration projections =====
+
+                     published        zero-mig
+----------------------------------------------
+delta_oadr_10        0.0082***              --
+                       (<.001)                
+delta_zm_10                 --       0.0075***
+                                       (<.001)
+L_tax_workpop        0.0518***       0.0395***
+                       (<.001)         (<.001)
+L_ln_debt_gdp        0.5351***        0.4035**
+                       (0.009)         (0.040)
+L_unem               -0.0199**       -0.0187**
+                       (0.029)         (0.047)
+----------------------------------------------
+N                           43              43
+adj. R2                 0.9562          0.9560
+AIC                     -70.10          -69.90
+RESET p                  0.409           0.211
+BG(1) p                  0.354           0.694
+max VIF                   13.0            13.0
+F vs no proj             17.82           17.57
+  p                    (<.001)         (<.001)
+  dAIC                  -14.90          -14.71
+----------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+
+===== MPR policy-era indicators =====
+
+                    (1) non-EU       (2) total
+----------------------------------------------
+POL97                  0.1384*        0.2122**
+                       (0.054)         (0.017)
+POL02                   0.0461          0.1221
+                       (0.462)         (0.104)
+EXP04                   0.0818       0.3155***
+                       (0.376)         (<.001)
+delta_oadr_10        0.0080***          0.0028
+                       (0.001)         (0.311)
+----------------------------------------------
+N                           43              43
+adj. R2                 0.9527          0.9758
+AIC                     -63.08          -74.62
+RESET p                  0.394           0.141
+BG(1) p                  0.535           0.739
+max VIF                   34.4            56.1
+joint F(5,32)             1.09            5.50
+  p                    (0.383)         (<.001)
+F vs no proj              7.50            1.22
+  p                    (0.010)         (0.277)
+  dAIC                   -7.05           +0.39
+----------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10.
+ENL86 and ENL95 estimated in both columns but not displayed: EU accession
+indicators on a non-EU dependent variable are not separately interpretable.
+
+===== Model diagnostics =====
+
+                            trend spec     fiscal spec
+------------------------------------------------------
+Breusch-Godfrey(1)               0.374           0.354
+Breusch-Godfrey(2)               0.137           0.062
+Breusch-Pagan                    0.170           0.255
+Ramsey RESET                     0.078           0.409
+Jarque-Bera                      0.777           0.934
+ADF on residuals                 0.046           0.022
+max VIF                            6.0            13.0
+------------------------------------------------------
+dOADR10 p, HAC                   <.001           <.001
+dOADR10 p, NW(1)                 <.001           <.001
+------------------------------------------------------
+All entries are p-values except max VIF. The residual ADF uses standard
+Dickey-Fuller critical values and is a diagnostic only, NOT a
+cointegration test; the bounds test below is the formal instrument.
+
+===== Stationarity (ADF, level and first difference) =====
+
+series               ADF p (level)  ADF p (diff)    class
+---------------------------------------------------------
+log_mig_rate                 0.504         0.427     I(1)
+alt_log_mig_rate             0.493         0.434     I(1)
+tot_log_mig_rate             0.616         0.245     I(1)
+eu_log_mig_rate              0.152         0.056     I(1)
+delta_oadr_10                0.309         0.701     I(1)
+delta_dr_10                  0.354         0.560     I(1)
+level_oadr_10                0.761         0.059     I(1)
+delta_zm_10                  0.483         0.672     I(1)
+unem                         0.034         0.021     I(0)
+tax_workpop                  0.342         0.255     I(1)
+ln_debt_gdp                  0.211         0.032     I(1)
+---------------------------------------------------------
+tseries::adf.test, lag order k = trunc((n-1)^(1/3)) = 3, trend included
+in both regressions. The classification rests on the level test: at
+T = 42 the differenced test has very little power, so p(diff) is
+informational. Full 48-series table: stationarity_bounds_replication.R.
+
+===== PSS bounds tests against critical bounds =====
+
+F-bounds test:  F = 6.1643,  p = 0.00920   (k = 4, T = 42)
+     alpha   I(0) bound   I(1) bound          verdict
+-----------------------------------------------------
+      0.10         2.69         3.80        reject H0
+      0.05         3.23         4.51        reject H0
+      0.01         4.48         6.08        reject H0
+-----------------------------------------------------
+
+t-bounds test:  t = -4.0868,  p = 0.04753   (k = 4, T = 42)
+     alpha   I(0) bound   I(1) bound          verdict
+-----------------------------------------------------
+      0.10        -2.58        -3.65        reject H0
+      0.05        -2.92        -4.06        reject H0
+      0.01        -3.58        -4.84     inconclusive
+-----------------------------------------------------
+
+H0: no level relationship. Case 3: unrestricted intercept, no trend.
+'Inconclusive' is the region between the two bounds, where the test
+cannot decide without knowing the regressors' integration orders --
+which is why the stationarity exhibit classifies them.
+
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Golden Gate 27.0
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] urca_1.3-4      ARDL_0.2.5      tseries_0.10-63 car_3.1-5       carData_3.0-6   sandwich_3.1-3 
+[7] lmtest_0.9-40   zoo_1.9-0       readxl_1.5.0   
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.7-6     expm_1.0-0       jsonlite_2.0.0   dplyr_1.2.1      compiler_4.6.1   tidyselect_1.2.1
+ [7] msm_1.8.2        stringr_1.6.0    splines_4.6.1    lattice_0.23-1   R6_2.6.1         generics_0.1.4  
+[13] curl_7.1.0       Formula_1.2-6    tibble_3.3.1     pillar_1.11.1    rlang_1.3.0      quantmod_0.4.29 
+[19] stringi_1.8.9    quadprog_1.5-8   aod_1.3.3        cli_3.6.6        withr_3.0.3      magrittr_2.0.5  
+[25] xts_0.14.2       grid_4.6.1       mvtnorm_1.4-2    dynlm_0.3-6      lifecycle_1.0.5  nlme_3.1-170    
+[31] vctrs_0.7.3      glue_1.8.1       cellranger_1.1.0 survival_3.8-9   abind_1.4-8      stats4_4.6.1    
+[37] TTR_0.24.4       tools_4.6.1      pkgconfig_2.0.3 
+
+[appendix_exhibits_1977.R completed in 137 s]
+
+
+####################################################################################################
+##  robustness_both_specs_1977.R
+####################################################################################################
+
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+
+===== Baseline: 10-yr OADR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0073    <.001   0.949   -63.92   0.078     6.0  43
+fiscal        0.0082    <.001   0.956   -70.10   0.409    13.0  43
+
+===== DR placebo: 10-yr total-DR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0020    0.156   0.935   -53.41   0.015     7.9  43
+fiscal        0.0020    0.155   0.938   -55.28   0.044    14.0  43
+
+===== Projected LEVEL at 10 yrs =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0080    <.001   0.945   -60.42   0.067     7.9  43
+fiscal        0.0085    <.001   0.949   -63.86   0.297    15.5  43
+
+===== Horizon: 1-yr OADR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0078    0.401   0.933   -51.96   0.022    11.1  43
+fiscal        0.0064    0.465   0.936   -53.67   0.070    20.4  43
+
+===== Horizon: 3-yr OADR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0120    0.009   0.942   -58.39   0.002    13.3  43
+fiscal        0.0090    0.015   0.943   -58.63   0.006    23.2  43
+
+===== Horizon: 5-yr OADR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0085    <.001   0.948   -63.15   0.006     8.7  43
+fiscal        0.0074    0.002   0.949   -63.72   0.016    17.2  43
+
+===== Horizon: 7-yr OADR delta =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0070    0.001   0.950   -64.11   0.058     6.9  43
+fiscal        0.0069    0.002   0.953   -66.64   0.100    14.4  43
+
+===== Zero-net-migration projection =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0070    <.001   0.950   -64.70   0.058     6.3  43
+fiscal        0.0075    <.001   0.956   -69.90   0.211    13.0  43
+
+===== Gross non-EU inflows (unscaled) =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0071    <.001   0.960   -64.17   0.071     7.8  43
+fiscal        0.0082    <.001   0.966   -71.37   0.474    19.8  43
+
+===== EU placebo =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0017    0.651   0.948    -7.17   0.078    19.0  43
+fiscal        0.0030    0.412   0.945    -5.36   0.252    14.9  43
+
+===== + POL97 step =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0057    0.004   0.951   -64.82   0.207     9.7  43
+fiscal        0.0070    <.001   0.957   -69.80   0.555    13.9  43
+
+===== + 1998-2007 window =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0065    0.028   0.948   -62.01   0.066     7.3  43
+fiscal        0.0061    0.034   0.956   -68.93   0.318    16.3  43
+
+===== + all five MPR indicators =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0072    0.009   0.950   -61.06   0.174    17.9  43
+           joint HAC F(5,32) on {POL97,POL02,EXP04,ENL86,ENL95} = 1.92, p = 0.118
+fiscal        0.0080    0.001   0.953   -63.08   0.394    34.4  43
+           joint HAC F(5,32) on {POL97,POL02,EXP04,ENL86,ENL95} = 1.09, p = 0.383
+
+===== Total inflows + five indicators =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0028    0.303   0.975   -73.72   0.073    45.0  43
+           joint HAC F(5,32) on {POL97,POL02,EXP04,ENL86,ENL95} = 7.30, p = <.001
+fiscal        0.0028    0.311   0.976   -74.62   0.141    56.1  43
+           joint HAC F(5,32) on {POL97,POL02,EXP04,ENL86,ENL95} = 5.50, p = <.001
+
+===== Sample from 1983 =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0069    0.011   0.950   -56.66   0.084     7.1  37
+fiscal        0.0087    <.001   0.957   -62.72   0.533    15.1  37
+
+===== Sample from 1987 =====
+spec       proj coef   p(HAC)   adjR2      AIC   RESET  maxVIF   N
+------------------------------------------------------------------
+trend         0.0062    0.016   0.941   -47.68   0.174     6.7  33
+fiscal        0.0082    <.001   0.948   -52.18   0.634    12.6  33
+
+
+########## REBUILT FISCAL BLOCK: main and labour-tax specifications ##########
+trend, rebuilt debt                proj 0.0073 (p <.001)       adjR2 0.949  AIC -63.92  RESET 0.078  maxVIF 6.0
+fiscal, rebuilt tax_nat_pw         proj 0.0082 (p <.001)   L_tax_nat_pw 0.0518 (p <.001)    adjR2 0.956  AIC -70.10  RESET 0.409  maxVIF 13.0
+fiscal, LABOUR tax_lab_pw          proj 0.0098 (p <.001)   L_tax_lab_pw 0.1280 (p <.001)    adjR2 0.954  AIC -68.32  RESET 0.592  maxVIF 14.4
+fiscal, tax_nat / GDP              proj 0.0065 (p 0.002)   L_tax_nat_gdp 0.0061 (p 0.697)    adjR2 0.937  AIC -54.70  RESET 0.026  maxVIF 3.2
+fiscal, tax_lab / GDP              proj 0.0061 (p 0.006)   L_tax_lab_gdp -0.0094 (p 0.534)    adjR2 0.938  AIC -54.93  RESET 0.007  maxVIF 2.3
+
+--- tax per working-age person and trend entered jointly (HAC) ---
+L_tax_nat_pw   tax 0.0752 (p <.001)  trend -0.0051 (p 0.229)  proj 0.0085 (p <.001)  maxVIF 54.5
+L_tax_lab_pw   tax 0.0984 (p 0.003)  trend 0.0039 (p 0.184)  proj 0.0094 (p <.001)  maxVIF 21.8
+Labour tax = income tax + National Insurance contributions (OBR HPFD columns 2-3), real 2024-25 prices,
+per working-age person, FY (t-1)/t. Compare with the March-databank series above: differences are vintage.
+
+HAC = sandwich::vcovHAC (as in the main tables). RESET: Ramsey, powers 2-3 of fitted values.
+The fiscal specification replaces the linear trend with lagged tax per working-age person;
+the two are collinear (r = 0.98); the joint-entry block above shows what happens when they are.
+
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Golden Gate 27.0
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] urca_1.3-4      ARDL_0.2.5      tseries_0.10-63 car_3.1-5       carData_3.0-6   sandwich_3.1-3 
+[7] lmtest_0.9-40   zoo_1.9-0       readxl_1.5.0   
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.7-6     expm_1.0-0       jsonlite_2.0.0   dplyr_1.2.1      compiler_4.6.1   tidyselect_1.2.1
+ [7] msm_1.8.2        stringr_1.6.0    splines_4.6.1    lattice_0.23-1   R6_2.6.1         generics_0.1.4  
+[13] curl_7.1.0       Formula_1.2-6    tibble_3.3.1     pillar_1.11.1    rlang_1.3.0      quantmod_0.4.29 
+[19] stringi_1.8.9    quadprog_1.5-8   aod_1.3.3        cli_3.6.6        withr_3.0.3      magrittr_2.0.5  
+[25] xts_0.14.2       grid_4.6.1       mvtnorm_1.4-2    dynlm_0.3-6      lifecycle_1.0.5  nlme_3.1-170    
+[31] vctrs_0.7.3      glue_1.8.1       cellranger_1.1.0 survival_3.8-9   abind_1.4-8      stats4_4.6.1    
+[37] TTR_0.24.4       tools_4.6.1      pkgconfig_2.0.3 
+
+[robustness_both_specs_1977.R completed in 0 s]
+
+
+####################################################################################################
+##  mpr_dummies_replication_1977.R
+####################################################################################################
+
+data: /Users/samyhamdane/quiet-instruments/diss_replication/Dissertation_Dataset_Final.xlsx 
+
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+dummy variation in sample (number of years = 1, out of 43):
+  POL97     22
+  L_POL97   21
+  POL02     18
+  L_POL02   17
+  EXP04     16
+  ENL86     34
+  ENL95     25
+  EXP07     13
+  EXP14      6
+  liberal   10
+
+
+########## (a) scaled non-EU rate ##########
+
+=== (a) scaled non-EU rate - baseline, no dummy ===
+  N=43  Adj.R2=0.9494  AIC=-63.92
+  (Intercept)                  0.39571  se= 0.12645  t= 3.129  p=0.0034 ***
+  L_log_mig_rate               0.69141  se= 0.06171  t=11.203  p=0.0000 ***
+  trend                        0.00820  se= 0.00218  t= 3.759  p=0.0006 ***
+  delta_oadr_10                0.00728  se= 0.00155  t= 4.687  p=0.0000 ***
+  L_unem                      -0.01811  se= 0.00862  t=-2.101  p=0.0425 **
+  L_ln_debt_gdp                0.36617  se= 0.19800  t= 1.849  p=0.0724 *
+  BG(1)=0.3737  BP=0.1696  RESET=0.0781  JB=0.7771  maxVIF=6.0
+
+=== (a) scaled non-EU rate - POL97 ===
+  N=43  Adj.R2=0.9514  AIC=-64.82
+  (Intercept)                  0.46589  se= 0.13506  t= 3.449  p=0.0014 ***
+  L_log_mig_rate               0.60743  se= 0.07542  t= 8.054  p=0.0000 ***
+  trend                        0.00581  se= 0.00260  t= 2.235  p=0.0317 **
+  delta_oadr_10                0.00571  se= 0.00184  t= 3.109  p=0.0037 ***
+  L_unem                      -0.01454  se= 0.00823  t=-1.766  p=0.0858 *
+  L_ln_debt_gdp                0.32584  se= 0.19844  t= 1.642  p=0.1093 
+  POL97                        0.15599  se= 0.07955  t= 1.961  p=0.0577 *
+  BG(1)=0.3596  BP=0.1959  RESET=0.2068  JB=0.6511  maxVIF=9.7
+
+=== (a) scaled non-EU rate - L_POL97 ===
+  N=43  Adj.R2=0.9521  AIC=-65.44
+  (Intercept)                  0.52802  se= 0.14609  t= 3.614  p=0.0009 ***
+  L_log_mig_rate               0.55785  se= 0.08545  t= 6.529  p=0.0000 ***
+  trend                        0.00621  se= 0.00256  t= 2.427  p=0.0203 **
+  delta_oadr_10                0.00608  se= 0.00173  t= 3.507  p=0.0012 ***
+  L_unem                      -0.01612  se= 0.00817  t=-1.972  p=0.0563 *
+  L_ln_debt_gdp                0.36348  se= 0.20967  t= 1.734  p=0.0916 *
+  L_POL97                      0.18358  se= 0.08587  t= 2.138  p=0.0394 **
+  BG(1)=0.5138  BP=0.1892  RESET=0.3465  JB=0.6560  maxVIF=11.2
+
+=== (a) scaled non-EU rate - POL02 ===
+  N=43  Adj.R2=0.9498  AIC=-63.47
+  (Intercept)                  0.48500  se= 0.15526  t= 3.124  p=0.0035 ***
+  L_log_mig_rate               0.60918  se= 0.09383  t= 6.492  p=0.0000 ***
+  trend                        0.00743  se= 0.00238  t= 3.124  p=0.0035 ***
+  delta_oadr_10                0.00783  se= 0.00159  t= 4.937  p=0.0000 ***
+  L_unem                      -0.01798  se= 0.00843  t=-2.133  p=0.0398 **
+  L_ln_debt_gdp                0.36561  se= 0.20516  t= 1.782  p=0.0832 *
+  POL02                        0.10119  se= 0.07282  t= 1.390  p=0.1732 
+  BG(1)=0.4645  BP=0.1147  RESET=0.1689  JB=0.6446  maxVIF=10.2
+
+=== (a) scaled non-EU rate - EXP04 ===
+  N=43  Adj.R2=0.9501  AIC=-63.72
+  (Intercept)                  0.48502  se= 0.15540  t= 3.121  p=0.0035 ***
+  L_log_mig_rate               0.60510  se= 0.09640  t= 6.277  p=0.0000 ***
+  trend                        0.00723  se= 0.00255  t= 2.840  p=0.0074 ***
+  delta_oadr_10                0.00946  se= 0.00220  t= 4.306  p=0.0001 ***
+  L_unem                      -0.01743  se= 0.00866  t=-2.013  p=0.0517 *
+  L_ln_debt_gdp                0.35059  se= 0.21163  t= 1.657  p=0.1063 
+  EXP04                        0.11957  se= 0.07208  t= 1.659  p=0.1058 
+  BG(1)=0.6182  BP=0.0867  RESET=0.1083  JB=0.6963  maxVIF=10.0
+
+=== (a) scaled non-EU rate - ENL86 ===
+  N=43  Adj.R2=0.9483  AIC=-62.18
+  (Intercept)                  0.39357  se= 0.12455  t= 3.160  p=0.0032 ***
+  L_log_mig_rate               0.68737  se= 0.06234  t=11.026  p=0.0000 ***
+  trend                        0.00914  se= 0.00282  t= 3.237  p=0.0026 ***
+  delta_oadr_10                0.00752  se= 0.00174  t= 4.323  p=0.0001 ***
+  L_unem                      -0.01682  se= 0.00760  t=-2.213  p=0.0333 **
+  L_ln_debt_gdp                0.35508  se= 0.19778  t= 1.795  p=0.0810 *
+  ENL86                       -0.02867  se= 0.05512  t=-0.520  p=0.6061 
+  BG(1)=0.3901  BP=0.1981  RESET=0.0674  JB=0.7760  maxVIF=6.8
+
+=== (a) scaled non-EU rate - ENL95 ===
+  N=43  Adj.R2=0.9480  AIC=-61.95
+  (Intercept)                  0.39168  se= 0.12929  t= 3.029  p=0.0045 ***
+  L_log_mig_rate               0.69157  se= 0.06356  t=10.880  p=0.0000 ***
+  trend                        0.00780  se= 0.00288  t= 2.710  p=0.0103 **
+  delta_oadr_10                0.00705  se= 0.00181  t= 3.897  p=0.0004 ***
+  L_unem                      -0.01745  se= 0.00895  t=-1.950  p=0.0590 *
+  L_ln_debt_gdp                0.34423  se= 0.19697  t= 1.748  p=0.0890 *
+  ENL95                        0.01489  se= 0.06780  t= 0.220  p=0.8275 
+  BG(1)=0.3688  BP=0.1703  RESET=0.0737  JB=0.7455  maxVIF=7.5
+
+=== (a) scaled non-EU rate - EXP07 ===
+  N=43  Adj.R2=0.9488  AIC=-62.61
+  (Intercept)                  0.42421  se= 0.13398  t= 3.166  p=0.0031 ***
+  L_log_mig_rate               0.67469  se= 0.05789  t=11.654  p=0.0000 ***
+  trend                        0.00666  se= 0.00294  t= 2.263  p=0.0298 **
+  delta_oadr_10                0.00918  se= 0.00270  t= 3.402  p=0.0017 ***
+  L_unem                      -0.01772  se= 0.00818  t=-2.166  p=0.0370 **
+  L_ln_debt_gdp                0.39868  se= 0.21475  t= 1.856  p=0.0716 *
+  EXP07                        0.07052  se= 0.08068  t= 0.874  p=0.3879 
+  BG(1)=0.2589  BP=0.2426  RESET=0.0965  JB=0.8174  maxVIF=6.9
+
+=== (a) scaled non-EU rate - EXP14 ===
+  N=43  Adj.R2=0.9480  AIC=-61.95
+  (Intercept)                  0.40620  se= 0.13680  t= 2.969  p=0.0053 ***
+  L_log_mig_rate               0.68142  se= 0.08085  t= 8.428  p=0.0000 ***
+  trend                        0.00871  se= 0.00342  t= 2.548  p=0.0152 **
+  delta_oadr_10                0.00720  se= 0.00173  t= 4.151  p=0.0002 ***
+  L_unem                      -0.01882  se= 0.00893  t=-2.107  p=0.0422 **
+  L_ln_debt_gdp                0.35664  se= 0.21786  t= 1.637  p=0.1103 
+  EXP14                       -0.01309  se= 0.08259  t=-0.159  p=0.8749 
+  BG(1)=0.3670  BP=0.0415  RESET=0.0542  JB=0.7726  maxVIF=9.5
+
+=== (a) scaled non-EU rate - liberal ===
+  N=43  Adj.R2=0.9481  AIC=-62.01
+  (Intercept)                  0.40154  se= 0.12776  t= 3.143  p=0.0033 ***
+  L_log_mig_rate               0.68012  se= 0.07129  t= 9.539  p=0.0000 ***
+  trend                        0.00845  se= 0.00236  t= 3.578  p=0.0010 ***
+  delta_oadr_10                0.00649  se= 0.00283  t= 2.288  p=0.0281 **
+  L_unem                      -0.01786  se= 0.00901  t=-1.982  p=0.0552 *
+  L_ln_debt_gdp                0.35304  se= 0.21392  t= 1.650  p=0.1076 
+  liberal                      0.02203  se= 0.05732  t= 0.384  p=0.7030 
+  BG(1)=0.4058  BP=0.2428  RESET=0.0657  JB=0.7374  maxVIF=7.3
+
+=== (a) scaled non-EU rate - all MPR dummies jointly ===
+  N=43  Adj.R2=0.9505  AIC=-61.06
+  (Intercept)                  0.67126  se= 0.18658  t= 3.598  p=0.0011 ***
+  L_log_mig_rate               0.41336  se= 0.13449  t= 3.074  p=0.0043 ***
+  trend                        0.00024  se= 0.00491  t= 0.049  p=0.9611 
+  delta_oadr_10                0.00716  se= 0.00259  t= 2.769  p=0.0093 ***
+  L_unem                      -0.01396  se= 0.00954  t=-1.463  p=0.1533 
+  L_ln_debt_gdp                0.26729  se= 0.24613  t= 1.086  p=0.2856 
+  POL97                        0.19456  se= 0.08810  t= 2.208  p=0.0345 **
+  POL02                        0.10963  se= 0.06735  t= 1.628  p=0.1134 
+  EXP04                        0.12958  se= 0.06506  t= 1.992  p=0.0550 *
+  ENL86                        0.06317  se= 0.06372  t= 0.991  p=0.3290 
+  ENL95                        0.03768  se= 0.05635  t= 0.669  p=0.5085 
+  BG(1)=0.5377  BP=0.2903  RESET=0.1737  JB=0.4304  maxVIF=17.9
+
+-- joint F-test: the five MPR dummies against the baseline --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp + POL97 + POL02 + EXP04 + ENL86 + ENL95
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.41119                           
+2     32 0.34825  5  0.062945 1.1568 0.3516
+
+-- does the projection term survive the full dummy set? --
+                 Estimate  Std. Error  t value    Pr(>|t|)
+delta_oadr_10 0.007163573 0.002586918 2.769153 0.009273294
+
+
+########## (b) gross non-EU ##########
+
+=== (b) gross non-EU - baseline, no dummy ===
+  N=43  Adj.R2=0.9595  AIC=-64.17
+  (Intercept)                  3.66645  se= 0.76183  t= 4.813  p=0.0000 ***
+  L_alt_log_mig_rate           0.68556  se= 0.06421  t=10.677  p=0.0000 ***
+  trend                        0.01014  se= 0.00248  t= 4.095  p=0.0002 ***
+  delta_oadr_10                0.00706  se= 0.00152  t= 4.637  p=0.0000 ***
+  L_unem                      -0.01778  se= 0.00870  t=-2.043  p=0.0482 **
+  L_ln_debt_gdp                0.33906  se= 0.19862  t= 1.707  p=0.0962 *
+  BG(1)=0.3883  BP=0.1802  RESET=0.0709  JB=0.7838  maxVIF=7.8
+
+=== (b) gross non-EU - POL97 ===
+  N=43  Adj.R2=0.9612  AIC=-65.15
+  (Intercept)                  4.62648  se= 0.91117  t= 5.078  p=0.0000 ***
+  L_alt_log_mig_rate           0.59993  se= 0.07731  t= 7.760  p=0.0000 ***
+  trend                        0.00821  se= 0.00274  t= 3.001  p=0.0049 ***
+  delta_oadr_10                0.00546  se= 0.00180  t= 3.042  p=0.0044 ***
+  L_unem                      -0.01413  se= 0.00833  t=-1.696  p=0.0986 *
+  L_ln_debt_gdp                0.29336  se= 0.19679  t= 1.491  p=0.1447 
+  POL97                        0.15686  se= 0.08048  t= 1.949  p=0.0591 *
+  BG(1)=0.3659  BP=0.2075  RESET=0.2156  JB=0.6517  maxVIF=10.8
+
+=== (b) gross non-EU - L_POL97 ===
+  N=43  Adj.R2=0.9619  AIC=-65.90
+  (Intercept)                  5.26086  se= 1.02381  t= 5.139  p=0.0000 ***
+  L_alt_log_mig_rate           0.54531  se= 0.08703  t= 6.265  p=0.0000 ***
+  trend                        0.00892  se= 0.00266  t= 3.357  p=0.0019 ***
+  delta_oadr_10                0.00581  se= 0.00170  t= 3.417  p=0.0016 ***
+  L_unem                      -0.01573  se= 0.00821  t=-1.916  p=0.0634 *
+  L_ln_debt_gdp                0.32885  se= 0.20841  t= 1.578  p=0.1233 
+  L_POL97                      0.18800  se= 0.08637  t= 2.177  p=0.0361 **
+  BG(1)=0.5323  BP=0.2071  RESET=0.3336  JB=0.6457  maxVIF=14.3
+
+=== (b) gross non-EU - POL02 ===
+  N=43  Adj.R2=0.9599  AIC=-63.78
+  (Intercept)                  4.66233  se= 1.15371  t= 4.041  p=0.0003 ***
+  L_alt_log_mig_rate           0.59868  se= 0.09836  t= 6.087  p=0.0000 ***
+  trend                        0.00988  se= 0.00262  t= 3.768  p=0.0006 ***
+  delta_oadr_10                0.00761  se= 0.00159  t= 4.791  p=0.0000 ***
+  L_unem                      -0.01769  se= 0.00845  t=-2.093  p=0.0435 **
+  L_ln_debt_gdp                0.33438  se= 0.20580  t= 1.625  p=0.1129 
+  POL02                        0.10324  se= 0.07506  t= 1.375  p=0.1775 
+  BG(1)=0.4965  BP=0.1339  RESET=0.1549  JB=0.6255  maxVIF=13.5
+
+=== (b) gross non-EU - EXP04 ===
+  N=43  Adj.R2=0.9605  AIC=-64.38
+  (Intercept)                  4.78645  se= 1.16562  t= 4.106  p=0.0002 ***
+  L_alt_log_mig_rate           0.58742  se= 0.10001  t= 5.873  p=0.0000 ***
+  trend                        0.00965  se= 0.00290  t= 3.333  p=0.0020 ***
+  delta_oadr_10                0.00946  se= 0.00219  t= 4.329  p=0.0001 ***
+  L_unem                      -0.01705  se= 0.00867  t=-1.967  p=0.0570 *
+  L_ln_debt_gdp                0.31691  se= 0.21495  t= 1.474  p=0.1491 
+  EXP04                        0.13201  se= 0.07414  t= 1.781  p=0.0834 *
+  BG(1)=0.6765  BP=0.1078  RESET=0.1027  JB=0.6667  maxVIF=13.1
+
+=== (b) gross non-EU - ENL86 ===
+  N=43  Adj.R2=0.9588  AIC=-62.58
+  (Intercept)                  3.72364  se= 0.75820  t= 4.911  p=0.0000 ***
+  L_alt_log_mig_rate           0.67986  se= 0.06405  t=10.614  p=0.0000 ***
+  trend                        0.01135  se= 0.00310  t= 3.658  p=0.0008 ***
+  delta_oadr_10                0.00737  se= 0.00171  t= 4.301  p=0.0001 ***
+  L_unem                      -0.01621  se= 0.00762  t=-2.126  p=0.0404 **
+  L_ln_debt_gdp                0.32516  se= 0.19962  t= 1.629  p=0.1121 
+  ENL86                       -0.03590  se= 0.05541  t=-0.648  p=0.5212 
+  BG(1)=0.4048  BP=0.2084  RESET=0.0684  JB=0.7778  maxVIF=8.5
+
+=== (b) gross non-EU - ENL95 ===
+  N=43  Adj.R2=0.9584  AIC=-62.20
+  (Intercept)                  3.65909  se= 0.78223  t= 4.678  p=0.0000 ***
+  L_alt_log_mig_rate           0.68593  se= 0.06593  t=10.404  p=0.0000 ***
+  trend                        0.00981  se= 0.00318  t= 3.085  p=0.0039 ***
+  delta_oadr_10                0.00688  se= 0.00177  t= 3.893  p=0.0004 ***
+  L_unem                      -0.01725  se= 0.00905  t=-1.906  p=0.0647 *
+  L_ln_debt_gdp                0.32156  se= 0.19574  t= 1.643  p=0.1091 
+  ENL95                        0.01178  se= 0.06917  t= 0.170  p=0.8657 
+  BG(1)=0.3834  BP=0.1673  RESET=0.0757  JB=0.7598  maxVIF=9.1
+
+=== (b) gross non-EU - EXP07 ===
+  N=43  Adj.R2=0.9592  AIC=-63.04
+  (Intercept)                  3.91203  se= 0.72105  t= 5.425  p=0.0000 ***
+  L_alt_log_mig_rate           0.66516  se= 0.05940  t=11.198  p=0.0000 ***
+  trend                        0.00855  se= 0.00305  t= 2.806  p=0.0080 ***
+  delta_oadr_10                0.00920  se= 0.00275  t= 3.344  p=0.0019 ***
+  L_unem                      -0.01742  se= 0.00820  t=-2.124  p=0.0406 **
+  L_ln_debt_gdp                0.37512  se= 0.21416  t= 1.752  p=0.0884 *
+  EXP07                        0.07904  se= 0.08307  t= 0.952  p=0.3477 
+  BG(1)=0.2528  BP=0.2589  RESET=0.1052  JB=0.8214  maxVIF=8.4
+
+=== (b) gross non-EU - EXP14 ===
+  N=43  Adj.R2=0.9584  AIC=-62.18
+  (Intercept)                  3.69830  se= 0.95216  t= 3.884  p=0.0004 ***
+  L_alt_log_mig_rate           0.68277  se= 0.08168  t= 8.359  p=0.0000 ***
+  trend                        0.01029  se= 0.00374  t= 2.749  p=0.0093 ***
+  delta_oadr_10                0.00704  se= 0.00170  t= 4.136  p=0.0002 ***
+  L_unem                      -0.01798  se= 0.00893  t=-2.014  p=0.0516 *
+  L_ln_debt_gdp                0.33616  se= 0.21930  t= 1.533  p=0.1341 
+  EXP14                       -0.00369  se= 0.08004  t=-0.046  p=0.9635 
+  BG(1)=0.3801  BP=0.0452  RESET=0.0516  JB=0.7837  maxVIF=11.9
+
+=== (b) gross non-EU - liberal ===
+  N=43  Adj.R2=0.9585  AIC=-62.24
+  (Intercept)                  3.76358  se= 0.84173  t= 4.471  p=0.0001 ***
+  L_alt_log_mig_rate           0.67662  se= 0.07258  t= 9.322  p=0.0000 ***
+  trend                        0.01038  se= 0.00269  t= 3.864  p=0.0004 ***
+  delta_oadr_10                0.00642  se= 0.00283  t= 2.269  p=0.0294 **
+  L_unem                      -0.01756  se= 0.00913  t=-1.924  p=0.0623 *
+  L_ln_debt_gdp                0.32770  se= 0.21475  t= 1.526  p=0.1357 
+  liberal                      0.01781  se= 0.05673  t= 0.314  p=0.7553 
+  BG(1)=0.4150  BP=0.2563  RESET=0.0694  JB=0.7551  maxVIF=9.3
+
+=== (b) gross non-EU - all MPR dummies jointly ===
+  N=43  Adj.R2=0.9605  AIC=-61.47
+  (Intercept)                  6.85666  se= 1.60063  t= 4.284  p=0.0002 ***
+  L_alt_log_mig_rate           0.40487  se= 0.13861  t= 2.921  p=0.0063 ***
+  trend                        0.00439  se= 0.00482  t= 0.910  p=0.3695 
+  delta_oadr_10                0.00722  se= 0.00259  t= 2.786  p=0.0089 ***
+  L_unem                      -0.01346  se= 0.00956  t=-1.407  p=0.1690 
+  L_ln_debt_gdp                0.23171  se= 0.25061  t= 0.925  p=0.3621 
+  POL97                        0.19129  se= 0.08794  t= 2.175  p=0.0371 **
+  POL02                        0.09936  se= 0.06571  t= 1.512  p=0.1403 
+  EXP04                        0.13730  se= 0.06660  t= 2.062  p=0.0475 **
+  ENL86                        0.05340  se= 0.06258  t= 0.853  p=0.3999 
+  ENL95                        0.03014  se= 0.05731  t= 0.526  p=0.6026 
+  BG(1)=0.6140  BP=0.2997  RESET=0.2794  JB=0.4377  maxVIF=22.9
+
+-- joint F-test: the five MPR dummies against the baseline --
+Analysis of Variance Table
+
+Model 1: alt_log_mig_rate ~ L_alt_log_mig_rate + trend + delta_oadr_10 + 
+    L_unem + L_ln_debt_gdp
+Model 2: alt_log_mig_rate ~ L_alt_log_mig_rate + trend + delta_oadr_10 + 
+    L_unem + L_ln_debt_gdp + POL97 + POL02 + EXP04 + ENL86 + 
+    ENL95
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.40874                           
+2     32 0.34495  5  0.063788 1.1835  0.339
+
+-- does the projection term survive the full dummy set? --
+                 Estimate  Std. Error  t value    Pr(>|t|)
+delta_oadr_10 0.007217158 0.002590661 2.785836 0.008899045
+
+
+########## (c) total (EU+non-EU) ##########
+
+=== (c) total (EU+non-EU) - baseline, no dummy ===
+  N=43  Adj.R2=0.9657  AIC=-63.39
+  (Intercept)                  0.31741  se= 0.17200  t= 1.845  p=0.0730 *
+  L_tot_log_mig_rate           0.74500  se= 0.07861  t= 9.478  p=0.0000 ***
+  trend                        0.00956  se= 0.00347  t= 2.757  p=0.0090 ***
+  delta_oadr_10                0.00533  se= 0.00198  t= 2.691  p=0.0106 **
+  L_unem                      -0.00891  se= 0.01153  t=-0.773  p=0.4444 
+  L_ln_debt_gdp                0.36736  se= 0.19455  t= 1.888  p=0.0668 *
+  BG(1)=0.7230  BP=0.3257  RESET=0.0042  JB=0.9657  maxVIF=12.9
+
+=== (c) total (EU+non-EU) - POL97 ===
+  N=43  Adj.R2=0.9667  AIC=-63.77
+  (Intercept)                  0.43004  se= 0.18523  t= 2.322  p=0.0260 **
+  L_tot_log_mig_rate           0.63888  se= 0.10516  t= 6.075  p=0.0000 ***
+  trend                        0.00911  se= 0.00330  t= 2.757  p=0.0091 ***
+  delta_oadr_10                0.00332  se= 0.00255  t= 1.302  p=0.2011 
+  L_unem                      -0.00710  se= 0.01096  t=-0.648  p=0.5210 
+  L_ln_debt_gdp                0.31462  se= 0.20079  t= 1.567  p=0.1259 
+  POL97                        0.14944  se= 0.09428  t= 1.585  p=0.1217 
+  BG(1)=0.9742  BP=0.4544  RESET=0.0082  JB=0.9337  maxVIF=19.8
+
+=== (c) total (EU+non-EU) - L_POL97 ===
+  N=43  Adj.R2=0.9660  AIC=-62.98
+  (Intercept)                  0.44068  se= 0.20849  t= 2.114  p=0.0415 **
+  L_tot_log_mig_rate           0.63778  se= 0.12531  t= 5.090  p=0.0000 ***
+  trend                        0.00982  se= 0.00350  t= 2.810  p=0.0080 ***
+  delta_oadr_10                0.00397  se= 0.00247  t= 1.607  p=0.1167 
+  L_unem                      -0.00859  se= 0.01116  t=-0.769  p=0.4468 
+  L_ln_debt_gdp                0.34538  se= 0.19956  t= 1.731  p=0.0921 *
+  L_POL97                      0.12474  se= 0.10642  t= 1.172  p=0.2489 
+  BG(1)=0.9794  BP=0.4250  RESET=0.0025  JB=0.9406  maxVIF=23.3
+
+=== (c) total (EU+non-EU) - POL02 ===
+  N=43  Adj.R2=0.9671  AIC=-64.31
+  (Intercept)                  0.47059  se= 0.20319  t= 2.316  p=0.0264 **
+  L_tot_log_mig_rate           0.61979  se= 0.11180  t= 5.544  p=0.0000 ***
+  trend                        0.01032  se= 0.00372  t= 2.771  p=0.0088 ***
+  delta_oadr_10                0.00542  se= 0.00198  t= 2.738  p=0.0095 ***
+  L_unem                      -0.00970  se= 0.01141  t=-0.850  p=0.4008 
+  L_ln_debt_gdp                0.34076  se= 0.19333  t= 1.763  p=0.0865 *
+  POL02                        0.13498  se= 0.06879  t= 1.962  p=0.0575 *
+  BG(1)=0.9607  BP=0.2522  RESET=0.0161  JB=0.9006  maxVIF=20.8
+
+=== (c) total (EU+non-EU) - EXP04 ===
+  N=43  Adj.R2=0.9683  AIC=-65.98
+  (Intercept)                  0.53918  se= 0.21657  t= 2.490  p=0.0175 **
+  L_tot_log_mig_rate           0.56102  se= 0.12679  t= 4.425  p=0.0001 ***
+  trend                        0.01101  se= 0.00421  t= 2.617  p=0.0129 **
+  delta_oadr_10                0.00808  se= 0.00214  t= 3.774  p=0.0006 ***
+  L_unem                      -0.01029  se= 0.01153  t=-0.893  p=0.3779 
+  L_ln_debt_gdp                0.31416  se= 0.19736  t= 1.592  p=0.1202 
+  EXP04                        0.19939  se= 0.07764  t= 2.568  p=0.0145 **
+  BG(1)=0.5881  BP=0.1967  RESET=0.0007  JB=0.7357  maxVIF=23.9
+
+=== (c) total (EU+non-EU) - ENL86 ===
+  N=43  Adj.R2=0.9648  AIC=-61.46
+  (Intercept)                  0.31921  se= 0.17439  t= 1.830  p=0.0755 *
+  L_tot_log_mig_rate           0.74097  se= 0.08096  t= 9.152  p=0.0000 ***
+  trend                        0.01015  se= 0.00412  t= 2.463  p=0.0187 **
+  delta_oadr_10                0.00545  se= 0.00205  t= 2.657  p=0.0117 **
+  L_unem                      -0.00835  se= 0.01125  t=-0.742  p=0.4627 
+  L_ln_debt_gdp                0.36152  se= 0.19218  t= 1.881  p=0.0681 *
+  ENL86                       -0.01517  se= 0.05691  t=-0.267  p=0.7913 
+  BG(1)=0.7346  BP=0.4188  RESET=0.0014  JB=0.9759  maxVIF=13.3
+
+=== (c) total (EU+non-EU) - ENL95 ===
+  N=43  Adj.R2=0.9659  AIC=-62.86
+  (Intercept)                  0.30076  se= 0.16471  t= 1.826  p=0.0762 *
+  L_tot_log_mig_rate           0.73972  se= 0.07165  t=10.323  p=0.0000 ***
+  trend                        0.00724  se= 0.00333  t= 2.172  p=0.0366 **
+  delta_oadr_10                0.00388  se= 0.00227  t= 1.710  p=0.0959 *
+  L_unem                      -0.00518  se= 0.01121  t=-0.462  p=0.6471 
+  L_ln_debt_gdp                0.23100  se= 0.20542  t= 1.125  p=0.2682 
+  ENL95                        0.09415  se= 0.06338  t= 1.486  p=0.1461 
+  BG(1)=0.5468  BP=0.4072  RESET=0.0092  JB=0.8505  maxVIF=13.0
+
+=== (c) total (EU+non-EU) - EXP07 ===
+  N=43  Adj.R2=0.9650  AIC=-61.72
+  (Intercept)                  0.35331  se= 0.19468  t= 1.815  p=0.0779 *
+  L_tot_log_mig_rate           0.72316  se= 0.08569  t= 8.439  p=0.0000 ***
+  trend                        0.00892  se= 0.00388  t= 2.296  p=0.0276 **
+  delta_oadr_10                0.00664  se= 0.00292  t= 2.270  p=0.0293 **
+  L_unem                      -0.00924  se= 0.01189  t=-0.776  p=0.4425 
+  L_ln_debt_gdp                0.39093  se= 0.21777  t= 1.795  p=0.0810 *
+  EXP07                        0.05156  se= 0.08433  t= 0.611  p=0.5448 
+  BG(1)=0.7387  BP=0.4358  RESET=0.0055  JB=0.9469  maxVIF=15.0
+
+=== (c) total (EU+non-EU) - EXP14 ===
+  N=43  Adj.R2=0.9648  AIC=-61.47
+  (Intercept)                  0.33069  se= 0.18301  t= 1.807  p=0.0791 *
+  L_tot_log_mig_rate           0.73302  se= 0.09392  t= 7.805  p=0.0000 ***
+  trend                        0.01036  se= 0.00444  t= 2.331  p=0.0255 **
+  delta_oadr_10                0.00514  se= 0.00202  t= 2.542  p=0.0155 **
+  L_unem                      -0.00978  se= 0.01193  t=-0.820  p=0.4177 
+  L_ln_debt_gdp                0.34911  se= 0.21332  t= 1.636  p=0.1104 
+  EXP14                       -0.01854  se= 0.06876  t=-0.270  p=0.7890 
+  BG(1)=0.7288  BP=0.2332  RESET=0.0057  JB=0.9055  maxVIF=15.3
+
+=== (c) total (EU+non-EU) - liberal ===
+  N=43  Adj.R2=0.9656  AIC=-62.40
+  (Intercept)                  0.34152  se= 0.17298  t= 1.974  p=0.0561 *
+  L_tot_log_mig_rate           0.70771  se= 0.09482  t= 7.464  p=0.0000 ***
+  trend                        0.01080  se= 0.00391  t= 2.761  p=0.0090 ***
+  delta_oadr_10                0.00258  se= 0.00346  t= 0.745  p=0.4613 
+  L_unem                      -0.00818  se= 0.01130  t=-0.724  p=0.4737 
+  L_ln_debt_gdp                0.31525  se= 0.21221  t= 1.486  p=0.1461 
+  liberal                      0.07072  se= 0.05680  t= 1.245  p=0.2211 
+  BG(1)=0.7976  BP=0.4364  RESET=0.0117  JB=0.9853  maxVIF=14.9
+
+=== (c) total (EU+non-EU) - all MPR dummies jointly ===
+  N=43  Adj.R2=0.9753  AIC=-73.72
+  (Intercept)                  0.96923  se= 0.19246  t= 5.036  p=0.0000 ***
+  L_tot_log_mig_rate           0.16649  se= 0.14176  t= 1.174  p=0.2489 
+  trend                        0.00276  se= 0.00305  t= 0.904  p=0.3725 
+  delta_oadr_10                0.00285  se= 0.00272  t= 1.046  p=0.3034 
+  L_unem                      -0.00572  se= 0.00990  t=-0.578  p=0.5675 
+  L_ln_debt_gdp               -0.06841  se= 0.26798  t=-0.255  p=0.8001 
+  POL97                        0.22725  se= 0.09031  t= 2.516  p=0.0171 **
+  POL02                        0.15492  se= 0.06704  t= 2.311  p=0.0274 **
+  EXP04                        0.31744  se= 0.06603  t= 4.808  p=0.0000 ***
+  ENL86                        0.11477  se= 0.05348  t= 2.146  p=0.0396 **
+  ENL95                        0.19641  se= 0.07272  t= 2.701  p=0.0110 **
+  BG(1)=0.7074  BP=0.5895  RESET=0.0728  JB=0.5972  maxVIF=45.0
+
+-- joint F-test: the five MPR dummies against the baseline --
+Analysis of Variance Table
+
+Model 1: tot_log_mig_rate ~ L_tot_log_mig_rate + trend + delta_oadr_10 + 
+    L_unem + L_ln_debt_gdp
+Model 2: tot_log_mig_rate ~ L_tot_log_mig_rate + trend + delta_oadr_10 + 
+    L_unem + L_ln_debt_gdp + POL97 + POL02 + EXP04 + ENL86 + 
+    ENL95
+  Res.Df     RSS Df Sum of Sq      F   Pr(>F)   
+1     37 0.41630                                
+2     32 0.25945  5   0.15685 3.8691 0.007439 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+-- does the projection term survive the full dummy set? --
+                 Estimate  Std. Error  t value  Pr(>|t|)
+delta_oadr_10 0.002846679 0.002721504 1.045995 0.3034007
+
+
+########## horse race: step (POL97) vs window (liberal) ##########
+
+=== baseline ===
+  N=43  Adj.R2=0.9494  AIC=-63.92
+  (Intercept)                  0.39571  se= 0.12645  t= 3.129  p=0.0034 ***
+  L_log_mig_rate               0.69141  se= 0.06171  t=11.203  p=0.0000 ***
+  trend                        0.00820  se= 0.00218  t= 3.759  p=0.0006 ***
+  delta_oadr_10                0.00728  se= 0.00155  t= 4.687  p=0.0000 ***
+  L_unem                      -0.01811  se= 0.00862  t=-2.101  p=0.0425 **
+  L_ln_debt_gdp                0.36617  se= 0.19800  t= 1.849  p=0.0724 *
+  BG(1)=0.3737  BP=0.1696  RESET=0.0781  JB=0.7771  maxVIF=6.0
+
+=== + POL97 ===
+  N=43  Adj.R2=0.9514  AIC=-64.82
+  (Intercept)                  0.46589  se= 0.13506  t= 3.449  p=0.0014 ***
+  L_log_mig_rate               0.60743  se= 0.07542  t= 8.054  p=0.0000 ***
+  trend                        0.00581  se= 0.00260  t= 2.235  p=0.0317 **
+  delta_oadr_10                0.00571  se= 0.00184  t= 3.109  p=0.0037 ***
+  L_unem                      -0.01454  se= 0.00823  t=-1.766  p=0.0858 *
+  L_ln_debt_gdp                0.32584  se= 0.19844  t= 1.642  p=0.1093 
+  POL97                        0.15599  se= 0.07955  t= 1.961  p=0.0577 *
+  BG(1)=0.3596  BP=0.1959  RESET=0.2068  JB=0.6511  maxVIF=9.7
+
+=== + POL97 + interaction ===
+  N=43  Adj.R2=0.9510  AIC=-63.66
+  (Intercept)                  0.52743  se= 0.17545  t= 3.006  p=0.0049 ***
+  L_log_mig_rate               0.59181  se= 0.08080  t= 7.325  p=0.0000 ***
+  trend                        0.00574  se= 0.00263  t= 2.178  p=0.0362 **
+  delta_oadr_10                0.01223  se= 0.00668  t= 1.832  p=0.0754 *
+  L_unem                      -0.02002  se= 0.01183  t=-1.693  p=0.0994 *
+  L_ln_debt_gdp                0.36116  se= 0.20765  t= 1.739  p=0.0908 *
+  POL97                        0.15995  se= 0.07614  t= 2.101  p=0.0429 **
+  delta_oadr_10:POL97         -0.00719  se= 0.00745  t=-0.965  p=0.3413 
+G3;there are higher-order terms (interactions) in this model
+consider setting type = 'predictor'; see ?vif
+g  BG(1)=0.3718  BP=0.2036  RESET=0.2364  JB=0.6909  maxVIF=21.9
+
+-- joint test of POL97 and its interaction --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp + POL97 + delta_oadr_10:POL97
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.41119                           
+2     35 0.37689  2  0.034302 1.5927 0.2178
+-- effect of delta_oadr_10 where POL97 = 1 (sum of the two terms) --
+
+Linear hypothesis test:
+delta_oadr_10  + delta_oadr_10:POL97 = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp + POL97 + delta_oadr_10:POL97
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F  Pr(>F)  
+1     36                    
+2     35  1 5.6244 0.02335 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+=== + liberal ===
+  N=43  Adj.R2=0.9481  AIC=-62.01
+  (Intercept)                  0.40154  se= 0.12776  t= 3.143  p=0.0033 ***
+  L_log_mig_rate               0.68012  se= 0.07129  t= 9.539  p=0.0000 ***
+  trend                        0.00845  se= 0.00236  t= 3.578  p=0.0010 ***
+  delta_oadr_10                0.00649  se= 0.00283  t= 2.288  p=0.0281 **
+  L_unem                      -0.01786  se= 0.00901  t=-1.982  p=0.0552 *
+  L_ln_debt_gdp                0.35304  se= 0.21392  t= 1.650  p=0.1076 
+  liberal                      0.02203  se= 0.05732  t= 0.384  p=0.7030 
+  BG(1)=0.4058  BP=0.2428  RESET=0.0657  JB=0.7374  maxVIF=7.3
+
+=== + liberal + interaction ===
+  N=43  Adj.R2=0.9469  AIC=-60.27
+  (Intercept)                  0.40491  se= 0.12909  t= 3.137  p=0.0035 ***
+  L_log_mig_rate               0.67526  se= 0.07158  t= 9.433  p=0.0000 ***
+  trend                        0.00849  se= 0.00234  t= 3.633  p=0.0009 ***
+  delta_oadr_10                0.00538  se= 0.00412  t= 1.304  p=0.2006 
+  L_unem                      -0.01775  se= 0.00923  t=-1.923  p=0.0627 *
+  L_ln_debt_gdp                0.34820  se= 0.21695  t= 1.605  p=0.1175 
+  liberal                     -0.00317  se= 0.04173  t=-0.076  p=0.9399 
+  delta_oadr_10:liberal        0.00303  se= 0.00387  t= 0.782  p=0.4396 
+G3;there are higher-order terms (interactions) in this model
+consider setting type = 'predictor'; see ?vif
+g  BG(1)=0.3997  BP=0.3062  RESET=0.0776  JB=0.6990  maxVIF=7.9
+
+-- joint test of liberal and its interaction --
+Analysis of Variance Table
+
+Model 1: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp + liberal + delta_oadr_10:liberal
+  Res.Df     RSS Df Sum of Sq      F Pr(>F)
+1     37 0.41119                           
+2     35 0.40785  2 0.0033446 0.1435 0.8668
+-- effect of delta_oadr_10 where liberal = 1 (sum of the two terms) --
+
+Linear hypothesis test:
+delta_oadr_10  + delta_oadr_10:liberal = 0
+
+Model 1: restricted model
+Model 2: log_mig_rate ~ L_log_mig_rate + trend + delta_oadr_10 + L_unem + 
+    L_ln_debt_gdp + liberal + delta_oadr_10:liberal
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F     Pr(>F)    
+1     36                         
+2     35  1 24.008 0.00002171 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+########## differenced DV: closest analogue to MPR ##########
+
+=== D d_log_mig with MPR dummies ===
+  N=42  Adj.R2=0.0467  AIC=-50.08
+  (Intercept)                  0.12362  se= 0.12392  t= 0.998  p=0.3253 
+  delta_oadr_10                0.00500  se= 0.00366  t= 1.368  p=0.1800 
+  L_unem                      -0.01106  se= 0.01242  t=-0.891  p=0.3791 
+  L_ln_debt_gdp                0.33967  se= 0.18168  t= 1.870  p=0.0699 *
+  L_POL97                     -0.00118  se= 0.07719  t=-0.015  p=0.9879 
+  POL02                       -0.03733  se= 0.05454  t=-0.684  p=0.4982 
+  EXP04                       -0.02840  se= 0.09399  t=-0.302  p=0.7643 
+  BG(1)=0.5592  BP=0.2403  RESET=0.7177  JB=0.6901  maxVIF=10.1
+
+=== D d_tot_mig with MPR dummies ===
+  N=42  Adj.R2=0.0324  AIC=-56.15
+  (Intercept)                  0.06115  se= 0.12973  t= 0.471  p=0.6403 
+  delta_oadr_10                0.00572  se= 0.00336  t= 1.700  p=0.0980 *
+  L_unem                      -0.00282  se= 0.01326  t=-0.213  p=0.8329 
+  L_ln_debt_gdp                0.39671  se= 0.20184  t= 1.965  p=0.0573 *
+  L_POL97                     -0.05582  se= 0.06571  t=-0.850  p=0.4013 
+  POL02                        0.01309  se= 0.03411  t= 0.384  p=0.7034 
+  EXP04                       -0.00411  se= 0.07758  t=-0.053  p=0.9581 
+  BG(1)=0.6555  BP=0.4251  RESET=0.4563  JB=0.9531  maxVIF=10.1
+
+
+
+########## APPENDIX TABLE: MPR dummies, joint model ##########
+
+                  (1) non-EU       (2) total
+--------------------------------------------
+POL97              0.1946**        0.2273** 
+                     (0.035)         (0.017)
+POL02              0.1096          0.1549** 
+                     (0.113)         (0.027)
+EXP04              0.1296*         0.3174***
+                     (0.055)         (<.001)
+D10 OADR           0.0072***       0.0028   
+                     (0.009)         (0.303)
+--------------------------------------------
+joint F(5,32)            1.92            7.30
+  p                    0.118           <.001
+adj. R2                0.950           0.975
+RESET p                0.174           0.073
+max VIF                 17.9            45.0
+--------------------------------------------
+Trend specification, N = 43. HAC (vcovHAC) p-values in parentheses;
+the joint test is HAC-robust, not the classical F. Coefficients are from
+the model carrying all five indicators, so they differ from the same
+indicator entered singly. *** p<0.01, ** p<0.05, * p<0.10.
+ENL86 and ENL95 estimated but not displayed.
+
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Golden Gate 27.0
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] urca_1.3-4      ARDL_0.2.5      tseries_0.10-63 car_3.1-5       carData_3.0-6   sandwich_3.1-3 
+[7] lmtest_0.9-40   zoo_1.9-0       readxl_1.5.0   
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.7-6     expm_1.0-0       jsonlite_2.0.0   dplyr_1.2.1      compiler_4.6.1   tidyselect_1.2.1
+ [7] msm_1.8.2        stringr_1.6.0    splines_4.6.1    lattice_0.23-1   R6_2.6.1         generics_0.1.4  
+[13] curl_7.1.0       Formula_1.2-6    tibble_3.3.1     pillar_1.11.1    rlang_1.3.0      quantmod_0.4.29 
+[19] stringi_1.8.9    quadprog_1.5-8   aod_1.3.3        cli_3.6.6        withr_3.0.3      magrittr_2.0.5  
+[25] xts_0.14.2       grid_4.6.1       mvtnorm_1.4-2    dynlm_0.3-6      lifecycle_1.0.5  nlme_3.1-170    
+[31] vctrs_0.7.3      glue_1.8.1       cellranger_1.1.0 survival_3.8-9   abind_1.4-8      stats4_4.6.1    
+[37] TTR_0.24.4       tools_4.6.1      pkgconfig_2.0.3 
+
+[mpr_dummies_replication_1977.R completed in 0 s]
+
+
+####################################################################################################
+##  stationarity_bounds_replication_1977.R
+####################################################################################################
+
+data: /Users/samyhamdane/quiet-instruments/diss_replication/Dissertation_Dataset_Final.xlsx 
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+
+*** stationarity_bounds_replication_1977.R FAILED: object 'borrow_gdp' not found
+
+[stationarity_bounds_replication_1977.R FAILED in 0 s]
+
+
+####################################################################################################
+##  sample_start_1977.R
+####################################################################################################
+
+-/                                                                                                            /                                                                                                            -                                                                                                            New names:
+• `` -> `...46`
+
+--- sample 1977-2019 (expected N = 43) ---
+fiscal, OADR, from 1977                  N=43  delta_oadr_10 0.0082 (p <.001)  adjR2 0.956  AIC -70.10  RESET 0.409  maxVIF 13.0
+trend,  OADR, from 1977                  N=43  delta_oadr_10 0.0073 (p <.001)  adjR2 0.949  AIC -63.92  RESET 0.078  maxVIF 6.0
+fiscal, total-DR placebo, from 1977      N=43  delta_dr_10   0.0020 (p 0.155)  adjR2 0.938  AIC -55.28  RESET 0.044  maxVIF 14.0
+fiscal, zero-migration, from 1977        N=43  delta_zm_10   0.0075 (p <.001)  adjR2 0.956  AIC -69.90  RESET 0.211  maxVIF 13.0
+fiscal, EU placebo, from 1977            N=43  delta_oadr_10 0.0030 (p 0.412)  adjR2 0.945  AIC -5.36  RESET 0.252  maxVIF 14.9
+
+--- sample 1978-2019 (expected N = 42) ---
+fiscal, OADR, from 1978                  N=42  delta_oadr_10 0.0077 (p <.001)  adjR2 0.959  AIC -72.17  RESET 0.335  maxVIF 12.7
+trend,  OADR, from 1978                  N=42  delta_oadr_10 0.0068 (p <.001)  adjR2 0.951  AIC -64.72  RESET 0.051  maxVIF 5.9
+fiscal, total-DR placebo, from 1978      N=42  delta_dr_10   0.0011 (p 0.403)  adjR2 0.941  AIC -56.92  RESET 0.038  maxVIF 13.6
+fiscal, zero-migration, from 1978        N=42  delta_zm_10   0.0069 (p <.001)  adjR2 0.958  AIC -71.11  RESET 0.154  maxVIF 12.7
+fiscal, EU placebo, from 1978            N=42  delta_oadr_10 0.0021 (p 0.548)  adjR2 0.946  AIC -6.63  RESET 0.287  maxVIF 14.5
+
+--- sample 1979-2019 (expected N = 41) ---
+fiscal, OADR, from 1979                  N=41  delta_oadr_10 0.0081 (p <.001)  adjR2 0.961  AIC -71.67  RESET 0.617  maxVIF 12.7
+trend,  OADR, from 1979                  N=41  delta_oadr_10 0.0075 (p <.001)  adjR2 0.954  AIC -65.72  RESET 0.223  maxVIF 5.8
+fiscal, total-DR placebo, from 1979      N=41  delta_dr_10   0.0015 (p 0.259)  adjR2 0.941  AIC -55.20  RESET 0.058  maxVIF 13.3
+fiscal, zero-migration, from 1979        N=41  delta_zm_10   0.0075 (p <.001)  adjR2 0.960  AIC -71.15  RESET 0.399  maxVIF 12.6
+fiscal, EU placebo, from 1979            N=41  delta_oadr_10 0.0028 (p 0.425)  adjR2 0.944  AIC -5.55  RESET 0.363  maxVIF 14.3
+
+Contemporaneous controls (1979-2019):
+fiscal, controls at t (not t-1)          N=41  delta_oadr_10 0.0055 (p <.001)  adjR2 0.960  AIC -70.55  RESET 0.302  maxVIF 10.1
+trend,  controls at t (not t-1)          N=41  delta_oadr_10 0.0058 (p <.001)  adjR2 0.955  AIC -65.81  RESET 0.096  maxVIF 4.8
+
+For the record -- 1976 start, debt control dropped (compare like with like):
+fiscal, no debt term, from 1976          N=44  delta_oadr_10 0.0063 (p <.001)  adjR2 0.951  AIC -67.35  RESET 0.246  maxVIF 11.5
+fiscal, no debt term, from 1979          N=41  delta_oadr_10 0.0065 (p <.001)  adjR2 0.952  AIC -64.76  RESET 0.449  maxVIF 11.0
+
+[sample_start_1977.R completed in 0 s]
+
+All output written to /Users/samyhamdane/quiet-instruments/diss_replication/run_all_1977_output.txt 

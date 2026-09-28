@@ -1,0 +1,1046 @@
+                                                                                     713
+
+
+
+
+       SOCIAL SECWaXY PENSIONS
+               BILL 1975
+
+              Report
+              by the
+       Government Actuary
+              on the
+  Financial Provisions of the BUI
+      Presented to Parliament by the Secretary of State for Social Services
+                              by Command of Her Majesty
+                                        February 1975
+
+
+
+
+                                         LONDON
+         HER MAJESTY’S STATIONERY OFFICE
+                                            20p net
+Cmnd. 5928
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                               ISBN 0     10   159280 9
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+         SOCIAL SECURITY PENSIONS BILL 1975                                          7 5
+                                                                                      )
+
+
+ REPORT BY THE GOVERNMENT ACTUARY ON THE FINANCIAL
+                             PROVISIONS OF THE BILL
+
+ To the Right Hon. BARBARA CASTLE, M.P.,
+ Secretary of State for Social Services
+
+ Madam,
+   I submit the following report on the financial provisions of the Social Security
+ Pensions Bill 1975.
+
+    1. The Bill gives effect to the proposals for earnings related pensions which
+ were outlined in the White Paper entitled “Better Pensions” (Cmnd. 5713)
+ published in September 1974, and on which I reported in the Appendix to that
+ White Paper. The proposals embodied in the Bill are described in detail in an
+ explanatory memorandum (Cmnd. 5929) and the main provisions affecting the
+ finances of the scheme are summarised below. The changes are to take effect
+ from dates to be appointed but I understand that the new scheme is intended
+ to start not later than April 1978 and this date has been assumed for the purpose
+ of the estimates.
+
+         Summary of main provisions affecting the National Insurance Fund
+   2. The Bill amends the Social Security Act 1975 to provide for retirement,
+ widows’ and invalidity pensions for employees to be related to the earnings on
+ which contributions have been paid, which for this purpose will be revalued
+ with changes in the general level of earnings. The pension will be calculated in
+ two parts, a basic component corresponding to the fiat rate pension under the
+ present scheme, equal to 100% of earnings up to this level, and an additional
+ component which, when the scheme is fully mature, will be 25% of the employee’s
+ average earnings above the level of the basic component.
+
+    3. Members of occupational pension schemes which fulfil certain require-
+ ments may be contracted out and they and their employers will pay Class 1
+ contributions at reduced rates. In return the occupational scheme will be
+ required to provide a minimum level of pension calculated on a basis similar
+ to that for the additional component of retirement pension under the state
+ scheme, with a widow’s pension at half this rate; the benefits payable from the
+ state scheme will be correspondingly reduced.
+
+   4. The Bill abolishes the contribution option for married women and widows,
+ but provides for special arrangements to be made for women who have already
+ acquired the right to exercise this option when the new scheme starts.
+
+ Contributions
+    5. The general contribution structure under the Social Security Act will be
+ left unaltered, but the lower earnings limit for Class 1 contribution liability
+ will be set at the level, of the basic component of the retirement pension in
+
+                                                 3
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+              force at the beginning of a tax year, or such higher amount as will take effect
+              within the first month of that tax year—£11*60 a week in 1975 terms before
+              rounding. For persons with earmngs above this level contributions will be
+              payable on all earnings up to a limit of about seven times the basic component
+              of the pension, which would be about £80 a week for 1975-76. This compares
+              with the upper earnings limit of £69 a week which will apply under the present
+              scheme.
+
+                 6. The Bill provides for a rate of contribution of 16J%, of wliich 6J% win
+              be payable by the employed earner and 10% by the employer, but pro^ion
+              is made for these rates to be reviewed before the new scheme comes into effect
+              As under the existing Act, this contribution includes 1% for the National
+              Health Service and 0*2% for the Redundancy Fund. For employees who are
+              contracted out, the full rate of contribution will be payable on earnings up to
+              the lower limit but the contribution on higher earnings will be reduced in
+              total by 7%,, becoming 4% for the employee and 5|% for the employer, if the
+              rate of 16    is confirmed. Provision is made for these reductions to be reviewed
+              at intervals of not more than 5 years.
+
+                 7. A further change proposed in the Bill is that contribution liability for all
+              classes of contributors will cease at minimum pension age except that the
+              secondary Class 1 contribution from the employer will continue to be payable.
+
+
+              Treasury supplement
+                8. The National Insurance Fund will receive a Treasury supplement equal
+              to 18% of the contribution income which for this purpose will be calculated
+              before allowing for the reductions in rates of contribution for employees who
+              are contracted out.
+
+
+              Benefits
+                 9. For those attaining minimum pension age more than one year after the
+              start of the new scheme the retirement pension, in addition to the basic com-
+              ponent corresponding to the flat-rate pension under the present scheme, will
+              normally include an additional component based on the earnings on which
+              Class 1 contributions have been paid. In calculating the amount of the pension
+              the earnings in a tax year will be revalued in terms of the general level of
+              earnings in the last complete tax year before the attainment of minimum
+              pension age. The Bill defines the “qualifying earnings factor” as the annual
+              equivalent of the lower earnings limit. In order to qualify for the basic component
+              of pension, it is necessary to have paid contributions on earnings of at least
+              this factor in a requisite number of years. The additional component arising
+              from a tax year in which contributions were paid will be calculated as l|7o
+              of the excess, after revaluation, of the earnings in that tax year over the qualifying
+              earnings factor for the last complete tax year before pension age. Only years
+              after the starting date of the new scheme will be taken into account, so that the
+              level of the additional components of pension awarded will rise year by year
+              but will not reach the full rate of 25% of average earnings in the relevant range
+              for 20 years. Where the number of years exceeds 20, the pension will be based
+              on the 20 best years.
+                                                               4
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                                                                     717
+   10. For married women the additional component of pension calculated on
+ her own contributions will be payable even where she chooses to draw a pension
+ on the basis of her husband’s insurance rather than the basic component of
+ pension calculated on her own contributions.
+
+   11. A widow retirement pensioner will be able to draw an additional com-
+ ponent based on her own contributions as well as any additional component
+ calculated on her late husband’s record; the sum of the additional components
+ will, however, be limited to the maximum that could have been earned by an
+ individual reaching minimum pension age at the time when the widow first
+ becomes entitled to the two pensions. A man whose wife dies when she is
+ over 60 and he is over 65 will be entitled to both additional components in
+ the same way as a widow.
+
+    12. Both the basic component and the additional component of pension
+ will be subject to reduction where contributions have not reached the minimum
+ level in the requisite number of years but where the conditions have been
+ satisfied in at least 20 years and in each of the other years the contributor
+ concerned was, within the meaning of regulations, precluded from regular
+ employment by responsibilities at home, no reduction will be made.
+
+    13. The requirement under which a woman who marries before age 55 needs
+ to contribute for at least half the years between marriage and age 60 in order
+ to qualify for any pension on her own contribution record (the “half-test”)
+ will be abolished.
+
+    14. Subject to the contribution conditions being fulfilled, widowed mothers’
+ allowances and widows’ pensions awarded after the first year of the new scheme
+ will also include an additional component calculated in the same way as the
+ additional component of a retirement pension but on the basis of the earnings
+ level and the qualifying earnings factor applying to the last complete tax year
+ before the death of the husband. Where a widow’s pension is awarded to a
+ widow who was under age 50 when her husband died or when widowed mother’s
+ allowance ceased, both the basic component and the additional component
+ will be scaled down in the same way as the corresponding flat-rate benefit
+ under the present scheme.
+
+    15. Invalidity pensions awarded after the first year of the new scheme will
+ also include an additional component calculated in the same way as the
+ additional component of a retirement pension except that the benefit will be
+ based on the earnings level and qualifying earnings factor applying to the last
+ complete tax year before the invalidity pension becomes payable.
+
+    16. The limiting age for the higher rate of invalidity allowance is to be raised
+ from 35 to 40 and that for the middle rate from 45 to 50.
+
+   17. The Bill makes no changes to the provisions for short-term benefits
+except that sickness and unemployment benefit will in future be payable to
+married women at the same rate as to other contributors in place of the reduced
+rate payable at present.
+                                                5
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+              18. The basic component of the retirement pension, widow’s pciision
+           widowed mother’s allowance and invalidity pension will be reviewed each year
+           and increased in line with the movement of earnings or prices, whichever is
+           increasing the faster; this continues the existing arrangements for the corres-
+           ponding flat-rate benefits under the present scheme. The additional components
+           will also be reviewed each year and increased in line with the movement of
+           prices.
+
+             19. Graduated contributions paid under the present scheme which wll
+           cease on 6 April 1975 have secured a right to a graduated retirement pension
+           on the basis of a fixed amount for each unit of contribution. The Bill provides
+           for regulations to bring these amounts into the annual review of benefits; I
+           understand that it is proposed to uprate these amounts in order to maintain
+           their value in relation to prices as from the beginning of the new scheme.
+
+
+           Contracting out
+              20. Contributions for contracted out employees will be at the reduced rates
+           set out in paragraph 6 above and in return the occupational scheme will be
+           required to provide personal pensions at a rate not less than the “guaranteed
+           minimum pension” as defined in clause 33 of the Bill. The guaranteed minimum
+           pension will be calculated as a percentage of the earnings on which the reduced
+           rates of contribution had been paid. As explained in paragraph 33, this percent-
+           age corresponds to the rate of accrual of the additional component of pension
+           under the state scheme and will be 1      of earnings for each year for employees
+           within 20 years of minimum pension age at the start of the new scheme, with
+           lower percentages for younger employees. The pension calculated on this basis
+           in respect of a period of contracted out service during a tax year will be revalued
+           in line with the change in the general level of earnings between the year in
+           question and the last complete tax year before the attainment of minimum
+           pension age.
+
+              21. The additional component of a retirement pension payable under the
+           state scheme to a person who has been contracted out will be reduced by the
+           amount of the guaranteed minimum pension. The guaranteed minimum
+           widow’s pension under an occupational scheme will be at half the rate of the
+           husband’s guaranteed minimum pension and will similarly be deducted from
+           the additional component of pension payable to the widow under the state
+           scheme.
+
+             22. Occupational schemes will not be required to pay any increases on
+           pensions in payment in respect of contracted out employees, however, and the
+           amount of such increases payable under the state scheme will be calculated on
+           the pension that would have been payable if the employee concerned had not
+           been contracted out.
+
+              23. Where an employee leaves contracted out employment before normal
+            pension age after less than 5 years’ service, the Bill provides for a payment
+            to be made to the National Insurance Fund, at the option of the employer,
+            equal to the total contribution reductions enjoyed during the period of contracted
+            out service, in return for which the liability for a guaranteed minimum pension
+                                                             6
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+  under the occupational scheme will be cancelled and the employee fully reinstated
+  in the state scheme. There is also provision, where the employee leaves con-
+  tracted out employment at any time, for the liability of the scheme in respect
+  of increases in the guaranteed minimum pension arising from changes in the
+  general level of earnings after the year in which service is terminated up to
+  award to be limited to increases at a rate of 5% per annum, with the state
+  scheme meeting the balance, in return for a payment at the time that the service
+  is terminated.
+
+
+                                 The basis of the estimates
+
+  Level of earnings and benefits
+     24. In an earnings-related scheme, the actual amounts of income and outgo
+  in future years will naturally depend on the level of earnings from time to time.
+  However, estimates of income and outgo which made explicit allowance for
+  future rises in earnings would show steadily increasing amounts which would
+  be meaningful only if set against corresponding estimates of total wages and
+  salaries, gross national product, etc., in future years. For this reason the trends
+  over the years are best illustrated by expressing all future amounts in equivalent
+  present-day terms. Estimates of benefit expenditure have thus been shown in
+  terms of a basic component of pension of £11-60 a week. In estimating rates of
+  contributions the yields have been calculated on earnings assumptions
+  consistent with this basis.
+
+     25. The estimates should thus be regarded as making explicit allowance for
+  future increases in earnings and the consequential effects on contributions and
+  benefits with the resulting amounts of income and outgo in future years in
+  money terms being discounted by reference to the assumed level of the basic
+  component of pension in the year in question and the level at the base date,
+  so as to produce meaningful figures expressed in present day terms. Apart from
+  the adjustments for the factors described in paragraph 26, the figures expressed
+  in present-day terms will be the same whatever the projected rate of inflation.
+
+    26. As the effect of inflation on contributions and benefits is broadly self-
+ balancing, the rate of contributions required to support the benefits, expressed
+ as a percentage of earnings, is not sensitive to the rate of inflation. Indeed, if
+ benefits and contributions were to rise exactly in step with earnings, both the
+ estimates expressed in present-day terms and the rate of contribution would
+ be wholly independent of this factor. In practice, however, the time lag before
+ any changes are reflected in the flow of receipts or payments varies considerably.
+ Thus for employees with earnings below the upper limit contributions will
+ increase continuously with rising earnings but benefits will remain fixed between
+ upratings and both the earnings limits and flat rate Class 2 and Class 3 con-
+ tributions will be adjusted only at annual intervals. Furthermore, although the
+ basic component of pension will be increased in line with earnings, the addi-
+ tional component and the graduated pensions under the present scheme will be
+ increased in line with prices. Thus to the extent that earnings increase faster
+ than prices the cost of the latter benefits will rise more slowly than the income
+ from contributions.
+                                                 7
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+              27.              To take account of these factors some assum
+           the rate of increase in earnings. On Government instructions it has again been
+           assumed for purposes of illustration that in the long term earnings will increase
+           at 8% per annum. For the first 5 years of the scheme I have also been instructed
+           to give estimates of contributions on the alternative assumption of a rate of
+           increase in earnings of 12% per annum. I have further been instructed to
+           assume that real earnings, after taking account of changes in the level of prices,
+           will increase at 3% per annum. For the purpose of the calculations it has been
+           assumed that the rates of increase would apply from the beginning of 1977
+           onwards.
+
+
+            Upratings of benefits
+              28.               The National Insurance Act 1974 introduc
+           that at each annual review retirement pensions and other long term benefits
+           should be increased by amounts at least sufficient to retain their value in relation
+           to earnings and this provision will be carried over to the basic components of
+           pensions under the Bill. Because of the difficulty of making precise forecasts
+           of the movement of earnings, the proposed increases under the Social Security
+           Benefits Bill, which are to take effect from April 1975, were fixed on the basis
+           of the movement of earnings over the most recent period of 9 months for which
+           statistics were available, 9 months being the interval from the previous uprating
+           in July 1974 to April 1975. Thus the rise in earnings from November 1973 to
+           August 1974 was-used. It has been assumed that this procedure will continue
+           to be followed, so that, at future upratings, the pension will be increased to
+           correspond with the earnings level 8 months earlier, the pension of £11*60 being
+           taken to correspond with the August 1974 earnings level. This differs from the
+           assumptions in earlier reports, including the Appendix to “Better Pensions”,
+           that benefits at each upratiiig would be increased in line with the movement of
+           earnings since the date when the previous uprating took effect. Reference to the
+           effect of this change on the finances of the scheme is made in paragraph 52
+           below. It has also been assumed that upratings will take place at annual intervals
+           in the middle of the financial year.
+
+
+           Married Women and Widows
+              29.              The Bill abolishes the contribution option fo
+           date of commencement of the new scheme. The special provisions which wii!
+           apply for existing married women and widows will be the subject of furthei
+           consultation by the Government with interested organisations. For the purpose
+           of the estimates it has been assumed that these provisions will permit such
+           women to continue to elect to pay primary Class 1 contributions at the reduced
+           rate of 2%, or to pay no Class 2 contributions if self-employed, and to forgo the
+           right to benefits on their own insurance. In view of the improvements under
+           the Bill in the benefits for married women, however, it has been assumed
+           arbitrarily that some half million, i.e. about 15% overall of those who on
+           present trends would have exercised the contribution option if the present
+           scheme had continued, will elect to be full contributors when the new provisions
+           take effect.
+                                                             8
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+   Self-employed and voluntary contributors
+      30. The Bill makes no major changes in the provisions for self-employed and
+   voluntary contributors, who will secure title to the basic component of retire-
+   ment pension and other flat rate benefits through the payment of the flat rate
+   Class 2 and Class 3 contributions. For the purpose of the estimates it has been
+   assumed that the rates of these contributions will be increased in April of each
+   year in line with the basic component of the pension, the contribution rates
+   which will apply from April 1975 corresponding to the pension rate of £11-60.
+   It has also been assumed that the earnings limits for Class 4 contributions for
+   the self-employed will be increased annually in line with the movement of
+   earnings.
+
+   lumbers contracted out
+     31. The number of employees who will be contracted out cannot be forecast.
+   The Fourth Survey of Occupational Pension Schemes showed that in 1971
+   about 8 million employees were members of final salary pension schemes and
+   that the great majority of them were covered for benefits of not less than
+   one-eightieth of pensionable salary for each year of service and could thus
+   meet the main qualifying condition for contracting out in regard to personal
+   pension. Other schemes might be converted to this basis or new schemes set
+   up to meet the requirements. It cannot be assumed, however, that all employers
+   operating schemes that could meet the necessary conditions would choose to
+   contract out and the finances of the scheme are therefore illustrated in this
+   report on alternative assumptions about the number contracted out.
+
+   Rate of contribution reduction for the contracted out
+     yi. For employees in occupational schemes who are contracted out the joint
+   rate of contribution payable on earnings above the lower limit will initially be
+   7% lower than the rates for employees who participate fully in the scheme.
+   The Bill provides for the rate of contribution reduction to be reviewed at
+   intervals not exceeding 5 years, following a report by the Government Actuary,
+   so that account can be taken of any changes in the cost to occupational pension
+   schemes of providing the guaranteed minimum pensions for which the schemes
+   are taking over liability from the state scheme.
+
+     33. Apart from changes in factors such as interest and mortality, the reviews
+  will need to take account of the gradual fall over the years in the average rate
+  of accrual of guaranteed minimum pensions. This feature arises because for
+  persons within 20 years of minimum pension age at the commencement of
+  the new scheme the additional component of the pension will accrue at the
+  rate of 11 % of earnings above the level of the basic component for each year of
+  contributions and will thus build up to 25 % where there is 20 years to minimum
+  pension age. For younger employees this 25% pension may be regarded as
+  accruing uniformly over the period between the commencement of the new
+  scheme or the sixteenth birthday if later and the attainment of pension age.
+  For example, for a man aged 25 or woman aged 20 in 1978 the pension may
+  be taken as accruing at f % a year over 40 years. The guaranteed minimum
+  pension for which occupational schemes are taking over liability will also
+  accrue at these rates. Thus as employees who were at the older ages when the
+  new scheme commences gradually retire and are replaced by new entrants at
+
+                                                 9
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+         the beginning of their working life the average rate of accrual for all contracted
+         out employees will gradually fall and the reductions in the rates of contribution
+         must also diminish. Although contracted out schemes will be required to
+         provide a rate of accrual of 1J% of earnings a year for their younger members
+         as well as for persons who are within 20 years of pension age at the commence-
+         ment of the new scheme, this will result in additional benefits for the younger
+         employees concerned and it would clearly be inequitable if these were reflected
+         in the rates of reduction in contributions to the state scheme, which must
+         always be based on the average cost of providing the pensions which con-
+         tracted out employees are forgoing under the state scheme.
+
+
+          Technical assumptions
+            34. The estimates have been based upon the most recent projection of the
+          total population of Great Britain prepared by my department in consultation
+          with the Registrars General, based on estimates of the population at mid-year
+          1973. Full particulars of these projections and of the underlying assumptions
+          have been published by the Office of Population Censuses and Surveys under
+          the title “Population Projections No. 4, 1973-2013”. In other respects, except
+          in regard to the assumptions about retirement, only minor adjustments have
+          been made to the assumptions which were set out in the appendix to my report
+          on the Social Security Bill 1972 (Cmnd. 5143) in the light of more recent statistics,
+          "n particular allowance has again been made for an upward trend in the
+          proportions of young people remaining in full-time education above minimum
+          school leaving age and for further growth in the proportions of niarried women
+          going out to work on the basis set, out in the earlier report.
+
+             35. The proportion of persons assumed to be drawing pension within 5 years
+          after minimum pension age has been substantially increased as a result of the
+          changes made to the earnings rule in the Social Security Benefits Bill. Allowing
+          also for some further tfend towards earlier retirement the ultimate proportion
+          of men between age 65 and 70 who are retired has been revised to 97%. The
+          corresponding ultimate level for women contributors between age 60 and 65
+          has been revised to 98%.
+
+             36. The claim rates for sickness and invalidity benefit together have gradually
+           increased over recent years and the assumed numbers of weeks of benefit per
+           annum adopted in the earlier report have therefore been increased by approxi-
+           mately 2%. Furthermore, it has been possible to derive a more accurate split
+           between sickness and invalidity, so that now approximately 53% of the total
+           weeks is assumed to attract sickness benefit and the remainder invalidity benefit.
+           On Government instructions the rate of unemployment has again been assumed
+           to be 2i%.
+
+              37. In order to estimate the effects of contracting out, assumptions have to
+           be made about the distribution by age and sex of the employees concerned and
+           about their earnings. In 1972-73, the most recent year for which detailed statis-
+           tics are available, some 7 million persons were contracted out under the present
+           scheme. Although this number will include a significant proportion of members
+           of schemes providing relatively low levels of benefits who would not be eligible
+           to contract out under the newarrangements, it is to be expected that a substantial
+                                                            10
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+   proportion of those contracted out under the present scheme will be contracted
+                                                                                               723
+   out under the new scheme. Accordingly, in the absence of other data, the
+   financial effects of contracting out have been estimated on the basis of statistics
+   of the distribution by age and sex and the average earnings in the relevant range
+   relating to persons contracted out under the present scheme. Estimates are
+   given on alternative assumptions about the number contracted out initially
+   and in each case it has been assumed that the number will increase over the
+   years in line with the expected growth of the working population.
+                                                      TABLE 1
+
+                                           Estimated cost of benefits
+    {Expressed in relation to the cost of the present scheme on the basis of a standard
+                           rate of pension pf £11*60 per week)
+                                                                                                       £ million
+
+                                           1978-79 1979-80 1983-84 1988-89 1993-94 1998-99 2003-04 2008-09
+
+    Retirement Pensions
+
+    Present scheme                         4,760    4,787    4,836     4,851   4,862   4,751   4,667       4,728
+
+    Extra cost:
+      (a) with 4 million contracted out       13      40         147    333     597     922    1,323       1,795
+      \b) with 8 million contracted out       13      39         133    276     471     718    1,052       1,480
+    Proposed scheme:
+      (a) with 4 million contracted out    4,773    4,827    4,983     5,184   5,459   5,673   5,990       6,523
+      lb) with 8 million contracted out    4,773    4,826    4,969     5,127   5,333   5,469   5,719       6,208
+
+    Widows’ Benefits
+
+    Present scheme                           390      389        385     375    372     382     399         409
+    Extra cost:
+      (a) with 4 million contracted out                           10      38      76     120     163         189
+      (b) with 8 million contracted out                            8      31      63     102     141         166
+    Proposed scheme:
+      (a) with 4 million contracted out      390      389        395    413     448     502      562         598
+      lb) with 8 million contracted but      390      389        393    406     435     484      540         575
+
+    Invalidity Benefits
+
+    Present scheme                           411      408        413     413     413    426      448         474
+    Extra cost                                 4        5         25      62     108     158     210         247
+    Proposed scheme                          415      413        438     475     521     584     658         72!
+
+    Unemployment, Sickness and
+    Maternity Benefits
+
+    Present scheme                           748      750        768     783     788     797     817         841
+    Extra cost                                10       14         50      68      85     100     118         136
+    Proposed scheme                          758      764        818     851     873     897     935         977
+    Death Grant                                16      16         18      19      19      19      19          19
+    Industrial Injuries Benefits             215      214        211     206     202     200     200         198
+
+
+    Total Cost of Benefits
+
+     Present scheme                         6,540   6,564    6.631     6,647   6,656   6,575   6,550       6,669
+     Extra cost:
+      {a) with 4 million contracted out       27       59        232     501     866   1,300   1,814       2,367
+      (b) with 8 million contracted out       27       58        216     437     727   1,078   1,521       2,029
+     Proposed scheme:
+       (a) with 4 million contracted out    6,567   6,623    6,863     7,148   7,522   7,875   8,364       9,036
+       (b) with 8 million contracted out    6,567   6,622    6,847     7,084   7,383   7,653   8,071       8,698
+
+
+                                                            11
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                                  Cost of benefits
+            38. Table 1 shows estimates of benefit expenditure for the first 30 years of
+          the new scheme in terms of a basic component of pension of £11*60 a week
+          and the corresponding rates for other benefits under the Social Security Benefits
+          Bill which will take effect in April 1975. Estimates of the cost of the present
+          scheme are shown for the purposes of comparison,
+
+            39. The table shows that on the basis of constant benefit rates relatively little
+          change in expenditure is expected during the next 30 years under the present
+          scheme. The rising extra expenditure over the years under the new scheme is
+          mainly attributable to the gradual increase in the earnings related additional
+          components of pension, but also includes the cost of extending protection
+          against the effects of inflation to the graduated pension entitlements secured
+          by the payment of graduated contributions under the present scheme and the
+          cost of abolishing the “half-test” for married women.
+
+             40. Short term benefits are not altered by the Bill, apart from the abolition of
+          the reduced rates of benefit for married women. The extra costs shown are
+          partly due to this change in benefit rates but also reflect the increase in the
+          proportions of married women in employment who will be fully insured. The
+          latter increase is due both to the reduction in the number exercising the option
+          at the commencement of the new scheme which has been assumed and the
+          gradual replacement of the present generation of married women by persons
+          marrying after the commencement of the new scheme who will be required to
+          pay full contributions with corresponding title to benefits.
+
+                                                Rates of contribution
+             41. Table 2 shows estimates of the rates of contribution required over the
+          years to balance income and outgo on alternative assumptions about the number
+          contracted out and, for the early years, about the rate of increase in earnings.
+          The rates represent the total percentage contributions payable by employees
+          and employers jointly on all earnings up to the upper limit for persons who are
+          not contracted out. They include a contribution of 1 % towards the cost of the
+          National Health Service and of 0*2% for the Redundancy Fund. The contribu-
+          tions have been calculated on the basis of the projections of benefit costs
+          shown in Table 1 and corresponding estimates of the yields of contributions
+          based on consistent assumptions about the level of earnings. Allowance has
+          been made for costs of administration rising from £250 million in 1978-79
+          to £280 million in 2008-09 and also for transfers to Northern Ireland and
+          miscellaneous expenditure of some £60 million a year, and credit has been
+          taken for interest on the balance of the National Insurance Fund of £140 million
+          in all future years. Allowance has also been made for payments to the state
+          scheme in respect of employees leaving contracted out employment before
+          normal pension age (see paragraph 23), which for 8 million persons contracted
+          out rises from £15 million in 1978-79 to £75 million in 1983-84 and £85 million
+          in 1988-89 and subsequent years. All these figures are shown after adjustment
+          to a basis consistent with the estimates of benefit expenditure in Table 1.
+
+            42. The Bill provides that the reduction in the joint rate of contribution on
+          earnings above the lower limit for members of occupational pension schemes
+                                                           12
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                                                         725
+      who are contracted out will be 7% initially, and it has been assumed that this
+      rate will apply for the first 5 years of the scheme. As explained in paragraph 33,
+      the reduction must be expected to fall over the years and in calculating the
+      rates of contribution in Table 2 it has been assumed that there will be diminution
+      at 5-yearly intervals from 7% initially to 4J% in 2008-09.
+
+                                                  TABLE 2
+
+     Estimated joint rates of contribution in respect of employed earners {before
+     reduction for those in contracted out employment) which would be required in
+     each of the first 5 years and thereafter, on average, during each 5 year period
+                                          shown
+
+                                      Rate of contribution (employed earner and his employer
+                                                        jointly) assuming:—.
+
+                                                         4 million       6 million    8 million
+                Year                    No                persons         persons      persons
+                                    contracting         contracted      contracted   contracted
+                                        out                 out             out          out
+                                         %                  /o              /o              y
+                                                                                            /o
+
+                                              Assumed rate of increase in earnings 8% pa
+              1978-                     79
+                                        14*2 15*4                          16-1            16-7
+              1979-                     80
+                                        14-3 15-5                          16-1            16-7
+              1980-                     81
+                                        14-5 15-7                          16*3            16-9
+              1981-                     82
+                                        14*6 15-7                          16-3            16-9
+              1982-                     83
+                                        14*6 15-7                          16-3            16-9
+        1983-84 to 1987-88              14-                15-             16-2      7
+                                                                                     16*8
+        1988-89 to 1992-93              15-                16-             16-5      3
+                                                                                     16-
+        1993-94 to 1997-98              160                16-6            16-       17*2
+        1998-99 to 2002-03              16-                17*0            17-       7
+                                                                                     17-
+        2003-04 to 2007-08              17-                17-7            17-8      5
+                                                                                     17-9
+                                             Assumed rate of increase in earnings 12% pa
+              1978-                    79
+                                       13-  15-0                           15-7      8
+                                                                                     16-3
+              1979-                    80
+                                       13*9 15-1                           15-7      16*3
+              1980-                    81
+                                       14-  15-3                           15-9      1
+                                                                                     16-5
+              1981-                    82
+                                       14-2 15-3                           15-9      16-5
+              1982-                    83
+                                       14-2 15-3                           15-9      16-5
+
+    Note: The contributions include 1-0% for the National Health Service and 0-2% for the
+          Redundancy Fund.
+
+       43. Table 2 shows the increases in contributions which would be required
+    over the years as the expenditure on the additional component of pension
+    gradually builds up. In the early years, however, the extra expenditure compared
+    with the present scheme would be relatively small, and as the scheme is to
+    continue to be financed on the pay-as-you-go principle with contributions
+    set at the levels required to produce income to balance current expenditure
+    the income required initially would be little higher than the yield of contribu-
+    tions and Treasury supplements under the present scheme.
+
+       44. The provisions for contracting out will, however, have an important
+    effect on the finances of the new scheme. The lower rates of contribution which
+                                                   13
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+           will be payable in respect of contracted out employees will lead to an immediate
+           loss of income which has to be made good by setting a higher general contribii-
+           tion rate, but the corresponding saving in benefit expenditure will occur many
+           years later when the employees concerned come to retire. Over the years, the
+           saving in benefit expenditure will gradually build up and may ultimately exceed
+           the loss of contribution income. In this way the effect of contracting out is to
+           require a higher initial rate of contribution but to moderate the increases
+           which will be needed later and will thus tend to equalise contribution rates
+           over the years. These effects are clearly demonstrated in Table 2, which shows
+           that the rate of contribution required initially will vary greatly according to
+           the number contracting out but that if this number remains fairly stable over
+           the years there is relatively little effect on the rates of contribution required
+           by the end of 30 years. A comparison of the estimates for the first 5 years on
+           the basis of rates of increase in earnings of 8% and 12% respectively also shows
+           how the rate of contribution required will depend on the rate of increase in
+           earnings. Further reference to the effect of variations in this assumption is
+            made in paragraph 49 below.
+
+               45. The Bill provides for an initial rate of contribution of 16J% but provision
+            is made for the rate to be reviewed before the start of the scheme so that
+            account can be taken of the latest indications of the number likely to contract
+            out, the rate of increase in earnings, the level of unemployment and other
+            factors. It is clear, however, that whatever the rate of contribution needed
+            initially increases will be required from time to time for many years ahead,
+            and on the assumptions made the rate required after 30 years would be in the
+            region of 18% to 18|%.
+
+
+            Analysis of contribution income
+              46. Table 3 shows the yield of contributions for 1979-80, the first year in
+            which a full year’s income will be received at the new rates on the assumption
+            that the scheme starts in April 1978. The estimates are shown on the basis
+            of the. level of earnings consistent with the estimates of benefit expenditure
+            in Table 1 on the long term assumption that earnings increase at a rate of
+            8% per annum.
+
+
+
+
+                                                              14
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                            TABLE 5
+                                                                                     111
+  Contribution income in 1979-80 on the basis of a standardjoint rate of contribution
+ for employed earners of 16J% and the level of earnings consistent with the
+                              estimated cost of benefits in Table 1
+                                                                                      £ million
+
+                                                          National       National
+                                                         Insurance        Health     Redundancy
+                                                           Fund           Service       Fund
+
+
+  Class 1:
+  Before reductions for contracting out:
+    Primary (employed earners)                             2,476           172
+    Secondary (employers etc)                              3,985           260           87
+
+    Total      •••                                         6,461           432           87
+
+  Less reductions:
+    Primary:       {a) with 4 million contracted out         216
+               \b) with 8 million contracted out             432
+    Secondary: (a) with 4 million contracted out             405
+               Qy) with 8 million contracted out             810
+
+
+  Total Class 1:
+    (fl) with 4 million contracted out                     5,840           432           87
+    \b) with 8 million contracted out                      5,219           432           87
+
+  Class 2      •••      •••    •••   •••                     153             13
+
+  Class 3      •••      •••    •••   •••                       13             1
+
+  Class 4               •••                                    58             5
+
+  Total contributions:
+    {a) with 4 million contracted out                      6,064           451           87
+    {b) with 8 million contracted out                      5,443           451           8/
+
+
+
+    47. The amount of Treasury supplement corresponding to the contribution
+  yields shown in the table is £1,203 million.
+
+  The effect of variations in the assumptions
+    48. Future births. The rates of contributions required at any time for a scheme
+  financed on the pay-as-you-go principle will depend on the relative numbers
+  of beneficiaries and contributors which in turn will be largely determined by the
+  age structure of the population. The population projection which has been
+  used for the estimates presented in this report is considered to be suitable for
+  the purpose of illustrating the finances of the scheme and the contribution
+  rates likely to be required, but it must be recognised that there can be no
+  certainty in projections of the population. In particular, it is difficult to predict
+  the number of future births with confidence, and calculations have therefore
+  been made to show the effect of making an alternative assumption as to future
+  fertility rates. Table 4 shows the effect of a 10% variation in fertility rates
+  compared with the assumption on which the estimates are based. It should be
+                                                 15
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+          noted that a reduction of this order will imply rates averaging some 5% below
+          replacement level which in the longer term would lead to a declining population.
+          The fable shows that the effect of a change in the assumptions over the period
+          for which estimates are shown would be relatively small, since future births
+          cannot have a significant effect on the number of contributors over the next
+          20 years whilst the effect on the numbers of pensioners would be deferred for
+          over 60 years. Further reference to the effect of demographic factors in the
+          more distant future is made in paragraph 56 below.
+
+             49. Rate of increase in earnings. Table 4 shows the effect of a change of
+          1 % in the rate of increase in earnings assumed. The effect of this factor in the
+          early years of the scheme is also brought out in Table 2 where estimates are
+          shown for the rates of contribution required for rates of increase in earnings
+          of both 8% and 12% per annum. Provided that upratings continue at annual
+          intervals, a higher rate of increase in earnings leads to a reduction in the rate
+          of contribution required because the yield of a given contribution rate will
+          rise with the increase in earnings, but there is no corresponding increase in the
+          cost of benefits until the next uprating. In projecting this effect to high rates of
+          increase in earnings, however, it should be borne in mind that if benefits were
+          to be increased more frequently than yearly there would be a corresponding
+          increase in expenditure and in the rates of contribution required.
+
+             50. Margin between the rate of increase in earnings and prices. The additional
+          components of pension will be uprated after award in line with the movement
+          of prices, so as to protect their purchasing power, and graduated pensions secured
+          through the payment of graduated contributions under the present scheme will
+          also be increased in line with prices. To the extent that earnings rise faster than
+          prices the expenditure on these benefits will rise more slowly than the yield of
+          contributions and this factor will be reflected in the rates of contribution
+          required. The estimates have been based on the assumption of a rate of increase
+          in real earnings of 3 % per annum and the table shows the effect of a variation
+          of 1 % in the rate assumed.
+
+             51. Unemployment. The estimates have been based on a rate of unemploy-
+          ment of 2| %, currently equivalent to a total number registered unemployed,
+          including temporarily stopped, of about 575,000. The effect of a fluctuation of
+          |-% (or some 115,000 in current terms) in the rate assumed is also shown in
+          Table 4.
+
+
+
+
+                                                            16
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                                                TABLE 4
+
+                              Ejfect of variations in the assumptions                     729
+                                                      Change in rates of contribution in year
+
+                                              1978-79         1988-89       1998-99       2008-09
+                                                 °/
+                                                 /o              °/
+                                                                 /o             %               y/o
+     Change in assumption:
+
+       ± 10 % in rates of fertility                                          i“0‘2         TO-5
+
+       ±1% in rate of increase in
+           earnings                            =F0-1           TO-1                        TO-1
+
+       ±1% in rate of increase in real
+           earnings                                                          TO-2          +0-4
+       ±1% in rate of unemployment...          ±0-25           ±0-25         ±0-25          ±0-25
+
+
+
+     Comparison with estimates in '‘^Better Pensions^'
+       52. The rates of contribution shown in Table 2 above, on the assumption
+     of 8 % per annum earnings increase, are on a comparable basis with the estimates
+    given in Table 2 of the Appendix to “Better Pensions” but show increases on
+    the earlier estimates of about f % for the first few years of the scheme falling to
+    nil after 30 years. The main reason for these increases is the change in the
+    method of determining the benefit increases at successive upratings fOr which
+    allowance has been made.. For the estimates in “Better Pensions” it was
+    assumed implicitly that benefits at each uprating would be increased from the
+    £10 rate which took effect in July 1974 in proportion to the rise in the general
+    level of earnings from that date. As explained in paragraph 28, however, the
+    present report allows for the method which was subsequently adopted in
+    practice, which may be stated as follows: that benefits will rise from the £10
+    pension level in line with the movement of earnings from November 1973 up
+    to a date 8 months before the effective date of the uprating in question. Between
+    November 1973 and July 1974 earnings rose at a rate of about 20% per annum
+    so that substituting this period for the 8 months preceding the date of the
+    uprating in the period over which the increase in earnings is measured will
+    result in a higher rate of benefit than on the basis previously assumed once the
+    rate of increase in earnings falls below 20%. If the rate of increase in earnings
+    falls ultimately to 8% per annum the basic component of pension brought
+    out would be some 7|% higher in relation to earnings than the pension in
+    July 1974, with a corresponding increase of nearly | % in the rate of contribution
+    required.
+
+       53. Other factors leading to an increase in the rate of contribution include
+    the relaxation of the earnings rule under the Social Security Benefits Bill which
+    adds about i% initially and the increase in the rate of contribution reduction
+    for the contracted out from 6.J% assumed for the “Better Pensions” estimates
+    to 7% for the first 5 years of the scheme which adds about 0-2% initially with
+    8 million contracted out with correspondingly lower percentages if the number is
+                                                      17
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+           no higher than 6 million or 4 million. These increases are partially offset by tk
+           income from payments to the scheme resulting from the facility for occupational
+           schemes to buy back their liability in respect of pre-award increases in excess
+           of a fixed rate of 5 % per annum in the pensions for early leavers, which may be
+           expected for many years to exceed the corresponding increase in expenditure
+           on pensions which will build up only slowly, and by the net effect of revisions
+           in the earlier estimates.
+
+              54.               A further important factor accounting for ch
+           tribution is the assumption in regard to the contribution option for married
+           women and widows. As stated in “Better Pensions”, the estimates were based
+           on the assumption that the option for long term benefits would be abolished
+           from the start of the new scheme but that an option to forgo short term sickness
+           and unemployment benefits in return for a reduced rate of contribution would
+           remain as a permanent feature of the scheme. The Bill, however, provides for
+           the contribution option to be wholly abolished for women who had not married
+           before the starting date of the new scheme. When such women marry, they will
+           be required to pay the normal rates of contribution and to be fully insured for
+           all benefits, but it has been assumed for the purpose of the estimates in this
+           report that the option will remain, as under the present scheme, for existing
+           married women and widows. The effect of this change as compared with “Better
+           Pensions” estimates is to add about 0*2% to the rates of contribution required
+           initially, when the loss of contribution income will exceed the saving in benefit
+           expenditure, but in the longer term the retention of the option for the present
+           generation of married women will result in a slower build up in the expenditure
+           on pensions and lower rates of contribution will be required. This is the main
+           reason why the increases in contributions over the earlier estimates due to the
+           other factors mentioned above are wholly offset by the end of 30 years.
+
+
+           Further changes to be expected after 2008-09
+              55. Detailed estimates have been shown for the first 30 years of the new
+           scheme but the improvements in pensions provided for under the Bill will not
+           be fully reflected in the expenditure at the end of this period. Although after
+           20 years the additional components of pension will be awarded at the full 25%
+           rate, the pensioners after 30 years will still include many whose benefit is based
+           on lower rates because they retired during the first 20 years. Also the provision
+           whereby the additional component is calculated on the basis of earnings in
+           the best 20 years means that the average level of awards will continue to increase
+           gradually for many years. Furthermore, the assumption that married women
+           and widows at the start of the new scheme will retain the right to exercise a
+           contribution option and that the great majority will choose to rely on benefits
+           payable on their husbands’ insurance, means that it will be well beyond 30 years
+           before the majority of married women and widow retirement pensioners come
+           to consist of persons who have paid full contributions throughout their periods
+           of employment.
+
+             56. Apart from the level of pensions in payment, however, the rates of
+           contribution required at any time will depend on the relative numbers of
+           pensioners and contributors. Changes in numbers of births will first affect the
+                                                            18
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+     numbers in the working population but in time will be reflected in the numbers
+     of pensioners so that even if there were no changes in the level of benefits,
+     fluctuations over the years in the rates of contribution required must be expected.
+     Estimates of rates of contribution more than 30 years ahead, however, will
+     depend increasingly on the level of future births whilst assumptions about
+     factors such as the proportion of married women in employment, the ages on
+     termination of full-time education and at retirement, must be very conjectural.
+     The number of retirement pensioners is expected to remain almost constant
+     over the 30 year period for which estimates are shown, but to increase sharply
+     soon after 2008-09 as the high numbers of births in the years immediately
+     following the second world war come to be reflected in the pensioner population.
+     For this reason, and because of the continuing growth of the average pensions
+     in payment, an increase in the joint rate of contribution of the order of 2%
+     seems likely to be required over the 10 years 2008-09 to 2018-19 of which
+     about 1% would be required if the present scheme were to continue without
+     amendment. Further increases in contribution may be needed thereafter but
+     any estimates so far into the future must be very speculative.
+                                              I am. Madam,
+                                                   Your obedient Servant,
+
+
+
+
+                                                                           EDWARD JOHNSTON
+
+
+
+     Government Actuary’s Department,
+     London, S.W.l.
+     February 1975.
+
+
+
+
+                    Printed in England for Her Majesty’s Stationery Office by Oyez Press Limited
+                                             Dd 162802 K80       2/75
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+                           HER MAJESTY’S STATIONERY OFFICE
+                                            Government Bookshops
+                                  49 High Holbom, London WCIV 6HB
+                                  13a Castle Street, Edinburgh EH2 3AR
+                                     41 The Hayes, Cardiff CFl 1JW
+                                 Brazennose Street, Manchester M60 8AS
+                               Southey House, Wine Street, Bristol BSl 2BQ
+                                  258 Broad Street, Birmingham B1 2HE
+                                   80 Chichester Street, Belfast BTl 4JY
+                                  Government publications are also available
+                                            through booksellers
+
+
+
+
+                                              ISBN 0     10 159280 9
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+

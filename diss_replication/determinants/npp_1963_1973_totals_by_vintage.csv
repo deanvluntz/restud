@@ -1,0 +1,135 @@
+vintage,year,totpop_k,workpop_k,pension_k,source,oadr
+1963,1963,53797,32651,7905,5-year age groups; WAP and pension computed,242.1
+1963,1964,54203,32746,8050,5-year age groups; WAP and pension computed,245.8
+1963,1965,54606,32855,8158,5-year age groups; WAP and pension computed,248.3
+1963,1966,55006,32944,8255,5-year age groups; WAP and pension computed,250.6
+1963,1967,55402,33001,8400,5-year age groups; WAP and pension computed,254.5
+1963,1968,55810,33046,8555,5-year age groups; WAP and pension computed,258.9
+1963,1969,56213,33091,8699,5-year age groups; WAP and pension computed,262.9
+1963,1970,56614,33123,8826,5-year age groups; WAP and pension computed,266.5
+1963,1973,57836,33304,9223,5-year age groups; WAP and pension computed,276.9
+1963,1980,60686,34667,9772,5-year age groups; WAP and pension computed,281.9
+1963,1990,65440,37717,10154,5-year age groups; WAP and pension computed,269.2
+1963,2000,71581,41683,10102,5-year age groups; WAP and pension computed,242.4
+1965,1965,54595,32878,8186,5-year age groups; WAP and pension computed,249.0
+1965,1966,54965,32922,8311,5-year age groups; WAP and pension computed,252.4
+1965,1967,55350,32980,8438,5-year age groups; WAP and pension computed,255.9
+1965,1968,55755,33020,8576,5-year age groups; WAP and pension computed,259.7
+1965,1969,56174,33047,8713,5-year age groups; WAP and pension computed,263.7
+1965,1970,56606,33068,8839,5-year age groups; WAP and pension computed,267.3
+1965,1971,57055,,,total only (age detail published for England and Wales only),
+1965,1972,57511,,,total only (age detail published for England and Wales only),
+1965,1975,58907,33342,9447,5-year age groups; WAP and pension computed,283.3
+1965,1980,61223,34376,9729,5-year age groups; WAP and pension computed,283.0
+1965,1981,61696,,,total only (age detail published for England and Wales only),
+1965,1990,66767,37636,10072,5-year age groups; WAP and pension computed,267.6
+1965,1991,67454,,,total only (age detail published for England and Wales only),
+1965,2000,74574,42297,9971,5-year age groups; WAP and pension computed,235.7
+1965,2001,75446,,,total only (age detail published for England and Wales only),
+1967,1967,55201,32910,8472,5-year age groups; WAP and pension computed,257.4
+1967,1968,55459,32921,8603,5-year age groups; WAP and pension computed,261.3
+1967,1969,55710,32919,8730,5-year age groups; WAP and pension computed,265.2
+1967,1970,55989,32909,8851,5-year age groups; WAP and pension computed,269.0
+1967,1971,56295,32917,8964,5-year age groups; WAP and pension computed,272.3
+1967,1972,56617,32933,9079,5-year age groups; WAP and pension computed,275.7
+1967,1973,56953,,,total only (age detail published for England and Wales only),
+1967,1975,57653,33107,9404,5-year age groups; WAP and pension computed,284.0
+1967,1980,59548,34115,9616,5-year age groups; WAP and pension computed,281.9
+1967,1981,59949,,,total only (age detail published for England and Wales only),
+1967,1990,64216,36635,9811,5-year age groups; WAP and pension computed,267.8
+1967,1991,64769,,,total only (age detail published for England and Wales only),
+1967,2000,70339,40742,9533,5-year age groups; WAP and pension computed,234.0
+1967,2001,71027,,,total only (age detail published for England and Wales only),
+1969,1969,55643,32834,8721,5-year age groups; WAP and pension computed,265.6
+1969,1970,55870,32828,8843,5-year age groups; WAP and pension computed,269.4
+1969,1971,56095,32828,8961,5-year age groups; WAP and pension computed,273.0
+1969,1972,56336,32847,9078,5-year age groups; WAP and pension computed,276.4
+1969,1973,56606,32889,9190,5-year age groups; WAP and pension computed,279.4
+1969,1974,56886,32940,9308,5-year age groups; WAP and pension computed,282.6
+1969,1975,57167,33011,9407,5-year age groups; WAP and pension computed,285.0
+1969,1976,57453,33151,9474,5-year age groups; WAP and pension computed,285.8
+1969,1981,58903,34165,9707,5-year age groups; WAP and pension computed,284.1
+1969,1991,62343,36275,9831,5-year age groups; WAP and pension computed,271.0
+1969,2001,66509,39471,9530,5-year age groups; WAP and pension computed,241.4
+1971,1971,55668,32466,8899,published rows,274.1
+1971,1972,55835,32479,9023,published rows,277.8
+1971,1973,56013,32489,9150,published rows,281.6
+1971,1974,56216,32529,9279,published rows,285.3
+1971,1975,56427,32609,9375,published rows,287.5
+1971,1976,56641,32733,9441,published rows,288.4
+1971,1977,56861,32926,9463,published rows,287.4
+1971,1978,57082,33163,9472,published rows,285.6
+1971,1979,57302,33398,9497,published rows,284.4
+1971,1980,57519,33504,9653,published rows,288.1
+1971,1981,57739,33700,9711,published rows,288.2
+1971,1982,57960,33919,9719,published rows,286.5
+1971,1983,58188,34151,9706,published rows,284.2
+1971,1984,58421,34355,9695,published rows,282.2
+1971,1985,58667,34447,9799,published rows,284.5
+1971,1986,58925,34550,9839,published rows,284.8
+1971,1987,59189,34703,9852,published rows,283.9
+1971,1988,59455,34819,9857,published rows,283.1
+1971,1989,59722,34962,9850,published rows,281.7
+1971,1990,59993,35126,9850,published rows,280.4
+1971,1991,60263,35319,9832,published rows,278.4
+1971,1992,60536,35529,9800,published rows,275.8
+1971,1993,60809,35766,9755,published rows,272.7
+1971,1994,61086,36009,9708,published rows,269.6
+1971,1995,61363,36247,9671,published rows,266.8
+1971,1996,61643,36489,9634,published rows,264.0
+1971,1997,61927,36739,9598,published rows,261.2
+1971,1998,62212,36993,9563,published rows,258.5
+1971,1999,62501,37252,9534,published rows,255.9
+1971,2000,62794,37531,9494,published rows,253.0
+1971,2001,63088,37830,9452,published rows,249.9
+1971,2002,63388,38110,9446,published rows,247.9
+1971,2003,63690,38374,9465,published rows,246.7
+1971,2004,64000,38618,9509,published rows,246.2
+1971,2005,64313,38900,9515,published rows,244.6
+1971,2006,64633,39158,9552,published rows,243.9
+1971,2007,64961,39289,9717,published rows,247.3
+1971,2008,65296,39485,9815,published rows,248.6
+1971,2009,65633,39677,9923,published rows,250.1
+1971,2010,65983,39908,9994,published rows,250.4
+1971,2011,66336,40109,10089,published rows,251.5
+1973,1973,56021,32513,9294,published rows,285.9
+1973,1974,56077,32568,9401,published rows,288.7
+1973,1975,56102,32635,9505,published rows,291.3
+1973,1976,56113,32744,9563,published rows,292.1
+1973,1977,56124,32909,9599,published rows,291.7
+1973,1978,56137,33119,9598,published rows,289.8
+1973,1979,56161,33336,9601,published rows,288.0
+1973,1980,56214,33449,9722,published rows,290.7
+1973,1981,56302,33617,9786,published rows,291.1
+1973,1982,56421,33793,9817,published rows,290.5
+1973,1983,56560,34011,9798,published rows,288.1
+1973,1984,56714,34200,9772,published rows,285.7
+1973,1985,56878,34294,9841,published rows,287.0
+1973,1986,57050,34376,9887,published rows,287.6
+1973,1987,57230,,,published rows,
+1973,1988,57416,,,published rows,
+1973,1989,57606,,,published rows,
+1973,1990,57798,,,published rows,
+1973,1991,57988,34636,9870,published rows,285.0
+1973,1992,58173,,,published rows,
+1973,1993,58349,,,published rows,
+1973,1994,58517,,,published rows,
+1973,1995,58672,,,published rows,
+1973,1996,58814,34823,9664,published rows,277.5
+1973,1997,58945,,,published rows,
+1973,1998,59063,,,published rows,
+1973,1999,59171,,,published rows,
+1973,2000,59272,,,published rows,
+1973,2001,59368,35687,9469,published rows,265.3
+1973,2002,59465,,,published rows,
+1973,2003,59566,,,published rows,
+1973,2004,59673,,,published rows,
+1973,2005,59790,,,published rows,
+1973,2006,59917,36641,9528,published rows,260.0
+1973,2007,60059,,,published rows,
+1973,2008,60213,,,published rows,
+1973,2009,60382,,,published rows,
+1973,2010,60563,,,published rows,
+1973,2011,60754,37129,10031,published rows,270.2
+1973,2012,60954,,,published rows,
+1973,2013,61162,37178,10289,published rows,276.7

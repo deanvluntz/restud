@@ -1,0 +1,9 @@
+archive_march2026/
+*.pdf
+.DS_Store
+.Rhistory
+.Rproj.user/
+.posit/
+renv/library/
+node_modules/
+~$*
