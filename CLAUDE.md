@@ -479,4 +479,10 @@ only partial disclosure. Do not repeat that.
   spec on the extended sample (p .029) and is marginal on the core (.062); L2 of the DV does not cure it. model_search.R (exhaustive,
   both DVs, both samples; eligibility RESET+BG+proj sig+VIF<20 on both) -> best gross: unem + tax(res/voter) + ln_debt_gdp + ln_vac_wap;
   best rate: tax_workpop + ln_debt_gdp + int_tme + ln_vac_wap. Shortlist given to Sam; nothing in any manuscript.
+- 28 Sep 2026 (night, 10; Sam): eleven Command Papers on repo MAIN (HO1978-HO1988.pdf; *.pdf gitignored on the working branch). 1978-83 =
+  citizenship series (by country x section; Table E/C by region -> determinants/ho_citizenship_by_region_1971_1983.csv); 1984-88 = Control
+  of Immigration Statistics (settlement, vouchers, ancestry route -> determinants/ho_settlement_1975_1988.csv, replaces the 1975-85 file).
+  data_common.R: settle_k, vouchers_k, ancestry_k, cit_newcw_k, cit_afrcw_k, cit_oldcw_k. P10 triangulation 1975-88: the 1980-82 British
+  episode is in UK-born AND non-UK-born arrivals alike; vouchers ~1.3k/yr falling; registration wave 1981-83 = residents; nothing
+  administrative explains it. British inflow verdict: general post-recession rise, not a nationality-law artefact.
 

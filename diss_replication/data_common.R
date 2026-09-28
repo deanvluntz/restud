@@ -147,10 +147,15 @@ raw$tax_taxpayer <- raw$tax_workpop * raw$workpop / (1000 * as.numeric(ref$inc_t
 # 1983), the British Nationality (Hong Kong) Act 1990 (to the 1997 handover) and the Nationality, Immigration and Asylum Act 2002 (2003)
 raw$emig_brit_5 <- vapply(seq_along(y), function(i) if (i < 6) NA_real_ else mean(raw$emig_brit[(i - 5):(i - 1)]), numeric(1))
 raw$bna1981 <- as.numeric(y >= 1983); raw$hk1990 <- as.numeric(y >= 1990 & y <= 1997); raw$nia2002 <- as.numeric(y >= 2003)
+# Home Office administrative series (Sam's Command Papers, 28 Sep 2026): acceptances for settlement 1975-88 (special voucher holders =
+# UK passport holders from East Africa; ancestry route) and grants of citizenship by region 1971-83 (thousands)
+hs <- read.csv("determinants/ho_settlement_1975_1988.csv"); hc <- read.csv("determinants/ho_citizenship_by_region_1971_1983.csv")
+raw$settle_k <- hs$all_acceptances[match(y, hs$year)] / 1000; raw$vouchers_k <- hs$special_voucher_holders[match(y, hs$year)] / 1000; raw$ancestry_k <- hs$uk_born_grandparent[match(y, hs$year)] / 1000
+raw$cit_newcw_k <- hc$new_commonwealth[match(y, hc$year)]; raw$cit_afrcw_k <- hc$african_commonwealth[match(y, hc$year)]; raw$cit_oldcw_k <- hc$old_commonwealth[match(y, hc$year)]
 raw$splice_logratio <- SPLICE_LOGRATIO   # carried in the data sheet so the FROM_SHEET path recovers it
 }
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "settle_k", "vouchers_k", "ancestry_k", "cit_newcw_k", "cit_afrcw_k", "cit_oldcw_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",
