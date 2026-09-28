@@ -103,9 +103,10 @@ for (k in names(SMP)) {
   cat("Other receipts per working-age person, in place of L_tax_workpop:\n")
   for (v in c("L_tax_nics_emp", "L_tax_nics_er", "L_tax_direct", "L_tax_indirect", "L_tax_vat", "L_tax_corp")) line(sub("^L_", "", v), fit(S, swap(G, "L_tax_workpop", v)), c("delta_oadr_10", v))
   p <- list("main" = fit(S, G), "tax_res" = fit(S, swap(G, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(G, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(G, "L_tax_workpop", "L_tax_earn")),
+            "tax_voter" = fit(S, swap(G, "L_tax_workpop", "L_tax_voter")), "tax_taxpayer" = fit(S, swap(G, "L_tax_workpop", "L_tax_taxpayer")),
             "dln_tax_workpop" = fit(S, swap(G, "L_tax_workpop", "L_dln_tax_workpop")), "dln_tax_res" = fit(S, swap(G, "L_tax_workpop", "L_dln_tax_res")))
-  panel(p, paste0("Table G8. National accounts taxes: alternative shares and log changes (", TAG, ")"), unique(c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_dln_tax_workpop", "L_dln_tax_res", grow)), w = 17,
-        "The same tax total over the resident population, GDP and average annual earnings; then the annual log change in taxes per working-age person and per resident in place of the level.")
+  panel(p, paste0("Table G8. National accounts taxes: alternative shares and log changes (", TAG, ")"), unique(c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_tax_voter", "L_tax_taxpayer", "L_dln_tax_workpop", "L_dln_tax_res", grow)), w = 17,
+        "The same tax total over the resident population, GDP, average annual earnings, adults (working-age plus pensioners) and income-tax payers (from 1979); then the annual log change in taxes per working-age person and per resident in place of the level.")
   # --- G9 unemployment measures ------------------------------------------------------------------------------------------------
   p <- list("main" = fit(S, G), "unem_boe" = fit(S, swap(G, "L_unem", "L_unem_boe")), "unem_claim" = fit(S, swap(G, "L_unem", "L_unem_claim")))
   panel(p, paste0("Table G9. Unemployment measures (", TAG, ")"), unique(c("delta_oadr_10", "L_unem", "L_unem_boe", "L_unem_claim", grow)), w = 14,

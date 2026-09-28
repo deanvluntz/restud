@@ -61,7 +61,15 @@ raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (
 raw$ltim_rate <- log(as.numeric(ref$ltim_nEU_inflows_WAPlagK)[match(y, ref$year)])
 raw$cit_grants_k <- cit$cit_grants[match(y, cit$year)] / 1000; raw$cit_reg_k <- (cit$cit_reg_minor + cit$cit_reg_other)[match(y, cit$year)] / 1000
 raw$cit_overseas_k <- cit$cit_overseas[match(y, cit$year)] / 1000
-raw$cit_nat_k <- (cit$cit_nat_res + cit$cit_nat_marr)[match(y, cit$year)] / 1000   # naturalisations (residence + marriage), the discretionary route (Sam, 28 Sep 2026)
+raw$cit_nat_k <- (cit$cit_nat_res + cit$cit_nat_marr)[match(y, cit$year)] / 1000
+# UK-born inflows by country of last residence (IPS 3.18, Sam's upload 28 Sep 2026): returning emigrants as against British citizens
+# by descent or registration; brit_desc_noneu = British citizens from outside the EU (3.01) minus UK-born from outside the EU (3.18)
+b318 <- read.csv("determinants/ips_318_birth_by_residence_1975_2019.csv"); ukb <- subset(b318, direction == "Inflow" & birth == "UNITED KINGDOM")
+gb <- function(r) ukb$est_k[ukb$residence == r][match(y, ukb$year[ukb$residence == r])]
+for (r in c("NON-EU", "ALL", "OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFRICA", "REST OF THE WORLD")) { v <- 1000 * (1000 * gb(r)) / wl; v[!is.finite(v) | v <= 0] <- NA
+  raw[[paste0("ukborn_", if (r == "NON-EU") "noneu" else if (r == "ALL") "all" else tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
+bd <- 1000 * (1000 * (ips[["Inflow_NON-EU_brit"]][match(y, ips$year)] - gb("NON-EU"))) / wl; bd[!is.finite(bd) | bd <= 0] <- NA; raw$brit_desc_noneu <- log(bd)
+raw$ukborn_noneu_k <- gb("NON-EU"); raw$brit_desc_noneu_k <- ips[["Inflow_NON-EU_brit"]][match(y, ips$year)] - gb("NON-EU")   # naturalisations (residence + marriage), the discretionary route (Sam, 28 Sep 2026)
 for (r in c("OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFRICA", "REST OF THE WORLD")) {   # British citizens by region of last residence (IPS 3.01)
   v <- 1000 * (1000 * ips[[paste0("Inflow_", r, "_brit")]][match(y, ips$year)]) / wl; v[!is.finite(v) | v <= 0] <- NA
   raw[[paste0("brit_", tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
@@ -130,6 +138,10 @@ if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) 
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 # log changes in the tax burden (Sam, 28 Sep 2026): annual change in log taxes per working-age person and per resident
 raw$dln_tax_workpop <- c(NA, diff(log(raw$tax_workpop))); raw$dln_tax_res <- c(NA, diff(log(raw$tax_res)))
+# tax per adult ("per voter", Sam 28 Sep 2026: adults = working-age population plus pensioners, from the current OADR) and per
+# income-tax payer (HMRC counts in ReformSPA, from 1979); both in the units of tax_workpop (GBP 000, 2024-25 prices)
+raw$tax_voter <- raw$tax_workpop / (1 + raw$oadr_0 / 1000)
+raw$tax_taxpayer <- raw$tax_workpop * raw$workpop / (1000 * as.numeric(ref$inc_taxpayersK)[match(y, ref$year)])
 # British return migration and nationality-law regimes (Sam, 28 Sep 2026, British-inflow checks): British emigration averaged over
 # the previous five years (returns typically follow within a few years); steps for the British Nationality Act 1981 (in force
 # 1983), the British Nationality (Hong Kong) Act 1990 (to the 1997 handover) and the Nationality, Immigration and Asylum Act 2002 (2003)
@@ -138,7 +150,7 @@ raw$bna1981 <- as.numeric(y >= 1983); raw$hk1990 <- as.numeric(y >= 1990 & y <= 
 raw$splice_logratio <- SPLICE_LOGRATIO   # carried in the data sheet so the FROM_SHEET path recovers it
 }
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "dln_tax_workpop", "dln_tax_res", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",

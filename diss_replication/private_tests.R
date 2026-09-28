@@ -128,6 +128,16 @@ for (k in names(SMP)) { S <- SMP[[k]]$S; d <- SMP[[k]]$df; EXT <- k == "extended
   cat("  sample ends (start ", SMP[[k]]$Y0, "), delta_oadr_10 in the British equation:\n", sep = "")
   for (y1 in c(1990, 1997, 2003, 2010)) { m <- fit(subset(S, year <= y1), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m))
     cat(sprintf("    %d-%d: %.4f (p %s), N %d\n", SMP[[k]]$Y0, y1, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
+  if (!EXT) {   # who responds: UK-born returners (IPS 3.18) or British citizens not born in the UK (3.01 minus 3.18), by origin
+    fb <- function(dv, xs = NULL) fit(S, c(paste0("L_", dv), "delta_oadr_10", CT, xs), dv)
+    p <- list("brit_noneu" = fb("brit_noneu"), "ukborn_noneu" = fb("ukborn_noneu"), "brit_desc_noneu" = fb("brit_desc_noneu"), "ukborn_all" = fb("ukborn_all"),
+              "ukborn_oce" = fb("ukborn_oce"), "ukborn_nor" = fb("ukborn_nor"), "ukborn_asi" = fb("ukborn_asi"), "ukborn_sub" = fb("ukborn_sub"), "brit_noneu +ukborn" = fb("brit_noneu", "ukborn_noneu"))
+    panel(p, "P10. British citizens from outside the EU: UK-born returners (IPS 3.18) against citizens not born in the UK (core sample, 1977-2019)",
+          c("delta_oadr_10", "ukborn_noneu", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_brit_noneu", "L_ukborn_noneu", "L_brit_desc_noneu", "L_ukborn_all", "L_ukborn_oce", "L_ukborn_nor", "L_ukborn_asi", "L_ukborn_sub"), w = 16, lw = 18,
+          c("ukborn_x: UK-born persons arriving from region x (returning emigrants and their UK-born children); brit_desc_noneu: British citizens from outside the EU less the UK-born from there,",
+            "i.e. citizens by descent, registration or naturalisation abroad. If the projection moves brit_desc_noneu and not ukborn_noneu, the British response is not return migration."))
+    cat(sprintf("  brit_desc_noneu (thousands): mean %.1f, min %.1f (%d), share of British non-EU inflow %.0f%% (1977-79) -> %.0f%% (2017-19)\n", mean(S$brit_desc_noneu_k, na.rm = TRUE), min(S$brit_desc_noneu_k, na.rm = TRUE), S$year[which.min(S$brit_desc_noneu_k)],
+                100 * mean(S$brit_desc_noneu_k[S$year <= 1979] / (S$brit_desc_noneu_k[S$year <= 1979] + S$ukborn_noneu_k[S$year <= 1979])), 100 * mean(S$brit_desc_noneu_k[S$year >= 2017] / (S$brit_desc_noneu_k[S$year >= 2017] + S$ukborn_noneu_k[S$year >= 2017])))) }
   p <- list("brit_rate" = fit(S, BR, "brit_rate"), "+cit_grants +L_cit_grants" = fit(S, c(BR, "cit_grants_k", "L_cit_grants_k"), "brit_rate"), "+cit_nat +L_cit_nat" = fit(S, c(BR, "cit_nat_k", "L_cit_nat_k"), "brit_rate"),
             "+emig_brit_5" = fit(S, c(BR, "emig_brit_5"), "brit_rate"), "+L_emig_brit" = fit(S, c(BR, "L_emig_brit"), "brit_rate"), "+law steps" = fit(S, c(BR, "bna1981", "hk1990", "nia2002"), "brit_rate"),
             "+relinc_rich" = fit(S, c(BR, "L_relinc_rich"), "brit_rate"), "+real_eri" = fit(S, c(BR, "L_real_eri"), "brit_rate"), "+eu_rate" = fit(S, c(BR, "eu_rate"), "brit_rate"))

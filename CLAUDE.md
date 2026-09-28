@@ -460,4 +460,10 @@ only partial disclosure. Do not repeat that.
   sweeps sample starts/ends and adds emig_brit_5, law steps (bna1981/hk1990/nia2002), relinc_rich, real_eri, eu_rate. Log changes of the
   tax burden (L_dln_tax_workpop, L_dln_tax_res) added to B8/G8 — null, level stays. Workbook data sheets re-exported (run export_dataset.R
   after any assembly change). No manuscript/run_all outputs regenerated (Sam's rule).
+- 28 Sep 2026 (night, 5; Sam): DV provenance CONFIRMED: ReformSPA nEU_inflows = IPS 3.01 NON-EU residence x non-EU citizens exactly (the
+  earlier "= IPS 3.08" note is wrong; 3.08 is the by-reason table); no BoE data in any DV. IPS 3.18 (Sam's upload) ->
+  determinants/ips_318_birth_by_residence_1975_2019.csv; data_common.R: ukborn_* (UK-born inflows by region) and brit_desc_noneu
+  (British from non-EU minus UK-born from non-EU). P10: projection moves brit_desc_noneu (0.0144 p .02), not the UK-born (p .11) ->
+  the British response is NOT return migration. tax_voter (per adult = WAP + pensioners via oadr_0) and tax_taxpayer (HMRC counts,
+  1979-) in B8/G8: same result as per WAP. Sam's framing: the burden is per INDIVIDUAL (closer to per voter), not a specific share.
 

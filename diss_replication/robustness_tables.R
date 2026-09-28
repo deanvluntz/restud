@@ -8,7 +8,7 @@
 # under the first table that shows it (tables_common.R). Names: tables_common.R; data: data_common.R.
 #   B6  Dependent variable classification            main | [mig_rate_s] | nb_rate | nb03_rate | [ltim_rate]   (scaled series on the extended sample; LTIM basis on the core)
 #   B7  Tax burden per worker: alternative measures     main | tax_inc | tax_nics | tax_receipts   (other receipts as text lines)
-#   B8  National accounts taxes: alternative shares     main | tax_res | tax_gdp | tax_earn | dln_tax_workpop | dln_tax_res
+#   B8  National accounts taxes: alternative shares     main | tax_res | tax_gdp | tax_earn | tax_voter | tax_taxpayer | dln_tax_workpop | dln_tax_res
 #   B9  Unemployment measures                           main | unem_boe | unem_claim
 #   B10 Level and change                                main | level_oadr_10 | +oadr_0
 #   B11 The policy lever                                main | main, to 2008 | permits, to 2008
@@ -47,10 +47,12 @@ for (v in c("L_tax_nics_emp", "L_tax_nics_er", "L_tax_direct", "L_tax_indirect",
 line("tax_nics_emp + tax_nics_er", fit(S, swap(BASE, "L_tax_workpop", c("L_tax_nics_emp", "L_tax_nics_er"))), c("delta_oadr_10", "L_tax_nics_emp", "L_tax_nics_er"))
 # --- B7 ---------------------------------------------------------------------------------------------------
 p <- list("main" = fit(S, BASE), "tax_res" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_earn")),
+          "tax_voter" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_voter")), "tax_taxpayer" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_taxpayer")),
           "dln_tax_workpop" = fit(S, swap(BASE, "L_tax_workpop", "L_dln_tax_workpop")), "dln_tax_res" = fit(S, swap(BASE, "L_tax_workpop", "L_dln_tax_res")))
-panel(p, paste0("Table B8. National accounts taxes: alternative shares and log changes (", TAG, ")"), c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_dln_tax_workpop", "L_dln_tax_res", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 17,
-      c("The same national accounts tax total (OBR HPFD) over alternative denominators: the working-age population (main), the resident population, GDP, and average annual earnings;",
-        "then the annual LOG CHANGE in taxes per working-age person and per resident in place of the level (the tax burden as a change, like the debt term)."))
+panel(p, paste0("Table B8. National accounts taxes: alternative shares and log changes (", TAG, ")"), c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_tax_voter", "L_tax_taxpayer", "L_dln_tax_workpop", "L_dln_tax_res", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 17,
+      c("The same national accounts tax total (OBR HPFD) over alternative denominators: the working-age population (main), the resident population, GDP, average annual earnings, adults",
+        "(working-age plus pensioners: the electorate, approximately) and income-tax payers (HMRC, from 1979); then the annual LOG CHANGE in taxes per working-age person and per resident",
+        "in place of the level (the tax burden as a change, like the debt term)."))
 # --- B8 ---------------------------------------------------------------------------------------------------
 p <- list("main" = fit(S, BASE), "unem_boe" = fit(S, swap(BASE, "L_unem", "L_unem_boe")), "unem_claim" = fit(S, swap(BASE, "L_unem", "L_unem_claim")))
 panel(p, paste0("Table B9. Unemployment measures (", TAG, ")"), c("delta_oadr_10", "L_unem", "L_unem_boe", "L_unem_claim", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 14,
