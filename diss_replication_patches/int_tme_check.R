@@ -25,7 +25,7 @@ cat("int_tme_check.R --", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "-- wd:", get
 
 load_df <- function(sample) {
   assign("SAMPLE", sample, envir = globalenv())
-  e <- new.env(); source("data_common.R", local = e)
+  e <- new.env(); source("tables_common.R", local = e); source("data_common.R", local = e)
   d <- get("df", envir = e)
   yr <- intersect(c("year", "Year", "yr"), names(d))[1]
   y0 <- if (sample == "1964") 1965 else 1977

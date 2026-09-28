@@ -164,3 +164,44 @@ pool to fiscal and macro variables before this run.
 - `unem_boe` / `unem_claim` columns show N 53 although the claimant series ends in 2016 (N 52 expected
   for 1965–2016): check whether 2017 was filled.
 - Sub-sample 1992–2019: unemployment null (−0.004, p .86) and BG p .05 — worth one sentence.
+
+## G. Results of `int_tme_check.R` (run in the cloud container, 28 Sep; R 4.3.3 reproduces Sam's
+## `run_all_1964_output.txt` to the last printed digit; ARDL 0.2.5)
+
+Full output: `diss_replication_patches/int_tme_check_output.txt`.
+
+1. **Inflation and debt interest together, with the projection.** Extended: int_tme +0.019 (p .045),
+   inflation −0.007 (p .054), projection 0.0083, AIC −103.0 (baseline −99.2), RESET .31. Core: int_tme
+   +0.027 (p .004), inflation −0.011 (p .025), projection 0.0093, AIC −75.8 (baseline −70.1), RESET .26.
+   **Without the projection** the pair is worse than inflation alone (AIC −83.8 vs −85.7 ext; −61.2 vs
+   −62.7 core) and RESET rejects (p .004 / .001): int_tme adds nothing to the no-projection model even
+   beside inflation.
+2. **Correlations.** Inflation vs lagged migration −0.61 on both samples (Sam's suspicion confirmed);
+   vs the tax term −0.54 / −0.70; vs the debt-ratio change only −0.20 / −0.24, so the mechanical
+   debt-dynamics channel is small. int_tme vs the projection −0.11 (ext) and **−0.47 (core)**: the
+   suppression pattern is a core-sample fact. int_tme vs unemployment +0.55 on the core sample.
+3. **EU placebo (core).** int_tme is null in the EU equation (−0.025, p .33; p .21 without the
+   projection) and leaves the projection null (0.0002). Inflation predicts the EU flow (−0.025, p .005)
+   and RESET rejects (p .036). By the paper's own test int_tme behaves as a policy-pressure variable,
+   inflation as a general determinant.
+4. **Gross inflows.** Same pattern: int_tme null alone, +0.020 (p .02) beside the projection, projection
+   0.0102 (ext) / 0.0107 (core), RESET .79 / .86.
+5. **Fiscal candidate screen, both halves of Sam's criterion, each on its own rows.** No fiscal
+   variable passes both halves on either sample. Variables that improve the no-projection model
+   (extended ΔAIC: TME/GDP −8.5, gilt yield −7.2, Budget borrowing forecast −6.5, GAD earnings pressure
+   −5.3, T-bill −3.3, inflation −10.1) all fail RESET there and are null beside the projection (ΔAIC
+   positive in every case). The one variable that improves the projection model (int_tme, −2.0 / −2.5)
+   does not improve the no-projection model (+1.5 / +1.5). Reading: what predicts migration without the
+   projection is whatever proxies the projection's low-frequency information, and it dies once the
+   projection is in; the one genuine complement is the debt-interest burden, which sharpens the
+   projection rather than replacing it.
+
+Recommendation: keep the primary specification; make `+int_tme` the lead column of the "debt and
+borrowing" panel in the further-controls subsection and report the augmented model (base + int_tme,
+both samples) in the section on predicting without the projection. Promoting int_tme into the primary
+specification is defensible (theory-prior, passes the EU placebo, ΔAIC −2.0 / −2.5) but would ripple
+through the model section, the bounds test, the long-run estimates and every table. Sam's call.
+
+Pre-existing failure, not from this environment: `replication_1977.R` stops at the "+ dDR10, trend
+(placebo)" verification (N = 41, expected 43; two rows dropped by na.omit) in Sam's 22 Sep
+`run_all_1977_output.txt` as well. To fix in the core pipeline.
