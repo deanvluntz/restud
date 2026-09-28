@@ -10,7 +10,7 @@
 # Afterwards copy tables_1964.json to ../manuscript_1964/ and run
 #     node build_docx_1964.js        (1964-2019 document)
 #     node build_docx_combined.js    (combined document)
-run_all <- function(scripts = c("extension_1964.R", "robustness_tables.R", "no_projection.R", "extension_1964_boe.R", "extra_tests.R", "gad_obr_tests.R", "boe_appendix.R", "primary_int_tme.R", "manuscript_1964.R"),
+run_all <- function(scripts = c("extension_1964.R", "robustness_tables.R", "no_projection.R", "extension_1964_boe.R", "extra_tests.R", "gad_obr_tests.R", "primary_int_tme.R", "manuscript_1964.R"),
                     out = "run_all_1964_output.txt") {
   con <- file(out, open = "wt"); sink(con, split = TRUE); sink(con, type = "message")
   on.exit({ sink(type = "message"); sink(); close(con) }, add = TRUE)

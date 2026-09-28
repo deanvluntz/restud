@@ -11,7 +11,7 @@
 # tables.json is already baselined; re-run those separately if the data change.
 run_all <- function(scripts = c("replication_1977.R", "appendix_exhibits_1977.R",
                                 "robustness_both_specs_1977.R", "mpr_dummies_replication_1977.R",
-                                "sample_start_1977.R", "robustness_tables.R", "core_1977_boe.R", "extra_tests.R", "gad_obr_tests.R", "boe_appendix.R"),
+                                "sample_start_1977.R", "robustness_tables.R", "core_1977_boe.R", "extra_tests.R", "gad_obr_tests.R"),
                     out = "run_all_1977_output.txt") {
   con <- file(out, open = "wt")
   sink(con, split = TRUE)                     # split = TRUE keeps the console echo

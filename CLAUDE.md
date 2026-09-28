@@ -403,4 +403,11 @@ only partial disclosure. Do not repeat that.
   replication_1977.R fixed (see README change log). Combined manuscript rebuilt (55 pp) with the new Section 7 (7.1, 7.2);
   Table 4 from tables_1977.json; reference 'OBR (2025) Historical Official Forecasts Database' added — Sam to confirm year/title.
   1964-only manuscript text NOT updated. HANDOVER.md §0/§7 updated.
+- 28 Sep 2026 (later, Sam): EXTENDED sample first in the combined manuscript, core as corroboration (Section 7 flipped; Table 4 =
+  tables_1964.json). OBR refs: 2026a = Historical Public Finances Database, 2026b = Historical Official Forecasts Database (March
+  2026). CPI inflation (Millennium A47 col E, ONS D7G7 2017-19) added as L_cpi_infl: selected by the rule instead of the deflator,
+  same verdict (null beside the projection, predicts EU flows). Online Appendix renumbered: replication panels = Tables B6-B32
+  (robustness B6-B17, no-projection B18-B23, further controls B24-B32); boe_appendix.R retired; build_online_appendix.js intro
+  sentence updated (appendix docx NOT rebuilt). Bauer & Salt (2020) Fig. 1 screenshot saved as determinants/bauer_salt_2020_fig1.png
+  = the source of work_permits.csv. Git pull on the Mac blocked by a local HANDOVER.md change: stash / pull / pop.
 

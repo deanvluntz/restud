@@ -17,6 +17,7 @@ ref <- as.data.frame(read_excel(WB, sheet = "ReformSPA")); ref <- ref[!is.na(ref
 boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")
 exs <- read.csv("determinants/extension_1962_2019_extras.csv"); exs$dr_note <- NULL
 gad <- read.csv("determinants/gad/gad_pressure_series_1959_2019.csv"); gad <- gad[gad$rule == "base", ]
+cpi <- read.csv("determinants/boe_a47_cpi_1955_2019.csv")   # CPI inflation, Millennium A47 col E (preferred CPI), ONS D7G7 for 2017-19
 p1 <- read.csv("determinants/boe_prop1_1955_2019.csv")   # claimant count (A50), exchange rates, BoP, labour share, house prices, Q7 expectations, party in government
 wp <- if (file.exists("determinants/work_permits.csv")) read.csv("determinants/work_permits.csv") else NULL
 take <- function(d, src, cols) { for (v in intersect(cols, names(src))) if (!(v %in% names(d)) || all(is.na(d[[v]]))) d[[v]] <- src[[v]][match(d$year, src$year)]; d }
@@ -37,7 +38,7 @@ if (SAMPLE == "1964") {
 onsx <- read.csv("determinants/ons_extension_2017_2019.csv"); onsx$source <- NULL
 for (v in setdiff(names(onsx), "year")) { for (src in c("boe", "p1")) { d0 <- get(src); if (v %in% names(d0)) { i <- match(onsx$year, d0$year); ok <- !is.na(i) & is.na(d0[[v]][i]); d0[[v]][i[ok]] <- onsx[[v]][ok]; assign(src, d0) } } }
 raw <- take(raw, boe, setdiff(names(boe), "year")); raw <- take(raw, tax, setdiff(names(tax), "year"))
-raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
+raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
@@ -83,7 +84,7 @@ LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "lever", "
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",
-          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head")
+          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
 df$L2_mig_rate <- lag1(df$L_mig_rate); df$L_post98 <- as.numeric(df$year >= 1999)   # L_unem_head switches to the ILO rate from 1999 (lagged 1998 value)
 BASE <- c("L_mig_rate", "L_tax_workpop", "delta_oadr_10", STEP, "L_ln_debt_gdp", "L_unem")   # the fiscal specification

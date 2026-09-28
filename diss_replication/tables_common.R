@@ -12,7 +12,7 @@ suppressPackageStartupMessages({library(lmtest); library(sandwich); library(car)
 # Main results run to 2019. Variables whose 2017-19 values are spliced from ONS/BoE/BIS/Land Registry/OBR onto the Millennium dataset
 # (determinants/ons_extension_2017_2019.csv); any column using one is re-estimated to SEC_END and reported under the panel.
 SEC_END <- 2016
-ONS_VARS <- c("L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_tbill", "L_unem_boe", "L_int_tme", "L_real_eri",
+ONS_VARS <- c("L_cpi_infl", "L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_tbill", "L_unem_boe", "L_int_tme", "L_real_eri",
               "L_ca_gdp", "L_trade_bal", "L_tot", "L_labour_share", "L_real_house")
 stars <- function(p) ifelse(p < 0.01, "***", ifelse(p < 0.05, "**", ifelse(p < 0.10, "*", "")))
 pf <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
@@ -106,6 +106,7 @@ DEFS <- c(
   post1973      = "indicator from 1973: Immigration Act 1971 in force on 1 January 1973 (Commonwealth workers move from vouchers to permits; EEC accession the same day)",
   L_growth      = "real GDP growth, %, t-1 (ONS ABMI)",
   L_inflation   = "GDP-deflator inflation, %, t-1 (HM Treasury)",
+  L_cpi_infl    = "CPI inflation, %, t-1 (Millennium A47, preferred CPI measure; ONS D7G7 for 2017-19)",
   L_relinc_dev  = "log UK GDP per head minus its mean over India, Pakistan, Bangladesh, China, Nigeria, the Philippines and South Africa, t-1 (Maddison Project Database 2023)",
   L_relinc_rich = "log UK GDP per head minus its mean over the US and Australia, t-1 (Maddison)",
   L_youth       = "mean share aged 15-24 in the seven origin countries, %, t-1 (UN World Population Prospects 2024)"

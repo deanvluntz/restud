@@ -20,11 +20,11 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
    `robustness_tables.R` in Sam's panel order; `no_projection.R` (fiscal model without the projection, Sam's two-part criterion,
    inflation vs debt interest, EU placebo for each); further controls F1–F8 across `boe_tests.R`/`extra_tests.R`/`gad_obr_tests.R`;
    `primary_int_tme.R` (exploratory); permits without the basis step everywhere; `replication_1977.R` repaired; Figure 4 (1964)
-   re-rendered; **combined manuscript Section 7 rewritten** (core first, extended corroboration, new 7.1 and 7.2) and rebuilt
+   re-rendered; **combined manuscript Section 7 rewritten** (extended first, core corroboration — Sam reversed the order later on 28 Sep; new 7.1 and 7.2; CPI inflation added and selected by the rule, same verdict; appendix panels numbered B6–B32) and rebuilt
    (55 pp; `Hamdane_ReStud_Manuscript_combined.docx/.pdf` at the project root and in `manuscript_1964/`).
-3. **Open for Sam:** read the new Section 7 (7.1/7.2 add ~2,000 words; cuts are his); confirm the OBR forecasts reference
-   (year/title); decide whether the 1964-only manuscript gets the same Section 7 (not done); the Online Appendix still carries
-   the old table numbering (B6–B8) — panels are now F1–F8; `run_all_1977.R` needs `SKIP_VINTAGE_CHECK=1` only in the container.
+3. **Open for Sam:** read the new Section 7 (7.1/7.2 add ~2,000 words; cuts are his); decide whether the 1964-only manuscript
+   gets the same Section 7 (not done); the Online Appendix docx is not rebuilt (builder intro updated to B6–B32); `run_all_1977.R`
+   needs `SKIP_VINTAGE_CHECK=1` only in the container.
 4. Earlier open decisions remain in §9.
 
 ---
