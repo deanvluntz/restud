@@ -115,4 +115,32 @@ for (sample in c("1964", "1977")) {
     cat("A policy-pressure variable should not move the uncontrolled EU flow; a general determinant should.\n")
   }
 }
+# ---- 5. Fiscal candidate screen: does any fiscal variable improve the model on its own AND with the projection?
+# Sam's criterion (28 Sep): a missing fiscal variable should (a) improve the no-projection fiscal model's
+# ability to determine migration on its own and (b) still improve the model once the projection is added.
+# Each candidate is judged on its own complete cases: the four models are fitted on the same rows.
+for (sample in c("1964", "1977")) {
+  d <- load_df(sample)
+  label <- if (sample == "1964") "extended sample, 1965-2019" else "core sample, 1977-2019"
+  base <- c("L_mig_rate", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", if (sample == "1964") "basis_pre1975")
+  P <- "delta_oadr_10"
+  cands <- c("L_int_tme", "L_int_gdp", "L_gilt", "L_r_g", "L_real_rate", "L_tbill",
+             "L_psnb_gdp", "L_psnd_gdp", "L_tax_gdp", "L_grants_gdp", "L_grants_wap", "L_tme_gdp",
+             "fc_budget", "fc_planned", "fc_medium", "gad_earn", "gad_policy", "L_inflation")
+  cands <- cands[cands %in% names(d)]
+  cat("\n===== 5. Fiscal candidate screen (", label, ") =====\n", sep = "")
+  cat(sprintf("%-14s %3s | %8s %6s %7s %7s | %8s %6s %7s %9s %6s\n", "candidate", "N",
+              "no proj", "p", "dAIC", "RESETp", "+proj", "p", "dAIC", "proj coef", "p"))
+  cat("(no proj: candidate added to the fiscal model without the projection, dAIC vs that model on the same rows;",
+      "+proj: added beside the projection, dAIC vs the baseline on the same rows)\n")
+  for (cv in cands) {
+    dd <- d[complete.cases(d[, c("mig_rate", base, P, cv)]), ]
+    if (nrow(dd) < 20) next
+    f0 <- fit_one(dd, base); f1 <- fit_one(dd, c(base, cv)); g0 <- fit_one(dd, c(P, base)); g1 <- fit_one(dd, c(P, base, cv))
+    pf <- function(x) if (x < .001) "<.001" else sprintf("%.3f", x)
+    cat(sprintf("%-14s %3d | %8.4f %6s %7.2f %7.3f | %8.4f %6s %7.2f %9.4f %6s\n", cv, f1$n,
+                f1$ct[cv, 1], pf(f1$ct[cv, 4]), f1$aic - f0$aic, f1$reset,
+                g1$ct[cv, 1], pf(g1$ct[cv, 4]), g1$aic - g0$aic, g1$ct[P, 1], pf(g1$ct[P, 4])))
+  }
+}
 cat("\nWritten to", normalizePath(out), "\n")

@@ -12,9 +12,11 @@ Nothing here has been implemented yet: the scripts and data are on Sam's Mac, no
    `L_ln_debt_gdp`, `L_unem`, `L_mig_rate`, `basis_pre1975`). `panel()` prints `DEFS[name]` only for
    names not yet in `DEFINED`, then adds them. Reset `DEFINED` at the start of each script that starts a
    new document. Result: the long `mig_rate = …` line disappears from every panel after the first.
-2. **Each definition names the measure**, one line: e.g. `L_inflation = annual % change in the <RPI /
-   CPI / GDP deflator — confirm which>, t−1 (Millennium A47?)`; `L_growth = real GDP growth, %, t−1`;
-   `L_emig_all` / `L_emig_brit` = outflow of all / British citizens, <units>, t−1 (LTIM 2.00);
+2. **Each definition names the measure**, one line: e.g. `L_inflation = annual % change in the GDP
+   deflator, t−1` (Sam, 28 Sep; note the tax term is deflated by the HMT GDP deflator, so real tax growth
+   is nominal growth minus this same series); `L_growth = real GDP growth, %, t−1`;
+   `L_emig_all = emigrants of all citizenships per 1,000 working-age persons, t−1 (LTIM 2.00)`;
+   `L_emig_brit` = the same for British citizens;
    `L_int_tme = central-government debt interest as % of total managed expenditure, t−1 (A28)`;
    `trend = linear time trend`; `post1968`, `post1973` = as below.
 3. **Step description first.** In the first table's note, the sentence beginning "The step absorbs the
@@ -40,8 +42,8 @@ Nothing here has been implemented yet: the scripts and data are on Sam's Mac, no
 | 10 | Horizon | `delta_oadr_1 … _10` | main falsification test, keep as is |
 | 11 | Other | `second lag`, `sub-samples 1965–1991 / 1992–2019 / 1965–2003 / 1975–2019`, `British placebo` (see §C2), timing placebo, bootstrap bias, CUSUM | text or Figure 4 rows |
 
-Dropped: **origin-country determinants** panel (and the `network` column with it — it is a supply-side
-variable of the same family); **sample-start** panel (keep the one line "Sample starts 1965–1979: 0.0081,
+Dropped: **origin-country determinants** panel; the `network` column (Sam, 28 Sep: a poor measure that
+contains further lags of migration at t−2 and t−4); **sample-start** panel (keep the one line "Sample starts 1965–1979: 0.0081,
 0.0079, 0.0079, 0.0083, 0.0082, 0.0081"); the `+all four` column.
 
 Manuscript rule (Sam, 28 Sep): the manuscript body reports the **core-sample** (1977–2019) robustness
@@ -117,8 +119,12 @@ over the sample (interest high in the 1980s when the projection was low, low in 
 projection was high), so each is better identified with the other in. Conditional on projected
 ageing, a heavier interest bill leaves less room to borrow and raises admissions; but int_tme cannot do
 the projection's work (alone: RESET p .05, AIC 25 worse). It is a complement to the mechanism, not a
-rival, and it is a-priori fiscal. Under the 27 Sep rule for the primary specification (theory-prior AND
-> 4 AIC better on both samples) it stays a robustness column (ΔAIC −2.0 / −2.5).
+rival, and it is a-priori fiscal. The "> 4 AIC on both samples" rule of 27 Sep was the assistant's suggestion, not Sam's condition
+(Sam, 28 Sep). Sam's actual criterion for extending the model: a missing fiscal variable should (a)
+improve the no-projection fiscal model's ability to determine migration on its own and (b) improve
+the model once the projection is added. On that criterion int_tme passes (b) modestly and fails (a);
+inflation passes (a) and barely moves (b) (ΔAIC −0.8 ext, −0.6 core). Block 5 of the check script
+runs every fiscal variable in the dataset through both halves of the criterion on both samples.
 
 Still to run (the check script): inflation and int_tme **together**, with and without the projection,
 on both samples; the correlation matrix; int_tme in the gross equation and in the EU placebo. If
