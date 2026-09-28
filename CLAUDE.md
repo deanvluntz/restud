@@ -466,4 +466,10 @@ only partial disclosure. Do not repeat that.
   (British from non-EU minus UK-born from non-EU). P10: projection moves brit_desc_noneu (0.0144 p .02), not the UK-born (p .11) ->
   the British response is NOT return migration. tax_voter (per adult = WAP + pensioners via oadr_0) and tax_taxpayer (HMRC counts,
   1979-) in B8/G8: same result as per WAP. Sam's framing: the burden is per INDIVIDUAL (closer to per voter), not a specific share.
+- 28 Sep 2026 (night, 6; Sam): Sam's view on the specification: GROSS inflows are the measurable policy outcome ("the model predicts their
+  size relative to fiscal and demographic projections rather than the current population"); the TAX denominator is the defensible margin,
+  not the DV denominator; what matters is that results survive across BOTH samples, not any single variant. parallel_spec.R has TAXVAR
+  (L_tax_workpop / L_tax_voter / L_tax_res); parallel_gross_adult.R = gross + tax per adult (0.0079 / 0.0078). Cmnd 9863 (HO 1985) has no
+  citizenship tables; settlement acceptances 1975-85 transcribed to determinants/ho_settlement_1975_1985.csv. BoE A19-A20 = LTIM/IPS
+  series already used (nothing new for 1964+).
 
