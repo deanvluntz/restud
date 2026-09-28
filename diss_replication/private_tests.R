@@ -116,10 +116,15 @@ for (k in names(SMP)) { S <- SMP[[k]]$S; d <- SMP[[k]]$df; EXT <- k == "extended
   cat("\nP10 ", k, " sample: the British inflow (brit_rate)\n", sep = "")
   m <- fit(subset(S, year <= 1983), c(BR, "cit_overseas_k"), "brit_rate")
   if (!is.null(m)) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("  to 1983 +cit_overseas_k: %.4f (p %s), delta_oadr_10 %.4f (p %s), N %d\n", ct["cit_overseas_k", 1], pf(ct["cit_overseas_k", 4]), ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
-  st <- if (EXT) c(1965, 1970, 1975, 1980, 1985, 1990, 1995) else c(1977, 1980, 1985, 1990, 1995, 2000)
+  st <- if (EXT) c(1965, 1970, 1975, 1978:1990, 1995) else c(1977:1990, 1995, 2000)   # every start 1978-90 (Sam, 28 Sep 2026: when does the British response fade?)
   cat("  sample starts (end 2019), delta_oadr_10 in the British equation:\n")
   for (y0 in st) { m <- fit(subset(d, year >= y0 & year <= 2019), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m))
-    cat(sprintf("    %d-2019: %.4f (p %s), N %d, AIC %.2f\n", y0, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m), AIC(m))) }
+    m2 <- if (!EXT) fit(subset(d, year >= y0 & year <= 2019), c("L_brit_noneu", "delta_oadr_10", CT), "brit_noneu") else NULL; c2 <- if (is.null(m2)) "" else { cc <- coeftest(m2, vcov. = vcovHAC(m2)); sprintf(" | brit_noneu (IPS 3.01) %.4f (p %s)", cc["delta_oadr_10", 1], pf(cc["delta_oadr_10", 4])) }
+    cat(sprintf("    %d-2019: %.4f (p %s), N %d, AIC %.2f%s\n", y0, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m), AIC(m), c2)) }
+  # the British Nationality Act 1981 (in force 1983) as the factor: the projection before and after, and the interaction
+  S$proj_x_bna <- S$delta_oadr_10 * S$bna1981; m <- fit(S, c(BR, "bna1981", "proj_x_bna"), "brit_rate"); ct <- coeftest(m, vcov. = vcovHAC(m))
+  cat(sprintf("  BNA 1981 split: projection before 1983 %.4f (p %s), change from 1983 %.4f (p %s), step %.3f (p %s); implied after 1983 %.4f\n", ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), ct["proj_x_bna", 1], pf(ct["proj_x_bna", 4]), ct["bna1981", 1], pf(ct["bna1981", 4]), ct["delta_oadr_10", 1] + ct["proj_x_bna", 1]))
+  for (r in list(c(SMP[[k]]$Y0, 1982), c(1983, 2019))) { m <- fit(subset(d, year >= r[1] & year <= r[2]), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("    %d-%d alone: %.4f (p %s), N %d\n", r[1], r[2], ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
   cat("  sample ends (start ", SMP[[k]]$Y0, "), delta_oadr_10 in the British equation:\n", sep = "")
   for (y1 in c(1990, 1997, 2003, 2010)) { m <- fit(subset(S, year <= y1), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m))
     cat(sprintf("    %d-%d: %.4f (p %s), N %d\n", SMP[[k]]$Y0, y1, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
