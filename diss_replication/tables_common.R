@@ -12,7 +12,7 @@ suppressPackageStartupMessages({library(lmtest); library(sandwich); library(car)
 # Main results run to 2019. Variables whose 2017-19 values are spliced from ONS/BoE/BIS/Land Registry/OBR onto the Millennium dataset
 # (determinants/ons_extension_2017_2019.csv); any column using one is re-estimated to SEC_END and reported under the panel.
 SEC_END <- 2016
-ONS_VARS <- c("L_cpi_infl", "L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_tbill", "L_unem_boe", "L_int_tme", "L_real_eri",
+ONS_VARS <- c("L_cpi_infl", "L_ln_vac_wap", "L_ln_vac_unem", "L_ln_int_tme", "L_ln_tbill", "L_ln_real_eri", "L_ln_tot", "L_ln_labour_share", "L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_tbill", "L_unem_boe", "L_int_tme", "L_real_eri",
               "L_ca_gdp", "L_trade_bal", "L_tot", "L_labour_share", "L_real_house")
 stars <- function(p) ifelse(p < 0.01, "***", ifelse(p < 0.05, "**", ifelse(p < 0.10, "*", "")))
 pf <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
@@ -107,6 +107,14 @@ DEFS <- c(
   L_growth      = "real GDP growth, %, t-1 (ONS ABMI)",
   L_inflation   = "GDP-deflator inflation, %, t-1 (HM Treasury)",
   L_cpi_infl    = "CPI inflation, %, t-1 (Millennium A47, preferred CPI measure; ONS D7G7 for 2017-19)",
+  L_openness    = "trade openness: exports plus imports of goods and services, % of GDP, t-1 (Millennium A36/A9; to 2016)",
+  L_m4_growth   = "broad money growth, %, t-1 (Millennium A24 spliced M3/M4/M4x, break-adjusted, year end; to 2016)",
+  L_particip    = "workforce (employed + unemployed) per 100 working-age persons, t-1 (Millennium A50; to 2016)",
+  L_tax_ceiling = "national accounts taxes, % of GDP, minus their highest value over the previous ten years, t-1 (OBR HPFD): distance from the revenue ceiling",
+  L_tme_real_growth = "real growth of total managed expenditure, % (log change less GDP-deflator inflation), t-1 (A28; to 2016)",
+  boe_indep     = "indicator from 1998: Bank of England operational independence (1997 announcement, 1998 Act)",
+  golden_rule   = "indicator 1998-2009: the golden rule and sustainable investment rule in force",
+  obr_era       = "indicator from 2010: Office for Budget Responsibility and the fiscal mandate",
   L_relinc_dev  = "log UK GDP per head minus its mean over India, Pakistan, Bangladesh, China, Nigeria, the Philippines and South Africa, t-1 (Maddison Project Database 2023)",
   L_relinc_rich = "log UK GDP per head minus its mean over the US and Australia, t-1 (Maddison)",
   L_youth       = "mean share aged 15-24 in the seven origin countries, %, t-1 (UN World Population Prospects 2024)"
@@ -116,6 +124,7 @@ DEFS <- c(
 # environment (DEFINED) so it carries across the scripts of one run_all; a script run on its own starts from BODY_DEFINED.
 BODY_DEFINED <- c("mig_rate", "L_mig_rate", "delta_oadr_10", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "basis_pre1975")
 if (!exists("DEFINED", envir = globalenv())) assign("DEFINED", BODY_DEFINED, envir = globalenv())
+for (.v in names(DEFS)) if (startsWith(.v, "L_") && !startsWith(.v, "L_ln_")) { .ln <- sub("^L_", "L_ln_", .v); if (!(.ln %in% names(DEFS))) DEFS[[.ln]] <- paste("log of", DEFS[[.v]]) }
 defs <- function(vars) { v <- unique(vars); v <- v[v %in% names(DEFS) & !(v %in% get("DEFINED", envir = globalenv()))]; if (!length(v)) return(invisible())
   cat("Definitions: ", paste(sprintf("%s = %s", v, DEFS[v]), collapse = "; "), ".\n", sep = "")
   assign("DEFINED", union(get("DEFINED", envir = globalenv()), v), envir = globalenv()) }

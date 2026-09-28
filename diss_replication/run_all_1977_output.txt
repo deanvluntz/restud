@@ -1,4 +1,4 @@
-run_all.R -- 2026-09-28 04:00:58 -- wd: /home/user/restud/diss_replication 
+run_all.R -- 2026-09-28 10:46:15 -- wd: /home/user/restud/diss_replication 
 
 
 ####################################################################################################
@@ -1422,7 +1422,7 @@ L_unem             -0.0199 0.0097 0.0088 0.0090
 [Online Appendix A vintage reconstruction skipped: SKIP_VINTAGE_CHECK=1]
 AVP slopes: non-EU 0.0073 (Table 2 col (2) coefficient 0.0075) | EU 0.0017 (Table 4 col (2), 0.0022)
 
-[replication_1977.R completed in 282 s]
+[replication_1977.R completed in 275 s]
 
 
 ####################################################################################################
@@ -1943,7 +1943,7 @@ loaded via a namespace (and not attached):
 [29] nlme_3.1-164     vctrs_0.6.5      glue_1.7.0       cellranger_1.1.0 survival_3.5-8   abind_1.4-5      fansi_1.0.5     
 [36] TTR_0.24.4       tools_4.3.3      pkgconfig_2.0.3 
 
-[appendix_exhibits_1977.R completed in 335 s]
+[appendix_exhibits_1977.R completed in 325 s]
 
 
 ####################################################################################################
@@ -3196,7 +3196,7 @@ SAMPLE 1977 | BoE series end 2019 | N = 43
 
 ##### Further economic and fiscal controls, part 1: the labour market and the macroeconomy (core sample, 1977-2019) #####
 
-===== Table B24. Labour demand beside unemployment (core sample, 1977-2019) =====
+===== Table B26. Labour demand beside unemployment (core sample, 1977-2019) =====
 
                           baseline          +vac_wap         +vac_unem     +dln_vac_unem
 ----------------------------------------------------------------------------------------
@@ -3238,7 +3238,7 @@ Substitutions, for reference only (not a candidate specification):
 vac_wap for unem             | delta_oadr_10 0.0059 (p <.001) | L_vac_wap 0.0219 (p 0.003) | N 43, AIC -71.89
 vac_unem for unem            | delta_oadr_10 0.0066 (p <.001) | L_vac_unem 0.4220 (p 0.042) | N 43, AIC -69.26
 
-===== Table B25. Wages, prices, interest rates, expectations, productivity, institutions (core sample, 1977-2019) =====
+===== Table B27. Wages, prices, interest rates, expectations, productivity, institutions (core sample, 1977-2019) =====
 
                     baseline   +wage_infl   +real_wage   +inflation    +cpi_infl       +tbill   +real_rate  +st_inf_exp  +lt_inf_exp         +tfp     +replace       +union
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3291,7 +3291,7 @@ proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 value
 Definitions: L_wage_infl = growth of average weekly earnings, %, t-1 (Millennium M6); L_real_wage = wage_infl minus GDP-deflator inflation, t-1; L_inflation = GDP-deflator inflation, %, t-1 (HM Treasury); L_cpi_infl = CPI inflation, %, t-1 (Millennium A47, preferred CPI measure; ONS D7G7 for 2017-19); L_tbill = Treasury bill rate, %, t-1 (Millennium M1); L_real_rate = tbill minus GDP-deflator inflation, t-1; st_inf_exp = one-year-ahead inflation expectation at the start of year t, % (NIESR); lt_inf_exp = long-term inflation expectation at the start of year t, % (NIESR); L_tfp = total factor productivity growth, %, t-1; L_replace = benefit replacement ratio, t-1 (Millennium A52b); L_union = trade union density, %, t-1 (Millennium A52b).
 Inflation expectations are start-of-year information and enter contemporaneously; every other control is lagged one year.
 
-===== Table B26. All labour-market and macroeconomic controls together (core sample, 1977-2019) =====
+===== Table B28. All labour-market and macroeconomic controls together (core sample, 1977-2019) =====
 
                             baseline                +six      +six +emig_all  +six +dln_vac_unem
 ------------------------------------------------------------------------------------------------
@@ -3334,7 +3334,7 @@ HAC F (proj)                   32.23               33.62               37.00    
 HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
 six = L_vac_unem, L_wage_infl, L_tbill, st_inf_exp, L_tfp, L_vac_wap. VIF above 30: read the individual controls as signs only.
 
-===== Table B27. Where labour demand shows up: the EU margin (1977-2019) and the permit lever (1977-2008) =====
+===== Table B29. Where labour demand shows up: the EU margin (1977-2019) and the permit lever (1977-2008) =====
 
                            eu_rate  eu_rate +vac_wap           permits  permits +vac_wap
 ----------------------------------------------------------------------------------------
@@ -3402,7 +3402,7 @@ New names:
 
 ##### Further economic and fiscal controls, part 2: realised spending and the current balance (core sample, 1977-2019) #####
 
-===== Table B28. Realised spending (core sample, 1977-2019) =====
+===== Table B30. Realised spending (core sample, 1977-2019) =====
 
                          baseline      +grants_gdp      +grants_wap         +tme_gdp  grants_gdp only
 -----------------------------------------------------------------------------------------------------
@@ -3436,41 +3436,87 @@ HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: W
 Definitions: L_grants_gdp = current grants to the personal sector (cash social benefits), % of GDP, t-1 (Millennium A28); L_grants_wap = current grants to the personal sector per working-age person, GBP 000, 2024-25 prices, t-1 (A28); L_tme_gdp = total managed expenditure, % of GDP, t-1 (A28).
 'only' = in place of delta_oadr_10: realised spending does not carry the projection's information.
 
-===== Table B29. The current fiscal balance (core sample, 1977-2019) =====
+===== Table B31. The current fiscal balance (core sample, 1977-2019) =====
 
                                   baseline                 +psnb_gdp  psnb_gdp for ln_debt_gdp                 +psnd_gdp                  +tax_gdp             psnb_gdp only
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                    0.0082***                 0.0077***                 0.0093***                 0.0077***                 0.0080***                        --
-                                   (<.001)                   (0.004)                   (<.001)                   (<.001)                   (<.001)                          
-L_psnb_gdp                              --                    0.0001                  0.0190**                        --                        --                 -0.0244**
-                                                             (0.997)                   (0.035)                                                                       (0.029)
-L_psnd_gdp                              --                        --                        --                   -0.0000                        --                        --
-                                                                                                                 (0.998)                                                    
-L_tax_gdp                               --                        --                        --                        --                   0.0209*                        --
-                                                                                                                                           (0.089)                          
-L_ln_debt_gdp                    0.5351***                  0.6115**                        --                 0.6125***                 0.7859***                 0.8780***
-                                   (0.009)                   (0.036)                                             (0.003)                   (0.004)                   (<.001)
-L_unem                           -0.0199**                -0.0278***                 -0.0198**                -0.0278***                -0.0353***                -0.0335***
-                                   (0.029)                   (0.002)                   (0.044)                   (0.002)                   (<.001)                   (0.001)
-L_tax_workpop                    0.0518***                 0.0476***                 0.0478***                 0.0476***                 0.0457***                 0.0371***
-                                   (<.001)                   (<.001)                   (<.001)                   (<.001)                   (<.001)                   (0.005)
-L_mig_rate                       0.4650***                 0.4578***                 0.5021***                 0.4578***                 0.4070***                 0.5373***
+delta_oadr_10                    0.0082***                 0.0078***                 0.0093***                 0.0080***                 0.0084***                        --
+                                   (<.001)                   (0.003)                   (<.001)                   (<.001)                   (<.001)                          
+L_psnb_gdp                              --                   -0.0035                   0.0151*                        --                        --                 -0.0283**
+                                                             (0.796)                   (0.088)                                                                       (0.011)
+L_psnd_gdp                              --                        --                        --                   -0.0003                        --                        --
+                                                                                                                 (0.782)                                                    
+L_tax_gdp                               --                        --                        --                        --                    0.0050                        --
+                                                                                                                                           (0.716)                          
+L_ln_debt_gdp                    0.5351***                  0.5963**                        --                 0.5390***                  0.5701**                 0.8649***
+                                   (0.009)                   (0.033)                                             (0.008)                   (0.037)                   (<.001)
+L_unem                           -0.0199**                 -0.0205**                   -0.0128                 -0.0206**                  -0.0211*                -0.0261***
+                                   (0.029)                   (0.018)                   (0.187)                   (0.011)                   (0.078)                   (0.009)
+L_tax_workpop                    0.0518***                 0.0513***                 0.0514***                 0.0538***                 0.0517***                 0.0408***
+                                   (<.001)                   (<.001)                   (<.001)                   (<.001)                   (<.001)                   (0.002)
+L_mig_rate                       0.4650***                 0.4673***                 0.5103***                 0.4531***                 0.4534***                 0.5477***
                                    (<.001)                   (<.001)                   (<.001)                   (<.001)                   (<.001)                   (<.001)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-N                                       43                        42                        42                        42                        42                        42
-adj. R2                             0.9562                    0.9579                    0.9538                    0.9579                    0.9606                    0.9483
-AIC                                 -70.10                    -70.17                    -67.09                    -70.17                    -72.89                    -62.35
-RESET p                              0.409                     0.327                     0.448                     0.277                     0.720                     0.037
-BG(1) p                              0.354                     0.925                     0.874                     0.924                     0.691                     0.556
-max VIF                               13.0                      12.8                      12.4                      14.3                      13.9                      12.1
-HAC F (proj)                         32.23                      9.73                     15.91                     19.29                     30.98                        --
-  p                                (<.001)                   (0.004)                   (<.001)                   (<.001)                   (<.001)                          
+N                                       43                        43                        43                        43                        43                        43
+adj. R2                             0.9562                    0.9551                    0.9515                    0.9551                    0.9551                    0.9458
+AIC                                 -70.10                    -68.19                    -65.75                    -68.19                    -68.27                    -61.00
+RESET p                              0.409                     0.359                     0.477                     0.283                     0.387                     0.055
+BG(1) p                              0.354                     0.345                     0.382                     0.377                     0.286                     0.878
+max VIF                               13.0                      13.1                      12.6                      14.7                      13.9                      12.4
+HAC F (proj)                         32.23                     10.03                     15.67                     20.37                     31.02                        --
+  p                                (<.001)                   (0.003)                   (<.001)                   (<.001)                   (<.001)                          
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
 Definitions: L_psnb_gdp = public sector net borrowing, % of GDP, t-1 (OBR HPFD; negative = surplus); L_psnd_gdp = public sector net debt, % of GDP, t-1 (OBR HPFD); L_tax_gdp = national accounts taxes, % of GDP, t-1 (OBR HPFD).
 The last column replaces the projection with the borrowing ratio: the sign reverses (a larger deficit is followed by fewer inflows) and RESET rejects.
 
-[extra_tests.R completed in 0 s]
+===== Table B32. The Treasury view: openness, money, participation, the revenue ceiling, spending growth and institutional regimes (core sample, 1977-2019) =====
+
+                            baseline         +openness        +m4_growth         +particip      +tax_ceiling  +tme_real_growth        +boe_indep      +golden_rule          +obr_era        +all eight
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+delta_oadr_10              0.0082***         0.0087***         0.0085***         0.0095***         0.0089***         0.0079***         0.0070***         0.0069***         0.0081***         0.0098***
+                             (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (0.001)
+L_openness                        --            0.0029                --                --                --                --                --                --                --            0.0009
+                                               (0.577)                                                                                                                                         (0.894)
+L_m4_growth                       --                --           0.0097*                --                --                --                --                --                --            0.0089
+                                                                 (0.074)                                                                                                                       (0.257)
+L_particip                        --                --                --            0.0140                --                --                --                --                --            0.0255
+                                                                                   (0.436)                                                                                                     (0.186)
+L_tax_ceiling                     --                --                --                --            0.0082                --                --                --                --           -0.0046
+                                                                                                     (0.583)                                                                                   (0.813)
+L_tme_real_growth                 --                --                --                --                --            0.0023                --                --                --            0.0057
+                                                                                                                       (0.685)                                                                 (0.456)
+boe_indep                         --                --                --                --                --                --           0.1124*                --                --            0.1550
+                                                                                                                                         (0.067)                                               (0.150)
+golden_rule                       --                --                --                --                --                --                --            0.0479                --            0.0265
+                                                                                                                                                           (0.216)                             (0.765)
+obr_era                           --                --                --                --                --                --                --                --           -0.0074                --
+                                                                                                                                                                             (0.865)                  
+L_unem                     -0.0199**         -0.0194**         -0.0223**          -0.0217*           -0.0159         -0.0218**          -0.0172*         -0.0194**         -0.0200**           -0.0037
+                             (0.029)           (0.034)           (0.032)           (0.063)           (0.250)           (0.028)           (0.051)           (0.039)           (0.028)           (0.864)
+L_tax_workpop              0.0518***         0.0517***         0.0651***         0.0543***         0.0560***         0.0552***         0.0430***         0.0542***         0.0528***          0.0595**
+                             (<.001)           (0.001)           (<.001)           (0.002)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (0.025)
+L_ln_debt_gdp              0.5351***          0.5163**         0.7606***         0.5946***          0.6333**         0.5396***          0.4754**          0.5373**         0.5394***         0.7450***
+                             (0.009)           (0.013)           (<.001)           (0.002)           (0.031)           (0.009)           (0.019)           (0.014)           (0.009)           (0.002)
+L_mig_rate                 0.4650***         0.4497***         0.4055***         0.4178***         0.4369***         0.4323***         0.4353***         0.4262***         0.4609***          0.2935**
+                             (<.001)           (<.001)           (<.001)           (0.004)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (0.022)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+N                                 43                41                41                41                39                41                43                43                43                37
+adj. R2                       0.9562            0.9531            0.9561            0.9531            0.9595            0.9528            0.9567            0.9558            0.9550            0.9565
+AIC                           -70.10            -64.09            -66.84            -64.08            -65.99            -63.82            -69.80            -68.93            -68.12            -56.57
+RESET p                        0.409             0.532             0.254             0.396             0.907             0.359             0.555             0.355             0.362             0.521
+BG(1) p                        0.354             0.579             0.488             0.662             0.450             0.642             0.351             0.380             0.343             0.242
+max VIF                         13.0              13.9              14.4              15.7              15.2              14.9              13.9              15.0              14.1                --
+HAC F (proj)                   32.23             22.37             32.21             18.59             17.42             32.59             17.88             14.61             26.55                --
+  p                          (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)           (<.001)                --
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
+Definitions: L_openness = trade openness: exports plus imports of goods and services, % of GDP, t-1 (Millennium A36/A9; to 2016); L_m4_growth = broad money growth, %, t-1 (Millennium A24 spliced M3/M4/M4x, break-adjusted, year end; to 2016); L_particip = workforce (employed + unemployed) per 100 working-age persons, t-1 (Millennium A50; to 2016); L_tax_ceiling = national accounts taxes, % of GDP, minus their highest value over the previous ten years, t-1 (OBR HPFD): distance from the revenue ceiling; L_tme_real_growth = real growth of total managed expenditure, % (log change less GDP-deflator inflation), t-1 (A28; to 2016); boe_indep = indicator from 1998: Bank of England operational independence (1997 announcement, 1998 Act); golden_rule = indicator 1998-2009: the golden rule and sustainable investment rule in force; obr_era = indicator from 2010: Office for Budget Responsibility and the fiscal mandate.
+Candidates suggested by Macpherson's (2014) account of the Treasury view: free trade (openness), sound money (broad money growth; inflation and rates are in Table B27),
+the supply side (participation), doubts about raising revenue beyond a certain point (distance from the ten-year revenue ceiling), spending control (real spending growth),
+and the institutional regimes of Bank independence, the golden rule and the OBR. Millennium series end in 2016 (N row).
+
+[extra_tests.R completed in 1 s]
 
 
 ####################################################################################################
@@ -3483,7 +3529,7 @@ New names:
 
 ##### Further economic and fiscal controls, part 3: borrowing, debt and the Government Actuary (core sample, 1977-2019) #####
 
-===== Table B30. The Government Actuary's projected contribution pressure (core sample, 1977-2019) =====
+===== Table B33. The Government Actuary's projected contribution pressure (core sample, 1977-2019) =====
 
                          baseline        +gad_earn    gad_earn only      +gad_policy  gad_policy only         +gad_gap     gad_gap only
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -3518,7 +3564,7 @@ Definitions: gad_earn = Government Actuary: projected change over the next ten y
 Reviews in force: 1960, 1964, 1972, 1975, 1982, 1990, 1995, 1999, 2003, 2010, 2014, 2017 (base years 1959, 1964, 1972, 1975, 1981, 1990, 1994, 1999, 2001, 2008, 2010, 2015);
 linear interpolation within each review. Under price indexation every review from 1982 to 2010 projected the required rate to fall (gad_policy < 0).
 
-===== Table B31. Official borrowing forecasts (core sample, 1977-2019) =====
+===== Table B34. Official borrowing forecasts (core sample, 1977-2019) =====
 
                         baseline      +fc_budget    +L_fc_budget     +fc_planned      +fc_medium  fc_budget only  fc_medium only
 --------------------------------------------------------------------------------------------------------------------------------
@@ -3554,7 +3600,7 @@ HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: W
 Definitions: fc_budget = spring Budget forecast (year t) of public sector net borrowing for the coming financial year, % of GDP (OBR historical official forecasts; PSBR before 1994; GBP forecasts before 1977 over the latest GDP outturn); L_fc_budget = fc_budget lagged one year; fc_planned = fc_budget minus the latest borrowing outturn: the change in borrowing the Budget planned; fc_medium = the same Budget's furthest-horizon borrowing forecast (1-4 years ahead), % of GDP.
 Higher values = more borrowing planned. Budget-of-year-t forecasts are start-of-year information and enter contemporaneously. Forecasts begin with the March 1971 Budget.
 
-===== Table B32. Debt dynamics (core sample, 1977-2019) =====
+===== Table B35. Debt dynamics (core sample, 1977-2019) =====
 
                        baseline       +int_gdp       +int_tme          +gilt           +r_g   int_tme only       r_g only
 -------------------------------------------------------------------------------------------------------------------------

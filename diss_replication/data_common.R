@@ -17,7 +17,9 @@ ref <- as.data.frame(read_excel(WB, sheet = "ReformSPA")); ref <- ref[!is.na(ref
 boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")
 exs <- read.csv("determinants/extension_1962_2019_extras.csv"); exs$dr_note <- NULL
 gad <- read.csv("determinants/gad/gad_pressure_series_1959_2019.csv"); gad <- gad[gad$rule == "base", ]
-cpi <- read.csv("determinants/boe_a47_cpi_1955_2019.csv")   # CPI inflation, Millennium A47 col E (preferred CPI), ONS D7G7 for 2017-19
+cpi <- read.csv("determinants/boe_a47_cpi_1955_2019.csv")
+tvw <- read.csv("determinants/treasury_view_1955_2016.csv")   # openness, broad money growth, workforce (Millennium A36/A9/A24/A50; build_treasury_view.R)
+fbk <- rbind(read.csv("determinants/fiscal_block_1962_1974.csv")[, c("year", "psnb_gdp", "psnd_gdp", "tax_nat_gdp")], read.csv("fiscal_block_HPFD.csv")[, c("year", "psnb_gdp", "psnd_gdp", "tax_nat_gdp")]); fbk <- fbk[!duplicated(fbk$year), ]; names(fbk)[4] <- "tax_gdp"   # CPI inflation, Millennium A47 col E (preferred CPI), ONS D7G7 for 2017-19
 p1 <- read.csv("determinants/boe_prop1_1955_2019.csv")   # claimant count (A50), exchange rates, BoP, labour share, house prices, Q7 expectations, party in government
 wp <- if (file.exists("determinants/work_permits.csv")) read.csv("determinants/work_permits.csv") else NULL
 take <- function(d, src, cols) { for (v in intersect(cols, names(src))) if (!(v %in% names(d)) || all(is.na(d[[v]]))) d[[v]] <- src[[v]][match(d$year, src$year)]; d }
@@ -38,7 +40,7 @@ if (SAMPLE == "1964") {
 onsx <- read.csv("determinants/ons_extension_2017_2019.csv"); onsx$source <- NULL
 for (v in setdiff(names(onsx), "year")) { for (src in c("boe", "p1")) { d0 <- get(src); if (v %in% names(d0)) { i <- match(onsx$year, d0$year); ok <- !is.na(i) & is.na(d0[[v]][i]); d0[[v]][i[ok]] <- onsx[[v]][ok]; assign(src, d0) } } }
 raw <- take(raw, boe, setdiff(names(boe), "year")); raw <- take(raw, tax, setdiff(names(tax), "year"))
-raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
+raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, tvw, c("openness", "m4_growth", "workforce_k")); raw <- take(raw, fbk, c("psnb_gdp", "psnd_gdp", "tax_gdp")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
@@ -78,14 +80,25 @@ for (h in c(1, 3, 5, 7)) { nm <- paste0("delta_oadr_", h)
 vo <- read.csv("determinants/commonwealth_vouchers_1962_1972.csv")
 if (!is.null(wp)) { raw$vouchers <- ifelse(y >= 1962 & y <= 1972, vo$vouchers[match(y, vo$year)] / 1000, 0); raw$lever <- raw$permits + raw$vouchers }
 raw$trend <- y - min(y)
+# "Treasury view" candidates (Sam, 28 Sep 2026, after Macpherson's 2014 list): openness (free trade), broad money growth (sound money),
+# participation (supply side), the revenue ceiling (doubts about raising revenue "beyond a certain point": taxes/GDP minus their
+# highest value over the previous ten years), real spending growth (spending control), and three institutional regimes.
+raw$particip <- 100 * (1000 * raw$workforce_k) / raw$workpop
+raw$tax_ceiling <- vapply(seq_along(y), function(i) { w <- which(y >= y[i] - 10 & y < y[i]); if (length(w) < 5) NA_real_ else raw$tax_gdp[i] - max(raw$tax_gdp[w], na.rm = TRUE) }, numeric(1))
+raw$tme_real_growth <- if ("tme_gbp_m" %in% names(raw)) 100 * c(NA, diff(log(raw$tme_gbp_m))) - raw$inflation else NA
+raw$boe_indep <- as.numeric(y >= 1998); raw$golden_rule <- as.numeric(y >= 1998 & y <= 2009); raw$obr_era <- as.numeric(y >= 2010)
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 df <- raw
 LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",
-          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl")
+          "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
+# log forms of the positive-valued controls (Sam, 28 Sep 2026): L_ln_x = log of the lagged level
+LOGV <- c("vac_wap", "vac_unem", "int_tme", "int_gdp", "tbill", "gilt", "tme_gdp", "grants_gdp", "grants_wap", "psnd_gdp", "tax_gdp", "real_eri", "tot", "labour_share", "openness", "particip", "wage_infl_pos")
+df$L_wage_infl_pos <- NULL
+for (v in setdiff(LOGV, "wage_infl_pos")) if (paste0("L_", v) %in% names(df)) { x <- df[[paste0("L_", v)]]; x[!is.na(x) & x <= 0] <- NA; df[[paste0("L_ln_", v)]] <- log(x) }
 df$L2_mig_rate <- lag1(df$L_mig_rate); df$L_post98 <- as.numeric(df$year >= 1999)   # L_unem_head switches to the ILO rate from 1999 (lagged 1998 value)
 BASE <- c("L_mig_rate", "L_tax_workpop", "delta_oadr_10", STEP, "L_ln_debt_gdp", "L_unem")   # the fiscal specification
 BOE_END <- 2019   # main results end 2019 (ONS-extended); tables_common.R prints the 2016 secondary check                                       # BoE Millennium series end

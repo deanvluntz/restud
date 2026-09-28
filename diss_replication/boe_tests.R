@@ -6,9 +6,9 @@
 # ONS/BoE figures for 2017-19 (Sam, 27 Sep 2026); every column that uses an extended series is re-estimated to 2016 under its
 # panel. Series not extendable end in 2016 (the N row shows it). Names: tables_common.R; data: data_common.R.
 # The tax-burden, unemployment-measure and gross-inflow panels moved to robustness_tables.R (Sam, 28 Sep 2026).
-#   F1  Labour demand, unemployment retained   baseline | +vac_wap | +vac_unem | +dln_vac_unem   (the 'for unem' substitutions as text lines)
-#   F2  Wages, rates, expectations, productivity, institutions   one added control per column
-#   F3  All labour-market and macro controls together
+#   B26 Labour demand, unemployment retained   baseline | +vac_wap | +vac_unem | +dln_vac_unem   (the 'for unem' substitutions as text lines)
+#   B27 Wages, rates, expectations, productivity, institutions   one added control per column
+#   B28 All labour-market and macro controls together
 # =============================================================================
 source("tables_common.R"); source("data_common.R")
 S <- subset(df, year >= Y0 & year <= BOE_END); TAG <- paste0(LAB, BOE_END)
@@ -18,7 +18,7 @@ line <- function(k, m, vs) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf(
 cat("\n##### Further economic and fiscal controls, part 1: the labour market and the macroeconomy (", TAG, ") #####\n", sep = "")
 # --- F1 labour demand, unemployment retained --------------------------------------------------------
 p1 <- list("baseline" = fit(S, BASE), "+vac_wap" = fit(S, c(BASE, "L_vac_wap")), "+vac_unem" = fit(S, c(BASE, "L_vac_unem")), "+dln_vac_unem" = fit(S, c(BASE, "L_dln_vac_unem")))
-panel(p1, paste0("Table B24. Labour demand beside unemployment (", TAG, ")"), c("delta_oadr_10", "L_unem", "L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 18,
+panel(p1, paste0("Table B26. Labour demand beside unemployment (", TAG, ")"), c("delta_oadr_10", "L_unem", "L_vac_wap", "L_vac_unem", "L_dln_vac_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 18,
       c("Unemployment is retained in every column: it is the documented Treasury input (dropping it for vacancies was rejected as data-driven). L_unem and L_vac_wap in levels",
         "are collinear (the vacancy/unemployment ratio is their quotient), so both lose significance together in column 2; the change in log(vacancies/unemployed) is the",
         "labour-demand measure that can be held beside the unemployment rate."))
@@ -27,18 +27,18 @@ line("vac_wap for unem", fit(S, swap(BASE, "L_unem", "L_vac_wap")), c("delta_oad
 # --- F2 wages, rates, expectations, productivity, institutions ---------------------------------------
 ctl2 <- c("L_wage_infl", "L_real_wage", "L_inflation", "L_cpi_infl", "L_tbill", "L_real_rate", "st_inf_exp", "lt_inf_exp", "L_tfp", "L_replace", "L_union")
 p2 <- c(list("baseline" = fit(S, BASE)), setNames(lapply(ctl2, function(v) fit(S, c(BASE, v))), paste0("+", sub("^L_", "", ctl2))))
-panel(p2, paste0("Table B25. Wages, prices, interest rates, expectations, productivity, institutions (", TAG, ")"), c("delta_oadr_10", ctl2, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 12, lw = 15,
+panel(p2, paste0("Table B27. Wages, prices, interest rates, expectations, productivity, institutions (", TAG, ")"), c("delta_oadr_10", ctl2, "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 12, lw = 15,
       "Inflation expectations are start-of-year information and enter contemporaneously; every other control is lagged one year.")
 # --- F3 all together ------------------------------------------------------------------------------------
 p3 <- list("baseline" = fit(S, BASE), "+six" = fit(S, c(BASE, SIX)), "+six +emig_all" = fit(S, c(BASE, SIX, "L_emig_all")), "+six +dln_vac_unem" = fit(S, c(BASE, SIX, "L_dln_vac_unem")))
-panel(p3, paste0("Table B26. All labour-market and macroeconomic controls together (", TAG, ")"), c("delta_oadr_10", SIX, "L_emig_all", "L_dln_vac_unem", "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 19,
+panel(p3, paste0("Table B28. All labour-market and macroeconomic controls together (", TAG, ")"), c("delta_oadr_10", SIX, "L_emig_all", "L_dln_vac_unem", "L_unem", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 19,
       "six = L_vac_unem, L_wage_infl, L_tbill, st_inf_exp, L_tfp, L_vac_wap. VIF above 30: read the individual controls as signs only.")
 # --- B27 where labour demand shows up: the EU margin and the permit lever (from the retired boe_appendix.R) ---------------
 S77 <- subset(df, year >= 1977 & year <= BOE_END); P0 <- max(Y0, 1965); P <- subset(df, year >= P0 & year <= 2008)
 EUB <- swap(BASE, c("L_mig_rate", STEP), "L_eu_rate"); PB <- swap(BASE, c("L_mig_rate", STEP), "L_permits")   # permits: no basis step
 p4 <- list("eu_rate" = fit(S77, EUB, "eu_rate"), "eu_rate +vac_wap" = fit(S77, c(EUB, "L_vac_wap"), "eu_rate"),
            "permits" = fit(P, PB, "permits"), "permits +vac_wap" = fit(P, c(PB, "L_vac_wap"), "permits"))
-panel(p4, paste0("Table B27. Where labour demand shows up: the EU margin (1977-", BOE_END, ") and the permit lever (", P0, "-2008)"),
+panel(p4, paste0("Table B29. Where labour demand shows up: the EU margin (1977-", BOE_END, ") and the permit lever (", P0, "-2008)"),
       c("delta_oadr_10", "L_vac_wap", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_eu_rate", "L_permits"), w = 17,
       "The uncontrolled EU margin should respond to vacancies and not to the projection; permits (the lever) respond to both.")
 rv <- read.csv("determinants/projection_revisions_1975_2019.csv"); df$revision <- rv$revision[match(df$year, rv$year)]

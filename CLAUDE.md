@@ -410,4 +410,13 @@ only partial disclosure. Do not repeat that.
   (robustness B6-B17, no-projection B18-B23, further controls B24-B32); boe_appendix.R retired; build_online_appendix.js intro
   sentence updated (appendix docx NOT rebuilt). Bauer & Salt (2020) Fig. 1 screenshot saved as determinants/bauer_salt_2020_fig1.png
   = the source of work_permits.csv. Git pull on the Mac blocked by a local HANDOVER.md change: stash / pull / pop.
+- 28 Sep 2026 (evening, Sam): log forms of the controls tested (L_ln_x), screen repeated for gross inflows, Treasury-view candidates
+  from Macpherson (2014) added (openness, M4 growth, participation, revenue ceiling, real TME growth, BoE independence 1998,
+  golden rule 1998-2009, OBR era 2010). RESULT TO PUT TO SAM: log vacancies/WAP (and log V/U) is the one candidate meeting BOTH
+  halves of his criterion on both samples and on gross inflows (beside the projection +0.15/+0.19, p .01; dAIC -4.4/-3.6;
+  projection 0.0074/0.0067; unemployment becomes imprecise). NOT carried into Table 2 -- his decision (27 Sep: unemployment
+  retained; a vacancies variant is not post-hoc). Rule selects CPI + boe_indep (= 1998 policy step). Appendix panels B6-B35;
+  Online Appendix docx rebuilt from tables_1977.json (manuscript_variants/tables.json had been empty). Splice sources in
+  determinants/SOURCES_2017_2019.md; four ONS BoP/national-accounts columns and debt_interest_tme lack series IDs -- Sam to confirm.
+  Combined manuscript 57 pp. 1964-only manuscript untouched (Sam: ignore for now). Sam reads everything at the end.
 
