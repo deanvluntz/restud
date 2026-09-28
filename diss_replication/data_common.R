@@ -128,10 +128,17 @@ defl <- if (SAMPLE == "1964") ifelse(y < 1975, pre("deflator_2024_25_100", f62),
 if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) & !is.na(raw$wage_inflation) & y >= 2017)) awe[i] <- awe[i - 1] * (1 + raw$wage_inflation[i] / 100)
   raw$tax_earn <- (raw$tax_workpop * 1000 * raw$workpop) / (52 * awe / defl * 100) / 1e6 }
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
+# log changes in the tax burden (Sam, 28 Sep 2026): annual change in log taxes per working-age person and per resident
+raw$dln_tax_workpop <- c(NA, diff(log(raw$tax_workpop))); raw$dln_tax_res <- c(NA, diff(log(raw$tax_res)))
+# British return migration and nationality-law regimes (Sam, 28 Sep 2026, British-inflow checks): British emigration averaged over
+# the previous five years (returns typically follow within a few years); steps for the British Nationality Act 1981 (in force
+# 1983), the British Nationality (Hong Kong) Act 1990 (to the 1997 handover) and the Nationality, Immigration and Asylum Act 2002 (2003)
+raw$emig_brit_5 <- vapply(seq_along(y), function(i) if (i < 6) NA_real_ else mean(raw$emig_brit[(i - 5):(i - 1)]), numeric(1))
+raw$bna1981 <- as.numeric(y >= 1983); raw$hk1990 <- as.numeric(y >= 1990 & y <= 1997); raw$nia2002 <- as.numeric(y >= 2003)
 raw$splice_logratio <- SPLICE_LOGRATIO   # carried in the data sheet so the FROM_SHEET path recovers it
 }
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "dln_tax_workpop", "dln_tax_res", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",

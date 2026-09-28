@@ -8,14 +8,14 @@
 # under the first table that shows it (tables_common.R). Names: tables_common.R; data: data_common.R.
 #   B6  Dependent variable classification            main | [mig_rate_s] | nb_rate | nb03_rate | [ltim_rate]   (scaled series on the extended sample; LTIM basis on the core)
 #   B7  Tax burden per worker: alternative measures     main | tax_inc | tax_nics | tax_receipts   (other receipts as text lines)
-#   B8  National accounts taxes: alternative shares     main | tax_res | tax_gdp | tax_earn
+#   B8  National accounts taxes: alternative shares     main | tax_res | tax_gdp | tax_earn | dln_tax_workpop | dln_tax_res
 #   B9  Unemployment measures                           main | unem_boe | unem_claim
 #   B10 Level and change                                main | level_oadr_10 | +oadr_0
 #   B11 The policy lever                                main | main, to 2008 | permits, to 2008
 #   B12 Gross inflows                                   main | mig_gross [| mig_gross (no step)]
 #   B13 Old-age vs total dependency                     main | delta_dr_10 | level_dr_10
 #   B14 The projection horizon                          main (10) | 1 | 3 | 5 | 7
-#   B15 British citizens and Commonwealth               main | +Act steps (ext) | brit_rate | +cit_grants | +cit_nat | +cit_reg | +brit_rate | +emig_all | +emig_brit; core: region panel with naturalisations
+#   B15 British citizens and Commonwealth               main | +Act steps (ext) | brit_rate | +cit_grants | +L_cit_grants | +cit_nat | +L_cit_nat | +brit_rate | +emig_all | +emig_brit (cit_reg as text lines); core: region panel with naturalisations
 # =============================================================================
 source("tables_common.R"); source("data_common.R")
 S <- subset(df, year >= Y0 & year <= 2019); TAG <- paste0(LAB, "2019"); EXT <- SAMPLE == "1964"; SN <- if (EXT) "extended sample" else "core sample"
@@ -46,9 +46,11 @@ cat("Other receipts per working-age person, in place of L_tax_workpop:\n")
 for (v in c("L_tax_nics_emp", "L_tax_nics_er", "L_tax_direct", "L_tax_indirect", "L_tax_vat", "L_tax_corp")) line(sub("^L_", "", v), fit(S, swap(BASE, "L_tax_workpop", v)), c("delta_oadr_10", v))
 line("tax_nics_emp + tax_nics_er", fit(S, swap(BASE, "L_tax_workpop", c("L_tax_nics_emp", "L_tax_nics_er"))), c("delta_oadr_10", "L_tax_nics_emp", "L_tax_nics_er"))
 # --- B7 ---------------------------------------------------------------------------------------------------
-p <- list("main" = fit(S, BASE), "tax_res" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_earn")))
-panel(p, paste0("Table B8. National accounts taxes: alternative shares (", TAG, ")"), c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 14,
-      "The same national accounts tax total (OBR HPFD) over alternative denominators: the working-age population (main), the resident population, GDP, and average annual earnings.")
+p <- list("main" = fit(S, BASE), "tax_res" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(BASE, "L_tax_workpop", "L_tax_earn")),
+          "dln_tax_workpop" = fit(S, swap(BASE, "L_tax_workpop", "L_dln_tax_workpop")), "dln_tax_res" = fit(S, swap(BASE, "L_tax_workpop", "L_dln_tax_res")))
+panel(p, paste0("Table B8. National accounts taxes: alternative shares and log changes (", TAG, ")"), c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_dln_tax_workpop", "L_dln_tax_res", "L_ln_debt_gdp", "L_unem", "L_mig_rate", STEP), w = 17,
+      c("The same national accounts tax total (OBR HPFD) over alternative denominators: the working-age population (main), the resident population, GDP, and average annual earnings;",
+        "then the annual LOG CHANGE in taxes per working-age person and per resident in place of the level (the tax burden as a change, like the debt term)."))
 # --- B8 ---------------------------------------------------------------------------------------------------
 p <- list("main" = fit(S, BASE), "unem_boe" = fit(S, swap(BASE, "L_unem", "L_unem_boe")), "unem_claim" = fit(S, swap(BASE, "L_unem", "L_unem_claim")))
 panel(p, paste0("Table B9. Unemployment measures (", TAG, ")"), c("delta_oadr_10", "L_unem", "L_unem_boe", "L_unem_claim", "L_tax_workpop", "L_ln_debt_gdp", "L_mig_rate", STEP), w = 14,
@@ -87,16 +89,18 @@ panel(p, paste0("Table B14. The projection horizon (", TAG, ")"), c("delta_oadr_
 # --- B15 British citizens and Commonwealth: inflows, citizenship policy and emigration -------------------------------
 BR <- c("L_brit_rate", "delta_oadr_10", CT)
 p <- list("main" = fit(S, BASE)); if (EXT) p[["+Act steps"]] <- fit(S, c(BASE, "post1968", "post1973"))
-p[["brit_rate"]] <- fit(S, BR, "brit_rate"); p[["brit_rate +cit_grants"]] <- fit(S, c(BR, "cit_grants_k"), "brit_rate"); p[["brit_rate +cit_nat"]] <- fit(S, c(BR, "cit_nat_k"), "brit_rate"); p[["brit_rate +cit_reg"]] <- fit(S, c(BR, "cit_reg_k"), "brit_rate")
+p[["brit_rate"]] <- fit(S, BR, "brit_rate"); p[["brit_rate +cit_grants"]] <- fit(S, c(BR, "cit_grants_k"), "brit_rate"); p[["brit_rate +L_cit_grants"]] <- fit(S, c(BR, "L_cit_grants_k"), "brit_rate")
+p[["brit_rate +cit_nat"]] <- fit(S, c(BR, "cit_nat_k"), "brit_rate"); p[["brit_rate +L_cit_nat"]] <- fit(S, c(BR, "L_cit_nat_k"), "brit_rate")
 p[["+brit_rate"]] <- fit(S, c(BASE, "brit_rate")); p[["+emig_all"]] <- fit(S, c(BASE, "L_emig_all")); p[["+emig_brit"]] <- fit(S, c(BASE, "L_emig_brit"))
 panel(p, paste0("Table B15. British citizens and Commonwealth: inflows, citizenship policy and emigration (", TAG, ")"),
-      c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "cit_nat_k", "cit_reg_k", "brit_rate", "L_emig_all", "L_emig_brit", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L_brit_rate", STEP), w = 13, lw = 16,
+      c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", "brit_rate", "L_emig_all", "L_emig_brit", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L_brit_rate", STEP), w = 13, lw = 16,
       c(if (EXT) c("+Act steps: indicators for the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973). Given the intercept and basis_pre1975 they are identified inside",
                    "the pre-1975 window only (post1968 contrasts 1965-67 with 1968-74; post1973 is numerically an indicator for 1973-74), so the column lets the pre-1975 level float.") else NULL,
         "brit_rate columns: the fiscal specification for British-citizen inflows, all origins (LTIM 2.00), the uncontrolled flow, as placebo (no basis step), then with current-year grants of",
         "British citizenship (all grants; naturalisations on residence or marriage, the discretionary route; registrations, an entitlement) as the citizenship-policy channel. +brit_rate holds the British flow constant in the controlled-flow equation (a lower",
         "bound on the projection). +emig_all / +emig_brit: lagged emigrants per working-age person, all citizens / British citizens, added to the main column.",
         "Grants made outside the UK (cz_04) exist for 1962-82 only and are in the private tests."))
+line("brit_rate +cit_reg", fit(S, c(BR, "cit_reg_k"), "brit_rate"), c("delta_oadr_10", "cit_reg_k")); line("brit_rate +L_cit_reg", fit(S, c(BR, "L_cit_reg_k"), "brit_rate"), c("delta_oadr_10", "L_cit_reg_k"))
 if (EXT) line("+trend (VIF 63, sign only)", fit(S, c(BASE, "trend")), c("delta_oadr_10", "trend"))
 line("+L_brit_rate", fit(S, c(BASE, "L_brit_rate")), c("delta_oadr_10", "L_brit_rate"))
 if (!EXT) {   # by region of last residence, with the citizenship-grants channel (IPS 3.01, core sample)

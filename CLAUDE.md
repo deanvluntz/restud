@@ -456,4 +456,8 @@ only partial disclosure. Do not repeat that.
   lagged; series end 2018. All null for British inflows on both samples and in every region. (4) Three parallel specifications:
   parallel_spec.R engine (GROSS, VAC switches) + parallel_gross_vac.R, parallel_gross.R (gross, no vacancy term), parallel_rate_vac.R
   (published DV + log vacancies); Tables G2-G27; in run_all_1964.R. Nothing from them is in any manuscript.
+- 28 Sep 2026 (night, 4; Sam): British inflow — grants and naturalisations tested in BOTH timings (current + lagged) in B15/G15; P10 (private)
+  sweeps sample starts/ends and adds emig_brit_5, law steps (bna1981/hk1990/nia2002), relinc_rich, real_eri, eu_rate. Log changes of the
+  tax burden (L_dln_tax_workpop, L_dln_tax_res) added to B8/G8 — null, level stays. Workbook data sheets re-exported (run export_dataset.R
+  after any assembly change). No manuscript/run_all outputs regenerated (Sam's rule).
 

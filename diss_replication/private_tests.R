@@ -109,8 +109,25 @@ for (k in names(SMP)) { d <- SMP[[k]]$df; S <- SMP[[k]]$S; STEP <- SMP[[k]]$STEP
   p <- c(list("main" = fit(S, fbase(k, TRUE))), lapply(sub, function(r) fit(subset(d, year >= r[1] & year <= r[2]), fbase(k, TRUE)))); p[["+L2_mig_rate"]] <- fit(S, c(fbase(k, TRUE), "L2_mig_rate"))
   panel(p, paste0("P9. Sub-samples and a second lag (", SMP[[k]]$LAB, SMP[[k]]$END, ")"), c("delta_oadr_10", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L2_mig_rate", STEP), w = 14)
   if (EXT) { st <- c(1965, 1968, 1971, 1974, 1977, 1979); cat("Sample starts (end 2019), delta_oadr_10:", paste(vapply(st, function(y) { m <- fit(subset(d, year >= y & year <= 2019), fbase(k, TRUE)); sprintf("%d %.4f", y, coef(m)["delta_oadr_10"]) }, character(1)), collapse = "; "), "\n") } }
-# --- P10 grants of citizenship made outside the UK (cz_04, 1962-82) and the British inflow ------------------------------------
-for (k in names(SMP)) { S <- SMP[[k]]$S; CT <- c("L_tax_workpop", "L_ln_debt_gdp", "L_unem")
-  m <- fit(subset(S, year <= 1983), c("L_brit_rate", "delta_oadr_10", CT, "cit_overseas_k"), "brit_rate")
-  if (!is.null(m)) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("P10 %s brit_rate to 1983 +cit_overseas_k: %.4f (p %s), delta_oadr_10 %.4f (p %s), N %d\n", k, ct["cit_overseas_k", 1], pf(ct["cit_overseas_k", 4]), ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) } }
-
+# --- P10 the British inflow: grants abroad (cz_04, 1962-82), sample starts, return-migration pool, nationality-law regimes ---------
+# Sam, 28 Sep 2026: how much of the British-inflow response is carried by the early years (events in former colonies) and by
+# citizenship policy; grants and naturalisations tried both for the current year and lagged.
+for (k in names(SMP)) { S <- SMP[[k]]$S; d <- SMP[[k]]$df; EXT <- k == "extended"; CT <- c("L_tax_workpop", "L_ln_debt_gdp", "L_unem"); BR <- c("L_brit_rate", "delta_oadr_10", CT)
+  cat("\nP10 ", k, " sample: the British inflow (brit_rate)\n", sep = "")
+  m <- fit(subset(S, year <= 1983), c(BR, "cit_overseas_k"), "brit_rate")
+  if (!is.null(m)) { ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("  to 1983 +cit_overseas_k: %.4f (p %s), delta_oadr_10 %.4f (p %s), N %d\n", ct["cit_overseas_k", 1], pf(ct["cit_overseas_k", 4]), ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
+  st <- if (EXT) c(1965, 1970, 1975, 1980, 1985, 1990, 1995) else c(1977, 1980, 1985, 1990, 1995, 2000)
+  cat("  sample starts (end 2019), delta_oadr_10 in the British equation:\n")
+  for (y0 in st) { m <- fit(subset(d, year >= y0 & year <= 2019), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m))
+    cat(sprintf("    %d-2019: %.4f (p %s), N %d, AIC %.2f\n", y0, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m), AIC(m))) }
+  cat("  sample ends (start ", SMP[[k]]$Y0, "), delta_oadr_10 in the British equation:\n", sep = "")
+  for (y1 in c(1990, 1997, 2003, 2010)) { m <- fit(subset(S, year <= y1), BR, "brit_rate"); if (is.null(m)) next; ct <- coeftest(m, vcov. = vcovHAC(m))
+    cat(sprintf("    %d-%d: %.4f (p %s), N %d\n", SMP[[k]]$Y0, y1, ct["delta_oadr_10", 1], pf(ct["delta_oadr_10", 4]), nobs(m))) }
+  p <- list("brit_rate" = fit(S, BR, "brit_rate"), "+cit_grants +L_cit_grants" = fit(S, c(BR, "cit_grants_k", "L_cit_grants_k"), "brit_rate"), "+cit_nat +L_cit_nat" = fit(S, c(BR, "cit_nat_k", "L_cit_nat_k"), "brit_rate"),
+            "+emig_brit_5" = fit(S, c(BR, "emig_brit_5"), "brit_rate"), "+L_emig_brit" = fit(S, c(BR, "L_emig_brit"), "brit_rate"), "+law steps" = fit(S, c(BR, "bna1981", "hk1990", "nia2002"), "brit_rate"),
+            "+relinc_rich" = fit(S, c(BR, "L_relinc_rich"), "brit_rate"), "+real_eri" = fit(S, c(BR, "L_real_eri"), "brit_rate"), "+eu_rate" = fit(S, c(BR, "eu_rate"), "brit_rate"))
+  panel(p, paste0("P10. The British inflow: citizenship policy (both timings), the return pool, nationality-law regimes, relative income, sterling, the EU flow (", SMP[[k]]$LAB, "2019)"),
+        c("delta_oadr_10", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", "emig_brit_5", "L_emig_brit", "bna1981", "hk1990", "nia2002", "L_relinc_rich", "L_real_eri", "eu_rate", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_brit_rate"), w = 14, lw = 16,
+        c("Candidates for what else could carry the British-inflow correlation: the stock of recent British emigrants (returns), the nationality-law regimes that created citizens by descent",
+          "or registration, UK income relative to the settler destinations (US, Australia; Maddison), the real exchange rate, and the EU inflow (a common mobility factor)."))
+}

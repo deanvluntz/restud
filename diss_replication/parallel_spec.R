@@ -102,9 +102,10 @@ for (k in names(SMP)) {
         "Each column replaces L_tax_workpop with the central government receipt named (Millennium A27), per working-age person, 2024-25 prices, t-1.")
   cat("Other receipts per working-age person, in place of L_tax_workpop:\n")
   for (v in c("L_tax_nics_emp", "L_tax_nics_er", "L_tax_direct", "L_tax_indirect", "L_tax_vat", "L_tax_corp")) line(sub("^L_", "", v), fit(S, swap(G, "L_tax_workpop", v)), c("delta_oadr_10", v))
-  p <- list("main" = fit(S, G), "tax_res" = fit(S, swap(G, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(G, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(G, "L_tax_workpop", "L_tax_earn")))
-  panel(p, paste0("Table G8. National accounts taxes: alternative shares (", TAG, ")"), unique(c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", grow)), w = 14,
-        "The same tax total over the resident population, GDP and average annual earnings.")
+  p <- list("main" = fit(S, G), "tax_res" = fit(S, swap(G, "L_tax_workpop", "L_tax_res")), "tax_gdp" = fit(S, swap(G, "L_tax_workpop", "L_tax_gdp")), "tax_earn" = fit(S, swap(G, "L_tax_workpop", "L_tax_earn")),
+            "dln_tax_workpop" = fit(S, swap(G, "L_tax_workpop", "L_dln_tax_workpop")), "dln_tax_res" = fit(S, swap(G, "L_tax_workpop", "L_dln_tax_res")))
+  panel(p, paste0("Table G8. National accounts taxes: alternative shares and log changes (", TAG, ")"), unique(c("delta_oadr_10", "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_dln_tax_workpop", "L_dln_tax_res", grow)), w = 17,
+        "The same tax total over the resident population, GDP and average annual earnings; then the annual log change in taxes per working-age person and per resident in place of the level.")
   # --- G9 unemployment measures ------------------------------------------------------------------------------------------------
   p <- list("main" = fit(S, G), "unem_boe" = fit(S, swap(G, "L_unem", "L_unem_boe")), "unem_claim" = fit(S, swap(G, "L_unem", "L_unem_claim")))
   panel(p, paste0("Table G9. Unemployment measures (", TAG, ")"), unique(c("delta_oadr_10", "L_unem", "L_unem_boe", "L_unem_claim", grow)), w = 14,
@@ -136,13 +137,14 @@ for (k in names(SMP)) {
   # --- G15 British citizens and Commonwealth, citizenship policy, emigration ----------------------------------------------------------
   BV <- paste0("brit", sfx); BR <- c(paste0("L_", BV), "delta_oadr_10", CT)
   p <- list("main" = fit(S, G)); if (EXT) p[["+Act steps"]] <- fit(S, c(G, "post1968", "post1973"))
-  p[[BV]] <- fit(S, BR, BV); p[[paste0(BV, " +cit_grants")]] <- fit(S, c(BR, "cit_grants_k"), BV); p[[paste0(BV, " +cit_nat")]] <- fit(S, c(BR, "cit_nat_k"), BV); p[[paste0(BV, " +cit_reg")]] <- fit(S, c(BR, "cit_reg_k"), BV)
+  p[[BV]] <- fit(S, BR, BV); p[[paste0(BV, " +cit_grants")]] <- fit(S, c(BR, "cit_grants_k"), BV); p[[paste0(BV, " +L_cit_grants")]] <- fit(S, c(BR, "L_cit_grants_k"), BV); p[[paste0(BV, " +cit_nat")]] <- fit(S, c(BR, "cit_nat_k"), BV); p[[paste0(BV, " +L_cit_nat")]] <- fit(S, c(BR, "L_cit_nat_k"), BV)
   p[[paste0("+", BV)]] <- fit(S, c(G, BV)); p[["+emig_all"]] <- fit(S, c(G, "L_emig_all")); p[["+emig_brit"]] <- fit(S, c(G, "L_emig_brit"))
   panel(p, paste0("Table G15. British citizens and Commonwealth: inflows, citizenship policy and emigration (", TAG, ")"),
-        unique(c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "cit_nat_k", "cit_reg_k", BV, "L_emig_all", "L_emig_brit", grow, paste0("L_", BV))), w = 13, lw = 16,
+        unique(c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", BV, "L_emig_all", "L_emig_brit", grow, paste0("L_", BV))), w = 13, lw = 16,
         c(if (EXT) paste0("+Act steps: the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973)", if (GROSS) "; without a basis step they are identified against the whole sample." else "; with the basis step they are identified inside the pre-1975 window only.") else NULL,
-          paste0(BV, " columns: British-citizen inflows (all origins, LTIM 2.00), the uncontrolled flow, on the main's controls, then with current-year grants of citizenship (all grants; naturalisations; registrations)."),
+          paste0(BV, " columns: British-citizen inflows (all origins, LTIM 2.00), the uncontrolled flow, on the main's controls, then with grants of citizenship (all grants; naturalisations), current year and lagged; registrations as a text line."),
           paste0("+", BV, " holds the British flow constant in the controlled-flow equation; +emig_all / +emig_brit add lagged emigrants per working-age person.")))
+  line(paste0(BV, " +cit_reg"), fit(S, c(BR, "cit_reg_k"), BV), c("delta_oadr_10", "cit_reg_k")); line(paste0(BV, " +L_cit_reg"), fit(S, c(BR, "L_cit_reg_k"), BV), c("delta_oadr_10", "L_cit_reg_k"))
   if (EXT) line("+trend (sign only)", fit(S, c(G, "trend")), c("delta_oadr_10", "trend"))
   line(paste0("+L_", BV), fit(S, c(G, paste0("L_", BV))), c("delta_oadr_10", paste0("L_", BV)))
   # --- G16-G17 without the projection; out-of-sample -----------------------------------------------------------------------------------
