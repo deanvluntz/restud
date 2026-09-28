@@ -3,7 +3,7 @@
 # the pre-stated forward-selection rule, the augmented models (debt interest, inflation, CPI), the out-of-sample comparison of the
 # augmented models, sub-samples, the second lag and the sample starts. Both samples in one run:  source("private_tests.R")
 # Criterion (Sam): a variable extends the fiscal model only if it (a) improves the model without the projection AND (b) improves
-# the model beside the projection. The published tables are B6-B24 (robustness_tables.R, without_projection.R, controls_tables.R).
+# the model beside the projection. The published tables are B6-B25 (robustness_tables.R, without_projection.R, controls_tables.R).
 # Runs LAST in run_all_1964.R so that variable definitions print under the published tables first.
 # =============================================================================
 source("tables_common.R")

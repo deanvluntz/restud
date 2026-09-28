@@ -1,4 +1,4 @@
-run_all_1964.R -- 2026-09-28 13:26:59 -- wd: /home/user/restud/diss_replication 
+run_all_1964.R -- 2026-09-28 14:13:31 -- wd: /home/user/restud/diss_replication 
 
 
 ####################################################################################################
@@ -62,7 +62,68 @@ New names:
 • `` -> `...37`
 • `` -> `...59`
 
-===== Table B6. Tax burden per worker: alternative measures (extended sample, 1965-2019) =====
+===== Table B6. The dependent variable under the other sample's classification (extended sample, 1965-2019) =====
+
+                          main    mig_rate_s       nb_rate     nb03_rate
+------------------------------------------------------------------------
+delta_oadr_10        0.0081***     0.0079***     0.0054***     0.0081***
+                       (<.001)       (<.001)       (<.001)       (0.002)
+L_tax_workpop        0.0527***     0.0504***     0.0425***     0.0553***
+                       (<.001)       (<.001)       (<.001)       (<.001)
+L_ln_debt_gdp        0.5311***     0.5327***      0.4912**        0.4595
+                       (0.005)       (0.005)       (0.018)       (0.133)
+L_unem              -0.0199***    -0.0227***       -0.0117     -0.0174**
+                       (0.006)       (<.001)       (0.225)       (0.045)
+L_mig_rate           0.4587***            --            --            --
+                       (<.001)                                          
+L_mig_rate_s                --     0.4645***            --            --
+                                     (<.001)                            
+L_nb_rate                   --            --     0.6450***            --
+                                                   (<.001)              
+L_nb03_rate                 --            --            --      0.4322**
+                                                                 (0.013)
+basis_pre1975         0.1327**            --            --        0.0056
+                       (0.013)                                   (0.906)
+------------------------------------------------------------------------
+N                           55            55            55            39
+adj. R2                 0.9545        0.9572        0.9679        0.8934
+AIC                     -99.15        -99.85        -92.04        -65.12
+RESET p                  0.369         0.186         0.076         0.505
+BG(1) p                  0.351         0.379         0.813         0.092
+max VIF                   12.4          10.6          15.5          10.4
+HAC F (proj)             66.41         54.93         14.04         10.79
+  p                    (<.001)       (<.001)       (<.001)       (0.002)
+------------------------------------------------------------------------
+HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
+Definitions: mig_rate_s = as mig_rate, but with the pre-1975 non-British counts rescaled by the 1975-80 overlap ratio non-EU / non-British (a fixed splice in place of the estimated basis step); nb_rate = log inflow of non-British citizens (all origins, LTIM 2.00) per 1,000 working-age persons (t-1): the extended sample's pre-1975 classification, throughout; nb03_rate = nb_rate ending in 2003, before the A8 accession; L_mig_rate_s = mig_rate_s lagged one year; L_nb_rate = nb_rate lagged one year; L_nb03_rate = nb03_rate lagged one year.
+mig_rate_s: the pre-1975 non-British counts multiplied by exp(-0.198) = 0.820, the 1975-80 mean log ratio of non-EU to non-British inflows, so that the series is one
+consistent measure and no step is estimated (the estimated step's long-run value, 0.13 / (1 - 0.46), is the same ratio). nb_rate: non-British citizens throughout,
+which after 2004 counts EU citizens no government could ration; nb03_rate ends before the A8 accession (with the basis step, which is then a pre-1975 indicator).
+
+The splice: 1975-80 mean log ratio non-EU / non-British = -0.1978 (factor 0.820); the estimated step implies exp(-0.1327 / (1 - 0.4587)) = 0.783.
+ year non_british_k non_eu_k series_B_scaled_k basis_pre1975
+ 1964           140       NA            114.87             1
+ 1965           135       NA            110.77             1
+ 1966           141       NA            115.69             1
+ 1967           142       NA            116.51             1
+ 1968           129       NA            105.84             1
+ 1969           124       NA            101.74             1
+ 1970           131       NA            107.48             1
+ 1971           108       NA             88.61             1
+ 1972           111       NA             91.08             1
+ 1973           113       NA             92.72             1
+ 1974           105       NA             86.15             1
+ 1975           112       91             91.00             0
+ 1976           104       85             85.00             0
+ 1977            89       73             73.00             0
+ 1978           113       93             93.00             0
+ 1979           116       96             96.00             0
+ 1980           107       88             88.00             0
+ 1981            93       79             79.00             0
+ 1982           103       84             84.00             0
+(written determinants/dv_series_comparison_1964_1982.csv)
+
+===== Table B7. Tax burden per worker: alternative measures (extended sample, 1965-2019) =====
 
                           main       tax_inc      tax_nics  tax_receipts
 ------------------------------------------------------------------------
@@ -112,7 +173,7 @@ tax_corp                   | delta_oadr_10 0.0057 (p 0.003) | L_tax_corp 0.1441 
 Definitions: L_tax_corp = corporation tax per working-age person, t-1 (A27).
 tax_nics_emp + tax_nics_er | delta_oadr_10 0.0091 (p <.001) | L_tax_nics_emp 0.5697 (p 0.002) | L_tax_nics_er 0.1855 (p 0.091) | N 53, AIC -97.67, RESET 0.201
 
-===== Table B7. National accounts taxes: alternative shares (extended sample, 1965-2019) =====
+===== Table B8. National accounts taxes: alternative shares (extended sample, 1965-2019) =====
 
                           main       tax_res       tax_gdp      tax_earn
 ------------------------------------------------------------------------
@@ -148,7 +209,7 @@ HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: W
 Definitions: L_tax_res = national accounts taxes per resident, GBP 000, 2024-25 prices, t-1; L_tax_gdp = national accounts taxes, % of GDP, t-1 (OBR HPFD); L_tax_earn = national accounts taxes in millions of average annual earnings: real taxes / (52 x real average weekly earnings), t-1 (OBR HPFD; Millennium A47 AWE, KAB9 for 2017-19).
 The same national accounts tax total (OBR HPFD) over alternative denominators: the working-age population (main), the resident population, GDP, and average annual earnings.
 
-===== Table B8. Unemployment measures (extended sample, 1965-2019) =====
+===== Table B9. Unemployment measures (extended sample, 1965-2019) =====
 
                           main      unem_boe    unem_claim
 ----------------------------------------------------------
@@ -185,7 +246,7 @@ proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 value
 Definitions: L_unem_boe = unemployment rate, %, t-1: Bank of England spliced series (Millennium M5, col G); L_unem_claim = claimant-count unemployment rate, %, t-1: claimants of unemployment-related benefits (Millennium A50; ONS BCJE from 1971, Ministry of Labour Gazette before, rate on the A50 workforce), 1945-2016.
 Each column replaces L_unem (the ILO rate) with the measure named. The claimant count ends in 2016 (ONS discontinued the consistent series under Universal Credit).
 
-===== Table B9. The projected level and the projected change (extended sample, 1965-2019) =====
+===== Table B10. The projected level and the projected change (extended sample, 1965-2019) =====
 
                             main   level_oadr_10         +oadr_0
 ----------------------------------------------------------------
@@ -221,7 +282,7 @@ level_oadr_10 = oadr_0 + delta_oadr_10, so the level column constrains the curre
 the third column frees them: the projected change carries the effect, the current (known) ratio adds nothing.
 Equality of the two coefficients in column 3: HAC F = 41.18 (p <.001).
 
-===== Table B10. The policy lever: work permits (extended sample) =====
+===== Table B11. The policy lever: work permits (extended sample) =====
 
                                 main     main, 1965-2008  permits, 1965-2008
 ----------------------------------------------------------------------------
@@ -254,7 +315,7 @@ Definitions: permits = work permits and first permissions issued, thousands (Bau
 Column 3: dependent variable permits, in thousands (Bauer and Salt, 2020, Fig. 1; the series ends in 2008, Tier 2 being a different basis), with the fiscal specification's
 right-hand side and no basis step (the permit series has no change of basis). Column 2 re-estimates the main column on the permit years for comparison.
 
-===== Table B11. Gross inflows (extended sample, 1965-2019) =====
+===== Table B12. Gross inflows (extended sample, 1965-2019) =====
 
                                  main            mig_gross  mig_gross (no step)
 -------------------------------------------------------------------------------
@@ -288,7 +349,7 @@ mig_gross: the log of gross inflows in persons, with no population term on eithe
 Emigration (added to the main column): +emig_all: L_emig_all -0.0041 (p 0.826), delta_oadr_10 0.0082; +emig_brit: L_emig_brit -0.0088 (p 0.604), delta_oadr_10 0.0082; 
 Definitions: L_emig_all = emigrants of all citizenships per 1,000 working-age persons, t-1 (LTIM 2.00); L_emig_brit = British-citizen emigrants per 1,000 working-age persons, t-1 (LTIM 2.00).
 
-===== Table B12. Old-age vs. total dependency ratio (extended sample, 1965-2019) =====
+===== Table B13. Old-age vs. total dependency ratio (extended sample, 1965-2019) =====
 
                           main   delta_dr_10   level_dr_10
 ----------------------------------------------------------
@@ -324,7 +385,7 @@ Columns 2-3 replace the projected old-age change with the projected change and t
 In the 1960s delta_dr_10 swings from +106 to -64 with the projected size of the child population; under the fiscal mechanism only the old-age term should carry the effect.
 delta_oadr_10 + delta_dr_10 together | delta_oadr_10 0.0076 (p <.001) | delta_dr_10 0.0004 (p 0.475) | N 55, AIC -97.72, RESET 0.412
 
-===== Table B13. The projection horizon (extended sample, 1965-2019) =====
+===== Table B14. The projection horizon (extended sample, 1965-2019) =====
 
                           main  delta_oadr_1  delta_oadr_3  delta_oadr_5  delta_oadr_7
 --------------------------------------------------------------------------------------
@@ -363,7 +424,7 @@ Definitions: delta_oadr_1 = projected one-year change in the old-age dependency 
 Each column replaces the ten-year projected change (main) with the projected change over the horizon named, same vintages.
 HAC F of the horizon term: main 66.41 (p <.001); delta_oadr_1 0.06 (p 0.805); delta_oadr_3 4.47 (p 0.040); delta_oadr_5 11.84 (p 0.001); delta_oadr_7 15.89 (p <.001).
 
-===== Table B14. British citizens and Commonwealth: inflows and policy (extended sample, 1965-2019) =====
+===== Table B15. British citizens and Commonwealth: inflows and policy (extended sample, 1965-2019) =====
 
                           main    +Act steps     brit_rate    +brit_rate
 ------------------------------------------------------------------------
@@ -422,7 +483,7 @@ New names:
 • `` -> `...37`
 • `` -> `...59`
 
-===== Table B15. The fiscal model without the projection: controlled and gross inflows (extended sample, 1965-2019) =====
+===== Table B16. The fiscal model without the projection: controlled and gross inflows (extended sample, 1965-2019) =====
 
                              no proj                main  mig_gross, no proj           mig_gross
 ------------------------------------------------------------------------------------------------
@@ -456,7 +517,7 @@ F vs no proj                      NA               28.41                  NA    
 HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
 no proj = delta_oadr_10 omitted. Without the projection the lagged inflow absorbs what it explained, the tax term shrinks, the debt term loses significance and RESET weakens.
 
-===== Table B15. The fiscal model without the projection: controlled and gross inflows (core sample, 1977-2019) =====
+===== Table B16. The fiscal model without the projection: controlled and gross inflows (core sample, 1977-2019) =====
 
                              no proj                main  mig_gross, no proj           mig_gross
 ------------------------------------------------------------------------------------------------
@@ -488,14 +549,14 @@ F vs no proj                      NA               17.82                  NA    
 HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
 no proj = delta_oadr_10 omitted. Without the projection the lagged inflow absorbs what it explained, the tax term shrinks, the debt term loses significance and RESET weakens.
 
-===== Table B16. Recursive one-step-ahead forecasts (expanding window; actual lagged mig_rate): root mean squared error =====
+===== Table B17. Recursive one-step-ahead forecasts (expanding window; actual lagged mig_rate): root mean squared error =====
 extended  forecasts 1990-2019 (n = 30): no proj 0.1450 | main 0.1130 | ratio 0.78
 extended  forecasts 2001-2019 (n = 19): no proj 0.1401 | main 0.1207 | ratio 0.86
 core      forecasts 1997-2019 (n = 23): no proj 0.1525 | main 0.1227 | ratio 0.80
 core      forecasts 2001-2019 (n = 19): no proj 0.1472 | main 0.1283 | ratio 0.87
 Each year's inflow is forecast from the model estimated on all earlier years; the projection was fixed in advance, so this is a genuine out-of-sample comparison.
 
-===== Table B17. The uncontrolled margin: EU and total inflows (core sample, 1977-2019) =====
+===== Table B18. The uncontrolled margin: EU and total inflows (core sample, 1977-2019) =====
 
                           main       eu_rate      tot_rate
 ----------------------------------------------------------
@@ -542,7 +603,7 @@ New names:
 
 ##### Further economic and fiscal controls (extended sample, 1965-2019): each column adds one control to the fiscal specification (main); unemployment retained #####
 
-===== Table B18. Labour market controls (extended sample, 1965-2019) =====
+===== Table B19. Labour market controls (extended sample, 1965-2019) =====
 
                              main    +ln_vac_wap   +ln_vac_unem  +dln_vac_unem     +wage_infl     +real_wage         +union       +replace
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -593,7 +654,7 @@ Vacancies enter in logs: the log form is the one that improves the fit both with
 +vac_unem (level)          | delta_oadr_10 0.0075 (p <.001) | L_vac_unem 0.1540 (p 0.142) | N 55, AIC -98.25
 Definitions: L_vac_unem = vacancies / unemployed ratio, t-1 (M5 vacancies over A50 unemployed).
 
-===== Table B19. Growth, productivity and participation (extended sample, 1965-2019) =====
+===== Table B20. Growth, productivity and participation (extended sample, 1965-2019) =====
 
                            main      +growth   +growth_pc         +tfp    +lab_prod    +particip   +growth_fc
 -------------------------------------------------------------------------------------------------------------
@@ -635,7 +696,7 @@ HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: W
 Definitions: L_growth = real GDP growth, %, t-1 (ONS ABMI); L_growth_pc = real GDP growth per head of population, %, t-1; L_tfp = total factor productivity growth, %, t-1; L_lab_prod = growth of output per hour worked, %, t-1 (Millennium A52b; to 2016); L_particip = workforce (employed + unemployed) per 100 working-age persons, t-1 (Millennium A50; to 2016); growth_fc = HM Treasury forecast of real GDP growth for year t, made at the start of t, % (workbook, from 1976).
 growth_fc is the Treasury's own start-of-year forecast for the current year and enters contemporaneously, as the projection does; every other control is lagged one year.
 
-===== Table B20. Trade and the external balance (extended sample, 1965-2019) =====
+===== Table B21. Trade and the external balance (extended sample, 1965-2019) =====
 
                            main    +real_eri    +openness      +ca_gdp   +trade_bal         +tot
 ------------------------------------------------------------------------------------------------
@@ -678,7 +739,7 @@ proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 value
 Definitions: L_real_eri = real effective exchange rate of sterling, 1913 = 100, t-1 (Millennium A33); L_openness = trade openness: exports plus imports of goods and services, % of GDP, t-1 (Millennium A36/A9; to 2016); L_ca_gdp = current account balance of the balance of payments, % of GDP, t-1 (Millennium A36; negative = deficit); L_trade_bal = visible trade balance, % of GDP, t-1 (Millennium A36); L_tot = terms of trade (export over import prices), 2013 = 100, t-1 (Millennium A35).
 Openness ends in 2016; the exchange rate, balance of payments and terms of trade are spliced to 2019 (BIS, ONS).
 
-===== Table B21. Inflation, expectations and money (extended sample, 1965-2019) =====
+===== Table B22. Inflation, expectations and money (extended sample, 1965-2019) =====
 
                               main      +inflation       +cpi_infl     +st_inf_exp     +lt_inf_exp     +inf_exp_1y  +inf_exp_5_10y      +m4_growth
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -725,7 +786,7 @@ proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 value
 Definitions: L_inflation = GDP-deflator inflation, %, t-1 (HM Treasury); L_cpi_infl = CPI inflation, %, t-1 (Millennium A47, preferred CPI measure; ONS D7G7 for 2017-19); st_inf_exp = one-year-ahead inflation expectation at the start of year t, % (NIESR); lt_inf_exp = long-term inflation expectation at the start of year t, % (NIESR); inf_exp_1y = one-year-ahead inflation expectation, spliced composite, start of year t (Millennium Q7, Q1 value); inf_exp_5_10y = inflation expectation 5-10 years ahead, start of year t (Millennium Q7, Q1 value; from 1985); L_m4_growth = broad money growth, %, t-1 (Millennium A24 spliced M3/M4/M4x, break-adjusted, year end; to 2016).
 Inflation expectations are start-of-year information and enter contemporaneously; realised inflation and money growth are lagged one year. inf_exp_5_10y begins in 1985.
 
-===== Table B22. Current and projected spending (extended sample, 1965-2019) =====
+===== Table B23. Current and projected spending (extended sample, 1965-2019) =====
 
                                 main       +grants_gdp       +grants_wap          +tme_gdp  +tme_real_growth         +gad_earn       +gad_policy
 ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -768,7 +829,7 @@ Definitions: L_grants_gdp = current grants to the personal sector (cash social b
 Realised welfare spending and total spending (Millennium A28, to 2016) and the Government Actuary's projected contribution pressure (Quinquennial Reviews in force by base year,
 entered contemporaneously like the population projection; gad_policy = under the uprating policy in force, which projected the required rate to FALL from 1982 to 2010).
 
-===== Table B23. Borrowing, borrowing plans and fiscal rules (extended sample, 1965-2019) =====
+===== Table B24. Borrowing, borrowing plans and fiscal rules (extended sample, 1965-2019) =====
 
                                         main                 +psnb_gdp                 +psnd_gdp                +fc_budget                +fc_medium              +tax_ceiling              +golden_rule                  +obr_era  psnb_gdp for ln_debt_gdp
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -788,8 +849,6 @@ golden_rule                               --                        --          
                                                                                                                                                                                                  (0.184)                                                    
 obr_era                                   --                        --                        --                        --                        --                        --                        --                   -0.0076                        --
                                                                                                                                                                                                                            (0.840)                          
-L_psnb_gdp                                --                   -0.0009                        --                        --                        --                        --                        --                        --                   0.0142*
-                                                               (0.931)                                                                                                                                                                               (0.051)
 L_unem                            -0.0199***                -0.0200***                -0.0205***                -0.0228***                 -0.0205**                 -0.0195**                -0.0193***                -0.0200***                  -0.0140*
                                      (0.006)                   (0.004)                   (0.002)                   (0.004)                   (0.021)                   (0.036)                   (0.009)                   (0.006)                   (0.079)
 L_tax_workpop                      0.0527***                 0.0524***                 0.0533***                 0.0516***                 0.0533***                 0.0544***                 0.0524***                 0.0533***                 0.0529***
@@ -819,7 +878,7 @@ Definitions: fc_planned = fc_budget minus the latest borrowing outturn: the chan
 +boe_indep                 | delta_oadr_10 0.0070 (p <.001) | boe_indep 0.1215 (p 0.042) | N 55, AIC -99.56
 Definitions: boe_indep = indicator from 1998: Bank of England operational independence (1997 announcement, 1998 Act).
 
-===== Table B24. Debt dynamics and the cost of borrowing (extended sample, 1965-2019) =====
+===== Table B25. Debt dynamics and the cost of borrowing (extended sample, 1965-2019) =====
 
                            main     +int_tme     +int_gdp   +bank_rate       +tbill        +gilt      +consol         +r_g
 --------------------------------------------------------------------------------------------------------------------------
@@ -877,812 +936,3 @@ Debt interest as a share of spending and of GDP (A28); short rates: Bank Rate an
 New names:
 • `` -> `...37`
 • `` -> `...59`
-Bounds: F = 7.177 (p 0.003), t = -4.947 (p 0.007)
-           Term    Estimate  Std. Error   t value                Pr(>|t|)
-1   (Intercept)  0.27604559 0.197795748  1.395609 0.169997681322403365600
-2 delta_oadr_10  0.01546580 0.003437839  4.498699 0.000051285535006613699
-3          unem -0.04472709 0.013039030 -3.430247 0.001342573542193907293
-4   ln_debt_gdp  0.93505562 0.327351747  2.856425 0.006574152770587329830
-5   tax_workpop  0.09205311 0.007938373 11.595967 0.000000000000008006975
-
---- Figure 4 rows ---
-                                           label     coef       se               p  n
-      Baseline (fiscal specification), 1965-2019 0.008147 0.001000 0.0000000001312 55
-                              Basis step omitted 0.007953 0.001105 0.0000000032969 55
-        Zero-net-migration projection, 1977-2019 0.007500 0.001347 0.0000024202536 43
-         Publication-dated projection, 1978-2019 0.008326 0.001539 0.0000042662818 42
-                        Gross (unscaled) inflows 0.008504 0.001013 0.0000000000557 55
-              Projected level in place of change 0.007527 0.002020 0.0005106000992 55
-             Labour taxes per working-age person 0.009144 0.001241 0.0000000020145 55
-                          All taxes per resident 0.007726 0.001016 0.0000000008770 55
-                      + 1998 policy step (POL97) 0.007040 0.001045 0.0000000202912 55
-                       + 1998-2007 policy window 0.007192 0.001229 0.0000004505603 55
-                       + all five MPR indicators 0.007392 0.001387 0.0000034179237 55
-                       + 1968 and 1973 Act steps 0.008240 0.001213 0.0000000185744 55
-                                  + linear trend 0.008388 0.001018 0.0000000001124 55
-               + debt interest share of spending 0.009593 0.001160 0.0000000001007 55
-         + growth, inflation, British emigration 0.006736 0.001107 0.0000002336998 55
-                Second lag of dependent variable 0.008031 0.001062 0.0000000013240 54
-                                Sample from 1971 0.007865 0.001357 0.0000007745485 49
-                                Sample from 1977 0.008241 0.001452 0.0000017184266 43
-                                Sample from 1979 0.008132 0.001368 0.0000009183523 41
-                  Sample to 2003 (pre-accession) 0.010592 0.002116 0.0000194834077 39
-                         LTIM inflows, 1992-2019 0.015907 0.004045 0.0007102034647 28
- + change in vacancy/unemployment ratio, to 2016 0.007680 0.000954 0.0000000003425 52
-     Vacancies per WAP for unemployment, to 2016 0.006719 0.001058 0.0000000949494 52
-        Employee NICs per WAP for taxes, to 2016 0.007905 0.001085 0.0000000038727 52
-                 Placebo: total dependency ratio 0.001469 0.000425 0.0011454642683 55
- Placebo: total dependency ratio, alongside OADR 0.000372 0.000517 0.4752491163842 55
-                  Placebo: EU inflows, 1977-2019 0.002955 0.003558 0.4115739251602 43
-Linear hypothesis test
-
-Hypothesis:
-POL97 = 0
-POL02 = 0
-EXP04 = 0
-ENL86 = 0
-ENL95 = 0
-
-Model 1: restricted model
-Model 2: y ~ L_y + L_tax + p + step + L_debt + L_un + POL97 + POL02 + 
-    EXP04 + ENL86 + ENL95
-
-Note: Coefficient covariance matrix supplied.
-
-  Res.Df Df      F Pr(>F)
-1     48                 
-2     43  5 1.0906 0.3793
-
-Timing placebo: actual t 8.15, largest rotated |t| 5.33, p = 0.018
-Bias: rho 0.459, bootstrap bias -0.094 (analytic -0.043), corrected rho 0.553; long run 0.0151 -> 0.0182 [0.0126, 0.0262]
-
-Permits 1965-2008: 0.613 (p 0.000); with DR alongside 0.544 vs 0.0322 (p 0.38). British 1977-2019: 0.0065 (p 0.039); control -> 0.0061.
-OLS-CUSUM p = 0.99; rolling 25-yr windows significant at 5% in 23 of 31.
-
-written tables_1964.json
-
-[manuscript_1964.R completed in 73 s]
-
-
-####################################################################################################
-##  private_tests.R
-####################################################################################################
-
-New names:
-• `` -> `...37`
-• `` -> `...59`
-New names:
-• `` -> `...37`
-• `` -> `...59`
-
-===== P1. Candidate screen, levels: each variable added alone, without the projection (a) and beside it (b) (samples to 2019) =====
-candidate          sample       N |  (a) coef       p    dAIC  RESETp |  (b) coef       p    dAIC  delta_oadr_10       p
-L_int_tme          extended    55 |   -0.0067   0.575   +1.54   0.050 |    0.0175   0.053   -2.03         0.0096   <.001
-L_int_tme          core        43 |   -0.0073   0.554   +1.51   0.112 |    0.0214   0.019   -2.49         0.0108   <.001
-L_int_gdp          extended    53 |   -0.0283   0.168   -0.87   0.010 |    0.0230   0.184   +0.02         0.0096   <.001
-L_int_gdp          core        41 |   -0.0219   0.306   +0.50   0.043 |    0.0299   0.104   -0.60         0.0104   <.001
-L_psnb_gdp         extended    55 |   -0.0244   0.023   -4.89   0.044 |   -0.0009   0.931   +1.99         0.0081   <.001
-L_psnb_gdp         core        43 |   -0.0283   0.011   -5.80   0.055 |   -0.0035   0.796   +1.91         0.0078   0.003
-L_psnd_gdp         extended    55 |   -0.0007   0.513   +1.40   0.019 |   -0.0003   0.692   +1.87         0.0081   <.001
-L_psnd_gdp         core        43 |   -0.0021   0.130   -1.22   0.009 |   -0.0003   0.782   +1.91         0.0080   <.001
-L_tax_gdp          extended    55 |   -0.0118   0.335   +0.81   0.016 |   -0.0039   0.688   +1.81         0.0080   <.001
-L_tax_gdp          core        43 |   -0.0032   0.852   +1.95   0.064 |    0.0050   0.716   +1.83         0.0084   <.001
-fc_budget          extended    49 |   -0.0172   0.004   -6.50   0.036 |   -0.0055   0.293   +1.17         0.0069   <.001
-fc_budget          core        43 |   -0.0190   0.017   -5.27   0.024 |   -0.0063   0.385   +1.19         0.0072   <.001
-fc_planned         extended    49 |   -0.0064   0.222   +0.90   0.086 |   -0.0035   0.505   +1.53         0.0077   <.001
-fc_planned         core        43 |   -0.0054   0.424   +1.46   0.097 |   -0.0037   0.608   +1.63         0.0082   <.001
-fc_medium          extended    49 |   -0.0136   0.110   -0.33   0.086 |   -0.0010   0.887   +1.99         0.0078   <.001
-fc_medium          core        43 |   -0.0163   0.209   +0.26   0.052 |   -0.0025   0.837   +1.95         0.0081   <.001
-L_grants_gdp       extended    53 |   -0.0292   0.368   +1.21   0.026 |   -0.0387   0.152   -0.22         0.0083   <.001
-L_grants_gdp       core        41 |   -0.0409   0.253   +0.66   0.052 |   -0.0395   0.168   +0.14         0.0081   <.001
-L_grants_wap       extended    53 |   -0.0120   0.790   +1.92   0.044 |   -0.0257   0.465   +1.42         0.0082   <.001
-L_grants_wap       core        41 |   -0.0552   0.295   +0.74   0.072 |   -0.0446   0.254   +0.79         0.0080   <.001
-L_tme_gdp          extended    53 |   -0.0116   0.003   -8.50   <.001 |   -0.0017   0.714   +1.81         0.0076   <.001
-L_tme_gdp          core        41 |   -0.0094   0.048   -3.07   0.003 |    0.0003   0.949   +1.99         0.0082   <.001
-gad_earn           extended    55 |    0.0103   0.005   -5.33   0.006 |    0.0038   0.419   +0.76         0.0075   <.001
-gad_earn           core        43 |    0.0439   0.024   -2.70   0.023 |    0.0191   0.429   +0.89         0.0075   <.001
-gad_policy         extended    55 |    0.0005   0.928   +1.99   0.053 |    0.0050   0.206   -0.08         0.0086   <.001
-gad_policy         core        43 |    0.0000   0.999   +2.00   0.122 |    0.0329   0.174   -0.60         0.0092   <.001
-L_gilt             extended    53 |   -0.0277   0.001   -7.16   0.079 |   -0.0072   0.394   +1.34         0.0074   <.001
-L_gilt             core        41 |   -0.0267   0.052   -1.92   0.074 |   -0.0094   0.321   +1.40         0.0076   <.001
-L_r_g              extended    53 |    0.0116   0.201   -0.30   0.071 |    0.0014   0.864   +1.95         0.0080   <.001
-L_r_g              core        41 |    0.0211   0.070   -3.12   0.037 |    0.0051   0.665   +1.68         0.0075   <.001
-L_real_rate        extended    53 |    0.0057   0.432   +1.05   0.015 |   -0.0037   0.507   +1.44         0.0085   <.001
-L_real_rate        core        41 |    0.0004   0.971   +2.00   0.057 |   -0.0090   0.285   +0.22         0.0089   <.001
-L_vac_wap          extended    55 |    0.0217   0.020   -6.95   0.122 |    0.0121   0.044   -1.84         0.0072   <.001
-L_vac_wap          core        43 |    0.0317   <.001   -9.25   0.092 |    0.0167   0.066   -1.09         0.0064   <.001
-L_vac_unem         extended    55 |    0.4301   0.005   -4.57   0.145 |    0.1540   0.142   +0.91         0.0075   <.001
-L_vac_unem         core        43 |    0.8265   0.020   -5.28   0.062 |    0.1568   0.596   +1.77         0.0076   <.001
-L_wage_infl        extended    55 |   -0.0146   <.001  -12.55   0.054 |   -0.0067   0.058   -1.16         0.0066   <.001
-L_wage_infl        core        43 |   -0.0199   0.002   -7.01   0.025 |   -0.0105   0.084   -0.79         0.0068   <.001
-L_inflation        extended    55 |   -0.0145   0.001  -10.14   0.003 |   -0.0065   0.098   -0.76         0.0069   <.001
-L_inflation        core        43 |   -0.0158   0.009   -7.48   0.002 |   -0.0080   0.117   -0.55         0.0067   <.001
-L_cpi_infl         extended    55 |   -0.0168   <.001  -13.62   0.007 |   -0.0061   0.104   +0.32         0.0066   <.001
-L_cpi_infl         core        43 |   -0.0177   0.005   -7.08   0.004 |   -0.0066   0.221   +0.87         0.0069   <.001
-st_inf_exp         extended    52 |   -0.0145   0.003   -5.71   0.049 |    0.0037   0.482   +1.62         0.0088   <.001
-st_inf_exp         core        40 |   -0.0164   0.129   -0.75   0.020 |    0.0095   0.299   +1.15         0.0094   <.001
-lt_inf_exp         extended    52 |   -0.0164   0.005   -6.09   0.017 |    0.0022   0.754   +1.88         0.0084   <.001
-lt_inf_exp         core        40 |   -0.0158   0.102   -1.34   0.004 |    0.0042   0.669   +1.77         0.0088   <.001
-L_tbill            extended    55 |   -0.0175   0.013   -3.29   0.109 |   -0.0080   0.239   +0.46         0.0076   <.001
-L_tbill            core        43 |   -0.0153   0.077   -0.78   0.199 |   -0.0100   0.203   +0.30         0.0079   <.001
-L_real_eri         extended    55 |    0.0023   0.396   +1.47   0.061 |   -0.0028   0.301   +0.89         0.0087   <.001
-L_real_eri         core        43 |    0.0008   0.769   +1.94   0.114 |   -0.0035   0.255   +0.64         0.0089   <.001
-L_ca_gdp           extended    55 |    0.0114   0.402   +1.18   0.048 |   -0.0086   0.497   +1.35         0.0086   <.001
-L_ca_gdp           core        43 |    0.0163   0.352   +1.09   0.107 |   -0.0132   0.444   +1.28         0.0090   <.001
-L_trade_bal        extended    55 |   -0.0001   0.992   +2.00   0.057 |   -0.0147   0.256   +0.21         0.0086   <.001
-L_trade_bal        core        43 |   -0.0144   0.410   +1.36   0.095 |   -0.0200   0.231   +0.18         0.0084   <.001
-L_tot              extended    55 |    0.0130   0.015   -4.77   0.048 |   -0.0046   0.375   +1.30         0.0092   <.001
-L_tot              core        43 |    0.0110   0.150   -0.72   0.104 |   -0.0061   0.438   +1.22         0.0094   <.001
-L_labour_share     extended    55 |   -0.0186   0.021   -3.06   <.001 |   -0.0118   0.093   -1.06         0.0077   <.001
-L_labour_share     core        43 |   -0.0175   0.058   -1.42   <.001 |   -0.0108   0.188   +0.18         0.0078   <.001
-L_real_house       extended    55 |    0.0050   0.071   -4.26   0.065 |    0.0038   0.012   -3.46         0.0077   <.001
-L_real_house       core        43 |    0.0077   0.006   -7.60   0.067 |    0.0048   0.033   -2.51         0.0068   <.001
-L_growth           extended    55 |    0.0150   0.065   -1.69   0.042 |    0.0074   0.310   +0.65         0.0078   <.001
-L_growth           core        43 |    0.0167   0.085   -1.07   0.071 |    0.0098   0.289   +0.52         0.0078   <.001
-L_openness         extended    53 |   -0.0063   0.268   -0.31   0.011 |    0.0026   0.579   +1.52         0.0086   <.001
-L_openness         core        41 |   -0.0045   0.475   +1.06   0.038 |    0.0029   0.577   +1.54         0.0087   <.001
-L_m4_growth        extended    53 |   -0.0009   0.856   +1.96   0.029 |    0.0054   0.161   -0.07         0.0087   <.001
-L_m4_growth        core        41 |    0.0070   0.407   +0.87   0.033 |    0.0097   0.074   -1.21         0.0085   <.001
-L_particip         extended    53 |   -0.0400   0.005   -4.81   0.079 |    0.0166   0.331   +1.08         0.0094   <.001
-L_particip         core        41 |   -0.0394   0.006   -3.85   0.167 |    0.0140   0.436   +1.54         0.0095   <.001
-L_tax_ceiling      extended    52 |    0.0190   0.061   -1.32   0.230 |   -0.0011   0.908   +1.99         0.0079   <.001
-L_tax_ceiling      core        39 |    0.0345   0.024   -3.00   0.226 |    0.0082   0.583   +1.69         0.0089   <.001
-L_tme_real_growth  extended    53 |   -0.0002   0.958   +2.00   0.047 |    0.0007   0.865   +1.97         0.0081   <.001
-L_tme_real_growth  core        41 |    0.0079   0.285   +0.28   0.063 |    0.0023   0.685   +1.81         0.0079   <.001
-boe_indep          extended    55 |    0.2785   <.001   -8.75   0.316 |    0.1215   0.042   -0.41         0.0070   <.001
-boe_indep          core        43 |    0.2527   <.001   -6.05   0.580 |    0.1124   0.067   +0.30         0.0070   <.001
-golden_rule        extended    55 |    0.1339   0.002   -7.47   0.021 |    0.0402   0.184   +1.07         0.0073   <.001
-golden_rule        core        43 |    0.1462   0.001   -7.82   0.056 |    0.0479   0.216   +1.17         0.0069   <.001
-obr_era            extended    55 |   -0.0884   0.143   -0.71   0.004 |   -0.0076   0.840   +1.97         0.0081   <.001
-obr_era            core        43 |   -0.1104   0.090   -1.56   0.007 |   -0.0074   0.865   +1.98         0.0081   <.001
-inf_exp_5_10y      extended    32 |   -0.0039   0.893   +1.98   0.024 |    0.0247   0.242   +0.96         0.0093   <.001
-inf_exp_5_10y      core        32 |   -0.0039   0.893   +1.98   0.024 |    0.0247   0.242   +0.96         0.0093   <.001
-L_eu_rate          extended    43 |   -0.1793   0.018   -4.79   0.420 |   -0.0987   0.118   -0.56         0.0072   <.001
-L_eu_rate          core        43 |   -0.1793   0.018   -4.79   0.420 |   -0.0987   0.118   -0.56         0.0072   <.001
-(a): the candidate added to the fiscal model without the projection, dAIC against that model on the same rows, RESET p of the augmented model;
-(b): the candidate added beside the projection, dAIC against the baseline on the same rows. A variable that extends the fiscal model must improve both.
-
-===== P2. Candidate screen, log forms of the positive-valued controls (samples to 2019) =====
-candidate          sample       N |  (a) coef       p    dAIC  RESETp |  (b) coef       p    dAIC  delta_oadr_10       p
-L_ln_vac_wap       extended    55 |    0.2106   0.014   -6.64   0.063 |    0.1467   0.011   -4.25         0.0074   <.001
-L_ln_vac_wap       core        43 |    0.2885   0.002   -8.39   0.024 |    0.1900   0.012   -3.60         0.0067   <.001
-L_ln_vac_unem      extended    55 |    0.1920   0.005   -7.82   0.102 |    0.1158   0.019   -2.97         0.0072   <.001
-L_ln_vac_unem      core        43 |    0.2823   <.001   -9.51   0.046 |    0.1724   0.014   -2.84         0.0064   <.001
-L_ln_int_tme       extended    55 |   -0.0680   0.458   +1.23   0.050 |    0.1203   0.087   -1.09         0.0094   <.001
-L_ln_int_tme       core        43 |   -0.0705   0.459   +1.25   0.115 |    0.1504   0.032   -1.56         0.0105   <.001
-L_ln_int_gdp       extended    53 |   -0.1010   0.144   -1.10   0.014 |    0.0810   0.172   -0.04         0.0096   <.001
-L_ln_int_gdp       core        41 |   -0.0822   0.258   +0.19   0.054 |    0.1066   0.086   -0.66         0.0106   <.001
-L_ln_tbill         extended    55 |    0.0121   0.572   +1.68   0.016 |   -0.0026   0.849   +1.98         0.0082   <.001
-L_ln_tbill         core        43 |    0.0273   0.269   +0.74   0.017 |   -0.0041   0.812   +1.96         0.0084   <.001
-L_ln_gilt          extended    53 |   -0.0802   0.143   -0.01   0.034 |   -0.0146   0.759   +1.90         0.0080   <.001
-L_ln_gilt          core        41 |   -0.0218   0.769   +1.93   0.061 |   -0.0163   0.785   +1.94         0.0081   <.001
-L_ln_tme_gdp       extended    53 |   -0.4840   0.004   -8.35   <.001 |   -0.0578   0.767   +1.87         0.0077   <.001
-L_ln_tme_gdp       core        41 |   -0.3907   0.047   -3.07   0.003 |    0.0233   0.917   +1.98         0.0083   <.001
-L_ln_grants_gdp    extended    53 |   -0.3476   0.326   +1.07   0.031 |   -0.4496   0.113   -0.52         0.0083   <.001
-L_ln_grants_gdp    core        41 |   -0.3868   0.350   +1.06   0.065 |   -0.4538   0.164   +0.07         0.0082   <.001
-L_ln_grants_wap    extended    53 |    0.0084   0.971   +2.00   0.048 |   -0.1443   0.387   +1.28         0.0083   <.001
-L_ln_grants_wap    core        41 |    0.0008   0.997   +2.00   0.111 |   -0.2254   0.279   +0.75         0.0086   <.001
-L_ln_psnd_gdp      extended    55 |   -0.0377   0.524   +1.36   0.017 |   -0.0022   0.958   +2.00         0.0081   <.001
-L_ln_psnd_gdp      core        43 |   -0.0743   0.292   +0.10   0.020 |    0.0041   0.944   +1.99         0.0083   <.001
-L_ln_tax_gdp       extended    55 |   -0.3618   0.343   +0.88   0.017 |   -0.1083   0.711   +1.85         0.0081   <.001
-L_ln_tax_gdp       core        43 |   -0.0868   0.870   +1.96   0.066 |    0.1700   0.685   +1.80         0.0084   <.001
-L_ln_real_eri      extended    55 |    0.1352   0.483   +1.61   0.061 |   -0.2066   0.274   +0.71         0.0087   <.001
-L_ln_real_eri      core        43 |    0.0708   0.735   +1.91   0.119 |   -0.2486   0.247   +0.54         0.0090   <.001
-L_ln_tot           extended    55 |    1.1945   0.011   -4.97   0.043 |   -0.3906   0.370   +1.38         0.0092   <.001
-L_ln_tot           core        43 |    1.0262   0.151   -0.77   0.097 |   -0.5320   0.447   +1.29         0.0093   <.001
-L_ln_labour_share  extended    55 |   -1.3387   0.023   -2.98   <.001 |   -0.8563   0.093   -1.08         0.0077   <.001
-L_ln_labour_share  core        43 |   -1.2560   0.063   -1.38   <.001 |   -0.7819   0.186   +0.16         0.0078   <.001
-L_ln_openness      extended    53 |   -0.3017   0.314   -0.07   0.015 |    0.1284   0.586   +1.52         0.0086   <.001
-L_ln_openness      core        41 |   -0.1834   0.584   +1.41   0.045 |    0.1507   0.564   +1.49         0.0086   <.001
-L_ln_particip      extended    53 |   -3.2032   0.003   -4.79   0.078 |    1.3271   0.347   +1.08         0.0094   <.001
-L_ln_particip      core        41 |   -3.1551   0.006   -3.82   0.166 |    1.1104   0.453   +1.55         0.0095   <.001
-(a): the candidate added to the fiscal model without the projection, dAIC against that model on the same rows, RESET p of the augmented model;
-(b): the candidate added beside the projection, dAIC against the baseline on the same rows. A variable that extends the fiscal model must improve both.
-
-===== P3. Candidate screen for GROSS inflows (mig_gross), levels and log forms (samples to 2019) =====
-candidate          sample       N |  (a) coef       p    dAIC  RESETp |  (b) coef       p    dAIC  delta_oadr_10       p
-L_int_tme          extended    55 |   -0.0062   0.593   +1.61   0.046 |    0.0197   0.021   -3.16         0.0102   <.001
-L_int_tme          core        43 |   -0.0071   0.558   +1.53   0.107 |    0.0213   0.019   -2.58         0.0107   <.001
-L_int_gdp          extended    53 |   -0.0288   0.148   -0.96   0.004 |    0.0226   0.186   +0.06         0.0098   <.001
-L_int_gdp          core        41 |   -0.0222   0.289   +0.41   0.022 |    0.0271   0.146   -0.24         0.0101   <.001
-L_psnb_gdp         extended    55 |   -0.0226   0.040   -3.77   0.052 |    0.0038   0.720   +1.83         0.0089   <.001
-L_psnb_gdp         core        43 |   -0.0267   0.015   -5.10   0.054 |   -0.0009   0.948   +1.99         0.0081   0.002
-L_psnd_gdp         extended    55 |   -0.0003   0.771   +1.88   0.035 |    0.0003   0.642   +1.82         0.0086   <.001
-L_psnd_gdp         core        43 |   -0.0017   0.206   -0.28   0.029 |    0.0001   0.944   +1.99         0.0083   <.001
-L_tax_gdp          extended    55 |   -0.0146   0.250   +0.22   0.014 |   -0.0081   0.404   +1.12         0.0083   <.001
-L_tax_gdp          core        43 |   -0.0055   0.741   +1.85   0.074 |    0.0014   0.916   +1.99         0.0082   <.001
-fc_budget          extended    49 |   -0.0184   <.001   -8.17   0.023 |   -0.0076   0.111   +0.34         0.0065   <.001
-fc_budget          core        43 |   -0.0206   0.006   -6.87   0.021 |   -0.0090   0.188   +0.31         0.0068   <.001
-fc_planned         extended    49 |   -0.0082   0.104   +0.16   0.045 |   -0.0056   0.253   +0.77         0.0076   <.001
-fc_planned         core        43 |   -0.0075   0.254   +0.91   0.065 |   -0.0063   0.351   +0.86         0.0081   <.001
-fc_medium          extended    49 |   -0.0157   0.056   -1.25   0.068 |   -0.0040   0.538   +1.73         0.0075   <.001
-fc_medium          core        43 |   -0.0197   0.129   -0.60   0.058 |   -0.0072   0.543   +1.53         0.0079   <.001
-L_grants_gdp       extended    53 |   -0.0157   0.613   +1.76   0.004 |   -0.0218   0.406   +1.26         0.0085   <.001
-L_grants_gdp       core        41 |   -0.0278   0.421   +1.33   0.010 |   -0.0242   0.392   +1.25         0.0080   <.001
-L_grants_wap       extended    53 |    0.0066   0.876   +1.98   0.005 |    0.0018   0.958   +2.00         0.0084   <.001
-L_grants_wap       core        41 |   -0.0340   0.498   +1.47   0.012 |   -0.0200   0.599   +1.73         0.0080   <.001
-L_tme_gdp          extended    53 |   -0.0120   0.002   -9.22   <.001 |   -0.0024   0.588   +1.58         0.0076   <.001
-L_tme_gdp          core        41 |   -0.0095   0.041   -3.40   0.002 |   -0.0004   0.941   +1.99         0.0079   <.001
-gad_earn           extended    55 |    0.0109   0.001   -6.05   0.015 |    0.0045   0.272   +0.17         0.0077   <.001
-gad_earn           core        43 |    0.0465   0.009   -3.41   0.055 |    0.0228   0.279   +0.35         0.0074   <.001
-gad_policy         extended    55 |    0.0015   0.786   +1.87   0.048 |    0.0067   0.064   -1.82         0.0092   <.001
-gad_policy         core        43 |    0.0036   0.902   +1.98   0.107 |    0.0371   0.083   -1.48         0.0094   <.001
-L_gilt             extended    53 |   -0.0320   <.001  -10.03   0.014 |   -0.0139   0.110   -0.55         0.0071   <.001
-L_gilt             core        41 |   -0.0288   0.030   -2.95   0.034 |   -0.0138   0.139   +0.56         0.0073   <.001
-L_r_g              extended    53 |    0.0118   0.205   -0.28   0.031 |    0.0020   0.804   +1.90         0.0083   <.001
-L_r_g              core        41 |    0.0213   0.067   -3.35   0.039 |    0.0058   0.626   +1.57         0.0074   0.001
-L_real_rate        extended    53 |    0.0056   0.439   +1.10   0.005 |   -0.0039   0.481   +1.39         0.0088   <.001
-L_real_rate        core        41 |   -0.0003   0.977   +2.00   0.020 |   -0.0096   0.231   -0.11         0.0089   <.001
-L_vac_wap          extended    55 |    0.0236   0.015   -8.29   0.066 |    0.0146   0.016   -3.61         0.0075   <.001
-L_vac_wap          core        43 |    0.0330   <.001  -10.63   0.065 |    0.0188   0.031   -2.09         0.0061   <.001
-L_vac_unem         extended    55 |    0.4948   0.003   -6.29   0.063 |    0.2364   0.026   -0.57         0.0076   <.001
-L_vac_unem         core        43 |    0.8583   0.013   -6.13   0.021 |    0.2237   0.445   +1.52         0.0073   <.001
-L_wage_infl        extended    55 |   -0.0160   <.001  -15.21   0.027 |   -0.0085   0.013   -3.36         0.0066   <.001
-L_wage_infl        core        43 |   -0.0200   0.002   -7.59   0.042 |   -0.0111   0.055   -1.36         0.0067   <.001
-L_inflation        extended    55 |   -0.0162   <.001  -12.44   0.001 |   -0.0085   0.040   -2.81         0.0069   <.001
-L_inflation        core        43 |   -0.0164   0.007   -8.66   0.002 |   -0.0091   0.082   -1.49         0.0065   <.001
-L_cpi_infl         extended    55 |   -0.0186   <.001  -16.49   0.003 |   -0.0084   0.025   -1.33         0.0064   <.001
-L_cpi_infl         core        43 |   -0.0185   0.003   -8.26   0.006 |   -0.0081   0.127   +0.20         0.0066   <.001
-st_inf_exp         extended    52 |   -0.0155   0.002   -6.69   0.020 |    0.0016   0.768   +1.93         0.0086   <.001
-st_inf_exp         core        40 |   -0.0163   0.116   -0.90   0.022 |    0.0074   0.376   +1.43         0.0091   <.001
-lt_inf_exp         extended    52 |   -0.0188   0.003   -8.16   0.005 |   -0.0018   0.801   +1.92         0.0079   <.001
-lt_inf_exp         core        40 |   -0.0163   0.080   -1.81   0.004 |    0.0015   0.866   +1.97         0.0083   <.001
-L_tbill            extended    55 |   -0.0196   0.003   -4.75   0.060 |   -0.0110   0.072   -1.12         0.0078   <.001
-L_tbill            core        43 |   -0.0164   0.043   -1.42   0.143 |   -0.0116   0.098   -0.51         0.0078   <.001
-L_real_eri         extended    55 |    0.0017   0.504   +1.70   0.040 |   -0.0034   0.171   +0.21         0.0092   <.001
-L_real_eri         core        43 |    0.0003   0.907   +1.99   0.084 |   -0.0041   0.164   +0.03         0.0090   <.001
-L_ca_gdp           extended    55 |    0.0091   0.512   +1.49   0.041 |   -0.0144   0.253   +0.17         0.0093   <.001
-L_ca_gdp           core        43 |    0.0146   0.398   +1.25   0.086 |   -0.0153   0.361   +0.99         0.0091   <.001
-L_trade_bal        extended    55 |    0.0011   0.940   +1.99   0.042 |   -0.0156   0.241   -0.01         0.0090   <.001
-L_trade_bal        core        43 |   -0.0128   0.467   +1.49   0.093 |   -0.0184   0.278   +0.41         0.0084   <.001
-L_tot              extended    55 |    0.0140   0.008   -5.76   0.059 |   -0.0029   0.574   +1.71         0.0092   <.001
-L_tot              core        43 |    0.0125   0.100   -1.54   0.123 |   -0.0034   0.666   +1.74         0.0089   <.001
-L_labour_share     extended    55 |   -0.0190   0.019   -3.26   <.001 |   -0.0120   0.099   -1.23         0.0080   <.001
-L_labour_share     core        43 |   -0.0179   0.054   -1.68   <.001 |   -0.0115   0.167   -0.14         0.0077   <.001
-L_real_house       extended    55 |    0.0050   0.079   -4.07   0.051 |    0.0038   0.013   -3.47         0.0081   <.001
-L_real_house       core        43 |    0.0083   0.002   -9.27   0.063 |    0.0055   0.010   -4.08         0.0066   <.001
-L_growth           extended    55 |    0.0157   0.051   -2.03   0.026 |    0.0081   0.257   +0.39         0.0081   <.001
-L_growth           core        43 |    0.0181   0.055   -1.70   0.046 |    0.0115   0.188   -0.12         0.0077   <.001
-L_openness         extended    53 |   -0.0059   0.296   +0.03   0.004 |    0.0034   0.462   +1.18         0.0091   <.001
-L_openness         core        41 |   -0.0041   0.512   +1.22   0.014 |    0.0033   0.509   +1.36         0.0087   <.001
-L_m4_growth        extended    53 |   -0.0017   0.710   +1.86   0.004 |    0.0037   0.344   +1.02         0.0088   <.001
-L_m4_growth        core        41 |    0.0061   0.468   +1.10   0.003 |    0.0084   0.141   -0.54         0.0083   <.001
-L_particip         extended    53 |   -0.0409   0.004   -5.07   0.056 |    0.0175   0.305   +0.99         0.0098   <.001
-L_particip         core        41 |   -0.0402   0.004   -4.26   0.143 |    0.0109   0.540   +1.72         0.0091   <.001
-L_tax_ceiling      extended    52 |    0.0183   0.080   -1.14   0.103 |   -0.0020   0.834   +1.96         0.0082   <.001
-L_tax_ceiling      core        39 |    0.0316   0.034   -2.50   0.214 |    0.0052   0.720   +1.86         0.0091   <.001
-L_tme_real_growth  extended    53 |   -0.0010   0.821   +1.95   0.007 |    0.0000   0.992   +2.00         0.0084   <.001
-L_tme_real_growth  core        41 |    0.0071   0.340   +0.58   0.022 |    0.0014   0.794   +1.92         0.0079   <.001
-boe_indep          extended    55 |    0.2767   <.001   -8.43   0.426 |    0.1170   0.049   -0.27         0.0074   <.001
-boe_indep          core        43 |    0.2569   <.001   -6.55   0.714 |    0.1196   0.051   +0.01         0.0069   <.001
-golden_rule        extended    55 |    0.1134   0.015   -4.86   0.037 |    0.0088   0.775   +1.95         0.0083   <.001
-golden_rule        core        43 |    0.1286   0.005   -6.00   0.073 |    0.0251   0.520   +1.75         0.0075   <.001
-obr_era            extended    55 |   -0.0654   0.285   +0.51   0.014 |    0.0283   0.450   +1.61         0.0089   <.001
-obr_era            core        43 |   -0.0884   0.189   -0.42   0.021 |    0.0184   0.665   +1.88         0.0085   <.001
-L_ln_vac_wap       extended    55 |    0.2287   0.012   -7.82   0.038 |    0.1720   0.003   -6.66         0.0078   <.001
-L_ln_vac_wap       core        43 |    0.3032   0.001   -9.79   0.030 |    0.2085   0.005   -5.01         0.0066   <.001
-L_ln_vac_unem      extended    55 |    0.2143   0.003   -9.66   0.051 |    0.1439   0.003   -5.68         0.0074   <.001
-L_ln_vac_unem      core        43 |    0.2954   <.001  -10.99   0.044 |    0.1900   0.006   -4.12         0.0062   <.001
-L_ln_int_tme       extended    55 |   -0.0604   0.494   +1.40   0.046 |    0.1419   0.032   -2.34         0.0101   <.001
-L_ln_int_tme       core        43 |   -0.0672   0.473   +1.30   0.108 |    0.1531   0.028   -1.81         0.0105   <.001
-L_ln_int_gdp       extended    53 |   -0.1003   0.132   -1.03   0.006 |    0.0864   0.134   -0.33         0.0100   <.001
-L_ln_int_gdp       core        41 |   -0.0821   0.248   +0.15   0.028 |    0.1010   0.111   -0.47         0.0104   <.001
-L_ln_tbill         extended    55 |    0.0028   0.889   +1.98   0.032 |   -0.0160   0.226   +1.09         0.0088   <.001
-L_ln_tbill         core        43 |    0.0184   0.453   +1.38   0.044 |   -0.0135   0.392   +1.56         0.0086   <.001
-L_ln_gilt          extended    53 |   -0.1049   0.054   -1.49   0.003 |   -0.0529   0.273   +0.66         0.0080   <.001
-L_ln_gilt          core        41 |   -0.0452   0.516   +1.65   0.014 |   -0.0455   0.426   +1.48         0.0081   <.001
-L_ln_tme_gdp       extended    53 |   -0.5007   0.003   -9.03   <.001 |   -0.0885   0.644   +1.70         0.0077   <.001
-L_ln_tme_gdp       core        41 |   -0.3963   0.040   -3.41   0.003 |   -0.0083   0.970   +2.00         0.0080   0.001
-L_ln_grants_gdp    extended    53 |   -0.2173   0.525   +1.62   0.004 |   -0.3050   0.266   +0.79         0.0085   <.001
-L_ln_grants_gdp    core        41 |   -0.2478   0.533   +1.59   0.013 |   -0.2851   0.377   +1.18         0.0081   <.001
-L_ln_grants_wap    extended    53 |    0.0663   0.764   +1.90   0.007 |   -0.0672   0.669   +1.83         0.0085   <.001
-L_ln_grants_wap    core        41 |    0.0703   0.769   +1.91   0.023 |   -0.1128   0.572   +1.66         0.0083   <.001
-L_ln_psnd_gdp      extended    55 |   -0.0205   0.720   +1.81   0.033 |    0.0230   0.558   +1.63         0.0087   <.001
-L_ln_psnd_gdp      core        43 |   -0.0608   0.375   +0.67   0.048 |    0.0188   0.732   +1.84         0.0085   <.001
-L_ln_tax_gdp       extended    55 |   -0.4473   0.255   +0.31   0.014 |   -0.2426   0.416   +1.21         0.0083   <.001
-L_ln_tax_gdp       core        43 |   -0.1608   0.758   +1.87   0.075 |    0.0580   0.889   +1.98         0.0083   <.001
-L_ln_real_eri      extended    55 |    0.0882   0.626   +1.83   0.039 |   -0.2655   0.137   -0.24         0.0092   <.001
-L_ln_real_eri      core        43 |    0.0319   0.869   +1.98   0.084 |   -0.2899   0.155   -0.13         0.0091   <.001
-L_ln_tot           extended    55 |    1.2888   0.006   -5.95   0.055 |   -0.2438   0.582   +1.75         0.0091   <.001
-L_ln_tot           core        43 |    1.1551   0.098   -1.59   0.119 |   -0.2931   0.680   +1.78         0.0088   <.001
-L_ln_labour_share  extended    55 |   -1.3670   0.021   -3.18   <.001 |   -0.8717   0.099   -1.25         0.0080   <.001
-L_ln_labour_share  core        43 |   -1.2825   0.056   -1.64   <.001 |   -0.8293   0.166   -0.15         0.0077   <.001
-L_ln_openness      extended    53 |   -0.2853   0.332   +0.18   0.004 |    0.1530   0.507   +1.32         0.0090   <.001
-L_ln_openness      core        41 |   -0.1623   0.621   +1.53   0.017 |    0.1712   0.505   +1.33         0.0086   <.001
-L_ln_particip      extended    53 |   -3.2765   0.005   -5.06   0.055 |    1.3966   0.319   +1.00         0.0098   <.001
-L_ln_particip      core        41 |   -3.2189   0.004   -4.24   0.141 |    0.8604   0.554   +1.72         0.0091   <.001
-(a): the candidate added to the fiscal model without the projection, dAIC against that model on the same rows, RESET p of the augmented model;
-(b): the candidate added beside the projection, dAIC against the baseline on the same rows. A variable that extends the fiscal model must improve both.
-Definitions: L_real_rate = tbill minus GDP-deflator inflation, t-1; L_labour_share = labour share of GDP excluding rents, %, t-1 (Millennium A56); L_real_house = real house-price growth, %, t-1 (Millennium A32 house prices less GDP-deflator inflation); L_ln_int_tme = log of public sector debt interest, % of total managed expenditure, t-1 (A28); L_ln_int_gdp = log of public sector debt interest, % of GDP, t-1 (A28); L_ln_tbill = log of three-month Treasury bill rate, %, annual average, t-1 (Millennium M1; Bank of England IUMAAJNB/IUMABEDR for 2017-19); L_ln_gilt = log of yield on 10-year British government securities, %, annual average, t-1 (Millennium A31; to 2016); L_ln_tme_gdp = log of total managed expenditure, % of GDP, t-1 (A28); L_ln_grants_gdp = log of current grants to the personal sector (cash social benefits), % of GDP, t-1 (Millennium A28); L_ln_grants_wap = log of current grants to the personal sector per working-age person, GBP 000, 2024-25 prices, t-1 (A28); L_ln_psnd_gdp = log of public sector net debt, % of GDP, t-1 (OBR HPFD); L_ln_tax_gdp = log of national accounts taxes, % of GDP, t-1 (OBR HPFD); L_ln_real_eri = log of real effective exchange rate of sterling, 1913 = 100, t-1 (Millennium A33); L_ln_tot = log of terms of trade (export over import prices), 2013 = 100, t-1 (Millennium A35); L_ln_labour_share = log of labour share of GDP excluding rents, %, t-1 (Millennium A56); L_ln_openness = log of trade openness: exports plus imports of goods and services, % of GDP, t-1 (Millennium A36/A9; to 2016); L_ln_particip = log of workforce (employed + unemployed) per 100 working-age persons, t-1 (Millennium A50; to 2016).
-
-===== Forward selection over levels, log forms and the Treasury-view candidates (rule stated in the header; no projection at any step) =====
-step 1: L_cpi_infl     summed dAIC -20.70
-step 2: boe_indep      summed dAIC -7.70
-no admissible candidate at step 3 
-selected: L_cpi_infl, boe_indep 
-
-===== P4. The fiscal model without and with the projection, and with debt interest (extended sample, 1965-2019) =====
-
-                    fiscal, no proj             fiscal  +int_tme, no proj           +int_tme
---------------------------------------------------------------------------------------------
-delta_oadr_10                    --          0.0081***                 --          0.0096***
-                                               (<.001)                               (<.001)
-L_int_tme                        --                 --            -0.0067            0.0175*
-                                                                  (0.575)            (0.053)
-L_unem                      -0.0173         -0.0199***            -0.0154         -0.0254***
-                            (0.108)            (0.006)            (0.176)            (0.002)
-L_tax_workpop             0.0334***          0.0527***          0.0311***          0.0620***
-                            (<.001)            (<.001)            (0.004)            (<.001)
-L_ln_debt_gdp                0.1909          0.5311***             0.1910          0.5912***
-                            (0.281)            (0.005)            (0.296)            (<.001)
-L_mig_rate                0.6630***          0.4587***          0.6687***          0.4077***
-                            (<.001)            (<.001)            (<.001)            (<.001)
-basis_pre1975                0.1111           0.1327**             0.1149           0.1267**
-                            (0.134)            (0.013)            (0.110)            (0.028)
---------------------------------------------------------------------------------------------
-N                                55                 55                 55                 55
-adj. R2                      0.9291             0.9545             0.9282             0.9568
-AIC                          -75.58             -99.15             -74.04            -101.18
-RESET p                       0.055              0.369              0.050              0.712
-BG(1) p                       0.124              0.351              0.163              0.235
-max VIF                        10.7               12.4               11.7               15.6
-HAC F (proj)                     --              66.41                 --              68.41
-  p                                            (<.001)                               (<.001)
-F vs no proj                     NA              28.41                 NA              32.83
-  p                            (--)            (<.001)               (--)            (<.001)
-  dAIC                           NA             -23.57                 NA             -27.14
-proj, to 2016                  same               same                 --          0.0096***
-  N, to 2016                                                           52                 52
---------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-no proj = delta_oadr_10 omitted. L_int_tme is added a priori (debt service as a claim on the budget), not by fit: it is null without the projection and
-positive beside it, because the interest burden and the projected ageing are negatively correlated over the sample.
-
-===== P5. The selected control, alone and with debt interest; CPI inflation for comparison (extended sample, 1965-2019) =====
-
-                           selected, no proj                    selected  selected +int_tme, no proj           selected +int_tme          +cpi_infl, no proj                   +cpi_infl
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                             --                   0.0055***                          --                   0.0069***                          --                   0.0066***
-                                                                 (<.001)                                                 (<.001)                                                 (<.001)
-L_cpi_infl                        -0.0139***                     -0.0061                  -0.0152***                   -0.0077**                  -0.0168***                     -0.0061
-                                     (<.001)                     (0.101)                     (<.001)                     (0.041)                     (<.001)                     (0.104)
-boe_indep                           0.2019**                     0.1227*                    0.1929**                      0.0756                          --                          --
-                                     (0.010)                     (0.063)                     (0.015)                     (0.247)                                                        
-L_cpi_infl                        -0.0139***                     -0.0061                  -0.0152***                   -0.0077**                  -0.0168***                     -0.0061
-                                     (<.001)                     (0.101)                     (<.001)                     (0.041)                     (<.001)                     (0.104)
-L_int_tme                                 --                          --                      0.0061                     0.0174*                          --                          --
-                                                                                             (0.564)                     (0.075)                                                        
-L_unem                            -0.0291***                  -0.0235***                  -0.0326***                  -0.0319***                  -0.0372***                  -0.0266***
-                                     (0.002)                     (0.002)                     (0.004)                     (<.001)                     (<.001)                     (<.001)
-L_tax_workpop                         0.0138                   0.0355***                      0.0158                   0.0472***                   0.0253***                   0.0462***
-                                     (0.152)                     (<.001)                     (0.171)                     (<.001)                     (0.007)                     (<.001)
-L_ln_debt_gdp                       0.2869**                   0.4596***                    0.2974**                   0.5359***                    0.3218**                   0.5140***
-                                     (0.046)                     (0.010)                     (0.028)                     (<.001)                     (0.045)                     (0.005)
-L_mig_rate                         0.4902***                   0.4349***                   0.4811***                   0.3943***                   0.5606***                   0.4604***
-                                     (<.001)                     (<.001)                     (<.001)                     (<.001)                     (<.001)                     (<.001)
-basis_pre1975                         0.0362                     0.0961*                      0.0227                      0.0740                     -0.0065                     0.0862*
-                                     (0.511)                     (0.058)                     (0.672)                     (0.191)                     (0.915)                     (0.087)
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-N                                         55                          55                          55                          55                          55                          55
-adj. R2                               0.9507                      0.9560                      0.9500                      0.9580                      0.9455                      0.9549
-AIC                                   -93.87                      -99.37                      -92.33                     -101.15                      -89.20                      -98.83
-RESET p                                0.032                       0.173                       0.032                       0.215                       0.007                       0.172
-BG(1) p                                0.334                       0.204                       0.335                       0.129                       0.643                       0.257
-max VIF                                 13.7                        23.1                        15.0                        29.0                        11.1                        16.2
-HAC F (proj)                              --                       15.04                          --                       23.35                          --                       25.59
-  p                                                              (<.001)                                                 (<.001)                                                 (<.001)
-F vs no proj                              NA                        6.72                          NA                        9.79                          NA                       11.07
-  p                                     (--)                     (0.013)                        (--)                     (0.003)                        (--)                     (0.002)
-  dAIC                                    NA                       -5.50                          NA                       -8.82                          NA                       -9.63
-proj, to 2016                             --                   0.0051***                          --                   0.0069***                          --                   0.0065***
-  N, to 2016                              52                          52                          52                          52                          52                          52
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-selected = the variable chosen in B (L_cpi_infl, boe_indep), chosen without the projection. The projection's contribution (F vs no proj, dAIC) is the test. L_cpi_infl: the CPI measure of the same pressure (Sam, 28 Sep 2026).
-
-===== P4. The fiscal model without and with the projection, and with debt interest (core sample, 1977-2019) =====
-
-                    fiscal, no proj             fiscal  +int_tme, no proj           +int_tme
---------------------------------------------------------------------------------------------
-delta_oadr_10                    --          0.0082***                 --          0.0108***
-                                               (<.001)                               (<.001)
-L_int_tme                        --                 --            -0.0073           0.0214**
-                                                                  (0.554)            (0.019)
-L_unem                    -0.0235**          -0.0199**           -0.0212*         -0.0257***
-                            (0.038)            (0.029)            (0.088)            (0.008)
-L_tax_workpop             0.0391***          0.0518***          0.0374***          0.0606***
-                            (0.004)            (<.001)            (0.009)            (<.001)
-L_ln_debt_gdp                0.2214          0.5351***             0.2210          0.6329***
-                            (0.223)            (0.009)            (0.254)            (0.001)
-L_mig_rate                0.5866***          0.4650***          0.5873***          0.4256***
-                            (<.001)            (<.001)            (<.001)            (<.001)
---------------------------------------------------------------------------------------------
-N                                43                 43                 43                 43
-adj. R2                      0.9368             0.9562             0.9358             0.9594
-AIC                          -55.20             -70.10             -53.68             -72.59
-RESET p                       0.121              0.409              0.112              0.760
-BG(1) p                       0.271              0.354              0.324              0.164
-max VIF                        12.2               13.0               12.2               13.4
-HAC F (proj)                     --              32.23                 --              51.31
-  p                                            (<.001)                               (<.001)
-F vs no proj                     NA              17.82                 NA              22.54
-  p                            (--)            (<.001)               (--)            (<.001)
-  dAIC                           NA             -14.90                 NA             -18.91
-proj, to 2016                  same               same                 --          0.0109***
-  N, to 2016                                                           40                 40
---------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-no proj = delta_oadr_10 omitted. L_int_tme is added a priori (debt service as a claim on the budget), not by fit: it is null without the projection and
-positive beside it, because the interest burden and the projected ageing are negatively correlated over the sample.
-
-===== P5. The selected control, alone and with debt interest; CPI inflation for comparison (core sample, 1977-2019) =====
-
-                           selected, no proj                    selected  selected +int_tme, no proj           selected +int_tme          +cpi_infl, no proj                   +cpi_infl
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                             --                   0.0057***                          --                   0.0090***                          --                   0.0069***
-                                                                 (0.004)                                                 (<.001)                                                 (<.001)
-L_cpi_infl                         -0.0140**                     -0.0064                   -0.0170**                   -0.0128**                  -0.0177***                     -0.0066
-                                     (0.018)                     (0.241)                     (0.014)                     (0.031)                     (0.005)                     (0.221)
-boe_indep                           0.1911**                      0.1102                    0.1742**                      0.0022                          --                          --
-                                     (0.013)                     (0.105)                     (0.027)                     (0.978)                                                        
-L_cpi_infl                         -0.0140**                     -0.0064                   -0.0170**                   -0.0128**                  -0.0177***                     -0.0066
-                                     (0.018)                     (0.241)                     (0.014)                     (0.031)                     (0.005)                     (0.221)
-L_int_tme                                 --                          --                      0.0081                   0.0290***                          --                          --
-                                                                                             (0.475)                     (0.006)                                                        
-L_unem                            -0.0281***                  -0.0225***                  -0.0334***                  -0.0382***                  -0.0364***                  -0.0253***
-                                     (0.009)                     (0.009)                     (0.007)                     (<.001)                     (0.001)                     (0.005)
-L_tax_workpop                         0.0141                   0.0351***                      0.0141                   0.0474***                      0.0224                   0.0436***
-                                     (0.343)                     (0.001)                     (0.365)                     (<.001)                     (0.144)                     (<.001)
-L_ln_debt_gdp                         0.2572                    0.4521**                     0.2714*                   0.6171***                     0.2917*                    0.5099**
-                                     (0.105)                     (0.027)                     (0.061)                     (<.001)                     (0.092)                     (0.013)
-L_mig_rate                         0.5039***                   0.4549***                   0.5103***                   0.4494***                   0.5860***                   0.4846***
-                                     (<.001)                     (<.001)                     (<.001)                     (<.001)                     (<.001)                     (<.001)
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-N                                         43                          43                          43                          43                          43                          43
-adj. R2                               0.9519                      0.9566                      0.9512                      0.9612                      0.9474                      0.9561
-AIC                                   -65.31                      -68.90                      -63.83                      -72.92                      -62.28                      -69.22
-RESET p                                0.032                       0.183                       0.012                       0.230                       0.004                       0.125
-BG(1) p                                0.503                       0.270                       0.454                       0.053                       0.840                       0.307
-max VIF                                 13.5                        18.1                        13.6                        20.2                        12.2                        14.9
-HAC F (proj)                              --                        9.61                          --                       24.61                          --                       18.45
-  p                                                              (0.004)                                                 (<.001)                                                 (<.001)
-F vs no proj                              NA                        4.86                          NA                       10.00                          NA                        8.33
-  p                                     (--)                     (0.034)                        (--)                     (0.003)                        (--)                     (0.007)
-  dAIC                                    NA                       -3.59                          NA                       -9.09                          NA                       -6.95
-proj, to 2016                             --                   0.0053***                          --                   0.0092***                          --                   0.0068***
-  N, to 2016                              40                          40                          40                          40                          40                          40
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-selected = the variable chosen in B (L_cpi_infl, boe_indep), chosen without the projection. The projection's contribution (F vs no proj, dAIC) is the test. L_cpi_infl: the CPI measure of the same pressure (Sam, 28 Sep 2026).
-
-===== P6. Recursive one-step-ahead forecasts of the augmented models (expanding window; actual lagged mig_rate) =====
-extended  forecasts 1990-2019 (n = 30): fiscal, no proj 0.1450; fiscal 0.1130; +int_tme, no proj 0.1531; +int_tme 0.1111; selected, no proj 0.1294; selected 0.1210
-extended  forecasts 1996-2019 (n = 24): fiscal, no proj 0.1473; fiscal 0.1124; +int_tme, no proj 0.1532; +int_tme 0.1065; selected, no proj 0.1358; selected 0.1264
-extended  forecasts 2001-2019 (n = 19): fiscal, no proj 0.1401; fiscal 0.1207; +int_tme, no proj 0.1613; +int_tme 0.1163; selected, no proj 0.1333; selected 0.1313
-core      forecasts 1997-2019 (n = 23): fiscal, no proj 0.1525; fiscal 0.1227; +int_tme, no proj 0.1653; +int_tme 0.1255; selected, no proj 0.1485; selected 0.1418
-core      forecasts 2001-2019 (n = 19): fiscal, no proj 0.1472; fiscal 0.1283; +int_tme, no proj 0.1748; +int_tme 0.1255; selected, no proj 0.1424; selected 0.1471
-Caveat: the selected variables were chosen on the full samples, which flatters them out of sample; delta_oadr_10 was fixed in advance.
-
-===== P7. Gross inflows: the fiscal, debt-interest and selected models (extended sample, 1965-2019) =====
-
-                    fiscal, no proj             fiscal  +int_tme, no proj           +int_tme  selected, no proj           selected
-----------------------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                    --          0.0085***                 --          0.0102***                 --          0.0053***
-                                               (<.001)                               (<.001)                               (<.001)
-L_int_tme                        --                 --            -0.0062           0.0197**                 --                 --
-                                                                  (0.593)            (0.021)                                      
-L_cpi_infl                       --                 --                 --                 --         -0.0159***          -0.0086**
-                                                                                                        (<.001)            (0.021)
-boe_indep                        --                 --                 --                 --           0.1982**            0.1204*
-                                                                                                        (0.013)            (0.076)
-L_unem                      -0.0155          -0.0191**            -0.0137         -0.0254***         -0.0311***         -0.0259***
-                            (0.166)            (0.012)            (0.238)            (0.002)            (<.001)            (<.001)
-L_tax_workpop             0.0376***          0.0644***          0.0355***          0.0767***           0.0243**          0.0464***
-                            (0.001)            (<.001)            (0.005)            (<.001)            (0.019)            (<.001)
-L_ln_debt_gdp                0.1854          0.5617***             0.1855          0.6370***           0.3237**          0.4943***
-                            (0.304)            (0.004)            (0.316)            (<.001)            (0.025)            (0.006)
-L_mig_gross               0.6769***          0.4344***          0.6822***          0.3692***          0.4558***          0.4000***
-                            (<.001)            (<.001)            (<.001)            (<.001)            (<.001)            (<.001)
-basis_pre1975                0.1112          0.1526***             0.1146          0.1502***             0.0432           0.1020**
-                            (0.147)            (0.005)            (0.125)            (0.008)            (0.376)            (0.039)
-----------------------------------------------------------------------------------------------------------------------------------
-N                                55                 55                 55                 55                 55                 55
-adj. R2                      0.9439             0.9648             0.9431             0.9672             0.9630             0.9670
-AIC                          -75.02             -99.78             -73.41            -102.93             -96.28            -101.67
-RESET p                       0.039              0.391              0.046              0.786              0.028              0.204
-BG(1) p                       0.131              0.325              0.165              0.163              0.224              0.133
-max VIF                        14.7               17.8               15.8               22.4               17.0               27.2
-HAC F (proj)                     --              70.51                 --              80.96                 --              15.50
-  p                                            (<.001)                               (<.001)                               (<.001)
-proj, to 2016                  same               same                 --          0.0100***                 --          0.0047***
-  N, to 2016                                                           52                 52                 52                 52
-----------------------------------------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-
-===== P7. Gross inflows: the fiscal, debt-interest and selected models (core sample, 1977-2019) =====
-
-                    fiscal, no proj             fiscal  +int_tme, no proj           +int_tme  selected, no proj           selected
-----------------------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                    --          0.0082***                 --          0.0107***                 --          0.0053***
-                                               (<.001)                               (<.001)                               (0.007)
-L_int_tme                        --                 --            -0.0071           0.0213**                 --                 --
-                                                                  (0.558)            (0.019)                                      
-L_cpi_infl                       --                 --                 --                 --         -0.0149***            -0.0080
-                                                                                                        (0.007)            (0.135)
-boe_indep                        --                 --                 --                 --           0.1947**            0.1181*
-                                                                                                        (0.012)            (0.089)
-L_unem                    -0.0233**          -0.0199**           -0.0210*         -0.0255***         -0.0291***         -0.0238***
-                            (0.039)            (0.032)            (0.085)            (0.010)            (0.005)            (0.006)
-L_tax_workpop             0.0524***          0.0693***          0.0510***          0.0787***            0.0309*          0.0511***
-                            (0.001)            (<.001)            (0.002)            (<.001)            (0.070)            (<.001)
-L_ln_debt_gdp                0.2369          0.5567***             0.2372          0.6536***            0.2877*           0.4687**
-                            (0.199)            (0.007)            (0.225)            (0.001)            (0.071)            (0.022)
-L_mig_gross               0.5362***          0.3965***          0.5352***          0.3565***          0.4241***          0.3796***
-                            (<.001)            (<.001)            (<.001)            (<.001)            (0.002)            (<.001)
-----------------------------------------------------------------------------------------------------------------------------------
-N                                43                 43                 43                 43                 43                 43
-adj. R2                      0.9503             0.9658             0.9495             0.9684             0.9637             0.9669
-AIC                          -56.22             -71.37             -54.69             -73.95             -68.05             -71.19
-RESET p                       0.093              0.474              0.107              0.855              0.054              0.251
-BG(1) p                       0.242              0.323              0.280              0.125              0.456              0.227
-max VIF                        18.5               19.8               18.5               20.3               20.4               23.2
-HAC F (proj)                     --              31.36                 --              48.78                 --               8.16
-  p                                            (<.001)                               (<.001)                               (0.007)
-proj, to 2016                  same               same                 --          0.0108***                 --           0.0047**
-  N, to 2016                                                           40                 40                 40                 40
-----------------------------------------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-
-===== P8. The uncontrolled EU margin with the augmented models (core sample, 1977-2019) =====
-
-                                  eu_rate         eu_rate +int_tme        eu_rate, selected  eu_rate, selected +proj
---------------------------------------------------------------------------------------------------------------------
-delta_oadr_10                      0.0030                   0.0002                       --                 -0.0084*
-                                  (0.412)                  (0.964)                                           (0.062)
-L_int_tme                              --                  -0.0248                       --                       --
-                                                           (0.332)                                                  
-L_cpi_infl                             --                       --               -0.0289***               -0.0415***
-                                                                                    (0.006)                  (<.001)
-boe_indep                              --                       --                  -0.0459                   0.0735
-                                                                                    (0.745)                  (0.659)
-L_unem                             0.0179                   0.0231                  -0.0088                  -0.0218
-                                  (0.344)                  (0.274)                  (0.694)                  (0.266)
-L_tax_workpop                     0.0566*                  0.0507*                  0.0506*                  0.0509*
-                                  (0.061)                  (0.090)                  (0.082)                  (0.071)
-L_ln_debt_gdp                      0.6675                   0.5807                  0.7602*                   0.5967
-                                  (0.125)                  (0.160)                  (0.052)                  (0.122)
-L_eu_rate                       0.7401***                0.7414***                0.6621***                0.5457***
-                                  (<.001)                  (<.001)                  (<.001)                  (<.001)
---------------------------------------------------------------------------------------------------------------------
-N                                      43                       43                       43                       43
-adj. R2                            0.9453                   0.9455                   0.9519                   0.9530
-AIC                                 -5.36                    -4.69                   -10.04                   -10.24
-RESET p                             0.252                    0.123                    0.006                    0.005
-BG(1) p                             0.832                    0.682                    0.737                    0.944
-max VIF                              14.9                     14.9                     17.6                     19.5
-HAC F (proj)                         0.69                     0.00                       --                     3.72
-  p                               (0.412)                  (0.964)                                           (0.062)
-proj, to 2016                        same                   0.0002                       --                  -0.0068
-  N, to 2016                                                    40                       40                       40
---------------------------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-A general migration determinant should move the EU flow as well; a policy-pressure variable should not.
-
-===== P9. Sub-samples and a second lag (extended sample, 1965-2019) =====
-
-                          main     1965-1991     1992-2019     1965-2003     1975-2019  +L2_mig_rate
-----------------------------------------------------------------------------------------------------
-delta_oadr_10        0.0081***     0.0087***     0.0134***     0.0106***     0.0083***     0.0080***
-                       (<.001)       (0.001)       (<.001)       (<.001)       (<.001)       (<.001)
-L_tax_workpop        0.0527***        0.0341     0.0777***     0.0618***     0.0519***     0.0533***
-                       (<.001)       (0.141)       (0.001)       (<.001)       (<.001)       (<.001)
-L_ln_debt_gdp        0.5311***       -0.3036     1.0042***        0.2527      0.5154**     0.5412***
-                       (0.005)       (0.478)       (<.001)       (0.228)       (0.011)       (0.004)
-L_unem              -0.0199***       -0.0189       -0.0044    -0.0282***     -0.0186**    -0.0203***
-                       (0.006)       (0.143)       (0.861)       (0.006)       (0.012)       (0.005)
-L_mig_rate           0.4587***        0.1568     0.3775***        0.2522     0.4708***     0.5023***
-                       (<.001)       (0.447)       (<.001)       (0.103)       (<.001)       (<.001)
-L2_mig_rate                 --            --            --            --            --       -0.0521
-                                                                                             (0.652)
-basis_pre1975         0.1327**      0.1363**            --      0.1383**            --     0.1403***
-                       (0.013)       (0.035)                     (0.022)                     (0.006)
-----------------------------------------------------------------------------------------------------
-N                           55            27            28            39            45            54
-adj. R2                 0.9545        0.8160        0.9486        0.9222        0.9579        0.9536
-AIC                     -99.15        -50.02        -47.94        -78.69        -75.70        -94.32
-RESET p                  0.369         0.887         0.288         0.485         0.386         0.285
-BG(1) p                  0.351         0.447         0.050         0.675         0.456         0.014
-max VIF                   12.4          13.7          19.1          11.2          12.4          20.8
-HAC F (proj)             66.41         13.88         23.89         25.07         40.18         57.16
-  p                    (<.001)       (0.001)       (<.001)       (<.001)       (<.001)       (<.001)
-----------------------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
-Definitions: L2_mig_rate = mig_rate lagged two years.
-Sample starts (end 2019), delta_oadr_10: 1965 0.0081; 1968 0.0079; 1971 0.0079; 1974 0.0083; 1977 0.0082; 1979 0.0081 
-
-===== P9. Sub-samples and a second lag (core sample, 1977-2019) =====
-
-                          main     1977-1997     1998-2019     1977-2003  +L2_mig_rate
---------------------------------------------------------------------------------------
-delta_oadr_10        0.0082***        0.0063     0.0110***      0.0120**     0.0080***
-                       (<.001)       (0.462)       (<.001)       (0.021)       (<.001)
-L_tax_workpop        0.0518***      0.0682**     0.0621***      0.0668**     0.0538***
-                       (<.001)       (0.034)       (0.008)       (0.024)       (<.001)
-L_ln_debt_gdp        0.5351***        0.0023     0.9145***        0.2035     0.5382***
-                       (0.009)       (0.994)       (<.001)       (0.431)       (0.008)
-L_unem               -0.0199**     -0.0233**       -0.0057     -0.0283**     -0.0200**
-                       (0.029)       (0.050)       (0.820)       (0.011)       (0.026)
-L_mig_rate           0.4650***       -0.0250     0.3464***        0.1778     0.5092***
-                       (<.001)       (0.918)       (0.005)       (0.408)       (<.001)
-L2_mig_rate                 --            --            --            --       -0.0618
-                                                                               (0.652)
---------------------------------------------------------------------------------------
-N                           43            21            22            27            43
-adj. R2                 0.9562        0.2308        0.7663        0.9274        0.9552
-AIC                     -70.10        -32.01        -33.02        -48.37        -68.32
-RESET p                  0.409         0.566         0.789         0.431         0.309
-BG(1) p                  0.354         0.110         0.033         0.674         0.014
-max VIF                   13.0           2.2           9.2          14.3          22.6
-HAC F (proj)             32.23          0.57         17.78          6.27         29.66
-  p                    (<.001)       (0.462)       (<.001)       (0.021)       (<.001)
---------------------------------------------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance.
-
-[private_tests.R completed in 18 s]
-
-
-####################################################################################################
-##  primary_int_tme.R
-####################################################################################################
-
-New names:
-• `` -> `...37`
-• `` -> `...59`
-New names:
-• `` -> `...37`
-• `` -> `...59`
-
-##### EXPLORATORY: debt interest as a primary regressor #####
-
-===== 1. The fiscal specification with debt interest (extended sample, 1965-2019) =====
-
-                            fiscal   fiscal +int_tme
-----------------------------------------------------
-delta_oadr_10            0.0081***         0.0096***
-                           (<.001)           (<.001)
-L_int_tme                       --           0.0175*
-                                             (0.053)
-L_tax_workpop            0.0527***         0.0620***
-                           (<.001)           (<.001)
-L_ln_debt_gdp            0.5311***         0.5912***
-                           (0.005)           (<.001)
-L_unem                  -0.0199***        -0.0254***
-                           (0.006)           (0.002)
-L_mig_rate               0.4587***         0.4077***
-                           (<.001)           (<.001)
-basis_pre1975             0.1327**          0.1267**
-                           (0.013)           (0.028)
-----------------------------------------------------
-N                               55                55
-adj. R2                     0.9545            0.9568
-AIC                         -99.15           -101.18
-RESET p                      0.369             0.712
-BG(1) p                      0.351             0.235
-max VIF                       12.4              15.6
-HAC F (proj)                 66.41             68.41
-  p                        (<.001)           (<.001)
-F vs no proj                 28.41             32.83
-  p                        (<.001)           (<.001)
-  dAIC                      -23.57            -27.14
-proj, to 2016                 same         0.0096***
-  N, to 2016                                      52
-----------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-L_int_tme for 2017-19 is spliced from ONS/OBR onto the Millennium A28 series; the 2016 re-estimate is printed above.
-Long run (b / (1 - rho)): projection 0.0162, int_tme 0.0295; one-SD move in int_tme (2.02 pp) = 3.6% of inflows on impact, 6.1% in the long run.
-
-2. ARDL(1,1,1,1,1,1) bounds test with int_tme (extended sample, 1965-2019): F = 9.359 (p 0.001), t = -6.323 (p 0.001). Long-run multipliers:
-           Term    Estimate  Std. Error   t value                    Pr(>|t|)
-1   (Intercept) -0.25517088 0.202821588 -1.258105 0.2154717001837376799677770
-2 delta_oadr_10  0.01675013 0.002718434  6.161681 0.0000002547481394813779300
-3          unem -0.05286384 0.009964107 -5.305426 0.0000041786160481002106507
-4   ln_debt_gdp  1.08650957 0.251291391  4.323704 0.0000956078329345755409960
-5   tax_workpop  0.10248951 0.006414546 15.977671 0.0000000000000000003278129
-6       int_tme  0.04665713 0.013879017  3.361703 0.0016866218633015206754266
-
-3. Falsification battery with int_tme in every column (extended sample, 1965-2019)
-total DR in place of OADR          | delta_dr_10 0.0015 (p <.001) | L_int_tme -0.0070 (p 0.576) | N 55, AIC -79.76, RESET 0.094
-total DR alongside                 | delta_oadr_10 0.0094 (p <.001) | delta_dr_10 0.0001 (p 0.858) | L_int_tme 0.0169 (p 0.079) | N 55, AIC -99.22, RESET 0.718
-gross inflows (mig_gross)          | delta_oadr_10 0.0102 (p <.001) | L_int_tme 0.0197 (p 0.021) | N 55, AIC -102.93, RESET 0.786
-horizon 1 years                    | delta_oadr_1 0.0001 (p 0.985) | L_int_tme -0.0067 (p 0.606) | N 55, AIC -72.04, RESET 0.044
-horizon 3 years                    | delta_oadr_3 0.0073 (p 0.041) | L_int_tme 0.0013 (p 0.919) | N 55, AIC -76.05, RESET 0.006
-horizon 5 years                    | delta_oadr_5 0.0081 (p <.001) | L_int_tme 0.0095 (p 0.351) | N 55, AIC -84.53, RESET 0.011
-horizon 7 years                    | delta_oadr_7 0.0095 (p <.001) | L_int_tme 0.0207 (p 0.050) | N 55, AIC -95.71, RESET 0.026
-permits (thousands), to 2008       | delta_oadr_10 0.6286 (p <.001) | L_int_tme -0.7249 (p 0.382) | N 44, AIC 279.31, RESET 0.007
-British citizens (brit_rate)       | delta_oadr_10 0.0033 (p 0.088) | L_int_tme 0.0012 (p 0.913) | N 55, AIC -68.27, RESET 0.299
-+brit_rate as control              | delta_oadr_10 0.0091 (p <.001) | L_int_tme 0.0198 (p 0.021) | N 55, AIC -102.30, RESET 0.426
-+L2_mig_rate                       | delta_oadr_10 0.0096 (p <.001) | L_int_tme 0.0182 (p 0.039) | L2_mig_rate -0.0537 (p 0.648) | N 54, AIC -96.54, RESET 0.627
-sub-sample 1965-1991               | delta_oadr_10 0.0087 (p 0.002) | L_int_tme 0.0006 (p 0.986) | N 27, AIC -48.02, RESET 0.891
-sub-sample 1992-2019               | delta_oadr_10 0.0136 (p <.001) | L_int_tme 0.0156 (p 0.052) | N 28, AIC -47.85, RESET 0.588
-sub-sample 1965-2003               | delta_oadr_10 0.0093 (p <.001) | L_int_tme 0.0264 (p 0.120) | N 39, AIC -79.49, RESET 0.627
-sub-sample 1975-2019               | delta_oadr_10 0.0108 (p <.001) | L_int_tme 0.0216 (p 0.019) | N 45, AIC -78.47, RESET 0.752
-4. Timing placebo: actual t 8.27, largest rotated |t| 5.14, randomisation p = 0.018.
-   Recursive (sample ending 1990/1995/2000/2005/2010/2015): 0.0089/0.0088/0.0095/0.0084/0.0092/0.0098. OLS-CUSUM p = 0.97.
-
-===== 1. The fiscal specification with debt interest (core sample, 1977-2019) =====
-
-                            fiscal   fiscal +int_tme
-----------------------------------------------------
-delta_oadr_10            0.0082***         0.0108***
-                           (<.001)           (<.001)
-L_int_tme                       --          0.0214**
-                                             (0.019)
-L_tax_workpop            0.0518***         0.0606***
-                           (<.001)           (<.001)
-L_ln_debt_gdp            0.5351***         0.6329***
-                           (0.009)           (0.001)
-L_unem                   -0.0199**        -0.0257***
-                           (0.029)           (0.008)
-L_mig_rate               0.4650***         0.4256***
-                           (<.001)           (<.001)
-----------------------------------------------------
-N                               43                43
-adj. R2                     0.9562            0.9594
-AIC                         -70.10            -72.59
-RESET p                      0.409             0.760
-BG(1) p                      0.354             0.164
-max VIF                       13.0              13.4
-HAC F (proj)                 32.23             51.31
-  p                        (<.001)           (<.001)
-F vs no proj                 17.82             22.54
-  p                        (<.001)           (<.001)
-  dAIC                      -14.90            -18.91
-proj, to 2016                 same         0.0109***
-  N, to 2016                                      40
-----------------------------------------------------
-HAC (vcovHAC) p-values in parentheses. *** p<0.01, ** p<0.05, * p<0.10. HAC F: Wald test of delta_oadr_10 under the same covariance; F vs no proj: classical nested F against the column without delta_oadr_10.
-proj, to 2016: delta_oadr_10 re-estimated without the ONS-extended 2017-19 values ('same' = the column uses no extended series).
-L_int_tme for 2017-19 is spliced from ONS/OBR onto the Millennium A28 series; the 2016 re-estimate is printed above.
-Long run (b / (1 - rho)): projection 0.0188, int_tme 0.0373; one-SD move in int_tme (2.13 pp) = 4.7% of inflows on impact, 8.3% in the long run.
-
-2. ARDL(1,1,1,1,1,1) bounds test with int_tme (core sample, 1977-2019): F = 8.887 (p 0.001), t = -5.323 (p 0.006). Long-run multipliers:
-           Term    Estimate  Std. Error     t value            Pr(>|t|)
-1   (Intercept) -0.02374450 0.274760547 -0.08641889 0.93170765136871547
-2 delta_oadr_10  0.01907403 0.003926198  4.85814338 0.00003476602895898
-3          unem -0.07517517 0.016785820 -4.47849254 0.00010110521803886
-4   ln_debt_gdp  1.39274560 0.361757878  3.84993855 0.00057577264068683
-5   tax_workpop  0.09210165 0.009354165  9.84605791 0.00000000006558268
-6       int_tme  0.05935229 0.018482246  3.21131399 0.00314547544786662
-
-3. Falsification battery with int_tme in every column (core sample, 1977-2019)
-total DR in place of OADR          | delta_dr_10 0.0019 (p 0.154) | L_int_tme -0.0052 (p 0.659) | N 43, AIC -53.54, RESET 0.041
-total DR alongside                 | delta_oadr_10 0.0107 (p <.001) | delta_dr_10 0.0018 (p 0.075) | L_int_tme 0.0233 (p 0.017) | N 43, AIC -73.39, RESET 0.520
-EU placebo (eu_rate)               | delta_oadr_10 0.0002 (p 0.964) | L_int_tme -0.0248 (p 0.332) | N 43, AIC -4.69, RESET 0.123
-zero-migration projection          | delta_zm_10 0.0107 (p <.001) | L_int_tme 0.0270 (p 0.006) | N 43, AIC -74.46, RESET 0.421
-publication-dated projection       | p_pub 0.0112 (p <.001) | L_int_tme 0.0234 (p 0.014) | N 42, AIC -77.40, RESET 0.754
-gross inflows (mig_gross)          | delta_oadr_10 0.0107 (p <.001) | L_int_tme 0.0213 (p 0.019) | N 43, AIC -73.95, RESET 0.855
-horizon 1 years                    | delta_oadr_1 0.0050 (p 0.600) | L_int_tme -0.0057 (p 0.676) | N 43, AIC -51.95, RESET 0.078
-horizon 3 years                    | delta_oadr_3 0.0093 (p 0.023) | L_int_tme 0.0019 (p 0.890) | N 43, AIC -56.67, RESET 0.006
-horizon 5 years                    | delta_oadr_5 0.0084 (p 0.001) | L_int_tme 0.0093 (p 0.404) | N 43, AIC -62.53, RESET 0.009
-horizon 7 years                    | delta_oadr_7 0.0089 (p 0.001) | L_int_tme 0.0188 (p 0.098) | N 43, AIC -67.74, RESET 0.033
-permits (thousands), to 2008       | delta_oadr_10 0.5454 (p 0.006) | L_int_tme -1.3633 (p 0.106) | N 32, AIC 202.61, RESET 0.013
-British citizens (brit_rate)       | delta_oadr_10 0.0071 (p 0.029) | L_int_tme 0.0073 (p 0.607) | N 43, AIC -52.70, RESET 0.319
-+brit_rate as control              | delta_oadr_10 0.0090 (p <.001) | L_int_tme 0.0213 (p 0.019) | N 43, AIC -73.68, RESET 0.494
-+L2_mig_rate                       | delta_oadr_10 0.0106 (p <.001) | L_int_tme 0.0212 (p 0.021) | L2_mig_rate -0.0362 (p 0.798) | N 43, AIC -70.68, RESET 0.696
-sub-sample 1977-1997               | delta_oadr_10 -0.0066 (p 0.417) | L_int_tme 0.0653 (p 0.042) | N 21, AIC -35.83, RESET 0.372
-sub-sample 1998-2019               | delta_oadr_10 0.0112 (p <.001) | L_int_tme 0.0050 (p 0.839) | N 22, AIC -31.08, RESET 0.830
-sub-sample 1977-2003               | delta_oadr_10 0.0065 (p 0.180) | L_int_tme 0.0409 (p 0.071) | N 27, AIC -50.31, RESET 0.172
-4. Timing placebo: actual t 7.16, largest rotated |t| 4.16, randomisation p = 0.023.
-   Recursive (sample ending 1990/1995/2000/2005/2010/2015): -0.0104/-0.0100/0.0048/0.0060/0.0100/0.0107. OLS-CUSUM p = 0.98.
-
-[primary_int_tme.R completed in 141 s]
-
-All output written to /home/user/restud/diss_replication/run_all_1964_output.txt 

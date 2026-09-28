@@ -22,7 +22,7 @@ Social Science Data Editors template, with change log); (4) `manuscript_1964/REA
    `primary_int_tme.R` (exploratory); permits without the basis step everywhere; `replication_1977.R` repaired; Figure 4 (1964)
    re-rendered; **combined manuscript Section 7 rewritten** (extended first, core corroboration — Sam reversed the order later on 28 Sep; new 7.1 and 7.2; CPI inflation added and selected by the rule, same verdict; appendix panels numbered B6–B32) and rebuilt
    (55 pp; `Hamdane_ReStud_Manuscript_combined.docx/.pdf` at the project root and in `manuscript_1964/`).
-3. **Open for Sam:** (a) log vacancies/WAP meets both halves of his criterion on both samples (private_tests.R P2; published in
+3. **Open for Sam:** (0) basis step vs fixed splice (`mig_rate_s`, Table B6) — his decision after seeing the data; (a) log vacancies/WAP meets both halves of his criterion on both samples (private_tests.R P2; published in
    Table B18) — whether it enters the headline rule is his call; (b) confirm the series IDs of the four ONS BoP/national-accounts splices and
    the debt-interest splice (`determinants/SOURCES_2017_2019.md`); (c) read Section 7 (7.1/7.2; 57 pp; cuts are his); (d) the
    1964-only manuscript is parked; the Online Appendix is rebuilt (B6–B35) from `tables_1977.json`; `run_all_1977.R` needs

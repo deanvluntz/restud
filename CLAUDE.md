@@ -430,4 +430,8 @@ only partial disclosure. Do not repeat that.
   (sheet paste had blocked them) — extended BoE-column numbers changed slightly (N 55). Emigration = text line under B11.
   Sam has NOT yet decided on log vacancies in the headline rule; decision pending. Combined manuscript rewritten (7.1 short: B15/B16/B17;
   7.2 by category); Dynamics paragraph and split-sample sentence removed at Sam's request.
+- 28 Sep 2026 (late, Sam): basis step questioned (df cost, not policymaker information). Scaled series mig_rate_s built (pre-1975
+  non-British x 0.820, the 1975-80 overlap ratio) as an ALTERNATIVE, headline unchanged until Sam decides after seeing the data
+  (determinants/dv_series_comparison_1964_1982.csv). New Table B6 on both samples = DV under the other sample's classification;
+  B7-B25 renumbered. Core under the non-British classification: 0.0048 (p .03), 1977-2003 alone 0.0059 n.s. — reported honestly.
 

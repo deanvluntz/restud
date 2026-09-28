@@ -83,7 +83,7 @@ const children = [
 
   new Paragraph({ children: [new PageBreak()] }),
   h1('B. Time-Series Properties and Inference'),
-  body('This appendix reports the diagnostic material summarised in Sections 5.3 and 6.3 of the paper. Table B1 gives the sequential order-of-integration classification; Table B2 compares the three inference methods for the fiscal specification; Table B3 gives the trend-specification counterpart of Table 4; Tables B4 and B5 test alternative measures of the tax burden. Tables B6–B24 are the panels of the replication output cited in Section 7, each estimated on both samples: B6–B14 robustness_tables.R, B15–B17 without_projection.R, B18–B24 controls_tables.R.'),
+  body('This appendix reports the diagnostic material summarised in Sections 5.3 and 6.3 of the paper. Table B1 gives the sequential order-of-integration classification; Table B2 compares the three inference methods for the fiscal specification; Table B3 gives the trend-specification counterpart of Table 4; Tables B4 and B5 test alternative measures of the tax burden. Tables B6–B25 are the panels of the replication output cited in Section 7, each estimated on both samples: B6–B15 robustness_tables.R, B16–B18 without_projection.R, B19–B25 controls_tables.R.'),
   ...tableA1(),
   ...tableA2(),
   ...tableB3(),

@@ -47,6 +47,15 @@ raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
 raw$brit_rate <- log(1000 * (1000 * raw$brit_in) / wl)
+# Alternative classifications of the dependent variable (Sam, 28 Sep 2026): non-British citizens throughout (LTIM 2.00, series A),
+# non-British to 2003 (series C), the LTIM-basis non-EU series (1992-), and, on the extended sample, series B with the pre-1975
+# non-British counts RESCALED by the 1975-80 overlap ratio non-EU / non-British instead of the estimated basis step.
+raw$dv_A <- ext$dv_A_non_british[match(y, ext$year)]; raw$dv_C <- ext$dv_C_non_british_to_2003[match(y, ext$year)]; raw$dv_nonEU <- ext$non_eu[match(y, ext$year)]
+raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (1000 * raw$dv_C) / wl)
+raw$ltim_rate <- log(as.numeric(ref$ltim_nEU_inflows_WAPlagK)[match(y, ref$year)])
+ov <- y >= 1975 & y <= 1980; SPLICE_LOGRATIO <- mean(log(raw$dv_nonEU[ov] / raw$dv_A[ov]))   # log ratio where the two series overlap
+raw$dv_B_scaled <- ifelse(y < 1975, raw$dv_A * exp(SPLICE_LOGRATIO), raw$dv_nonEU)
+raw$mig_rate_s <- log(1000 * (1000 * raw$dv_B_scaled) / wl); raw$mig_gross_s <- log(1000 * raw$dv_B_scaled)
 # canonical names for the BoE / A27 / OBR / GAD columns
 ren <- c(unem_boe = "unem_spliced_boe", unem_claim = "unem_cc", growth = "uk_growth", youth = "youth_origin", tot = "terms_of_trade", trade_bal = "trade_bal_gdp", vac_wap = "vac_per_wap", vac_unem = "vu_ratio",
          wage_infl = "wage_inflation", tbill = "tbill_rate", real_rate = "real_short_rate", tfp = "tfp_growth", replace = "replacement_ratio", union = "union_density",
@@ -107,7 +116,7 @@ if ("awe_gbp" %in% names(raw)) { awe <- raw$awe_gbp; for (i in which(is.na(awe) 
   raw$tax_earn <- (raw$tax_workpop * 1000 * raw$workpop) / (52 * awe / defl * 100) / 1e6 }
 raw$gad_earn <- if (SAMPLE == "1964") raw$E_pct10 else raw$E_d10; raw$gad_policy <- if (SAMPLE == "1964") raw$POL_pct10 else raw$POL_d10; raw$gad_gap <- raw$E_gap10
 df <- raw
-LAGV <- c("mig_rate", "mig_gross", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
+LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
           "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot",
