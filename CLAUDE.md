@@ -472,4 +472,11 @@ only partial disclosure. Do not repeat that.
   (L_tax_workpop / L_tax_voter / L_tax_res); parallel_gross_adult.R = gross + tax per adult (0.0079 / 0.0078). Cmnd 9863 (HO 1985) has no
   citizenship tables; settlement acceptances 1975-85 transcribed to determinants/ho_settlement_1975_1985.csv. BoE A19-A20 = LTIM/IPS
   series already used (nothing new for 1964+).
+- 28 Sep 2026 (night, 8; Sam): Cmnd 8325 (Tables of Persons acquiring Citizenship of the UK and Colonies 1980) = the annual series behind
+  cz_03/cz_04 (totals match); Table E -> determinants/ho_citizenship_1971_1980_cmnd8325.csv. East African UKPHs were CUKCs already ->
+  NOT in citizenship grants; they are the special voucher holders of the immigration-control series. DIAGNOSTICS FINDINGS (report, do
+  not hide): RESET as used = powers 2:3; squares-only RESET does not reject the no-projection model; BG(2) rejects for the published
+  spec on the extended sample (p .029) and is marginal on the core (.062); L2 of the DV does not cure it. model_search.R (exhaustive,
+  both DVs, both samples; eligibility RESET+BG+proj sig+VIF<20 on both) -> best gross: unem + tax(res/voter) + ln_debt_gdp + ln_vac_wap;
+  best rate: tax_workpop + ln_debt_gdp + int_tme + ln_vac_wap. Shortlist given to Sam; nothing in any manuscript.
 
