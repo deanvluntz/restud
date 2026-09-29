@@ -557,3 +557,9 @@ only partial disclosure. Do not repeat that.
   3 projection; 4 regressors (4.3 fiscal term vs tbill/term spread/gilt/TME/none); 5 alternative outcomes; 6 uncontrolled flows.
   Findings: tbill beats int_tme on the Citizen sample only; int_tme (level/log) the only fiscal term holding on both. tme_predict.R: TME
   growth predicted by lagged log debt/GDP + unemployment (adj R2 .34-.46), tax per WAP adds nothing. export_dataset.R on.exit bug fixed.
+- 29 Sep 2026 (17; Sam): replication_core_spec.R v3 = his corrections: workbook column check with pull message; permits outcome in LEVELS
+  (thousands, no log); Section 3 split (3.1 total DR vs OADR, 3.2 level vs change, 3.3 horizon); Section 4 NON-ECONOMIC robustness before
+  the economic controls (4.1 p_pub_ext / p_pub / delta_zm_10; 4.2 second lag, lead, lag, timing placebo; 4.3 regime steps; 4.4 recursive,
+  rolling, CUSUM, sup-F); 5 economic regressors, 6 alternative outcomes, 7 uncontrolled flows. tme_predict.R step 3: block models plus
+  other dataset variables (level/log, ratios, interactions), best three by AIC with each added term HAC p<.10 and VIF<20; tax per WAP
+  never predicts TME. Sam's tme error = stale workbook (missing tme_obr_*); his 'replication_core_specR' error = a typo. Nothing in any manuscript.
