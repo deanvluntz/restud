@@ -185,7 +185,7 @@ defs <- function(vars) { v <- unique(vars); v <- v[v %in% names(DEFS) & !(v %in%
   assign("DEFINED", union(get("DEFINED", envir = globalenv()), v), envir = globalenv()) }
 
 # fit(): OLS on complete cases; constant columns dropped (e.g. basis_pre1975 when the sample starts in 1975)
-DEFS[["L_int_tme_ons"]] <- "public sector debt interest as a share of central government expenditure, %, t-1: ONS PUSF NMFX / (ANLP - ANNS + NSRN), the BoE construction, current vintage for every year"
+DEFS[["L_int_tme_ons"]] <- "public sector interest and dividends paid as a share of total managed expenditure, %, t-1: ONS PUSF ANLO / EBFT, the Millennium definition on the current ONS vintage for every year"
 DEFS[["L_ln_int_tme_ons"]] <- "log of L_int_tme_ons"; DEFS[["L_ln_int_tme"]] <- "log of the public sector debt-interest share of total managed expenditure, t-1 (Millennium; ONS PUSF change-spliced for 2017-19)"
 DEFS[["L_ln_vac_unem"]] <- "log of the vacancy/unemployment ratio, t-1 (Millennium M5 vacancies over unemployment; ONS AP2Y/MGSC for 2017-19)"
 DEFS[["L_ca_gdp_mill"]] <- "current account balance, % of GDP, t-1, Millennium A36 vintage (ONS AA6H change-spliced 2017-19)"; DEFS[["L_labour_share_mill"]] <- "labour share of GDP, %, t-1, Millennium basis (ONS IHXP growth-spliced 2017-19)"

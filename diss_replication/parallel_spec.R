@@ -183,7 +183,7 @@ for (k in names(SMP)) {
   add_tab(c("L_psnb_gdp", "L_psnd_gdp", "fc_budget", "fc_medium", "L_tax_ceiling", "golden_rule", "obr_era"), paste0("Table G24. Borrowing, borrowing plans and fiscal rules (", TAG, ")"),
           extra = list("psnb_gdp for ln_debt_gdp" = fit(S, swap(G, "L_ln_debt_gdp", "L_psnb_gdp"))))
   add_tab(c(if (!INT) "L_int_tme", "L_ln_int_tme_ons", "L_int_gdp", "L_bank_rate", "L_tbill", "L_gilt", "L_consol", "L_r_g"), paste0("Table G25. Debt dynamics and the cost of borrowing (", TAG, ")"),
-          if (INT) "The log debt-interest share is in the main; +ln_int_tme_ons adds the current-vintage ONS PUSF ratio beside it; the extra columns drop it and replace it by the PUSF ratio." else "+ln_int_tme_ons: the current-vintage ONS PUSF ratio (Millennium differs by ~3 points in 2010-13).",
+          if (INT) "The log debt-interest share is in the main; +ln_int_tme_ons adds the current-vintage ONS PUSF ratio beside it; the extra columns drop it and replace it by the PUSF ratio." else "+ln_int_tme_ons: the same ratio (ANLO/EBFT) on the current ONS PUSF vintage (Millennium differs by 1-2 points from 1997).",
           extra = if (INT) list("no ln_int_tme" = fit(S, setdiff(G, "L_ln_int_tme")), "ln_int_tme_ons for ln_int_tme" = fit(S, swap(G, "L_ln_int_tme", "L_ln_int_tme_ons"))) else list())
   # --- G26 core-only projections; G27 second lag, timing placebo and stability ----------------------------------------------------------
   cat("\nTable G26. Alternative projections (", SN, ")\n", sep = ""); line("publication-dated (p_pub_ext)", fit(S, swap(G, "delta_oadr_10", "p_pub_ext")), c("p_pub_ext"))

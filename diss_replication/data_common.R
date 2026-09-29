@@ -50,8 +50,9 @@ raw <- take(raw, boe, setdiff(names(boe), "year")); raw <- take(raw, tax, setdif
 for (v in setdiff(names(onsx), "year")) if (v %in% names(raw)) { i <- match(onsx$year, raw$year); ok <- !is.na(i) & is.na(raw[[v]][i]); raw[[v]][i[ok]] <- onsx[[v]][ok] }
 raw <- take(raw, exs, c("all_out", "brit_out", "brit_in", "inflation", "delta_dr_10", "uk_growth", "relinc_dev", "relinc_rich", "youth_origin", "post1968", "post1973")); raw <- take(raw, p1, setdiff(names(p1), "year")); raw <- take(raw, cpi, "cpi_infl"); raw <- take(raw, tvw, c("openness", "m4_growth", "workforce_k", "bank_rate")); raw <- take(raw, fbk, c("psnb_gdp", "psnd_gdp", "tax_gdp")); raw <- take(raw, gad, c("E_d10", "POL_d10", "E_pct10", "POL_pct10", "E_gap10"))
 # ONS series used in full where they cover the whole sample (Sam, 29 Sep 2026): current account AA6H and compensation of employees IHXP
-# replace the Millennium-plus-splice versions (kept as *_mill for comparison); the PUSF debt-interest ratio NMFX / (ANLP - ANNS + NSRN),
-# the BoE construction, is carried as int_tme_ons beside the Millennium-based int_tme (2010-13 differ by ~3 points: Millennium vintage).
+# replace the Millennium-plus-splice versions (kept as *_mill for comparison); the PUSF debt-interest ratio ANLO / EBFT (public sector
+# interest and dividends paid over TME, the Millennium definition on the current ONS vintage) is carried as int_tme_ons beside the
+# Millennium-based int_tme; the two agree to 1996 and differ by 1-2 points from 1997 (ONS revisions to TME and interest since 2017).
 ons_ca <- read.csv("determinants/ons_AA6H_current_account_gdp_1948_2025.csv"); ons_ls <- read.csv("determinants/ons_IHXP_compensation_employees_gdp_1948_2025.csv"); ons_pu <- read.csv("determinants/ons_pusf_debt_interest_1946_2025.csv")
 raw$ca_gdp_mill <- raw$ca_gdp; raw$ca_gdp <- ons_ca$ca_gdp_ons[match(raw$year, ons_ca$year)]
 raw$labour_share_mill <- raw$labour_share; raw$labour_share <- ons_ls$labour_share_ons[match(raw$year, ons_ls$year)]

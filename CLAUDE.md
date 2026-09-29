@@ -516,3 +516,7 @@ only partial disclosure. Do not repeat that.
   correlate .75 with 2-3 point gaps in 1965-81 and 2008-13; under the PUSF ratio the debt-interest term is NULL in the core spec on both
   samples (Millennium: significant). Sam to decide the series. parallel_spec.R: LABV + INT switches; parallel_core.R = Sam's core spec
   (gross, tax_workpop, ln_debt_gdp, ln_vac_unem, ln_int_tme, projection) through G2-G27; in run_all_1964.R. Manuscript untouched until Sam finalises.
+- 29 Sep 2026 (9; Sam): debt-interest ratio = ANLO / EBFT (PUSF), the Millennium definition — NOT the NMFX construction. Current vintage =
+  Millennium to 1996, +1-2 points from 1997 (ONS revisions). Core spec with the reconstruction: 0.146 (p .03) ext / 0.156 (p .007) core,
+  best AIC -> the debt-interest term STANDS. int_tme_ons = ANLO/EBFT all years; int_tme 2017-19 growth-spliced from it. Recommend adopting
+  the full PUSF series (Sam's "use ONS entirely") — his call.
