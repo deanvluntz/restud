@@ -491,3 +491,8 @@ only partial disclosure. Do not repeat that.
   (AIC -102.8 / -78.5; proj 0.0082 / 0.0084). Δln V/U weak. p_pub_ext (publication-dated projection to 1965) in data_common.R; G26 both
   samples. Nothing in any manuscript.
 
+- 29 Sep 2026 (4; Sam): compare_gross_final.R: tax per WAP / per adult / per resident indistinguishable in the conceptual model (proj 0.0083-0.0086
+  both samples; AIC within 0.5); tax_voter carried forward; per taxpayer (N 40) and per earnings weaker. Full-data sweep under Sam's criterion:
+  only wage_infl (and brit_rate, a flow) pass both halves on both samples. External position (BoP, trade balance, nominal/real ERI) null on
+  both samples; terms of trade significant on the extended sample only. No addition lets the NO-projection model pass diagnostics on both
+  samples (rainbow fails .03/.003 without the projection); projection on top always p<.001. Nothing in any manuscript.
