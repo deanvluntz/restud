@@ -98,6 +98,9 @@ for (r in c("OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFR
   v <- 1000 * (1000 * ips[[paste0("Inflow_", r, "_brit")]][match(y, ips$year)]) / wl; v[!is.finite(v) | v <= 0] <- NA
   raw[[paste0("brit_", tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
 raw$brit_noneu <- log(1000 * (1000 * ips[["Inflow_NON-EU_brit"]][match(y, ips$year)]) / wl)
+# the two margins of the dependent variable (IPS 3.01, thousands): all citizenships arriving from non-EU residence (the country-of-last-
+# residence basis standard in the literature) and non-EU citizens arriving from anywhere (the citizenship basis); the DV is their intersection
+raw$res_noneu_k <- ips[["Inflow_NON-EU_all"]][match(y, ips$year)]; raw$cit_noneu_k <- ips[["Inflow_ALL_nonEU"]][match(y, ips$year)]; raw$dv_noneu_k <- ips[["Inflow_NON-EU_nonEU"]][match(y, ips$year)]
 ov <- y >= 1975 & y <= 1980; SPLICE_LOGRATIO <- mean(log(raw$dv_nonEU[ov] / raw$dv_A[ov]))   # log ratio where the two series overlap
 raw$dv_B_scaled <- ifelse(y < 1975, raw$dv_A * exp(SPLICE_LOGRATIO), raw$dv_nonEU)
 raw$mig_rate_s <- log(1000 * (1000 * raw$dv_B_scaled) / wl); raw$mig_gross_s <- log(1000 * raw$dv_B_scaled)
@@ -188,7 +191,7 @@ df <- raw
 LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "settle_k", "vouchers_k", "ancestry_k", "cit_newcw_k", "cit_afrcw_k", "cit_oldcw_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
-          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons", "unem_dest", "unem_diff", "unem_aus", "unem_usa", "unem_can", "unem_nzl", "gap_pca", "gap_agg", "noneu_work_k", "noneu_study_k", "noneu_join_k", "noneu_other_k", "noneu_all_k", "brit_work_k", "brit_study_k", "brit_home_k", "brit_join_k", "brit_other_k", "brit_all_k", "brit_nonwork_k",
+          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons", "unem_dest", "unem_diff", "unem_aus", "unem_usa", "unem_can", "unem_nzl", "gap_pca", "gap_agg", "res_noneu_k", "cit_noneu_k", "dv_noneu_k", "noneu_work_k", "noneu_study_k", "noneu_join_k", "noneu_other_k", "noneu_all_k", "brit_work_k", "brit_study_k", "brit_home_k", "brit_join_k", "brit_other_k", "brit_all_k", "brit_nonwork_k",
           "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth", "bank_rate", "growth_pc", "lab_prod", "tax_earn", "tot_rate", "consol")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
 # log forms of the positive-valued controls (Sam, 28 Sep 2026): L_ln_x = log of the lagged level

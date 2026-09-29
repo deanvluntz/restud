@@ -531,3 +531,8 @@ only partial disclosure. Do not repeat that.
   (core sample; in run_all_1964.R): projection acts on the non-EU WORK route (study null); NO British route responds (other negative);
   lagged output gap raises British inflows (+0.054 p .02 core controls; +0.13 for non-UK-born British) but does not remove the projection;
   gap null in the main equation beside log V/U. Precise gap reconstruction later if Sam wants (OBR EFO databank runs from 1972).
+- 29 Sep 2026 (12; Sam): ORDERING PRINCIPLE for robustness and manuscript: broadest measure first (1964 inflows by citizenship), narrower/more
+  precise sources as robustness when available (work permits, IPS by reason = SEPARATE panel, citizenship vs country of last residence = the
+  literature standard, IPS vs LTIM). OBR gap: not worth chasing unless suggestive (it was, for British inflows; his call). Robustness must show
+  wage inflation AND the balance of payments together. replication_core_spec.R = the full replication file in that order for Sam to inspect
+  and refine before it replaces the manuscript scripts; data_common has res_noneu_k / cit_noneu_k / dv_noneu_k (IPS 3.01 margins).
