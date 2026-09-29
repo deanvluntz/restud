@@ -506,3 +506,8 @@ only partial disclosure. Do not repeat that.
   not the core (p .18-.26), and its AIC gain (-3.9) equals the median best-of-37 under H0 (reality check p .50) -> robustness only, not
   headline. Ratios do NOT free degrees of freedom (one regressor = one parameter). British inflows vs PSNB/golden rule: cyclical proxy and
   2000s period dummy, not a policy mechanism — the point is asymmetry (non-EU coefficient survives both; British does not). Nothing in any manuscript.
+- 29 Sep 2026 (7; Sam): splice series IDs confirmed by Sam's ONS uploads: ca_gdp = AA6H (exact), labour_share = IHXP (growth), trade_bal_gdp
+  = FSID / OBR nominal GDP (change), terms_of_trade = JIO7/JIO6 (growth); YBGJ (ToT effect, £m) NOT a fit. Three columns recomputed on
+  June/July 2026 vintages, workbook re-exported. debt_interest_tme still to confirm. WAGE INFLATION (Sam's decision): robustness line under
+  the labour-market controls; text frames it as the incomes-policy instrument of its era (like the BoP), explanatory but not part of the
+  timeless core framework. Not yet written into any manuscript (headline spec still undecided).
