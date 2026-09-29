@@ -196,6 +196,7 @@ DEFS[["L_unem_usa"]] <- "United States unemployment rate, %, t-1 (OECD)"; DEFS[[
 DEFS[["gap_pca"]] <- "OBR historical output gap, principal-components estimate, % of potential output, current year (OBR Working Paper No. 1, 2011, Chart 3.6 digitised; 1972-2010)"
 DEFS[["L_gap_pca"]] <- "gap_pca, t-1"; DEFS[["gap_agg"]] <- "OBR historical output gap, aggregate-composite estimate, % of potential output (same source)"; DEFS[["L_gap_agg"]] <- "gap_agg, t-1"
 for (v in c("noneu", "brit")) for (r in c("work", "study", "join", "other", "all", "nonwork", "home")) DEFS[[paste0("ln_", v, "_", r)]] <- paste0("log inflow of ", if (v == "brit") "British" else "non-EU", " citizens whose main reason for migration is ", switch(r, work = "work (definite job or looking for work)", study = "formal study", join = "accompanying or joining", other = "other (including no reason stated)", all = "any reason", nonwork = "not work or study (home, joining, other)", home = "going home to live"), ", persons (IPS 3.08, 1977-2019", if (r == "home") "; coded from 1980" else if (r == "join") "; coded from 1982" else "", ")")
+DEFS[["gap_obr"]] <- "OBR output gap, % of GDP, fiscal year starting in the year shown (OBR public sector finances aggregates databank, March 2026; 1972-73 onward)"; DEFS[["L_gap_obr"]] <- "gap_obr, t-1"
 fit <- function(d, xs, dv = "mig_rate", min_extra = 5) {
   if (!all(c(dv, xs) %in% names(d))) return(NULL); cc <- complete.cases(d[, c(dv, xs)]); dd <- d[cc, ]
   xs <- xs[vapply(xs, function(v) sd(dd[[v]]) > 0, logical(1))]

@@ -536,3 +536,9 @@ only partial disclosure. Do not repeat that.
   literature standard, IPS vs LTIM). OBR gap: not worth chasing unless suggestive (it was, for British inflows; his call). Robustness must show
   wage inflation AND the balance of payments together. replication_core_spec.R = the full replication file in that order for Sam to inspect
   and refine before it replaces the manuscript scripts; data_common has res_noneu_k / cit_noneu_k / dv_noneu_k (IPS 3.01 margins).
+- 29 Sep 2026 (13; Sam): replication_core_spec.R FIXED for Sam's Mac (his error = local workbook without data_1964/data_1977 sheets: the file
+  now prints wd/workbook/sheets and stops with instructions; data_common.R likewise). Sam's main-branch uploads: OBR PSF databank output gap
+  (gap_obr, FY 1972-73 on, = cyclical control now; British +0.050 p .03 core, projection intact; null in main), UN DESA UK stocks, HO policy
+  timeline (1983-2025), five HO Control of Immigration volumes 1970-2009 (indexed; settlement-by-nationality extraction NEXT, use the 1993/1999
+  retrospective Tables 6.5). Trade indicators beside wage/CPI inflation: none on the core; tot marginal on the extended. tot_rate is a FLOW
+  (total inflows), never a trade indicator.
