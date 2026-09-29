@@ -501,3 +501,8 @@ only partial disclosure. Do not repeat that.
   it on the core. Wage inflation is not price inflation (survives beside the deflator; deflator/CPI/real wage null on the core); tax burden
   already real. Stability rule (ext pass + core same sign inside ext CI): ten pass, only wage_infl also significant on core. Sam questions
   the strict both-samples rule; no decision yet. Nothing in any manuscript.
+- 29 Sep 2026 (6; Sam): Sam's CORE SPEC now = gross inflows (no step) + L_tax_workpop + L_ln_debt_gdp + L_ln_vac_unem + L_ln_int_tme +
+  delta_oadr_10 (7 parameters). compare_wage_boot.R: wage inflation survives a recursive bootstrap on the extended sample (p .01-.04) but
+  not the core (p .18-.26), and its AIC gain (-3.9) equals the median best-of-37 under H0 (reality check p .50) -> robustness only, not
+  headline. Ratios do NOT free degrees of freedom (one regressor = one parameter). British inflows vs PSNB/golden rule: cyclical proxy and
+  2000s period dummy, not a policy mechanism — the point is asymmetry (non-EU coefficient survives both; British does not). Nothing in any manuscript.
