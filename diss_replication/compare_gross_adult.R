@@ -10,8 +10,8 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 source("tables_common.R"); suppressPackageStartupMessages(library(ARDL))
-load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); list(df = df, Y0 = Y0, LAB = LAB) }
-SMP <- list(extended = load_sample("1964"), core = load_sample("1977"))
+if (!exists("SKIP_LOAD")) { load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); list(df = df, Y0 = Y0, LAB = LAB) }
+SMP <- list(extended = load_sample("1964"), core = load_sample("1977")) }   # a wrapper may supply SMP with extra variables (compare_gross_vu.R)
 DEFS[["mig_gross"]] <- "log gross inflow of controlled migrants, persons, unadjusted (no denominator, no basis step)"; DEFS[["L_mig_gross"]] <- "mig_gross lagged one year"
 DEFS[["L_ln_vac_wap"]] <- "log of notified vacancies per 1,000 working-age persons, t-1 (Millennium M5; ONS AP2Y for 2017-19)"
 if (!exists("ADD")) ADD <- list("base" = NULL, "+ln_vac_wap" = "L_ln_vac_wap", "+int_tme" = "L_int_tme", "+both" = c("L_ln_vac_wap", "L_int_tme"))   # a wrapper may set ADD (compare_gross_tbill.R)
