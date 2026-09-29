@@ -10,7 +10,7 @@
 suppressPackageStartupMessages({library(readxl); library(openxlsx)}); source("tables_common.R")   # lag1(), stars() used by the assembly
 WB <- "Dissertation_Dataset_Final.xlsx"; keep <- setdiff(excel_sheets(WB), c("data_1964", "data_1977"))
 before <- lapply(setNames(keep, keep), function(s) as.data.frame(read_excel(WB, sheet = s, .name_repair = "minimal")))
-wb <- loadWorkbook(WB); REBUILD_DATA <- TRUE
+wb <- loadWorkbook(WB); options(restud.rebuild = TRUE); on.exit(options(restud.rebuild = FALSE), add = TRUE)   # rebuild from determinants/*.csv while this script runs only
 for (s in c("1964", "1977")) { SAMPLE <- s; source("data_common.R", local = TRUE)
   out <- raw[order(raw$year), ]; out <- out[, c("year", setdiff(names(out), "year"))]
   sh <- paste0("data_", s); if (sh %in% names(wb)) removeWorksheet(wb, sh); addWorksheet(wb, sh); writeData(wb, sh, out); freezePane(wb, sh, firstRow = TRUE, firstCol = TRUE)

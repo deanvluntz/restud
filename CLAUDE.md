@@ -546,3 +546,7 @@ only partial disclosure. Do not repeat that.
   determinants/ho_settlement_*; data_common settle_total_k, settle_push_k (HK+ZW+ZA+KE+UG) etc. Replication file: Table 2.3b settlement as
   outcome (core responds 0.0122 p .005; extended 1965-2006 null), Table 4.3 push events: NULL for British inflows (r -0.01 with non-UK-born
   British) -> no push-event story. 1970-82 by nationality not parsed (annual volumes); 2008-09 volumes absent.
+- 29 Sep 2026 (15; Sam): Sam's second error = a stray REBUILD_DATA <- TRUE in his global environment (left by export_dataset.R) made
+  data_common.R rebuild from CSVs. FIX: rebuild is now options(restud.rebuild = TRUE) set only inside export_dataset.R (reset on exit);
+  data_common.R ignores REBUILD_DATA; replication_core_spec.R sets the option FALSE and removes a stray REBUILD_DATA. Sam must source()
+  the file from diss_replication/, NOT RStudio "Compile Report" (which runs from the file's folder, e.g. Downloads).

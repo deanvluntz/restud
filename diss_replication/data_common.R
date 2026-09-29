@@ -5,7 +5,7 @@
 #     SAMPLE == "1977": core sample (sheet ReformSPA; mig_rate = non-EU citizens), Y0 = 1977, STEP = NULL
 # ONE DATASET (Sam, 28 Sep 2026): the assembled variables live in the workbook itself, sheets `data_1964` and `data_1977`
 # (written by export_dataset.R), so a run needs nothing but Dissertation_Dataset_Final.xlsx. When that sheet exists it is read
-# as is; the determinants/*.csv sources are used only when the sheet is absent or REBUILD_DATA <- TRUE (export_dataset.R),
+# as is; the determinants/*.csv sources are used only by export_dataset.R, which sets options(restud.rebuild = TRUE) while it runs,
 # which is how the sheet is regenerated after any source changes.
 # =============================================================================
 suppressPackageStartupMessages(library(readxl))
@@ -16,7 +16,8 @@ num_df <- function(d) { d <- d[, !vapply(d, function(x) all(is.na(x)) || is.char
 ext <- num_df(as.data.frame(read_excel(WB, sheet = "1964"))); ext <- ext[!is.na(ext$year), ]
 ref <- as.data.frame(read_excel(WB, sheet = "ReformSPA")); ref <- ref[!is.na(ref$year), ]
 if (SAMPLE == "1964") { STEP <- "basis_pre1975"; Y0 <- 1965; LAB <- "extended sample, 1965-" } else { STEP <- NULL; Y0 <- 1977; LAB <- "core sample, 1977-" }
-DATA_SHEET <- paste0("data_", SAMPLE); FROM_SHEET <- !isTRUE(get0("REBUILD_DATA", ifnotfound = FALSE)) && DATA_SHEET %in% excel_sheets(WB)
+DATA_SHEET <- paste0("data_", SAMPLE); REBUILD <- isTRUE(getOption("restud.rebuild", FALSE))   # only export_dataset.R sets this option; a stray REBUILD_DATA in the global environment is ignored
+FROM_SHEET <- !REBUILD && DATA_SHEET %in% excel_sheets(WB)
 if (FROM_SHEET) {
   raw <- num_df(as.data.frame(read_excel(WB, sheet = DATA_SHEET))); raw <- raw[!is.na(raw$year), ]; SPLICE_LOGRATIO <- raw$splice_logratio[1]
 } else {
@@ -24,7 +25,7 @@ if (FROM_SHEET) {
   # sources is only for export_dataset.R itself; if the sheet is missing, the workbook on disk is stale (git pull, or a local copy of the
   # workbook without the exported sheets) -- say so instead of failing on the first missing CSV.
   need <- c("determinants/citizenship_grants_1962_2018.csv", "determinants/boe_extras_1962_2019.csv", "determinants/ips_301_citizenship_by_residence_1975_2019.csv")
-  if (!isTRUE(get0("REBUILD_DATA", ifnotfound = FALSE)) || !all(file.exists(need)))
+  if (!REBUILD || !all(file.exists(need)))
     stop(sprintf("Sheet '%s' is not in %s (sheets present: %s). The assembled data are read from that sheet; pull the latest workbook from the repository (or run export_dataset.R, which needs the determinants/*.csv files%s).",
                  DATA_SHEET, normalizePath(WB), paste(excel_sheets(WB), collapse = ", "), if (!all(file.exists(need))) paste0("; missing here: ", paste(need[!file.exists(need)], collapse = ", ")) else ""))
 boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")

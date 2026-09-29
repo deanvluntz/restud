@@ -25,8 +25,10 @@
 # diss_replication/ (Session > Set Working Directory > To Source File Location), then source this file. Packages: readxl, lmtest,
 # sandwich, car, ARDL, strucchange, tseries. Runtime ~2 minutes without BOOT/EXACT.
 # =============================================================================
-if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/ (RStudio: Session > Set Working Directory > To Source File Location)")
+if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/ (RStudio: Session > Set Working Directory > To Source File Location). Run this file with source(), not with RStudio's Compile Report button, which runs it from the file's own folder.")
 if (!exists("BOOT")) BOOT <- FALSE; if (!exists("EXACT")) EXACT <- FALSE
+options(restud.rebuild = FALSE)   # the data are read from the workbook sheets; export_dataset.R is the only script that rebuilds them from CSVs
+if (exists("REBUILD_DATA", envir = globalenv())) { cat("note: a REBUILD_DATA variable in the global environment is ignored (removed)\n"); rm(REBUILD_DATA, envir = globalenv()) }
 # --- what this run reads (printed so a failure can be diagnosed at a glance) --------------------------------------------------------------
 suppressPackageStartupMessages(library(readxl)); .wb <- "Dissertation_Dataset_Final.xlsx"; if (!file.exists(.wb)) stop("Dissertation_Dataset_Final.xlsx is not in the working directory ", getwd())
 .sh <- excel_sheets(.wb); cat("working directory:", getwd(), "\nworkbook:", normalizePath(.wb), "(", format(file.info(.wb)$mtime), ")\nsheets:", paste(.sh, collapse = ", "), "\n")
