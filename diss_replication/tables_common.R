@@ -63,6 +63,7 @@ DEFS <- c(
   L_ukborn_all  = "ukborn_all lagged one year",
   brit_desc_noneu = "log inflow of British citizens arriving from outside the EU who were NOT born in the UK, per 1,000 working-age persons (t-1): IPS 3.01 British citizens minus IPS 3.18 UK-born, both from non-EU residence (citizens by descent or registration)",
   L_brit_desc_noneu = "brit_desc_noneu lagged one year",
+  p_pub_ext     = "projected ten-year change in the old-age dependency ratio from the vintage PUBLISHED by year t (pre-1975 vintages published the year after their base; 1978- from the publication-dated sheet; 1976-77 missing)",
   L_dln_tax_workpop = "annual change in log national accounts taxes per working-age person, t-1 (the log change in the tax burden per worker)",
   L_dln_tax_res = "annual change in log national accounts taxes per resident, t-1",
   emig_brit_5   = "British-citizen emigrants per 1,000 working-age persons, mean of years t-5 to t-1 (LTIM 2.00): the pool of potential returners",

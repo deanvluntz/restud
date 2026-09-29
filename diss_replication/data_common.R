@@ -112,6 +112,12 @@ for (h in c(1, 3, 5, 7)) { nm <- paste0("delta_oadr_", h)
 vo <- read.csv("determinants/commonwealth_vouchers_1962_1972.csv")
 if (!is.null(wp)) { raw$vouchers <- ifelse(y >= 1962 & y <= 1972, vo$vouchers[match(y, vo$year)] / 1000, 0); raw$lever <- raw$permits + raw$vouchers }
 raw$trend <- y - min(y)
+# publication-dated projection (Sam, 29 Sep 2026): the vintage PUBLISHED by year t rather than the vintage with base year <= t. Pre-1975 vintages
+# (biennial, published the year after their base year) from npp_1963_1973_totals_by_vintage.csv; 1978 onward from Sam's PubShiftOADR_ZM sheet
+# (1977 vintage in force from 1978); 1976-77 would need the 1975 vintage beyond its tenth projection year and are left missing.
+pubs <- as.data.frame(readxl::read_excel(WB, sheet = "PubShiftOADR_ZM", .name_repair = "minimal")); pubs <- pubs[!is.na(pubs$year), ]
+vint_pub <- vapply(y, function(t) { v <- unique(tv$vintage[tv$vintage + 1 <= t]); if (length(v)) max(v) else NA_real_ }, numeric(1))
+raw$p_pub_ext <- ifelse(y <= 1975, vapply(seq_along(y), function(i) if (is.na(vint_pub[i])) NA_real_ else oadr_v(vint_pub[i], y[i] + 10) - oadr_v(vint_pub[i], y[i]), numeric(1)), as.numeric(pubs$delta_oadr_10_pub)[match(y, pubs$year)])
 # "Treasury view" candidates (Sam, 28 Sep 2026, after Macpherson's 2014 list): openness (free trade), broad money growth (sound money),
 # participation (supply side), the revenue ceiling (doubts about raising revenue "beyond a certain point": taxes/GDP minus their
 # highest value over the previous ten years), real spending growth (spending control), and three institutional regimes.

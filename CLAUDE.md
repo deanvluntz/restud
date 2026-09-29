@@ -485,4 +485,9 @@ only partial disclosure. Do not repeat that.
   data_common.R: settle_k, vouchers_k, ancestry_k, cit_newcw_k, cit_afrcw_k, cit_oldcw_k. P10 triangulation 1975-88: the 1980-82 British
   episode is in UK-born AND non-UK-born arrivals alike; vouchers ~1.3k/yr falling; registration wave 1981-83 = residents; nothing
   administrative explains it. British inflow verdict: general post-recession rise, not a nationality-law artefact.
+- 29 Sep 2026 (Sam): NO bootstrap / exact bounds on routine runs (BOOT, EXACT flags in compare_gross_adult.R; final diagnostics only). Sam's
+  favoured configuration: gross inflows + tax per capita (adult or resident) + log V/U (in place of unemployment; "or change in log V/U") +
+  ln_debt_gdp + int_tme. Result: log V/U replacing unemployment beats it on every criterion on both samples; + int_tme = best in-sample
+  (AIC -102.8 / -78.5; proj 0.0082 / 0.0084). Δln V/U weak. p_pub_ext (publication-dated projection to 1965) in data_common.R; G26 both
+  samples. Nothing in any manuscript.
 

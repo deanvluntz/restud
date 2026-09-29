@@ -181,8 +181,8 @@ for (k in names(SMP)) {
           extra = list("psnb_gdp for ln_debt_gdp" = fit(S, swap(G, "L_ln_debt_gdp", "L_psnb_gdp"))))
   add_tab(c("L_int_tme", "L_int_gdp", "L_bank_rate", "L_tbill", "L_gilt", "L_consol", "L_r_g"), paste0("Table G25. Debt dynamics and the cost of borrowing (", TAG, ")"))
   # --- G26 core-only projections; G27 second lag, timing placebo and stability ----------------------------------------------------------
-  if (!EXT) { cat("\nTable G26. Alternative projections (core sample)\n"); line("zero-migration projection", fit(S, swap(G, "delta_oadr_10", "delta_zm_10")), c("delta_zm_10"))
-    line("publication-dated projection", fit(S, swap(G, "delta_oadr_10", "p_pub")), c("p_pub")) }
+  cat("\nTable G26. Alternative projections (", SN, ")\n", sep = ""); line("publication-dated (p_pub_ext)", fit(S, swap(G, "delta_oadr_10", "p_pub_ext")), c("p_pub_ext"))
+  if (!EXT) { line("zero-migration projection", fit(S, swap(G, "delta_oadr_10", "delta_zm_10")), c("delta_zm_10")); line("publication-dated (Sam's sheet)", fit(S, swap(G, "delta_oadr_10", "p_pub")), c("p_pub")) }
   L2 <- paste0("L2_", DV); line(paste0("+", L2), fit(S, c(G, L2)), c("delta_oadr_10", L2))
   m <- fit(S, G); dd <- attr(m, "dd"); t_of <- function(x) { d2 <- dd; d2$pk <- x; mm <- fit(d2, swap(G, "delta_oadr_10", "pk")); coeftest(mm, vcov. = vcovHAC(mm))["pk", 3] }
   n <- nrow(dd); t0 <- t_of(dd$delta_oadr_10); tk <- vapply(1:(n - 1), function(j) t_of(c(tail(dd$delta_oadr_10, j), head(dd$delta_oadr_10, -j))), numeric(1))
