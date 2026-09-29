@@ -8,7 +8,10 @@
 #     VAC   = TRUE   the log of notified vacancies per working-age person (L_ln_vac_wap, t-1) is added to the fiscal right-hand side
 #     VAC   = FALSE  the fiscal right-hand side as published (unemployment is retained in every case)
 #     TAXVAR         the tax-burden regressor: "L_tax_workpop" (published, per working-age person), "L_tax_voter" (per adult) or "L_tax_res"
-# Wrappers:  parallel_gross_vac.R (GROSS, VAC) | parallel_gross.R (GROSS, no VAC) | parallel_rate_vac.R (mig_rate, VAC)
+#     LABV           the labour-market regressor of the main: "L_unem" (published) or "L_ln_vac_unem" (log V/U in place of unemployment)
+#     INT   = TRUE   the log debt-interest share of TME (L_ln_int_tme, t-1) is in the main
+# Wrappers:  parallel_gross_vac.R (GROSS, VAC) | parallel_gross.R (GROSS, no VAC) | parallel_rate_vac.R (mig_rate, VAC) | parallel_core.R (Sam's core
+#            specification, 29 Sep 2026: gross inflows, tax per WAP, log change in debt/GDP, log V/U, log debt-interest share, the projection)
 # Both samples, in this order (numbering mirrors the published tables so the runs can be read side by side):
 #   G2  Table 2 analogue      main | main with the vacancy term removed / added | the other dependent variable with main's controls
 #   G3  Table 3 analogue      ARDL(1,...) bounds test (PSS case 3) and long-run multipliers; one-SD magnitude; recursive-design
@@ -24,7 +27,7 @@
 # the wrapper. Packages: readxl, lmtest, sandwich, car, ARDL, strucchange.
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/ (RStudio: Session > Set Working Directory > To Source File Location)")
-if (!exists("GROSS")) GROSS <- TRUE; if (!exists("VAC")) VAC <- TRUE; if (!exists("TAXVAR")) TAXVAR <- "L_tax_workpop"   # TAXVAR: the tax-burden regressor of the main (L_tax_workpop, L_tax_voter, L_tax_res)
+if (!exists("GROSS")) GROSS <- TRUE; if (!exists("VAC")) VAC <- TRUE; if (!exists("TAXVAR")) TAXVAR <- "L_tax_workpop"; if (!exists("LABV")) LABV <- "L_unem"; if (!exists("INT")) INT <- FALSE   # LABV: the labour-market regressor of the main (L_unem or L_ln_vac_unem); INT: add the log debt-interest share   # TAXVAR: the tax-burden regressor of the main (L_tax_workpop, L_tax_voter, L_tax_res)
 source("tables_common.R"); suppressPackageStartupMessages({library(ARDL); library(strucchange); library(readxl)})
 load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); list(df = df, STEP = STEP, Y0 = Y0, LAB = LAB) }
 SMP <- list(extended = load_sample("1964"), core = load_sample("1977"))
@@ -32,7 +35,7 @@ WB <- "Dissertation_Dataset_Final.xlsx"; ref <- as.data.frame(read_excel(WB, she
 pub <- as.data.frame(read_excel(WB, sheet = "PubShiftOADR_ZM", .name_repair = "minimal")); pub <- pub[!is.na(pub$year), ]
 swap <- function(base, drop, add) c(setdiff(base, drop), add)
 DV <- if (GROSS) "mig_gross" else "mig_rate"; LDV <- paste0("L_", DV); ODV <- if (GROSS) "mig_rate" else "mig_gross"; LODV <- paste0("L_", ODV)
-SPEC <- paste0(if (GROSS) "unadjusted gross inflows" else "inflows per working-age person (published DV)", if (VAC) " + log vacancies" else ", fiscal controls as published", if (TAXVAR != "L_tax_workpop") paste0(", tax burden = ", sub("^L_", "", TAXVAR)))
+SPEC <- paste0(if (GROSS) "unadjusted gross inflows" else "inflows per working-age person (published DV)", if (VAC) " + log vacancies" else ", fiscal controls as published", if (LABV != "L_unem") paste0(", ", LABV, " for L_unem"), if (INT) " + L_ln_int_tme", if (TAXVAR != "L_tax_workpop") paste0(", tax burden = ", sub("^L_", "", TAXVAR)))
 fit0 <- fit; fit <- function(d, xs, dv = DV, min_extra = 5) fit0(d, xs, dv, min_extra)   # in this engine the default dependent variable is the main's
 line <- function(k, m, vs) { if (is.null(m)) return(invisible()); ct <- coeftest(m, vcov. = vcovHAC(m)); cat(sprintf("%-30s", k)); for (v in vs) if (v %in% rownames(ct)) cat(sprintf(" | %s %.4f (p %s)", v, ct[v, 1], pf(ct[v, 4]))); cat(sprintf(" | N %d, AIC %.2f, RESET %s\n", nobs(m), AIC(m), pf(resettest(m)$p.value))); defs(vs) }
 # gross (persons, logged) counterparts of the alternative dependent variables, built here so data_common.R is untouched
@@ -53,7 +56,7 @@ for (k in names(SMP)) { d <- SMP[[k]]$df; y <- d$year
   d$delta_zm_10 <- as.numeric(ref$delta_zm_10)[match(y, ref$year)]; d$p_pub <- as.numeric(pub$delta_oadr_10_pub)[match(y, pub$year)]
   for (v in c("nb_gross", "nb03_gross", "ltim_gross", "brit_gross", "eu_gross", "tot_gross")) { x <- d[[v]]; x[!is.finite(x)] <- NA; d[[v]] <- x; d[[paste0("L_", v)]] <- lag1(x) }
   d$L2_mig_gross <- lag1(d$L_mig_gross); SMP[[k]]$df <- d }
-CT0 <- c(TAXVAR, "L_ln_debt_gdp", "L_unem"); CT <- c(CT0, if (VAC) "L_ln_vac_wap")   # the main's controls (right-hand side minus the lagged DV, the projection and the step)
+CT0 <- c(TAXVAR, "L_ln_debt_gdp", LABV, if (INT) "L_ln_int_tme"); CT <- c(CT0, if (VAC) "L_ln_vac_wap")   # the main's controls (right-hand side minus the lagged DV, the projection and the step)
 sfx <- if (GROSS) "_gross" else "_rate"                                                          # suffix of the alternative-DV names on the main's basis
 cat("\n##### PARALLEL RUN: ", SPEC, " as the main specification #####\n", sep = "")
 cat("Main: ", DV, " ~ ", LDV, " + delta_oadr_10 + ", paste(CT, collapse = " + "), if (!GROSS) " [+ basis_pre1975 on the extended sample]", ".",
@@ -62,7 +65,7 @@ for (k in names(SMP)) {
   d <- SMP[[k]]$df; STEP <- SMP[[k]]$STEP; Y0 <- SMP[[k]]$Y0; LAB <- SMP[[k]]$LAB; EXT <- k == "extended"; S <- subset(d, year >= Y0 & year <= 2019); TAG <- paste0(LAB, "2019"); SN <- paste0(k, " sample")
   MSTEP <- if (GROSS) NULL else STEP                                                           # the published DV keeps its basis step; gross inflows carry none
   G <- c(LDV, "delta_oadr_10", MSTEP, CT)                                                       # the main specification
-  grow <- c("delta_oadr_10", if (VAC) "L_ln_vac_wap", TAXVAR, "L_ln_debt_gdp", "L_unem", LDV, MSTEP)
+  grow <- c("delta_oadr_10", if (VAC) "L_ln_vac_wap", TAXVAR, "L_ln_debt_gdp", LABV, if (INT) "L_ln_int_tme", LDV, MSTEP)
   OG <- c(LODV, "delta_oadr_10", if (!GROSS) NULL else STEP, CT)                                 # the other DV with the main's controls (mig_rate gets the step, mig_gross none)
   cat("\n\n########## ", toupper(TAG), " ##########\n", sep = "")
   # --- G2 Table 2 analogue -----------------------------------------------------------------------------------------
@@ -74,7 +77,7 @@ for (k in names(SMP)) {
   m <- p[["main"]]; b <- coef(m); sdp <- sd(attr(m, "dd")$delta_oadr_10)
   cat(sprintf("Magnitude: one-SD move in delta_oadr_10 (%.1f) = %.1f%% of inflows on impact, %.1f%% in the long run (b / (1 - rho), rho = %.3f).\n", sdp, 100 * (exp(b["delta_oadr_10"] * sdp) - 1), 100 * (exp(b["delta_oadr_10"] * sdp / (1 - b[LDV])) - 1), b[LDV]))
   # --- G3 bounds test, long-run multipliers, bias correction -----------------------------------------------------------
-  S$ln_vac_wap <- log(S$vac_wap); lev <- c("delta_oadr_10", "unem", "ln_debt_gdp", sub("^L_", "", TAXVAR), if (VAC) "ln_vac_wap"); vv <- c(DV, lev, MSTEP); ok <- complete.cases(S[, vv])
+  S$ln_vac_wap <- log(S$vac_wap); S$ln_vac_unem <- log(S$vac_unem); S$ln_int_tme <- log(S$int_tme); lev <- c("delta_oadr_10", sub("^L_", "", LABV), "ln_debt_gdp", sub("^L_", "", TAXVAR), if (VAC) "ln_vac_wap", if (INT) "ln_int_tme"); vv <- c(DV, lev, MSTEP); ok <- complete.cases(S[, vv])
   ts_df <- ts(S[ok, vv], start = min(S$year[ok]), frequency = 1)
   fm <- as.formula(paste(DV, "~", paste(lev, collapse = " + "), if (!is.null(MSTEP)) paste("|", MSTEP)))
   m_ardl <- ardl(fm, data = ts_df, order = rep(1, length(lev) + 1)); lr <- multipliers(m_ardl, type = "lr")
@@ -109,9 +112,9 @@ for (k in names(SMP)) {
   panel(p, paste0("Table G8. National accounts taxes: alternative shares and log changes (", TAG, ")"), unique(c("delta_oadr_10", TAXVAR, "L_tax_workpop", "L_tax_res", "L_tax_gdp", "L_tax_earn", "L_tax_voter", "L_tax_taxpayer", "L_dln_tax_workpop", "L_dln_tax_res", grow)), w = 17,
         "The same tax total over the resident population, GDP, average annual earnings, adults (working-age plus pensioners) and income-tax payers (from 1979); then the annual log change in taxes per working-age person and per resident in place of the level.")
   # --- G9 unemployment measures ------------------------------------------------------------------------------------------------
-  p <- list("main" = fit(S, G), "unem_boe" = fit(S, swap(G, "L_unem", "L_unem_boe")), "unem_claim" = fit(S, swap(G, "L_unem", "L_unem_claim")))
+  p <- c(list("main" = fit(S, G)), setNames(lapply(setdiff(c("L_unem", "L_unem_boe", "L_unem_claim"), LABV), function(v) fit(S, swap(G, LABV, v))), sub("^L_", "", setdiff(c("L_unem", "L_unem_boe", "L_unem_claim"), LABV))))
   panel(p, paste0("Table G9. Unemployment measures (", TAG, ")"), unique(c("delta_oadr_10", "L_unem", "L_unem_boe", "L_unem_claim", grow)), w = 14,
-        paste0("Each column replaces L_unem (ILO) with the measure named", if (VAC) "; log vacancies retained throughout (the vacancy/unemployment ratio is their quotient, so the two share precision)." else "."))
+        paste0("Each column replaces ", LABV, if (LABV == "L_unem") " (ILO)" else "", " with the measure named", if (VAC) "; log vacancies retained throughout (the vacancy/unemployment ratio is their quotient, so the two share precision)." else "."))
   # --- G10 level and change ----------------------------------------------------------------------------------------------------
   p <- list("main" = fit(S, G), "level_oadr_10" = fit(S, swap(G, "delta_oadr_10", "level_oadr_10")), "+oadr_0" = fit(S, c(G, "oadr_0")))
   panel(p, paste0("Table G10. The projected level and the projected change (", TAG, ")"), unique(c("delta_oadr_10", "level_oadr_10", "oadr_0", grow)), w = 16,
@@ -171,15 +174,17 @@ for (k in names(SMP)) {
     p <- c(list("main" = fit(S, G)), setNames(lapply(vars, function(v) fit(S, c(G, v))), paste0("+", sub("^L_", "", vars))), extra)
     panel(p, title, unique(c("delta_oadr_10", vars, unlist(lapply(extra, function(mm) setdiff(names(coef(mm)), c("(Intercept)", G)))), grow)), w = w, lw = lw, notes = notes) }
   cat("\n##### Further controls, each added to the main (", TAG, ") #####\n", sep = "")
-  add_tab(c(if (!VAC) "L_ln_vac_wap", "L_ln_vac_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_union", "L_replace"), paste0("Table G19. Labour market controls (", TAG, ")"),
-          if (VAC) "Log vacancies per working-age person is already in the main; ln_vac_unem is near-collinear with it and L_unem." else "Vacancies enter in logs (the form that fits in the private tests); L_unem and log vacancies are near-collinear.")
+  add_tab(c(if (!VAC) "L_ln_vac_wap", if (LABV != "L_ln_vac_unem") "L_ln_vac_unem" else "L_unem", "L_dln_vac_unem", "L_wage_infl", "L_real_wage", "L_union", "L_replace"), paste0("Table G19. Labour market controls (", TAG, ")"),
+          if (LABV == "L_ln_vac_unem") "Log V/U is the main's labour-market term; +unem adds the ILO rate back beside it. Wage inflation is the incomes-policy control of its era (Sam, 29 Sep 2026): reported as a labour-market robustness line, not carried into the main." else if (VAC) "Log vacancies per working-age person is already in the main; ln_vac_unem is near-collinear with it and L_unem." else "Vacancies enter in logs (the form that fits in the private tests); L_unem and log vacancies are near-collinear.")
   add_tab(c("L_growth", "L_growth_pc", "L_tfp", "L_lab_prod", "L_particip", "growth_fc"), paste0("Table G20. Growth, productivity and participation (", TAG, ")"))
   add_tab(c("L_real_eri", "L_openness", "L_ca_gdp", "L_trade_bal", "L_tot"), paste0("Table G21. Trade and the external balance (", TAG, ")"))
   add_tab(c("L_inflation", "L_cpi_infl", "st_inf_exp", "lt_inf_exp", "inf_exp_1y", "inf_exp_5_10y", "L_m4_growth"), paste0("Table G22. Inflation, expectations and money (", TAG, ")"))
   add_tab(c("L_grants_gdp", "L_grants_wap", "L_tme_gdp", "L_tme_real_growth", "gad_earn", "gad_policy"), paste0("Table G23. Current and projected spending (", TAG, ")"))
   add_tab(c("L_psnb_gdp", "L_psnd_gdp", "fc_budget", "fc_medium", "L_tax_ceiling", "golden_rule", "obr_era"), paste0("Table G24. Borrowing, borrowing plans and fiscal rules (", TAG, ")"),
           extra = list("psnb_gdp for ln_debt_gdp" = fit(S, swap(G, "L_ln_debt_gdp", "L_psnb_gdp"))))
-  add_tab(c("L_int_tme", "L_int_gdp", "L_bank_rate", "L_tbill", "L_gilt", "L_consol", "L_r_g"), paste0("Table G25. Debt dynamics and the cost of borrowing (", TAG, ")"))
+  add_tab(c(if (!INT) "L_int_tme", "L_ln_int_tme_ons", "L_int_gdp", "L_bank_rate", "L_tbill", "L_gilt", "L_consol", "L_r_g"), paste0("Table G25. Debt dynamics and the cost of borrowing (", TAG, ")"),
+          if (INT) "The log debt-interest share is in the main; +ln_int_tme_ons adds the current-vintage ONS PUSF ratio beside it; the extra columns drop it and replace it by the PUSF ratio." else "+ln_int_tme_ons: the current-vintage ONS PUSF ratio (Millennium differs by ~3 points in 2010-13).",
+          extra = if (INT) list("no ln_int_tme" = fit(S, setdiff(G, "L_ln_int_tme")), "ln_int_tme_ons for ln_int_tme" = fit(S, swap(G, "L_ln_int_tme", "L_ln_int_tme_ons"))) else list())
   # --- G26 core-only projections; G27 second lag, timing placebo and stability ----------------------------------------------------------
   cat("\nTable G26. Alternative projections (", SN, ")\n", sep = ""); line("publication-dated (p_pub_ext)", fit(S, swap(G, "delta_oadr_10", "p_pub_ext")), c("p_pub_ext"))
   if (!EXT) { line("zero-migration projection", fit(S, swap(G, "delta_oadr_10", "delta_zm_10")), c("delta_zm_10")); line("publication-dated (Sam's sheet)", fit(S, swap(G, "delta_oadr_10", "p_pub")), c("p_pub")) }

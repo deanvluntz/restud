@@ -511,3 +511,8 @@ only partial disclosure. Do not repeat that.
   June/July 2026 vintages, workbook re-exported. debt_interest_tme still to confirm. WAGE INFLATION (Sam's decision): robustness line under
   the labour-market controls; text frames it as the incomes-policy instrument of its era (like the BoP), explanatory but not part of the
   timeless core framework. Not yet written into any manuscript (headline spec still undecided).
+- 29 Sep 2026 (8; Sam): ca_gdp = ONS AA6H and labour_share = ONS IHXP for ALL years (Millennium kept as *_mill); int_tme 2017-19 re-spliced
+  from Sam's BoE construction NMFX/(ANLP-ANNS+NSRN) (ONS PUSF); full PUSF ratio = int_tme_ons. FLAG: Millennium int_tme and the PUSF ratio
+  correlate .75 with 2-3 point gaps in 1965-81 and 2008-13; under the PUSF ratio the debt-interest term is NULL in the core spec on both
+  samples (Millennium: significant). Sam to decide the series. parallel_spec.R: LABV + INT switches; parallel_core.R = Sam's core spec
+  (gross, tax_workpop, ln_debt_gdp, ln_vac_unem, ln_int_tme, projection) through G2-G27; in run_all_1964.R. Manuscript untouched until Sam finalises.
