@@ -142,10 +142,10 @@ for (k in names(SMP)) {
   # --- G15 British citizens and Commonwealth, citizenship policy, emigration ----------------------------------------------------------
   BV <- paste0("brit", sfx); BR <- c(paste0("L_", BV), "delta_oadr_10", CT)
   p <- list("main" = fit(S, G)); if (EXT) p[["+Act steps"]] <- fit(S, c(G, "post1968", "post1973"))
-  p[[BV]] <- fit(S, BR, BV); p[[paste0(BV, " +cit_grants")]] <- fit(S, c(BR, "cit_grants_k"), BV); p[[paste0(BV, " +L_cit_grants")]] <- fit(S, c(BR, "L_cit_grants_k"), BV); p[[paste0(BV, " +cit_nat")]] <- fit(S, c(BR, "cit_nat_k"), BV); p[[paste0(BV, " +L_cit_nat")]] <- fit(S, c(BR, "L_cit_nat_k"), BV)
+  p[[BV]] <- fit(S, BR, BV); p[[paste0(BV, " +cit_grants")]] <- fit(S, c(BR, "cit_grants_k"), BV); p[[paste0(BV, " +L_cit_grants")]] <- fit(S, c(BR, "L_cit_grants_k"), BV); p[[paste0(BV, " +cit_nat")]] <- fit(S, c(BR, "cit_nat_k"), BV); p[[paste0(BV, " +L_cit_nat")]] <- fit(S, c(BR, "L_cit_nat_k"), BV); p[[paste0(BV, " +unem_diff")]] <- fit(S, c(BR, "L_unem_diff"), BV); p[[paste0(BV, " +unem_dest")]] <- fit(S, c(BR, "L_unem_dest"), BV)
   p[[paste0("+", BV)]] <- fit(S, c(G, BV)); p[["+emig_all"]] <- fit(S, c(G, "L_emig_all")); p[["+emig_brit"]] <- fit(S, c(G, "L_emig_brit"))
   panel(p, paste0("Table G15. British citizens and Commonwealth: inflows, citizenship policy and emigration (", TAG, ")"),
-        unique(c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", BV, "L_emig_all", "L_emig_brit", grow, paste0("L_", BV))), w = 13, lw = 16,
+        unique(c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", "L_unem_diff", "L_unem_dest", BV, "L_emig_all", "L_emig_brit", grow, paste0("L_", BV))), w = 13, lw = 16,
         c(if (EXT) paste0("+Act steps: the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973)", if (GROSS) "; without a basis step they are identified against the whole sample." else "; with the basis step they are identified inside the pre-1975 window only.") else NULL,
           paste0(BV, " columns: British-citizen inflows (all origins, LTIM 2.00), the uncontrolled flow, on the main's controls, then with grants of citizenship (all grants; naturalisations), current year and lagged; registrations as a text line."),
           paste0("+", BV, " holds the British flow constant in the controlled-flow equation; +emig_all / +emig_brit add lagged emigrants per working-age person.")))

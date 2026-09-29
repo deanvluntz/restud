@@ -190,6 +190,9 @@ DEFS[["L_ln_int_tme_ons"]] <- "log of L_int_tme_ons"; DEFS[["L_ln_int_tme"]] <- 
 DEFS[["L_ln_vac_unem"]] <- "log of the vacancy/unemployment ratio, t-1 (Millennium M5 vacancies over unemployment; ONS AP2Y/MGSC for 2017-19)"
 DEFS[["L_ca_gdp_mill"]] <- "current account balance, % of GDP, t-1, Millennium A36 vintage (ONS AA6H change-spliced 2017-19)"; DEFS[["L_labour_share_mill"]] <- "labour share of GDP, %, t-1, Millennium basis (ONS IHXP growth-spliced 2017-19)"
 DEFS[["L_ca_gdp"]] <- "current account balance of the balance of payments, % of GDP, t-1 (ONS AA6H, all years; negative = deficit)"; DEFS[["L_labour_share"]] <- "compensation of employees as % of GDP, t-1 (ONS IHXP, all years)"
+DEFS[["L_unem_dest"]] <- "mean unemployment rate of Australia, Canada, New Zealand and the United States, %, t-1 (OECD annual labour force survey, 15+; Australia from 1967)"
+DEFS[["L_unem_diff"]] <- "UK ILO unemployment rate minus L_unem_dest, percentage points, t-1 (positive = the UK labour market worse than the destinations of British emigrants)"
+DEFS[["L_unem_usa"]] <- "United States unemployment rate, %, t-1 (OECD)"; DEFS[["L_unem_aus"]] <- "Australian unemployment rate, %, t-1 (OECD, from 1967)"
 fit <- function(d, xs, dv = "mig_rate", min_extra = 5) {
   if (!all(c(dv, xs) %in% names(d))) return(NULL); cc <- complete.cases(d[, c(dv, xs)]); dd <- d[cc, ]
   xs <- xs[vapply(xs, function(v) sd(dd[[v]]) > 0, logical(1))]

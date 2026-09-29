@@ -520,3 +520,9 @@ only partial disclosure. Do not repeat that.
   Millennium to 1996, +1-2 points from 1997 (ONS revisions). Core spec with the reconstruction: 0.146 (p .03) ext / 0.156 (p .007) core,
   best AIC -> the debt-interest term STANDS. int_tme_ons = ANLO/EBFT all years; int_tme 2017-19 growth-spliced from it. Recommend adopting
   the full PUSF series (Sam's "use ONS entirely") — his call.
+- 29 Sep 2026 (10; Sam): DECISIONS: int_tme stays MILLENNIUM ("most contemporary figures known at the time"; PUSF reconstruction = int_tme_ons,
+  comparison only). Unemployment splice justified (measure change divides the period; results unchanged) -> state explicitly in the manuscript
+  when updated. Splice audit done from Sam's downloads: all Millennium 2010-16 values = current sources to rounding; 2017-19 labour-market
+  values re-read (tiny changes). OECD destination unemployment (AUS/CAN/NZL/USA; Spain from 1999 unused) -> unem_dest, unem_diff in data,
+  B15/G15/P10: null for British inflows on both samples; projection survives. 3-month bill rate discontinued 2017 (Bank-Rate construction stands).
+  "IPS by-reason" in my list = table 3.08 main-reason composition test (25 Sep), NOT country of last residence.

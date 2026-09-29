@@ -57,6 +57,12 @@ ons_ca <- read.csv("determinants/ons_AA6H_current_account_gdp_1948_2025.csv"); o
 raw$ca_gdp_mill <- raw$ca_gdp; raw$ca_gdp <- ons_ca$ca_gdp_ons[match(raw$year, ons_ca$year)]
 raw$labour_share_mill <- raw$labour_share; raw$labour_share <- ons_ls$labour_share_ons[match(raw$year, ons_ls$year)]
 raw$int_tme_ons <- ons_pu$int_tme_ons[match(raw$year, ons_pu$year)]
+# Destination unemployment for the British inflow (Sam, 29 Sep 2026): OECD annual LFS unemployment rates, 15+, for the four English-speaking
+# destinations of British emigrants (Australia from 1967, Canada, New Zealand and the United States from 1955; Spain only from 1999, not used).
+# unem_dest = their simple mean; unem_diff = UK ILO rate minus unem_dest (positive = UK worse than the destinations).
+oecd <- read.csv("determinants/oecd_unemployment_destinations_1955_2025.csv"); j <- match(raw$year, oecd$year)
+raw$unem_aus <- oecd$unem_aus[j]; raw$unem_usa <- oecd$unem_usa[j]; raw$unem_can <- oecd$unem_can[j]; raw$unem_nzl <- oecd$unem_nzl[j]
+raw$unem_dest <- rowMeans(cbind(raw$unem_aus, raw$unem_usa, raw$unem_can, raw$unem_nzl)); raw$unem_diff <- raw$unem - raw$unem_dest
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
 raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
@@ -172,7 +178,7 @@ df <- raw
 LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "settle_k", "vouchers_k", "ancestry_k", "cit_newcw_k", "cit_afrcw_k", "cit_oldcw_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
-          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons",
+          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons", "unem_dest", "unem_diff", "unem_aus", "unem_usa", "unem_can", "unem_nzl",
           "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth", "bank_rate", "growth_pc", "lab_prod", "tax_earn", "tot_rate", "consol")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
 # log forms of the positive-valued controls (Sam, 28 Sep 2026): L_ln_x = log of the lagged level

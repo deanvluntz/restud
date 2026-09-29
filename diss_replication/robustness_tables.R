@@ -93,9 +93,10 @@ BR <- c("L_brit_rate", "delta_oadr_10", CT)
 p <- list("main" = fit(S, BASE)); if (EXT) p[["+Act steps"]] <- fit(S, c(BASE, "post1968", "post1973"))
 p[["brit_rate"]] <- fit(S, BR, "brit_rate"); p[["brit_rate +cit_grants"]] <- fit(S, c(BR, "cit_grants_k"), "brit_rate"); p[["brit_rate +L_cit_grants"]] <- fit(S, c(BR, "L_cit_grants_k"), "brit_rate")
 p[["brit_rate +cit_nat"]] <- fit(S, c(BR, "cit_nat_k"), "brit_rate"); p[["brit_rate +L_cit_nat"]] <- fit(S, c(BR, "L_cit_nat_k"), "brit_rate")
+p[["brit_rate +unem_diff"]] <- fit(S, c(BR, "L_unem_diff"), "brit_rate"); p[["brit_rate +unem_dest"]] <- fit(S, c(BR, "L_unem_dest"), "brit_rate")   # relative conditions in the destinations of British emigrants (OECD)
 p[["+brit_rate"]] <- fit(S, c(BASE, "brit_rate")); p[["+emig_all"]] <- fit(S, c(BASE, "L_emig_all")); p[["+emig_brit"]] <- fit(S, c(BASE, "L_emig_brit"))
 panel(p, paste0("Table B15. British citizens and Commonwealth: inflows, citizenship policy and emigration (", TAG, ")"),
-      c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", "brit_rate", "L_emig_all", "L_emig_brit", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L_brit_rate", STEP), w = 13, lw = 16,
+      c("delta_oadr_10", "post1968", "post1973", "cit_grants_k", "L_cit_grants_k", "cit_nat_k", "L_cit_nat_k", "L_unem_diff", "L_unem_dest", "brit_rate", "L_emig_all", "L_emig_brit", "L_tax_workpop", "L_ln_debt_gdp", "L_unem", "L_mig_rate", "L_brit_rate", STEP), w = 13, lw = 16,
       c(if (EXT) c("+Act steps: indicators for the Commonwealth Immigrants Act 1968 and the Immigration Act 1971 in force (1973). Given the intercept and basis_pre1975 they are identified inside",
                    "the pre-1975 window only (post1968 contrasts 1965-67 with 1968-74; post1973 is numerically an indicator for 1973-74), so the column lets the pre-1975 level float.") else NULL,
         "brit_rate columns: the fiscal specification for British-citizen inflows, all origins (LTIM 2.00), the uncontrolled flow, as placebo (no basis step), then with current-year grants of",
