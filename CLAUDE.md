@@ -550,3 +550,10 @@ only partial disclosure. Do not repeat that.
   data_common.R rebuild from CSVs. FIX: rebuild is now options(restud.rebuild = TRUE) set only inside export_dataset.R (reset on exit);
   data_common.R ignores REBUILD_DATA; replication_core_spec.R sets the option FALSE and removes a stray REBUILD_DATA. Sam must source()
   the file from diss_replication/, NOT RStudio "Compile Report" (which runs from the file's folder, e.g. Downloads).
+- 29 Sep 2026 (16; Sam): LAYOUT RULES for replication_core_spec.R: samples = "Citizen sample (1964-2019)" / "Origin sample (1977-2019)";
+  ALL alternative outcomes in log persons (never per WAP); column titles = the variable added/substituted only (no "X for Y"); no gap_pca
+  anywhere (gap_obr only); no "to 2016" lines (options(restud.secondary = FALSE)); Tables 1/1.1 = each sample in full with bootstraps;
+  Table 1.3 citizenship vs origin on 1977-2019 + correlations; Section 2 = mechanism (with/without projection, permits, by reason);
+  3 projection; 4 regressors (4.3 fiscal term vs tbill/term spread/gilt/TME/none); 5 alternative outcomes; 6 uncontrolled flows.
+  Findings: tbill beats int_tme on the Citizen sample only; int_tme (level/log) the only fiscal term holding on both. tme_predict.R: TME
+  growth predicted by lagged log debt/GDP + unemployment (adj R2 .34-.46), tax per WAP adds nothing. export_dataset.R on.exit bug fixed.

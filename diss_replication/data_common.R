@@ -71,12 +71,12 @@ raw$int_tme_ons <- ons_pu$int_tme_ons[match(raw$year, ons_pu$year)]
 oecd <- read.csv("determinants/oecd_unemployment_destinations_1955_2025.csv"); j <- match(raw$year, oecd$year)
 raw$unem_aus <- oecd$unem_aus[j]; raw$unem_usa <- oecd$unem_usa[j]; raw$unem_can <- oecd$unem_can[j]; raw$unem_nzl <- oecd$unem_nzl[j]
 raw$unem_dest <- rowMeans(cbind(raw$unem_aus, raw$unem_usa, raw$unem_can, raw$unem_nzl)); raw$unem_diff <- raw$unem - raw$unem_dest
-# OBR historical output gap (Working Paper No. 1, 2011; Chart 3.6 digitised, 1972-2010; Sam, 29 Sep 2026): principal-components and
-# aggregate-composite estimates, per cent of potential output. A cyclical control for the British inflow (and the main equation).
-og <- read.csv("determinants/obr_wp1_output_gap_1972_2010_digitised.csv"); raw$gap_pca <- og$gap_pca[match(raw$year, og$year)]; raw$gap_agg <- og$gap_agg[match(raw$year, og$year)]
 # OBR output gap from the PSF aggregates databank (March 2026 EFO), per cent of GDP, fiscal years 1972-73 onward mapped to the calendar
 # year in which the fiscal year starts (Sam's upload, 29 Sep 2026); correlation 0.975 with the digitised Working Paper series to 2010
 ob <- read.csv("determinants/obr_psf_output_gap_fy_1972_2030.csv"); raw$gap_obr <- ob$gap_obr[match(raw$year, ob$year)]
+# Total managed expenditure from the same OBR databank (fiscal year starting in the year shown): nominal GBP bn, % of GDP, 2024-25 prices
+ot <- read.csv("determinants/obr_psf_tme_fy_1946_2030.csv"); raw$tme_obr_bn <- ot$tme_bn[match(raw$year, ot$year)]; raw$tme_obr_gdp <- ot$tme_gdp[match(raw$year, ot$year)]; raw$tme_obr_real <- ot$tme_real[match(raw$year, ot$year)]
+raw$term_spread <- raw$gilt - raw$tbill   # 10-year gilt yield minus the Treasury bill rate, percentage points
 # IPS 3.08 inflows by main reason for migration, 1977-2019 (thousands): non-EU and British citizens. British "going home to live" is coded only
 # from 1980 and "accompany / join" from 1982 (earlier years fold them into "other"), so brit_nonwork_k = all - work - study is the consistent split.
 r8 <- read.csv("determinants/ips_308_citizenship_by_reason_1977_2019.csv"); r8 <- subset(r8, direction == "Inflow")
@@ -93,14 +93,14 @@ raw$settle_hk_k <- gs("Hong Kong"); raw$settle_zw_k <- gs("Zimbabwe"); raw$settl
 raw$settle_push_k <- raw$settle_hk_k + raw$settle_zw_k + raw$settle_za_k + raw$settle_ke_k + raw$settle_ug_k   # the five former colonies with large British-passport populations
 raw$settle_isc_k <- gs("India") + gs("Pakistan") + gs("Bangladesh"); raw$settle_afr_k <- gs("Africa"); raw$settle_asia_k <- gs("Asia")
 raw <- raw[order(raw$year), ]; y <- raw$year; wl <- lag1(raw$workpop)
-raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)])
+raw$eu_rate <- log(ref$EU_inflows_WAPlagK[match(y, ref$year)]); raw$eu_gross <- log(1000 * ips[["Inflow_ALL_EU"]][match(y, ips$year)])   # EU citizens, all origins, persons (IPS 3.01)
 if (!is.null(wp)) { wp$permits[wp$basis != "WP+FP"] <- NA; raw$permits <- wp$permits[match(y, wp$year)] / 1000 }   # Tier 2 (2009-) is a different basis: never spliced
-raw$brit_rate <- log(1000 * (1000 * raw$brit_in) / wl)
+raw$brit_rate <- log(1000 * (1000 * raw$brit_in) / wl); raw$brit_gross <- log(1000 * raw$brit_in)   # British-citizen inflows, all origins (LTIM 2.00): per 1,000 WAP and persons
 # Alternative classifications of the dependent variable (Sam, 28 Sep 2026): non-British citizens throughout (LTIM 2.00, series A),
 # non-British to 2003 (series C), the LTIM-basis non-EU series (1992-), and, on the extended sample, series B with the pre-1975
 # non-British counts RESCALED by the 1975-80 overlap ratio non-EU / non-British instead of the estimated basis step.
 raw$dv_A <- ext$dv_A_non_british[match(y, ext$year)]; raw$dv_C <- ext$dv_C_non_british_to_2003[match(y, ext$year)]; raw$dv_nonEU <- ext$non_eu[match(y, ext$year)]
-raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (1000 * raw$dv_C) / wl)
+raw$nb_rate <- log(1000 * (1000 * raw$dv_A) / wl); raw$nb03_rate <- log(1000 * (1000 * raw$dv_C) / wl); raw$nb_gross <- log(1000 * raw$dv_A); raw$nb03_gross <- log(1000 * raw$dv_C)
 raw$ltim_rate <- log(as.numeric(ref$ltim_nEU_inflows_WAPlagK)[match(y, ref$year)])
 raw$cit_grants_k <- cit$cit_grants[match(y, cit$year)] / 1000; raw$cit_reg_k <- (cit$cit_reg_minor + cit$cit_reg_other)[match(y, cit$year)] / 1000
 raw$cit_overseas_k <- cit$cit_overseas[match(y, cit$year)] / 1000
@@ -117,6 +117,7 @@ for (r in c("OCEANIA", "NORTH AMERICA", "OTHER EUROPE", "ASIA", "SUB-SAHARAN AFR
   v <- 1000 * (1000 * ips[[paste0("Inflow_", r, "_brit")]][match(y, ips$year)]) / wl; v[!is.finite(v) | v <= 0] <- NA
   raw[[paste0("brit_", tolower(gsub("[^A-Z]", "", substr(r, 1, 3))))]] <- log(v) }
 raw$brit_noneu <- log(1000 * (1000 * ips[["Inflow_NON-EU_brit"]][match(y, ips$year)]) / wl)
+raw$brit_desc_gross <- { v <- 1000 * raw$brit_desc_noneu_k; v[!is.finite(v) | v <= 0] <- NA; log(v) }   # British citizens from non-EU residence not born in the UK, persons
 # the two margins of the dependent variable (IPS 3.01, thousands): all citizenships arriving from non-EU residence (the country-of-last-
 # residence basis standard in the literature) and non-EU citizens arriving from anywhere (the citizenship basis); the DV is their intersection
 raw$res_noneu_k <- ips[["Inflow_NON-EU_all"]][match(y, ips$year)]; raw$cit_noneu_k <- ips[["Inflow_ALL_nonEU"]][match(y, ips$year)]; raw$dv_noneu_k <- ips[["Inflow_NON-EU_nonEU"]][match(y, ips$year)]
@@ -210,11 +211,11 @@ df <- raw
 LAGV <- c("mig_rate", "mig_gross", "mig_rate_s", "mig_gross_s", "nb_rate", "nb03_rate", "ltim_rate", "brit_rate", "cit_grants_k", "cit_reg_k", "cit_overseas_k", "cit_nat_k", "settle_k", "vouchers_k", "ancestry_k", "cit_newcw_k", "cit_afrcw_k", "cit_oldcw_k", "dln_tax_workpop", "dln_tax_res", "tax_voter", "tax_taxpayer", "ukborn_noneu", "ukborn_all", "ukborn_oce", "ukborn_nor", "ukborn_oth", "ukborn_asi", "ukborn_sub", "ukborn_res", "brit_desc_noneu", "brit_oce", "brit_nor", "brit_oth", "brit_asi", "brit_sub", "brit_res", "brit_noneu", "eu_rate", "permits", "lever", "tax_lab", "tax_res", "tax_workpop", "ln_debt_gdp", "unem", "unem_boe", "unem_claim", "vac_wap", "vac_unem", "dln_vac_unem",
           "emig_all", "emig_brit", "wage_infl", "real_wage", "tbill", "real_rate", "tfp", "replace", "union", "tax_inc", "tax_nics", "tax_nics_emp", "tax_nics_er",
           "tax_inc_nics", "tax_direct", "tax_indirect", "tax_vat", "tax_corp", "tax_receipts", "ln_wap", "grants_gdp", "grants_wap", "tme_gdp", "int_gdp", "int_tme",
-          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons", "unem_dest", "unem_diff", "unem_aus", "unem_usa", "unem_can", "unem_nzl", "gap_pca", "gap_agg", "gap_obr", "settle_total_k", "settle_push_k", "settle_hk_k", "settle_zw_k", "settle_za_k", "settle_ke_k", "settle_ug_k", "settle_isc_k", "settle_afr_k", "settle_asia_k", "res_noneu_k", "cit_noneu_k", "dv_noneu_k", "noneu_work_k", "noneu_study_k", "noneu_join_k", "noneu_other_k", "noneu_all_k", "brit_work_k", "brit_study_k", "brit_home_k", "brit_join_k", "brit_other_k", "brit_all_k", "brit_nonwork_k",
+          "gilt", "r_g", "days_lost", "fc_budget", "growth", "inflation", "real_eri", "ca_gdp", "trade_bal", "labour_share", "tot", "ca_gdp_mill", "labour_share_mill", "int_tme_ons", "unem_dest", "unem_diff", "unem_aus", "unem_usa", "unem_can", "unem_nzl", "gap_obr", "tme_obr_bn", "tme_obr_gdp", "tme_obr_real", "term_spread", "brit_gross", "nb_gross", "nb03_gross", "eu_gross", "brit_desc_gross", "settle_total_k", "settle_push_k", "settle_hk_k", "settle_zw_k", "settle_za_k", "settle_ke_k", "settle_ug_k", "settle_isc_k", "settle_afr_k", "settle_asia_k", "res_noneu_k", "cit_noneu_k", "dv_noneu_k", "noneu_work_k", "noneu_study_k", "noneu_join_k", "noneu_other_k", "noneu_all_k", "brit_work_k", "brit_study_k", "brit_home_k", "brit_join_k", "brit_other_k", "brit_all_k", "brit_nonwork_k",
           "real_house", "labour_gov", "youth", "relinc_dev", "relinc_rich", "unem_head", "cpi_infl", "psnb_gdp", "psnd_gdp", "tax_gdp", "openness", "m4_growth", "particip", "tax_ceiling", "tme_real_growth", "bank_rate", "growth_pc", "lab_prod", "tax_earn", "tot_rate", "consol")
 for (v in intersect(LAGV, names(df))) df[[paste0("L_", v)]] <- lag1(df[[v]])
 # log forms of the positive-valued controls (Sam, 28 Sep 2026): L_ln_x = log of the lagged level
-LOGV <- c("vac_wap", "vac_unem", "int_tme", "int_tme_ons", "int_gdp", "tbill", "gilt", "tme_gdp", "grants_gdp", "grants_wap", "psnd_gdp", "tax_gdp", "real_eri", "tot", "labour_share", "openness", "particip", "wage_infl_pos")
+LOGV <- c("vac_wap", "vac_unem", "int_tme", "int_tme_ons", "int_gdp", "tme_obr_gdp", "tme_obr_real", "tme_obr_bn", "tbill", "gilt", "tme_gdp", "grants_gdp", "grants_wap", "psnd_gdp", "tax_gdp", "real_eri", "tot", "labour_share", "openness", "particip", "wage_infl_pos")
 df$L_wage_infl_pos <- NULL
 for (v in setdiff(LOGV, "wage_infl_pos")) if (paste0("L_", v) %in% names(df)) { x <- df[[paste0("L_", v)]]; x[!is.na(x) & x <= 0] <- NA; df[[paste0("L_ln_", v)]] <- log(x) }
 df$L2_mig_rate <- lag1(df$L_mig_rate); df$L_post98 <- as.numeric(df$year >= 1999)   # L_unem_head switches to the ILO rate from 1999 (lagged 1998 value)

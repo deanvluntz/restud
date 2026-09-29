@@ -230,7 +230,7 @@ panel <- function(models, title, rows, notes = NULL, w = 14, lw = 16, reset = TR
   sec <- function(m) { dd <- attr(m, "dd"); if (is.null(dd) || !("year" %in% names(dd)) || max(dd$year) <= SEC_END || !any(ONS_VARS %in% names(coef(m)))) return(NULL)
     d2 <- subset(dd, year <= SEC_END); xs <- attr(terms(m), "term.labels"); xs <- xs[vapply(xs, function(v) sd(d2[[v]]) > 0, logical(1))]
     lm(reformulate(xs, all.vars(formula(m))[1]), data = d2) }
-  secs <- lapply(models, sec)
+  secs <- if (isTRUE(getOption("restud.secondary", TRUE))) lapply(models, sec) else lapply(models, function(m) NULL)   # options(restud.secondary = FALSE) drops the to-2016 re-estimation lines
   if (any(!vapply(secs, is.null, logical(1)))) {
     stat(paste0("proj, to ", SEC_END), function(m) { s2 <- sec(m); if (is.null(s2)) return("same"); a <- coeftest(s2, vcov. = vcovHAC(s2)); if (!("delta_oadr_10" %in% rownames(a))) return("--"); sprintf("%.4f%s", a["delta_oadr_10", 1], stars(a["delta_oadr_10", 4])) })
     stat(paste0("  N, to ", SEC_END), function(m) { s2 <- sec(m); if (is.null(s2)) "" else sprintf("%d", nobs(s2)) }) }
