@@ -542,3 +542,7 @@ only partial disclosure. Do not repeat that.
   timeline (1983-2025), five HO Control of Immigration volumes 1970-2009 (indexed; settlement-by-nationality extraction NEXT, use the 1993/1999
   retrospective Tables 6.5). Trade indicators beside wage/CPI inflation: none on the core; tot marginal on the extended. tot_rate is a FLOW
   (total inflows), never a trade indicator.
+- 29 Sep 2026 (14; Sam): HO volumes parsed: settlement by nationality 1983-2007 (retrospective tables) + totals 1960-2006 (Table 5.8) ->
+  determinants/ho_settlement_*; data_common settle_total_k, settle_push_k (HK+ZW+ZA+KE+UG) etc. Replication file: Table 2.3b settlement as
+  outcome (core responds 0.0122 p .005; extended 1965-2006 null), Table 4.3 push events: NULL for British inflows (r -0.01 with non-UK-born
+  British) -> no push-event story. 1970-82 by nationality not parsed (annual volumes); 2008-09 volumes absent.

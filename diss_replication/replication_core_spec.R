@@ -34,7 +34,7 @@ if (!all(c("data_1964", "data_1977") %in% .sh)) stop("The workbook lacks the ass
 options(warn = 1)
 source("tables_common.R"); suppressPackageStartupMessages({library(ARDL); library(strucchange); library(tseries); library(readxl)})
 load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); df$ln_vac_unem <- log(df$vac_unem); df$ln_int_tme <- log(df$int_tme)
-  for (k in c("res_noneu_k", "cit_noneu_k", "dv_noneu_k", "permits")) if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; nm <- paste0("ln_", sub("_k$", "", k)); df[[nm]] <- log(1000 * x); df[[paste0("L_", nm)]] <- lag1(df[[nm]]) }
+  for (k in c("res_noneu_k", "cit_noneu_k", "dv_noneu_k", "permits", "settle_total_k", "settle_push_k", "settle_isc_k")) if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; nm <- paste0("ln_", sub("_k$", "", k)); df[[nm]] <- log(1000 * x); df[[paste0("L_", nm)]] <- lag1(df[[nm]]) }
   for (v in c("noneu", "brit")) for (r in c("work", "study", "join", "other", "all", "nonwork")) { k <- paste0(v, "_", r, "_k"); if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; df[[paste0("ln_", v, "_", r)]] <- log(1000 * x); df[[paste0("L_ln_", v, "_", r)]] <- lag1(df[[paste0("ln_", v, "_", r)]]) } }
   df$ltim_gross <- df$ltim_rate + log(lag1(df$workpop) / 1000) - log(1000); df$L_ltim_gross <- lag1(df$ltim_gross)   # LTIM non-EU inflows per WAP back to persons (log), 1991-
   list(df = df, Y0 = Y0, LAB = LAB) }
@@ -84,6 +84,10 @@ panel(p, "Table 2.2. Citizenship basis against the country-of-last-residence bas
 cat("\n--- 2.3 Work permits as the outcome (Bauer and Salt, 2020; 1946-2008, WP + first permissions) ---\n")
 for (k in names(SMP)) { S <- subset(SMP[[k]]$df, year >= SMP[[k]]$Y0 & year <= 2008); p <- list("main (to 2008)" = fit(S, G, "mig_gross"), "permits (k)" = fit(S, c("L_permits", "delta_oadr_10", CT), "permits"), "log permits" = fit(S, c("L_ln_permits", "delta_oadr_10", CT), "ln_permits"))
   panel(p, paste0("Table 2.3. Work permits (", SMP[[k]]$LAB, "2008)"), c("delta_oadr_10", CT), w = 16, lw = 16, nested_F = TRUE, "permits: the administrative policy lever, gross permits in thousands (levels) and logs, on the same right-hand side; Tier 2 (2009-) is a different basis and is never spliced.") }
+cat("\n--- 2.3b Grants of settlement as the outcome (Home Office Control of Immigration Statistics, Table 5.8 of the 2006 volume; 1960-2006) ---\n")
+for (k in names(SMP)) { S <- subset(SMP[[k]]$df, year >= SMP[[k]]$Y0 & year <= 2006); p <- list("main (to 2006)" = fit(S, G, "mig_gross"), "settlement (log)" = fit(S, c("L_ln_settle_total", "delta_oadr_10", CT), "ln_settle_total"), "settlement, no lag" = fit(S, c("delta_oadr_10", CT), "ln_settle_total"))
+  panel(p, paste0("Table 2.3b. Grants of settlement, all nationalities (", SMP[[k]]$LAB, "2006)"), c("delta_oadr_10", CT, "L_ln_settle_total"), w = 16, lw = 16, nested_F = TRUE,
+        "Settlement is the administrative count of permanent admissions of persons subject to control, the narrowest outcome; before the mid-1970s it is dominated by the Commonwealth Immigrants Act regime (dependants and voucher holders), which the extended-sample column shows.") }
 cat("\n--- 2.4 IPS by main reason for migration (core sample, 1977-2019): a separate panel ---\n")
 S <- sub_s("core"); p <- list(); for (r in c("all", "work", "study", "join", "other")) { dv <- paste0("ln_noneu_", r); p[[paste0("non-EU ", r)]] <- fit(S, c(paste0("L_", dv), "delta_oadr_10", CT), dv) }
 panel(p, "Table 2.4a. Non-EU inflows by main reason for migration (core sample, 1977-2019)", c("delta_oadr_10", CT), w = 15, lw = 16, nested_F = TRUE, "Each column: the log inflow of non-EU citizens giving the reason named (IPS 3.08), on its own lag, the projection and the core controls. The work route is the one the Treasury controls.")
@@ -119,6 +123,11 @@ for (k in names(SMP)) { S <- sub_s(k); BR <- c("L_brit_rate", "delta_oadr_10", C
   p[["main +L_gap_obr"]] <- fit(S, c(G, "L_gap_obr"), "mig_gross")
   panel(p, paste0("Table 4.2. The British inflow: relative conditions, citizenship policy, the cycle (", SMP[[k]]$LAB, "2019)"), c("delta_oadr_10", "L_unem_diff", "cit_nat_k", "L_gap_obr", "L_gap_pca", CT, "L_brit_rate", "L_mig_gross"), w = 16, lw = 16, nested_F = TRUE,
         "unem_diff: UK unemployment minus the mean of Australia, Canada, New Zealand and the United States (OECD); cit_nat: naturalisations in the current year (thousands); gap_obr: the OBR output gap from the public sector finances databank (fiscal years from 1972-73; on the extended sample the column starts in 1973); gap_pca: the same gap digitised from Working Paper No. 1 (to 2010); brit_desc_noneu: British citizens from non-EU residence not born in the UK; the last column adds the gap to the main equation.") }
+cat("\n--- 4.3 Push events: settlement grants to nationals of the former colonies with large British-passport populations (1983-2007) ---\n")
+S <- subset(SMP$core$df, year >= 1977 & year <= 2019); BR <- c("L_brit_rate", "delta_oadr_10", CT); Sp <- subset(S, !is.na(settle_push_k))
+p <- list("brit_rate (1983-2007)" = fit(Sp, BR, "brit_rate"), "+ln_settle_push" = fit(S, c(BR, "ln_settle_push"), "brit_rate"), "+L_ln_settle_push" = fit(S, c(BR, "L_ln_settle_push"), "brit_rate"), "brit_desc (1983-2007)" = fit(Sp, BR, "brit_desc_noneu"), "brit_desc +ln_settle_push" = fit(S, c(BR, "ln_settle_push"), "brit_desc_noneu"))
+panel(p, "Table 4.3. The British inflow and push-country settlement (core sample, 1983-2007)", c("delta_oadr_10", "ln_settle_push", "L_ln_settle_push", CT, "L_brit_rate"), w = 16, lw = 16, nested_F = TRUE,
+      "settle_push: grants of settlement to nationals of Hong Kong, Zimbabwe, South Africa, Kenya and Uganda (Home Office retrospective tables), the flows a push event in those countries would raise; if British citizens by descent left with them, the British inflow would co-move.")
 # =============================================================================
 cat("\n\n#################### 5. WITHOUT THE PROJECTION ####################\n")
 for (k in names(SMP)) { S <- sub_s(k); LAB <- SMP[[k]]$LAB; m0 <- fit(S, NP, "mig_gross"); m1 <- fit(S, G, "mig_gross"); m0 <- lm(formula(m0), data = attr(m1, "dd")); attr(m0, "dd") <- attr(m1, "dd")
