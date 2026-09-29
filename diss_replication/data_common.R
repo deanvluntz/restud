@@ -20,6 +20,13 @@ DATA_SHEET <- paste0("data_", SAMPLE); FROM_SHEET <- !isTRUE(get0("REBUILD_DATA"
 if (FROM_SHEET) {
   raw <- num_df(as.data.frame(read_excel(WB, sheet = DATA_SHEET))); raw <- raw[!is.na(raw$year), ]; SPLICE_LOGRATIO <- raw$splice_logratio[1]
 } else {
+  # The assembled data live in the workbook sheets data_1964 / data_1977 (export_dataset.R). Rebuilding them from the determinants/*.csv
+  # sources is only for export_dataset.R itself; if the sheet is missing, the workbook on disk is stale (git pull, or a local copy of the
+  # workbook without the exported sheets) -- say so instead of failing on the first missing CSV.
+  need <- c("determinants/citizenship_grants_1962_2018.csv", "determinants/boe_extras_1962_2019.csv", "determinants/ips_301_citizenship_by_residence_1975_2019.csv")
+  if (!isTRUE(get0("REBUILD_DATA", ifnotfound = FALSE)) || !all(file.exists(need)))
+    stop(sprintf("Sheet '%s' is not in %s (sheets present: %s). The assembled data are read from that sheet; pull the latest workbook from the repository (or run export_dataset.R, which needs the determinants/*.csv files%s).",
+                 DATA_SHEET, normalizePath(WB), paste(excel_sheets(WB), collapse = ", "), if (!all(file.exists(need))) paste0("; missing here: ", paste(need[!file.exists(need)], collapse = ", ")) else ""))
 boe <- num_df(read.csv("determinants/boe_extras_1962_2019.csv")); tax <- read.csv("determinants/boe_a27_tax_variants_1956_2019.csv")
 exs <- read.csv("determinants/extension_1962_2019_extras.csv"); exs$dr_note <- NULL
 gad <- read.csv("determinants/gad/gad_pressure_series_1959_2019.csv"); gad <- gad[gad$rule == "base", ]

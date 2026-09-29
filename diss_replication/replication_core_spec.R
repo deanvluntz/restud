@@ -25,8 +25,13 @@
 # diss_replication/ (Session > Set Working Directory > To Source File Location), then source this file. Packages: readxl, lmtest,
 # sandwich, car, ARDL, strucchange, tseries. Runtime ~2 minutes without BOOT/EXACT.
 # =============================================================================
-if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
+if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/ (RStudio: Session > Set Working Directory > To Source File Location)")
 if (!exists("BOOT")) BOOT <- FALSE; if (!exists("EXACT")) EXACT <- FALSE
+# --- what this run reads (printed so a failure can be diagnosed at a glance) --------------------------------------------------------------
+suppressPackageStartupMessages(library(readxl)); .wb <- "Dissertation_Dataset_Final.xlsx"; if (!file.exists(.wb)) stop("Dissertation_Dataset_Final.xlsx is not in the working directory ", getwd())
+.sh <- excel_sheets(.wb); cat("working directory:", getwd(), "\nworkbook:", normalizePath(.wb), "(", format(file.info(.wb)$mtime), ")\nsheets:", paste(.sh, collapse = ", "), "\n")
+if (!all(c("data_1964", "data_1977") %in% .sh)) stop("The workbook lacks the assembled data sheets data_1964 / data_1977. They are written by export_dataset.R and committed with the workbook: pull the latest Dissertation_Dataset_Final.xlsx from the repository (a local copy of the workbook that was never replaced by the pulled one is the usual cause).")
+options(warn = 1)
 source("tables_common.R"); suppressPackageStartupMessages({library(ARDL); library(strucchange); library(tseries); library(readxl)})
 load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); df$ln_vac_unem <- log(df$vac_unem); df$ln_int_tme <- log(df$int_tme)
   for (k in c("res_noneu_k", "cit_noneu_k", "dv_noneu_k", "permits")) if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; nm <- paste0("ln_", sub("_k$", "", k)); df[[nm]] <- log(1000 * x); df[[paste0("L_", nm)]] <- lag1(df[[nm]]) }
