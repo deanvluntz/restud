@@ -526,3 +526,8 @@ only partial disclosure. Do not repeat that.
   values re-read (tiny changes). OECD destination unemployment (AUS/CAN/NZL/USA; Spain from 1999 unused) -> unem_dest, unem_diff in data,
   B15/G15/P10: null for British inflows on both samples; projection survives. 3-month bill rate discontinued 2017 (Bank-Rate construction stands).
   "IPS by-reason" in my list = table 3.08 main-reason composition test (25 Sep), NOT country of last residence.
+- 29 Sep 2026 (11; Sam): IPS 3.08 parsed in full (long CSV); by-reason inflows for non-EU and British in data_common (British home/join coded
+  only from 1980/1982 -> brit_nonwork_k consistent). OBR WP1 Chart 3.6 output gap DIGITISED 1972-2010 (gap_pca, gap_agg; +/-0.2). composition_reason.R
+  (core sample; in run_all_1964.R): projection acts on the non-EU WORK route (study null); NO British route responds (other negative);
+  lagged output gap raises British inflows (+0.054 p .02 core controls; +0.13 for non-UK-born British) but does not remove the projection;
+  gap null in the main equation beside log V/U. Precise gap reconstruction later if Sam wants (OBR EFO databank runs from 1972).
