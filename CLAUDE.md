@@ -496,3 +496,8 @@ only partial disclosure. Do not repeat that.
   only wage_infl (and brit_rate, a flow) pass both halves on both samples. External position (BoP, trade balance, nominal/real ERI) null on
   both samples; terms of trade significant on the extended sample only. No addition lets the NO-projection model pass diagnostics on both
   samples (rainbow fails .03/.003 without the projection); projection on top always p<.001. Nothing in any manuscript.
+- 29 Sep 2026 (5; Sam): compare_british_wage.R. British equation: projection removed on BOTH samples only by PSNB/GDP and the golden-rule
+  step (both predict British inflows p<.01) — British flow tracks the current deficit, not the projection; wage inflation does not remove
+  it on the core. Wage inflation is not price inflation (survives beside the deflator; deflator/CPI/real wage null on the core); tax burden
+  already real. Stability rule (ext pass + core same sign inside ext CI): ten pass, only wage_infl also significant on core. Sam questions
+  the strict both-samples rule; no decision yet. Nothing in any manuscript.
