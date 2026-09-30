@@ -1,0 +1,82 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+
+-- non-UK-born British from non-EU (N 43; 512 models)
+   term              PIP (all) PIP (Occam win.)
+   delta_oadr_10          0.16             0.00
+   relinc_dev             0.65             0.73
+   relinc_rich            0.23             0.00
+   youth                  0.22             0.00
+   unem                   0.70             0.69
+   unem_dest              0.18             0.00
+   gini_uk                0.34             0.18
+   gini_ratio             0.24             0.09
+   pool10                 0.21             0.00
+   model-averaged projection: all models 0.0004; Occam's window 0.0000; window = 6 model(s) after rule (i) 38:
+     p 0.52  dBIC  0.00  relinc_dev + unem
+     p 0.21  dBIC  1.81  relinc_dev
+     p 0.11  dBIC  3.05  unem + gini_uk
+     p 0.07  dBIC  4.07  gini_uk
+     p 0.06  dBIC  4.39  unem + gini_ratio
+     p 0.03  dBIC  5.77  gini_ratio
+
+-- UK-born British from non-EU (N 43; 512 models)
+   term              PIP (all) PIP (Occam win.)
+   delta_oadr_10          0.22             0.00
+   relinc_dev             0.17             0.00
+   relinc_rich            0.21             0.00
+   youth                  0.16             0.00
+   unem                   0.42             0.00
+   unem_dest              0.15             0.00
+   gini_uk                0.24             0.00
+   gini_ratio             0.20             0.00
+   pool10                 0.17             0.00
+   model-averaged projection: all models 0.0008; Occam's window 0.0000; window = 1 model(s) after rule (i) 42:
+     p 1.00  dBIC  0.00  
+
+-- British, all origins (LTIM) (N 43; 512 models)
+   term              PIP (all) PIP (Occam win.)
+   delta_oadr_10          0.30             0.19
+   relinc_dev             0.69             0.56
+   relinc_rich            0.36             0.17
+   youth                  0.29             0.04
+   unem                   0.55             0.35
+   unem_dest              0.16             0.00
+   gini_uk                0.32             0.21
+   gini_ratio             0.24             0.14
+   pool10                 0.33             0.33
+   model-averaged projection: all models 0.0012; Occam's window 0.0011; window = 14 model(s) after rule (i) 105:
+     p 0.19  dBIC  0.00  relinc_dev + unem
+     p 0.17  dBIC  0.17  relinc_dev + relinc_rich + pool10
+     p 0.12  dBIC  0.96  relinc_dev + pool10
+     p 0.09  dBIC  1.55  unem + gini_uk
+     p 0.08  dBIC  1.66  relinc_dev
+     p 0.07  dBIC  2.02  delta_oadr_10 + gini_uk
+     p 0.06  dBIC  2.33  gini_uk
+     p 0.05  dBIC  2.74  delta_oadr_10 + unem + gini_ratio
+     p 0.04  dBIC  2.93  delta_oadr_10 + gini_ratio
+     p 0.04  dBIC  2.93  youth + pool10
+     p 0.04  dBIC  3.34  delta_oadr_10
+     p 0.03  dBIC  3.57  unem + gini_ratio
+     p 0.02  dBIC  4.29  gini_ratio
+     p 0.01  dBIC  5.93  
+
+-- MAIN: non-EU inflows (controlled) (N 43; 512 models)
+   term              PIP (all) PIP (Occam win.)
+   delta_oadr_10          0.94             1.00
+   relinc_dev             0.19             0.00
+   relinc_rich            0.19             0.00
+   youth                  0.39             0.00
+   unem                   0.17             0.00
+   unem_dest              0.15             0.00
+   gini_uk                0.16             0.00
+   gini_ratio             0.15             0.00
+   pool10                 0.17             0.00
+   model-averaged projection: all models 0.0061; Occam's window 0.0067; window = 1 model(s) after rule (i) 17:
+     p 1.00  dBIC  0.00  delta_oadr_10
+
+Done.

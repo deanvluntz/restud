@@ -709,3 +709,7 @@ only partial disclosure. Do not repeat that.
   +0.046 p .05 for non-UK-born British (projection -> 0.0065 p .34). Reading: the weak (p .06) non-UK-born British projection response is absorbed by any of
   several slow-moving UK-relative series; none touches the controlled equation -> asymmetry holds. Sources used earlier: Maddison 2023 GDP per head,
   UN WPP 2024 youth, OECD destination unemployment (all already in determinants/). Nothing in any manuscript.
+- 1 Oct 2026 (45; Sam): occam_british.R (Madigan & Raftery 1994 Occam's window; BIC posteriors, c = 20, 512 models, 1977-2019): MAIN non-EU window = core +
+  projection only (PIP 1.00; averaged 0.0067); non-UK-born British: projection PIP 0.00 in the window, relinc_dev 0.73, UK unemployment 0.69 (positive);
+  UK-born: core only. Sam: relinc_dev (MPR ln(Y_i)) is the robustness check for the British flow; Gini/unemployment results are not MPR's constructs
+  (UK-to-ORIGIN Gini not buildable; UK unemployment wrong sign vs MPR, labour term already in the core). Nothing in any manuscript.
