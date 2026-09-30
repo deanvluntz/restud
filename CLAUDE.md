@@ -586,3 +586,6 @@ only partial disclosure. Do not repeat that.
 - 30 Sep 2026 (22; Sam): levels_grid.R: with int_tme in level, debt term as pp change or LEVEL of debt/GDP and V/U in level tested.
   Log forms best on both samples; V/U level costs ~6 AIC; pp change of debt/GDP close on Origin but weakens int_tme (p .15); the LEVEL of
   debt/GDP is null, costs 12-18 AIC, kills int_tme (p .3-.5) and lowers the projection. Debt term stays a change; V/U stays in logs.
+- 30 Sep 2026 (23; Sam): unem_variant.R: ln_debt_gdp + int_tme LEVEL + ILO unemployment (for log V/U): holds on both samples (unem
+  -0.027/-0.026 p<.01; share p .02/.015; projection 0.0099/0.0108) but 3.5/4.9 AIC worse than log V/U; with both labour terms in,
+  unemployment is null and log V/U survives on both samples. Nothing in any manuscript.
