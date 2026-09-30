@@ -657,3 +657,8 @@ only partial disclosure. Do not repeat that.
   search, Sam to judge the grounding (latest complete fiscal-year outturn at decision time). No cycle measure removes the post-2008 break or the
   British projection response. Sam's timing wording: the break around the end of work permits and the recession is "potentially interesting",
   but demographic projections are largely predictable ahead of publication (base-year t-1 vs publication-dated t r .95/.92). Nothing in any manuscript.
+- 30 Sep 2026 (37; Sam): Sam REJECTS tax at t-2 on grounds. tax_lag_proxy.R: the change in tax/GDP (t-2 -> t-1, L_d_tax_gdp) captures what t-2 did,
+  with tax per WAP at t-1 kept (both periods significant; dAIC -7.4/-5.0; OOS .090; Chow 1977 passes). Screened (1 of 30) after the t-2 finding --
+  Sam decides. 1964 row: all regressors exist, but L_mig_gross needs 1963 inflows (IPS starts 1964) -> estimation starts 1965 ("1964-2019" = data span).
+  Sam's point for the timing paragraph: the demographic unknowns are fertility and migration; fertility cannot move a 10-year OADR (anyone of
+  working age in 10 years is alive now) -- caveat raised: MORTALITY at older ages is a third unknown that does move the OADR numerator.
