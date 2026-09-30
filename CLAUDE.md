@@ -583,3 +583,6 @@ only partial disclosure. Do not repeat that.
   (gilt - bill, to 2016) null for British inflows on both samples; gilt/bill also null there; in the non-EU equation the gilt yield and
   bill rate are negative on Citizen only. Unlagged ln_vac_unem / ln_int_tme are NOT in df (the replication file builds them) -- create
   them before calling bounds(). Nothing in any manuscript.
+- 30 Sep 2026 (22; Sam): levels_grid.R: with int_tme in level, debt term as pp change or LEVEL of debt/GDP and V/U in level tested.
+  Log forms best on both samples; V/U level costs ~6 AIC; pp change of debt/GDP close on Origin but weakens int_tme (p .15); the LEVEL of
+  debt/GDP is null, costs 12-18 AIC, kills int_tme (p .3-.5) and lowers the projection. Debt term stays a change; V/U stays in logs.
