@@ -110,6 +110,6 @@ the URL (MPRA 75900 for Glover et al.).
   the replacement of work permits by the Points-Based System (Tier 2, November 2008), the financial crisis, and the 2010
   net-migration target. Annual data cannot separate these three.
 
-## Sam's notes
+## Sam's notes (any source, e.g. Heclo and Wildavsky, 1981)
 
-(Sam: add notes here. Claude pulls before every edit and does not change this section without asking.)
+(Sam: add notes here for any paper or book. Claude pulls before every edit and does not change this section without asking.)

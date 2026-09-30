@@ -638,3 +638,10 @@ only partial disclosure. Do not repeat that.
   these and never change Sam's entries without asking. relax_screen.R (restriction ladder R1-R4): under t-1 timing the break can be made
   insignificant only by models that fit worse on Origin, mostly via Bank Rate (flat 2009-19, acts like a regime dummy). WARNING: data_common.R
   defines global LAB as well as BASE -- never reuse either name.
+- 30 Sep 2026 (34; Sam): Sam keeps ALL his notes in the 'Sam's notes (any source)' section of Glover_2001_HomeOffice_2002_research_brief.md
+  (Heclo_Wildavsky_1981_notes.md deleted). Release order for relaxing the core (Sam): interest share first, then debt/GDP, then the labour term;
+  tax stays. relax_ladder.R: from earlier mains, the stable improvement is int_tme + an inflation term (S2 + int_tme + wage inflation: -5.3/-0.7 vs
+  current core, clean; deflator version similar); grants/GDP models fail rainbow; under t-1 timing releasing interest and debt never removes the break.
+  KEY DATA FACT: from 1977 the Citizen and Origin outcomes are IDENTICAL (dv_noneu_k, corr 1.000) -- the 'Origin sample' is the 1977-2019
+  SUBPERIOD of the same series, not a residence-based DV; the DV is ~98% of all non-EU citizens (cit_noneu_k); the literature's residence-based
+  series is res_noneu_k. Sam is considering one main reference (Citizen 1965-2019) with 1977-2019 as robustness -- his decision.
