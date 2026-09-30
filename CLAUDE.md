@@ -713,3 +713,8 @@ only partial disclosure. Do not repeat that.
   projection only (PIP 1.00; averaged 0.0067); non-UK-born British: projection PIP 0.00 in the window, relinc_dev 0.73, UK unemployment 0.69 (positive);
   UK-born: core only. Sam: relinc_dev (MPR ln(Y_i)) is the robustness check for the British flow; Gini/unemployment results are not MPR's constructs
   (UK-to-ORIGIN Gini not buildable; UK unemployment wrong sign vs MPR, labour term already in the core). Nothing in any manuscript.
+- 1 Oct 2026 (46; Sam): Occam's window is NOT used for the robustness checks (they are only relative; not as refined as the main results). Gini (UK vs
+  US/Canada) dropped: not MPR's construct. UK unemployment BESIDE log V/U is invalid as MPR's U (holds V/U fixed); MPR's way = in place of log V/U -> null for
+  non-UK-born British (p .77). british_relinc.R: relative income matched to non-UK-born British regions (weights Asia .46, Africa .30, Oceania .18, N America
+  .07; 61% covered) = relinc_dev (r 1.00); non-UK-born British: 1.37 p .025, projection 0.0032 p .61. relinc_dev's 7 countries were chosen 23 Sep as main-flow
+  origins (determinants_check.R), not for British arrivals -- the region-matched version shows the choice does not matter. Nothing in any manuscript.
