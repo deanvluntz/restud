@@ -631,3 +631,10 @@ only partial disclosure. Do not repeat that.
   per search summaries (legislation.gov.uk blocked here; Sam to check the article); Gemini's Eagle/Hughes written answers UNVERIFIED.
   break_candidates.R: no economic indicator, interaction or pair (780) removes the post-2008 break under t-1 timing on both samples; rates
   help most on Citizen (post-09 change still p .02); unem x proj passes on Origin only (costs BG). Break = regime, not a missing macro variable.
+- 30 Sep 2026 (33; Sam): Sam uploaded SI 2001/3500 -- it does NOT cover work permits (moves functions OUT of the Home Office: Lord Chancellor,
+  DCMS, DTI, DTLR, DEFRA); earlier search-summary claim was WRONG, brief corrected. Work-permit move = 8 Jun 2001 MoG; legal instrument not
+  found (possibly none needed). Sam: regime indicators are inconsistent with the model's theory -- do not propose them. Sam may edit the
+  briefs himself: 'Sam's notes' section in the Glover brief + new Heclo_Wildavsky_1981_notes.md (repo root) -- ALWAYS pull before editing
+  these and never change Sam's entries without asking. relax_screen.R (restriction ladder R1-R4): under t-1 timing the break can be made
+  insignificant only by models that fit worse on Origin, mostly via Bank Rate (flat 2009-19, acts like a regime dummy). WARNING: data_common.R
+  defines global LAB as well as BASE -- never reuse either name.

@@ -72,13 +72,18 @@ the URL (MPRA 75900 for Glover et al.).
    levels. For the "prediction" the authors hold unemployment constant and stress it is "not a forecast".
 3. **The White Paper does not announce the transfer.** It reports it as already done: "Work Permits (UK), now part of the Immigration
    and Nationality Directorate" (p. 40, February 2002). Sam (30 Sep): the White Paper is cited to document the history and the change of
-   authority, not to date a structural break. Dating: the Prime Minister's machinery-of-government announcement of 8 June 2001 moved the
-   Overseas Labour Service (Sheffield) to the Home Office as Work Permits (UK). The legal transfer is the Transfer of Functions
-   (Miscellaneous) Order 2001, SI 2001/3500. According to search summaries of legislation.gov.uk, it was made 31 October 2001, laid
-   5 November 2001, and came into force 26 November 2001. It transfers the work-permit functions held by the Secretary of State for
-   Education and Employment "immediately before 7th June 2001" to the Home Secretary. legislation.gov.uk is blocked from this
-   container, so Sam should check the article text before citing it. The ministerial written answers mentioned by Gemini (Angela
-   Eagle, Beverley Hughes) have NOT been verified; check Hansard before citing them.
+   authority, not to date a structural break. Dating: the Prime Minister's machinery-of-government announcement of 8 June 2001 (the day after the general election) moved the
+   Overseas Labour Service (Sheffield) to the Home Office as Work Permits (UK). CORRECTION (30 Sep, from Sam's upload of the Order):
+   the Transfer of Functions (Miscellaneous) Order 2001, SI 2001/3500, does NOT cover work permits. It was made 31 October 2001, laid
+   5 November 2001, and came into force 26 November 2001. It moves functions OUT of the Home Office: to the Lord Chancellor (data
+   protection, human rights, freedom of information, Monarchy, Channel Islands and Isle of Man, marriage); to DCMS (gambling,
+   horse-racing, liquor licensing); to DTI (street trading); to DTLR (fire, elections); and to DEFRA (animals). Its "immediately
+   before 7th June 2001" clause refers to functions then held by the Home Secretary. The earlier note, taken from a search summary,
+   was wrong. The same June 2001 reorganisation that took these functions out of the Home Office brought work permits in. The work
+   permit move itself may not have needed an Order, because immigration statutes confer powers on "the Secretary of State"
+   generically. That is a possibility, not verified. Sources to check: the Home Office departmental report 2002, the Work Permits
+   (UK) annual report, or Hansard for June–July 2001. The ministerial written answers mentioned by Gemini (Angela Eagle, Beverley
+   Hughes) have NOT been verified; check Hansard before citing them.
 4. **Indirect Home Office control before the transfer (Sam, 30 Sep).** Supported. Entry clearance was run by the Home Office/FCO Joint
    Entry Clearance Unit, and IND held immigration control (p. 19, 5.2). The same page on the other side: "the immigration
    authorities generally accept a work permit as evidence for a decision to admit" (p. 20, 5.6). So the Home Office held the gate,
@@ -104,3 +109,7 @@ the URL (MPRA 75900 for Glover et al.).
 - The 2001 transfer of Work Permits (UK) shows no break in the projection effect. The break comes in 2008–10. That window contains
   the replacement of work permits by the Points-Based System (Tier 2, November 2008), the financial crisis, and the 2010
   net-migration target. Annual data cannot separate these three.
+
+## Sam's notes
+
+(Sam: add notes here. Claude pulls before every edit and does not change this section without asking.)
