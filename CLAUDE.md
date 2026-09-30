@@ -578,3 +578,8 @@ only partial disclosure. Do not repeat that.
   to tax_workpop), primary deficit, programme spending, effective rate; levels/logs/changes. ONLY int/TME passes 5% on both; int per WAP
   .08/.006; int/revenue and int/GDP Origin-only. Grounding offered: debt interest is an expenditure line in the Treasury's own totals; its
   share of TME = the part of the envelope not available for programmes (OBR reports it as share of TME and of revenue). Sam to decide.
+- 30 Sep 2026 (21; Sam): Sam finds the LEVEL of int_tme (% of TME) more justifiable as a constraint than the log. level_and_spread.R:
+  level vs log indistinguishable (AIC -102.9/-79.2 vs -102.7/-78.4; share p .04/.005; projection 0.0085/0.0088 either way). Yield spread
+  (gilt - bill, to 2016) null for British inflows on both samples; gilt/bill also null there; in the non-EU equation the gilt yield and
+  bill rate are negative on Citizen only. Unlagged ln_vac_unem / ln_int_tme are NOT in df (the replication file builds them) -- create
+  them before calling bounds(). Nothing in any manuscript.
