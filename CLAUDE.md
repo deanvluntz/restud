@@ -684,3 +684,9 @@ only partial disclosure. Do not repeat that.
   same proportional effect), EU placebo null. Accruals (Sam's ONS note): fiscal block year t = FY (t-1)/t, so tax at t-2 = FY (t-3)/(t-2), the latest
   fiscal year whose accrued receipts were complete (self-assessment balancing payments due 31 Jan t-1) during t-1 -- a real-time-data reading of the t-2
   term, for Sam to judge. Nothing in any manuscript.
+- 30 Sep 2026 (41; Sam): DECISION: int_tme is OUT of the results (significant only via the 2008-13 bank reclassification). Core is now
+  mig_gross ~ L_mig_gross + delta_oadr_10 + L_tax_workpop + L_ln_debt_gdp + L_ln_vac_unem (6 parameters; CORE_A in screen_engine.R still holds the
+  old 7-parameter list -- use setdiff(CORE_A, 'L_int_tme')). core_no_int.R: protocol passes; projection 0.0072 / 0.0067 (p<.001), all terms significant
+  on both periods, BG(2) .043 / .019, Chow 1977 F 1.07 p .40. Millennium-interest one-term burdens (taxint, taxrint) dropped with it. NA taxes per WAP are
+  already real (HMT GDP deflator, 2024-25 prices). TO MENTION IN TEXT (Sam): headline tax rises were sparse outside the sterling crisis and the first
+  Thatcher government (almost yearly 1976-83; then 1991, 1994, 2003, 2010-11, 2022-23; basic rate never raised). Nothing in any manuscript yet.
