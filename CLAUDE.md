@@ -703,3 +703,9 @@ only partial disclosure. Do not repeat that.
   and weakens it for all British (LTIM); relinc_rich, youth, unem_diff, return pool (British emigration 5/10 yrs) null. In the MAIN non-EU equation relinc_dev
   is null and the projection unchanged (0.0077 / 0.0062) -> asymmetry: uncontrolled British flow = relative-income pull; controlled flow = projection.
   Caveats: relinc_dev r .33-.36 with the projection, trending after 2001; 1 of 6 tried; IPS sampling error. Nothing in any manuscript.
+- 30 Sep 2026 (44; Sam): british_mpr.R Part 2: WDI Gini + unemployment (all countries; determinants/wb/). Unemployment levels (UK ILO, OECD destination mean):
+  main null; destination null for British; UK unemployment POSITIVE for non-UK-born British (+0.10 p .02-.04). WDI unemployment starts 1991 and = OECD
+  (r 1.000) -> check only. Gini: UK level and UK/(US,CAN) (AUS 13 obs, NZL none; developing origins too sparse -> no UK-to-origin ratio); main null; UK Gini
+  +0.046 p .05 for non-UK-born British (projection -> 0.0065 p .34). Reading: the weak (p .06) non-UK-born British projection response is absorbed by any of
+  several slow-moving UK-relative series; none touches the controlled equation -> asymmetry holds. Sources used earlier: Maddison 2023 GDP per head,
+  UN WPP 2024 youth, OECD destination unemployment (all already in determinants/). Nothing in any manuscript.

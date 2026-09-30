@@ -93,4 +93,99 @@ New names:
    pool5 (+)                   43   -0.2425 (0.363)    0.0045 (0.089)    0.75
    all MPR-type (pool10)       43     joint (0.470)    0.0025 (0.582)    4.35
 
+
+PART 2
+(c) OECD destination unemployment vs World Bank modelled ILO, same four countries, 1991-2019: correlation 1.000, mean gap -0.02 points
+    Gini (WDI), interpolated: UK 1970 28.0, 1990 35.7, 2019 32.8; UK / (US, Canada) 1972 0.79, 1990 1.02, 2019 0.89
+
+-- MAIN: non-EU inflows (controlled), 1965-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              55                         --    0.0072 (<.001)    0.00
+   UK unemployment (level)             55             0.0013 (0.921)    0.0072 (<.001)    1.99
+   destination unemployment (level)    52            -0.0186 (0.168)    0.0078 (<.001)    0.49
+   UK + destination (levels)           52 0.0080 (0.609), -0.0224 (0.087)    0.0078 (<.001)    2.17
+   UK Gini (level)                     51            -0.0021 (0.679)    0.0074 (<.001)    1.87
+   Gini ratio UK / (US, Canada)        48            -0.1190 (0.561)    0.0073 (<.001)    1.68
+
+-- British, all origins (LTIM), 1965-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              55                         --    0.0043 (0.025)    0.00
+   UK unemployment (level)             55             0.0170 (0.312)    0.0039 (0.037)    0.78
+   destination unemployment (level)    52             0.0079 (0.695)    0.0054 (0.009)    1.81
+   UK + destination (levels)           52 0.0253 (0.209), -0.0039 (0.861)    0.0054 (0.008)    1.85
+   UK Gini (level)                     51             0.0190 (0.020)    0.0041 (0.055)   -3.64
+   Gini ratio UK / (US, Canada)        48             0.5106 (0.110)    0.0046 (0.057)   -1.05
+
+-- British from non-EU (IPS), 1965-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              44                         --    0.0053 (0.083)    0.00
+   UK unemployment (level)             44             0.0468 (0.089)    0.0039 (0.221)   -1.73
+   destination unemployment (level)    44             0.0198 (0.479)    0.0046 (0.155)    1.51
+   UK + destination (levels)           44 0.0457 (0.151), 0.0045 (0.877)    0.0038 (0.238)    0.25
+   UK Gini (level)                     44             0.0136 (0.215)    0.0034 (0.284)    0.10
+   Gini ratio UK / (US, Canada)        44             0.4230 (0.272)    0.0040 (0.209)    0.59
+
+-- non-UK-born British from non-EU, 1965-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              44                         --    0.0120 (0.057)    0.00
+   UK unemployment (level)             44             0.0951 (0.039)    0.0086 (0.203)   -1.98
+   destination unemployment (level)    44             0.0326 (0.625)    0.0105 (0.138)    1.64
+   UK + destination (levels)           44 0.0960 (0.062), -0.0030 (0.962)    0.0087 (0.225)    0.02
+   UK Gini (level)                     44             0.0450 (0.050)    0.0058 (0.406)   -3.01
+   Gini ratio UK / (US, Canada)        44             1.4542 (0.079)    0.0075 (0.245)   -1.99
+
+-- UK-born British from non-EU, 1965-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              44                         --    0.0036 (0.162)    0.00
+   UK unemployment (level)             44             0.0355 (0.192)    0.0026 (0.348)   -0.21
+   destination unemployment (level)    44             0.0138 (0.603)    0.0032 (0.258)    1.76
+   UK + destination (levels)           44 0.0350 (0.243), 0.0022 (0.939)    0.0025 (0.374)    1.78
+   UK Gini (level)                     44             0.0074 (0.487)    0.0025 (0.423)    1.40
+   Gini ratio UK / (US, Canada)        44             0.2269 (0.532)    0.0028 (0.342)    1.56
+
+-- MAIN: non-EU inflows (controlled), 1977-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              43                         --    0.0067 (<.001)    0.00
+   UK unemployment (level)             43             0.0115 (0.419)    0.0063 (<.001)    1.40
+   destination unemployment (level)    43            -0.0042 (0.783)    0.0069 (<.001)    1.93
+   UK + destination (levels)           43 0.0139 (0.363), -0.0089 (0.544)    0.0066 (<.001)    3.13
+   UK Gini (level)                     43            -0.0013 (0.804)    0.0069 (<.001)    1.95
+   Gini ratio UK / (US, Canada)        43            -0.0182 (0.929)    0.0068 (<.001)    1.99
+
+-- British, all origins (LTIM), 1977-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              43                         --    0.0068 (0.008)    0.00
+   UK unemployment (level)             43             0.0347 (0.103)    0.0064 (0.025)   -0.94
+   destination unemployment (level)    43             0.0186 (0.501)    0.0065 (0.018)    1.42
+   UK + destination (levels)           43 0.0329 (0.143), 0.0109 (0.683)    0.0062 (0.035)    0.86
+   UK Gini (level)                     43             0.0193 (0.043)    0.0052 (0.049)   -3.08
+   Gini ratio UK / (US, Canada)        43             0.6310 (0.079)    0.0059 (0.023)   -2.17
+
+-- British from non-EU (IPS), 1977-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              43                         --    0.0059 (0.057)    0.00
+   UK unemployment (level)             43             0.0529 (0.066)    0.0047 (0.140)   -2.58
+   destination unemployment (level)    43             0.0230 (0.427)    0.0052 (0.108)    1.36
+   UK + destination (levels)           43 0.0512 (0.120), 0.0070 (0.815)    0.0046 (0.155)   -0.64
+   UK Gini (level)                     43             0.0146 (0.188)    0.0041 (0.206)   -0.15
+   Gini ratio UK / (US, Canada)        43             0.4624 (0.243)    0.0046 (0.142)    0.34
+
+-- non-UK-born British from non-EU, 1977-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              43                         --    0.0125 (0.057)    0.00
+   UK unemployment (level)             43             0.1017 (0.024)    0.0095 (0.161)   -2.34
+   destination unemployment (level)    43             0.0346 (0.608)    0.0111 (0.118)    1.61
+   UK + destination (levels)           43 0.1022 (0.043), -0.0018 (0.977)    0.0096 (0.178)   -0.34
+   UK Gini (level)                     43             0.0463 (0.050)    0.0065 (0.342)   -3.16
+   Gini ratio UK / (US, Canada)        43             1.5107 (0.083)    0.0083 (0.188)   -2.17
+
+-- UK-born British from non-EU, 1977-2019
+   added (t-1)                          N         coefficient(s) (p)     projection (p)    dAIC
+   (none)                              43                         --    0.0042 (0.103)    0.00
+   UK unemployment (level)             43             0.0409 (0.152)    0.0033 (0.225)   -0.83
+   destination unemployment (level)    43             0.0170 (0.538)    0.0037 (0.180)    1.65
+   UK + destination (levels)           43 0.0399 (0.202), 0.0047 (0.874)    0.0032 (0.254)    1.14
+   UK Gini (level)                     43             0.0081 (0.446)    0.0031 (0.325)    1.29
+   Gini ratio UK / (US, Canada)        43             0.2574 (0.483)    0.0034 (0.253)    1.45
+
 Done.
