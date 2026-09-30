@@ -597,3 +597,7 @@ only partial disclosure. Do not repeat that.
   parameter fewer and better AIC on BOTH samples (-103.5/-80.8 vs -102.7/-78.4; p<.001; projection 0.0086/0.0090); equal-coefficient
   restriction on tax and interest per worker not rejected. Sam's dln(tax+debt+int)/GDP: r .96 with ln_debt_gdp, worse fit, kills the
   projection on Citizen when it replaces all three. Nothing in any manuscript.
+- 30 Sep 2026 (26; Sam): CORRECTION: without the projection taxint_wap is significant on Citizen (p<.001), marginal on Origin (p .06).
+  noproj_additions.R (screen under Sam's two-part criterion with the spare parameter): Citizen passes = tot, wage_infl, cpi/deflator
+  inflation, tbill; Origin NONE (psnb_gdp fixes the no-proj burden but hurts the with-proj model; wage_infl improves no-proj fit but
+  burden stays n.s.). No addition passes on both samples. Nothing in any manuscript.
