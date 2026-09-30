@@ -645,3 +645,9 @@ only partial disclosure. Do not repeat that.
   KEY DATA FACT: from 1977 the Citizen and Origin outcomes are IDENTICAL (dv_noneu_k, corr 1.000) -- the 'Origin sample' is the 1977-2019
   SUBPERIOD of the same series, not a residence-based DV; the DV is ~98% of all non-EU citizens (cit_noneu_k); the literature's residence-based
   series is res_noneu_k. Sam is considering one main reference (Citizen 1965-2019) with 1977-2019 as robustness -- his decision.
+- 30 Sep 2026 (35; Sam): PROTOCOL for one main reference (Sam agreed): main = Citizen 1965-2019; same spec on 1977-2019 (no re-selection);
+  Chow at 1977 (classical F + HC3; NOT HAC -- over-rejects with 2k params at N 55); residence-based (res_noneu_k) and any-residence citizenship
+  (cit_noneu_k) outcomes. screen_engine.R holds run_protocol(); main_spec_protocol.R runs it. Current core passes Chow (F 1.01 p .44).
+  reverse_build.R: ordered build (tax, labour, debt, interest) under Sam's rules recovers the current core (tax per adult ~ per WAP); an 8th
+  parameter fails the protocol. break_citizen.R: under t-1 timing the break can be removed on Citizen only with bill-rate models (BG(2) fails;
+  sup-F on 1977-2019 rejects) -- no t-1 model beats the core at t out of sample. Nothing in any manuscript.
