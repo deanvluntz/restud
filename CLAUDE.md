@@ -589,3 +589,6 @@ only partial disclosure. Do not repeat that.
 - 30 Sep 2026 (23; Sam): unem_variant.R: ln_debt_gdp + int_tme LEVEL + ILO unemployment (for log V/U): holds on both samples (unem
   -0.027/-0.026 p<.01; share p .02/.015; projection 0.0099/0.0108) but 3.5/4.9 AIC worse than log V/U; with both labour terms in,
   unemployment is null and log V/U survives on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (24; Sam): int_wap_variant.R: real debt interest per WAP in place of int_tme (ln_debt_gdp, log V/U kept): Origin
+  0.073 p .006 (AIC -78.9 vs -79.2); Citizen 0.056 p .08 (AIC -101.6 vs -102.9, only 0.6 better than no fiscal term); projection
+  0.0089/0.0093; null without the projection. Passes the both-samples rule only at 10%. Nothing in any manuscript.
