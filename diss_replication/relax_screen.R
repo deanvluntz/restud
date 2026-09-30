@@ -18,7 +18,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R"); suppressWarnings(library(strucchange))
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
 pf2 <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
 SL_TAX  <- c("L_tax_workpop", "L_tax_voter", "L_tax_res", "L_taxint_wap")
 SL_FISC <- c("L_int_tme", "L_ln_int_tme", "L_int_gdp_x", "L_tbill", "L_bank_rate", "L_gilt")

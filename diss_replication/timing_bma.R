@@ -25,7 +25,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R"); library(ARDL); EXACT <- FALSE
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
 pf2 <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
 D <- c(L_int_tme = "public sector debt interest, % of total managed expenditure, t-1", int_tme = "debt interest, % of TME, current year",
        L_delta_oadr_10 = "delta_oadr_10, t-1 (the projection one year earlier)", d_delta_oadr_10 = "current-year change in delta_oadr_10",

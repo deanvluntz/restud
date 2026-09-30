@@ -662,3 +662,9 @@ only partial disclosure. Do not repeat that.
   Sam decides. 1964 row: all regressors exist, but L_mig_gross needs 1963 inflows (IPS starts 1964) -> estimation starts 1965 ("1964-2019" = data span).
   Sam's point for the timing paragraph: the demographic unknowns are fertility and migration; fertility cannot move a 10-year OADR (anyone of
   working age in 10 years is alive now) -- caveat raised: MORTALITY at older ages is a third unknown that does move the OADR numerator.
+- 30 Sep 2026 (38; Sam): TITLE/LABELS: estimation starts 1965 (1964 is only the lag) -> Sam: the title must say 1965-2019. Script labels now
+  "Citizen sample (1965-2019)"; manuscript titles ("(1964–2019)" in the 1964 and combined documents) to change when Sam finalises.
+  Sam REJECTS tax/GDP change as the t-2 replacement (both components already in the model; mixes policy and economic change); his reading:
+  governments avoid frequent tax changes -- needs a POLICY series (not in the data; suggested Cloyne 2013 UK narrative tax changes, OBR policy
+  measures database, IFS historical rates -- check coverage before promising). ltim_serial.R: with LTIM from 1991 the serial correlation goes
+  (BG(2) .20/.196 spliced; .45 on 1992-2019 alone); projection .0096/.0109. Outcome choice (IPS vs spliced LTIM) = Sam's decision.

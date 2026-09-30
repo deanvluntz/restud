@@ -12,7 +12,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R")
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)")
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)")
 OUTC <- "mig_gross"; CORE_X <- c("L_mig_gross", "delta_oadr_10", "L_tax_workpop", "L_ln_debt_gdp", "L_ln_vac_unem"); FT <- "L_ln_int_tme"
 adddef <- function(k, v) if (!(k %in% names(DEFS)) || DEFS[[k]] == k) DEFS[[k]] <<- v
 adddef("L_ln_int_gdp", "log of public sector debt interest, % of GDP, t-1 (Millennium A28; ONS 2017-19)")

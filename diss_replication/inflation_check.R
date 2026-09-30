@@ -14,7 +14,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R")
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
 pf2 <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
 D <- c(L_int_tme = "public sector debt interest, % of total managed expenditure, t-1 (Millennium A28; ONS PUSF growth-spliced 2017-19)",
        L_dln_debt_nom = "annual log change in nominal public sector net debt, t-1 (= ln_debt_gdp + ln(1 + nominal GDP growth))",

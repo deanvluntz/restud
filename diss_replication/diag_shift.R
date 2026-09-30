@@ -14,7 +14,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R"); suppressWarnings({ library(tseries); library(strucchange) })
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)"); OUTC <- "mig_gross"
 pf2 <- function(p) if (is.na(p)) "--" else if (p < 0.001) "<.001" else sprintf("%.3f", p)
 X <- c("L_mig_gross", "L_tax_workpop", "L_ln_debt_gdp", "L_ln_vac_unem", "L_int_tme")
 battery <- function(m) { dd <- attr(m, "dd"); f <- formula(m); r <- residuals(m); n <- nobs(m)

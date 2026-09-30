@@ -8,7 +8,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R")
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)")
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)")
 OUTC <- "mig_gross"; FX <- c("L_mig_gross", "delta_oadr_10", "L_tax_workpop", "L_int_tme")
 DEFS[["L_int_tme"]] <- "public sector debt interest, % of total managed expenditure, t-1 (Millennium A28; ONS PUSF growth-spliced 2017-19)"
 DEFS[["L_d_psnd_gdp"]] <- "annual change in public sector net debt / GDP, percentage points, t-1 (OBR HPFD)"; DEFS[["L_psnd_gdp"]] <- "public sector net debt, % of GDP, t-1 (OBR HPFD)"

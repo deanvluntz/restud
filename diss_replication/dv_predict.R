@@ -17,7 +17,7 @@
 # =============================================================================
 if (!file.exists("tables_common.R")) stop("set the working directory to diss_replication/")
 options(restud.rebuild = FALSE, restud.secondary = FALSE); source("tables_common.R")
-LABS <- c("1964" = "Citizen sample (1964-2019)", "1977" = "Origin sample (1977-2019)")
+LABS <- c("1964" = "Citizen sample (1965-2019)", "1977" = "Origin sample (1977-2019)")
 TOP <- 3; PMAX <- 0.10; VIFMAX <- 20; DV <- "mig_gross"
 FIX <- c("L_mig_gross", "delta_oadr_10", "L_tax_workpop")
 for (s in c("1964", "1977")) { SAMPLE <- s; source("data_common.R")
