@@ -718,3 +718,7 @@ only partial disclosure. Do not repeat that.
   non-UK-born British (p .77). british_relinc.R: relative income matched to non-UK-born British regions (weights Asia .46, Africa .30, Oceania .18, N America
   .07; 61% covered) = relinc_dev (r 1.00); non-UK-born British: 1.37 p .025, projection 0.0032 p .61. relinc_dev's 7 countries were chosen 23 Sep as main-flow
   origins (determinants_check.R), not for British arrivals -- the region-matched version shows the choice does not matter. Nothing in any manuscript.
+- 1 Oct 2026 (47; Sam): influence_cluster.R: tax core robust to leave-one-year-out (0.0059-0.0077), to leaving out every episode (p<.01) and to a
+  wild cluster bootstrap by two-year vintage blocks (p<.001 / .007). The clean one-term core is weaker on 1977-2019 (without 2002-07: 0.0035 p .13; cluster
+  bootstrap p .019) -- relevant to Sam's pending core decision. Suggested next (not run): DEMIG POLICY index as mechanism/mediation test, specification
+  curve for the headline, net non-EU migration outcome. Nothing in any manuscript.
