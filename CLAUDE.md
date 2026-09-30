@@ -651,3 +651,9 @@ only partial disclosure. Do not repeat that.
   reverse_build.R: ordered build (tax, labour, debt, interest) under Sam's rules recovers the current core (tax per adult ~ per WAP); an 8th
   parameter fails the protocol. break_citizen.R: under t-1 timing the break can be removed on Citizen only with bill-rate models (BG(2) fails;
   sup-F on 1977-2019 rejects) -- no t-1 model beats the core at t out of sample. Nothing in any manuscript.
+- 30 Sep 2026 (36; Sam): serial_cycle.R. BG(2) failure = modest NEGATIVE residual autocorrelation (-0.16/-0.23), not the debt term (Sam's hypothesis
+  tested: re-timing/dropping debt leaves BG(2) failing); consistent with IPS measurement error; ML-AR(2) and IV move the projection to .0072-.0084
+  (long run .016-.021). CANDIDATE: tax at t-2 instead of t-1 (same df): AIC -6.5/-5.1, OOS .092 vs .106, BG(2) .046/.035 -- found in a residual
+  search, Sam to judge the grounding (latest complete fiscal-year outturn at decision time). No cycle measure removes the post-2008 break or the
+  British projection response. Sam's timing wording: the break around the end of work permits and the recession is "potentially interesting",
+  but demographic projections are largely predictable ahead of publication (base-year t-1 vs publication-dated t r .95/.92). Nothing in any manuscript.
