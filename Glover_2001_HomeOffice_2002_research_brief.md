@@ -61,7 +61,7 @@ the URL (MPRA 75900 for Glover et al.).
 
 ## Where Sam's reading needs care (flagged, not changed)
 
-1. **The PSA passage.** Aim 5's PSA objective is a race-equality objective for the minority ethnic population's access to public
+1. **The PSA passage (Sam agreed, 30 Sep).** Aim 5's PSA objective is a race-equality objective for the minority ethnic population's access to public
    services. The paper says it "has not so far explicitly recognised migrants as a separate group". It does not connect entry policy
    to the provision of public services. The entry aim is Aim 6. The stronger point for the thesis is on p. 17: the Home Office's
    immigration PSA targets with the Treasury were "process targets, and relate solely to asylum seekers". Read with p. 51 ("DfEE has
@@ -71,15 +71,27 @@ the URL (MPRA 75900 for Glover et al.).
    says "Dependent variables", which is a slip for explanatory variables. The outcome is net migration of non-UK, non-EU nationals in
    levels. For the "prediction" the authors hold unemployment constant and stress it is "not a forecast".
 3. **The White Paper does not announce the transfer.** It reports it as already done: "Work Permits (UK), now part of the Immigration
-   and Nationality Directorate" (p. 40, February 2002). The move from DfEE therefore happened in 2001, between Glover et al. (January
-   2001) and the White Paper. The exact date should be confirmed from a primary source (e.g. the Home Office or DfES departmental
-   report 2002, or the 2001 machinery-of-government announcement) before it goes into the text.
+   and Nationality Directorate" (p. 40, February 2002). Sam (30 Sep): the White Paper is cited to document the history and the change of
+   authority, not to date a structural break. Dating: the Prime Minister's machinery-of-government announcement of 8 June 2001 moved the
+   Overseas Labour Service (Sheffield) to the Home Office as Work Permits (UK). The legal transfer is the Transfer of Functions
+   (Miscellaneous) Order 2001, SI 2001/3500. According to search summaries of legislation.gov.uk, it was made 31 October 2001, laid
+   5 November 2001, and came into force 26 November 2001. It transfers the work-permit functions held by the Secretary of State for
+   Education and Employment "immediately before 7th June 2001" to the Home Secretary. legislation.gov.uk is blocked from this
+   container, so Sam should check the article text before citing it. The ministerial written answers mentioned by Gemini (Angela
+   Eagle, Beverley Hughes) have NOT been verified; check Hansard before citing them.
 4. **Indirect Home Office control before the transfer (Sam, 30 Sep).** Supported. Entry clearance was run by the Home Office/FCO Joint
    Entry Clearance Unit, and IND held immigration control (p. 19, 5.2). The same page on the other side: "the immigration
    authorities generally accept a work permit as evidence for a decision to admit" (p. 20, 5.6). So the Home Office held the gate,
    but in practice it admitted permit holders.
-5. **The support ratio.** The ratio is the UN zero-migration projection (UN, 2000), not GAD's. It is the inverse of an old-age
-   dependency ratio over a 25-year horizon. The text says 16–64 and 65+; the UN figures are labelled 15–64 and 65+.
+5. **The support ratio.** The figures are the UN zero-migration projection, used in the paper's discussion of the UN (2000)
+   *Replacement Migration* report and its relevance to Europe and the UK. Sam (30 Sep): citing a new and contentious UN paper once
+   does not diminish the documented role of the GAD projections; accepted. Minor: the text says 16–64 and 65+, while the UN figures
+   are labelled 15–64 and 65+.
+6. **The fiscal estimate is annual, not lifetime.** The £2.6bn (p. 44, 6.50) is a one-year cross-section for 1998/99: revenue from
+   the foreign-born minus spending on them in that year. It is the short-term fiscal benefit Sam emphasises. The lifetime figure in
+   the same paragraph ($80,000 per migrant) is from a US study.
+7. **p. 12 regression (Sam, 30 Sep).** The timing of unemployment could go either way. The regression uses the ILO measure of
+   unemployment.
 
 ## How it bears on the econometrics (regime_timing.R, 30 Sep 2026)
 

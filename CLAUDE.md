@@ -625,3 +625,9 @@ only partial disclosure. Do not repeat that.
   confirm); entry clearance = HO/FCO Joint Entry Clearance Unit, authorities "generally accept" permits (Sam's indirect-control point, p.19-20).
   regime_timing.R: no break at 2001-04; under t-1 timing the projection effect ends from 2008-10 (PBS / crisis / cap indistinguishable);
   to 2008 t-1 beats t by 19/13 AIC; regime model (t-1 to 2007) best AIC, clean diagnostics; permits also respond at t-1. Nothing adopted.
+- 30 Sep 2026 (32; Sam): Sam AGREES on the p.51 PSA reading; DISPUTES the p.13/14 caveats (UN figures sit in the discussion of UN Replacement
+  Migration 2000; do not use them to downplay GAD) -- accepted, brief amended; the £2.6bn is ANNUAL (1998/99), i.e. the short-term benefit Sam
+  stresses. Transfer dating: MoG announcement 8 Jun 2001; SI 2001/3500 (Transfer of Functions (Miscellaneous) Order 2001, in force 26 Nov 2001)
+  per search summaries (legislation.gov.uk blocked here; Sam to check the article); Gemini's Eagle/Hughes written answers UNVERIFIED.
+  break_candidates.R: no economic indicator, interaction or pair (780) removes the post-2008 break under t-1 timing on both samples; rates
+  help most on Citizen (post-09 change still p .02); unem x proj passes on Origin only (costs BG). Break = regime, not a missing macro variable.
