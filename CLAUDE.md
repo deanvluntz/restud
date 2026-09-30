@@ -573,3 +573,8 @@ only partial disclosure. Do not repeat that.
   TME, grants, tax/GDP, bill/gilt/Bank Rate/spread/real rate/r-g, rdebt, rg_debt, stock x price pairs) beats it on both samples; dropping it
   costs only 1.5-1.7 AIC (HAC p .03/.01). WARNING: data_common.R sets a global BASE (published rate spec) -- never name a script's own
   regressor list BASE. Nothing in any manuscript.
+- 30 Sep 2026 (20; Sam): Sam regards int_tme as agent-constructed without theory (overfitting risk); wants a GROUNDED interest/expenditure
+  term significant on both samples. interest_terms.R: int/TME, int/revenue (IMF fiscal-space ratio), int/GDP, real int per WAP (parallel
+  to tax_workpop), primary deficit, programme spending, effective rate; levels/logs/changes. ONLY int/TME passes 5% on both; int per WAP
+  .08/.006; int/revenue and int/GDP Origin-only. Grounding offered: debt interest is an expenditure line in the Treasury's own totals; its
+  share of TME = the part of the envelope not available for programmes (OBR reports it as share of TME and of revenue). Sam to decide.
