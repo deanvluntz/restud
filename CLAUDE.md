@@ -668,3 +668,9 @@ only partial disclosure. Do not repeat that.
   governments avoid frequent tax changes -- needs a POLICY series (not in the data; suggested Cloyne 2013 UK narrative tax changes, OBR policy
   measures database, IFS historical rates -- check coverage before promising). ltim_serial.R: with LTIM from 1991 the serial correlation goes
   (BG(2) .20/.196 spliced; .45 on 1992-2019 alone); projection .0096/.0109. Outcome choice (IPS vs spliced LTIM) = Sam's decision.
+- 30 Sep 2026 (39; Sam): LTIM = ROBUSTNESS CHECK ONLY (IPS stays the outcome). '1964' in titles = clerical error -> 1965-2019 when edited. Sam's feedback: recalibrate
+  'practical/plausible' judgements against the thesis/manuscript aims; raise the obvious data comparison (e.g. IPS vs LTIM) immediately. IFS statutory rates
+  (determinants/ifs/ -> ifs_tax_rates_1973_2023.csv; NIC % rate from 1975 -> rate tests 1977-2019 only). tax_rates.R: salient level (payslip, avg-earner
+  rate, real payment, top rate, wedge), rate changes, fiscal drag (allowance/earnings), projection x burden: NONE passes Sam's criterion; each fits 14-20 AIC
+  worse in place of tax per WAP; headline rates fell while real tax per WAP doubled (r -0.84/-0.87) -> P2 works through the burden borne, not announced rates.
+  No construct fixes BG(2). Rates CSV not in the workbook (only if adopted). Nothing in any manuscript.
