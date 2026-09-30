@@ -592,3 +592,8 @@ only partial disclosure. Do not repeat that.
 - 30 Sep 2026 (24; Sam): int_wap_variant.R: real debt interest per WAP in place of int_tme (ln_debt_gdp, log V/U kept): Origin
   0.073 p .006 (AIC -78.9 vs -79.2); Citizen 0.056 p .08 (AIC -101.6 vs -102.9, only 0.6 better than no fiscal term); projection
   0.0089/0.0093; null without the projection. Passes the both-samples rule only at 10%. Nothing in any manuscript.
+- 30 Sep 2026 (25; Sam): combined_fiscal.R: common base for tax and interest: / GDP and / TME bases FAIL (projection collapses on Citizen,
+  RESET rejects); per-WAP base works. ONE-TERM burden taxint_wap = (taxes + debt interest) per WAP replaces tax_workpop + int_tme with one
+  parameter fewer and better AIC on BOTH samples (-103.5/-80.8 vs -102.7/-78.4; p<.001; projection 0.0086/0.0090); equal-coefficient
+  restriction on tax and interest per worker not rejected. Sam's dln(tax+debt+int)/GDP: r .96 with ln_debt_gdp, worse fit, kills the
+  projection on Citizen when it replaces all three. Nothing in any manuscript.
