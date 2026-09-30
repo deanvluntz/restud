@@ -601,3 +601,7 @@ only partial disclosure. Do not repeat that.
   noproj_additions.R (screen under Sam's two-part criterion with the spare parameter): Citizen passes = tot, wage_infl, cpi/deflator
   inflation, tbill; Origin NONE (psnb_gdp fixes the no-proj burden but hurts the with-proj model; wage_infl improves no-proj fit but
   burden stays n.s.). No addition passes on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (27; Sam): spend_infl_screen.R: spare-parameter screen WITHOUT the AIC condition + expenditure/inflation constructions
+  (tme_wap, prog_wap, tme_tax, tme_taxint, g_tme_real, infl_debt, adj_psnb, real_int, real_int_tme, tme_earn). AIC was never binding:
+  on Origin 19 candidates rescue the no-projection model, 0 stay significant beside the projection. Citizen: TME/taxes (negative) and
+  pairs with wage inflation / ToT pass. Nothing passes on both samples. Nothing in any manuscript.
