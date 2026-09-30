@@ -605,3 +605,7 @@ only partial disclosure. Do not repeat that.
   (tme_wap, prog_wap, tme_tax, tme_taxint, g_tme_real, infl_debt, adj_psnb, real_int, real_int_tme, tme_earn). AIC was never binding:
   on Origin 19 candidates rescue the no-projection model, 0 stay significant beside the projection. Citizen: TME/taxes (negative) and
   pairs with wage inflation / ToT pass. Nothing passes on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (28; Sam): inflation_check.R: inflation IS in ln_debt_gdp (nominal GDP denominator); split, inflation -0.98/-1.08 vs
+  nominal debt +0.65/+0.76, 'only through the ratio' not rejected (p .44/.59). Screen with int_tme LEVEL: only d(inflation x debt/GDP)
+  passes on both (-0.021/-0.024, p .006; proj 0.0084); int_tme never significant without the projection. Selected from 24 measures x 2
+  samples -- a screening result, not a prior. Fails with the one-term burden on Origin. Nothing in any manuscript.
