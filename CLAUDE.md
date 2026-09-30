@@ -568,3 +568,8 @@ only partial disclosure. Do not repeat that.
   now covers block + added terms only (fixed terms exempt; lagged DV and tax level VIF 10-22 by construction) in both scripts. Results:
   projection 0.0057-0.0105 (p<.001) in every listed model; recurring additions = unem x int_tme (both), unem x wage/CPI inflation
   (Citizen), tbill and unem x labour_gov (Origin), trade balance, d_debt x gap. Nothing in any manuscript.
+- 30 Sep 2026 (19; Sam): fiscal_term.R = the debt-interest term examined: not collinear with L_ln_debt_gdp (r -0.19/-0.08, VIF 2.2); int/GDP
+  component carries it, TME/GDP null alone and negative beside it; ratio restriction not rejected; NO replacement (int_gdp, debt level, PSNB,
+  TME, grants, tax/GDP, bill/gilt/Bank Rate/spread/real rate/r-g, rdebt, rg_debt, stock x price pairs) beats it on both samples; dropping it
+  costs only 1.5-1.7 AIC (HAC p .03/.01). WARNING: data_common.R sets a global BASE (published rate spec) -- never name a script's own
+  regressor list BASE. Nothing in any manuscript.
