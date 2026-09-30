@@ -35,7 +35,7 @@ for (s in c("1964", "1977")) { SAMPLE <- s; source("data_common.R")
   blocks <- list("debt/GDP + unemployment + tax per WAP" = c("debt_gdp", "unem", "tax_workpop"), "unemployment + tax per WAP" = c("unem", "tax_workpop"), "tax per WAP only" = "tax_workpop")
   outcomes <- list(A = list(dv = "g_tme", extra = NULL, lab = "growth of real TME, % (g_tme)"), B = list(dv = "d_tme_gdp", extra = NULL, lab = "change in TME / GDP, percentage points (d_tme_gdp)"), C = list(dv = "ln_tme_gdp", extra = "L_ln_tme_gdp", lab = "log TME / GDP with its own lag (ln_tme_gdp)"))
   hacline <- function(m, xs) { ct <- coeftest(m, vcov. = vcovHAC(m)); paste(sprintf("%s %.3f (p %.3f)", sub("^L_", "", xs), ct[xs, 1], ct[xs, 4]), collapse = "; ") }
-  maxvif <- function(m) if (length(coef(m)) > 2) max(vif(m)) else NA
+  maxvif <- function(m, keep) if (length(coef(m)) > 2) { v <- vif(m); max(v[setdiff(names(v), keep)]) } else NA   # VIF over the block and added terms only; the fixed terms are reported once
   # --- 2 block models ---
   cat("\n2. Predicting spending one year ahead from 1-year lags of the block variables (each in level, log, first difference or log difference; all combinations)\n")
   cat("   regressors: debt_gdp =", DEFS2[["debt_gdp"]], "; unem =", DEFS2[["unem"]], "; tax_workpop =", DEFS2[["tax_workpop"]], "; prefixes: ln_ log, d_ first difference, dln_ log difference; all lagged one year\n")
@@ -68,7 +68,7 @@ for (s in c("1964", "1977")) { SAMPLE <- s; source("data_common.R")
       inter <- list(); if (length(bx) > 1) for (i in 1:(length(bx) - 1)) for (j in (i + 1):length(bx)) { nm <- paste0(bx[i], "_x_", bx[j]); S[[nm]] <- S[[bx[i]]] * S[[bx[j]]]; inter[[nm]] <- TRUE }
       for (b in bx) for (pn in names(pool)) { nm <- paste0(b, "_x_", pn); S[[nm]] <- S[[b]] * S[[pn]]; inter[[nm]] <- TRUE }
       cands <- c(names(pool), names(inter)); ok <- vapply(cands, function(v) all(!is.na(S[[v]][S$year %in% yrs])) && sd(S[[v]][S$year %in% yrs]) > 0, logical(1)); dropped <- cands[!ok]; cands <- cands[ok]
-      one <- function(add) { m <- fit(S, c(base_xs, add), dv); if (is.null(m) || nobs(m) != nobs(m0)) return(NULL); ct <- coeftest(m, vcov. = vcovHAC(m)); if (any(ct[add, 4] > PMAX)) return(NULL); vf <- maxvif(m); if (!is.na(vf) && vf > VIFMAX) return(NULL)
+      one <- function(add) { m <- fit(S, c(base_xs, add), dv); if (is.null(m) || nobs(m) != nobs(m0)) return(NULL); ct <- coeftest(m, vcov. = vcovHAC(m)); if (any(ct[add, 4] > PMAX)) return(NULL); vf <- maxvif(m, extra); if (!is.na(vf) && vf > VIFMAX) return(NULL)
         data.frame(spec = paste(sub("^L_", "", gsub("_x_L_", " x ", add)), collapse = " + "), AIC = AIC(m), dAIC = AIC(m) - AIC(m0), adjR2 = summary(m)$adj.r.squared, N = nobs(m), RESET = resettest(m)$p.value, VIF = vf, coefs = hacline(m, c(bx, add)), stringsAsFactors = FALSE) }
       res1 <- do.call(rbind, lapply(cands, one)); if (is.null(res1)) { cat(sprintf("     block: %s | no eligible single addition\n", bn)); next }
       res1 <- res1[order(res1$AIC), ]
@@ -76,7 +76,7 @@ for (s in c("1964", "1977")) { SAMPLE <- s; source("data_common.R")
       top1 <- cands[match(res1$spec, vapply(cands, function(a) paste(sub("^L_", "", gsub("_x_L_", " x ", a)), collapse = " + "), character(1)))][seq_len(min(20, nrow(res1)))]
       res2 <- NULL; if (length(top1) > 1) res2 <- do.call(rbind, lapply(combn(top1, 2, simplify = FALSE), one))
       res <- rbind(res1, res2); res <- res[order(res$AIC), ]
-      cat(sprintf("     block: %s | base %s: AIC %.2f, adjR2 %.3f, N %d | %d eligible candidates (%d main terms, %d interactions; %d dropped for coverage), %d single and %d paired additions pass (each added term HAC p < %.2f, max VIF < %d); best three:\n",
+      cat(sprintf("     block: %s | base %s: AIC %.2f, adjR2 %.3f, N %d | %d eligible candidates (%d main terms, %d interactions; %d dropped for coverage), %d single and %d paired additions pass (each added term HAC p < %.2f, max VIF of the block and added terms < %d); best three:\n",
                   bn, paste(sub("^L_", "", bx), collapse = " + "), AIC(m0), summary(m0)$adj.r.squared, nobs(m0), length(cands), sum(cands %in% names(pool)), sum(cands %in% names(inter)), length(dropped), nrow(res1), if (is.null(res2)) 0L else nrow(res2), PMAX, VIFMAX))
       for (i in seq_len(min(TOP, nrow(res)))) { cat(sprintf("       %d. + %-52s AIC %8.2f (dAIC %+.1f)  adjR2 %.3f  RESET %.3f  VIF %.1f  N %d\n          %s\n", i, res$spec[i], res$AIC[i], res$dAIC[i], res$adjR2[i], res$RESET[i], res$VIF[i], res$N[i], res$coefs[i]))
         shown_defs <- union(shown_defs, unlist(strsplit(gsub(" x ", " + ", res$spec[i]), " \\+ "))) }

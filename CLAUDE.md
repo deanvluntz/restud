@@ -563,3 +563,8 @@ only partial disclosure. Do not repeat that.
   rolling, CUSUM, sup-F); 5 economic regressors, 6 alternative outcomes, 7 uncontrolled flows. tme_predict.R step 3: block models plus
   other dataset variables (level/log, ratios, interactions), best three by AIC with each added term HAC p<.10 and VIF<20; tax per WAP
   never predicts TME. Sam's tme error = stale workbook (missing tme_obr_*); his 'replication_core_specR' error = a typo. Nothing in any manuscript.
+- 30 Sep 2026 (18; Sam): dv_predict.R = the tme_predict engine on the DV (mig_gross): FIXED L_mig_gross, delta_oadr_10, L_tax_workpop;
+  block 1 debt/GDP + unemployment any form, block 2 unemployment any form; + pool additions (level/log, ratios, interactions). VIF screen
+  now covers block + added terms only (fixed terms exempt; lagged DV and tax level VIF 10-22 by construction) in both scripts. Results:
+  projection 0.0057-0.0105 (p<.001) in every listed model; recurring additions = unem x int_tme (both), unem x wage/CPI inflation
+  (Citizen), tbill and unem x labour_gov (Origin), trade balance, d_debt x gap. Nothing in any manuscript.
