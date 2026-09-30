@@ -618,3 +618,10 @@ only partial disclosure. Do not repeat that.
   is not functional form (by fitted .39/.83) but post-2008 instability: sup-F .039/.005 (A .52/.11); under B the projection effect vanishes
   from 2009 (net -0.002/-0.003), under A it does not; B forecasts worse (OOS RMSE .119/.122 vs .106/.114). Publication-dated projection at t
   ~ base-year at t-1 (r .95/.92), AIC between A and B, also rejects sup-F. Recommended: keep A. Sam's decision; nothing in any manuscript.
+- 30 Sep 2026 (31; Sam): Glover et al. (2001, RDS Occasional Paper 67) + Home Office (2002, Cm 5387, Secure Borders, Safe Haven) uploaded;
+  verified passages and page offsets in Glover_2001_HomeOffice_2002_research_brief.md. FLAGGED to Sam: Aim 5 PSA = race equality in public
+  services (not entry); IND PSA targets were asylum process targets only (p.17); fn 13 regression = NET non-UK non-EU migration on ILO
+  unemployment + lagged net migration (timing unstated); the WP reports Work Permits (UK) as "now part of" IND (transfer 2001, date to
+  confirm); entry clearance = HO/FCO Joint Entry Clearance Unit, authorities "generally accept" permits (Sam's indirect-control point, p.19-20).
+  regime_timing.R: no break at 2001-04; under t-1 timing the projection effect ends from 2008-10 (PBS / crisis / cap indistinguishable);
+  to 2008 t-1 beats t by 19/13 AIC; regime model (t-1 to 2007) best AIC, clean diagnostics; permits also respond at t-1. Nothing adopted.
