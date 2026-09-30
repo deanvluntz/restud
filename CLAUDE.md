@@ -609,3 +609,8 @@ only partial disclosure. Do not repeat that.
   nominal debt +0.65/+0.76, 'only through the ratio' not rejected (p .44/.59). Screen with int_tme LEVEL: only d(inflation x debt/GDP)
   passes on both (-0.021/-0.024, p .006; proj 0.0084); int_tme never significant without the projection. Selected from 24 measures x 2
   samples -- a screening result, not a prior. Fails with the one-term burden on Origin. Nothing in any manuscript.
+- 30 Sep 2026 (29; Sam): uploads Hatton (2005, JPopE) + Mitchell, Pain & Riley (2011, EJ) to the branch. Standard in both: levels at t-1,
+  current-year changes (Hatton: d unemployment; MPR: ARDL levels t-1 + changes t, t-1, lagged DV). timing_bma.R: Sam's SHIFT (projection
+  also t-1) fits best on both samples, long run unchanged; current-year change in the projection null -> inflows respond to the
+  projection a year earlier (also safer on publication timing). BACE BMA coded (CRAN blocked): lagged projection dominates; Citizen
+  core all robust; Origin mode (log V/U run) = core with lagged projection. Timing switch NOT adopted -- Sam's decision; nothing in any manuscript.
