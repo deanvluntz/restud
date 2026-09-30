@@ -690,3 +690,11 @@ only partial disclosure. Do not repeat that.
   on both periods, BG(2) .043 / .019, Chow 1977 F 1.07 p .40. Millennium-interest one-term burdens (taxint, taxrint) dropped with it. NA taxes per WAP are
   already real (HMT GDP deflator, 2024-25 prices). TO MENTION IN TEXT (Sam): headline tax rises were sparse outside the sterling crisis and the first
   Thatcher government (almost yearly 1976-83; then 1991, 1994, 2003, 2010-11, 2022-23; basic rate never raised). Nothing in any manuscript yet.
+- 30 Sep 2026 (42; Sam): fiscal_ratio.R: NO clean (ex-banks) borrowing/expenditure ratio can replace int_tme (9 tried; clean interest shares null on
+  1965-2019, every borrowing share has the WRONG sign, r .7-.8 with the debt-change term). Sam's fallback, the one-term burden, passes on clean data:
+  taxrint_xb = taxes + public-sector debt interest EXCL. banks - inflation x net debt at the start of the year, real GBP k per WAP, dated as tax (FY ending t):
+  0.0370 / 0.0460 (p<.001), projection 0.0060 / 0.0051 (p<.001 / .002), dAIC -2.1 / -2.0 vs tax only, -5.5 / -5.9 without the projection; protocol passes
+  (Chow 1977 p .42; BG(2) .039 / .060; residence-based outcome 0.0050). Projection lower than tax-only because the 1970s inflation-erosion component correlates
+  with it (+.24 / +.29). Nominal version fails. PENDING SAM'S CONFIRMATION of this core before the series go into data_common.R / the workbook.
+  density_forecast.R (MPR 2011 s.4.4): models beat AR(1) out of sample; projection log-score gain +0.09 / +0.16, not significant (30 forecasts); timing A
+  calibrated (Berkowitz p .12-.30), timing B not (p < .01). Nothing in any manuscript.
