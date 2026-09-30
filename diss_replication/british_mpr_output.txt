@@ -1,0 +1,96 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+
+-- British, all origins (LTIM), 1965-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      55        -- (   --)    0.0043 (0.025)    0.00
+   relinc_rich (+)             55    0.1121 (0.873)    0.0042 (0.031)    1.98
+   relinc_dev (+)              55    0.2245 (0.075)    0.0035 (0.061)   -0.70
+   youth (+)                   55    0.0204 (0.521)    0.0043 (0.021)    1.60
+   unem_diff (-)               52    0.0164 (0.348)    0.0054 (0.007)    0.95
+   pool10 (+)                  46   -0.1481 (0.436)    0.0041 (0.113)    1.44
+   pool5 (+)                   51    0.0531 (0.711)    0.0051 (0.020)    1.83
+   all MPR-type (pool10)       46     joint (0.035)    0.0011 (0.716)   -0.61
+
+-- British from non-EU (IPS), 1965-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      44        -- (   --)    0.0053 (0.083)    0.00
+   relinc_rich (+)             44   -0.2075 (0.855)    0.0054 (0.105)    1.96
+   relinc_dev (+)              44    0.1124 (0.603)    0.0043 (0.243)    1.69
+   youth (+)                   44   -0.0144 (0.802)    0.0055 (0.086)    1.91
+   unem_diff (-)               44    0.0255 (0.340)    0.0054 (0.088)    0.65
+   pool10 (+)                  44   -0.1427 (0.541)    0.0045 (0.199)    1.66
+   pool5 (+)                   44   -0.1286 (0.587)    0.0053 (0.088)    1.65
+   all MPR-type (pool10)       44     joint (0.228)    0.0026 (0.567)    1.55
+
+-- non-UK-born British from non-EU, 1965-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      44        -- (   --)    0.0120 (0.057)    0.00
+   relinc_rich (+)             44    2.6365 (0.318)    0.0108 (0.087)    0.44
+   relinc_dev (+)              44    1.0890 (0.025)    0.0028 (0.653)   -4.49
+   youth (+)                   44    0.1266 (0.258)    0.0102 (0.127)    0.35
+   unem_diff (-)               44    0.0572 (0.228)    0.0125 (0.055)    0.31
+   pool10 (+)                  44   -0.2462 (0.669)    0.0105 (0.151)    1.75
+   pool5 (+)                   44    0.2575 (0.578)    0.0121 (0.058)    1.65
+   all MPR-type (pool10)       44     joint (0.019)   -0.0004 (0.964)   -5.07
+
+-- UK-born British from non-EU, 1965-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      44        -- (   --)    0.0036 (0.162)    0.00
+   relinc_rich (+)             44   -0.5909 (0.601)    0.0040 (0.171)    1.61
+   relinc_dev (+)              44   -0.0349 (0.885)    0.0039 (0.297)    1.97
+   youth (+)                   44   -0.0359 (0.561)    0.0042 (0.150)    1.38
+   unem_diff (-)               44    0.0205 (0.399)    0.0037 (0.169)    1.10
+   pool10 (+)                  44   -0.1199 (0.630)    0.0029 (0.322)    1.75
+   pool5 (+)                   44   -0.1984 (0.454)    0.0037 (0.161)    1.12
+   all MPR-type (pool10)       44     joint (0.397)    0.0028 (0.548)    4.28
+
+-- British, all origins (LTIM), 1977-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      43        -- (   --)    0.0068 (0.008)    0.00
+   relinc_rich (+)             43    0.7531 (0.416)    0.0068 (0.009)    1.26
+   relinc_dev (+)              43    0.3666 (0.029)    0.0046 (0.105)   -2.51
+   youth (+)                   43    0.0248 (0.483)    0.0065 (0.013)    1.56
+   unem_diff (-)               43    0.0158 (0.413)    0.0068 (0.008)    1.18
+   pool10 (+)                  43   -0.2850 (0.153)    0.0058 (0.031)    0.13
+   pool5 (+)                   43   -0.0618 (0.742)    0.0069 (0.010)    1.87
+   all MPR-type (pool10)       43     joint (0.007)    0.0013 (0.645)   -2.70
+
+-- British from non-EU (IPS), 1977-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      43        -- (   --)    0.0059 (0.057)    0.00
+   relinc_rich (+)             43   -0.2177 (0.849)    0.0061 (0.077)    1.95
+   relinc_dev (+)              43    0.1284 (0.560)    0.0049 (0.188)    1.61
+   youth (+)                   43   -0.0126 (0.827)    0.0061 (0.062)    1.93
+   unem_diff (-)               43    0.0272 (0.319)    0.0061 (0.058)    0.49
+   pool10 (+)                  43   -0.2103 (0.400)    0.0049 (0.153)    1.32
+   pool5 (+)                   43   -0.1676 (0.483)    0.0061 (0.057)    1.42
+   all MPR-type (pool10)       43     joint (0.267)    0.0023 (0.609)    1.33
+
+-- non-UK-born British from non-EU, 1977-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      43        -- (   --)    0.0125 (0.057)    0.00
+   relinc_rich (+)             43    2.6374 (0.324)    0.0113 (0.081)    0.47
+   relinc_dev (+)              43    1.1195 (0.026)    0.0035 (0.570)   -4.67
+   youth (+)                   43    0.1294 (0.254)    0.0108 (0.117)    0.31
+   unem_diff (-)               43    0.0593 (0.214)    0.0132 (0.052)    0.23
+   pool10 (+)                  43   -0.3159 (0.615)    0.0109 (0.117)    1.62
+   pool5 (+)                   43    0.2367 (0.619)    0.0125 (0.063)    1.72
+   all MPR-type (pool10)       43     joint (0.021)   -0.0009 (0.917)   -5.42
+
+-- UK-born British from non-EU, 1977-2019
+   determinant (prior)          N    determinant (p)     projection (p)    dAIC
+   (none)                      43        -- (   --)    0.0042 (0.103)    0.00
+   relinc_rich (+)             43   -0.6144 (0.589)    0.0047 (0.118)    1.59
+   relinc_dev (+)              43   -0.0243 (0.920)    0.0045 (0.238)    1.98
+   youth (+)                   43   -0.0346 (0.574)    0.0048 (0.102)    1.43
+   unem_diff (-)               43    0.0221 (0.374)    0.0044 (0.103)    0.97
+   pool10 (+)                  43   -0.1853 (0.479)    0.0033 (0.256)    1.45
+   pool5 (+)                   43   -0.2425 (0.363)    0.0045 (0.089)    0.75
+   all MPR-type (pool10)       43     joint (0.470)    0.0025 (0.582)    4.35
+
+Done.

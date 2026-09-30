@@ -698,3 +698,8 @@ only partial disclosure. Do not repeat that.
   with it (+.24 / +.29). Nominal version fails. PENDING SAM'S CONFIRMATION of this core before the series go into data_common.R / the workbook.
   density_forecast.R (MPR 2011 s.4.4): models beat AR(1) out of sample; projection log-score gain +0.09 / +0.16, not significant (30 forecasts); timing A
   calibrated (Berkowitz p .12-.30), timing B not (p < .01). Nothing in any manuscript.
+- 30 Sep 2026 (43; Sam): british_mpr.R (MPR 2011 Table 6 UK-relative determinants on British inflows): relinc_dev (UK vs IND/PAK/BGD/CHN/NGA/PHL/ZAF GDP
+  per head) REMOVES the projection from non-UK-born British arrivals from non-EU (0.0125 -> 0.0035, p .57; relinc_dev +1.12 p .026; dAIC -4.7, 1977-2019)
+  and weakens it for all British (LTIM); relinc_rich, youth, unem_diff, return pool (British emigration 5/10 yrs) null. In the MAIN non-EU equation relinc_dev
+  is null and the projection unchanged (0.0077 / 0.0062) -> asymmetry: uncontrolled British flow = relative-income pull; controlled flow = projection.
+  Caveats: relinc_dev r .33-.36 with the projection, trending after 2001; 1 of 6 tried; IPS sampling error. Nothing in any manuscript.
