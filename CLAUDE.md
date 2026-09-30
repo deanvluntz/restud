@@ -674,3 +674,13 @@ only partial disclosure. Do not repeat that.
   rate, real payment, top rate, wedge), rate changes, fiscal drag (allowance/earnings), projection x burden: NONE passes Sam's criterion; each fits 14-20 AIC
   worse in place of tax per WAP; headline rates fell while real tax per WAP doubled (r -0.84/-0.87) -> P2 works through the burden borne, not announced rates.
   No construct fixes BG(2). Rates CSV not in the workbook (only if adopted). Nothing in any manuscript.
+- 30 Sep 2026 (40; Sam): interest_apf.R: Millennium int_tme = public-sector interest INCL. the public-sector banks (ANLO); it jumps 5.7 -> 9.6-10.9% of TME
+  in 2008-11 (bank reclassification), while CG interest (NMFX) and CG net of APF (NMFX+MU74, OBR definition; APF from 2009, not 2007) do not. Excluding
+  banks or using CG/net-of-APF, the interest term is NULL on 1965-2019 -> its significance rests on 2008-13. Structural deficit (OBR CA series, 1975+) null
+  beside the projection, NEGATIVE without it; QE stock/M4 null; Bank Rate Citizen-only. burden_motion.R: 'tax + REAL debt interest' per WAP (one term
+  replacing tax + int_tme) meets both halves of Sam's criterion on both periods (Millennium interest); with CG-net-of-APF interest only the no-projection
+  half. Headline rates: basic rate only ever cut, corporation tax cut until 2023; rises = NICs/VAT; with employer NIC + top rate, rises are packaged in one
+  year and followed by fewer changes than chance for 1-5 years. pop_rate.R: inflows as % of total population -> projection holds (0.0022/0.0026 pp,
+  same proportional effect), EU placebo null. Accruals (Sam's ONS note): fiscal block year t = FY (t-1)/t, so tax at t-2 = FY (t-3)/(t-2), the latest
+  fiscal year whose accrued receipts were complete (self-assessment balancing payments due 31 Jan t-1) during t-1 -- a real-time-data reading of the t-2
+  term, for Sam to judge. Nothing in any manuscript.
