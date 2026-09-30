@@ -1,0 +1,207 @@
+report,pub_year,base_fy,basis,proj_fy,req_rate_pct,excess_income_gbp_m,pension_exp,pension_exp_units,total_exp,total_exp_units,contributors_m,pensioners_m,ratio,notes
+QR1960 (2nd QR NI Act),1960-06,1959-60,"flat-rate+graduated (1959 Act); level benefits; earnings +2% pa; unemp 3% from 1966-67; full quinquennial contribution increases",1959-60,,-33,651,GBP m,959,GBP m,,,,"income 926; T10 l.1021 T12 l.1106 T14 l.1250"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1960-61,,-47,665,GBP m,972,GBP m,,,,"income 925"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1961-62,,37,681,GBP m,998,GBP m,,,,"income 1035; graduated additions nil (T13 l.1221)"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1966-67,,-4,774,GBP m,1139,GBP m,,,,"income 1135; 5-yr avg 1961-66 +11, 1966-71 -19"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1971-72,,-6,883,GBP m,1246,GBP m,,,,"income 1240; grad additions 14; avg 1971-76 -15"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1976-77,,11,985,GBP m,1345,GBP m,,,,"income 1356; avg 1976-81 +14"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1981-82,,59,1066,GBP m,1427,GBP m,,,,"income 1486; grad additions 64; avg 1981-86 +55"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1986-87,,50,1127,GBP m,1486,GBP m,,,,"income 1536; avg 1986-91 +54"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1991-92,,59,1173,GBP m,1533,GBP m,,,,"income 1592; grad additions 137; avg 1991-96 +71"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,1996-97,,89,1197,GBP m,1561,GBP m,,,,"income 1650; avg 1996-2001 +103"
+QR1960 (2nd QR NI Act),1960-06,1959-60,same,2001-02,,124,1214,GBP m,1585,GBP m,,,,"income 1709; grad additions 214"
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic (calendar/mid-year),1958,,,,,,,24.02,5.23,,"T4 l.663 contributors incl employer-only; T5 l.746 RP+contrib OAP; pop >pens age 2.29m men 65+ / 5.00m women 60+ (T6 l.803)"
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1963,,,,,,,,5.73,,
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1968,,,,,,,24.54,6.42,,"pop >pens age 2.62 men / 5.79 women"
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1973,,,,,,,,7.12,,
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1978,,,,,,,24.64,7.64,,"pop >pens age 3.23 / 6.29"
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1983,,,,,,,,7.93,,
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1988,,,,,,,25.47,8.08,,"pop >pens age 3.42 / 6.53"
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1993,,,,,,,,8.05,,
+QR1960 (2nd QR NI Act),1960-06,1959-60,demographic,1998,,,,,,,26.58,7.89,,"pop >pens age 3.34 / 6.21"
+QR1964 (3rd QR NI Act),1964-11,1964-65,"flat-rate+graduated; CONSTANT 1964-65 earnings & benefit rates; unemp 2% from 1965-66; full quinquennial increases",1964-65,,18,1005,GBP m,1442,GBP m,,,,"income 1460; T9 l.901 T11 l.979 T13 l.1078"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1965-66,,65,1031,GBP m,1484,GBP m,,,,"income 1549; T11 cell OCR '1:03]' confirmed by T12 l.1001"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1966-67,,45,1058,GBP m,1511,GBP m,,,,"income 1556"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1967-68,,20,1084,GBP m,1539,GBP m,,,,"income 1559"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1968-69,,-7,1112,GBP m,1567,GBP m,,,,"income 1560"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1969-70,,-36,1139,GBP m,1596,GBP m,,,,"income 1560; RP OCR '13139'"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1970-71,,,1164,GBP m,1622,GBP m,,,,"income 1646; single-year balance not tabulated"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1975-76,,,1280,GBP m,1738,GBP m,,,,"income 1732 (OCR '4732'); grad additions 33"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1980-81,,,1362,GBP m,1823,GBP m,,,,"income 1864; RP OCR '17362'"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1985-86,,,1421,GBP m,1889,GBP m,,,,"income 1938; grad additions 91"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1990-91,,,1486,GBP m,1962,GBP m,,,,"income 2022"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,1995-96,,,1530,GBP m,2019,GBP m,,,,"income 2116; grad additions 169"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,2000-01,,,1571,GBP m,2077,GBP m,,,,"income 2220"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same,2005-06,,,1623,GBP m,2150,GBP m,,,,"income 2329 (OCR '4929' contribs); grad additions 257; total OCR '27150'"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr annual average),1965-70,,18,,,1539,GBP m,,,,"income 1557"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1970-75,,-30,,,1668,GBP m,,,,"income 1638"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1975-80,,-29,,,1772,GBP m,,,,"income 1743"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1980-85,,43,,,1849,GBP m,,,,"income 1892"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1985-90,,52,,,1918,GBP m,,,,"income 1970"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1990-95,,74,,,1985,GBP m,,,,"income 2059"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),1995-2000,,113,,,2042,GBP m,,,,"income 2155"
+QR1964 (3rd QR NI Act),1964-11,1964-65,same (5-yr avg),2000-05,,157,,,2106,GBP m,,,,"income 2263"
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic (31 Dec),1963,,,,,,,24.84,5.98,4.2,"T3 l.608 contributors (incl employer-only); T4 l.679 pensioners; ratio = working-age/pensionable-age pop (App.3 para 13, l.1560)"
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1968,,,,,,,25.51,6.69,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1973,,,,,,,25.35,7.35,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1978,,,,,,,25.93,7.82,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1983,,,,,,,27.04,7.96,3.7,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1988,,,,,,,,8.21,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1993,,,,,,,29.42,8.27,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,1998,,,,,,,,8.24,,
+QR1964 (3rd QR NI Act),1964-11,1964-65,demographic,2003,,,,,,,32.44,8.28,4.3,
+QR1982 (1st QR SSA75),1982-07,1981-82,"(a)(iii) earnings/limits/flat-rate +8%pa, ER pensions post-award +6%; unemp 6%; Treasury supp 13% [detailed Table 13 basis]",1981-82,15.3,,11822,GBP m 1981-82 earnings,17.99,GBP bn,20.323,8.980,,"15.3 = comparable rate (T14 note i, l.2032); actual NIF rate 16.5 (full 17.95); grad 206, ER RP 20 (App.H l.3634); T8 l.1209 contributors; T10 l.1428 flat-rate pensioners; total T12 l.1931"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,1985-86,15.3,,12293,GBP m,17.98,GBP bn,22.102,9.368,2.4,"grad 292 ER RP 144; ratio contributors/flat-rate pensioner para 7.21 l.1420; Class1 income 18.13bn (T13 l.1965)"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,1990-91,15.3,,12447,GBP m,,,22.480,9.507,,"T14 cell OCR '1533' read 15.3 OCR?; grad 362 ER RP 479; App.H flat-rate total 16878"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,1995-96,15.5,,12246,GBP m,19.47,GBP bn,22.455,9.357,,"grad 408 ER RP 1024"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2000-01,15.7,,11994,GBP m,,,22.675,9.184,,"grad 430 ER RP 1787; App.H flat-rate total 16547"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2005-06,16.1,,11974,GBP m,21.58,GBP bn,23.109,9.201,,"grad 451 ER RP 2758"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2010-11,16.9,,12480,GBP m,,,23.459,9.643,,"grad 476 ER RP 3818; App.H flat total 17269"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2015-16,18.0,,13266,GBP m,25.24,GBP bn,23.524,10.178,,"grad 474 ER RP 4877"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2020-21,19.1,,13916,GBP m,,,23.378,10.622,,"grad 397 ER RP 5742; App.H flat total 18766"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,2025-26,20.3,,14782,GBP m,28.33,GBP bn,23.120,11.248,2.1,"grad 286 ER RP 6599"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(iii) 8/6,Ultimate,21.8,,,,,,,,3.02,"stationary pop; ratio = working-age per pensioner steady state (para 7.2)"
+QR1982 (1st QR SSA75),1982-07,1981-82,"(a)(i) earnings uprating throughout, ER post-award +8% [headline in para 1.2]",1985-86,15.4,,,,17.98,GBP bn,,,,"T14 l.2011; T12 l.1931"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,1990-91,15.5,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,1995-96,15.7,,,,19.67,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2000-01,16.1,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2005-06,16.7,,,,22.36,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2010-11,17.7,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2015-16,19.2,,,,26.80,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2020-21,20.4,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,2025-26,21.9,,,,30.60,GBP bn,,,,"further +up to 2% after 2025-26 (para 1.2)"
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(i) 8/8,Ultimate,23.8,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,1985-86,15.3,,,,17.98,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,1990-91,15.4,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,1995-96,15.6,,,,19.57,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2000-01,15.9,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2005-06,16.4,,,,21.96,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2010-11,17.3,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2015-16,18.6,,,,25.98,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2020-21,19.7,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,2025-26,21.1,,,,29.41,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(a)(ii) 8/7,Ultimate,22.7,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,"(b)(i) PRICE uprating of flat-rate benefits at 7% (earnings 8%), ER post-award 7%",1985-86,15.3,,,,17.98,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,1990-91,14.9,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,1995-96,14.6,,,,18.14,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2000-01,14.4,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2005-06,14.5,,,,19.14,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2010-11,14.9,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2015-16,15.7,,,,21.54,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2020-21,16.3,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(i) 7/7,2025-26,17.0,,,,23.31,GBP bn,,,,"flat-rate pension falls 21%->14% of avg earnings"
+QR1982 (1st QR SSA75),1982-07,1981-82,"(b)(ii) PRICE uprating at 6% (earnings 8%), ER post-award 6%",1985-86,15.3,,,,17.98,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,1990-91,14.4,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,1995-96,13.6,,,,16.72,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2000-01,13.0,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2005-06,12.6,,,,16.38,GBP bn,,,,"OCR '126'"
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2010-11,12.6,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2015-16,12.9,,,,17.40,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2020-21,13.1,,,,,,,,,"OCR '13+]'"
+QR1982 (1st QR SSA75),1982-07,1981-82,(b)(ii) 6/6,2025-26,13.5,,,,17.96,GBP bn,,,,"flat-rate pension falls to ~10% of avg earnings"
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) flat-rate +7% / ER 6%,1985-86,15.3,,,,17.98,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,1990-91,14.8,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,1995-96,14.5,,,,18.04,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2000-01,14.3,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2005-06,14.2,,,,18.76,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2010-11,14.5,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2015-16,15.2,,,,20.80,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2020-21,15.6,,,,,,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,(c) 7/6,2025-26,16.3,,,,22.23,GBP bn,,,,
+QR1982 (1st QR SSA75),1982-07,1981-82,population (mid-year; T6 l.1064),1979,,,,,,,,,3.43,"working-age 32.407m / pens-age 9.456m / total 54.408m"
+QR1982 (1st QR SSA75),1982-07,1981-82,population,1989,,,,,,,,,3.44,"33.751 / 9.799 / 55.266"
+QR1982 (1st QR SSA75),1982-07,1981-82,population,1999,,,,,,,,,3.59,"33.878 / 9.432 / 56.568"
+QR1982 (1st QR SSA75),1982-07,1981-82,population,2009,,,,,,,,,3.62,"35.047 / 9.671 / 57.030"
+QR1982 (1st QR SSA75),1982-07,1981-82,population,2019,,,,,,,,,3.35,"35.167 / 10.511 / 58.188"
+QR1982 (1st QR SSA75),1982-07,1981-82,population,2029,,,,,,,,,2.94,"34.379 / 11.713 / 59.139"
+QR1990 (2nd QR SSA75),1990-07,1990-91,"PRICES uprating of flat-rate benefits & limits; real earnings +1.5%pa; unemp 5%; pre-Social Security Bill 1990 (Table 15 l.1700)",1990-91,19.1,,21.58,GBP bn 1990-91 prices,30.41,GBP bn,21.650,10.460,2.1,"actual rate payable 17.5 (para 9.8); addl pension 0.79 grad 0.63 (T.E1 l.3472); T10 l.1301 contributors; T12 l.1549 pensioners; ratio contributors/pensioner para 8.30; rebate 5.8"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,1995-96,18.1,,23.03,GBP bn,33.49,GBP bn,22.800,10.700,,"addl 2.02 grad 0.73; rebate 4.8"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2000-01,17.8,,23.35,GBP bn,36.34,GBP bn,23.280,10.940,,"addl 3.89 grad 0.77; rebate 4.3"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2010-11,17.4,,25.93,GBP bn,42.75,GBP bn,24.030,12.070,,"addl 8.07 grad 0.80; rebate 3.6"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2020-21,17.8,,29.78,GBP bn,50.63,GBP bn,24.260,13.410,,"addl 12.27 grad 0.62; rebate 3.4"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2030-31,18.4,,34.47,GBP bn,57.88,GBP bn,23.690,15.190,1.4,"addl 15.43 grad 0.25; ratio ~2030 (para 8.30)"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2040-41,16.4,,34.47,GBP bn,57.64,GBP bn,23.890,15.070,,"addl 15.58 grad 0.07"
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices pre-Bill,2050-51,14.1,,32.62,GBP bn,54.94,GBP bn,24.050,14.240,1.5,"addl 14.10 grad 0.02"
+QR1990 (2nd QR SSA75),1990-07,1990-91,"EARNINGS uprating of flat-rate benefits & limits; pre-Bill (Table 15 col 2; T14 l.1652; T.E2 l.3496)",1990-91,19.1,,21.58,GBP bn,30.41,GBP bn,,,,"addl 0.79 grad 0.63"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,1995-96,19.2,,24.81,GBP bn,35.80,GBP bn,,,,"addl 2.02 grad 0.79; contributors ~1.5m fewer than prices basis by 2020 (para 8.14)"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2000-01,19.9,,27.10,GBP bn,41.14,GBP bn,,,,"addl 3.84 grad 0.89"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2010-11,21.3,,34.92,GBP bn,53.66,GBP bn,,,,"addl 7.79 grad 1.08"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2020-21,23.5,,46.55,GBP bn,70.12,GBP bn,,,,"addl 11.63 grad 0.96"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2030-31,26.4,,62.53,GBP bn,89.35,GBP bn,,,,"addl 14.55 grad 0.46; T14 total OCR '994' = 89.4"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2040-41,25.8,,72.57,GBP bn,100.74,GBP bn,,,,"addl 15.17 grad 0.15"
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings pre-Bill,2050-51,24.5,,79.70,GBP bn,110.48,GBP bn,,,,"addl 15.07 grad 0.05"
+QR1990 (2nd QR SSA75),1990-07,1990-91,"prices uprating, POST Social Security Bill 1990 (Table 19 l.2088) [basis of summary conclusions]",1990-91,17.7,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,1995-96,17.2,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2000-01,16.8,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2010-11,16.3,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2020-21,16.7,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2030-31,17.2,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2040-41,15.3,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,prices post-Bill,2050-51,13.0,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings uprating post-Bill (Table 19),1990-91,17.7,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,1995-96,18.3,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2000-01,18.8,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2010-11,20.0,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2020-21,22.2,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2030-31,25.0,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2040-41,24.3,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,earnings post-Bill,2050-51,23.0,,,,,,,,,
+QR1990 (2nd QR SSA75),1990-07,1990-91,population (mid-year; T8 l.1207),1990,,,,,,,,,3.3,"working-age 34.3m / pens-age 10.3m / total 55.8m"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2000,,,,,,,,,3.3,"34.7 / 10.4 / 57.5"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2010,,,,,,,,,3.2,"35.3 / 11.2 / 58.3"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2020,,,,,,,,,2.9,"35.3 / 12.4 / 59.2"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2030,,,,,,,,,2.4,"33.7 / 14.0 / 59.6; lowest 2.3 in 2035 (para 8.8)"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2040,,,,,,,,,2.4,"33.6 / 14.0 / 59.0"
+QR1990 (2nd QR SSA75),1990-07,1990-91,population,2050,,,,,,,,,2.6,"33.7 / 13.2 / 58.1"
+QR1999 (file 1992),1999-07,1999-00,"PRICES uprating of flat-rate benefits & limits; real earnings +1.5%pa; claimant unemp 1.4m to 2011; post-SSA 1998 structure (Table 5.5 l.1393; T15.1 l.4421; T15.2 l.4451)",1999-00,20.0,,32.47,GBP bn 1999-00 prices,48.03,GBP bn,20.0,10.9,1.8,"total = outgo incl admin 1.04; benefits 46.98; grad 1.13, net addl pension 4.48 (gross 8.23 less COD 3.75); actual rate payable 20.25 (T5.5 note); contributors = employed contributors T4.4 l.1254 (grand total incl SE 22.2, T14.2 l.3335); pensioners T14.6 l.3619; ratio T4.4"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2000-01,19.9,,32.55,GBP bn,48.62,GBP bn,20.2,11.0,1.8,"grad 1.14 net addl 4.96; benefits 47.56"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2010-11,18.9,,36.21,GBP bn,57.68,GBP bn,21.6,12.3,1.7,"grad 1.25 net addl 9.76; benefits 56.45"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2020-21,18.1,,39.35,GBP bn,65.87,GBP bn,22.2,12.6,1.8,"grad 1.05 net addl 12.49; benefits 64.45"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2030-31,18.6,,48.18,GBP bn,76.19,GBP bn,21.5,15.2,1.4,"grad 0.51 net addl 14.76; benefits 74.54"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2040-41,17.1,,52.06,GBP bn,79.39,GBP bn,21.4,16.4,1.3,"grad 0.14 net addl 14.88; benefits 77.47"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2050-51,15.2,,50.43,GBP bn,79.00,GBP bn,21.3,15.8,1.4,"grad 0.02 net addl 15.68; benefits 76.77"
+QR1999 (file 1992),1999-07,1999-00,prices REG1.5,2060-61,14.0,,50.02,GBP bn,80.70,GBP bn,21.0,15.6,1.3,"net addl 17.92; benefits 78.12"
+QR1999 (file 1992),1999-07,1999-00,"EARNINGS uprating of flat-rate benefits & limits; REG 1.5% (Table 5.5 col 1; T15.5 l.4565; T15.6 l.4595)",1999-00,20.0,,32.47,GBP bn,48.03,GBP bn,,,,"benefits 46.98; net addl 4.48"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2000-01,20.2,,33.04,GBP bn,49.24,GBP bn,,,,"benefits 48.18; net addl 4.96"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2010-11,21.6,,42.65,GBP bn,65.86,GBP bn,,,,"benefits 64.63; net addl 9.76; contributors ~2.2m lower than prices basis by 2060 (para 4.16)"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2020-21,23.2,,53.70,GBP bn,84.54,GBP bn,,,,"benefits 83.11; net addl 12.49"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2030-31,26.7,,76.25,GBP bn,110.56,GBP bn,,,,"benefits 108.91; net addl 14.80"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2040-41,27.6,,95.52,GBP bn,131.14,GBP bn,,,,"benefits 129.22; net addl 15.07"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2050-51,27.3,,107.24,GBP bn,147.41,GBP bn,,,,"benefits 145.19; net addl 16.22"
+QR1999 (file 1992),1999-07,1999-00,earnings REG1.5,2060-61,27.6,,123.27,GBP bn,168.94,GBP bn,,,,"benefits 166.35; net addl 19.15"
+QR1999 (file 1992),1999-07,1999-00,prices uprating; REG 2.0% (Table 8.1 l.2071; T15.3 l.4494; T15.4 l.4522),1999-00,20.0,,32.47,GBP bn,48.03,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2000-01,19.8,,32.55,GBP bn,48.62,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2010-11,18.0,,36.21,GBP bn,57.89,GBP bn,,,,"year OCR '2016-11'"
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2020-21,16.6,,39.35,GBP bn,66.57,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2030-31,16.5,,48.18,GBP bn,77.75,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2040-41,14.7,,52.06,GBP bn,81.78,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2050-51,12.8,,50.43,GBP bn,82.43,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,prices REG2.0,2060-61,11.4,,50.02,GBP bn,85.47,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,earnings uprating; REG 2.0% (expenditure only; T15.7 l.4639; T15.8 l.4669),2010-11,,,45.02,GBP bn,69.11,GBP bn,,,,"no rate table for this basis"
+QR1999 (file 1992),1999-07,1999-00,earnings REG2.0,2020-21,,,59.54,GBP bn,92.88,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,earnings REG2.0,2030-31,,,88.79,GBP bn,127.61,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,earnings REG2.0,2040-41,,,116.84,GBP bn,159.16,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,earnings REG2.0,2050-51,,,137.79,GBP bn,188.12,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,earnings REG2.0,2060-61,,,166.35,GBP bn,226.54,GBP bn,,,,
+QR1999 (file 1992),1999-07,1999-00,POST March-1999 Budget; earnings uprating (Table 10.4 l.2447),2000-01,20.5,,,,,,,,,"pre-Budget cols repeat T5.5"
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2010-11,21.8,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2020-21,23.4,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2030-31,27.0,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2040-41,27.9,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2050-51,27.6,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget earnings,2060-61,27.9,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,POST March-1999 Budget; prices uprating,2000-01,20.2,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2010-11,19.0,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2020-21,18.1,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2030-31,18.5,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2040-41,17.0,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2050-51,15.2,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,post-Budget prices,2060-61,14.0,,,,,,,,,
+QR1999 (file 1992),1999-07,1999-00,population (mid-year; T4.2 l.1173; T4.3 l.1199; female SPA 60->65 2010-20),1999,,,,,,,,,3.4,"working-age 35.485m / pens-age 10.470m / total 57.639m (thousands in text; totals OCR '37639' read 57639)"
+QR1999 (file 1992),1999-07,1999-00,population,2000,,,,,,,,,3.4,"35.613 / 10.490 / 57.783"
+QR1999 (file 1992),1999-07,1999-00,population,2010,,,,,,,,,3.2,"36.669 / 11.491 (OCR '149'; derived from total) / 59.080"
+QR1999 (file 1992),1999-07,1999-00,population,2020,,,,,,,,,3.3,"38.177 / 11.500 (OCR '4150)'; derived) / 60.401"
+QR1999 (file 1992),1999-07,1999-00,population,2030,,,,,,,,,2.7,"36.653 / 13.767 / 61.122"
+QR1999 (file 1992),1999-07,1999-00,population,2040,,,,,,,,,2.4,"35.493 / 14.930 / 60.727"
+QR1999 (file 1992),1999-07,1999-00,population,2050,,,,,,,,,2.5,"working-age OCR '33189' inconsistent with total; derived 35.169 / 14.353 / 59.631"
+QR1999 (file 1992),1999-07,1999-00,population,2060,,,,,,,,,2.4,"34.130 / 14.233 / 58.344"

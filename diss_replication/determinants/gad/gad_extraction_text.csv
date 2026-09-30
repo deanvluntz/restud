@@ -1,0 +1,186 @@
+report,pub_year,base_fy,basis,proj_fy,req_rate_pct,pension_exp,pension_exp_units,total_exp,total_exp_units,exp_pct_gdp,contributors_m,pensioners_m,ratio,notes
+GA1972_SSBill,1972-11,1975-76,earnings-constant (benefits & limits move with earnings; Oct 1972 earnings/benefit rates),1975-76,,2653,GBP m at Oct 1972 rates,3832,GBP m at Oct 1972 rates,,23.32,8.02,,Bill fixed joint Class1 rate NIF 11.55 (4.85+6.7; 12.75 incl NHS 1.0 & Redundancy 0.2); Table 3 excess income over outgo -87 (first-year arrears); Table 3 benefit expenditure 3723 differs from Table 2 total 3832
+GA1972_SSBill,1972-11,1975-76,earnings-constant,1980-81,,2798,GBP m at Oct 1972 rates,3981,GBP m at Oct 1972 rates,,23.65,8.35,,Table 3 excess of income over outgo +28
+GA1972_SSBill,1972-11,1975-76,earnings-constant,1985-86,,2854,GBP m at Oct 1972 rates,4053,GBP m at Oct 1972 rates,,24.28,8.50,,excess +63
+GA1972_SSBill,1972-11,1975-76,earnings-constant,1990-91,,2872,GBP m at Oct 1972 rates,4074,GBP m at Oct 1972 rates,,24.66,8.59,,excess +103
+GA1972_SSBill,1972-11,1975-76,earnings-constant,1995-96,,2841,GBP m at Oct 1972 rates,4061,GBP m at Oct 1972 rates,,25.28,8.53,,excess +217
+GA1972_SSBill,1972-11,1975-76,earnings-constant,2000-01,,2790,GBP m at Oct 1972 rates,4056,GBP m at Oct 1972 rates,,26.11,8.39,,excess +355
+GA1972_SSBill,1972-11,1975-76,earnings-constant,2005-06,,2774,GBP m at Oct 1972 rates,4096,GBP m at Oct 1972 rates,,26.97,8.37,,excess +465 = yield of about 1% contribution (para 31)
+GA1975_SSPBill,1975-02,1978-79,earnings-constant (basic pension GBP 11.60 pw; real earnings +3% pa; 8% pa nominal earnings; 4m contracted out),1978-79,15.4,4773,GBP m at Apr 1975 benefit rates,6567,GBP m at Apr 1975 benefit rates,,,,,Table 2 col '4 million contracted out'; rates INCLUDE 1.0 NHS + 0.2 Redundancy; Bill initial rate 16.5
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1979-80,15.5,4827,GBP m at Apr 1975 rates,6623,GBP m at Apr 1975 rates,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1980-81,15.7,,,,,,,,,Table 1 has no 1980-81 column
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1981-82,15.7,,,,,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1982-83,15.7,,,,,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1983-84 to 1987-88 (avg),,4983,GBP m at Apr 1975 rates (1983-84),6863,GBP m at Apr 1975 rates (1983-84),,,,,OCR garbled: rate reads '15-' (decimal lost; stray '7' nearby)
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1988-89 to 1992-93 (avg),,5184,GBP m at Apr 1975 rates (1988-89),7148,GBP m at Apr 1975 rates (1988-89),,,,,OCR garbled: rate reads '16-' (stray '3' nearby)
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1993-94 to 1997-98 (avg),16.6,5459,GBP m at Apr 1975 rates (1993-94),7522,GBP m at Apr 1975 rates (1993-94),,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,1998-99 to 2002-03 (avg),17.0,5673,GBP m at Apr 1975 rates (1998-99),7875,GBP m at Apr 1975 rates (1998-99),,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 4m c/o,2003-04 to 2007-08 (avg),17.7,5990,GBP m at Apr 1975 rates (2003-04),8364,GBP m at Apr 1975 rates (2003-04),,,,,2008-09 Table 1: RP 6523 total 9036
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1978-79,16.7,4773,GBP m at Apr 1975 rates,6567,GBP m at Apr 1975 rates,,,,,Table 2 col '8 million contracted out'
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1979-80,16.7,4826,GBP m at Apr 1975 rates,6622,GBP m at Apr 1975 rates,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1980-81,16.9,,,,,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1981-82,16.9,,,,,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1982-83,16.9,,,,,,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1983-84 to 1987-88 (avg),16.8,4969,GBP m at Apr 1975 rates (1983-84),6847,GBP m at Apr 1975 rates (1983-84),,,,,OCR '16*8' on wrapped line; moderately confident
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1988-89 to 1992-93 (avg),,5127,GBP m at Apr 1975 rates (1988-89),7084,GBP m at Apr 1975 rates (1988-89),,,,,OCR garbled '16-' (decimal lost)
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1993-94 to 1997-98 (avg),17.2,5333,GBP m at Apr 1975 rates (1993-94),7383,GBP m at Apr 1975 rates (1993-94),,,,,
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,1998-99 to 2002-03 (avg),,5469,GBP m at Apr 1975 rates (1998-99),7653,GBP m at Apr 1975 rates (1998-99),,,,,OCR garbled '17-'
+GA1975_SSPBill,1975-02,1978-79,earnings-constant 8m c/o,2003-04 to 2007-08 (avg),17.9,5719,GBP m at Apr 1975 rates (2003-04),8071,GBP m at Apr 1975 rates (2003-04),,,,,2008-09 Table 1: RP 6208 total 8698; para 45: rate after 30 years 18 to 18.5
+QR3_1995,1995-01,1994-95,prices,1994-95,18.25,28.7,GBP bn 1994-95 benefit rates,39.9,GBP bn 1994-95 benefit rates (benefits only),,,,,18.25 = ACTUAL rate payable (Table 6 note; para 4.8); pension_exp = sum RP flat 26.9 + ER 1.8 (Table 4); pop 1992: WAP 34.6m pension-age 10.4m ratio 3.3 (Table 2)
+QR3_1995,1995-01,1994-95,prices,2000-01,17.6,34.0,GBP bn 1994-95 benefit rates,42.2,GBP bn 1994-95 benefit rates,,22.7,11.0,2.1,sum 29.8+4.2; contributors/pensioners Table 3 calendar 2000; pop support ratio 3.3
+QR3_1995,1995-01,1994-95,prices,2010-11,17.6,42.9,GBP bn 1994-95 benefit rates,51.7,GBP bn 1994-95 benefit rates,,24.0,12.5,1.9,sum 33.7+9.2; pop ratio 3.1
+QR3_1995,1995-01,1994-95,prices,2020-21,18.7,54.3,GBP bn 1994-95 benefit rates,63.4,GBP bn 1994-95 benefit rates,,24.0,14.4,1.7,sum 39.8+14.5; pop ratio 2.7
+QR3_1995,1995-01,1994-95,prices,2030-31,20.0,65.6,GBP bn 1994-95 benefit rates,74.2,GBP bn 1994-95 benefit rates,,23.1,16.9,1.4,sum 46.9+18.7; pop ratio 2.1
+QR3_1995,1995-01,1994-95,prices,2040-41,18.7,67.7,GBP bn 1994-95 benefit rates,76.0,GBP bn 1994-95 benefit rates,,22.7,17.4,1.3,sum 48.2+19.5; pop ratio 2.0
+QR3_1995,1995-01,1994-95,prices,2050-51,16.8,65.9,GBP bn 1994-95 benefit rates,74.2,GBP bn 1994-95 benefit rates,,22.2,16.8,1.3,sum 46.6+19.3; pop ratio 2.0
+QR3_1995,1995-01,1994-95,earnings,1994-95,18.25,28.7,GBP bn 1994-95 benefit rates,39.9,GBP bn 1994-95 benefit rates,,,,,actual rate
+QR3_1995,1995-01,1994-95,earnings,2000-01,18.8,36.8,GBP bn 1994-95 benefit rates,45.7,GBP bn 1994-95 benefit rates,,,,,sum 32.6+4.2 (Table 5)
+QR3_1995,1995-01,1994-95,earnings,2010-11,20.9,51.5,GBP bn 1994-95 benefit rates,62.5,GBP bn 1994-95 benefit rates,,,,,sum 42.8+8.7
+QR3_1995,1995-01,1994-95,earnings,2020-21,24.2,71.9,GBP bn 1994-95 benefit rates,85.2,GBP bn 1994-95 benefit rates,,,,,sum 58.6+13.3
+QR3_1995,1995-01,1994-95,earnings,2030-31,28.1,96.6,GBP bn 1994-95 benefit rates,111.08,GBP bn 1994-95 benefit rates,,,,,sum 80.1+16.5; Table 5 total OCR-garbled -> taken from Table E2
+QR3_1995,1995-01,1994-95,earnings,2040-41,28.7,112.7,GBP bn 1994-95 benefit rates,128.61,GBP bn 1994-95 benefit rates,,,,,sum 95.7+17.0; total from Table E2
+QR3_1995,1995-01,1994-95,earnings,2050-51,28.2,124.0,GBP bn 1994-95 benefit rates,142.58,GBP bn 1994-95 benefit rates,,,,,sum 107.2+16.8; total from Table E2
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2000-01,17.7,,,,,,,,,Table 11
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2010-11,17.4,,,,,,,,,
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2020-21,16.8,,,,,,,,,
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2030-31,17.2,,,,,,,,,
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2040-41,15.8,,,,,,,,,
+QR3_1995,1995-01,1994-95,prices + Pensions Bill 1994 (rebate 4.6%),2050-51,14.0,,,,,,,,,
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2000-01,19.0,,,,,,,,,Table 11
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2010-11,20.9,,,,,,,,,
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2020-21,22.2,,,,,,,,,
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2030-31,25.4,,,,,,,,,
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2040-41,25.9,,,,,,,,,
+QR3_1995,1995-01,1994-95,earnings + Pensions Bill 1994 (rebate 4.6%),2050-51,25.3,,,,,,,,,
+GA2000_CSPSSBill,2000-01,1999-00,prices (1.5% real earnings) - baseline before Bill (after WRPA/TCA 1999 changes),1999-00,20.0,38.1,GBP bn 1999-00 prices,48.0,GBP bn 1999-00 prices (incl expenses),5.5,,,,Tables 4.2/4.3/2.2; pension = basic 33.6 + ER 4.5 (sum); ACTUAL rate 1999-00 20.25
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2000-01,20.2,38.6,GBP bn 1999-00 prices,48.6,GBP bn 1999-00 prices,5.4,,,,sum 33.7+4.9
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2010-11,18.6,46.4,GBP bn 1999-00 prices,56.3,GBP bn 1999-00 prices,5.4,,,,sum 37.5+8.9
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2020-21,17.5,51.3,GBP bn 1999-00 prices,63.2,GBP bn 1999-00 prices,5.3,,,,sum 40.4+10.9
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2030-31,17.8,61.1,GBP bn 1999-00 prices,72.8,GBP bn 1999-00 prices,5.2,,,,sum 48.7+12.4
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2040-41,16.4,64.5,GBP bn 1999-00 prices,76.0,GBP bn 1999-00 prices,4.7,,,,sum 52.2+12.3
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2050-51,14.6,63.8,GBP bn 1999-00 prices,75.8,GBP bn 1999-00 prices,4.0,,,,sum 50.5+13.3
+GA2000_CSPSSBill,2000-01,1999-00,prices baseline before Bill,2060-61,13.5,65.5,GBP bn 1999-00 prices,77.5,GBP bn 1999-00 prices,3.6,,,,sum 50.0+15.5
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (State Second Pension; first approach to contracting-out),1999-00,20.0,38.1,GBP bn 1999-00 prices,,,5.5,,,,Tables 2.1/2.2/2.4
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2000-01,20.2,38.6,GBP bn 1999-00 prices,,,5.4,,,,
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2010-11,19.2,46.9,GBP bn 1999-00 prices,,,5.5,,,,sum basic 37.5 + S2P 9.4
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2020-21,18.4,53.0,GBP bn 1999-00 prices,,,5.4,,,,sum 40.4+12.6
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2030-31,19.4,65.8,GBP bn 1999-00 prices,,,5.5,,,,sum 48.7+17.1
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2040-41,18.7,73.2,GBP bn 1999-00 prices,,,5.2,,,,sum 52.2+21.0
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2050-51,17.8,78.0,GBP bn 1999-00 prices,,,4.8,,,,sum 50.5+27.5
+GA2000_CSPSSBill,2000-01,1999-00,prices after Bill (S2P first approach),2060-61,17.7,86.9,GBP bn 1999-00 prices,,,4.5,,,,sum 50.0+36.9
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5% real earnings,2001-02,19.1,41.88,GBP bn 2003-04 prices,51.58,GBP bn 2003-04 prices (incl expenses/other outgo),5.3,,,,Tables 5.1/5.5/5.11; pension = basic 36.41 + additional 5.47 (sum); GDP% excl rebates (incl rebates 6.2); ACTUAL joint rate 19.85 in 2003-04 (para 1.11)
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2010-11,19.0,54.66,GBP bn 2003-04 prices,64.17,GBP bn 2003-04 prices,5.3,,,,sum 43.76+10.90; incl rebates 6.2
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2020-21,17.7,62.22,GBP bn 2003-04 prices,73.05,GBP bn 2003-04 prices,5.0,,,,sum 47.15+15.07; incl rebates 5.8
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2030-31,18.1,75.90,GBP bn 2003-04 prices,86.85,GBP bn 2003-04 prices,5.3,,,,sum 55.84+20.06; incl rebates 5.9
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2040-41,17.3,85.28,GBP bn 2003-04 prices,96.22,GBP bn 2003-04 prices,5.1,,,,sum 59.67+25.61; incl rebates 5.6
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2050-51,16.8,95.23,GBP bn 2003-04 prices,106.67,GBP bn 2003-04 prices,4.9,,,,sum 58.71+36.52; incl rebates 5.3
+QR_Apr2000_pub2003,2003-10,2001-02,prices 1.5%,2060-61,17.1,111.95,GBP bn 2003-04 prices,123.47,GBP bn 2003-04 prices,4.9,,,,sum 59.49+52.46; incl rebates 5.4
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5% real earnings,2001-02,19.1,41.88,GBP bn 2003-04 prices,51.58,GBP bn 2003-04 prices,5.3,,,,Tables 5.2/5.5/5.11
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2010-11,20.7,59.42,GBP bn 2003-04 prices,69.77,GBP bn 2003-04 prices,5.7,,,,sum 48.53+10.89; incl rebates 6.6
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2020-21,21.5,75.65,GBP bn 2003-04 prices,89.05,GBP bn 2003-04 prices,6.2,,,,sum 60.69+14.96; incl rebates 6.9
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2030-31,24.4,102.85,GBP bn 2003-04 prices,118.18,GBP bn 2003-04 prices,7.2,,,,sum 83.41+19.44; incl rebates 7.9
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2040-41,25.5,127.39,GBP bn 2003-04 prices,144.62,GBP bn 2003-04 prices,7.6,,,,sum 103.44+23.95; incl rebates 8.2
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2050-51,26.2,151.12,GBP bn 2003-04 prices,171.43,GBP bn 2003-04 prices,7.8,,,,sum 118.10+33.02; incl rebates 8.4
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 1.5%,2060-61,27.4,184.52,GBP bn 2003-04 prices,207.27,GBP bn 2003-04 prices,8.3,,,,sum 138.90+45.62; incl rebates 8.9
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2% real earnings,2001-02,19.1,41.88,GBP bn 2003-04 prices,51.58,GBP bn 2003-04 prices,5.3,23.86,11.07,2.16,Tables 5.3/5.6/5.12/3.3; contributors/pensioners/contributory support ratio Table 3.3 (price uprating 2%); pop pensioner support ratio 2001 3.32 (Table 1.1)
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2010-11,18.4,54.72,GBP bn 2003-04 prices,64.29,GBP bn 2003-04 prices,5.1,25.42,12.47,2.04,sum 43.76+10.96; incl rebates 6.0; pop ratio 3.10
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2020-21,16.4,62.64,GBP bn 2003-04 prices,73.63,GBP bn 2003-04 prices,4.7,26.78,12.71,2.11,sum 47.15+15.49; incl rebates 5.4; pop ratio 3.24
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2030-31,16.4,77.51,GBP bn 2003-04 prices,88.75,GBP bn 2003-04 prices,4.7,26.59,15.00,1.77,sum 55.84+21.67; incl rebates 5.3; pop ratio 2.70
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2040-41,15.4,89.13,GBP bn 2003-04 prices,100.54,GBP bn 2003-04 prices,4.4,26.96,16.18,1.67,sum 59.67+29.46; incl rebates 4.9; pop ratio 2.46
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2050-51,14.9,103.49,GBP bn 2003-04 prices,115.64,GBP bn 2003-04 prices,4.2,27.16,15.89,1.71,sum 58.71+44.78; incl rebates 4.6; pop ratio 2.52
+QR_Apr2000_pub2003,2003-10,2001-02,prices 2%,2060-61,14.9,127.57,GBP bn 2003-04 prices,140.09,GBP bn 2003-04 prices,4.2,27.15,16.11,1.69,sum 59.49+68.08; incl rebates 4.6; pop ratio 2.44
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2% real earnings,2001-02,19.1,41.88,GBP bn 2003-04 prices,51.58,GBP bn 2003-04 prices,5.3,,,,Tables 5.4/5.6/5.12
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2010-11,20.5,61.16,GBP bn 2003-04 prices,71.87,GBP bn 2003-04 prices,5.7,,,,sum 50.22+10.94; incl rebates 6.6
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2020-21,21.2,81.29,GBP bn 2003-04 prices,95.86,GBP bn 2003-04 prices,6.1,,,,sum 65.96+15.33; incl rebates 6.8
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2030-31,24.1,115.97,GBP bn 2003-04 prices,133.47,GBP bn 2003-04 prices,7.1,,,,sum 95.22+20.75; incl rebates 7.7
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2040-41,25.2,150.93,GBP bn 2003-04 prices,171.60,GBP bn 2003-04 prices,7.5,,,,sum 124.03+26.90; incl rebates 8.1
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2050-51,25.8,188.01,GBP bn 2003-04 prices,213.59,GBP bn 2003-04 prices,7.7,,,,sum 148.75+39.26; incl rebates 8.3
+QR_Apr2000_pub2003,2003-10,2001-02,earnings 2%,2060-61,27.0,240.78,GBP bn 2003-04 prices,270.87,GBP bn 2003-04 prices,8.1,,,,sum 183.76+57.02; incl rebates 8.7
+QR_Apr2005_pub2010,2010-03,2008-09,current announced practice (BSP earnings-linked from 2012; others prices) 1.5% real earnings,2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices (total benefits; total outgo 72.80),5.2,,,,Figure 4.4; pension = BSP 50.18 + ASP 11.12 (sum); GDP% = total outgo; ACTUAL NIF joint rate 2008-09 = 8.95+10.9 = 19.85 (Fig B3); 21.85 from 2011-12; pop 2010 (2006-based): WAP 37.47m SPA+ 11.85m ratio 3.16
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2010-11,20.3,70.72,GBP bn 2009-10 prices,80.14,GBP bn 2009-10 prices (outgo 82.57),5.6,,,,sum 57.20+13.52
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2020-21,19.5,90.73,GBP bn 2009-10 prices,99.95,GBP bn 2009-10 prices (outgo 102.77),5.8,,,,sum 71.67+19.06; pop ratio 2020 3.26
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2030-31,21.1,124.65,GBP bn 2009-10 prices,133.79,GBP bn 2009-10 prices (outgo 137.07),6.4,,,,sum 96.87+27.78; pop ratio 2030 2.96
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2040-41,22.4,164.62,GBP bn 2009-10 prices,173.73,GBP bn 2009-10 prices (outgo 177.54),6.9,,,,sum 123.93+40.69; pop ratio 2040 2.80
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2050-51,22.8,202.68,GBP bn 2009-10 prices,212.36,GBP bn 2009-10 prices (outgo 216.78),7.0,,,,sum 143.81+58.87; pop ratio 2050 2.97
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2060-61,25.7,276.69,GBP bn 2009-10 prices,285.93,GBP bn 2009-10 prices (outgo 291.06),8.0,,,,sum 183.88+92.81; pop ratio 2060 2.73
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 1.5%,2070-71,26.7,348.00,GBP bn 2009-10 prices,357.14,GBP bn 2009-10 prices (outgo 363.09),8.4,,,,sum 225.15+122.85; pop ratio 2070 2.67
+QR_Apr2005_pub2010,2010-03,2008-09,current announced practice 2% real earnings,2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices (outgo 72.80),5.2,,,,Figure 4.5
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2010-11,20.2,70.73,GBP bn 2009-10 prices,80.15,GBP bn 2009-10 prices (outgo 82.58),5.6,,,,sum 57.20+13.53
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2020-21,19.0,94.07,GBP bn 2009-10 prices,103.29,GBP bn 2009-10 prices (outgo 106.26),5.7,,,,sum 74.77+19.30
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2030-31,20.5,135.37,GBP bn 2009-10 prices,144.50,GBP bn 2009-10 prices (outgo 148.12),6.3,,,,sum 106.14+29.23
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2040-41,21.8,187.61,GBP bn 2009-10 prices,196.72,GBP bn 2009-10 prices (outgo 201.14),6.7,,,,sum 142.68+44.93
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2050-51,22.1,242.30,GBP bn 2009-10 prices,251.98,GBP bn 2009-10 prices (outgo 257.36),6.8,,,,sum 173.97+68.33
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2060-61,24.9,347.22,GBP bn 2009-10 prices,356.46,GBP bn 2009-10 prices (outgo 363.01),7.8,,,,sum 233.68+113.54
+QR_Apr2005_pub2010,2010-03,2008-09,current practice 2%,2070-71,25.8,457.73,GBP bn 2009-10 prices,466.88,GBP bn 2009-10 prices (outgo 474.87),8.1,,,,sum 300.53+157.20
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5% (variant),2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices,,,,,Figure 7.2
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2010-11,20.6,68.52,GBP bn 2009-10 prices,77.63,GBP bn 2009-10 prices,,,,,sum 55.04+13.48
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2020-21,17.3,79.37,GBP bn 2009-10 prices,88.71,GBP bn 2009-10 prices,,,,,sum 60.41+18.96
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2030-31,16.9,97.96,GBP bn 2009-10 prices,107.66,GBP bn 2009-10 prices,,,,,sum 70.41+27.55
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2040-41,16.4,117.78,GBP bn 2009-10 prices,127.90,GBP bn 2009-10 prices,,,,,sum 77.52+40.26
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2050-51,15.8,135.58,GBP bn 2009-10 prices,146.83,GBP bn 2009-10 prices,,,,,sum 77.43+58.15
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2060-61,17.1,176.87,GBP bn 2009-10 prices,188.10,GBP bn 2009-10 prices,,,,,sum 85.25+91.62
+QR_Apr2005_pub2010,2010-03,2008-09,prices 1.5%,2070-71,17.1,211.26,GBP bn 2009-10 prices,222.87,GBP bn 2009-10 prices,,,,,sum 89.96+121.30
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5% (variant),2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices,,,,,Figure 7.3
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2010-11,20.8,69.28,GBP bn 2009-10 prices,78.52,GBP bn 2009-10 prices,,,,,sum 55.80+13.48
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2020-21,19.9,89.94,GBP bn 2009-10 prices,100.92,GBP bn 2009-10 prices,,,,,sum 71.00+18.94
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2030-31,21.7,123.38,GBP bn 2009-10 prices,136.61,GBP bn 2009-10 prices,,,,,sum 96.01+27.37
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2040-41,23.2,162.27,GBP bn 2009-10 prices,178.30,GBP bn 2009-10 prices,,,,,sum 122.64+39.63
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2050-51,23.7,198.81,GBP bn 2009-10 prices,219.47,GBP bn 2009-10 prices,,,,,sum 142.11+56.70
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2060-61,26.6,269.88,GBP bn 2009-10 prices,293.83,GBP bn 2009-10 prices,,,,,sum 181.55+88.33
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 1.5%,2070-71,27.6,337.88,GBP bn 2009-10 prices,366.61,GBP bn 2009-10 prices,,,,,sum 222.31+115.57; Fund balance 0.00 in 2070-71
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2% (variant),2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices,,,,,Figure 7.5
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2010-11,20.4,68.53,GBP bn 2009-10 prices,77.64,GBP bn 2009-10 prices,,,,,sum 55.04+13.49
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2020-21,16.4,79.65,GBP bn 2009-10 prices,88.99,GBP bn 2009-10 prices,,,,,sum 60.41+19.24
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2030-31,15.4,99.51,GBP bn 2009-10 prices,109.22,GBP bn 2009-10 prices,,,,,sum 70.41+29.10
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2040-41,14.8,122.18,GBP bn 2009-10 prices,132.31,GBP bn 2009-10 prices,,,,,sum 77.52+44.66
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2050-51,14.1,145.27,GBP bn 2009-10 prices,156.51,GBP bn 2009-10 prices,,,,,sum 77.43+67.84
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2060-61,15.3,197.88,GBP bn 2009-10 prices,209.12,GBP bn 2009-10 prices,,,,,sum 85.25+112.63
+QR_Apr2005_pub2010,2010-03,2008-09,prices 2%,2070-71,15.4,245.95,GBP bn 2009-10 prices,257.57,GBP bn 2009-10 prices,,,,,sum 89.96+155.99
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2% (variant),2008-09,21.1,61.30,GBP bn 2009-10 prices,70.49,GBP bn 2009-10 prices,,,,,Figure 7.6
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2010-11,20.8,69.55,GBP bn 2009-10 prices,78.83,GBP bn 2009-10 prices,,,,,sum 56.06+13.49
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2020-21,19.7,94.10,GBP bn 2009-10 prices,105.69,GBP bn 2009-10 prices,,,,,sum 74.89+19.21
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2030-31,21.4,135.21,GBP bn 2009-10 prices,149.87,GBP bn 2009-10 prices,,,,,sum 106.37+28.84
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2040-41,22.9,186.46,GBP bn 2009-10 prices,205.12,GBP bn 2009-10 prices,,,,,sum 142.70+43.76
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2050-51,23.4,239.37,GBP bn 2009-10 prices,264.64,GBP bn 2009-10 prices,,,,,sum 173.66+65.71
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2060-61,26.1,340.72,GBP bn 2009-10 prices,371.47,GBP bn 2009-10 prices,,,,,sum 233.04+107.68
+QR_Apr2005_pub2010,2010-03,2008-09,earnings 2%,2070-71,27.1,446.78,GBP bn 2009-10 prices,485.55,GBP bn 2009-10 prices,,,,,sum 299.71+147.07; Fund balance 0.00 in 2070-71
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock indefinitely (base case; pre-Pensions Act 2014; CPI 2.0% earnings CPI+2.4% triple lock earnings+0.3%),2010-11,21,70,GBP bn CASH (nominal),79,GBP bn CASH (total benefit expenditure; total outgo 80),,,,,Table H1 (Appendix H; whole-£bn); pension = basic 56 + AP 14 (sum); ACTUAL joint Class1 NIF rate 21.85 (9.95+11.9 from 2011-12; 19.85 in 2010-11)
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2020-21,21,106,GBP bn CASH,112,GBP bn CASH (outgo 114),,,12.8,,sum 85+21; pensioners Table F2 (basic RP recipients incl overseas)
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2030-31,25,203,GBP bn CASH,212,GBP bn CASH (outgo 214),,,16.0,,sum 167+36
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2040-41,28,363,GBP bn CASH,374,GBP bn CASH (outgo 377),,,18.0,,sum 298+65
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2050-51,29,600,GBP bn CASH,614,GBP bn CASH (outgo 619),,,18.5,,sum 480+120
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2060-61,32,1060,GBP bn CASH,1079,GBP bn CASH (outgo 1087),,,20.0,,sum 814+246
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2070-71,34,1762,GBP bn CASH,1785,GBP bn CASH (outgo 1798),,,20.8,,sum 1339+423
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock base case,2075-76,35,2261,GBP bn CASH,2289,GBP bn CASH (outgo 2304),,,,,sum 1717+544
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014 as legislated (nSP; end of contracting-out; SPA 67 2026-28),2010-11,21,70,GBP bn CASH,79,GBP bn CASH,,,,,Table I1
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2020-21,20,106,GBP bn CASH,113,GBP bn CASH,,,,,sum 87+19
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2030-31,23,193,GBP bn CASH,201,GBP bn CASH,,,,,sum 177+16
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2040-41,27,364,GBP bn CASH,375,GBP bn CASH,,,,,sum 355+9
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2050-51,28,592,GBP bn CASH,606,GBP bn CASH,,,,,sum 589+3
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2060-61,30,1013,GBP bn CASH,1031,GBP bn CASH,,,,,
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2070-71,32,1669,GBP bn CASH,1693,GBP bn CASH,,,,,
+QR_Apr2010_pub2014,2014-07,2010-11,triple lock + Pensions Act 2014,2075-76,32,2143,GBP bn CASH,2170,GBP bn CASH,,,,,
+QR_Apr2010_pub2014,2014-07,2010-11,earnings up-rating on all benefits (variant),2010-11,21,70,GBP bn CASH,79,GBP bn CASH,,,,,Table H15
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2020-21,21,108,GBP bn CASH,115,GBP bn CASH,,,,,sum 84+24
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2030-31,26,212,GBP bn CASH,223,GBP bn CASH,,,,,sum 161+51
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2040-41,29,373,GBP bn CASH,391,GBP bn CASH,,,,,sum 278+95
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2050-51,30,604,GBP bn CASH,632,GBP bn CASH,,,,,sum 435+169
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2060-61,33,1047,GBP bn CASH,1091,GBP bn CASH,,,,,sum 716+331
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2070-71,34,1720,GBP bn CASH,1788,GBP bn CASH,,,,,sum 1144+576
+QR_Apr2010_pub2014,2014-07,2010-11,earnings variant,2075-76,35,2195,GBP bn CASH,2280,GBP bn CASH,,,,,sum 1447+748
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock throughout (base case; CPI 2.0% earnings 4.3% from 2022-23; SPa path per GA SPa review: 68 in 2037-39 etc.),2015-16,23.5,88.7,GBP bn CASH (nominal),94.7,GBP bn CASH (total benefit expenditure; total payments 96.6),,,,,Appendix E table; Treasury Grant 9.6 paid 2015-16; ACTUAL Class1 rate 21.85 (para 3.19)
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2020-21,20.7,100.8,GBP bn CASH,106.8,GBP bn CASH (payments 108.9),,,12.6,,pensioners Table D1 (RP recipients incl deferred)
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2030-31,23.2,182.0,GBP bn CASH,189.4,GBP bn CASH (payments 192.1),,,14.5,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2040-41,25.9,325.0,GBP bn CASH,334.1,GBP bn CASH (payments 337.1),,,16.2,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2050-51,26.0,518.8,GBP bn CASH,530.5,GBP bn CASH (payments 535.1),,,16.4,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2060-61,26.3,831.0,GBP bn CASH,845.5,GBP bn CASH (payments 852.4),,,16.8,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2070-71,26.4,1328.3,GBP bn CASH,1346.5,GBP bn CASH (payments 1357.1),,,17.1,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock base case,2080-81,27.6,2197.6,GBP bn CASH,2220.1,GBP bn CASH (payments 2236.3),,,,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock + currently legislated SPa only (variant),2015-16,23.5,88.7,GBP bn CASH,94.7,GBP bn CASH,,,,,Table F19
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2020-21,20.7,100.8,GBP bn CASH,106.8,GBP bn CASH,,,,,sum 86.3+14.5
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2030-31,23.2,182.0,GBP bn CASH,189.4,GBP bn CASH,,,,,sum 76.3+105.7
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2040-41,27.4,341.1,GBP bn CASH,350.2,GBP bn CASH,,,,,sum 45.0+296.1
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2050-51,27.5,544.9,GBP bn CASH,556.5,GBP bn CASH,,,,,sum 10.5+534.4
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2060-61,29.7,920.0,GBP bn CASH,934.2,GBP bn CASH,,,,,sum 0.5+919.5
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2070-71,31.0,1514.0,GBP bn CASH,1531.8,GBP bn CASH,,,,,
+QR_Apr2015_pub2017,2017-10,2015-16,triple lock legislated SPa,2080-81,33.1,2536.3,GBP bn CASH,2558.5,GBP bn CASH,,,,,

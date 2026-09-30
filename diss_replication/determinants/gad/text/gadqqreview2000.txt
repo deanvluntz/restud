@@ -1,0 +1,1115 @@
+                                 I
+                                 !
+
+
+
+
+                                      National Insurance Fund
+                                      Long Term
+                                      Financial Estimates
+
+
+                                      Report by the Government Actuary on the Financial
+                                      Effects on the National Insurance Fund of the Child
+                                      Support, Pensions and Social Security Bill 1999
+
+
+                                      Presented to Parliament by the Secretary of State for Social Security
+                                      by Command of Her Majesty
+                                      January 2000
+
+
+
+
+     Cm 4573                          £4.70
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                     To: The Right Hon. Alistair Darling, MP, Secretary of State for Social Security
+
+                                         Ms Dawn Primarolo, MP, Paymaster General
+
+
+                                     Sir and Madam,
+
+                                     I have reviewed the consequences of the proposed changes contained in the Child
+                                     Support, Pensions and Social Security Bill 1999 on the National Insurance Fund financial
+                                     estimates. My conclusions are given in the attached report.
+
+                                     I am, Sir and Madam,
+                                     Your obedient Servant,
+
+
+
+
+                                     Christopher Daykin, CB FIA
+
+                                     Government Actuary
+                                     January 2000
+
+
+
+
+                                                                                                                            1
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                      Contents                                                                            pag
+                                      1.    Introduction                                                                   4
+
+                                      2.    The Child Support, Pensions and Social Security Bill 1999                      5
+
+                                      3.     Stakeholder Pension Schemes                                                  11
+
+                                      4.    Appendix 1: The Welfare Reform and Pensions Act 1999,
+                                            The Tax Credits Act 1999 and Home Responsibilities Protection                 14
+
+                                      5.    Appendix 2: Accrual Rates for State Second Pension                            17
+
+
+
+
+                                      List of Tables
+                                                                                                                          Page
+                                      Table 2.1: Estimated effect of the State Second Pension on the expenditure in
+                                                 respect of eamings-related pension over state pension age - flat-rate
+                                                 benefit rates and earnings limits increase in line with prices (£bn in
+                                                 1999-00 price terms)                                                      8
+
+                                      Table 2.2: Total National Insurance Fund expenditure for all benefits as a
+                                                 percentage of projected GDP before and after the effects of the State
+                                                 Second Pension                                                            8
+
+                                      Table 2.3: Estimated effect of the State Second Pension on the amount of the
+                                                 contracted-out rebate payable before allowing for stakeholder
+                                                 pension schemes - flat-rate benefit rates and earnings limits increase
+                                                 in line with prices (£bn in 1999-00 price terms)                          8
+
+                                      Table 2.4: Estimated Class 1 contribution rates to balance income and
+                                                 expenditure before and after the State Second Pension - price
+                                                 uprating of flat-rate benefits and earnings limits                        9
+
+                                      Table 3.1: Estimated additional contracted-out rebates and contracted-out
+                                                 deductions in respect of stakeholder pension schemes - flat-rate
+                                                 benefit rates and earnings limits increase in line with prices (£bn in
+                                                 1999-00 price terms)                                                     12
+
+                                      Table 3.2: Estimated Class 1 contribution rates to balance income and
+                                                 expenditure allowing for the effects of stakeholder pension schemes
+                                                 on the State Second Pension assuming the first approach to contracting-
+                                                 out - price uprating of flat-rate benefits and earnings limits          12
+
+                                      Table 3.3: Estimated Class 1 contribution rates to balance income and expenditure
+                                                 allowing for the effects of stakeholder pension schemes on the State
+                                                 Second Pension assuming the second approach to contracting-out -
+                                                 price uprating of flat-rate benefits and earnings limits               13
+
+                                      Table 4.1: Estimated benefit expenditure from the previous QR - flat-rate benefit
+                                                 rates and earnings limits increase in line with prices (£bn in 1999-00
+                                                 price terms)                                                             15
+
+                                      Table 4.2: Estimated benefit expenditure allowing for the effects of the Welfare
+                                                 Reform and Pensions Act 1999 the Tax Credits Act 1999 and the
+                                                 exclusion of home responsibilities protection for SERFS - flat-rate
+                                                 benefit rates and earnings limits increase in line with prices (£bn in
+                                                 1999-00 price terms)                                                     15
+
+
+
+
+     2
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                      List of Tables (cont.)
+                                                                                                                           Page
+
+                                      Table 4.3: Estimated Class 1 contribution rates to balance income and expenditure
+                                                 before and after the effects of the Welfare Reform and Pensions Act
+                                                 1999, the Tax Credits Act 1999 and the exclusion of home
+                                                 responsibilities protection for SERPS - price upraiing of flat-rate
+                                                 benefits and earnings limits                                           16
+
+                                      Table 5.1: State Second Pension accrual rates                                        17
+
+
+
+                                      List of Figures
+                                      Figure 2.1: Estimated total basic plus SERPS pension at award before the effects
+                                                  of the State Second Pension, as a percentage of earnings for different
+                                                  earnings levels and different years of retirement                         9
+
+                                      Figure 2.2: Estimated total basic plus SERPS/State Second Pension at award, as
+                                                  a percentage of earnings for different earnings levels and different
+                                                  years of retirement                                                      10
+
+                                      Figure 2.3: Estimated total basic and eamings-related pension at award in the year
+                                                  2051 for different levels of earnings, before and after the introduction
+                                                  of the State Second Pension, in 1999/00 earnings terms                   10
+
+
+
+
+                                                                                                                                3
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+        Introduction             1      1.1     The Child Support, Pensions and Social Security Bill 1999 (“the Bill”) gives effect
+                                        to the proposals for a State Second Pension contained in the Green Paper “A new contract
+                                        for welfare: Partnership in Pensions”, Cm 4179, published in December 1998. This
+                                        report provides estimates of the financial effects of the measures in the Bill on the income
+                                        and expenditure of the National Insurance Fund for the purpose of the consideration by
+                                        Parliament of these measures.
+
+                                        1.2 The National Insurance Scheme is financed on a pay-as-you-go basis with current
+                                        rates of contribution set to produce the income needed to meet current expenditure on
+                                        benefits and the costs of administration, as well as to maintain a reasonable working
+                                        balance in the National Insurance Fund. Legislation provides for a limited Treasury Grant
+                                        to be paid into the National Insurance Fund if the working balance is expected to fall
+                                        below a certain level.
+
+                                        1.3 The legislation governing the National Insurance Scheme makes provision for 5
+                                        yearly reviews by the Government Actuary on the operation of the scheme, including
+                                        long term projections of the expenditure and of the corresponding rates of contribution
+                                        likely to be required in future years. The last Quinquennial Review (QR), published as
+                                        Cm 4406 in July 1999, contained financial projections to the year 2060.
+
+                                        1.4 That review was based on the legislation in force at March 1999. It included, in
+                                        Section 10, estimates of the effects of the changes to the National Insurance contribution
+                                        structure announced in the March 1999 budget, as far as they were known at that stage.
+
+                                        1.5    The QR did not include the effects of the Welfare Reform and Pensions Act 1999
+                                        or the Tax Credits Act 1999, but did include an allowance for home responsibilities
+                                        protection to be extended to SERFS. However, the necessary secondary legislation to
+                                        implement the latter has not been introduced. The Welfare Reform and Pensions Act 1999
+                                        increases expenditure in the short term in respect of benefits for widows and widowers
+                                        but reduces it in the longer term. It also reduces expenditure on incapacity benefit. The
+                                        Tax Credits Act 1999 increases expenditure on the State Eamings-Related Pension
+                                        Scheme (SERFS). The exclusion of the allowance for home responsibilities protection
+                                        for SERFS reduces expenditure. Appendix 1 to this report sets out the effects of these
+                                        changes on the figures in Section 10 of the QR to establish base-line financial estimates
+                                        from which the changes resulting from the Bill can be measured.
+
+                                        1.6 The Welfire Reform and Pensions Act 1999 includes provision for 100%
+                                        inheritance of SJiRPS to continue after April 2000 and for the Secretary of State to make
+                                        regulations to amend this. Since it is not yet clear what regulations will be laid, it has been
+                                        assumed for the purposes of these financial estimates that the 50% inheritance factor for
+                                        SERFS and State Second Pension will apply from April 2000 as originally intended.
+
+                                        1.7 The financial effects of the provisions in the Bill on the base-line financial
+                                        estimates are shown in section 2.
+
+                                        1.8 The Welfare Reform and Pensions Act 1999 also introduces the framework for
+                                        stakeholder pension schemes. It has been assumed that these will first be available in the
+                                        year 2001/02. The effects of the Bill should be assessed against the current SERFS regime
+                                        incorporating the effect of stakeholder pension schemes. However, in isolation the only
+                                        effect that stakeholder pension schemes might have on the National Insurance Fund is on
+                                        the numbers contracting-out. It is not clear what effect stakeholder pension schemes
+                                        would have on contracting-out if SERFS were retained. It is unnecessary to speculate on
+                                        the level of additional contracting-out that might have arisen under SERFS when SERFS
+                                        will be radically altered in the year after the introduction of stakeholder pension schemes.
+                                        Additionally, stakeholder pension schemes and State Second Pension can be seen as a
+                                        package of measures which should be considered together. Therefore, in this report, the
+                                        possible effects of stakeholder pension schemes on the National Insurance Fund are
+                                        calculated allowing for the effects of State Second Pension and are shown in section 3.
+
+                                        1.9 The estimates in this report are based on the same demographic, economic and
+                                        other assumptions as those underlying the last QR and uses the same methodology.
+                                        Estimates are shown assuming only price uprating of flat-rate benefit rates and earnings
+                                        limits, with 1.5% a year real earnings growth. Estimates of future benefit expenditure are
+                                        shown in 1999-00 price terms. Detailed discussion of the assumptions and methodology
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       is not repeated in this report. Interested readers should refer to the QR. Section 3 of this
+                                       report gives some indication of the sensitivity of the estimates to changes in the numbers
+                                       contracted-out. For an indication of the sensitivity of the estimates to other assumptions,
+                                       the reader is referred to the QR.
+
+      The Child Support,       2       2.1    The Bill includes a number of changes to SERFS, which will subsequently be
+      Pensions and Social              known as the State Second Pension. The main changes, which, for the purpose of this
+      Security Bill 1999               report, have been assumed to take effect from the year of accrual 2002/03, are:
+
+                                                 •    the introduction of 3 different accrual rates on different bands of earnings;
+
+                                                 •    treating earners at or above the annual lower earnings limit up to the low
+                                                      earnings threshold (£9,500 a year in 1999/00 terms) as though they earned the
+                                                      low earnings threshold,
+
+                                                 •    treating qualifying carers and the long-term disabled who have no earnings or
+                                                      earnings below the annual lower earnings limit, as if they had earnings at the
+                                                      level of the low earnings threshold in a qualifying year. Future expenditure
+                                                      that would have arisen if the anticipated home responsibilities protection had
+                                                      been introduced in respect of SEFPS, for which allowance was made in the
+                                                      QR, will not now be incurred. It will be replaced by the expenditure in respect
+                                                      of carers and the long-term disabled who qualify for State Second Pension.
+
+                                       2.2    These changes will increase expenditure on eamings-related pensions. The changes
+                                       will also increase the rebates payable for contracting-out of the State Second Pension.
+
+                                       2.3    On 29 November, the Government issued a consultation paper “The Structure of
+                                       Rebates for the State Second Pension”, seeking views on two approaches for the future
+                                       contracting-out regime. This report provides the financial estimates for both approaches,
+                                       referred to in this report as the “first approach” and the “second approach”.
+
+                                       2.4    Under the first approach, rebates will reflect the State Second Pension accrual rate
+                                       structure and COSRS (contracted-out salary related schemes) will be required to provide
+                                       correspondingly higher benefits. Rebates will be based on actual earnings. People
+                                       earning less than the low earnings threshold in a year will receive a State Second Pension
+                                       top-up from the State based on the difference between their actual earnings in a year and
+                                       the low earnings threshold.
+
+                                       2.5    Under the second approach, COSRS and COMPS (contracted-out money
+                                       purchase schemes) rebates will reflect the current SERFS accraal rates. Rebates will be
+                                       based on actual earnings. Members of COSRS and COMPS earning below £21,600 (in
+                                       1999/00 terms) will receive a State Second Pension top-up from the State. This will be
+                                       based on the difference between what their State Second Pension (based on the low
+                                       earnings threshold if they earn less than that) and what their SERFS entitlement would
+                                       have been if they had not been contracted-out. APPs (appropriate personal pension
+                                       schemes) rebates will reflect the State Second Pension accrual rates structure. Rebates
+                                       will be based on actual earnings. Those with an APP who earn less than the low earnings
+                                       threshold in a year will receive a Second State Pension tcp-up from the State based on
+                                       the difference between the low earnings threshold and their actual earnings in a year.
+
+                                       2.6    Assuming the State Second Pension takes effect from April 2002, the last year of
+                                       accrual of earnings to count for the calculation of SERFS benefit will be the year
+                                       2001/02. Accrual of earnings for SERFS purposes arising from years before 2002/03 is
+                                       unaffected by the introduction of the State Second Pension. SERFS will still be
+                                       calculated and paid in respect of those accruals under the current rules.
+
+                                       2.7     The State Second Pension will start to accrue on earnings (actual or treated as
+                                       earned) between the lower earnings limit and the upper earnings limit in the years after
+                                       2001/02. Earnings between the lower earnings limit and the upper earnings limit will
+                                       initially be divided into three bands. Band 1 will be from the annual lower earnings limit
+                                       to the low earnings threshold. The low earnings threshold will be £9,500 a year in
+                                       1999/00 terms)1. Band 2 will be from the low earnings threshold plus £1 to (3 x the low
+
+                                       1
+                                           The original proposal in ihc Green Paper was £9000 in 1998/99 terms.
+
+
+                                                                                                                                      5
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       earnings threshold - 2 x the lower earnings limit). This will be £21,600 in 1999/00 terms.
+                                       Band 3 will be from the top of the second band plus £1 to the upper earnings limit. The
+                                       low earnings threshold will be increased each year in line with the annual increase in
+                                       average earnings, including the period between 1999/00 and 2002/03. Rounding rules
+                                       will apply to the calculation of the low earnings threshold and the calculation of the top
+                                       of Band 2 as described in 5.2 below.
+
+                                       2.8    The top of the second band will increase faster than earnings. The upper earnings
+                                       limit will be increased in line with prices, which are expected to increase at a slower rate
+                                       than earnings. Thus, the top of the second band will exceed the upper earnings limit after
+                                       a number of years. There will then only be two bands, as the upper earnings limit will
+                                       continue to apply. On the assumption that earnings increase at 1.5% a year faster than
+                                       prices, this will occur approximately in the year 2014 on the QR assumptions, allowing
+                                       for the increases in the upper earnings limit in excess of price inflation announced in the
+                                       March 1999 budget. If there are further increases in the upper earnings limit over and
+                                       above price inflation, this will delay the time when the top of the second band will exceed
+                                       the upper earnings limit.
+
+                                       2.9    In the longer term the low earnings threshold will also exceed the upper earnings
+                                       limit. On the assumption that earnings increase at 1.5% a year faster than prices, this will
+                                       occur in about the year 2074, again allowing for the increases in the upper earnings limit
+                                       in excess of price inflation announced in the March 1999 budget. There would then again
+                                       only be one band, the lower earnings limit to the upper earnings limit, but with an accrual
+                                       rate double that of SERFS, as described below.
+
+                                       2.10 Later references to the low earnings threshold in this review, should, where
+                                       appropriate, be taken to refer to the annual threshold appropriately increased for future
+                                       years in line with earnings.
+
+                                       2.11 People earning between the lower earnings limit and low earnings threshold will
+                                       be treated as though they had earnings at the level of the low earnings threshold. This will
+                                       create a significant break point. Those earning below the lower earnings limit, even if
+                                       only by a penny, will accrue no State Second Pension, whereas those earning at or over
+                                       the lower earnings limit, will have their State Second Pension based on earnings equal to
+                                       the low earnings threshold.
+
+                                       2.12 The QR assumed that, with price uprating of the lower earnings limit, many
+                                       earners who currently earn below the lower earnings limit would earn above the lower
+                                       earnings limit at some point in the future. Their earnings are assumed to increase at 1.5%
+                                       a year faster than the increase to the lower earnings limit. Thus, they will then qualify for
+                                       a significant State Second Pension based on the low earnings threshold. Additionally,
+                                       those earning just above the lower earnings limit will not be liable for income tax or
+                                       National Insurance contributions. There will be scope for low earners to arrange for their
+                                       earnings to be just above the lower earnings limit rather than just below the lower
+                                       earnings limit. It will be necessary, from an administrative point of view, to collect
+                                       information on the earnings of those above the lower earnings limit but below the income
+                                       tax/new primary threshold for National Insurance contributions.
+
+                                       2.13 It is impossible to predict with any certainty exactly what the shape of the earnings
+                                       distribution will be around the lower earnings limit in the future and this could have a
+                                       significant effect on the level of benefit expenditure. This uncertainty is compounded by
+                                       the introduction of the national minimum wage. Thus, a further degree of uncertainty is
+                                       introduced to the financial estimates as a result of these changes.
+
+                                       2.14 The State Second Pension accrual rates will be double, half and equal to the
+                                       current SERFS accrual rates on bands 1, 2 and 3 of earnings respectively. Thus, for
+                                       retirements in the year 2009-10 for example, the State Second Pension will be based on
+                                       40%, 10% and 20% of earnings in bands 1, 2 and 3 respectively. The accrual rates
+                                       appropriate for different years of retirement in future are shown in appendix 2.
+
+
+
+
+      6
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       2.15 Certain categories of carers and the long-term disabled that satisfy the qualifying
+                                       conditions for a full financial year will qualify for the State Second Pension if they have
+                                       no earnings or if they earn below the lower earnings limit. The categories are:
+
+                                              •   People receiving home responsibilities protection because they receive child
+                                                  benefit in respect of a child aged under six;
+
+                                              •   People receiving long-term incapacity benefit, if by the end of their working
+                                                  life they meet a labour force attachment test of having worked and paid
+                                                  National Insurance contributions for approximately 10% of their working lives;
+
+                                              •   People with underlying entitlement to long-term incapacity benefit but who
+                                                  fail the contribution conditions or receive another overlapping benefit, if by
+                                                  the end of their working life they meet a labour force attachment :est of having
+                                                  worked and paid National Insurance contributions for approximately 10% of
+                                                  their working lives;
+
+                                              •   People receiving severe disablement allowance (which will be abolished for
+                                                  new awards from the year 2001/02), if by the end of their working life they
+                                                  meet a labour force attachment test of having worked and paid National
+                                                  Insurance contributions for approximately 10% of their working lives;
+
+                                              •   People receiving Invalid Care Allowance, or with underlying entitlement to it;
+
+                                              •   People who are awarded home responsibilities protection because they:
+
+                                                  (i) are regularly engaged for at least 35 hours a week in caring for someone
+                                                      who receives Attendance Allowance, Constant Care Allowance or the care
+                                                      component of Disability Living Allowance at the middle or highest rate,
+                                                      or
+
+                                                  (ii) received Income Support without needing to be available for work
+                                                       because they were caring for a disabled person.
+
+                                       2.16 These groups will accrue entitlement to the State Second Pension from the date of
+                                       implementation.
+
+                                       2.17 The amount of the State Second Pension earned for a year in which a person
+                                       qualifies under the criteria listed above will be calculated as if they had annual earnings
+                                       at the level of the low earnings threshold in that year. The provisions for carers and the
+                                       long-term disabled within the State Second Pension will be based on the State Second
+                                       Pension accrual rate for the band of earnings from the lower earnings limit to the low
+                                       earnings threshold.
+
+                                       2.18 For the purposes of estimating the financial effects of State Second Pension it has
+                                       been assumed that the level of contracting-out will be the same as was assumed in the
+                                       QR. The possible financial effects of further contracting-out via stakeholder pension
+                                       schemes are dealt with in section 3.
+
+                                       2.19 Following the Welfare Reform and Pensions Act 1999, SERPS is only payable to
+                                       those receiving Widowed Parents Allowance, not those receiving Bereavement
+                                       Allowance. SERPS expenditure in respect of Widowed Parents Allowance is small in the
+                                       longer term and the extra cost of replacing this by State Second Pension ii not significant.
+
+                                       2.20 Table 2.1 sets out the financial effects of the proposals for State Second Pension
+                                       in the Bill on expenditure in respect of SERPS for those over state pension age. Table 2.1
+                                       contains estimates for both the first and second approach to contracting-out described in
+                                       paragraphs 2.3 to 2.5 above. The expenditure under the current regime is taken from
+                                       Table 4.2 in Appendix 1.
+
+
+
+
+                                                                                                                                 7
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                      1'able 2.1 Estimaied effect of the State Second Pension on the expenditure in respect of
+                                                 earnings-related pension over state pension age - flat-rate benefit rates and earnings
+                                                 limits increase in line with prices (£bn in 1999-00 price terms)
+                                                                                                          Year
+                                      Benefit structure                         1999-00 2000-01 2010-11 2020-21 2030-31 2040-41 2050-51 2060-61
+
+                                      Current SERFS                                4.5       4.9    8.9    10.9      12.4   12.3   13.3   15.5
+
+                                      State Second Pension - the first approach 4.5          4.9    9.4    12.6      17.1   21.0   27.5   36.9
+
+                                      Extra cost of State Second Pension -          0.0      0.0    0.5        1.7    4.7    8.6   14.2   21.4
+                                       The first approach
+
+                                      State Second Pension -                        4.5      4.9    9.5    12.8      17.8   22.5   30.2   41.4
+                                       the second approach
+
+                                      Extra cost of State Second Pension-           0.0      0.0    0.6        2.0    5.4   10.2   16.9   25.9
+                                       The second approach
+
+                                      2.21                                               Ta
+                                      benefits as a percentage of estimated gross domestic product in future years before and
+                                      after the changes in expenditure arising from State Second Pension, assuming price
+                                      uprating of flat-rate benefit rates and contribution limits.
+
+                                      Table 2.2 Total National Insurance Fund expenditure for all benefits as a percentage of
+                                                projected GDP before and after the effects of the State Second Pension.
+                                                                      Total Expenditure as a Percentage of Projected GDP(%)
+
+                                      Year                Before the Bill                   After trie Bill:                After the Bill:
+                                                                                          the first approach            the second approach
+
+                                      1999-                  5.5%                             5.5%
+                                                                                                 005.5%
+                                      2000   -               5.4%                             5.4%
+                                                                                                 015.4%
+                                      2010-11                5.4%                             5.5% 5.5%
+                                      2020-21                5.3%                             5.4% 5.4%
+                                      2030-31                5.2%                             5.5% 5.6%
+                                      2040-41                4.7%                             5.2% 5.3%
+                                      2050-51                4.0%                             4.8% 4.9%
+                                      2060-61                3.6%                             4.5% 4.7%
+
+
+                                      2.22 Table 2.2 shows that in the longer-term total National Insurance Fund expenditure
+                                      will constitute a higher percentage of GDP as a result of the changes introduced by the
+                                      Bill. However, the higher expenditure from the National Insurance Fund will be partially
+                                      offset by lower expenditure on income-related social security benefits (e.g. income
+                                      support).
+
+                                      2.23 Table 2.3 shows the effect on the amount of the contracted-out rebates payable
+                                      from the National Insurance Fund following the changes introduced by the Bill. The
+                                      increased rebates reflect the higher benefits under the State Second Pension, depending
+                                      on the approach adopted for the contracting-out regime. Rebates are based on the current
+                                      rebate basis and are applied to the relevant earnings in the band between the lower
+                                      earnings limit and the upper earnings limit, taking account of their respective accrual
+                                      rates. Rebates are based on actual earnings. Table 2.3 does not include the effect on
+                                      rebates of any further contracting-out via stakeholder pension schemes.
+
+                                      Table 2.3 Estimated effect of the State Second Pension on the amount of the contracted-out
+                                                rebate payable before allowing for stakeholder pension schemes - flat-rate benefit
+                                                rates and earnings limits increase in line with prices (£bn in 1999- 00 price terms)
+                                                                                   Contracted-out Rebates £bn
+
+                                      Year                Before the Bill                   After the Bill:      After the Bill:
+                                                                                          the first approach the second approach
+                                      1999-                     8.4                               8.4
+                                                                                                    00                8.4
+                                      2000-                     8.8                               8.8
+                                                                                                    01                8.8
+                                      2010-11                   8.8                              10.3                 9.5
+                                      2020-21                   9.1                              10.9                 9.8
+                                      2030-31                   8.5                              11.0                 9.3
+                                      2040-41                   8.3                              11.6                 9.1
+                                      2050-51                   8.5                              13.1                 9.5
+                                      2060-61                   8.5                              14.6                 9.8
+
+
+
+      8
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                      2.24 Table 2.4 shows the estimated Class 1 contribution rates required to balance
+                                      income and expenditure following the Bill compared to the rates required prior to the
+                                      Bill, assuming price uprating of flat-rate benefit rates and earnings limits. The figures for
+                                      “Before the Bill” are taken from the final column of Table 4.3.
+
+                                      Table 2.4 Estimated Class 1 contribution rates to balance income and expenditure before
+                                                and after the State Second Pension - price uprating of flat-rate benefits and
+                                                earnings limits.
+                                                                        Joint Employee and Employer Contribution Rate* %
+
+                                      Year                Before the Bill                        After the Bill:      After the Bill:
+                                                                                               the first approach the second approach
+                                      1999-                     20.0                                     00
+                                                                                                      20.0                20.0
+                                      2000   -                  20.2                                  20.2
+                                                                                                         01               20.2
+                                      2010-11                   18.6                                  19.2                19.0
+                                      2020-21                   17.5                                  18.4                18.2
+                                      2030-31                   17.8                                  19.4                19.2
+                                      2040-41                   16.4                                  18.7                18.5
+                                      2050-51                   14.6                                  17.8                17.7
+                                      2060-61                   13.5                                  17.7                17.6
+
+                                      * These rates exclude that part of the rates allocated to the NHS. They are based on the revised Class 1
+                                       contribution regime announced in the March 1999 budget.
+
+
+                                      2.25 The effects of the State Second Pension on the pension entitlement of an
+                                      individual will depend on their earnings. Figure 2.1 shows the total basic plus SERFS
+                                      pension that a person would receive at award under the current scheme for various levels
+                                      of earnings and years of retirement, as a percentage of those earnings. Figure 2.2 shows
+                                      corresponding figures following the introduction of the State Second Pension for the first
+                                      stage of the State Second Pension, assuming it continues indefinitely. In both cases it is
+                                      assumed that the person works in every year of their working life.
+
+                                      Figure 2.1 Estimated total basic plus SERFS pension at award before the effects of the State
+                                                 Second Pension, as a percentage of earnings for different earnings levels and
+                                                 different years of retirement
+
+                                      % of earnings
+
+
+
+
+                                                                                   Year of retirement
+
+
+
+
+                                                                                                                                                 9
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       Figure 2.2 Estimated total basic plus SERPS/State Second Pension at award, as a percentage
+                                                  of earnings for different earnings levels and different years of retirement
+
+                                        % of earnings                                                                           Karnings
+
+
+
+
+                                       2.26 Figure 2.3 shows the award of basic and eamings-related pension in the year 2051,
+                                       the first year of retirement under which a person would have been in the State Second
+                                       Pension for all their working life. It shows the award, for different levels of earnings, that
+                                       a person would have had if SERFS were to continue and the award that they will have
+                                       under the first stage of the State Second Pension, assuming it continues indefinitely.
+                                       Figure 2.3 assumes that the person works for each year of their working life. The earnings
+                                       and pension at award are shown in 1999/00 earnings terms. The pensions at award in
+                                       1999/00 price terms would be approximately double those shown in Figure 2.3. With
+                                       higher living standards in the year 2051, the figures in earnings terms give a better feel
+                                       of what it will be like to live on those pensions.
+
+                                       Figure 2.3 Estimated total basic and earnings-related pension at award in the year 2051 for
+                                                  different levels of earnings, before and after the introduction of the State Second
+                                                  Pension, in 1999/00 earnings terms.
+
+                                                            □ Basic   □ SERFS   ■ExcessofState Second Pension over SERFS
+
+
+
+
+                                       2.27 Under stage 2 of the State Second Pension, the scheme will convert to a flat-rate
+                                       basis. However, under either approach to contracting-out, rebates will continue to be
+                                       eamings-related. If the private pension arising in respect of the rebate does reproduce in
+                                       practice the pension that the rebate is based on, then for a person who is contracted-out
+                                       the total award at pension age from the basic pension, State pension top-up (if applicable)
+                                       and the private pension resulting from the contracted-out rebates will be as illustrated in
+                                       Figures 2.1, 2.2 and 2.3 above.
+
+       10
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       2.28 The State Second Pension significantly affects the pension for lower earners.
+                                       Those earning at the lower earnings limit in 1999 and whose earnings increase in line
+                                       with the average increase in earnings will receive a State Second Pension based on the
+                                       low earnings threshold. This, together with their basic pension entitlement, will give
+                                       them a pension well in excess of 100% of their earnings at award. This will continue to
+                                       be the case in the long term even though the basic pension is increased in line with prices.
+                                       This contrasts with their position if SERPS were to continue unaltered, where their total
+                                       state pension would be approximately 50% of their earnings. Similarly other low earners
+                                       will be much better off, although the higher their earnings the less the improvement is in
+                                       percentage terms.
+
+       Stakeholder Pension      3      3.1    The Welfare Reform and Pensions Act 1999 contains the primary legislation for
+       Schemes                         the introduction of stakeholder pension schemes. For the purpose of this report it is
+                                       assumed that they will first be available in the year 2001/02. Stakeholder pension
+                                       schemes are private pension arrangements that can be structured as occupational pension
+                                       schemes or personal pension schemes. Stakeholder pension schemes can be used to
+                                       contract out of SERPS/State Second Pension and will therefore have an effect on the
+                                       rebates payable for contracting-out and the amount of SERPS/State Second Pension
+                                       payable.
+
+                                       3.2    For the purposes of the estimates in this review, it has been assumed that people
+                                       contracting-out via stakeholder pension schemes will do so using personal pension style
+                                       stakeholder pension schemes and that they will receive the same rate of age-related
+                                       rebates as apply in respect of appropriate personal pensions. If different rebate rates are
+                                       adopted, then the contracted-out rebates payable will be correspondingly different.
+
+                                       3.3    There is considerable uncertainty over the number, age, sex and earnings of those
+                                       who will take up stakeholder pension schemes. Additionally, it is uncertain how many of
+                                       those effecting stakeholder pension schemes will use them to contract out of the State
+                                       Second Pension. Financial estimates have therefore been made on a number of
+                                       assumptions about contracting-out via stakeholder pension schemes. People contracting
+                                       out in this way are assumed to be additional to those assumed to contract out in future
+                                       years under the current arrangements.
+
+                                       3.4    If there is no additional contracting-out as a result of stakeholder pension schemes,
+                                       the financial estimates in Section 2 will be unaffected by the introduction of stakeholder
+                                       pension schemes.
+
+                                       3.5    The alternative assumptions made for the additional future level of contracting-out
+                                       via stakeholder pension schemes under both the first and second approach are:
+
+                                              1. The additional number contracted-out is assumed to be 0.5 million in the year
+                                                 2001/02 and thereafter. They are aged below 50 in 2001/02,51 in 2002/03 etc.
+
+                                              2. The additional number contracted-out is assumed to be 0.5 million in the year
+                                                 2001/02, increasing by 0.25 million each year until there are 2 million
+                                                 additional contracted-out. Thereafter the increase is 0.1 million a year until
+                                                 there are 3.0 million additional contracted-out. Numbers remain at this level
+                                                 thereafter. Everyone who is contracted-out is assumed to be under age 50 in
+                                                 the year 2001/02, 51 in the year 2002/03 etc.
+
+                                              3. The additional number contracted-out is assumed to be 0.5 million in the year
+                                                 2001/02, increasing by 0.25 million each year until there are 1.5 million
+                                                 additional contracted-out in the year 2005/06. In the year 2006/07, everyone
+                                                 who is under age 40 in the year is assumed to be contracted-out, in the year
+                                                 2007/08, everyone who is under age 41 in the year is assumed to be
+                                                 contracted-out etc. In the year 2030/31, everyone earning over the low
+                                                 earnings threshold in a year is assumed to be contracted-out.
+
+                                        3.0   The numbers contracted-out at each individual age are assumed to have earnings
+                                        in excess of the low earnings threshold and the same age and earnings distribution as
+                                        those who remain contracted in (if any).
+
+
+
+                                                                                                                                 n
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                         3.7                                             T
+                                         in State Second Pension expenditure due to higher contracted-out deductions that would
+                                         apply for each of assumptions 1, 2 and 3 respectively. The contracted-out rebates are
+                                         additional to those payable under the State Second Pension and represent an additional
+                                         cost to the National Insurance Fund. The contracted-out deductions will also be
+                                         additional to those applying under the State Second Pension and will represent a saving
+                                         for the National Insurance Fund as the future amount of State Second Pension will be
+                                         lower by the additional amounts of the contracted-out deductions.
+                                         Table 3.1 Estimated additional contracted-out rebates and contracted-out deductions in
+                                                   respect of stakeholder pension schemes - flat-rate benefit rates and earnings limits
+                                                   increase in line with prices (£bn in 1999-00 price terms)
+
+                                                                     Assumption I                     Assumption 2               Assumption 3
+
+                                                            Additional       Reduction       Additional      Reduction      Additional   Reduction
+                                                          contracted-          in State     contracted-        in State   contracted-      in State
+                                                                   out         Second               out        Second              out     Second
+                                         Year                 rebates          Pension          rebates        Pension        rebates      Pension
+                                                                                 Costs                           Costs                       Costs
+
+                                         1999-                      0.0              0.0               0.0   0
+                                                                                                             0.0  0.0  0.0
+                                         2000-                      0.0              0.0               0.0   0
+                                                                                                             0.0  0.0  0.0
+                                         2010-11                    0.5              0.0               2.1   0.0  3.8  0.0
+                                         2020-21                    0.6              0.0               3.4   0.1  5.9  0.1
+                                         2030-31                    0.7              0.2               3.9   0.6  7.9  0.6
+                                         2040-41                    0.8              0.4               4.6   1.7  9.7  2.7
+                                         2050-51                    0.9              0.9               5.3   4.0 11.0  7.5
+                                         2060-61                    1.0              1.3               6.1   6.8 12.2 13.5
+
+                                         3.8 The increase in the contracted-out rebates under each assumption exceeds the
+                                         increase in the contracted-out deductions for each year shown except for 2060/61. This
+                                         reflects the fact that extra contracting-out leads to an immediate increase in
+                                         contracted-out rebates but the saving through higher contracted-out deductions does
+                                         not occur until the person retires. Thus, before the year 2060/61 the net effect on the
+                                         National Insurance Fund of the additional contracting-out via stakeholder pension
+                                         schemes is a cost.
+
+                                         3.9 Tables 3.2 and 3.3 show the contribution rates required to balance income and
+                                         expenditure for the first approach and the second approach respectively on each of the
+                                         assumptions on the level of contracting-out via stakeholder pension schemes. For
+                                         comparison, the first two columns of Tables 3.2 and 3.3 also show the contribution rate
+                                         required before the State Second Pension is introduced, and the rate required for State
+                                         Second Pension before the effects of stakeholder pension schemes. Those figures come
+                                         from Table 2.4 above.
+                                         Table 3.2 Estimated Class 1 contribution rates to balance income and expenditure allowing for
+                                                   the effects of stakeholder pension schemes on the State Second Pension assuming
+                                                   the first approach to contracting-out - price uprating of flat-rate benefits and
+                                                   earnings limits.
+
+                                                                                   Joint Employee and Employer Contribution Rate*%
+
+                                                                      Before    After State  After State Second Pension, after
+                                                                       State       Second     stakeholder pension schemes
+                                                                     Second Pension before
+                                                                     Pension   stakeholder
+                                                                                   pension
+                                         Year                                     schemes Assumption 1 Assumption 2 Assumption 3
+
+                                         1999-                                                               0
+                                                                                                             20.0 20.0 20.0
+                                         2000   -                                                            0
+                                                                                                             20.2 20.2 20.2
+                                         2010-11                          18.6                 19.2            19.3            19.8             20.3
+                                         2020-21                          17.5                 18.4            18.5            19.1             19.8
+                                         2030-31                          17.8                 19.4            19.5            20.1             21.0
+                                         2040-41                          16.4                 18.7            18.8            19.3             20.0
+                                         2050-51                          14.6                 17.8            17.8            18.0             18.4
+                                         2060-61                          13.5                 17.7            17.6            17.6             17.5
+
+                                         ♦These rales exclude that part of the rates allocated to the NHS.
+
+
+
+
+        12
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                     Table 3.3 Estimated Class 1 contribution rates to balance income and expenditure allowing for
+                                               the effects of stakeholder pension schemes on the State Second Pension assuming
+                                               the second approach to contracting-out - price uprating of flat-rate benefits and
+                                               earnings limits.
+
+                                                                               Joint Employee and Employer Contribution Rate*%
+
+                                                                  Before    After State  After State Second Pension, after
+                                                                   State       Second     stakeholder pension schemes
+                                                                 Second Pension before
+                                                                 Pension   stakeholder
+                                                                               pension
+                                     Year                                     schemes Assumption 1 Assumption 2 Assumption 3
+
+                                     1999-                                                           00
+                                                                                                     20.0 20.0 20.0
+                                     2000   -                                                        01
+                                                                                                     20.2 20.2 20.2
+                                     2010-11                          18.6                 19.0          19.1       19.6         20.1
+                                     2020-21                          17.5                 18.2          18.3       18.9         19.5
+                                     2030-31                          17.8                 19.2          19.3       19.9         20.7
+                                     2040-41                          16.4                 18.5          18.6       19.1         19.8
+                                     2050-51                          14.6                 17.7          17.7       17.9         18.3
+                                     2060-61                          13.5                 17.6          17.6       17.5         17.4
+
+                                     ♦These rates exclude that part of the rates allocated to the NHS.
+
+
+                                     3.10 The Bill provides for an order to be made at a future date to move the State Second
+                                     Pension to a second stage flat-rate structure. This will only apply to those reaching state
+                                     pension age after a date to be prescribed (so that the stage one eamings-related scheme
+                                     will continue for those approaching state pension age) When the State Second Pension
+                                     becomes a flat-rate scheme everyone will be treated as if they had earnings of the low
+                                     earnings threshold for the purpose of calculating their State Second Pension entitlement,
+                                     regardless of the actual level of their earnings. Qualifying carers and the long-term
+                                     disabled will continue to be treated as if they had earnings at that level. However,
+                                     contracted-out rebates will still be earnings-related. Thus, the rebates will not reflect the
+                                     value of the State Second Pension forgone in stage 2, but the value forgone as though
+                                     stage 1 still applied.
+
+                                     3.11 In these circumstances it is likely that most, if not all, of those earning over the low
+                                     earnings threshold in a year will contract out. The green paper “A new contract for
+                                     welfare: Partnership in Pensions” suggested that this might occur around the year
+                                     2006/07 but be restricted to those under a certain age. If this is done in the year 2006/07
+                                     and restricted to those aged 40 and under in that year then the scenario is that shown
+                                     under assumption 3 in Table 3.2 above and the financial effects are those illustrated for
+                                     that assumption. Thus this can be taken as the effect of moving to the flat-rate stage 2 of
+                                     the State Second Pension under the first approach to contracting-out, assuming that
+                                     rebates are as in paragraph 3.10.
+
+                                     3.12 Assumption 3 under the second approach to contracting-out will only reflect stage
+                                     2 of the State Second Pension if, under stage 2 for this approach, people contracted-out
+                                     via COSRS and COMPS continue to get a State benefit equal to the difference between
+                                     a State Second Pension entitlement and a SERPS entitlement, both based on their actual
+                                     earnings. However, this arrangement would not be flat-rate. Rebates will still be
+                                     earnings-related, reflecting the value of SERPS as in stage 1, not a flat-rate State Second
+                                     Pension benefit.
+
+                                     3.13 People contracted-out via APPs or stakeholder pension schemes that are
+                                     structured as personal pensions are treated identically in the two approaches to
+                                     contracting-out.
+
+
+
+
+                                                                                                                                   13
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                                                                                                     APPENDIX 1
+
+        The Welfare Reform     4        4.1    This appendix updates the estimates in the QR to take account of the financial
+        and Pensions Act 1999,          effects of the changes to incapacity benefit and widow’s benefit included in the Welfare
+        The Tax Credits Act             Reform and Pensions Act 1999, the effect on SERFS of the Tax Credits Act 1999 and the
+        1999 and Home                   exclusion of home responsibilities protection for SERFS.
+        Responsibilities
+        Protection                      4.2    The Welfare Reform and Pensions Act 1999 also introduced some of the changes
+                                        to the National Insurance contribution regime announced in the March 1999 budget.
+                                        Other changes are being introduced by regulations early in the year 2000. One measure
+                                        announced in the March 1999 budget, extending Class 1A liability to other benefits in
+                                        kind, is included in the Bill. It is estimated that this measure will increase contribution
+                                        income by approximately £200m in 2001/02 and nearly £500m in the longer term. The
+                                        effect of all the March 1999 budget changes on the National Insurance contribution
+                                        regime was given in section 10 of the QR and the effect of those changes are not dealt
+                                        with further in this report. The effects of the changes to incapacity benefit and widow’s
+                                        benefit included in the Welfare Reform and Pensions Act 1999, the effect on SERFS of
+                                        the Tax Credits Act 1999 and the exclusion of home responsibilities protection for
+                                        SERFS are shown on the post March 1999 National Insurance contribution regime using
+                                        figures from section 10 of the QR as the baseline.
+
+                                        4.3    Legislation prior to the Welfare Reform and Pensions Act 1999 provides for the
+                                        reduction to 50% inheritance of SERFS pensions derived from the contributions of a
+                                        deceased spouse in respect of deaths from April 2000. The Welfare Reform and Pensions
+                                        Act 1999 includes provision for 100% inheritance to continue after April 2000 and for
+                                        the Secretary of State to make regulations to change this. Since it is not yet clear what
+                                        regulations will be laid, it has been assumed for the purposes of these financial estimates
+                                        that the 50% inheritance factor will apply from April 2000 as originally intended.
+
+                                        4.4   The changes to incapacity benefit under the Welfare Reform and Pensions Act
+                                        1999, which will affect new awards from April 2001, are:
+
+                                               •   The contribution conditions will be tightened so that contributions will have
+                                                   to have been paid in one of the last three tax years before the claim, rather than
+                                                   in any year;
+
+                                               •   The amount of benefit paid will be reduced in respect of a private pension
+                                                   being received or which could be received. The first £85 per week of pension
+                                                   will be disregarded but, for each additional £1 per week of pension over £85,
+                                                   the incapacity benefit will be reduced by £0.50 per week;
+
+                                               •   People disabled at an early age who meet certain conditions will be entitled to
+                                                   incapacity benefit without having to satisfy the contribution conditions, as
+                                                   long as they claim benefit before age 20 (25 in certain circumstances). Severe
+                                                   Disablement Allowance recipients under age 20 at April 2001 will be
+                                                   transferred onto long-term incapacity benefit from April 2002.
+
+                                        These changes will lead to a reduction in incapacity benefit expenditure in the long term.
+
+                                        4.5   The changes to widow’s benefit under the Welfare Reform and Pensions Act 1999,
+                                        which will affect new awards from April 2001, are:
+
+                                               •   The lump sum payment of £1,000 will be doubled to £2,000 and extended to
+                                                   widowers;
+
+                                               •   Widowed mother’s allowance, including SERFS, will become a widowed
+                                                   parent’s allowance, thus extending the benefit to widowers;
+
+                                               •   Widows and widowers aged over 45 and with no dependent children will
+                                                   receive an age-related benefit called Bereavement Allowance, payable for
+                                                   twelve months only and without any SERFS.
+
+                                        These changes will lead to an increase in widow’s benefit expenditure in the short term
+                                        and a reduction in expenditure in the long term.
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                      4.6                                           The T
+                                      Like family credit, working families tax credit will qualify as earnings for the purposes
+                                      of calculating SERFS entitlement. Since expenditure on working families tax credit is
+                                      expected to be significantly higher than on family credit, SERFS expenditure will be
+                                      correspondingly higher. Insufficient detailed data on the age, sex and earnings of those
+                                      who will receive working families tax credit means that the extra SERFS expenditure has
+                                      been estimated by approximate methods. Working families tax credit will not count as
+                                      earnings foi the State Second Pension.
+
+                                      4.7    The QR included an allowance in the SERFS expenditure estimates for home
+                                      responsibilities protection to be extended to SERFS. This was included even though the
+                                      nominal date of April 1999 for the introduction had passed without the necessary
+                                      secondary legislation being brought into force. The allowance was included since it was
+                                      clearly a government intention to make some provision for carers, the long-term sick and
+                                      other categories. However for the purposes of this report it is inappropriate to compare
+                                      the expenditure after the Bill is passed with expenditure based on legislation that was not
+                                      in force before the Bill. Thus the allowance for home responsibilities protection included
+                                      in the QR has been excluded in estimating the expenditure and contribution rates on
+                                      legislation in force or enacted before the Bill.
+
+                                      4.8     Table 4.1 below shows the projected expenditure for the National Insurance Fund
+                                      after taking account of the changes to the contribution structure proposed in the March
+                                      1999 budget. It is taken from Table 10.2 of the last QR.
+
+                                      4.9                                             Tabl
+                                      after taking account of the changes in the Welfare Reform and Pensions Act 1999, the Tax
+                                      Credits Act 1999 and the exclusion of home responsibilities protection from SERFS.
+                                      Overall expenditure is estimated to be 4.8% lower in the year 2060.
+
+                                      Table 4.1 Estimated benefit expenditure from the previous QR - flat-rate benefit rates and
+                                                earnings limits increase in line with prices (£bn in 1999-00 price terms)
+
+                                      Year                                  1999-00 2000-01 2010-11 2020-21 2030-31 2040-41 2050-512060-61
+
+                                      Retirement pension Basic                 33.6    33.7   37.5    40.4    48.7    52.2    50.5    50.0
+                                      Earnings-related                          4.5     5.0    9.8    12.5    14.9    15.2    16.2    18.7
+                                      Widow’s pension Basic                     0.7     0.7    0.5     0.9     0.7     0.6     0.7     0.7
+                                      Earnings-related                          0.2     0.2    0.1     0.1     0.1     0.1     0.1     0.1
+                                      Incapacity benefit Basic                  63      6.4    7.6     9.6     9.3     8.7     8.9     8.5
+                                      Earnings-related                          0.8     0.6    0.1     0.0     0.0     0.0     0.0     0.0
+                                      Jobseekers Allowance                      0.6     0.6    0.6     0.6     0.6     0.6     0.6     0.5
+                                      Other benefits                            0.3     0.3    0.3     0.4     0.4     0.4     0.4     0.4
+                                      Expenses                                  1.0     1.1    1.2     1.4     1.7     1.9     2.2     2.6
+                                      Total Expenditure                        48.0    48.6   57.7    65.9    76.3    79.7    79.5    81.5
+
+
+
+                                      Table 4.2 Estimated benefit expenditure allowing for the effects of the Welfare Reform and
+                                                Pensions Act 1999, the Tax Credits Act 1999 and the exclusion of home
+                                                responsibilities protection for SERFS - flat-rate benefit rates and earnings limits
+                                                increase in line with prices (£bn in 1999-00 price terms)
+
+                                      Year                                  1999-00 2000-01 2010-11 2020-21 2030-31 2040-41 2050-512060-61
+                                      Retirement pension Basic                 33.6    33.7    37.5    40.4    48.7    52.2    50.5 50.0
+                                      Earnings-related                          4.5     4.9     8.9    10.9    12.4    12.3    13.3 15.5
+                                      Widow’s pension Basic                     0.7     0.7     04      0.4     0.4     0.3     0.3    0.3
+                                      Earnings-related                          0.2     0.2     0.1     0.0     0.0     0.0     0.0    0.0
+                                      Incapacity benefit Basic                  6.3     6.4     7.2     9.0     8.7     8.3     8.5    8.1
+                                      Earnings-related                          0.8     0.6     0.1     0.0     0.0     0.0     0.0    0.0
+                                      Jobseekers Allowance                      0.6     0.6     0.6     0.6     0.6     0.6     0.6    0.5
+                                      Other benefits                            0.3     0.3     0.4     0.4     0.4     0.4     0.4    0.4
+                                      Expenses                                  1.0     1.1     1.2     1.4     1.7     1.9    2.2     2.6
+                                      Total Expenditure                        48.0    48.6   56.3    63.2    72.8    76.0    75.8    77.5
+
+
+
+
+                                                                                                                                        15
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                       4.10 Table 4.3 below shows the projected Class 1 contribution rate required for the
+                                       National Insurance Fund to balance income and expenditure before and after the effects
+                                       of the Welfare Reform and Pensions Act 1999, the Tax Credits Act 1999 and the
+                                       exclusion of home responsibilities protection for SERFS. The figures before the changes
+                                       described above are taken from the final column of Table 10.4 of the last QR. The
+                                       contribution rates exclude that portion paid to the NHS.
+
+                                       Table 4.3 Estimated Class 1 contribution rates to balance income and expenditure before and
+                                                 after the effects of the Welfare Reform and Pensions Act 1999, the Tax Credits Act
+                                                 1999 and the exclusion of home responsibilities protection for SERFS - price uprating
+                                                 of flat-rate benefits and earnings limits.
+
+                                                                                       Joint Employee and Employer Contribution Rate* %
+
+                                       Year                                          Before changes                                  After changes
+
+                                       1999-                                                      20.0020.0
+                                       2000   -                                                   20.2020.2
+                                       2010-11                                                    19.0                                          18.6
+                                       2020-21                                                    18.1                                          17.5
+                                       2030-31                                                    18.5                                          17.8
+                                       2040-41                                                    17.0                                          16.4
+                                       2050-51                                                    15.2                                          14.6
+                                       2060-61                                                    14.0                                          13.5
+
+                                       * These rates exclude that part of the rates allocated to the NHS. They are based on the revised Class 1
+                                         contribution regime introduced by the March 1999 budget. The rate actually payable in 1999/00 is 20.25% and
+                                         is the sum of the employee and employer main rates of 10% and 12.2% respectively, less the corresponding
+                                         National Health Service allocations of 1.05% and 0.9% respectively.
+
+                                       4.11 The projected contribution rates after the changes are lower after the year 2000,
+                                       reflecting the lower expenditure.
+
+
+
+
+       16
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+                                                                                                                                     APPENDIX 2
+
+     Accrual Rates for        5      5.1                                             Table 5
+     State Second Pension            2002/03, on the different bands of earnings. The accrual rates will depend on the year of
+                                     retirement until retirements in the year 2027/28. For years of retirement before 2003/04,
+                                     those retiring will have their eamings-related pension based entirely on SERFS.
+
+                                     5.2                                            Band
+                                     which will be £9,500 a year in 1999/00 terms. Band 2 will be from £9,501 to (3 x the low
+                                     earnings threshold - 2 x the lower earnings limit). For the purpose of this calculation the
+                                     figure of 2 x lower earnings limit will be rounded to the nearest £100 (£50 down). Band
+                                     3 will be from the top of the second band plus £1 to the upper earnings limit. The low
+                                     earnings threshold will be increased each year in line with the annual increase in average
+                                     earnings, including the period between 1999/00 and 2002/03 and rounded to the nearest
+                                     £100 (£50 up).
+
+                                     Table 5.1 State Second Pension accrual rales
+
+                                     Year of                                  Band 1                             Band 2                         Band 3
+                                     retirement
+
+                                      2003-                                     46/25                 11.50/25
+                                                                                                      04       23.0/25
+                                      2004-                                     45/26                 11.25/26
+                                                                                                      05       22.5/26
+                                      2005-                                     44/27                 11.00/27
+                                                                                                      06       22.0/27
+                                      2006-                                     43/28                 10.75/28
+                                                                                                      07       21.5/28
+                                      2007-                                     42/29                 10.50/29
+                                                                                                      08       21.0/29
+                                      2008-                                     41/30                 10.25/30
+                                                                                                      09       20.5/30
+                                      2009-                                     40/31                 10 10/31  20/31
+                                      2010   -                                  40/32                 11 10/32  20/32
+                                      2011-12                                   40/33                    10/33  20/33
+                                      2012-                                     40/34                 13 10/34  20/34
+                                      2013-                                     40/35                 14 10/35  20/35
+                                      2014-                                     40/36                 15 10/36     N/A
+
+                                      2020-21                                   40/42                              10/42                            N/A
+                                      2021-22                                   40/43                              10/43                            N/A
+                                      2022-23                                   40/44                              10/44                            N/A
+
+                                      2027-28                                   40/49                              10/49                            N/A
+                                      and later*
+
+                                      * The year when the third band will disappear will depend on the rate of real earnings growth in future years and
+                                        the rate at which the earnings limits are increased. On current assumptions, the band will disappear in 2014/15.
+                                        On current assumptions the second band will also disappear in about the year 2074 leaving only band 1 with an
+                                        accrual rate of 40%, double what it would have been under SERFS.
+
+
+                                      5.3                                         Accr
+                                      up to and including 2001/02 are unchanged and are given in Table 14.9 of the last QR.
+
+
+
+
+                                         f
+
+
+                                                                                                                                                       17
+
+
+
+
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2007 ProQuest-CSA LLC. All rights reserved.
+

@@ -1,0 +1,3070 @@
+=== PAGE q-01 ===
+NATIONAL INSURANCE
+ACTS 1946 to 1964
+Report
+by the
+Government Actuary
+on the
+Third Quinquennial Review
+Treasury Chambers,
+Chambers, 1964 t NIALL MacDERMOT, Q.C.
+Presented pursuant to Act 9 & 10 Geo. 6,
+; c. 67, s. 39 (1) (a) and 39 (2)
+Ordered by The House of Commons to be Printed
+20th November 1964
+LONDON ,
+HER MAJESTY’S STATIONERY OFFICE
+FOUR SHILLINGS NET
+20
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-02 ===
+CONTENTS
+Page
+I. INTRODUCTION .. vs oe . es . . . 1
+Il. SUMMARY OF CONTRIBUTIONS AND BENEFITS .. oe . . 2
+Tl. Income AnD OuTGco—lst Aprit 1959 ro 31sr Marc 1964 5
+IV. ESTIMATES FOR THE FUTURE .. a . . .. .. 8
+The basis of the estimates . . oe . . 8
+Contributors and beneficiaries .. . 1 . .. 9
+Future income and outgo.. + . .. . . 14
+V. THe ADEQUACY OF THE CONTRIBUTIONS .e . .. .. 17
+APPENDICES
+
+1. Rates and Conditions of Benefit .. . . .. . 20
+
+2. National Insurance Funds: Statement of income and outgo and
+balances for period Ist April 1959 to 31st March 1964 .. 22
+3. The Basis of the Estimates. . . . . . . 24
+4, Sickness Experience of Insured Persons, 1958 to 1963 .. . 38
+5. Tables . oo .. . a os . 4]
+
+if
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-03 ===
+NATIONAL INSURANCE ACTS 1946 TO 1964
+Report by the Government Actuary on the
+Third Quinquennial Review
+To THE LorDS COMMISSIONERS OF HER MAJEsTy’s TREASURY
+May IT PLEASE YOUR LORDSHIPS:
+
+In accordance with the terms of Section 39(1)(a) of the National Insurance
+Act 1946, I have reviewed the operation of the Acts during the period ist April
+1959 to 31st March 1964, and I submit the following report.
+
+I. INTRODUCTION
+
+1. The present review is the third of the full investigations which are due to
+be made every five years into the operation of the Nationai Insurance scheme,
+the report on the previous quinquennial review having been published as
+H.C. Paper No. 220 of 1959-60. Since then four interim reviews* have been
+made under Section 39(1)(5) of the 1946 Act and two non-statutory reportst
+have been made to the Minister of Pensions and National Insurance in con-
+nection with Bills proposing major changes in the scheme. The main changes
+since the last review are summarised below.
+
+National Insurance Acts 1959 and 1960
+
+2. The 1959 Act, which was mentioned in my Report on the Second
+Quinquennial Review, introduced graduated contributions and benefits which
+came into effect in April 1961. Flat-rate contributions for employed persons
+within the scope of the graduated scheme were to be reduced from the same
+date, but there was to be no major change in flat-rate benefits. This Act also
+improved the scales of increments for deferment of retirement in respect of
+contributions paid from August 1959. The rates of benefits and contributions
+which actually became effective in April 1961 were, however, those of the
+1960 Act which amended the 1959 Act by increasing the flat-rate benefits and
+contributions, although it did not alter its provisions regarding graduated
+contributions and benefits. The main weekly benefit rates were raised from
+50s. Od. to 57s. 6d. for a single person, and from 80s. Od. to 92s. 6d. for a
+married couple.
+
+Family Allowances and National Insurance Act 1961
+
+3. This Act provided for increments to a widow’s retirement pension to be
+granted in respect of contributions paid by her late husband while he was over,
+and she was under, pension age. It also prescribed an earnings limit below
+which an apprentice can qualify as a child dependant.
+
+National Insurance Act 1963
+
+4. Benefit rates were increased from dates in March and May 1963 to basic
+levels of 67s. 6d. for a single person and 109s. for a married couple; to meet
+the additional cost the flat-rate contributions were raised from June 1963 and
+the upper limit of the range of weekly earnings liable to graduated contributions
+
+*HLC. 222 of 1960-61; H.C. 205 of 1961-62; H.C. 246 of 1962-63; H.C. 236 of 1963-64.
+
+tT Report on Financial Provisions of National Insurance Bill 1960, Cmnd. 1197.
+
+Report on Financial Provisions of National Insurance Bill 1963, Cmnd. 1935.
+1
+
+(91110) Ae
+House of Commons Parliamentary Papers Online.
+
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-04 ===
+was also raised from £15 to £18. This Act prescribes the benefit and contribution
+rates in payment at the date of this review, apart from the allowances for
+children of widows which were increased by the 1964 Act (see below),
+
+Family Allowances and National Insurance Act 1964
+
+5. The rates of benefit for children of widows were increased to their present
+level by this Act, which also raised to 19 the age limit for dependent children
+and for children entitling their mothers to widowed mother’s (personal)
+allowance. This Act came into operation on 30th March 1964 and had
+negligible effect on the scheme during the period under review.
+
+Earnings Rules
+
+6. During the period four changes in the earnings limits have increased the
+amounts which can be earned before pensions are reduced; for retirement and
+widows’ pensions the total increase has been from £2 10s. a week to £5 a week
+and for widowed mothers’ allowances from £3 a week to £7 a week. A further
+relaxation of the earnings rule for widowed mothers was introduced by the
+National Insurance Act 1963 which fixed a limit of 26s. a week below which
+the personal part of such an allowance could not be reduced by reason of
+earnings.
+
+Ij. SUMMARY OF CONTRIBUTIONS AND BENEFITS
+Persons Iasured
+
+7. The population of Great Britain over school-leaving age and under
+pensionable age is divided, for the purposes of the National Insurance Acts,
+into three classes:
+
+(i) employed persons, i.e. all persons gainfully occupied under a contract
+- of service; :
+(ii) self-employed persons, i.e. others who are gainfully occupied;
+(iii) non-employed persons.
+Married women are treated specially; subject to the satisfaction of certain
+conditions they may elect whether to pay contributions or not. Modified
+conditions of insurance apply to a number of special groups such as members
+of the armed forces, seamen, airmen and students.
+Contributions
+
+8. With certain exceptions insured persons are required to pay weekly flat-
+rate contributions appropriate to their class and employed persons also pay a
+percentage of their earnings between £9 and £18 a week unless they are
+contracted-out of the graduated part of the scheme (see paragraph 10). Self-
+employed and non-employed persons with incomes below £208 a year, married
+women, widow beneficiaries, students and a few other special groups may elect
+not to pay flat-rate contributions. Nor are such contributions payable by
+employed persons while unemployed or by employed or self-employed persons
+while incapacitated for work through sickness or injury; in such events credits
+are normally given to ensure that title to benefits is maintained.
+
+9. In the case of employed persons at work, flat-rate and graduated National
+Insurance contributions are payable by employers at rates equal to those of the
+employed persons and similar employers contributions are payable for such
+employees who are not themselves paying flat-rate contributions.
+
+2
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-05 ===
+10. An employer of adults who are members of a superannuation scheme
+satisfying certain conditions may arrange for them to be treated as being in
+“ non-participating employment”. Such employees are “‘ contracted-out” of
+the graduated part of the scheme and neither pay graduated contributions, nor
+receive graduated benefit, but they and their employers each pay higher flat-rate
+contributions than other employed persons. The superannuation scheme must
+provide retirement benefits at least equivalent to the personal graduated pension
+at the maximum level, and the equivalent pension which has accrued to an
+employee who leaves contracted-out employment below the retirement age has
+to be preserved, either in a superannuation scheme or, by means of a “ payment
+in lieu ” of contributions, through the National Insurance scheme.
+
+11. The flat-rate contributions paid by insured persons and employers
+include, in addition to the National Insurance contribution, the National
+Health Service contribution and, for employed persons, the Industrial Injuries
+contribution. An analysis of the total weekly payments, excluding graduated
+contributions, is given in Table 1 below, the rates shown being those for adults;
+lower contributions are payable by juveniles under age 18.
+
+TABLE 1
+Rates of weekly flat-rate contribution for adults under the National Insurance,
+Industrial Injuries and National Health Service Contributions Acts
+Contributions for
+
+a Total
+
+. weekly
+National Industrial National contribution
+
+Insurance Injuries Service
+s. d. sd | sda | sda
+Man
+
+Employed (not contracted-out)
+
+Employed person oe we 8 34 8 2 8} 11 8
+Employer . o oe 8 34 9 7k 9 8
+Total . .- me 16 7 1 5 3 4 21 4
+
+Employed (contracted-out)
+
+Employed person a . 10 8% 8 2 8 14 1
+Employer . an .- 10 8% 9 Tk {2 1
+Total .. oe an 21 5 15 3 4 26 2
+
+Self-employed .. . .. 13 4 — 2 10 16 2
+
+Non-employed .. . we 10 2 _— 2 10 13 0
+Woman
+
+Employed (not contracted-out)
+
+Employed person oe . 7 23 5 2 Of 9 8
+Employer .e . we 7 2k 6 Tk 8 4
+Total . oe .e 14 5 11 2 8 18 0
+Employed (contracted-out)
+Employed person .. . 8 8h 5 2 Of 11 2
+Employer o we . 8 84 6 7k 9 10
+Total oe oe . 17 5 11 2 8 21 0
+
+Self-employed .. . . 11 0 — 2 2 13 2
+
+Non-employed .. +e . 7 10 —_ 2 2 10 0
+Sa
+
+3
+(91110) A*2
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-06 ===
+12. In addition to the flat-rates shown in Table 1, employed persons who are
+not contracted-out and their employers each pay 44 per cent. of the employee’s
+earnings between £9 and £18 a week, the maximum graduated contributions
+for a person earning £18 or more in any week being 7s. 8d. each from the
+employed person and employer. These contributions are collected in association
+with P.A.Y.E. income tax.
+
+13. The 1959 Act provides for the rates of contributions to be increased in
+April 1965, and at five-yearly intervals thereafter up to 1980, without any
+increase in benefits. The Acts specify the amounts of the increases, which are
+the same on each occasion, but smaller increases than those laid down in the
+Acts may be prescribed by the Minister of Pensions and National Insurance,
+with the consent of the Treasury. As the Acts stand, the rates shown in Table |
+for employed persons not contracted-out would be increased by 5d. a week,
+with equal amounts payable by the employer, while the graduated contributions
+would be increased for each party by } per cent. of the relevant earnings. The
+contributions of contracted-out employed persons and of their employers as
+well as those of self-employed and non-employed adults would be increased by
+10d. a week.
+
+14. Exchequer supplements to the flat-rate contributions are calculated on
+the following basis on the National Insurance portion of the contribution and
+any future quinquennial increases :—
+
+(i) in respect of contributions for employed persons—one-quarter of the
+contributions at the basic rate, no Exchequer supplement being payable
+on the additional contributions paid in respect of persons who are
+contracted-out;
+
+(ii) in respect of self-employed and non-employed persons—one-third of the
+contributions.
+
+Graduated contributions do not attract Exchequer supplements.
+Benefits
+
+15. The Acts provide for the following benefits:
+
+(i) unemployment benefit (for employed persons only);
+
+(ii) sickness benefit (for employed and self-employed persons);
+
+(iii) maternity benefits, comprising maternity grant, home confinement grant
+and maternity allowance;
+
+(iv) widows’ benefits, comprising widow’s allowance, widowed mother’s
+allowance and widow’s pension; under transitional arrangements some
+widows, who would not otherwise be entitled to benefit, have a reserved
+right to a pension of 10s. a week;
+
+(v) guardian’s allowance and child’s special allowance;
+
+(vi) retirement pension, including graduated additions and, under tran-
+sitional arrangements, contributory old age pension of 10s. a week for
+some widows;
+
+(vii) death grant.
+
+4
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-07 ===
+16. Details of the rates and conditions of benefit, in so far as they bear closely
+on the question of cost, are given in Appendix 1. It is sufficient to note here that
+the principal weekly rates of benefit for adults and the basic rates of retirement
+pension are:—
+
+s. d.
+Insured man or woman... . a . .. 67 6
+Addition for dependent wife or other adult dependant .. 41 6
+Addition for first dependent child .. . . .. 20 OF
+Addition for each other dependent child*.. . .. 12 OF
+The benefits, other than the additions for children, are reduced if the insured
+person’s contribution record is deficient.
+Tlf. Income AND OuTGo—Ist Apri 1959 To 31st Marcy 1964
+Summary of Accounts
+
+17. The transactions of the National Insurance Fund and the National
+Insurance (Reserve) Fund for each financial year during the period under
+review are summarised in Appendix 2 of this Report. Expenditure exceeded
+income in each of the five years except 1961-62, when there was a smail surplus
+of £13 millions. The net deficit for the whole five-year period was £1214
+millions, and the combined Funds fell by this amount from nearly £1,506
+millions on Ist April 1959. There were no transfers of capital between the two
+Funds during the period, and the balance of £1,384 millions at 31st March 1964
+was made up of £1,168 millions held in the Reserve Fund and £216 millions in
+the National Insurance Fund.
+
+Analysis of income and outgo
+
+18. The trend of income and outgo over the whole five years is discussed in
+the following paragraphs. The experience of the first four years of the period
+has already been discussed in some detail in the Interim Reports published
+since the second quinquennial review. It should be noted that the particulars
+shown for 1963-64 represent less than a full year’s transactions at the rates in
+force at the end of the period since the 1963 Act increases were not brought
+into effect until the end of May for retirement pension and other long-term
+benefits, and the beginning of June for contributions.
+
+19. On the income side, contributions by insured persons and employers
+rose by 56 per cent, from £708 millions in 1959-60 to £1,105 millions in 1963-64.
+Of this increase, £222 millions resulted from the introduction of graduated
+contributions, mentioned in paragraph 12 of this report, and most of the balance
+was due to increases in the rates of weekly flat-rate contributions. The growth
+in the number of contributors slackened and there was only a small increase in
+flat-rate contributions from employed married women because an increasing
+proportion chose not to contribute themselves. The yield from graduated
+contributions showed an increase because of the growth in the employed pop-
+ulation and increases in average earnings, and because the ceiling up to which
+these contributions are charged was raised to £18 in June 1963.
+
+*Under the Family Allowances scheme 8s. a week is already paid for the first of these
+children (i.e. the second child in the family) and 10s. a week for the others (i.e. the third and
+subsequent children in the family), making totals of 20s. and 22s, respectively.
+
++ A widow receives 37s. 6d. for the first child, 29s. 6d. for the second and 27s. 6d. for each
+other dependent child.
+
+5
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-08 ===
+20. The legislation also led to increases in the amounts of Exchequer
+supplements to contributions. Apart from these, the Fund received during the
+first two years additional payments amounting to £90 millions from the
+Exchequer under Section 2(3)(a) of the 1954 Act, as extended by Section 1(3)(c)
+of the 1959 Act. Thus total payments by the Exchequer rose from £168} millions
+in 1959-60 to £212 millions in 1963-64.
+
+21. The largest item of expenditure was the outgo on retirement pensions,
+which constituted just over 70 per cent of the benefit expenditure during the
+period. The rising cost of retirement pensions is attributable in part to the
+increases in weekly rates of benefits in 1961 and 1963 and in part to the growth
+in the number of pensioners from 5,340,000 at Ist April 1959 to 6,010,000
+at 31st March 1964. The expenditure on increments for deferment of retirement
+has risen by over £10 millions to £33 millions.
+
+22. The cost of widows’ benefits has also risen more rapidly than can be
+accounted for by the changes in rates. The numbers of widow beneficiaries at
+the beginning and end of the period (excluding those receiving widow’s allowance,
+who number about 20,000 at any time) are set out below:
+
+1st April 31st March
+1959 1964
+
+Widowed mothers’ allowance:
+Normal .. .. .. .. 115,000 107,000
+Personal .. . .. .. 29,000 45,000
+Widows’ pensions .. .. .. .. 242,000 364,000
+10s. widows’ pensions, agesunder 60. 107,000 80,000
+Total . .. .. ..  493,00C 596,000
+
+23. The increase in the number of widowed mothers receiving only the
+personal allowance arises largely from the 1964 Act which brought into the
+scope of the allowance widows with children between the ages of 18 and 19
+(this had little effect on the expenditure in the period). The number of widows’
+pensions continued to increase throughout the greater part of the period
+mainly as a result of the National Insurance Act 1957 which, as described in the
+Report on the Second Quinquennial Review, had the effect of retaining
+considerable numbers of widows on widows’ pensions at ages between 60 and 65,
+instead of transferring them to retirement pensions at the same rate.
+
+24. An account of the sickness experience in the period 1958 to 1963 is given
+in Appendix 4. The costs of sickness benefit in 1962-63 and 1963~64 are
+affected by the very heavy claims in the first quarter of 1963 and the continuance
+of more than normal sickness throughout that year.
+
+25. The average percentage rates of unemployment in the five years 1959-60
+to 1963-64 were 2-0, 1-6, 1-6, 2:4 and 2-2 respectively; these fluctuations,
+together with the increases in benefit rates, largely account for the course of
+the expenditure on unemployment benefit shown in Appendix 2.
+
+Comparison with second quinguennial review estimates
+
+26. The estimates contained in the Report on the Second Quinquennial
+Review took account of legislation up to and including the 1959 Act. In order
+to compare the experience of the five-year period under review with these
+
+6
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-09 ===
+estimates, it is necessary to allow for the effects of the 1960, 1961 A ‘ad
+Acts, which became law after the second quinquennial review was made. In
+Table 2 below the actual outturn is compared with the estimates in that review
+and the differences are analysed to show the extent to which they were the
+result of legislative changes since 1959.
+TABLE 2 .
+Comparison of actual income and outgo in the period Ist April 1959 to 31st March 1964
+with estimates made for the second quinquennial review
+£ millions
+Income and Difference
+Outgo (actual less estimated)
+Changes
+Actual | Estimated| Total pe i59 Balance
+legislation
+| | |
+INCOME |
+Contributions from insured per- |
+
+sons and employers:
+
+(a) Flat rate contributions* .. 3,834 | 3,249 585 +519 + 66
+
+(6) Graduated contributions
+
+and “‘Payments in lieu” .. 559 627 — 68 + 30 — 98
+Payments from Exchequer:
+(a) Supplements to contribu- |
+tions . .e .. 837 756 81 + 78 + 3
+(6) Payments under Section 2
+(3)(a), 1954 Act and Section
+1(3)(c), 1959 Act .. . 89 93 — 4 _— —- 4
+Interest} .. e . . 255 254 1 —_ + ]j
+ToraL Income ..] 5,574 | 4979 | 595 | +627 | — 32
+QuTGo
+Unemployment benefit . . oe 238 | 210 28 + 33 — §
+Sickness benefit .. . . 773 | 670 103 + 95 + 8
+Maternity benefits . we 120 100 20 + 13 + #7
+Widows’ benefits and guardian’s
+
+allowance .. +. . 392 345 47 + 47 — |
+Retirement pension .. . 3,884 3,409 475 +429 + 46
+Death grant oe os . 31 | 30 1 — + 1
+
+TOTAL BENEFITS 5,438 4,764 | 674 +617 + 57
+Administration .. 0... 220 | 204 16 — | +16
+Transfers to Northern Ireland |
+
+and other payments .. .. 38 34 4 —_ + 4
+
+Tora Ourco ..| 5,696 | 5,002 | 694 | +617 | +71
+BALANCE OF INCOME AND OUTGO | —122 | - 23 | —99 | + 10 | — 109
+ee
+
+* Excluding Industrial Injuries and National Health Service contributions.
+
++ Including net loss on realisation of securities.
+
+27. It will be seen from this table that improvements in benefit during the
+five years added nearly 13 per cent to the cost in the period and that this increase
+was closely matched by extra income from contributions and Exchequer
+supplements prescribed in the legislation. The final column illustrates the
+result of other factors, many of them of minor importance, which have influenced
+the numbers of contributors and beneficiaries and the amounts paid.
+
+7
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-10 ===
+28. The principal items on the income side are the extra £66 millions from
+flat-rate contributions and the shortfail of £98 millions from graduated
+contributions. It was not known how many people would be contracted out of
+the graduated part of the scheme and in the event this number reached 44 millions
+compared with 24 millions which had been assumed on Government instructions.
+This difference led to a loss in graduated contributions of £106 millions as
+compared with the estimate and increased the estimated flat-rate income by
+£38 millions. Further, the estimates for the second quinquennial review had
+necessarily to be made on the basis of statistics, provided by the Board of
+Inland Revenue, of annual earnings from all employments; these could give no
+indication of the effect of assessing graduated contributions on a weekly basis,
+nor of the distribution of earnings of contributors to the graduated scheme after
+allowing for the removal of those contracted-out. A further item of difference
+compared with the estimates was the shortfall in the amount of graduated
+contributions which occurred at the start of the graduated scheme because such
+contributions are credited to the Fund in arrear. Although this potential
+shortfall was mentioned in the Report on the Second Quinquennial Review, it
+was not practicable to make allowance for it in the estimates at that time.
+There was, however, an offset from the higher graduated contribution income
+due to increasing earnings. The most important figure relating to outgo in
+the last column is the extra expenditure of £46 millions on retirement pensions;
+this is almost entirely due to the trend towards earlier retirement.
+
+IV. ESTIMATES FOR THE FUTURE
+The basis of the estimates
+
+29. Underlying the estimates of future numbers of contributors and
+beneficiaries and of income and outgo which are presented in this section of the
+report is a projection of the population of Great Britain, analysed by sex,
+age and, for women, marital status. The assumptions on which this projection is
+based are described in Appendix 3, and details of the projected populations are
+given in Table 34 in Appendix 5. The numbers given in this projection have been
+combined with factors relating to the various classes of contributors and
+beneficiaries. These factors were adopted in the light of the experience of
+the scheme in recent years, with such allowance as seemed necessary for future
+trends. A detailed description of the bases of the calculations is given in
+Appendix 3.
+
+30. in three respects the estimates have been based on Government instructions
+given for the purposes of this review.
+
+(i) It has been assumed that from 1965-66 onwards the average rate of
+unemployment will be 2 per cent. (For long term forecasts the comparable
+rate assumed in the first quinquennial review was 4 per cent., and in
+the second quinquennial review 3 per cent.) For 1964-65 the number
+unemployed was assumed to average 375,000, equivalent to a rate of
+about 1-+6 per cent.
+
+(ii) The level of earnings has been assumed to remain constant throughout
+the period covered by the estimates.
+
+(iii) Contracting-out has been assumed to remain at its present proportions.
+This implies that the numbers in non-participating employment will
+rise slowly in line with the growth in the employed population, from
+44 millions at present to over 5 millions in 30 years’ time.
+
+8
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-11 ===
+31. The assumption of a constant level of earnings, which has been taken
+as the average level in 1964-65, is appropriate for the purpose of assessing, on
+the “ pay-as-you-go’ principle, the adequacy of the contributions for the
+scheme as it stands at present. Increases of earnings are expected in future
+but it may be assumed that, as in the past, these would be accompanied by
+enlargements of benefits. The financial effect of such changes and the resulting
+position of the scheme would be examined afresh on each occasion so as to
+restore the balance of income and outgo which is required under a “ pay-as-
+you-go”’ arrangement; it is clearly not possible to forecast the form or the
+incidence of such increases, nor the contribution changes which will accompany
+them, but the figures based on constant earnings indicate the relative position
+in such circumstances.
+
+Contributors and Beneficiaries
+Contributors
+
+32. The numbers of contributors in each class were estimated for 1963 and
+for five-yearly intervals thereafter up to 2003, and are summarised for certain
+years in Table 3 below. A detailed analysis of the numbers in 1963 will be found
+in Appendix 5, Tables 36 and 37.
+
+33. Table 3 shows that the number of contributors is expected to rise slowly
+from nearly 25 millions in 1963 to 27 millions in 1983, and more rapidly
+thereafter to reach 324 millions by 2003. The number of men increases from
+nearly 16$ millions to over 214 millions during the forty-year period, while the
+number of women contributors rises in much the same proportion, from
+8} millions to nearly 11 millions. With one exception the growth in the overall
+number of contributors corresponds closely to the growth in the total population
+of contributing age (men between ages 15 and 65 and women between ages
+15and 60) throughout the period covered by the estimates. Ithas been announced
+that the school-leaving age will be raised from 15 to 16 in the academic year
+1970-71, and the consequent fall in the number of National Insurance con-
+tributors at that time has been allowed for. The numbers are also affected by
+the tendency for more persons to continue their education after the minimum
+leaving age.
+
+34. Two important points should be noted about the numbers of women
+contributors shown in Table 3. The first is that the proportion of married
+women in the total population is expected to rise. By itself, this would be
+expected to restrict the growth in the number of contributors, since National
+Insurance contributions are paid for only a minority of married women, whereas
+most single women contribute. The second point is the strong tendency in
+recent years for more married women to come into employment, and this is
+expected to continue. Broadly, these factors offset each other, so that the
+estimated future number of women contributors increases in line with the total
+population of contributing age. By 2003, however, two-thirds of all women
+contributors are expected to be married, compared with a proportion a little
+greater than one-half in 1963. Since employed married women may, and most
+in fact do, choose not to pay contributions themselves, almost all the increase
+in the number of women contributors between 1963 and 2003 is among the
+“employer’s contribution only ” cases.
+
+35. The estimated numbers contracted-out rise in proportion to the numbers
+of employed persons; in addition, two groups of employed persons covered
+
+9
+(1110) At*
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-12 ===
+TABLE 3
+Estimated numbers of contributors*
+Millions
+Employed persons |
+(including contracted-
+out employees) Self- Non- Employed
+employed | employed persons
+contri- contri- Total |contracted-
+Full |Employer’s} butors butors out
+contri- contri-
+butions butions
+only
+1963:
+Men os e 15-00 21 1-32 12 16°65 3-86
+Single womenf .. 3-35 +32 +08 ‘i 3°86 +38
+Married women. . 1-12 3-15 02 “04 4-33 +25
+Total an 19-47 3°68 1-42 *27 24-84 4-49
+1968:
+Men . 15-33 23 1-34 “12 17-02 3-93
+Single womenf .. 3°16 32 -07 10 3°65 +35
+Married women. . 1-08 3°70 02 04 4-84 *26
+Total .. 19-57 4-25 1-43 *26 25:51 4°54
+1973:
+Men - .. 15-27 26 1-35 +12 17-00 3-97
+Single womenf . . 2°69 31 ‘07 -08 3-15 +32
+Married women. . 1-03 4-11 02 04 5-20 28
+Total . 18-99 4-68 1:44 “24 25°35 4-57
+1978:
+Men . . 15:51 "29 1:36 “12 17-28 4-04
+Single womenf . . 2:68 -30 -06 08 3-12 30
+Married women. . 1-01 4-45 03 04 5°53 +29
+Total oe 19-20 5:04 1-45 “24 25-93 4-63
+1983:
+Men . os 16-13 +29 1-40 “13 17-95 4-16
+Single womenf .. 2°82 *29 05 07 3°23 +30
+Married women. . 1-05 4-74 03 04 5:86 +31
+Total .. 20-00 5+32 1-48 24 27°04 4-77
+1993: |
+Men . + 17-61 31 1:51 “13 19-56 4:54
+Single womenf .. 3-01 *27 05 ‘07 3°40 +33
+Married women. . 1:18 5:20 03 05 6°46 +34
+Total . 21:80 5-78 1-59 25 29-42 5-2]
+2003:
+Men . . 19°45 +32 1-68 “15 21:60 5:04
+Single women} .. 3°26 +26 06 08 3°66 36
+Married women. . 1:28 5°82 “03 05 7:18 +38
+Total . 23°99 6:40 1:77 28 32°44 5°78
+* Includes cases where contributions were excused because of unemployment, maternity or
+incapacity for work.
++ Spinsters, widows and divorced women.
+10
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-13 ===
+by Table 3 are outside the scope of graduated contributions, viz. juveniles and
+the retired (the latter being in the category of “ employer’s contributions
+only”). Due to the growth in the population, the number of employed persons
+who would in general be liable for graduated contributions for any week in
+which they earned more than £9 is estimated to rise from 163 millions in 1963
+(of whom 10} millions are men), to 22? millions in 2003 (13% millions men).
+Some of these persons will not actually pay graduated contributions since they
+never earn £9 in any week, while others will pay contributions in some weeks
+but not in others. No meaningful estimate can therefore be given of the
+numbers who pay graduated contributions in a particular year.
+Retirement pensioners
+36. The numbers of retirement pensioners at 31st December 1963 and the
+estimated numbers at five-yearly intervals thereafter are set out in Table 4,
+together with the small numbers of widows aged over 60 receiving contributory
+old age pensions of 10s. a week. The table also shows the numbers of men who
+receive an increase of retirement pension for an adult dependant, almost always
+a dependent wife who has not attained age 60.
+TABLE 4
+Estimated numbers of retirement and contributory old age pensioners
+; Millions
+Retirement pensioners
+Contri- ree
+31st butory Total increase
+December Women | Wives on |Widowson| old age for adult
+Men on own | husband’s | husband’s | pensioners dependant
+insurance | insurance | insurance P
+1963 =... | 1-99 1-58 1-09 1-30 -02 5-98 ‘1
+1968. 2°27 1-86 1-25 1-29 02 6:69 “12
+1973. 2°58 2:00 1-45 1-30 02 7°35 14
+1978, 2:83 1-99 1-63 1-35 02 7°82 “15
+1983... 2:90 1-91 1-72 1-41 02 7:96 15
+1988, 3-04 1-80 1:87 1-49 01 8-21 “15
+1993... 3-12 1-64 1-93 1-57 01 8:27 “15
+1998. 3-16 1:51 1-95 1-62 —_ 8-24 “15
+2003—Cti«‘(w 3:21 1:44 1:97 1-66 — 8-28 16
+37. The total number of pensioners is expected to rise rapidly until about
+1980 and more slowly thereafter till it reaches about 84 millions in the last decade
+of the century, or nearly 40 per cent. above the number in 1963, The rate of
+increase for men pensioners (about 60 per cent over the period) will be higher
+than the average for all pensioners. Among women pensioners the expected
+increase of 80 per cent. in the number of wives receiving pensions on their
+husband’s insurance reflects both the higher proportions married and the fact
+that married women in employment are tending more and more to exercise the
+option not to contribute. The latter trend will be reflected in the fall expected
+during the last quarter of the century in the numbers of women receiving
+pensions on their own insurance; this class includes both married women who
+have themselves contributed and single women whose numbers are also tending
+to fall.
+11
+(91110) At*2
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-14 ===
+38. Table 5 analyses the estimated population over the minimum pensionable
+ages into various categories according to present or prospective title to pension
+and Table 6 sets out the percentages entitled to benefit in each age-group.
+
+TABLE 5
+Population over minimum pensionable ages—actual and prospective beneficiaries
+Millions
+31st December 1963 ! 1973 | 1983 1993 | 2003
+Men:
+
+Retirement pensioners . 1-99 2-58 2:90 3-12 3°21
+
+Prospective title to pension:
+
+Retirement deferred . +28 +30 -28 32 31
+
+No prospective title to pension “11 “04 -03 -03 04
+
+Total population overage 65 | 238 2-92 3-21 3-47 | 3-56
+Women: |
+Retirement and contributory
+old age pensioners 3-99 4-77 5-06 5-15 5:07
+Widow beneficiaries .. . ‘17 “17 “17 “14 “14
+Prospective title to pension:
+Retirement deferred a 12 -09 -06 “06 06
+Others* fe a an *73 +94 1-04 “95 1-05
+No prospective title to pension “42 “18 “15 “13 “12
+Total population overage 60| 5-43 | 6-15 6-48 6-43 6-44
+: * Uninsured wives over age 60 whose husbands have not yet become entitled to a retirement
+pension.
+TABLE 6
+Estimated numbers of retirement pensioners, contributory old age pensioners and widow
+beneficiaries expressed as percentages of the total population in each group over pensionable age
+31st December
+Ages last birthday
+1963 1973 1983 1993 2003
+M, per cent | percent | percent | percent | percent
+en:
+65-69 . . és 71 74 714 74 74
+70-74 .. a . 99 99 99 99 99
+15-79 .. . .. 93 99 99 99 99
+80-84 . a ae 80 99 99 99 99
+85 and over.. . .. 10 90 99 99 99
+Allages 65 andover .. 84 88 90 90 90
+Women:
+60-64 os . ve 34 51 48 48 46
+65-69 . + 85 84 83 82 81
+70-74 .. a . 92 94 95 95 95
+75-19 . ae 87 97 97 97 98
+80-84 . + + 78 95 98 97 98
+85 and over.. a oe 69 89 98 97 98
+All ages 60 and over. 71 80 81 82 | 81
+12
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-15 ===
+Widow beneficiaries 2 3 3
+
+39. Estimates of the numbers who will receive each type of widow’s benefit
+are given in Table 7.
+
+TABLE 7
+Estimated number of widow beneficiaries
+Thousands
+
+‘ Widowed : ’ : ,
+
+Widows’ ; Widows’ | 10s. widows
+3ist December allowances* aothers’ pensions pensions} Total
+19634 .- .. 21 141 373 83 618
+1968 .. . .. 21 142 369 75 607
+1973... o .- 21 134 352 63 570
+1978... . . 20 127 339 41 527
+1983 .. . .. 20 121 334 15 490
+1988... -. - 19 117 299 3 438
+1993 .. . 19 114 283 _— 416
+1998... . . 19 110 284 _ 413
+2003... . . 20 109 301 —_ 430
+
+* Average numbers in payment at any time during the year.
+
+t There are also about 20,000 widows now receiving the 10s. rate who are classified as
+contributory old age pensioners (see Table 4).
+
+t The effect of the raising of the limiting age for children from 18 to 19 from 30th March, 1964
+was to increase the numbers of widowed mothers’ allowances and to reduce the numbers of
+widows’ pensions from that date. The effect of this is apparent in the figures for 31st March,
+1964 quoted in paragraph 22.
+
+40. The decline in the number of widows which is shown in all groups is a
+reflection of the assumed improvement in male mortality. This decline is first
+apparent at the younger ages, where it underlies the initial rapid fall in the
+number of widowed mothers’ allowances in payment, and later among widow
+pensioners. The payment of 10s. widows’ pensions is limited to those who
+were married to insured men before 5th July 1948 and are not entitled to any
+other widow’s benefit. As such women are under age 60, the number will
+decline rapidly and disappear in about 25 years’ time.
+
+41, The way in which the various factors referred to in paragraph 40 may
+be expected to affect the proportions of widows in the population under age 60
+TABLE 8
+Estimated number of widow beneficiaries as percentages of the total numbers of
+widows in each age group under age 60
+
+: Widowed : .
+31st Ages last Widows’ > Widows’ | 10s. widows’
+December| birthday | allowances aothers’ pensions pensions Total
+per cent per cent per cent per cent per cent
+1963 ., | Under 40 4 78 — 4 86
+40-49 3 48 7 19 77
+50-59 2 14 52 15 83
+1983. .. | Under 40 8 65 _ —_ 73
+40~49 5 52 _— — 37
+50-59 3 16 53 5 77
+203 ~=.. | Under 40 12 65 _ — 77
+40-49 5 52 — —_— 37
+50-59 3 16 53 _ 72
+13
+(91110) At*3
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-16 ===
+who will be receiving widows’ benefits is shown in Table 8. Women widowed
+before February 1957 were entitled to a widow’s pension on the termination
+of widowed mother’s allowance if they were then aged 40 or over, but this age
+was increased to 50 for women widowed after February 1957. This change
+also contributes to the fall in the number of widow pensioners.
+
+Other beneficiaries
+
+42. The average number receiving sickness benefit at any time is about
+900,000 although there are seasonal fluctuations on either side of this figure and
+occasional Jarge increases due to epidemics. By the end of the century the
+average number is expected to rise to ahout 1,000,000 in line with the increase
+in the insured population.
+
+43. The number of maternity grants paid in each year, now about 950,000,
+is expected to rise slowly at first and then more rapidly to reach 1,250,000 by
+the end of the century, and the numbers of paternity allowances awarded in
+a year would rise from about 230,000 to 300,000, of which about 30 per cent
+would be in payment at any one time.
+
+44. At present about 35 per cent of deaths are those of persons who were
+over pensionable age on Sth July 1948, for whom no grant is payable. This
+group will diminish and the number of death grants payable each year is expected
+to grow from its present level of about 375,000 to about 625,000 by the end of
+the century.
+
+45. The use of a rate of unemployment of 2 per cent implies that the average
+number unemployed would rise with the assumed growth in the population
+from about 465,000 in 1965 to nearly 575,000 at the end of the century; of the
+initial numbers about 260,000 would receive unemployment benefit (200,000
+men and 60,000 women) and this total would rise to nearly 325,000 by the end
+of the century.
+
+Future Income and Outgo
+
+46. The estimated numbers of future contributors and beneficiaries shown in
+the foregoing tables were calculated at five-yearly intervals from 1963, the base
+year for the population projections. The Acts provide, however, for quin-
+quennial increases in contributions in April 1965, 1970, 1975 and 1980 and the
+resulting fluctuations in income make it appropriate to examine the average
+state of the scheme over five-year periods. The periods selected are those
+beginning immediately after the quinquennial increases and it is convenient to
+
+give estimates of income and outgo for the first year of each such period.
+Figures are shown for every year up to 1970-71 and thereafter for each fifth
+year up to 2005-06 or ahout 40 years ahead.
+
+47. As the object is to show the trend of income and outgo in future it is not
+necessary to attempt to forecast relatively minor variations such as those due
+to differing numbers of pension pay-days in particular years. The estimates
+are therefore based throughout on the average year of 52-18 weeks; for similar
+reasons no adjustment has been made for the shortfall which will occur
+immediately following each quinquennial increase because there is an inevitable
+delay in crediting to the National Insurance Fund the increase in graduated
+contributions collected through the P.A.Y.E. procedure.
+
+14
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-17 ===
+Income 2 3 9
+48. The estimated income of the National Insurance Fund in future years.
+from contributions, Exchequer supplements and interest is set out in Table 9
+and the contribution income in certain years is analysed in Table 10. The full
+TABLE 9
+Estimated income of the National Insurance Fund
+£ millions
+Contributions from insured Exchequer supplements
+persons and employers
+Financial | {}-—-—-ss sh Total
+year ., Quin- | 7 Quin- | Interest | income
+Initial | gheaniall Total Initial iall Total
+rates | queania ota rates | quennia ota.
+| increases increases
+1964-65 .. | 1186 — | 1186 220 _— 220 54 1460
+1965-66 .. | 1190 72 1262 221 12 233 54 1549
+1966-67 .. | 1196 72 1268 222 12 234 54 1556
+1967-68 .. | 1199 72 1271 222 12 234 54 1559
+1968-69 .. | 1200 72 4272 222 12 234 54 1560
+1969-70 .. | 1200 72 1272 222 12 234 54. 1560
+1970-71 .. | 1202 144 1346 222 24 246 54 1646
+1975-76 .. | 1204 217 1421 221 36 257 54 4732
+1980-81 .. | 1237 297 1534 227 49 276 54 1864
+198: 36 .. | 1288 308 1596 237 51 288 54 1938
+1990-91 .. | 1345 323 1668 247 53 300 54 2022
+1995-96 .. | 1410 338 1748 258 56 314 54 2116
+2000-01 .. | 1481 | 355 1836 271 59 330 54 2220
+2005-06 .- | 1556 373 4929 ; 285 61 346 54 2329
+TABLE 10
+Analysis of National Insurance contribution income
+. £-millions
+1965-66 1985-86 2005-06
+Quin- Quin- | Quin-
+Initial | quennial| Initial | quennial| Initial | quennial
+rates |increases| rates j increases} rates | increases
+Contributions from em-
+ployed persons:
+Juveniles .- a 19 1 13 4 16 5
+Adults:
+Flat-rate contributions 381 23 406 98 490 118
+Graduated contributions 130 8 145 34 177 42
+Contributions from em-
+ployers:
+Juveniles . 19 1 13 4 16 5
+Adults:
+Flat-rate contributions 449 27 500 120 602 144
+Graduated contributions 130 8 145 34 177 42
+Contributions from self-
+employed persons .. 47 3 49 42 59 15
+Contributions from non-
+employed persons .. 6 1 6 2 6 2
+“Payments in lieu” we 9 —_ 11 _ 13 _
+Total... -. | 1,190 72 1,288 308 1,556 373
+15
+(91110) Atta
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-18 ===
+quinquennial increases prescribed by the Acts have been assumed to take effect
+but the income from them has been shown separately in the tables. Smaller
+increases may be made if the Minister of Pensions and National Insurance, with
+the consent of the Treasury, so prescribes. National Health Service and
+Industrial Injuries contributions have of course been excluded from the tables.
+
+49. Quite apart from the effect of quinquennial increases the income from
+contributions and associated Exchequer supplements will rise as the number of
+contributors increases, although this growth will be restricted to a certain extent
+by the expected tendency for more employed married women to choose not to
+pay flat-rate contributions.
+
+50. A constant interest income of £54 millions a year is assumed. This
+represents the annual interest on the securities held in the National Insurance
+Fund and the Reserve Fund at the beginning of 1964-65. Since the scheme is
+financed on a “ pay-as-you-go ”’ basis, it would be inappropriate to allow
+for any substantial future change in the size of the invested funds.
+
+Outgo
+
+51. The estimated future expenditure on benefits and administration is set
+out in Table 11 and an analysis of the retirement pension expenditure is given
+in Table 12.
+
+TABLE 11
+Estimated expenditure of National Insurance Fund
+£ millions
+. Widows’ | | Transfers
+rec Retire- | benefits ee Sickness | Mater- Death otal seo to Total
+j st of + -
+year pension guardian’s Fpenehits benefits benefits grant benefits stration Northern diture
+| allowance |
+1964-65 | 1,005 104 45 187 | 30 7 | 1,378 | 54 10 1,442
+1965-66 | 1:03] 103 60 138 | 30 8 | 11420 | 54 10 13484
+1966-67 1,058 103 60 188 30 8 1,447 55 9 1,511
+1967-68 | 1,084 103 61 189 | 30 8 | 0475 | 55 9 15539
+1968-69 | 1112 102 61 189 | 30 9 | 17503 | 55 9 1,567
+1969-70 | 13139 102 62 189 | 30 9 | 13531 56 9 1,596
+1970-71 1,164 101 62 189 31 10 1,557 56 9 1,622
+1975-76 | 13280 97 63 188 | 31 12 | eri 58 9 1,738
+1980-81 | 17362 92 65 190 | 32 14 | 0755 | 59 9 1823
+1985-86 | 1,421 88 67 194 | 34 15 | 1819 | 60 10 1,889
+1990-91 | 13486 83 7 199 | 37 15 | 15891 61 10 1962
+1995-96 | 17530 80 74 208 | 38 16 | 946 | 63 10 | 2019
+2000-01 | 13571 80 78 219 | 39 16 | 2003 | 64 10 2077
+2005-06 | 1,623 83 1 81 232 | 40 16 | 2075 | 65 10 27150
+TABLE 12
+Estimated cost of retirement pensions
+£ millions
+1965-66 | 1975-76 1985-86 1995-96 | 2005-06
+Flat-rate pensions:
+At basic rates . 990 1,186 1,262 1,292 1,297
+Increments .. .. 39 61 68 69 69
+Total... . 1,029 1,247 1,330 1,361 1,366
+Graduated additions to
+
+pensions .. 2 33 91 169 257
+Total cost of retirement
+
+pensions . .. 1,031 1,280 1,421 1,530 1,623
+
+16
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-19 ===
+52. On the basis of current rates of benefit it is estimated that the total
+expenditure of the scheme would increase by about 20 per cent in the next ten
+years and would be about 50 per cent higher in 40 years’ time. Almost all of
+this increase would be due to the growth in the cost of retirement pensions
+which forms about 70 per cent of the total outgo. The expenditure on such
+pensions consists of three elements, namely pensions at the basic rates, increments
+for deferment of retirement and the graduated additions to pensions. The
+number of retirement pensioners and hence the cost of pensions at the basic rates
+will continue to increase for the next 20 or 25 years when it will be about 30 per
+cent above the present level. The cost of increments at present rates will also
+increase for 20 years or so and will then level off at about £70 millions a year.
+Graduated pensions are still very small but will steadily increase for many
+years; on the basis of 1964-65 earnings they would represent about 24 per cent
+of the total cost of retirement pensions in ten years’ time but this proportion
+would increase to about 64 per cent in 20 years’ time and 16 per cent in 40 years.
+The increases in the costs of unemployment benefit, sickness benefit and maternity
+benefit in the later years of the century will reflect the expected increase in the  -
+insured population. Death grant, however, will show a more rapid increase as
+the proportion of deaths attracting grants will rise from its present level of 60
+per cent to over 90 per cent in 40 years’ time.
+
+53. The item “ Transfers to Northern Ireland ”’ refers to payments under the
+financial agreement between the schemes for Great Britain and Northern Ireland
+under which the National Insurance Funds in the two countries are maintained
+in parity. Under this agreement it is necessary for payments to be made from
+the Great Britain Fund to the Northern Ireland Fund mainly because of the
+less favourable unemployment and sickness experience and lower earnings in
+the latter country. A firm estimate of future payments must await the comple-
+tion of estimates of income and outgo of the Northern Ireland National
+Insurance Fund and the figures for these transfers shown in Table 11 are therefore
+provisional.
+
+V. THE ADEQUACY OF THE CONTRIBUTIONS
+
+54. Since the introduction of the graduated scheme in April 1961 the financial
+condition of the National Insurance Fund has been examined on the “ pay-as-
+you-go”” or “assessment ”’ system under which the object is to ensure an
+approximate balance between income and outgo over short periods of years.
+A comparison of the estimates of future income and outgo which illustrates the
+adequacy of the contributions is set out in Table 13. In this table the figures in
+the second part are shown as averages over five-year periods since, as explained
+in paragraph 46, figures for single years could be misleading as a guide to future
+trends.
+
+55. The figures in Table 13 show that the income of the Fund is expected to
+exceed the outgo over the five-year period beginning in April 1965, but that for
+the following ten years, from 1970 to 1980, there will be deficits. After 1980,
+however, increasing surpluses will occur. The underlying cause of these
+variations in the Fund’s position from one period to another is the expected
+
+change in the proportions of the population of Great Britain in the various age
+groups. The number of persons over pensionable age is increasing because the
+annual number of births was increasing until about 55 years ago, and because,
+with improving mortality, a higher proportion of each generation survives to
+17
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-20 ===
+TABLE 13
+Comparison of income and outgo of National Insurance Fund
+£ millions
+Excess (++) or
+deficit (—) of
+Income Outgo income over
+outgo
+1964-65 .. an 1,460 1,442 + 18
+1965-66 .. - 1,549 1,484 + 65
+1966-67 .. . 1,556 1,511 + 45
+1967-68 .. . 1,559 1,539 + 20
+1968-69 .. .. 1,560 1,567 - 7
+1969-70 .. .. 1,560 1,596 — 36
+Annual averages for five-year periods
+1965-70 .. .. 1,557 1,539 + 18
+1970-75... . 1,638 1,668 — 30
+1975-80 .. . 1,743 1,772 — 29
+1980-85 .. . 1,892 1,849 + 43
+1985-90... o 1,970 1,918 + 52
+1990-95... .. 2,059 1,985 + 74
+1995-2000. . o 2,155 2,042 + 113
+2000-2005... 2,263 2,106 + 157
+{
+pension age. The consequent rise in the number entitled to pension is being
+reinforced as new pensioners replace persons who did not qualify because they
+were already over pensionable age in 1948. This increase in the number of
+pensioners will continue for about 20 to 25 years, during most of which period
+the rising cost would not be matched by the income of the Fund, even when
+allowance is made for the full quinquennial increases. By 1980, however, the
+income would be rising more rapidly and would continue to do so even after
+the last quinquennial increase had been imposed; this reflects the recent higher
+number of births and the high number forecast for the near future who will then
+have reached the contributing population.
+
+56. If the finances of the scheme were examined only over the period 1965-70
+the income would be sufficient to cover the benefits and costs of administration
+with a total surplus in the five years of about £90 millions if the full quinquennial
+increases were imposed in April 1965. A continuing scheme which shows
+increasing benefit costs should, however, be viewed over a long period ahead
+and on this basis the deficits averaging about £30 millions a year over the ten
+years 1970-1980 would have to be brought into consideration.
+
+57. A continued growth in earnings would tend to improve the position by
+augmenting the income from graduated contributions but past experience
+suggests that such increases in earnings would be accompanied by increases in
+benefit rates, the extra cost of which could not be met without increases in rates
+of contribution. Each time benefits were increased it would be necessary to
+reassess the contribution rates in the light of long-term estimates made at the
+time.
+
+58. The potential deficits on the level earnings basis shown in Table 13
+amount to nearly £300 millions which, after taking account of £90 millions surplus
+over the first five years, would lead to a net deficit approximately equal to the
+present balance in the National Insurance Fund (other than the Reserve Fund).
+
+18
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-21 ===
+This deficit would have to be met at some time, either by drawing on the
+Reserve Fund* until surpluses emerged again in later years or by charging
+higher contributions in the 1970’s. In practice, extra graduated contributions
+arising from the growth of earnings while benefit rates are unaltered would
+make a small reduction in the deficits but would not eliminate them.
+
+59. It appears therefore that the contributions at present in force, including
+the quinquennial increases prescribed by the Acts, should together prove
+adequate to support the benefits of the scheme at their present rates, except in
+the period 1970 to 1980.
+
+I have the honour to be,
+Your Lordships’ obedient Servant,
+HERBERT TETLEY.
+Government Actuary’s Department,
+London, S.W.1.
+10th November, 1964.
+ee
+* A resolution of the House of Commons would be needed for this.
+19
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-22 ===
+APPENDIX 1
+RATES AND CONDITIONS OF BENEFIT
+
+1. In return for weekly contributions, the National Insurance scheme provides
+benefits in the event of unemployment, sickness, maternity, widowhood, orphanhood,
+retirement and death. Title to benefit at the standard rates quoted in the following
+paragraphs is dependent on the full satisfaction of contribution conditions. Most
+benefits are subject to reduction if contribution records are deficient.
+Unemployment and sickness benefits
+
+2. The standard rate of these benefits is 67s. 6d. a week (with additions for
+dependants*). Unemployment benefit is payable for the first 30 weeks of unemploy-
+ment occurring in a “period of interruption of employment” due to sickness or
+unemployment (see below); after the first 30 weeks, benefit may be paid for additional
+periods, up to a maximum of a further year, according to the insured person’s
+contribution and benefit records. Sickness benefit, however, is normally paid for all
+sickness occurring in such a period, subject to the limitation that not more than
+52 weeks of such benefit are payable in any one period of interruption of employment
+until 156 contributions have been paid.
+
+3. A “period of interruption of employment” is defined so that two periods of
+unemployment or sickness are regarded as part of the same period unless they are
+separated by at least 13 weeks. Benefit is not paid for isolated days of unemployment
+or sickness nor for the first three days of a period which lasts for less than 12 days.
+
+4. A married woman receives benefit at a lower rate (46s. a week), unless she is
+living apart from, and is not receiving any financial help from, her husband, or is
+maintaining a husband incapable of self-support, when the full weekly rate of 67s. 6d.
+is paid. The rate of benefit for juveniles under 18 is normally 38s. 6d. a week.
+Maternity benefits
+
+5. On the confinement (or in anticipation of the confinement) of an insured woman,
+or the wife of an insured man, a maternity grant of £16 is payable. If more than one
+child is born the sum paid is increased to £16 for each child. If the confinement is in
+the mother’s home or if she is confined elsewhere at her own expense a home confinement
+grant of £6 is also paid.
+
+6. In addition to these benefits, gainfully-occupied women who are themselves
+paying contributions receive a maternity allowance of 67s. 6d. a week (with appropriate
+additions for dependants) for a period normally of 18 weeks.
+
+Widows’ benefits
+
+7. For the first 13 weeks of widowhood the widow of an insured man receives a
+widow's allowance of 95s. a week (with additions if she has dependent children) unless
+she was over 60 and her husband was entitled to a retirement pension. Widow’s
+allowance may be followed by a widowed mother’s allowance payable at the rate of
+67s. 6d. a week, ‘with additions of 37s. 6d. for the first child, 29s. 6d. for the second
+child and 27s. 6d. for each subsequent child so long as the widow has a dependent
+child under age 19 who has not yet left school. A widowed mother’s allowance at the
+“* personal ” rate of 67s. 6d. is payable to a widow whose children have left school but
+who has a young person under age 19 living with her. If on the termination of widow's
+allowance the widow is not entitled to widowed mother’s allowance she receives a
+widow’s pension at 67s. 6d. a week if she was between 50 and 60 at widowhood and had
+
+then been married for not less than three years. Further, if the widow had attained
+age 60 at widowhood, a retirement pension is usually payable on her husband’s
+insurance, either from widowhood or following a widow’s allowance. Widow’s
+pension is also payable on the termination of widowed mother’s allowance if the widow
+is then over age 50 (age 40 if her husband died before 4th February 1957) and not less
+than three years have elapsed since marriage.
+
+8. Widowed mother’s allowance or widow’s pension is reduced if the widow’s
+earnings exceed certain limits, and benefit ceases if the widow remarries.
+
+9. When a widow receiving onc of the widows’ benefits attains the minimum
+
+pensionable age of 60, the benefit may continue to be paid beyond that age, though
+* See paragraph 16 of the Report.
+20
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-23 ===
+widow’s pension cannot be paid beyond age 65. Once the widow has attained age 60
+she is able to claim a retirement pension on her own insurance (instead of widow’s
+benefit) subject to retirement from regular work; for the purpose of this claim she is
+credited with a contribution for each week for which she received one of the widow’s
+benefits and she may take advantage of her husband’s contribution record.
+
+10. A widow who does not qualify for any other benefit under the scheme receives
+a 10s. widow’s pension if she had married before 5th July, 1948, and her husband was
+insured under the Contributory Pensions Acts immediately before that date.
+Guardian’s allowance
+
+11. A guardian of a child both of whose parents are dead receives a payment of
+37s. 6d. a week if either parent was an insured person.
+
+Child’s special allowance
+
+12. A child’s special allowance, at a rate of 37s. 6d. a week for the first child, 29s. 6d.
+for the second child and 27s. 6d. for each subsequent child, is payable, on the death of
+her former husband, to a mother whose marriage has been terminated by divorce or
+annulment, if he contributed towards the children’s support before his death.
+Retirement pension
+
+13. Retirement pensions at the rate of 67s. 6d. a week are payable at or after the
+minimum pensionable age of 65 (men) or 60 (women), upon retirement from regular
+work, and from age 70 (men) or 65 (women) without any retirement condition.
+A married man drawing a retirement pension who has a dependent wife who is not
+herself qualified for retirement pension receives an addition of 41s. 6d. a week; if the
+wife is over 60 and has retired, she normally ..ceives a pension herself of the same
+amount. The wife’s pension is payable at 67s. 6d. a week if she is herself insured and
+is in any event increased to 67s. 6d. a week on widowhood. Until the beneficiary
+attains age 70 (men) or 65 (women) the retirement pension is reduced if earnings are
+more than a certain limit; thereafter the pension is payable in full irrespective of
+earnings.
+
+14. Employed and self-employed persons who defer retirement become entitled, on
+retirement or attainment of age 70 (men) or 65 (women), to increments of pension of
+Is. a week for every 12 contributions paid after pensionable age. Further, for a
+married man the wife’s pension is increased by 6d. a week (rising to 1s. on widowhood)
+for each 12 such contributions he has paid after she had attained age 60. Thus, if a
+man earns the maximum of 21 increments his pension at age 70 will be 88s. 6d. a week
+and his wife may receive 52s., increasing to 88s. 6d. on widowhood. Persons who
+defer retirement are eligible for unemployment and sickness benefit during the period
+of deferment. A widow retirement pensioner also receives increments of 6d. a week
+for every 12 contributions paid by her late husband after he had reached 65 but before
+she had reached 60.
+
+15. Graduated additions to the flat-rate pensions described above are payable at the
+rate of 6d. a week for each £7 10s.* of graduated contributions paid by a man or £9*
+bya woman. A widow over age 60 is entitled to one-half of any graduated addition
+earned by her late husband, together with any addition earned by her own graduated
+contributions. Graduated additions are subject to the retirement condition and further
+amounts are added in respect of graduated additions forgone and contributions paid
+during deferment of retirement.
+
+Death grant
+
+16. On the death of an insured person, or of certain dependants of an insured
+person, a death grant is payable. The grant is normally £25 on the death of an adult,
+with smaller amounts on the death of a child, but a reduced grant of £12 10s. is payable
+on the death of those aged 55 to 65 (men) or 50 to 60 (women) on 5th July 1948;
+no death grants are payable on the death of persons who were over 65 (men) or 60
+(women) on Sth July 1948.
+
+* At the quinquennial increases in the contribution rates (see paragraph 13 of the Report)
+these amounts will be increased pro-rata so that the period for which a person whose earnings
+are unchanged will contribute to obtain title to each 6d. a week graduated addition will not
+be affected.
+
+21
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-24 ===
+APPENDIX 2
+NATIONAL INSURANCE FUNDS
+Statement of income and outgo and balances for period Ist April 1959, to 31st March 1964
+£ millions .
+963-64 esoeat
+1963- to
+1959-60 1960-61 1961-62 1962-63 (provisional)| 31st March
+1964
+1. Balances at beginning of period:
+(a) National Insurance (Reserve) Fund .. . . . 1,167-7 1,167°8 1,167-9 1,168°0 1,168-1 1,167-7
+(6) National Insurance Fund os .. oe . 338-1 305-5 264-3 277-5 264:8 338-1
+1,505-8 1,473-3 1,432-2 1,445-5 1,432:9 1,505-8
+S 2. Income:
+(a) Contributions from insured persons and employers:
+(i) Flat-rate contributions oe . oe . oe 708-4 713-0 767-0 769-2 876°1 3,833-7
+(ii) Graduated contributions .. . . . . _ _ 147-0 177-0 222-0 546-0
+(ii) Payments in lieu of contributions . o . _ —_ 1-0 4-7 71 12-8
+(b) Payments from Exchequer:
+(i) Supplements to contributions . . a . 422-5 126-4 187-4 188-6 212-0 836:9
+(ii) Additional sums under Section 2(3)(a) of 1954 Act as
+extended by Section 1(3)(c) of 1959 Act .. .. .. 46-0 43°6 —_ —_ _ 89-6
+(c) Investment Income:
+(i) Interest on National Insurance (Reserve) Fund and
+National Insurance Fund .. . oe oe .. | 52+2 536 52-8 55:0 542 267-8
+(if) Net profits (-+) or fosses (—) on realisation, etc. of
+securities .. .. . . . . we [AL _ —6:7 - <7 -—6:4 —12-5
+53°5 536 46-1 54:3 47-8 255°3
+Totalincome 6. wee | 930-4 | 936-6 1,148-5 1,193-8 | 1,365-0 | 5,574-3
+i i 1
+eee sd
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-25 ===
+£ millions
+Ist april
+to
+1959-60 1960-61 1961-62 1962-63 1963-64 31st March
+1964
+3. Outgo:
+(a) Benefits:
+(i) Unemployment benefit .. os oe . we 41-9 30-2 36:3 64-4 64°6 237-4
+(ii) Sickness benefit . oe . . .. oe 130-7 135-0 1546 161°5 191-4 773°2
+(iii) Maternity benefits .. . . .. oe oe 20:0 20°6 24:5 25°5 29°5 120-1
+(iv) Widows’ benefits .. . . . . . 61:5 65°5 80-0 84:0 99-0 390-0
+(v) Guardian’s allowance and child’s special allowance .. +4 +4 5 5 +5 2°3
+(vi) Flat-rate retirement pension oe . . . 657-0 677-0 783-9 807-0 958-4 3,883 -3
+(vii) Graduated retirement benefit . oe . . _ _ _— +] “4 “5
+(viii) Death grant .. . . . o . . 5:2 5:8 6:1 6:7 6-9 30-7
+(ix) Total benefits a . . a 916°7 934-5 1,085-9 1,149-7 1,350-7 5,437°5
+(6) Cost of administration .. . os we os ee 39-0 38-1 42°5 47-6 53-1 220-3
+N)
+w (c) Transfers to Northern Ireland Funds under reciprocal
+arrangements .. ve . we . we 6°8 4:8 6:4 8-4 87 35-1
+(d) Other transactions (net) os se . we oe 4 3 4 ‘7 1-4 2:9
+Total outgo . . . . . 962-9 977°7 1,135+2 1,206-4 1,413-6 5,695°8
+4, Net increase (-+) or decrease (—) in Funds .. oe o . — 32:5 — 41-1 + 13°3 — 12-6 — 48-6 —121-5
+5, Balances at end of period:
+(a) National Insurance (Reserve) Fund .. we oe . 1,167°8 1,167-9 1,168-0 1,168-1 1,168+2 1,168-2
+(6) National Insurance Fund an oe . . os 305:5 264°3 277°5 264°8 216-1 2161
+1,473+3 1,432-2 | 1,445°5 1,432-9 1,384-3 1,384:3
+| i ! Nn
+tw
+Nore, The balance in the National Insurance Fund at Ist April 1959 differs by £1 million from the balance at 31st March 1959 shown in Appendia 2 tee
+to the Second Quinquennial Review, and the account for 1959 60 differs slightly from that given in the Interim Report fur that year. These differences are
+due to a change of practice, previously the accounts published in the reviews had been adjusted to bring into their proper years certain transactions carried Ww
+through in later years. Such adjustments had been of considerable size in the early years of the Natiunal Insurance scheme but are now nv longer
+large enough to warrant special treatment.
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-26 ===
+APPENDIX 3
+THE BASIS OF THE ESTIMATES
+Future Population of Great Britain
+
+1. The first requirement for the calculation of the expected income and outgo of
+the National Insurance Fund in future years is an estimate of the future population of
+Great Britain, sub-divided by sex and age. Earlier this year population projections
+were made separately for England and Wales and for Scotland and were published by
+the respective Registrars-General* and, as there have been no subsequent developments
+calling for their substantial revision, the sum of these two projections is appropriate
+for the present purpose. The estimates for 1963, 1973, 1983, 1993 and 2003 are given
+in Table 34; they include members of the Armed Forces at home and abroad. The
+bases of the projections are described in the following paragraphs.
+
+2. Starting Population. The projections were based on the estimates made by the
+Registrars-General of the total population at mid-1963 (ie. the de facto or home
+population plus members of H.M. Forces serving overseas minus Commonwealth
+and foreign forces in the country).
+
+3. Mortality. Rates of mortality applicable to the present time were calculated
+separately for England and Wales and for Scotland. It was then necessary to consider
+how these rates were likely to change in future years. Study of the trend of mortality
+from 1900 to the present time brought out the following features:
+
+(i) there has been a very considerable fall in mortality in childhood and at the
+younger adult ages, but the percentage improvement declines with age and at
+advanced ages it has been very slow, particularly for men;
+
+(ii) female mortality has improved more rapidly than male mortality, particularly
+in middle-life;
+
+(iii) the rate of improvement has been far from constant over the pericd; in
+general, improvement has been more rapid in the second half of the period
+than in the first, but the pace appears to have slackened again in the last few
+years.
+
+4, In the light of this study it was decided to assume that mortality rates would
+decrease in geometrical progression over the next 40 years, so that, at the end of that
+period, the rates experienced would bear the following proportions to present rates:
+
+Ratio of mortality rates in 2002-03 to 1962-63 rates
+Age Males Females
+0 -40 -40
+12 -40 “40
+32 *45 -40
+52 63 °55
+72 “80 *76
+92 1-00 1-00
+
+5. Although mortality rates applicable to Great Britain as a whole were not used in
+the calculations, they can be obtained by weighting the separate rates for England and
+Wales and for Scotland by the relative populations of the two countries. The rates
+so derived are given, for 1962-63 and 2002-03, in Table 14.
+
+*The Registrar-General’s Quarterly Return for England and Wales, No. 460—Fourth
+
+Quarter 1963.
+
+The Quarterly Return of the Registrar-General, Scotland, No. 436—Quarter ended
+
+31st December, 1963.
+
+24
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-27 ===
+TABLE 14
+Assumed rates of mortality per thousand
+1962-63 2002-03
+Age —_—_—_- OOOO
+Males Females Males Females
+
+0 23-5 18-4 9:4 7:4
+
+2 1:0 8 “4 3
+
+7 +5 3 2 l
+12 “4 “2 2 ‘1
+17 8 +3 3 ‘Il
+22 It “5 4 2
+27 1-0 6 “4 2
+32 1:2 “9 5 “4
+37 1:8 1-3 9 5
+42 2°9 2-1 1-6 9
+47 5:0 3-3 3-0 1-6
+52 9-2 5-2 5°8 2-9
+57 16-7 8-0 11-2 4-8
+62 27°3 13-4 19-4 8-7
+67 42:2 22:3 31-6 15:6
+72 64-8 38-9 51-8 29°6
+TI 97-5 66°6 82-9 54-6
+82 151 112 136 99
+87 224 196 213 : 184
+
+Note. The above rates of mortality represent the probability of dying within a year following
+the attainment of the age stated.
+
+6. Migration. The net amount of migration to and from Great Britain has
+fluctuated widely since the War. It is affected both by economic circumstances and by
+Government policy, and estimates of future net migration can be little more than
+notional figures, at any rate for the long term. In the early part of this year a Working
+Party of interested Departments advised that it would be reasonable to assume a net
+inward migration into Great Britain of about 30,000 a year. Though in the last few
+years the inward movement has been predominantly male, the most recent figures
+showed approximate equality in numbers between the sexes and this equality has
+been assumed to continue. Little information is available about the age distribution
+of migrants, but it is clear that they are largely young men and women and there is
+evidence of a small outward movement at older ages; the age distribution of migrants
+assumed for the projections took account of these factors.
+
+7. Future Births. The number of future legitimate births depends both on the
+numbers of married women and on the size and spacing of their families. For women
+in England and Wales there has been a steady trend towards earlier marriage. This
+may well be halted for a time as the large number of girls born in 1947 attain marriage-
+able age, but in the longer term the trend will probably be renewed. It was therefore
+assumed that by 1973 marriage rates at ages under 20 would be 20 per cent. greater
+than in recent years. It was also assumed that, as a consequence, marriage rates at
+ages over 25 would ultimately decrease; otherwise the proportion of women remaining
+spinsters at age 30 would be unduly low.
+
+8. Having made estimates in this way of future numbers of married women in England
+and Wales, it was necessary to consider the rate at which they are likely to build their
+families. Interpretation of statistics of past family-building is difficult because of the
+effects of abnormal war and post-war conditions. It is, however, clear that, although
+women who married in the early 1950’s were relatively slow to start their families,
+they bore more children in the period between 3 and 9 years from marriage than those
+married a few years earlier. It seems probable that women married in the early
+1950’s will eventually have families rather Jarger than those of women married in the
+1940's. In contrast, those married in the late 1950’s started their families relatively
+quickly, but it is too soon to say whether this early child-bearing will result in a
+substantial increase in average size of completed family.
+
+25
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-28 ===
+9. In the light of recent experience it was decided to assume that women marrying
+in 1964 and later years would start their families even more quickly than those marrying
+in the late 1950’s, but that there would, in consequence, be a reduction in the rate of
+family-building at the longer durations. The net result would be a modest increase
+in the size of family for each age at marriage. From the family-sizes so determined
+the numbers of legitimate births were calculated and a suitable addition was made for
+legitimate births.
+
+10. Fertility data are not available in such detail for Scotland as for England and
+Wales. Over most of the last fifty years the total numbers of births per 1,000 women
+aged 15-44 in Scotland has remained about 15 per cent. higher than in England and
+Wales. Although this excess has declined to about 8 per cent. in recent years, there
+are reasons for believing that the fall may be temporary. It was therefore assumed
+that the number of births per 1,000 women aged 15-44 in Scotland would exceed the
+corresponding figures for England and Wales by proportions rising from 8 per cent.
+at present to 15 per cent. in 1980 and later years.
+
+11. The calculations described in the preceding paragraphs led to the following
+estimates of live births in Great Britain in selected years. (Actual birth registrations in
+recent years are also given for comparison.
+
+Live births in Great Britain
+Actual registrations Estimates
+Year Number of births Year Number of births
+1960 884,000 1965 975,000
+1961 905,000 1970 995,000
+1962 945,000 1975 1,012,000
+1963 959,000 1980 1,038,000
+1985 1,109,000
+1990 1,195,000
+1995 1,255,000
+2000 1,286,000
+Thus the number of live births is expected to rise fairly slowly until 1980 and more
+rapidly thereafter till by the end of the century births are expected to be about one-
+third more than in 1963. It was assumed that the number of male births will exceed
+the number of female births by 6 per cent.
+
+12. The population projection for Great Britain, constructed on the assumptions
+just described, shows a total population rising steadily from 52-4 millions in 1963 to
+71-5 millions forty years later. The growth is much more rapid than was assumed for
+the second quinquennial review, when the population was expected to be less than
+60 millions at the end of the century; the main reasons for the difference are the rauch
+greater number of births now assumed and the assumption of a net inward migration,
+instead of the small outward movement assumed five years ago. The changes in
+assumptions affect mainly the numbers of children and of persons of working age; the
+expected numbers of pensionable age are little greater than those previously assumed.
+
+13. Over the forty-year period, children under age 15 are expected to increase in
+number from 12-0 millions to 18-6 millions, an increase of over 50 per cent. The
+population of working age (men aged 15 to 64 and women aged 15 to 59) is expected
+to increase slowly at first from 32-6 millions in 1963 to 35:6 millions in 1983 and then
+more rapidly to 43-0 millions in 2003. By contrast, the numbers of pensionable age
+should increase more rapidly in the first twenty years, from 7:8 millions to 9+7 millions,
+but thereafter should remain almost constant, being about 10-0 millions in 2003.
+As a consequence, the ratio of the numbers of working age to the numbers of
+pensionable age will fall from 4-2 in 1963 to 3-7 in 1983 but will rise again to 4:3 by
+
+14. Analysis by marital status. For the purpose of the estimates a sub-division of
+the future female population according to marital status was required. In this analysis
+due allowance was made for likely future changes in spinsters’ marriage rates (see
+paragraph 7 above) and for the effect of the assumed future reductions in male mortality
+
+. 26
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-29 ===
+on the numbers of married women becoming widows. The proportion in each marital
+status for each age group are shown, for 1963, 1983 and 2003, in Table 35. From this
+table it will be seen that the proportions married are expected to rise; in consequence,
+the proportions who remain single are expected to fall until ultimately only 5 per cent.
+of each cohort of women will remain unmarried. At the younger ages the proportion
+of widows is expected to fall because of lower male mortality, but at advanced ages,
+where the great majority of women are either single or widowed, the proportion of
+widows may rise because of the smaller proportions who never marry.
+
+Numbers of contributors
+
+15. The estimated numbers of contributors given in Table 3 represent the average
+numbers of persons within the scope of the insurance scheme during each year
+including cases where contributions are excused because of unemployment, maternity
+or incapacity for work, and correspond to the figures published annually in the Interim
+Reports on the scheme, and in the Annual Abstract of Statistics. The estimates are
+derived principally from the flat-rate contribution records of individuals, which are
+maintained by the Ministry of Pensions and National Insurance from the insurance
+cards or other documents used to provide evidence of payment of flat-rate contributions.
+The cards have a currency of twelve months, but in order to spread the work of issuing
+them over the year, it is arranged for one quarter to be exchanged on each of four
+dates, at the beginning of March, June, September and December. Where fiat-
+rate contributions are paid by methods other than stamped cards, the documents
+used also cover periods of a year ending on one of these four dates. Statistics have
+been compiled from a 2 per cent. sample of the insured population, divided between
+these four exchange dates, the status of an individual being determined in general by
+the stamp or credit recorded for the last week of currency of his insurance card.
+Thus the statistics derived from the sample relate to four dates spread over the year. .
+The numbers in the sample on any one date represent only 4 per cent. of the insured
+population, and estimates based on one date only would be subject to considerable
+margins of error when analysed by age-groups, particularly for the smaller classes.
+Furthermore, because of seasonal fluctuations, the numbers in any particular week
+may not be typical. It is therefore preferable to average the results for the four
+exchange dates in each year. The averages so obtained give a measure of the mean
+numbers over the year, although they do not relate to any one week in the year.
+
+16. There is a relatively small number of contributors for whom no information is
+available for the last week of the contribution year, but who may nevertheless remain
+within the scope of the scheme. The statistical tabulations for 1960 and later years
+have been extended to provide a more satisfactory basis for estimating the number
+and insurance class of such persons by reference to their contribution records during
+the years immediately before and after the exchange dates.
+
+17. Since the last quinquennial review, there has been another change in the
+statistics. It was then the practice to record the insurance class of a contributor not
+only for the last week of his contribution year, but also for a week three months
+earlier, and this extra record was used in conjunction with the records of persons who
+had exchanged their cards three months earlier. Although this procedure yielded
+more information from the sample, it necessarily increased, by three months, the time
+taken to prepare the statistics. On balance, it seemed advantageous to return to the
+procedure of recording each person’s status at the end of the contribution year only,
+and this change was made during 1959.
+
+18. Statistics for 1960, 1961 and 1962, obtained on the current procedure outlined
+above, were available as a basis for estimates of the contributing population.
+The estimated numbers below minimum pension age in each class, subdivided by sex,
+age and, for women only, marital status, were derived from these statistics, and were
+compared with the total population of Great Britain to derive proportions which
+could be applied to estimates of the future population in order to obtain the future
+numbers contributing in each insurance class. The contributors include a number of
+persons who have continued to pay contributions after going abroad (including
+foreign-going mariners). Such persons are not, however, included in the total
+population, which comprises all persons actually in the country, together with members
+of H.M. Forces serving abroad, but excludes Commonwealth and foreign forces
+
+27
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-30 ===
+stationed in Great Britain. It follows that the proportions shown are slightly larger
+than the true proportions covered by the scheme, but this does not invalidate the
+method used for estimating the future numbers.
+
+19, The proportions expected to be covered are set out in Table 15. For ages over
+30, it will be seen that the number of male contributors appears to be equal to the
+total population, but, for the reason explained in paragraph 18 above, this does not
+imply that every man in Great Britain is insured. There are in fact a number who are
+excepted, e.g. persons with low incomes and, at the younger ages, full-time students
+and unpaid apprentices. In general, the proportions were assumed to remain constant
+after 1962, apart from certain special cases dealt with in the following paragraphs
+where there was reason to allow for a change.
+
+Tate 15
+Assumed number of contributors in each insurance class per thousand population in each age
+group for 1963 and 1983
+Employed Persons Total
+ni contributors
+cluding
+Employer’s Self-employed | Non-employed wa .
+Ages last birthday contut ions contribution contributors | contributors onky ety
+only
+1963 | 1983 } 1963 | 1983 1963 | 1983
+Men:
+I... | 87 PO 1* 1* 339 |
+16... 1. i. ] 690 | 361 3 1 694 | 365
+17..  .. 4. | 833 «| 666 5 1 839 | 672
+: i. 6. Ll] 843 «| 702 8 3 854 | 713
+19.. 1. 1. | 925 | 834 10 2 937 | 846
+
+20-24... 3. ft) | 934 | 887 19 3 956 | 909
+
+25-29... 0 934 47 4 985
+
+30-34. 928 68 4 1,000
+
+35-39 2 913 82 5 1,000
+
+40-44 0 898 97 5 1,000
+
+45-49, I 886 109 5 1,000
+
+50-54... 875 119 6 1,000
+
+58-59. kk 872 117 ll 1,000
+
+60-64. kk, 857 112 31 1,000
+Spinsters, widows and
+
+divorced women (other
+
+than widow
+
+beneficiaries):
+
+5...) | 884 | — 3* 357 | —
+.. 2. i] 739 | 388 1 3 743 | 392
+7... LD | gon | 672 1 3 805 | 676
+Wi. of. | 878 | 786 2 5 885 | 793
+9... 6. f. | 895 | 825 3 4 902 |} 832
+
+20-24... 0 1. | 905 | 879 7 7 919 | 893
+
+2-29 971 13 15 999
+
+30-34. 953 20 23 996
+
+38-39, i. 862 28 32 922
+
+40-44 817 34 42 393
+
+45-49, 775 42 59 876
+
+50-54 0! 732 52 80 864
+
+i 704 60 121 885
+
+Married women , | |
+
+WH-HI9.. 6. ok, 500 146 — 3 649
+
+20-24. 268 195 | 166 1 1 465 | 436
+
+5-299, 113 200 | 211 1 1 315 | 326
+
+30-34... ck, 58 246 | 306 i 1 306 | 366
+
+35-39... kL | 4g 45 | 330 | 394 1 1 381 | 44}
+
+40-44... 00 1. LT 53 40 | 361 | 459 1 1 416 | Sol
+
+4-49.00 1. OL Oo 35 {| 349 | 513 2 2 424 | 552
+
+50-54... gw | 92 30 | 282 | 496 4 7 385 | 537
+
+55-59... we | 114 | 30 | 193 | 445 5 16 328 | 496
+
+ue
+
+* There will be no contributors at this age after 1971.
+
+20. The most striking change in the numbers of contributors since the last review
+has been the increase in the number of employed married women, from 3-65 millions
+in 1958 to 4°25 millions in 1962. Although the number of married women in the
+
+28
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-31 ===
+country has increased, the rise in the numbers in insurable employment is due mainly
+to a marked rise in the proportions in such employment, particularly over age 35.
+This rise has been sustained for over 10 years now, the proportions in insurable
+employment per thousand in the age group 35-60 being: 1952—257; 1957—317;
+1962—-374. These proportions include women who do not contribute, so that only the
+employer’s contribution is payable. It would clearly be unrealistic to make estimates
+which did not allow for the continuation of the trend, although such a forecast is
+bound to be somewhat arbitrary since it is impossible to say with any certainty what
+limit will ultimately be reached. Accordingly, the proportions have been assumed to
+increase for a period of twenty years. At the end of that period, on the assumptions
+used, half of the married women at ages 35-60 will be in insurable employment, and
+the proportions have been held constant thereafter. The pace of the increase has
+been assumed to reduce in future in the younger part of this age range, and little or no
+further increase is assumed at ages under 30, where family responsibilities prevent
+many married women from working. At the present time, many married women in
+their 50’s have not worked for a long time, but because of the increase in the proportions
+employed a much higher proportion of their successors will be accustomed to working,
+and a larger rise in the proportions has been assumed for these ages.
+
+21. Employed married women have to be sub-divided into those who themselves
+contribute and those for whom only the employer’s contribution is payable.
+Most married women who have completed their families have little to gain by
+contributing. Women who were married before 5th July 1948, however, are subject
+to transitional conditions for the award of pensions which give them a greater incentive
+to pay contributions. This explains the relatively high proportion of contributors at
+the older ages. The proportions paying full contributions have been assumed to fall
+in future, as these women are replaced by women married since 1948, to whom the
+transitional provisions do not apply.
+
+22. The proportions contributing at the young ages will be reduced by the continuing
+trend for more children to stay on at school after the minimum leaving age, and for
+more young people to attend universities and other further education establishments.
+The proportions for future years have been adjusted to allow for these changes, and
+for the effect of raising the school-leaving age to 16 in 1970-71, on the basis of forecasts
+supplied by the Department of Education and Science and the Scottish Education
+Department, and the future numbers of university students given in the Robbins
+Report.
+
+23. Widow beneficiaries are not obliged to pay National Insurance contributions,
+although in certain circumstances they may choose to do so. In this context, but not
+elsewhere in this report, “‘ widow beneficiaries ” are, broadly, widows who are drawing
+National Insurance widows’ benefits, or who would be drawing benefit but for the
+earnings rule, or who draw industrial Death Benefit or war widow’s pension. Other
+widows, including ‘‘ 10 shilling’ widows, have the same contribution liability as
+other unmarried women. Because of these special conditions, widow beneficiaries
+have been treated as a separate group. The proportion of such beneficiaries
+for whom only an employer’s contribution is payable, is given in Table 16. It is only
+rarely to the advantage of a widow beneficiary to pay contributions herself, and
+separate allowance was made for the very small number who do so. Widows who
+are not beneficiaries are included with other unmarried women.
+
+TABLE 16
+Assumed number of contributors per thousand
+widow beneficiaries in each age group
+Ages Employed persons,
+last employers
+birthday contribution only
+35-39 510
+40-44 560
+45-49 540
+50-54 470
+55-59 350
+29
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-32 ===
+24. The numbers in employment have to be divided between persons in non-
+participating employment, and persons within the scope of the graduated scheme
+(including those who earned too little to be liable to pay graduated contributions).
+Following the Government instruction to assume no change in the present level of
+contracting-out the numbers in non-participating employment have been assumed to
+vary only with changes in the numbers in the contributing population in each age-group.
+Graduated Contributions
+
+25. Graduated contributions are collected through the P.A.Y.E. system along with
+Schedule E income tax, and thus the basic records from which statistics must ultimately
+be derived are the tax deduction cards on which employers enter individual earnings
+and contributions. When the cards are received by the Ministry of Pensions and
+National Insurance after the end of the tax year, the contributions paid by each employee
+are recorded to provide a basis for awards of graduated benefits. For statistical
+purposes the records of contributors in the 2 per cent. sample are extracted and, for
+one-half of these, the earnings for the year are ascertained from a microfilm record of
+the original tax documents and linked with the basic data and records of graduated
+contributions. The data include two classes of persons who did not pay graduated
+contributions; first, those contracted-out, and secondly, employed persons who were
+not liable for graduated contributions because they did not earn £9 or more in any
+week during the year. Some of the latter group have subsequently become liable
+because the level of earnings has risen since the period to which the statistics relate.
+Although contributions are assessed on periodical (weekly, monthly, etc.) earnings,
+many tax deduction cards show only the total earnings and contributions paid during
+the year and it is thus annual rather than weekly amounts which are available for use.
+
+26. When compiling the statistics it was necessary to divide the data between
+participants (i.e., those within the ambit of the graduated scheme, including people
+with small earnings referred to above) and the contracted-out. Some problems were
+enceuntered in making this classification since the details given on the tax deduction
+cards were not always complete. Moreover, it was not always possible to distinguish
+between employed contributors and persons such as certain directors, and pensioners
+under occupational pension schemes, who are taxed through the P.A.Y.E. system but
+who are not employed contributors for National Insurance purposes. There was a
+residual group of persons who, in the absence of other information, had to be
+classified arbitrarily. It is hoped to overcome these problems in future by a method
+of linking the graduated statistics with those of flat-rate contributions, which distinguish
+between participants and those contracted-out.
+
+27. Statistics were available for the income tax years 1961-62 and 1962-63.
+Allowing for the difference in the general level, the distribution of earnings in the two
+years was broadly similar and it was decided to base the estimates on the 1962-63
+statistics in conjunction with records of contributions actually paid for that year.
+
+28. The number of participants in broad ranges of earnings per thousand persons
+in each age group is given for the financial year 1962-63 in Table 17. This Table,
+which covers adults who were not contracted out, includes only such persons who
+were both classified as employed persons for National Insurance purposes* and also
+were within the scope of the P.A.Y.E. system. It thus excludes a number of insured
+employees—particularly women—who are outside the P.A.Y.E. system because they
+earn too little to be liable for tax but who are nevertheless treated as employed for
+National Insurance purposes. The directors and pensioners referred to in the previous
+paragraph, and other minor groups who are similarly not liable to pay graduated
+contributions although they are taxed through P.A.Y.E., are also excluded. The
+coverage of this Table is therefore narrower than either the employed persons shown
+in Table 3 of this Report, or the tables of employment earnings taxed under Schedule E
+included in the Annual Reports of the Board of Inland Revenue. Persons who did
+not pay graduated contributions because they never earned more than £9 in any week,
+but who would otherwise be within the scope of the graduated scheme, are included.
+
+*Including employed married women and widows who had elected not to pay flat-rate
+contributions themselves.
+
+30
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-33 ===
+TABLE 17
+Distribution by earnings of employed contributors under P.A.Y.E. (excluding contracted-out
+employees) per thousand in each age-group in 1962-63
+Earnings range in 1962-63 (£)
+Ages a
+last
+birthday Up to 450 to 550 to 650 to 750 to Over
+450 | 550 | 650 | 750 | 1,000 | 1,000
+
+Men oe
+18-19 .. 640 194 92 41 27 6
+20-24 .. 247 159 190 166 192 46
+25-29 .. 130 78 143 180 330 139
+30-34 .. 105 64 119 155 340 217
+35-39 .. 94 58 110 152 347 239
+40-44 .. 84 59 119 154 340 244
+45-49 .. 87 70 133 162 323 225
+50-54 .. 94 87 152 170 306 191
+55-59 .. 101 108 180 179 274 158
+60-64 .. 14j 136 197 176 230 120
+65-69 .. 157 162 184 162 217 118
+All ages 160 | 99 | 144 | 157 | 279 161
+
+Women |
+18-19 .. 876 94 21 4 4 1
+20-24 .. 708 181 716 22 10 3
+25-29 .. 692 152 91 37 23 5
+30-34 .. 745 125 66 34 23 7
+35-39 .. 766 114 63 27 24 6
+40-44 .. 758 124 61 29 19 9
+45-49 .. 768 118 59 27 19 9
+50-54 .. 765 124 57 21 22 11
+55-59 .. 756 130 58 26 20 10
+60-64 .. 722 112 60 32 37 37
+All ages 755 132 63 25 | 18 7
+
+29. It should be emphasized that a person who was earning for any part of the year,
+however short, will be included in the earnings statistics, which cannot be classified
+according to the number of weeks during which earnings were actually received. This
+accounts for the large number of people shown in Table 17 with apparently very low
+earnings in the year. These will often represent part of a year’s earnings at a higher
+annual rate. Furthermore, in some cases these persons will have been employed for
+too short a period to qualify for inclusion as employed persons in Table 3. When
+making estimates of the future income from graduated contributions, due allowance
+was made for the fact that the assumed earnings level is higher than that prevalent
+during 1962-63.
+
+30. During the period to which the statistics relate, graduated contributions were
+assessed as a uniform percentage of earnings between £9 and the upper limit of £15
+a week or the corresponding monthly amounts. Although this formula is simple,
+the relationship between the whole year’s earnings and contributions paid for the year
+is not straightforward since the total earnings recorded for the year can be made up of
+a variety of different patterns of weekly or monthly earnings. For instance, a man
+with earnings of £750 recorded for the year may have received 50 weekly pay packets
+of £15 for which his contributions would total £12 14s. 2d. If, however, his earnings
+fluctuated from week to week or if he had a rise during the year, he might have earned
+£14 for 25 weeks and £16 for 25 weeks, again totalling £750 for the year, on which he
+would have contributed £11 15s. 5d. The same annual earnings would be recorded
+for a person who earned £25 for 30 weeks, having been off work or out of the country
+
+31
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-34 ===
+for the rest of the year, but his contributions would be only £7 12s. 6d. The overall
+effect of variations of this sort is shown in Table 18 which gives the average contributions
+paid for 1962-63 by participants in various earnings ranges. Since these contributions
+relate to the £9-£15 a week span of earnings which was the basis in force during
+1962-63 for assessing graduated contributions, account had to be taken in the estimates
+of the alteration in the ceiling from £15 to £18 per week which took effect in June 1963.
+TABLE 18
+Average graduated contributions paid during 1962-63 by the persons whose
+earnings distribution was given in Table 17
+Earnings range in 1962-63 (£) Men Women
+Exceeding Not exceeding £ os. £ os.
+— 450 15 4
+450 300 2 8 11
+500 550 3 10 2 10
+550 600 5 1 4 Il
+600 650 6 12 5 14
+650 700 8 2 7 8
+700 750 9 10 8 14
+750 800 10 13 9 18
+800 900 li il 10 6
+900 1,000 12 4 11 3
+1,000 — 12 11 11 4
+The contributions shown in this table were assessed at the rate of 43 per cent
+of earnings between £9 and £15 a week. Equal matching contributions were
+payable by the employer.
+‘* Payments in lieu ”?
+
+31. A“ payment in lieu of contributions ” becomes due after a period of contracted-
+out employment has ended if no other action is taken to preserve the contributor's
+pension rights. The average duration of contracted-out employment on which the
+payments are based is naturally increasing with the period elapsed since April 1961.
+On the other hand, employers have tended in an increasing proportion of cases to
+preserve contributors’ pension rights through their occupational pension schemes; this
+tendency not only reduces the number of “ payments in lieu ” but restricts the growth
+of their average size since rights are preserved more often for the longer than for the
+shorter durations of employment. There are indications, however, that a fairly
+stable position had been reached by the spring of 1964 and it was assumed that this
+would continue. The forecast is necessarily somewhat speculative since the way in
+which pension rights are preserved depends upon the exercise of a free choice by
+employers.
+
+Deferment of retirement
+
+32. Expenditure on retirement pensions is affected by the extent to which insured
+persons defer their retirement beyond the minimum pensionable age, thus forgoing
+their pensions but earning increments which are paid on eventual retirement or at
+age 70 (men) or 65 (women). In the second quinquennial review it was assumed that
+45 per cent. of men would take pension immediately at age 65, that there would be a
+diminishing flow of retirements during the next five years, and that 20 per cent of those
+attaining age 70 would still be at work at that age. For women, the proportion taking
+pensions at age 60 was assumed to be 65 per cent., and 15 per cent. of those attaining
+age 65 were assumed to be still at work.
+
+32
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-35 ===
+253
+33. The proportions of men who have retired on reaching age 65 have been approxi-
+mately as follows:—
+Calendar Proportions of men
+year retiring at age 65
+1959 ‘47
+1960 +49
+1961 -49
+1962 +53
+1963 +54
+Changes in the proportions retiring at the initial age have a direct influence in successive
+years on the proportions still at work at ages in the 65 to 70 age-group and it is
+thus probable that the proportions in employment at those ages will continue to fall.
+Jt has been assumed for the future that 55 per cent of men will retire at age 65 and that
+10 per cent. of those aged 70 will be still at work. These percentages imply that
+74 per cent. of men in the age-group 65 to 70 will be in receipt of pensions, compared
+with 71 per cent. in 1963. Little change is apparent in the pattern of retirement of
+women contributors and the previous assumptions have been retained, namely, that
+65 per cent will retire on reaching age 60 and that 15 per cent. of those aged 65 will be
+still at work.
+Widows’ benefits
+34. In order to evaluate the cost of widows’ benefits, it is necessary to know the
+proportions of widows receiving each type of benefit. An examination was therefore
+made of the statistics of widows’ allowances awarded in 1959-62 to obtain, for each
+age at widowhood, the proportions of allowances which have been followed by
+widowed mother’s allowance, by widow’s pension, or by retirement pension and the
+proportion which was not followed by any of these benefits (though the widow may
+receive, under transitional arrangements, a 10s. widow’s pension, or may qualify for
+Sickness or unemployment benefit). Adjustment was necessary to make allowance
+for the effect of the Family Allowances and National Insurance Act 1964 which raised
+from 18 to 19 the limiting age for a child or young person. The proportions obtained
+from the statistics with the modifications which were adopted are set out in Table 19.
+TABLE 19
+Proportions of widows who, at the end of the period of widow’s allowance, received widowed
+mother’s allowance, widow’s pension or retirement pension
+Widowed
+Age last birthday mother’s Widow’s Retirement Others*
+at widowhood allowance pension pension
+per cent per cent per cent per cent
+Under 25 oe ve 60 _ —_ 40
+25-29 .. . . 715 _— —_ 25
+30-34 .. . an 83 — — 17
+35-39 .. an an 83 — — 17
+40-44... . an 76 —_ — 24
+45-49 .. . . 58 —_ — 42
+50-54. . + 34 65 ~ 1
+35-59. . o 12 87 _ 1
+60-64 .. . 3 _ 97 —_
+65 and over .. _ _— 100 _
+*These widows may receive 10s. widows’ pensions if married to insured men before
+Sth July 1948 or they may qualify for sickness or unemployment benefit; otherwise there
+is no further benefit as a result of the husband’s death.
+33
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-36 ===
+35. This shows that virtually all women widowed after age 50 qualify for further
+benefit at the end of the period of widow’s allowance, but that considerable proportions
+of younger widows receive neither widowed mother’s allowance nor widow’s pension.
+For women aged 25 and over at widowhood the proportions who receive widowed
+mother’s allowance are higher than those assumed in 1959 (see Report on the
+Second Quinquennial Review, Table F); this reflects, mainly, the effect of the 1964 Act.
+
+36. In order to obtain the average duration of widowed mothers’ allowances and
+to determine the proportion that will eventually be converted to widows’ pensions it
+was necessary to construct a table showing the relative ages of newly widowed mothers
+and their youngest children. Information from recent statistics of awards of widowed
+mother’s allowance was modified to allow for the extension of the limiting age for
+children and the results are shown in Table 20.
+
+TABLE 20
+Percentage age distribution of youngest children (under age 19)
+of newly widowed mothers for various ages of mother
+Age last Age last birthday of mother at widowhood
+birthday
+of youngest - ~
+child 20-24 | 25-29 | 30-34 | 35-39 | 40-44 | 45-49 | 50-54 | 55-59
+Posthumous .. 14 6 3 1 _ — —_ —_
+Oo... we 32 19 10 5 2 _ ~_ _—
+1. . 25 19 li 6 3 1 — _
+2 .. oe 13 14 li 6 3 1 —_— _—
+3). oe 7 12 11 7 4 J _— _
+4. 4, 3 9 10 7 4 2 — —
+SS... . 2 6 8 7 4 2 1 —_
+6... . 1 5 7 7 5 3 1 1
+74. o I 3 6 7 5 4 2 —_
+8... a 1 3 5 6 6 5 2 1
+9. oe 1 2 4 6 6 5 4 1
+10, oe —_ 1 4 6 7 6 5 2
+fi.. oe —_— — 3 6 7 8 7 3
+12... oe —_ 1 3 6 8 9 9 5
+13. . _— —_ 2 5 8 10 VW 9
+46. .f = _~ 1 4 7 11 12 12
+15... es — — — 3 7 10 12 15
+16, _ _ { 2 6 9 13 18
+en — — 2 5 8 12 19
+18. . — — —_ 1 3 5 9 14
+
+37. In the construction of the table “‘ children ” were assumed to include young
+persons under age 19 who had left school, but who gave the widow title to a “‘ personal ”
+allowance. In the great majority of cases, widowed mothers’ allowances continue
+until the youngest child attains age 19, but due allowance was made in the calculations
+for the cessation of the child’s allowance when the youngest child leaves school at an
+earlier age. Widowed mother’s allowance is followed by a widow’s pension if the
+recipient is over age 50 when she ceases to have a child under 19; in addition certain
+existing widows have a reserved right to a widow’s pension on termination of widowed
+mother’s allowance between ages 40 and 50.
+
+38. In each year up to 1962 about one-eighth of those in receipt of widow’s pension
+who attained age 60 then applied for transfer to retirement pension. This proportion
+increased in 1963 to about one-sixth and it is thought that the increase may be due to
+
+34
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-37 ===
+the emergence of graduated pensions which are payable only on cetivement HOP
+so, further increases are likely. At present, it is thought that about 20 per cent. of
+widows in the age-group 60 to 64 who are eligible for either retirement pension or
+widow’s pension receive the former but in view of the above trend it was assumed that
+this would rise to 30 per cent. in future. Any departure from this assumption will
+not affect the overall estimates of expenditure but only their division between widows’
+benefits and retirement pensions.
+
+39. The actual remarriages in the period 1959 to 1962 were rather higher than the
+number that would be expected on the basis of the remarriage rates in Table H of the
+Report on the Second Quinquennial Review. A new set of rates, given in Table 21,
+was therefore constructed.
+
+TABLE 21
+Rates of remarriage of widows
+Select rates Ultimate rates
+Age at Duration since widowhood in years Age Rate
+widowhood SSS et §6attained
+0 | 1 2 | 3 | 4
+223 . . +160 178 “178 *173 +162 274 +142
+27 af i -092 +139 +133 +124 *112 324 +097
+325 . is -060 “090 +094 +086 +074 374 -060
+374 ie oe 7046 065 068 *057 048 424 036
+424 .e ie 035 058 ‘050 +039 -030 474 “025
+47h ws | 021 «| 035 «| 034 | +026 | -O19 524 014
+5h. | 013 | 020 | 017 | O15 | -O1L 57} -008
+57 Ow Si | «007 «| 012: | 008 | -005 | -00L 624 -000
+
+Nore: The “ select’? rates give the probability of remarriage in the year following the
+duration of widowhood shown at the head of the table for a woman who had been widowed
+at the age indicated and was still a widow at that duration; the “‘ ultimate” rates give the
+probability of remarriage in the year following the age shown, after not less than five years
+from the date of widowhood.
+
+Unemployment
+
+40. As stated in paragraph 30 of the Report, a long-term average rate of unemploy-
+ment of 2 per cent. from 1965-66 onwards was assumed on Government instructions.
+The average rates of unemployment in recent years have been close to 2 per cent. and
+the statistics can be assumed to be a reasonable guide to the composition of the
+unemployed population for the purpose of the estimates. The rate for women has
+continued to be lower than that for men, and married women have shown lower rates
+than other women. Although the experience of juveniles appears to be less favourable
+than that of adults, there was not sufficient reason for making a distinction. It has
+been assumed that an overall rate of 2 per cent. would imply rates of 2-3 per cent.
+for men, 1-6 per cent. for single women and 1:3 per cent. for married women.
+
+41. On the basis of recent statistics it has been assumed that 60 per cent. of
+unemployed adult men and 50 per cent. of unemployed adult women will be entitled
+to this benefit. Unemployed juveniles, however, include school-leavers who are unable
+to satisfy the contribution conditions for unemployment benefit and for them a pro-
+portion entitled of 25 per cent. was assumed.
+
+Sickness
+42. The sickness experience from 1958 to 1963 of the population insured for that
+benefit has been analysed in detail and the results are discussed in Appendix 4. The
+35
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-38 ===
+average rates of sickness experienced in that period, subject to very small adjustments
+to improve their progression from age to age, have been used in the estimates. They
+are set out in Table 22.
+TABLE 22
+Average number of weeks of sickness benefit per insured person payable
+within a year following the attainment of the age stated
+Spinsters, widows
+Men and divorced women
+Age Married
+women
+Self- Self-
+Employed employed Employed employed
+17. oe “79 +48 1:01 *29 1-93
+22 Cts ve *92 -60 1-15 63 1-60
+27 . ae -96 62 1-59 83 1:74
+32—~O«iwi a 1:18 65 2°22 1-34 2°48
+37°... we 1:42 *70 2°65 1-73 3-42
+42... . 1:60 “80 3-02 1-98 4:24
+47. 1-98 1-07 3°76 2°79 4-72
+52.COs, 2°67 1-54 4-81 3-48 5:47
+57. es 4-09 2°57 5:98 4-12 7:19
+62~—C«w oe 7-05 4-64 _ —_ _
+
+43. Civil servants who are subject to special arrangements do not claim sickness
+benefit from the National Insurance Fund. As explained in Appendix 4, they are
+excluded in arriving at the rates for employed persons. The rise in sickness rates for
+self-employed persons, noted in previous reviews, now appears almost to have ceased
+and it is assumed that their experience has practically reached maturity.
+
+Maternity benefits
+
+44, During the four years to 3ist March 1963 maternity grants were paid for about
+96 per cent. of all live and still births. Home confinement grants were awarded for
+about 38 per cent. and maternity allowances for about 23 per cent. of the confinements
+for which grants were paid. (In many cases the same confinement attracts both a home
+confinement grant and a maternity allowance). Though maternity allowance may
+be payable for a period of 18 weeks or more, the average duration is about 163 weeks.
+Death grant
+
+45. As almost the entire population of Great Britain is covered under the National
+Insurance scheme, it might be expected that a death grant would be paid for almost
+every death of a person who had not reached age 65 (men) or 60 (women) before
+5th July 1948. It is found, however, that only 92 per cent. of such deaths during
+recent years have given rise to death grants, this proportion being a little above that
+which applied prior to the last quinquennial review. The proportion for men appears
+to be consistently higher than for women and it has been assumed that the proportion
+of deaths within the appropriate age limits which will attract grants in future will be
+96 per cent. for men and 88 per cent. for women.
+
+Dependants of beneficiaries
+
+46. The various benefits may be increased if the beneficiary has dependants. The
+most important classes are the adult dependants (mostly dependent wives) and child
+dependants of unemployed and sick men and the adult dependants of retirement
+pensioners. This last category consists almost entirely of dependent wives under
+
+36
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-39 ===
+257
+age 60; a wife over 60 who is not entitled to a pension on her own insurance usually
+receives a pension of 41s. 6d. on her husband’s insurance. Statistics of dependants
+have been collected for each class of beneficiary; the proportions with dependants
+and the average number of eligible children under age 18 in the beneficiary’s family,
+derived from these statistics, are set out in Table 23.
+
+TABLE 23
+Proportions of male beneficiaries with adult and child dependants, and average number
+of dependent children per father
+Unemployment benefit Sickness benefit Retirement
+pension
+feet last _
+birthday .
+of bene- | Percentage | Percentage average | Percentage | Percentage nnverage | Percentage
+ficiaries | with adult | with child children with adult | with child children | With adult
+dependant | dependant per father dependant | dependant per father dependant*
+15-19 3 2 1:2 1 1 1-2 _
+20-24 24 23 1-7 19 20 1:6 _
+25-29 48 50 2:4 48 50 2+1 _
+30-34 56 61 3-1 56 61 2:7 _—
+35-39 54 63 3°3 54 63 2°8 _
+40-44 52 58 3-0 52 * 58 2:6 _—
+45-49 49 45 2:4 49 45 22 —
+50-54 49 30 2:0 49 30 1:9 —
+55-59 52 15 1-7 52 15 1-7 _
+60-64 58 6 1:5 58 6 1:5 —
+65-69 54 4 1:3 34 4 1:3 9
+70-74 — — — — —_ _ 5
+15-19 — — _ _ — — 25
+80 and
+
+over _— —_— _— _ —_— — 1
+
+* Almost all are dependent wives who have not attained age 60.
+
+47. For men the proportions of the sick and unemployed who have adult dependants
+are considerably lower than the proportions married since many married women are
+gainfully occupied and cannot therefore rank as dependants. Similarly, the proportions
+of men retirement pensioners with adult dependants are less than the proportions with
+wives under age 60. The proportions of men who are married are expected to increase
+in future but the proportions of married women in employment are also expected to
+tise; on balance, no significant changes in the proportions receiving benefit for
+dependent wives are expected. The proportions of child dependants are expected to
+increase as a result of an increase in the child population, together with the raising of
+the minimum school-leaving age and the tendency for more children to stay at school
+beyond this age. In order to allow for this, additions rising to 20 per cent. in 1973
+and later years have been made to the proportions in Table 23. In the calculations
+account has been taken of the small number of dependants of women beneficiaries.
+Cost of Administration
+
+48. The estimates of future costs of administration used in this review have been
+made by the Ministry of Pensions and National Insurance. They allow for the
+estimated future numbers of contributors and beneficiaries shown in the report.
+
+37
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-40 ===
+APPENDIX 4.
+SICKNESS EXPERIENCE OF INSURED PERSONS, i958 to 1963
+
+1. The sickness rates set out in Table 22 are based on statistics obtained from a
+sample of claims for sickness benefit in the five years beginning on the first Monday
+in June 1958. The information was recorded by the local offices of the Ministry of
+Pensions and National Insurance and the results tabulated by the Statistics Branch
+of the Ministry. The foliowing paragraphs give further details.
+
+2. The data relate to sickness involving incapacity for work and certified by medical
+practitioners for the purpose of the National Insurance Acts. In most cases this
+attracts sickness benefit under the Acts; for these and for the small proportion of
+cases where there is no entitlement to such benefit, the claimant is excused from the
+liability to pay contributions and is normally granted credits in lieu thereof. Occupa-
+tional accident or disease for which injury benefit is payable under the Industrial
+Injuries Acts does not attract sickness benefit and is not included.
+
+3. The data obtained from the working of the National Insurance scheme may not
+be directly comparable with sickness data from other sources and do not represent
+the sickness of the whole population of Great Britain, the most important limitations
+being as follows.
+
+(i) Sickness benefit is only payable to employed married women or widow
+beneficiaries who have been paying contributions themselves. About 70 per
+cent. of all employed married women and about 60 per cent. of all employed
+widows are therefore outside the scope of the investigation. The sickness of
+non-employed persons is excluded.
+
+(ii) Children up to age 15 and those above that age who are still at school or
+university or are unpaid apprentices are excluded.
+
+(iii) Persons over the minimum pensionable ages of 65 (men) or 60 (women) are
+excluded if they have retired from work or have attained age 70 (men) or
+65 (women).
+
+(iv) Members of the armed forces and foreign-going mariners while at sea are
+excluded.
+
+(v) Sickness benefit is not usually paid for the first three days of a spell of sickness
+which does not last 12 days and most illnesses lasting less than four days are
+not reported io the Ministry.
+
+(vi) Persons who suffer prolonged illness before they have paid 156 contributions
+are subject to a limit of one year’s sickness benefit unless they are able to
+resume work for 13 weeks. The statistics are thus slightly deficient in long-
+term sickness, but the number of persons in question is very small.
+
+(vii) There is a special administrative arrangement whereby most non-industrial
+civil servants have undertaken not to claim sickness benefit under the scheme
+until an illness has lasted six months; the deductions from pay (equal to the
+amount of sickness benefit), which would otherwise be made, are waived.
+For previous reviews adjustments have been made to allow for the inclusion
+of the sickness of such civil servants but, in the absence of recent data, they
+are now omitted. The effect of the change will be seen from Table 25 to be
+very small.
+
+_4, In addition to the detailed information available from the sample,* a broad
+picture of the level of sickness can be obtained from estimates made by the Ministry
+of the number of claims in force on the third Tuesday of each month and published
+regularly in the Ministry of Labour Gazette, the Monthly Digest of Statistics and the
+Ministry’s Annual Reports. Quarterly averages of these figures for the five years
+1959 to 1963 are given in Table 24.
+
+* Further information, including causes of sickness, is published in the Ministry’s Annual
+Reports and in the more detailed Digests of Statistics Analysing Certificates of Incapacity
+which are prepared periodically by the Ministry.
+
+38
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-41 ===
+TABLE 24
+Average number of insured persons absent from work owing to sickness
+Thousands
+
+Quarter 1959 1960 1961 1962 1963
+January-March .. . 1,196 1,007 1,100 1,140 1,197
+April-June es se an 869 854 877 903 895
+July-September .. oe . 817 819 830 815 870
+October-December .. . 909 903 916 911 943
+Average for year oe we 948 896 931 942 976
+
+Basis of the Investigation
+
+5. The sample data have been obtained from the sickness records of all persons
+whose National Insurance numbers end in 4B or 8B. The insured population is
+divided into four groups whose contribution cards are exchanged in ivfarch, June,
+September and December respectively. The suffix letter B distinguishes those whose
+cards are current for years beginning on the first Monday in June and the selection of
+the two final digits 4 and 8 within this group thus leads to a 5 per cent. sample.
+
+6. The selection of a contribution year as the period for tabulating sickness benefit
+makes it possible to secure a check on the completeness of the statistical sample by
+reference to other information necessarily recorded in connection with contribution
+records. There are two particular advantages in favour of the years beginning in June.
+First, the sickness of a whole winter is included in one set of annual tables and,
+secondly, the task of completing the statistical records in the Ministry’s local offices at
+the end of each period occurs in the summer when there are fewer sickness claims.
+
+7, Estimates of the numbers of persons who were “ exposed to risk” of sickness
+in the period under review have been based on the samples referred to in paragraph 15
+of Appendix 3, the mean of the numbers at the beginning and end of each period
+being adjusted to allow for the effects of various conditions governing title to benefit.
+For example, deductions were made to allow for the fact that new entrants to insurance
+must pay 26 contributions before they are entitled to benefit and additions have been
+made to allow for persons who, having ceased to contribute for sickness benefit,
+remain entitled for a limited period thereafter.
+
+Rates of Sickness
+
+8. The basic function used in studying the financial effect of a scheme of sickness
+benefits is the average number of weeks of sickness experienced in a year for each
+person exposed to risk. The ‘‘ rates of sickness ” described in the following paragraphs
+are based on the number of weeks* of sickness benefit paid. Separate sets of rates
+have been calculated for each of the five categories, employed men, self-employed
+men, employed single womenf, self-employed single women and employed married
+women. The numbers of self-employed married women are very small and the data
+do not permit a satisfactory analysis of their experience to be made. The second year
+under review covered 53 weeks and the others 52 weeks. To facilitate comparison,
+adjustments have been made to put the figures for each year on to an average basis
+of 52-18 weeks.
+
+* Sickness benefit is paid on the basis of six working days per week and the number of weeks
+of benefit thus represents one-sixth of the recorded number of days.
+
+t Spinsters, widows and divorced women.
+
+39
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-42 ===
+Employed persons
+9. The results for employed persons under the minimum pensionable ages are
+shown in Table 25. The total weeks of sickness benefit averaged about 284 millions
+per annum for men, 6} millions for single women and nearly 5 millions for married
+women. The corresponding average numbers exposed to risk were nearly 134 million
+men, about 3 million single women and over 14 million married women. As explained
+in paragraph 3(vii) the figures in this table for 1959-60 and later years are based on
+the sickness experience of employed persons excluding civil servants.
+TABLE 25
+Average number of weeks of sickness benefit per employed person
+Year of experience (June to May)’
+Ages last Average of
+birthday at 1958-59 1959-60 | 1960-61 1961-62 1962-63 | five years,
+middle of excluding
+year of — Civil
+experience Including | Excluding ‘Servants
+Civil Civil Excluding Civil Servants
+Servants | Servants
+Employed men
+15-19 .. ve “8 “81 ‘73 *75 +84 “81 -79
+20-24 .. oe 96 96 +92 91 +92 “88 -92
+25-29... oe 1-02 1-90 “Ol +94 “97 98 -96
+30-34 .. . 1-23 1-23 1-14 1-16 1-15 4-22 1-18
+35-39 .. oe 1-40 1:42 1-37 1°41 1-42 1-47 1-42
+40-44... . 1°53 1-56 1-52 1°57 1-59 1:77 1:60
+45-49... . 1:99 2-02 1:87 1-96 1:98 2°05 1-98
+50-54... o. 2°60 2-64 2°54 2-68 2°65 2°83 2°67
+55-59 .. o 4-07 4-14 3-94 4-08 4-00 4-28 4-09
+60-64... . 6-90 7-12 6°94 7:00 7°10 7:07 7:05
+Average... 2-11 2:13 2:04 2:12 2°14 2°20 2°13
+Employed single
+women*
+15-19... . 1-04 1:02 *95 1:00 1-09 1:00 1:01
+20-24 .. o 4:21 1:17 1:08 1-12 1-22 1-18 1:15
+25-29 .. oe 1:72 1-68 1-58 1-64 1-61 1:44 1:59
+30-34... oe 2°41 2°41 2-24 2°32 2:06 2°06 2-22
+35-39 .. . 2°61 2°68 2:62 2°66 2°64 2°67 2:65
+40-44... oe 2:96 2:96 2°85 3-09 3-06 3:16 3-02
+45-49 .. oe 3°82 3-92 3-76 3°66 3-72 3°72 3-76
+50-54... oe 4:66 4-73 4°61 4-73 4-99 4-98 4-81
+55-59 .. oe 6:08 6:27 6-04 6:03 5-76 5:81 5:98
+Average... 2°28 2:28 2°18 2:21 2°25 2°16 2°22
+Employed
+married women
+15-19... oe 1:98 1-97 2-01 1:88 1:98 1-79 1-93
+20-24... oe 1:76 1-73 1-61 1-58 1°55 1:53 1-60
+25-29... oe 1-90 1°87 1°77 1:75 1:66 1:66 1-74
+30-34 ,. we 2°39 2°37 2°51 2°51 2:54 2°45 2:48
+35-39 .. we 3°58 3°61 3-40 3°42 3°23 3°43 3°42
+40-44 ., + 3:90 3-93 4-10 4:44 4-43 4:30 4°24
+45-49 ,, ve 4-44 4-44 4-65 4-65 4-88 4:97 4-72
+50-54... oe 5°15 3-20 5-28 §-60 5°42 5:84 5:47
+55-59 ., . 7:02 7-18 7:46 Til 7:47 7:03 7:19
+Average... 3°21 3-21 3°16 3:18 3°14 3:03 3°14
+tt
+* Spinsters, widows and divorced women,
+40
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-43 ===
+10. The rates have fluctuated from year to year but do not show any pronounced
+trend. The overall averages were generally between 2 and 24 weeks a year for men
+and single women (the latter normally being rather higher than the former) while, for
+married women, they averaged between 3 and 34 weeks. It should be borne in mind,
+however, that such overall averages do not give a true picture of differences in
+experience because women over age 60 are excluded and, as compared with men,
+higher proportions of women are in the younger age-groups where the sickness rates
+are lower. When the separate age-groups are considered, the rates for single women
+are higher than those for men by amounts ranging from 25 per cent. under age 25
+to nearly 90 per cent. at ages 30 to 50. The rates for married women in all age groups
+are higher than those for single women and are as much as 150 per cent. above those
+for men between ages 35 and 50, but the experience of married women relates only
+to those who have elected to pay contributions and those who have recently ceased
+to pay them; it may not be representative of all employed married women. The
+fall in the overall averages for married women over the period isjdue partly to the
+fact that the numbers paying contributions have risen for ages under 25, where sickness
+rates are low, and fallen at the higher ages where heavier sickness occurs.
+Self-employed persons
+
+11. The sickness rates for self-employed men and single women are shown in
+Table 26. The average numbers exposed to risk were about 1,200,000 men and
+70,000 single women.
+
+TABLE 26
+Average number of weeks of sickness benefit per self-employed person
+Ages last birthday Year of experience (June to May) Average
+at middle of year | of five
+of experience 1958-59 | 1959-60 | 1960-61 | 1961-62 | 1962-63 | Ts
+Self-employed men
+
+15-19 .. . oe “71 Si 43 “42 +35 +48
+
+20-24 =... o 68 *55 66 “73 53 63
+
+25-29. an oe “37 +52 “54 +56 67 °57
+
+30-34. .e oe °716 “72 63 63 +62 67
+
+35-39. o . 63 “61 “67 *72 +69 66
+
+40-44, . . -94 “79 *74 “75 78 “80
+
+45-49, oe oe 1-10 1-06 1-05 1:07 1-06 1-07
+
+50-54. .. we 1:54 1-49 1-50 1-50 1-67 1-54
+
+55-59, + 2-52 2°58 2°53 2°55 2:67 2:57
+
+60-64... oe . 4-60 4-47 4-60 4:69 4°85 4-64
+
+Average .. an 1:63 1-58 1-61 1-63 1-68 1-63
+Self-employed single women
+
+15-19. oe oe +33 +29 “12 +53 *20 +29
+
+20-24 —w. . . +52 92 58 91 +20 63
+
+25-29. oe . *73 97 -70 86 +89 +83
+
+30-34, oe 1:14 “89 1-54 1-73 1-38 1:34
+
+35-39, o a 2°23 1-88 1-83 1:55 1-14 1-73
+
+40-44, o . 2-12 2°68 1-57 1°85 1-67 1:98
+
+45-49, oe An 2°37 2°16 2°97 3°24 3-21 2:79
+
+50-54, an we 2:93 3-70 3°71 3-17 3-90 3:48
+
+55-59, oe oe 4-15 3°98 4°24 4:06 4-16 4-12
+
+Average... . 2°70 2°82 2-93 2:88 2°75 2°82
+ne ee ene ee ern
+
+12, A considerable proportion of self-employed persons became insured for sickness
+benefit for the first time in 1948; it was thus expected that the amount of benefit would
+
+41
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-44 ===
+continue to rise as a result of the gradual build-up of the full quota of long-term sickness.
+Although the rates were generally higher than those experienced in the previous
+five years, the upward trend now appears almost to have ceased.
+
+13. Comparison of Tables 25 and 26 shows that the rates for self-employed men
+were, at most ages, between 50 and 65 per cent. of those for employed men. The
+corresponding percentages for single women are between 50 and 70 per cent.
+The fact that the rates for all ages combined are about 75 per cent. of those for
+employed persons for men and exceed them for women is due to the older age
+distribution of the self-employed compared with the employed. The analysis of spells
+of sickness in paragraphs 19 to 21 provides further information regarding the differences
+between the two classes.
+
+Comparison with assumptions made in the second quinquennial review
+14. In Table 27 the results of the present investigation are compared with the rates
+used in the second quinquennial review.
+TABLE 27
+Ratios of weeks of sickness benefit per annum in the period June 1958 to May 1963
+to the rates* used in the second quinquennial review
+Employed persons |
+Ages last birthday
+at middle of year Self-employed
+of experience M. Single Married men
+€n women women
+per cent per cent per cent per cent
+Employed
+
+15-19 a 94 96 89 96
+
+20-24 o . 95 85 85 94
+
+25-29 wk, 91 86 79 83
+
+30-34... 99 97 87 94
+
+35-39 . oe 108 101 101 84
+
+40-44 . .- 103 104 109 81
+
+45-49 . .- 104 106 107 86
+
+50-54 oe o 100 109 107 87
+
+55-59 oe . 100 101 102 93
+
+60-64 wn, 109 87
+
+Average . | 102 99 | 97 88
+
+* Table J of Appendix 6 of Report on Second Quinquennial Review.
+
+15. For employed persons there has been little change overall but the recent
+experience shows some improvement for ages up to 35 but a slight worsening at higher
+ages. The rates for self-employed used in the second quinquennial review included a
+loading for future increases in long-term sickness due to the maturing of the experience.
+The new rates suggest that this factor has been less significant than expected.
+
+16. The rates adopted for the present review are set out in Table 22. The number
+of self-employed married women is too small to provide satisfactory data and the
+same rates have been used as for employed married women.
+
+Sickness over pensionable age
+
+17. The award of a pension at age 65 (men) or 60 (women) under the National
+Insurance Acts is dependent on retirement from work. If, instead, the contributor
+remains at work, contributions are payable and there is a continued entitlement to
+sickness benefit up to age 70 (men) or 65 (women) if retirement is deferred to that age.
+Table 28 shows the sickness rates for persons over the minimum pensionable age in
+each year of the experience. The average numbers exposed to risk each year were
+about 200,000 employed men, 65,000 employed single women, 25,000 employed
+married women, and 50,000 self-employed men. The number of self-employed women
+over age 60 is very small and reliable rates cannot be obtained.
+
+42
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-45 ===
+TABLE 28 z 6
+Average number of weeks of sickness benefit per person over age 65 (men)
+or 60 (women) who has not retired.
+a a
+Year of experience (June to May) Average
+of four
+vers
+1958-59 | 1959-60 | 1960-61 | 1961-62 | 1962-63 | 1958-62
+Employed men (65-70) .. .. | 4:00 3°85 3°81 3:86 4-89 3-88
+Employed single women (60-65) 2°68 2:27 2:47 2°57 2°83 2°50
+Employed married women (60-65) | 3-38 3-31 3-39 3-06 3-49 3°28
+Self-employed men (65-70) .e 2:90 | 3-13 3-09 3:09 2:80 3-05
+18. The rates shown in this table are considerably lower than those immediately
+before pension age shown in Tables 25 and 26, the comparatively light sickness being
+largely the result of the withdrawal from the experience of many permanently sick
+persons and others not in good health. The rates for employed persons in 1962-63
+are higher than those for the earlier years. It seems possible that part of this excess
+arose in the period from 7th March to 26th May 1963 when people suffering from
+ill-health, who would normally have retired from work to claim retirement pension,
+found it advantageous to remain on sickness benefit because the higher rates for that
+benefit under the 1963 Act were then in force. For this reason the experience of this
+group in 1962-63 has been treated as abnormal and omitted from the average.
+Analyses of Spells of Sickness
+19. As explained in paragraph 8, the rates of sickness in the foregoing section
+represent the average numbers of weeks of sickness benefit paid per annum for each
+person exposed to risk. The information collected from the sample also provided
+statistics relating to the number and duration of spells of sickness. In this context a
+“spell”? represents a continuous period of certificated sickness, with or without benefit,
+and may thus differ from a “‘ period of interruption of employment” which, owing to
+the linking-up rule, can cover more than one spell.
+Spells beginning in a year
+20. Table 29 sets out the average numbers of spells beginning in each year of the
+period of investigation expressed as percentages of the numbers exposed to risk and
+rable 30 gives similar figures for each age-group for the final year of the investigation,
+962-63.
+TABLE 29
+Spells of sickness beginning in each year per 100 insured persons under age 65 (men) or 60 (women)
+Year of experience (J une to May)
+1958-59 | 1959-60 | 1960-61 1961-62 | 1962-63
+Employed men .. . . 46 43 47 47 47
+Employed single women 49 46 51 55 51
+Employed married women... 52 51 53 53 52
+Self-empioyed men .. . 18 17 17 17 18
+Self-employed single women .. 20 19 | 19 20 17
+Se et
+43
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-46 ===
+TasLe 30
+Spells of sickness beginning in the year 1962-63 per 100 insured persons in
+each age-group under age 65 (men) or 60 (women)
+d Employed persons
+Ages last birthday
+at middle of year Self-employed
+of experience M Single Married
+en women women
+15-19 . e .. | 45 59 51 12
+20-24 . .. .- 40 52 47 13
+25-29 o oe . 42 45 41 19
+30-34 +. . oe 45 46 49 14
+35-39 .. . . 44 41 58 i4
+40-44 . . .e 46 45 61 13
+45-49, . 44 46 67 15
+50~54 . . we 50 48 68 18
+55-59 .. e oe 55 47 57 21
+60-64. . . 64 — —_ 27
+21. There are variations in the number of new spells from year to year due mainly
+to the incidence of epidemics which did not, however, reach major proportions in the
+period under review. The actual numbers recorded in 1962-63 for persons under
+pensionable age totalled nearly 9 millions of which about 6% millions were incurred
+by employed men, 14 millions by employed single women and # million by employed
+married women; self-employed men and single women had about 200,000 and 11,000
+new spells respectively. The average numbers of new spells shown in Table 30 do
+not increase with age in the same way as the rates of sickness in Tables 25 and 26—an
+indication of the fact that a substantial amount of the heavier sickness at the higher
+ages is due to longer, rather than more frequent, spells. The most noticeable feature
+of the experience indicated by Tables 29 and 30 is that sickness claims are far less
+numerous among self-employed than among employed persons.
+Frequency of claiming
+22. The number of spells (including those current at the beginning of the year as
+well as those arising during the year) exceeds the number of individual persons who
+claim benefit since some claim more than once. Table 31 shows the distribution of
+all persons exposed to risk (employed and self-employed) according to the number of
+spells recorded in the year 1960-61.
+TABLE 31
+Distribution of employed and self-employed persons according to number
+of spells of sickness in the year June 1960 to May 1961
+All persons Claimants only
+Number of spells | { —————, | ——__, ——_-, —__—_
+in year : : . :
+Single Married Single Married
+Men women women Men women women
+per cent, | percent. | percent. | percent, | percent. | per cent.
+0 on oe 69 64 64 —_ — —
+1 o we 22 26 25 72 72 70
+2 oe oe 6 7 8 19 20 . dt
+3 or more .. os 3 3 3 9 8 9
+|
+44
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-47 ===
+Duration of completed spells of sickness o 6 5
+23. The complete duration of spells of sickness in the sample has been investigated
+by noting the dates of onset of illness and of termination by recovery, death or award
+of retirement pension. The durations represent completed illnesses, any break not
+covered by a medical certificate being treated as ending a spell. Table 32 sets out,
+in broad age groups for 1962-63 the distribution, by duration, of spclls terminated
+per 100 insured persons exposed to risk in each age group.
+TABLE 32
+Spells of sickness terminating in the year from June 1962 to May 1963
+per 100 insured persons in each age group
+Duration of spell
+Ages last |—————
+birthday at
+: Over 1 | Over2 | Over 4 | Over 13 | Over 26.
+mide of Year Nt and not | and not | and not | and not | and not Overt ial
+week | OVer 2 | over 4 | over 13 | over 26 | over 52 weeks tions
+weeks | weeks | weeks | weeks | weeks
+Employed men |
+15~29 e 15-0 13-7 7-3 3-6 “5S +2 “| 40-4
+30-44 3 .. | 12-1 13-4 10:2 5:1 8 3 “1 42-0
+45-59 . 8-3 12-1 12:8 8-3 1-6 “6 “4 44-1
+60-64 oe 6-0 11-5 16-1 12-9 2°6 1-0 1-1 51-2
+15-64 a 11-3 | 12:9 10-7 6°3 1-1 4 +3 43-0
+Employed
+single women
+15-29 5a 17-9 18:8 10-3 4:6 “5 “2 “1 52-4
+30-44 a6 7-6 12:0 11:0 6°3 1-1 “6 3 38-9
+45-59 .. 4-7 10:1 11-2 8-8 1-6 6 i) 37°5
+15-59 ne 13-4 15-8 10-6 5-8 “9 3 A 47-0
+Employed
+married
+women
+15-29 1 9-6 12-6 9-9 8-2 1:3 “4 2 42-2
+30-44 be 8-6 14-1 13-2 9-8 1-9 *6 i) 48-8
+45-59 o 5-4 12-6 17:1 12:5 2-1 ‘8 8 51-3
+15-59 . 8-3 12:9 12:4 9°6 1-6 “6 “4 45-8
+Self-employed |
+men
+15-29 . 2:4 ! 4-7 5-0 3°3 “5 j | 16:1
+30-44 Av 1-3 3-2 3-7 3-5 6 2 “1 12-6
+45-59 ee ‘7 3-0 4-] 5-0 1-2 6 3 14-9
+60-64 a8 “4 2:0 4:6 6:9 2°0 9 6 17-4
+40. { 1-0 | 3a | 4d | 47 [oo “4 | 3 | 14-6
+24, The lower figures for illnesses of not more than one week’s duration, as compared
+with those of between one and two weeks, are due to the fact, already mentioned in
+paragraph 3, that claims are not made for most illnesses lasting three days or less. The
+table demonstrates the higher incidence of long spells of sickness with increasing
+age, although it must be borne in mind that in the highest age group some spells are
+“terminated ” by retirement on pension. Relatively few spells last more than 13 weeks,
+although each illness of long duration makes a substantial contribution to the total
+sickness. The table clearly illustrates the fact that self-employed men at all ages have
+much lower claim rates than employed men and that the shortage of claims is particularly
+apparent for illnesses of short duration.
+45
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-48 ===
+Duration of current spells of sickness
+25. An analysis of the proportions of insured persons who were sick on Ist June,
+1963 at various durations of illness is given in Table 33.
+TABLE 33
+Number of persons sick at Ist June 1963 per 100 insured persons
+in each age group
+Duration of spell
+Mean ages at Over 6 | Over 1 | Over 2} Over 4} Over 6
+Ist June, 1963} Not |months| year | years | years | years Over | All
+over 6 | and not | and not | and not | and not | and not ears dura-
+months | over1 | over2 | over4 | over6 | over8 | ™ tions
+year years years years years
+Employed men
+15-30 . 1+5 ‘Il “Jj — _ _ _ 1:7
+31-45 . 2-1 2 “] “1 ‘1 —_ 2 2°8
+46-60 ws 3-0 5 5 “5 3 2 ‘5 5°5
+61-65 .- 4-9 1-4 1-9 2°1 1:2 6 1:3 13-4
+15-65 an 2°5 +3 +3 +4 2 “1 3 4-1
+Employed
+single women
+15-30 oe 1-9 ‘1 “1 “J —_ —_ — 2:2
+31-45 2°4 4 “4 “4 3 2 1-0 3+]
+46-60 . 3-3 “6 9 1-1 8 oo) 2:4 9°6
+15-60 . 2:3 +3 3 3 3 ‘i “7 4-3
+Employed
+married
+women
+15-30 o 2°8 ‘1 “1 “f — —_ _— 3-1
+31-45 3°8 “4 5 a) “4 “2 1-0 6°8
+46-60 . 4:5 7 1+] 1°5 8 ‘7 2:4 11-7
+15-60 . 3°4 3 “4 “5 3 “2 8 5+9
+Self-employed
+men
+15-30 9 “] — _ — — — 1-0
+31-45 . 9 | “1 _— —_ — +k 1-2
+46-60 . 1:6 “4 “5 “4 “I “1 “| 3+2
+61-65 oe 2°9 1-2 1-2 2:2 1-1 “4 6 96
+15-65 we 1-5 “4 “4 5 2 “1 +1 3+2
+26. This table relates to Ist June, a time in the year when sickness claims are low;
+there would be more cases (mainly short-term) if an average for the year could be
+obtained, but it is not practicable to extract information about continuing spells
+except at the end of the experience year. The table illustrates the effect of claims of
+long duration on the total amount of sickness benefit in payment. Over 30 per cent.
+of the employed men’s cases and nearly 40 per cent. of the women’s had been in force
+for more than one year. The proportion of spells which had lasted more than eight
+years was over 7 per cent for employed men and about 15 per cent. for employed women.
+The table also provides a further illustration of the difference in the experience of
+self-employed men compared with that of employed men, much smaller proportions
+of the self-employed having sickness which had lasted less than six months. The
+shortage of spells of very long duration among the self-employed is now less apparent
+than at the previous review.
+46
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-49 ===
+APPENDIX 5 2, 6 "
+TABLES
+TABLE 34
+Estimated total population of Great Britain
+Thousands
+Mid-Year
+Ages last
+birthday
+1963 1973 | 1983 | 1993 2003
+Males:
+
+0-4 . 2,248 2,512 2,641 3,054 3,283
+
+5-9 . . 1,959 2,452 2,558 2,836 3,198
+10-14... . 1,949 2,240 2,508 2,638 3,051
+15-19... .- 2,087 1,958 2,451 2,562 2,838
+20-24 —x. .. 1,710 1,959 2,252 2,519 2,652
+25-29... oe 1,678 2,103 1,979 2,471 2,583
+30-34, - 1,687 1,726 1,975 2,269 2,538
+35-39 oe 1,729 1,683 2,108 1,989 2,480
+40-44. .. 1,819 1,673 1,717 1,968 2,262
+45-49, oe 1,628 1,689 1,651 2,073 1,961
+50-54. 1,727 1,735 1,605 1,656 1,905
+55-59, .. 1,599 1,482 1,555 1,534 1,944
+60-64 wy .e 1,285 1,463 1,495 1,401 1,465
+65-69 ws .. 939 1,222 1,152 1,237 1,245
+70-74, .. 667 840 983 1,036 994
+75-19, .- 429 486 654 634 706
+80-84... . 224 238 315 380 420
+85 and over .. 101 107 128 177 184
+Total .. . 25,465 27,568 29,727 32,434 35,709
+
+0-14 —.. . 6,156 7,204 7,707 8,528 9,532
+15-64... 16,949 17,471 18,788 20,442 22,628
+65 and over . 2,360 2,893 3,232 3,464 3,549
+
+Females:
+
+0-4 o 2,133 2,381 2,502 2,894 3,103
+
+5-9 . .. 1,860 2,328 2,426 2,681 3,025
+10-14... .- 1,852 2,129 2,380 2,499 2,892
+15-19... oe 1,996 1,864 2,330 2,432 2,686
+20-24 =~. . 1,669 1,876 2,150 2,403 2,523
+25-29. .. 1,596 2,031 1,898 2,366 2,467
+30-34, oe 1,621 1,693 1,898 2,176 2,429
+35-39, an 1,707 1,604 2,038 1,907 2,377
+4044, . 1,840 1,611 1,686 1,895 2,175
+45-49, . 1,692 1,679 1,583 2,018 1,893
+50-54, . 1,811 1,786 1,573 1,652 1,860
+55-59, oe 1,730 1,608 1,609 1,527 1,954
+60-64... . 1,548 1,671 1,663 1,476 1,563
+65-69. . 1,320 1,513 1,424 1,443 1,386
+10-74, . 1,063 1,230 1,354 1,376 1,236
+15-79, an 767 885 1,042 998 1,038
+80-84... . 449 531 637 719 757
+85 and over e 246 294 354 433 439
+Total .. .. | 26,900 | 28,714 | 30,547 | 32,895 | 35,803
+
+0-14, An 5,845 6,838 7,308 8,074 9,020
+15-59, an 15,662 15,752 16,765 18,376 20,364
+60 and over . 5,393 6,124 6,474 6,445 6,419
+
+47
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-50 ===
+TABLE 35
+Numbers in each marital status per thousand in each age group—Women
+Ages last birthday | Spinsters | Married | Widows | Divorced
+1963
+15-19 . | 934 66 | — —_
+20-24. .. . | 420 $77 1 2
+3-29 1.) 4 | a8 2 | 6
+30-34 .. .. . 98 i 888 3 | il
+35~39 . .. . 88 887 10 15
+40-44 . + .. 90 867 25 { 18
+45-49 .. .. .. 98 837 47 18
+50-54 .. os . 117 783 82 18
+55-59 . 136 i 707 141 16
+60-64 + +. 144 613 231 12
+65-69 . . a 152 497 343 8
+10-74 +. .. .. 157 362 475 6
+75-79 158 243 594 | . 5
+80-84 .. .. +. 159 144 693 4
+85andover oo... | 159 | 16 163 | 2
+1983
+15-19 .. . 921 i 719 — —
+20-24 .. + +. 359 639 —_ 2
+25-29 . . + 120 872 2 6
+30-34 .. . oe 71 913 4 12
+35-39 . . . 56 920 7 17
+40-44 . .. + 52 911 16 21
+45-49 .. .. .. 51 890 36 23
+50-54 . .. . 35 850 70 25
+55-59 . . .. 62 785 128 25
+60-64 1.) 7 ~©=6 | S700 209 21
+65-69 . . . 86 580 315 19
+10-74 .. + . lil 439 433 17
+75-19 +. . 129 295 562 14
+80-84 . . . 137 175 677 ii
+8Sandover «ls | 143 91 757 9
+2003
+15-19 . . .. | 921 79 _ —_
+20-24 + a . 358 640 _ 2
+25-29 . .. | 119 874 1 6
+30-34 oe . 69 917 2 12
+35-39 . . . 55 924 4 17
+40-44 os . . 51 916 12 21
+45-49 . . oe 50 898 28 24
+50-54 ee os 50 868 56 26
+55-59 a . . 50 820 103 27
+60-64 . os 50 738 188 24
+65-69 . . os 50 631 297 22
+10-14 . .. 52 499 429 20
+75-19 .. . .. 61 342 578 19
+80-84 . . 66 206 710 18
+85 and over . . 81 101 800 18
+48
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-51 ===
+TABLE 36 2 6 Fs)
+Estimated numbers of contributors in 1963
+Millions
+*
+Employed persons Self- | Non: Total
+——____—__—_—-——-] employed employed contributors
+Ages last birthday ; contri- eas (including
+Full Employer’s | — putors contri « employer
+contri- contri- butors only ” cases)
+butons | bution only
+Men
+15-19 an . 1-48 — ‘Ol — 1-49
+20-24 1. | so | -03 — 1-62
+25-29 . . 1-56 — “08 ‘01 1-65
+30-34 . we 1-56 —_ ‘ll 01 1-68
+35-39 . oe 1:57 — “14 01 1-72
+40-44 an .. 1-63 _ 18 ‘Ol 1-82
+45-49 . 1:44 _ 18 01 1:63
+50-54 . . 1-50 _ 24 ‘0! 1:72
+55-59 ee . 1-39 _ “19 -02 1-60
+60-64 an se 1-09 _— “14 04 1-27
+65 and over . “19 21 05 — “45
+Total .. .. | 15-00 21 1-32 12 16-65
+To a
+Spinsters, widows and ' |
+divorced women
+15-19 . . 1:30 _ —_— 01 1-31
+20-24 . +. 62 _ _— — 62
+25-29 oe .. ‘23 _— — — *23
+30-34 . . ‘17 — — _ “17
+35-39 . .. “15 01 01 01 18
+40-44 . . 18 02 01 O1 22
+45-49 . . 18 02 ‘01 01 22
+50-54 ve . °22 04 +02 03 +31
+55~59 . .. 23 06 02 04 +35
+60 and over . ‘07 | “17 01 — 25
+Total .. . 3°35 | +32 08 ‘Ll 3°86
+Married women | |
+15-19 + . -07 02 | — _ “09
+20-240 1. 26 | -18 — — “44
+25-29 . “15 27 — — 42
+30-34 an .. 08 | +35 —_ ~ 43
+35-39 . . :07 “49 _ — 56
+40-44 a . 09 | ‘57 — — 66
+45-49 + “10 | “49 — 01 60
+50-54. . -13 1 +39 01 Ol “54
+55-59 . . 14 23 01 02 “40
+60 and over | 03 +16 — ~ “19
+pe
+Total .. .. | 112 | 345 | 02 | 04 4:33
+i
+* Including contracted-out employees.
+49
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+=== PAGE q-52 ===
+TABLE 37
+Numbers of contracted-out employees, included
+in Table 36
+Millions
+
+Ages last birthday | Men Women
+15-19 oe Lf “04 02
+20-24 e o +22 “09
+25-29 . . +39 08
+30-34 oe oe “46 :07
+35-39 . “SI ‘07
+40-44 we a +56 “08
+45-49 . . “49 07
+50-54 ve oe -50 -07
+55-59 . oe “41 07
+60-64 . oe *27 “Ol
+65-69 oe se “OL _
+
+Total .. .. 3-86 +63
+
+50
+(91110) Wt. 765/1970 K.32 11/64 Hw.
+House of Commons Parliamentary Papers Online.
+Copyright (c) 2006 ProQuest Information and Learning Company. All rights reserved.
+
