@@ -735,3 +735,9 @@ only partial disclosure. Do not repeat that.
   Slaughter 2007) and to Razin, Sadka & Swagel (2002) reverse causation -> a point for the text. DEMIG: IMI Oxford closed 2017, all DEMIG links
   dead; DEMIG POLICY variables survive in the QoG Thematic Dataset on Migration, COUNTRY-YEAR-CHANGE version only (gu.se blocked here) ->
   Sam to upload that file or its UK rows; test planned: projection -> liberalising UK changes, and does the index absorb the projection (to 2014).
+- 1 Oct 2026 (50; Sam): de Haas, Natter & Vezzoli (2015, CMS 3:15) = DEMIG POLICY methodology (uploaded to the session, not the repo). Unit = policy
+  MEASURE x year; restrictiveness -1/0/+1 (0 = new selection system, e.g. a points system); magnitude 1-4; area/tool/migrant group/origin codes; 'policies
+  on paper' only (no implementation), sources biased to politically salient changes, thin before the 1970s. Implication: a quiet administrative lever
+  need not appear in DEMIG -> projection predicting on-paper changes = corroboration; a null = consistent with the thesis, not against it. Planned UK
+  series: legal entry/stay measures targeting workers, sum of restrictiveness x magnitude per year + cumulative index. Data still needed (Demscore
+  Country-Year-Change download, or HIP from Harvard Dataverse for levels to 2010).
