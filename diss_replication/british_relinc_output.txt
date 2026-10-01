@@ -1,0 +1,51 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+Non-UK-born British arrivals by region of last residence, mean share 1977-2019 (IPS 3.01 minus 3.18):
+           OCEANIA      NORTH AMERICA               ASIA SUB-SAHARAN AFRICA 
+              10.8                4.3               28.2               18.1 
+      OTHER EUROPE  REST OF THE WORLD 
+               3.6               35.0 
+Covered regions: 61% of non-UK-born British arrivals; weights: OCEANIA 0.18, NORTH AMERICA 0.07, ASIA 0.46, SUB-SAHARAN AFRICA 0.30
+Correlation of the weighted measure with relinc_dev: 1.00; with the projection (1977-2019): 0.38
+
+-- non-UK-born British from non-EU, 1977-2019, labour term: log V/U (core)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --    0.1183 (0.443)    0.0125 (0.057)    0.00
+   relinc_dev (7 main-flow origins)  43     1.1195 (0.026)    0.2089 (0.099)    0.0035 (0.570)   -4.67
+   relinc_w (British regions)      43     1.3684 (0.025)    0.2205 (0.080)    0.0032 (0.613)   -4.82
+
+-- non-UK-born British from non-EU, 1977-2019, labour term: UK unemployment in place of log V/U (MPR's U)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --    0.0078 (0.770)    0.0144 (0.022)    0.00
+   relinc_dev (7 main-flow origins)  43     0.9616 (0.098)   -0.0046 (0.813)    0.0073 (0.316)   -2.85
+   relinc_w (British regions)      43     1.1646 (0.113)   -0.0077 (0.705)    0.0072 (0.351)   -2.81
+
+-- British, all origins (LTIM), 1977-2019, labour term: log V/U (core)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --   -0.1431 (0.003)    0.0068 (0.008)    0.00
+   relinc_dev (7 main-flow origins)  43     0.3666 (0.029)   -0.1493 (0.007)    0.0046 (0.105)   -2.51
+   relinc_w (British regions)      43     0.4925 (0.021)   -0.1475 (0.008)    0.0044 (0.128)   -3.35
+
+-- British, all origins (LTIM), 1977-2019, labour term: UK unemployment in place of log V/U (MPR's U)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --    0.0348 (0.001)    0.0064 (0.022)    0.00
+   relinc_dev (7 main-flow origins)  43     0.4139 (0.011)    0.0380 (<.001)    0.0039 (0.144)   -4.20
+   relinc_w (British regions)      43     0.5328 (0.009)    0.0371 (<.001)    0.0038 (0.161)   -4.77
+
+-- MAIN: non-EU inflows (controlled), 1977-2019, labour term: log V/U (core)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --    0.1417 (<.001)    0.0067 (<.001)    0.00
+   relinc_dev (7 main-flow origins)  43     0.0557 (0.646)    0.1457 (<.001)    0.0062 (<.001)    1.78
+   relinc_w (British regions)      43     0.0496 (0.742)    0.1446 (<.001)    0.0063 (<.001)    1.88
+
+-- MAIN: non-EU inflows (controlled), 1977-2019, labour term: UK unemployment in place of log V/U (MPR's U)
+   added (t-1)                      N relative income (p)    labour term (p)     projection (p)    dAIC
+   (none)                          43                 --   -0.0199 (0.032)    0.0082 (<.001)    0.00
+   relinc_dev (7 main-flow origins)  43     0.0401 (0.763)   -0.0205 (0.019)    0.0079 (<.001)    1.90
+   relinc_w (British regions)      43     0.0385 (0.817)   -0.0204 (0.018)    0.0079 (<.001)    1.94
+
+Done.

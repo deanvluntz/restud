@@ -1,0 +1,29 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+RPI vs GDP-deflator inflation (fiscal years), 1965-2019: mean 5.50 vs 5.41; correlation 0.966; largest gaps 2011 +3.0, 1998 +2.9, 1971 -2.5, 2012 +2.5
+
+term                                 period       N           term (p)     projection (p)     dAIC      no proj: term     dAIC
+rint_xb_tme  (deflator)              1965-2019  55    0.0051 (0.102)    0.0059 (<.001)     0.25    0.0126 (<.001)    -9.94
+rint_xb_tme  (deflator)              1977-2019  43    0.0012 (0.795)    0.0064 (<.001)     1.95    0.0106 (0.013)    -2.80
+rint_xb_tme  (RPI)                   1965-2019  55    0.0051 (0.204)    0.0058 (<.001)     0.54    0.0133 (<.001)   -10.85
+rint_xb_tme  (RPI)                   1977-2019  43    0.0028 (0.571)    0.0060 (0.001)     1.71    0.0114 (0.013)    -3.96
+taxrint_xb   (deflator) for tax      1965-2019  55    0.0370 (<.001)    0.0060 (<.001)    -2.13    0.0289 (<.001)    -5.51
+taxrint_xb   (deflator) for tax      1977-2019  43    0.0460 (<.001)    0.0051 (0.002)    -1.96    0.0440 (0.001)    -5.90
+taxrint_xb   (RPI) for tax           1965-2019  55    0.0377 (<.001)    0.0057 (<.001)    -0.70    0.0302 (<.001)    -5.63
+taxrint_xb   (RPI) for tax           1977-2019  43    0.0473 (<.001)    0.0046 (0.007)     0.18    0.0471 (<.001)    -5.53
+taxrint_cg   (deflator) for tax      1965-2019  55    0.0355 (<.001)    0.0056 (<.001)    -0.89    0.0287 (<.001)    -6.03
+taxrint_cg   (deflator) for tax      1977-2019  43    0.0420 (<.001)    0.0047 (0.005)    -0.27    0.0415 (<.001)    -5.55
+taxrint_cg   (RPI) for tax           1965-2019  55    0.0360 (<.001)    0.0053 (<.001)     0.57    0.0299 (<.001)    -6.09
+taxrint_cg   (RPI) for tax           1977-2019  43    0.0424 (<.001)    0.0043 (0.013)     1.93    0.0434 (<.001)    -4.89
+dAIC: 'add' rows against the 6-parameter core; 'for tax' rows against the same core with tax per WAP (same number of parameters).
+Done.

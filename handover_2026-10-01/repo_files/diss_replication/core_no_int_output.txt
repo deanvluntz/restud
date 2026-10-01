@@ -1,0 +1,75 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+
+==================== Core without the debt-interest share (6 parameters) ====================
+(1) Main, Citizen sample 1965-2019 (N 55): mig_gross 0.5237 (<.001); delta_oadr_10 0.0072 (<.001); tax_workpop 0.0427 (<.001); ln_debt_gdp 0.5654 (0.002); ln_vac_unem 0.1157 (0.001)
+(2) Same specification, 1977-2019 (N 43): mig_gross 0.3630 (<.001); delta_oadr_10 0.0067 (<.001); tax_workpop 0.0608 (<.001); ln_debt_gdp 0.6885 (<.001); ln_vac_unem 0.1417 (<.001)
+    diagnostic                1965-2019    1977-2019
+    RESET (2,3)                   0.458        0.467
+    RESET (2)                     0.559        0.791
+    BG (1)                        0.254        0.200
+    BG (2)                        0.043        0.019
+    BG (3)                        0.017        0.014
+    Ljung-Box (4)                 0.304        0.483
+    rainbow, time                 0.103        0.047
+    rainbow, by fitted            0.351        0.590
+    Harvey-Collier                0.444        0.278
+    Breusch-Pagan                 0.337        0.718
+    Jarque-Bera                   0.854        0.974
+    OLS-CUSUM                     0.980        0.967
+    Rec-CUSUM                     0.204        0.370
+    sup-F                         0.404        0.432
+    post-2009 change p            0.224        0.137
+    max VIF                       9.904       19.209
+    adj. R2                       0.965        0.970
+    AIC                         -101.00       -76.86
+    BIC                          -86.95       -64.53
+    OOS RMSE from 1995            0.109        0.116
+    N                                55           43
+(3) Chow at 1977 (12 years before), all coefficients: classical F 1.07 (p 0.397), HC3 Wald F 1.05 (p 0.409); projection change from 1977 +0.0029 (HC3 p 0.773)
+(4) residence-based: all citizenships from non-EU countries, 1977-2019 (N 43): projection 0.0064 (p <.001); RESET 0.843 BG(1) 0.936 BG(2) 0.060
+    res_gross 0.2822 (0.012); delta_oadr_10 0.0064 (<.001); tax_workpop 0.0514 (<.001); ln_debt_gdp 0.4634 (0.030); ln_vac_unem 0.0892 (0.076)
+(4) citizenship: non-EU citizens from any country, 1977-2019 (N 43): projection 0.0064 (p <.001); RESET 0.511 BG(1) 0.301 BG(2) 0.018
+    cit_gross 0.3751 (<.001); delta_oadr_10 0.0064 (<.001); tax_workpop 0.0593 (<.001); ln_debt_gdp 0.6403 (0.005); ln_vac_unem 0.1397 (0.001)
+
+==================== Previous core, with int_tme (7 parameters), for comparison ====================
+(1) Main, Citizen sample 1965-2019 (N 55): mig_gross 0.4837 (<.001); delta_oadr_10 0.0085 (<.001); tax_workpop 0.0512 (<.001); ln_debt_gdp 0.6130 (<.001); ln_vac_unem 0.1295 (<.001); int_tme 0.0165 (0.036)
+(2) Same specification, 1977-2019 (N 43): mig_gross 0.3406 (<.001); delta_oadr_10 0.0088 (<.001); tax_workpop 0.0676 (<.001); ln_debt_gdp 0.7609 (<.001); ln_vac_unem 0.1552 (<.001); int_tme 0.0188 (0.005)
+    diagnostic                1965-2019    1977-2019
+    RESET (2,3)                   0.885        0.843
+    RESET (2)                     0.888        0.922
+    BG (1)                        0.180        0.109
+    BG (2)                        0.025        0.008
+    BG (3)                        0.008        0.008
+    Ljung-Box (4)                 0.260        0.349
+    rainbow, time                 0.159        0.072
+    rainbow, by fitted            0.418        0.609
+    Harvey-Collier                0.466        0.271
+    Breusch-Pagan                 0.531        0.779
+    Jarque-Bera                   0.716        0.693
+    OLS-CUSUM                     0.971        0.978
+    Rec-CUSUM                     0.373        0.139
+    sup-F                         0.522        0.109
+    post-2009 change p            0.381        0.442
+    max VIF                      10.602       19.401
+    adj. R2                       0.967        0.972
+    AIC                         -102.86       -79.17
+    BIC                          -86.81       -65.08
+    OOS RMSE from 1995            0.106        0.114
+    N                                55           43
+(3) Chow at 1977 (12 years before), all coefficients: classical F 1.01 (p 0.439), HC3 Wald F 1.36 (p 0.248); projection change from 1977 +0.0028 (HC3 p 0.857)
+(4) residence-based: all citizenships from non-EU countries, 1977-2019 (N 43): projection 0.0092 (p <.001); RESET 0.915 BG(1) 0.567 BG(2) 0.019
+    res_gross 0.2218 (0.033); delta_oadr_10 0.0092 (<.001); tax_workpop 0.0616 (<.001); ln_debt_gdp 0.5614 (0.005); ln_vac_unem 0.1091 (0.006); int_tme 0.0246 (0.005)
+(4) citizenship: non-EU citizens from any country, 1977-2019 (N 43): projection 0.0082 (p <.001); RESET 0.859 BG(1) 0.189 BG(2) 0.010
+    cit_gross 0.3662 (<.001); delta_oadr_10 0.0082 (<.001); tax_workpop 0.0642 (<.001); ln_debt_gdp 0.6980 (0.001); ln_vac_unem 0.1502 (<.001); int_tme 0.0170 (0.015)
+
+Long-run projection effect (OLS, no bias correction): without int_tme 0.0151 (1965-2019) / 0.0105 (1977-2019); with int_tme 0.0164 / 0.0134
+
+Done.

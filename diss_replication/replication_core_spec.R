@@ -35,7 +35,7 @@ options(warn = 1)
 .need <- c("brit_gross", "eu_gross", "nb_gross", "brit_desc_gross", "gap_obr", "settle_total_k", "res_noneu_k", "cit_noneu_k", "term_spread", "tme_obr_gdp", "unem_diff", "noneu_work_k", "brit_work_k", "p_pub_ext")
 .have <- names(read_excel(.wb, sheet = "data_1977", n_max = 1, .name_repair = "minimal")); if (!all(.need %in% .have)) stop("The data sheets in this workbook are older than this script: missing ", paste(setdiff(.need, .have), collapse = ", "), ". Pull the latest Dissertation_Dataset_Final.xlsx from the repository (or, with the determinants/ folder up to date, run export_dataset.R once).")
 source("tables_common.R"); suppressPackageStartupMessages({library(ARDL); library(strucchange); library(tseries)})
-LABS <- c(extended = "Citizen sample (1964-2019)", core = "Origin sample (1977-2019)")
+LABS <- c(extended = "Citizen sample (1965-2019)", core = "Origin sample (1977-2019)")
 load_sample <- function(s) { SAMPLE <<- s; source("data_common.R", local = TRUE); df$ln_vac_unem <- log(df$vac_unem); df$ln_int_tme <- log(df$int_tme)
   for (k in c("res_noneu_k", "cit_noneu_k", "dv_noneu_k", "settle_total_k", "settle_push_k")) if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; nm <- paste0("ln_", sub("_k$", "", k)); df[[nm]] <- log(1000 * x); df[[paste0("L_", nm)]] <- lag1(df[[nm]]) }
   for (v in c("noneu", "brit")) for (r in c("work", "study", "join", "other", "all", "nonwork")) { k <- paste0(v, "_", r, "_k"); if (k %in% names(df)) { x <- df[[k]]; x[!is.na(x) & x <= 0] <- NA; df[[paste0("ln_", v, "_", r)]] <- log(1000 * x); df[[paste0("L_ln_", v, "_", r)]] <- lag1(df[[paste0("ln_", v, "_", r)]]) } }

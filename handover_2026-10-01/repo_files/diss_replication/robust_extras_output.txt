@@ -1,0 +1,42 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+A. Specification curve: 288 specifications
+   projection positive in 288 (100%); HAC p < .05 in 288 (100%); p < .10 in 288 (100%)
+   median 0.0078; range 0.0050 to 0.0104; the main specification: 1965-2019 0.0072 (p <.001); 1977-2019 0.0067 (p <.001)
+   by choice -- median projection [share p < .05]:
+   outcome  gross 0.0073 [100%]; rate_wap 0.0074 [100%]; ltim_splice 0.0085 [100%]
+   tax      per_wap 0.0082 [100%]; per_adult 0.0080 [100%]; per_resident 0.0079 [100%]; tax_real_int 0.0070 [100%]
+   labour   ln_vu 0.0075 [100%]; unem 0.0088 [100%]; ln_vac_wap 0.0072 [100%]
+   debt     ln_change 0.0076 [100%]; pp_change 0.0081 [100%]
+   sample   1965-2019 0.0080 [100%]; 1977-2019 0.0077 [100%]
+   timing   t 0.0075 [100%]; t-1 0.0081 [100%]
+   specifications with p >= .05: none
+   figure: specification_curve.png; every row: specification_curve.csv
+
+B. Net non-EU migration per 1,000 population as the outcome (own lag + core terms; level form)
+   1977-2019 (N 43): projection 0.0158 (p 0.016); mean of outcome 1.67 per 1,000 -> 0.9% of the mean per OADR point; dropping it costs 3.04 AIC; total DR in place: 0.0020 (p 0.410)
+      net_pk 0.3016 (0.023); delta_oadr_10 0.0158 (0.016); tax_workpop 0.1129 (<.001); ln_debt_gdp 2.4163 (0.002); ln_vac_unem 0.4874 (0.003)
+      RESET 0.045 BG(1) 0.197 BG(2) 0.256 sup-F 0.032
+   1965-2019 (N 55) [pre-1975 non-British LTIM net balance]: projection 0.0165 (p <.001); mean of outcome 1.50 per 1,000 -> 1.1% of the mean per OADR point; dropping it costs 8.01 AIC; total DR in place: 0.0019 (p 0.050)
+      net_pk 0.3095 (0.008); delta_oadr_10 0.0165 (<.001); tax_workpop 0.1224 (<.001); ln_debt_gdp 2.1996 (<.001); ln_vac_unem 0.4162 (<.001)
+      RESET 0.020 BG(1) 0.201 BG(2) 0.245 sup-F 0.003
+
+C. Weighted by IPS precision (weights 1 / var(log inflow) from the published 95% confidence intervals), 1977-2019
+   relative standard error of the inflow estimate: 5.6% (1977) to 4.3% (2019); range 2.9%-6.3%
+   OLS: projection 0.0067 (p <.001); delta_oadr_10 0.0067 (<.001); tax_workpop 0.0608 (<.001); ln_debt_gdp 0.6885 (<.001); ln_vac_unem 0.1417 (<.001)
+   WLS: projection 0.0064 (p <.001); delta_oadr_10 0.0064 (<.001); tax_workpop 0.0607 (<.001); ln_debt_gdp 0.8305 (<.001); ln_vac_unem 0.1517 (<.001)
+
+Done.

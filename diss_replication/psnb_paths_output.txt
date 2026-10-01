@@ -1,0 +1,163 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+• `` -> `...37`
+• `` -> `...59`
+New names:
+• `` -> `...37`
+• `` -> `...59`
+New names:
+• `` -> `...37`
+• `` -> `...59`
+Projected borrowing paths: 24 variables; first year 1980-1984
+ year  chg_2  chg_4 avg_4  cum_4 ldebt_4
+ 1980 -1.500     NA    NA     NA      NA
+ 1985 -0.200     NA    NA     NA      NA
+ 1990  1.300     NA    NA     NA      NA
+ 1994 -2.848 -5.354 2.841  8.616   0.027
+ 2000  0.800  1.600 0.320  2.100  -0.126
+ 2008 -0.900 -1.600 2.060  7.400   0.002
+ 2009 -3.300 -6.900 9.220 33.700   0.413
+ 2010 -4.600 -8.000 5.740 18.600   0.169
+ 2015 -2.500 -4.100 1.400  3.300  -0.104
+ 2019 -0.585 -0.801 0.827  2.802  -0.111
+NOTE: missing values on 1981-2019 in: t_chg_3, t_chgb_3, t_avg_3, t_wavg_3, t_cum_3, t_ldebt_3, t_chg_4, t_chgb_4, t_avg_4, t_wavg_4, t_cum_4, t_ldebt_4, L_chg_3, L_chgb_3, L_avg_3, L_wavg_3, L_cum_3, L_ldebt_3, L_chg_4, L_chgb_4, L_avg_4, L_wavg_4, L_cum_4, L_ldebt_4, L_int_gdp, L_ln_int_gdp, L_bank_rate, L_gilt, L_ln_gilt, L_consol, L_r_g, L_real_rate -- rows using them run on fewer years
+
+Window 1981-2019, N 39. Reference: int_tme beside the 6-parameter core 0.0174, joint p 0.005, dAIC -2.05; without the projection p 0.355, dAIC 1.41
+Rows: 2434. Joint p < .10 beside the projection: 1178 (48%); without it: 511 (21%); pass both halves of the criterion: 232 (9.5%)
+Projection coefficient across all rows: median 0.0069, range 0.0016 to 0.0116; p < .05 in 89% of rows
+
+-- path variables alone (beside the projection | without it) --
+   L_chg_2      N 39    0.0306 (p 0.024) dAIC  -2.08 |   0.0395 (p 0.006) dAIC  -4.23  proj 0.0056  PASS
+   L_chgb_3     N 36    0.0108 (p 0.046) dAIC  -1.46 |   0.0139 (p 0.016) dAIC  -3.59  proj 0.0047  PASS
+   L_chg_3      N 36    0.0208 (p 0.039) dAIC  -1.10 |   0.0276 (p 0.009) dAIC  -3.53  proj 0.0045  PASS
+   L_chgb_2     N 39    0.0102 (p 0.104) dAIC  -0.82 |   0.0133 (p 0.038) dAIC  -2.25  proj 0.0060
+   L_cum_3      N 36    0.0085 (p 0.219) dAIC  -0.51 |   0.0095 (p 0.218) dAIC  -0.75  proj 0.0058
+   t_ldebt_1    N 39   -0.4037 (p 0.078) dAIC  -0.37 |  -0.2132 (p 0.391) dAIC   1.43  proj 0.0077
+   t_ldebt_2    N 39   -0.2420 (p 0.078) dAIC  -0.30 |  -0.0895 (p 0.546) dAIC   1.72  proj 0.0080
+   t_chg_2      N 39    0.0207 (p 0.107) dAIC   0.23 |   0.0245 (p 0.137) dAIC  -0.07  proj 0.0066
+   L_ldebt_1    N 39   -0.5819 (p 0.054) dAIC   0.27 |  -0.2066 (p 0.608) dAIC   1.81  proj 0.0078
+   t_chg_1      N 39    0.0395 (p 0.109) dAIC   0.32 |   0.0252 (p 0.490) dAIC   1.43  proj 0.0074
+   L_chg_1      N 39    0.0301 (p 0.229) dAIC   0.40 |   0.0442 (p 0.093) dAIC  -1.09  proj 0.0061
+   L_chgb_1     N 39    0.0086 (p 0.220) dAIC   0.44 |   0.0120 (p 0.094) dAIC  -0.62  proj 0.0063
+   t_chg_3      N 36    0.0156 (p 0.227) dAIC   0.55 |   0.0177 (p 0.216) dAIC   0.31  proj 0.0051
+   L_cum_2      N 39    0.0086 (p 0.383) dAIC   0.72 |   0.0080 (p 0.522) dAIC   1.09  proj 0.0069
+   L_avg_3      N 36    0.0183 (p 0.404) dAIC   0.76 |   0.0181 (p 0.492) dAIC   0.95  proj 0.0062
+   t_chgb_2     N 39    0.0094 (p 0.309) dAIC   0.91 |   0.0145 (p 0.159) dAIC  -0.29  proj 0.0063
+   t_chgb_3     N 36    0.0097 (p 0.389) dAIC   0.93 |   0.0133 (p 0.233) dAIC   0.12  proj 0.0048
+   L_ldebt_2    N 39   -0.2025 (p 0.310) dAIC   1.33 |   0.0069 (p 0.978) dAIC   2.00  proj 0.0075
+   t_ldebt_3    N 36   -0.1086 (p 0.349) dAIC   1.40 |   0.0420 (p 0.704) dAIC   1.90  proj 0.0065
+   t_wavg_2     N 39   -0.0055 (p 0.459) dAIC   1.55 |  -0.0042 (p 0.600) dAIC   1.78  proj 0.0070
+   t_wavg_1     N 39   -0.0052 (p 0.449) dAIC   1.55 |  -0.0044 (p 0.570) dAIC   1.74  proj 0.0069
+   L_avg_2      N 39    0.0101 (p 0.602) dAIC   1.57 |   0.0057 (p 0.820) dAIC   1.88  proj 0.0070
+   L_wavg_3     N 36    0.0104 (p 0.612) dAIC   1.57 |   0.0072 (p 0.778) dAIC   1.82  proj 0.0063
+   t_avg_1      N 39   -0.0049 (p 0.480) dAIC   1.61 |  -0.0042 (p 0.585) dAIC   1.76  proj 0.0069
+   t_chgb_1     N 39    0.0056 (p 0.531) dAIC   1.62 |   0.0085 (p 0.425) dAIC   1.28  proj 0.0067
+   t_avg_2      N 39   -0.0051 (p 0.514) dAIC   1.65 |  -0.0035 (p 0.678) dAIC   1.86  proj 0.0070
+   t_cum_1      N 39   -0.0039 (p 0.587) dAIC   1.77 |  -0.0036 (p 0.640) dAIC   1.84  proj 0.0069
+   L_cum_1      N 39    0.0065 (p 0.695) dAIC   1.81 |   0.0038 (p 0.865) dAIC   1.95  proj 0.0069
+   t_cum_2      N 39   -0.0020 (p 0.629) dAIC   1.81 |  -0.0011 (p 0.808) dAIC   1.96  proj 0.0069
+   t_cum_3      N 36    0.0013 (p 0.658) dAIC   1.86 |   0.0030 (p 0.399) dAIC   1.32  proj 0.0051
+   L_wavg_2     N 39    0.0047 (p 0.787) dAIC   1.90 |  -0.0010 (p 0.964) dAIC   2.00  proj 0.0070
+   t_avg_3      N 36    0.0023 (p 0.766) dAIC   1.95 |   0.0072 (p 0.442) dAIC   1.54  proj 0.0052
+   L_ldebt_3    N 36    0.0410 (p 0.846) dAIC   1.97 |   0.2663 (p 0.194) dAIC   0.28  proj 0.0059
+   t_wavg_3     N 36    0.0007 (p 0.919) dAIC   2.00 |   0.0048 (p 0.537) dAIC   1.77  proj 0.0053
+   L_wavg_1     N 39   -0.0009 (p 0.951) dAIC   2.00 |  -0.0071 (p 0.724) dAIC   1.78  proj 0.0068
+   L_avg_1      N 39    0.0008 (p 0.959) dAIC   2.00 |  -0.0047 (p 0.822) dAIC   1.91  proj 0.0069
+
+-- indicators alone --
+   L_int_tme      N 39    0.0174 (p 0.005) dAIC  -2.05 |   0.0070 (p 0.355) dAIC   1.41  proj 0.0087
+   L_ln_int_tme   N 39    0.1272 (p 0.010) dAIC  -1.46 |   0.0395 (p 0.513) dAIC   1.69  proj 0.0087
+   L_int_gdp      N 37    0.0283 (p 0.019) dAIC  -0.96 |   0.0140 (p 0.398) dAIC   1.36  proj 0.0077
+   L_ln_int_gdp   N 37    0.0940 (p 0.018) dAIC  -0.73 |   0.0306 (p 0.575) dAIC   1.73  proj 0.0080
+   L_slope        N 39   -0.0251 (p 0.150) dAIC   0.26 |  -0.0348 (p 0.105) dAIC  -0.94  proj 0.0062
+   L_int_xb_tme   N 39    0.0166 (p 0.092) dAIC   0.31 |   0.0135 (p 0.300) dAIC   1.08  proj 0.0071
+   L_int_cg_tme   N 39    0.0221 (p 0.205) dAIC   0.33 |   0.0053 (p 0.799) dAIC   1.91  proj 0.0079
+   L_gry_long     N 39   -0.0066 (p 0.527) dAIC   1.77 |  -0.0118 (p 0.373) dAIC   1.39  proj 0.0067
+   L_r_g          N 37    0.0034 (p 0.687) dAIC   1.86 |   0.0114 (p 0.163) dAIC   0.38  proj 0.0060
+   L_gry_short    N 39    0.0035 (p 0.641) dAIC   1.89 |   0.0037 (p 0.706) dAIC   1.89  proj 0.0069
+   L_bank_rate    N 37   -0.0016 (p 0.782) dAIC   1.95 |  -0.0060 (p 0.397) dAIC   1.44  proj 0.0063
+   L_gry_10       N 39   -0.0023 (p 0.795) dAIC   1.96 |  -0.0057 (p 0.598) dAIC   1.78  proj 0.0068
+   L_real_gry_10  N 39    0.0013 (p 0.793) dAIC   1.96 |   0.0032 (p 0.678) dAIC   1.81  proj 0.0068
+   L_real_rate    N 37   -0.0014 (p 0.860) dAIC   1.96 |  -0.0016 (p 0.863) dAIC   1.96  proj 0.0064
+   L_d_gry_10     N 39    0.0033 (p 0.856) dAIC   1.97 |  -0.0179 (p 0.356) dAIC   1.24  proj 0.0070
+   L_consol       N 37    0.0027 (p 0.808) dAIC   1.97 |  -0.0057 (p 0.707) dAIC   1.90  proj 0.0065
+   L_ln_tbill     N 39   -0.0020 (p 0.886) dAIC   1.99 |   0.0057 (p 0.762) dAIC   1.92  proj 0.0069
+   L_ln_gilt      N 37   -0.0052 (p 0.922) dAIC   1.99 |  -0.0106 (p 0.858) dAIC   1.97  proj 0.0064
+   L_gilt         N 37    0.0007 (p 0.931) dAIC   2.00 |  -0.0030 (p 0.787) dAIC   1.94  proj 0.0064
+   L_tbill        N 39   -0.0005 (p 0.931) dAIC   2.00 |  -0.0057 (p 0.393) dAIC   1.53  proj 0.0068
+   L_gry_all      N 39   -0.0006 (p 0.952) dAIC   2.00 |  -0.0025 (p 0.833) dAIC   1.96  proj 0.0069
+   L_rint_xb_tme  N 39    0.0001 (p 0.985) dAIC   2.00 |   0.0045 (p 0.447) dAIC   1.51  proj 0.0069
+
+-- passes by kind and path form --
+             pass
+kind          FALSE TRUE
+  alongside     732   60
+  interaction   718   74
+  product       697   95
+       timing
+form     t t-1
+  avg    0   4
+  chg   33  81
+  chgb  25  63
+  cum    0   6
+  ldebt  5   7
+  wavg   0   5
+
+-- the 25 passing combinations with the lowest AIC beside the projection --
+   L_chgb_1 * L_r_g                         interaction dAIC  -7.38 (p 0.034) | without: dAIC  -5.46 (p 0.023)  proj 0.0068 (p 0.005)
+   L_chg_3 x L_bank_rate                    product     dAIC  -6.97 (p <.001) | without: dAIC  -4.38 (p <.001)  proj 0.0064 (p <.001)
+   L_chg_3 x L_tbill                        product     dAIC  -6.95 (p <.001) | without: dAIC  -3.99 (p <.001)  proj 0.0070 (p <.001)
+   L_chgb_2 * L_r_g                         interaction dAIC  -6.34 (p 0.055) | without: dAIC  -4.49 (p 0.022)  proj 0.0070 (p 0.005)
+   L_ldebt_3 * L_int_cg_tme                 interaction dAIC  -6.26 (p 0.024) | without: dAIC  -2.32 (p 0.050)  proj 0.0086 (p <.001)
+   t_chg_2 x L_real_rate                    product     dAIC  -6.23 (p <.001) | without: dAIC  -0.69 (p 0.046)  proj 0.0087 (p <.001)
+   t_ldebt_3 * L_tbill                      interaction dAIC  -6.04 (p <.001) | without: dAIC  -0.01 (p 0.014)  proj 0.0099 (p <.001)
+   L_chg_3 x L_real_rate                    product     dAIC  -5.97 (p <.001) | without: dAIC  -1.29 (p 0.011)  proj 0.0078 (p <.001)
+   L_chg_2 + L_int_tme                      alongside   dAIC  -5.81 (p 0.006) | without: dAIC  -4.09 (p 0.008)  proj 0.0074 (p <.001)
+   L_chg_3 x L_gilt                         product     dAIC  -5.69 (p <.001) | without: dAIC  -5.50 (p <.001)  proj 0.0051 (p 0.001)
+   L_chg_3 x L_gry_10                       product     dAIC  -5.58 (p <.001) | without: dAIC  -5.10 (p <.001)  proj 0.0058 (p <.001)
+   L_chg_2 * L_int_tme                      interaction dAIC  -5.45 (p 0.005) | without: dAIC  -8.96 (p <.001)  proj 0.0055 (p 0.033)
+   L_chg_3 x L_gry_short                    product     dAIC  -5.44 (p <.001) | without: dAIC  -4.03 (p <.001)  proj 0.0063 (p <.001)
+   L_chg_3 x L_gry_all                      product     dAIC  -5.41 (p <.001) | without: dAIC  -4.86 (p <.001)  proj 0.0059 (p <.001)
+   L_chg_2 + L_ln_int_tme                   alongside   dAIC  -5.18 (p 0.007) | without: dAIC  -3.61 (p 0.011)  proj 0.0075 (p <.001)
+   L_chg_2 * L_int_gdp                      interaction dAIC  -5.15 (p 0.008) | without: dAIC  -6.75 (p 0.001)  proj 0.0053 (p 0.025)
+   L_chg_2 * L_ln_int_tme                   interaction dAIC  -4.94 (p 0.007) | without: dAIC  -9.04 (p <.001)  proj 0.0052 (p 0.056)
+   L_chg_3 x L_gry_long                     product     dAIC  -4.72 (p <.001) | without: dAIC  -4.71 (p <.001)  proj 0.0056 (p <.001)
+   L_wavg_3 x L_tbill                       product     dAIC  -4.66 (p <.001) | without: dAIC  -0.27 (p 0.026)  proj 0.0083 (p <.001)
+   L_chg_2 + L_int_gdp                      alongside   dAIC  -4.64 (p 0.006) | without: dAIC  -3.63 (p 0.009)  proj 0.0066 (p 0.005)
+   t_chg_2 x L_tbill                        product     dAIC  -4.63 (p 0.001) | without: dAIC  -1.56 (p 0.003)  proj 0.0078 (p <.001)
+   t_chg_2 x L_ln_tbill                     product     dAIC  -4.49 (p 0.005) | without: dAIC  -1.11 (p 0.024)  proj 0.0080 (p <.001)
+   L_chg_3 x L_ln_gilt                      product     dAIC  -4.43 (p <.001) | without: dAIC  -5.39 (p <.001)  proj 0.0045 (p 0.012)
+   L_chg_2 * L_ln_int_gdp                   interaction dAIC  -4.41 (p 0.014) | without: dAIC  -6.70 (p 0.002)  proj 0.0053 (p 0.035)
+   t_ldebt_1 * L_slope                      interaction dAIC  -4.41 (p 0.006) | without: dAIC  -0.45 (p 0.038)  proj 0.0081 (p <.001)
+
+-- indicators that pass most often (share of their combinations passing) --
+          ind      pass
+   L_gry_long 0.1296296
+    L_int_tme 0.1296296
+ L_int_cg_tme 0.1203704
+ L_int_xb_tme 0.1203704
+      L_tbill 0.1203704
+    L_int_gdp 0.1111111
+ L_ln_int_gdp 0.1111111
+ L_ln_int_tme 0.1111111
+  L_real_rate 0.1111111
+  L_bank_rate 0.1018519
+
+Done.
+
+-- checks on the path variables that pass alone (1981-2019 window): episodes, sub-period, leave-one-out, diagnostics, beside int_tme --
+   L_chg_2   all 0.0306 (p 0.024) | without 2008-11 0.0343 (p 0.039) | to 2007 0.0351 (p 0.032) | leave-one-out 0.0229 to 0.0351 | RESET 0.261 BG(2) 0.203 | beside int_tme: 0.0343 (p 0.010), int_tme 0.0195 (p 0.004), proj 0.0074
+   L_chgb_3  all 0.0108 (p 0.046) | without 2008-11 0.0149 (p 0.099) | to 2007 0.0216 (p 0.012) | leave-one-out 0.0086 to 0.0131 | RESET 0.302 BG(2) 0.130 | beside int_tme: 0.0118 (p 0.050), int_tme 0.0177 (p 0.013), proj 0.0067
+   L_chg_3   all 0.0208 (p 0.039) | without 2008-11 0.0261 (p 0.022) | to 2007 0.0393 (p 0.002) | leave-one-out 0.0159 to 0.0253 | RESET 0.249 BG(2) 0.123 | beside int_tme: 0.0222 (p 0.024), int_tme 0.0173 (p 0.011), proj 0.0065
+   Sign: chg = projected borrowing in t+h minus t (negative = consolidation planned); a positive coefficient = inflows rise when the last Budget
+   projected borrowing to rise (or to fall less), i.e. a deteriorating projected fiscal path, the same direction as the demographic projection.
+   Correlation of L_chg_2 with the projection 0.52, with L_ln_debt_gdp -0.79, with L_int_tme -0.13 (1981-2019)
+
+-- projected (L_chg_2) vs realised (L_ln_debt_gdp) debt dynamics, 1981-2019 --
+   core (realised debt change)          AIC  -72.26  BG(2) 0.066  max VIF  26.9  proj 0.0069 (p 0.009)  debt chg 0.704 (p <.001)
+   core + L_chg_2                       AIC  -74.35  BG(2) 0.203  max VIF  26.9  proj 0.0056 (p 0.018)  debt chg 1.058 (p <.001)  chg_2 0.0306 (p 0.024)
+   L_chg_2 in place of L_ln_debt_gdp    AIC  -60.56  BG(2) 0.015  max VIF  26.9  proj 0.0073 (p 0.003)  chg_2 -0.0156 (p 0.214)
+   core + L_chg_2 + L_int_tme           AIC  -78.07  BG(2) 0.022  max VIF  27.4  proj 0.0074 (p <.001)  debt chg 1.180 (p <.001)  chg_2 0.0343 (p 0.010)
+Done.

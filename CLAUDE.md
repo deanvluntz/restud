@@ -568,3 +568,207 @@ only partial disclosure. Do not repeat that.
   now covers block + added terms only (fixed terms exempt; lagged DV and tax level VIF 10-22 by construction) in both scripts. Results:
   projection 0.0057-0.0105 (p<.001) in every listed model; recurring additions = unem x int_tme (both), unem x wage/CPI inflation
   (Citizen), tbill and unem x labour_gov (Origin), trade balance, d_debt x gap. Nothing in any manuscript.
+- 30 Sep 2026 (19; Sam): fiscal_term.R = the debt-interest term examined: not collinear with L_ln_debt_gdp (r -0.19/-0.08, VIF 2.2); int/GDP
+  component carries it, TME/GDP null alone and negative beside it; ratio restriction not rejected; NO replacement (int_gdp, debt level, PSNB,
+  TME, grants, tax/GDP, bill/gilt/Bank Rate/spread/real rate/r-g, rdebt, rg_debt, stock x price pairs) beats it on both samples; dropping it
+  costs only 1.5-1.7 AIC (HAC p .03/.01). WARNING: data_common.R sets a global BASE (published rate spec) -- never name a script's own
+  regressor list BASE. Nothing in any manuscript.
+- 30 Sep 2026 (20; Sam): Sam regards int_tme as agent-constructed without theory (overfitting risk); wants a GROUNDED interest/expenditure
+  term significant on both samples. interest_terms.R: int/TME, int/revenue (IMF fiscal-space ratio), int/GDP, real int per WAP (parallel
+  to tax_workpop), primary deficit, programme spending, effective rate; levels/logs/changes. ONLY int/TME passes 5% on both; int per WAP
+  .08/.006; int/revenue and int/GDP Origin-only. Grounding offered: debt interest is an expenditure line in the Treasury's own totals; its
+  share of TME = the part of the envelope not available for programmes (OBR reports it as share of TME and of revenue). Sam to decide.
+- 30 Sep 2026 (21; Sam): Sam finds the LEVEL of int_tme (% of TME) more justifiable as a constraint than the log. level_and_spread.R:
+  level vs log indistinguishable (AIC -102.9/-79.2 vs -102.7/-78.4; share p .04/.005; projection 0.0085/0.0088 either way). Yield spread
+  (gilt - bill, to 2016) null for British inflows on both samples; gilt/bill also null there; in the non-EU equation the gilt yield and
+  bill rate are negative on Citizen only. Unlagged ln_vac_unem / ln_int_tme are NOT in df (the replication file builds them) -- create
+  them before calling bounds(). Nothing in any manuscript.
+- 30 Sep 2026 (22; Sam): levels_grid.R: with int_tme in level, debt term as pp change or LEVEL of debt/GDP and V/U in level tested.
+  Log forms best on both samples; V/U level costs ~6 AIC; pp change of debt/GDP close on Origin but weakens int_tme (p .15); the LEVEL of
+  debt/GDP is null, costs 12-18 AIC, kills int_tme (p .3-.5) and lowers the projection. Debt term stays a change; V/U stays in logs.
+- 30 Sep 2026 (23; Sam): unem_variant.R: ln_debt_gdp + int_tme LEVEL + ILO unemployment (for log V/U): holds on both samples (unem
+  -0.027/-0.026 p<.01; share p .02/.015; projection 0.0099/0.0108) but 3.5/4.9 AIC worse than log V/U; with both labour terms in,
+  unemployment is null and log V/U survives on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (24; Sam): int_wap_variant.R: real debt interest per WAP in place of int_tme (ln_debt_gdp, log V/U kept): Origin
+  0.073 p .006 (AIC -78.9 vs -79.2); Citizen 0.056 p .08 (AIC -101.6 vs -102.9, only 0.6 better than no fiscal term); projection
+  0.0089/0.0093; null without the projection. Passes the both-samples rule only at 10%. Nothing in any manuscript.
+- 30 Sep 2026 (25; Sam): combined_fiscal.R: common base for tax and interest: / GDP and / TME bases FAIL (projection collapses on Citizen,
+  RESET rejects); per-WAP base works. ONE-TERM burden taxint_wap = (taxes + debt interest) per WAP replaces tax_workpop + int_tme with one
+  parameter fewer and better AIC on BOTH samples (-103.5/-80.8 vs -102.7/-78.4; p<.001; projection 0.0086/0.0090); equal-coefficient
+  restriction on tax and interest per worker not rejected. Sam's dln(tax+debt+int)/GDP: r .96 with ln_debt_gdp, worse fit, kills the
+  projection on Citizen when it replaces all three. Nothing in any manuscript.
+- 30 Sep 2026 (26; Sam): CORRECTION: without the projection taxint_wap is significant on Citizen (p<.001), marginal on Origin (p .06).
+  noproj_additions.R (screen under Sam's two-part criterion with the spare parameter): Citizen passes = tot, wage_infl, cpi/deflator
+  inflation, tbill; Origin NONE (psnb_gdp fixes the no-proj burden but hurts the with-proj model; wage_infl improves no-proj fit but
+  burden stays n.s.). No addition passes on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (27; Sam): spend_infl_screen.R: spare-parameter screen WITHOUT the AIC condition + expenditure/inflation constructions
+  (tme_wap, prog_wap, tme_tax, tme_taxint, g_tme_real, infl_debt, adj_psnb, real_int, real_int_tme, tme_earn). AIC was never binding:
+  on Origin 19 candidates rescue the no-projection model, 0 stay significant beside the projection. Citizen: TME/taxes (negative) and
+  pairs with wage inflation / ToT pass. Nothing passes on both samples. Nothing in any manuscript.
+- 30 Sep 2026 (28; Sam): inflation_check.R: inflation IS in ln_debt_gdp (nominal GDP denominator); split, inflation -0.98/-1.08 vs
+  nominal debt +0.65/+0.76, 'only through the ratio' not rejected (p .44/.59). Screen with int_tme LEVEL: only d(inflation x debt/GDP)
+  passes on both (-0.021/-0.024, p .006; proj 0.0084); int_tme never significant without the projection. Selected from 24 measures x 2
+  samples -- a screening result, not a prior. Fails with the one-term burden on Origin. Nothing in any manuscript.
+- 30 Sep 2026 (29; Sam): uploads Hatton (2005, JPopE) + Mitchell, Pain & Riley (2011, EJ) to the branch. Standard in both: levels at t-1,
+  current-year changes (Hatton: d unemployment; MPR: ARDL levels t-1 + changes t, t-1, lagged DV). timing_bma.R: Sam's SHIFT (projection
+  also t-1) fits best on both samples, long run unchanged; current-year change in the projection null -> inflows respond to the
+  projection a year earlier (also safer on publication timing). BACE BMA coded (CRAN blocked): lagged projection dominates; Citizen
+  core all robust; Origin mode (log V/U run) = core with lagged projection. Timing switch NOT adopted -- Sam's decision; nothing in any manuscript.
+- 30 Sep 2026 (30; Sam): diag_shift.R: full battery for timing A / B (shift) / publication-dated at t / t-1. B's rainbow rejection (.045/.015)
+  is not functional form (by fitted .39/.83) but post-2008 instability: sup-F .039/.005 (A .52/.11); under B the projection effect vanishes
+  from 2009 (net -0.002/-0.003), under A it does not; B forecasts worse (OOS RMSE .119/.122 vs .106/.114). Publication-dated projection at t
+  ~ base-year at t-1 (r .95/.92), AIC between A and B, also rejects sup-F. Recommended: keep A. Sam's decision; nothing in any manuscript.
+- 30 Sep 2026 (31; Sam): Glover et al. (2001, RDS Occasional Paper 67) + Home Office (2002, Cm 5387, Secure Borders, Safe Haven) uploaded;
+  verified passages and page offsets in Glover_2001_HomeOffice_2002_research_brief.md. FLAGGED to Sam: Aim 5 PSA = race equality in public
+  services (not entry); IND PSA targets were asylum process targets only (p.17); fn 13 regression = NET non-UK non-EU migration on ILO
+  unemployment + lagged net migration (timing unstated); the WP reports Work Permits (UK) as "now part of" IND (transfer 2001, date to
+  confirm); entry clearance = HO/FCO Joint Entry Clearance Unit, authorities "generally accept" permits (Sam's indirect-control point, p.19-20).
+  regime_timing.R: no break at 2001-04; under t-1 timing the projection effect ends from 2008-10 (PBS / crisis / cap indistinguishable);
+  to 2008 t-1 beats t by 19/13 AIC; regime model (t-1 to 2007) best AIC, clean diagnostics; permits also respond at t-1. Nothing adopted.
+- 30 Sep 2026 (32; Sam): Sam AGREES on the p.51 PSA reading; DISPUTES the p.13/14 caveats (UN figures sit in the discussion of UN Replacement
+  Migration 2000; do not use them to downplay GAD) -- accepted, brief amended; the £2.6bn is ANNUAL (1998/99), i.e. the short-term benefit Sam
+  stresses. Transfer dating: MoG announcement 8 Jun 2001; SI 2001/3500 (Transfer of Functions (Miscellaneous) Order 2001, in force 26 Nov 2001)
+  per search summaries (legislation.gov.uk blocked here; Sam to check the article); Gemini's Eagle/Hughes written answers UNVERIFIED.
+  break_candidates.R: no economic indicator, interaction or pair (780) removes the post-2008 break under t-1 timing on both samples; rates
+  help most on Citizen (post-09 change still p .02); unem x proj passes on Origin only (costs BG). Break = regime, not a missing macro variable.
+- 30 Sep 2026 (33; Sam): Sam uploaded SI 2001/3500 -- it does NOT cover work permits (moves functions OUT of the Home Office: Lord Chancellor,
+  DCMS, DTI, DTLR, DEFRA); earlier search-summary claim was WRONG, brief corrected. Work-permit move = 8 Jun 2001 MoG; legal instrument not
+  found (possibly none needed). Sam: regime indicators are inconsistent with the model's theory -- do not propose them. Sam may edit the
+  briefs himself: 'Sam's notes' section in the Glover brief + new Heclo_Wildavsky_1981_notes.md (repo root) -- ALWAYS pull before editing
+  these and never change Sam's entries without asking. relax_screen.R (restriction ladder R1-R4): under t-1 timing the break can be made
+  insignificant only by models that fit worse on Origin, mostly via Bank Rate (flat 2009-19, acts like a regime dummy). WARNING: data_common.R
+  defines global LAB as well as BASE -- never reuse either name.
+- 30 Sep 2026 (34; Sam): Sam keeps ALL his notes in the 'Sam's notes (any source)' section of Glover_2001_HomeOffice_2002_research_brief.md
+  (Heclo_Wildavsky_1981_notes.md deleted). Release order for relaxing the core (Sam): interest share first, then debt/GDP, then the labour term;
+  tax stays. relax_ladder.R: from earlier mains, the stable improvement is int_tme + an inflation term (S2 + int_tme + wage inflation: -5.3/-0.7 vs
+  current core, clean; deflator version similar); grants/GDP models fail rainbow; under t-1 timing releasing interest and debt never removes the break.
+  KEY DATA FACT: from 1977 the Citizen and Origin outcomes are IDENTICAL (dv_noneu_k, corr 1.000) -- the 'Origin sample' is the 1977-2019
+  SUBPERIOD of the same series, not a residence-based DV; the DV is ~98% of all non-EU citizens (cit_noneu_k); the literature's residence-based
+  series is res_noneu_k. Sam is considering one main reference (Citizen 1965-2019) with 1977-2019 as robustness -- his decision.
+- 30 Sep 2026 (35; Sam): PROTOCOL for one main reference (Sam agreed): main = Citizen 1965-2019; same spec on 1977-2019 (no re-selection);
+  Chow at 1977 (classical F + HC3; NOT HAC -- over-rejects with 2k params at N 55); residence-based (res_noneu_k) and any-residence citizenship
+  (cit_noneu_k) outcomes. screen_engine.R holds run_protocol(); main_spec_protocol.R runs it. Current core passes Chow (F 1.01 p .44).
+  reverse_build.R: ordered build (tax, labour, debt, interest) under Sam's rules recovers the current core (tax per adult ~ per WAP); an 8th
+  parameter fails the protocol. break_citizen.R: under t-1 timing the break can be removed on Citizen only with bill-rate models (BG(2) fails;
+  sup-F on 1977-2019 rejects) -- no t-1 model beats the core at t out of sample. Nothing in any manuscript.
+- 30 Sep 2026 (36; Sam): serial_cycle.R. BG(2) failure = modest NEGATIVE residual autocorrelation (-0.16/-0.23), not the debt term (Sam's hypothesis
+  tested: re-timing/dropping debt leaves BG(2) failing); consistent with IPS measurement error; ML-AR(2) and IV move the projection to .0072-.0084
+  (long run .016-.021). CANDIDATE: tax at t-2 instead of t-1 (same df): AIC -6.5/-5.1, OOS .092 vs .106, BG(2) .046/.035 -- found in a residual
+  search, Sam to judge the grounding (latest complete fiscal-year outturn at decision time). No cycle measure removes the post-2008 break or the
+  British projection response. Sam's timing wording: the break around the end of work permits and the recession is "potentially interesting",
+  but demographic projections are largely predictable ahead of publication (base-year t-1 vs publication-dated t r .95/.92). Nothing in any manuscript.
+- 30 Sep 2026 (37; Sam): Sam REJECTS tax at t-2 on grounds. tax_lag_proxy.R: the change in tax/GDP (t-2 -> t-1, L_d_tax_gdp) captures what t-2 did,
+  with tax per WAP at t-1 kept (both periods significant; dAIC -7.4/-5.0; OOS .090; Chow 1977 passes). Screened (1 of 30) after the t-2 finding --
+  Sam decides. 1964 row: all regressors exist, but L_mig_gross needs 1963 inflows (IPS starts 1964) -> estimation starts 1965 ("1964-2019" = data span).
+  Sam's point for the timing paragraph: the demographic unknowns are fertility and migration; fertility cannot move a 10-year OADR (anyone of
+  working age in 10 years is alive now) -- caveat raised: MORTALITY at older ages is a third unknown that does move the OADR numerator.
+- 30 Sep 2026 (38; Sam): TITLE/LABELS: estimation starts 1965 (1964 is only the lag) -> Sam: the title must say 1965-2019. Script labels now
+  "Citizen sample (1965-2019)"; manuscript titles ("(1964–2019)" in the 1964 and combined documents) to change when Sam finalises.
+  Sam REJECTS tax/GDP change as the t-2 replacement (both components already in the model; mixes policy and economic change); his reading:
+  governments avoid frequent tax changes -- needs a POLICY series (not in the data; suggested Cloyne 2013 UK narrative tax changes, OBR policy
+  measures database, IFS historical rates -- check coverage before promising). ltim_serial.R: with LTIM from 1991 the serial correlation goes
+  (BG(2) .20/.196 spliced; .45 on 1992-2019 alone); projection .0096/.0109. Outcome choice (IPS vs spliced LTIM) = Sam's decision.
+- 30 Sep 2026 (39; Sam): LTIM = ROBUSTNESS CHECK ONLY (IPS stays the outcome). '1964' in titles = clerical error -> 1965-2019 when edited. Sam's feedback: recalibrate
+  'practical/plausible' judgements against the thesis/manuscript aims; raise the obvious data comparison (e.g. IPS vs LTIM) immediately. IFS statutory rates
+  (determinants/ifs/ -> ifs_tax_rates_1973_2023.csv; NIC % rate from 1975 -> rate tests 1977-2019 only). tax_rates.R: salient level (payslip, avg-earner
+  rate, real payment, top rate, wedge), rate changes, fiscal drag (allowance/earnings), projection x burden: NONE passes Sam's criterion; each fits 14-20 AIC
+  worse in place of tax per WAP; headline rates fell while real tax per WAP doubled (r -0.84/-0.87) -> P2 works through the burden borne, not announced rates.
+  No construct fixes BG(2). Rates CSV not in the workbook (only if adopted). Nothing in any manuscript.
+- 30 Sep 2026 (40; Sam): interest_apf.R: Millennium int_tme = public-sector interest INCL. the public-sector banks (ANLO); it jumps 5.7 -> 9.6-10.9% of TME
+  in 2008-11 (bank reclassification), while CG interest (NMFX) and CG net of APF (NMFX+MU74, OBR definition; APF from 2009, not 2007) do not. Excluding
+  banks or using CG/net-of-APF, the interest term is NULL on 1965-2019 -> its significance rests on 2008-13. Structural deficit (OBR CA series, 1975+) null
+  beside the projection, NEGATIVE without it; QE stock/M4 null; Bank Rate Citizen-only. burden_motion.R: 'tax + REAL debt interest' per WAP (one term
+  replacing tax + int_tme) meets both halves of Sam's criterion on both periods (Millennium interest); with CG-net-of-APF interest only the no-projection
+  half. Headline rates: basic rate only ever cut, corporation tax cut until 2023; rises = NICs/VAT; with employer NIC + top rate, rises are packaged in one
+  year and followed by fewer changes than chance for 1-5 years. pop_rate.R: inflows as % of total population -> projection holds (0.0022/0.0026 pp,
+  same proportional effect), EU placebo null. Accruals (Sam's ONS note): fiscal block year t = FY (t-1)/t, so tax at t-2 = FY (t-3)/(t-2), the latest
+  fiscal year whose accrued receipts were complete (self-assessment balancing payments due 31 Jan t-1) during t-1 -- a real-time-data reading of the t-2
+  term, for Sam to judge. Nothing in any manuscript.
+- 30 Sep 2026 (41; Sam): DECISION: int_tme is OUT of the results (significant only via the 2008-13 bank reclassification). Core is now
+  mig_gross ~ L_mig_gross + delta_oadr_10 + L_tax_workpop + L_ln_debt_gdp + L_ln_vac_unem (6 parameters; CORE_A in screen_engine.R still holds the
+  old 7-parameter list -- use setdiff(CORE_A, 'L_int_tme')). core_no_int.R: protocol passes; projection 0.0072 / 0.0067 (p<.001), all terms significant
+  on both periods, BG(2) .043 / .019, Chow 1977 F 1.07 p .40. Millennium-interest one-term burdens (taxint, taxrint) dropped with it. NA taxes per WAP are
+  already real (HMT GDP deflator, 2024-25 prices). TO MENTION IN TEXT (Sam): headline tax rises were sparse outside the sterling crisis and the first
+  Thatcher government (almost yearly 1976-83; then 1991, 1994, 2003, 2010-11, 2022-23; basic rate never raised). Nothing in any manuscript yet.
+- 30 Sep 2026 (42; Sam): fiscal_ratio.R: NO clean (ex-banks) borrowing/expenditure ratio can replace int_tme (9 tried; clean interest shares null on
+  1965-2019, every borrowing share has the WRONG sign, r .7-.8 with the debt-change term). Sam's fallback, the one-term burden, passes on clean data:
+  taxrint_xb = taxes + public-sector debt interest EXCL. banks - inflation x net debt at the start of the year, real GBP k per WAP, dated as tax (FY ending t):
+  0.0370 / 0.0460 (p<.001), projection 0.0060 / 0.0051 (p<.001 / .002), dAIC -2.1 / -2.0 vs tax only, -5.5 / -5.9 without the projection; protocol passes
+  (Chow 1977 p .42; BG(2) .039 / .060; residence-based outcome 0.0050). Projection lower than tax-only because the 1970s inflation-erosion component correlates
+  with it (+.24 / +.29). Nominal version fails. PENDING SAM'S CONFIRMATION of this core before the series go into data_common.R / the workbook.
+  density_forecast.R (MPR 2011 s.4.4): models beat AR(1) out of sample; projection log-score gain +0.09 / +0.16, not significant (30 forecasts); timing A
+  calibrated (Berkowitz p .12-.30), timing B not (p < .01). Nothing in any manuscript.
+- 30 Sep 2026 (43; Sam): british_mpr.R (MPR 2011 Table 6 UK-relative determinants on British inflows): relinc_dev (UK vs IND/PAK/BGD/CHN/NGA/PHL/ZAF GDP
+  per head) REMOVES the projection from non-UK-born British arrivals from non-EU (0.0125 -> 0.0035, p .57; relinc_dev +1.12 p .026; dAIC -4.7, 1977-2019)
+  and weakens it for all British (LTIM); relinc_rich, youth, unem_diff, return pool (British emigration 5/10 yrs) null. In the MAIN non-EU equation relinc_dev
+  is null and the projection unchanged (0.0077 / 0.0062) -> asymmetry: uncontrolled British flow = relative-income pull; controlled flow = projection.
+  Caveats: relinc_dev r .33-.36 with the projection, trending after 2001; 1 of 6 tried; IPS sampling error. Nothing in any manuscript.
+- 30 Sep 2026 (44; Sam): british_mpr.R Part 2: WDI Gini + unemployment (all countries; determinants/wb/). Unemployment levels (UK ILO, OECD destination mean):
+  main null; destination null for British; UK unemployment POSITIVE for non-UK-born British (+0.10 p .02-.04). WDI unemployment starts 1991 and = OECD
+  (r 1.000) -> check only. Gini: UK level and UK/(US,CAN) (AUS 13 obs, NZL none; developing origins too sparse -> no UK-to-origin ratio); main null; UK Gini
+  +0.046 p .05 for non-UK-born British (projection -> 0.0065 p .34). Reading: the weak (p .06) non-UK-born British projection response is absorbed by any of
+  several slow-moving UK-relative series; none touches the controlled equation -> asymmetry holds. Sources used earlier: Maddison 2023 GDP per head,
+  UN WPP 2024 youth, OECD destination unemployment (all already in determinants/). Nothing in any manuscript.
+- 1 Oct 2026 (45; Sam): occam_british.R (Madigan & Raftery 1994 Occam's window; BIC posteriors, c = 20, 512 models, 1977-2019): MAIN non-EU window = core +
+  projection only (PIP 1.00; averaged 0.0067); non-UK-born British: projection PIP 0.00 in the window, relinc_dev 0.73, UK unemployment 0.69 (positive);
+  UK-born: core only. Sam: relinc_dev (MPR ln(Y_i)) is the robustness check for the British flow; Gini/unemployment results are not MPR's constructs
+  (UK-to-ORIGIN Gini not buildable; UK unemployment wrong sign vs MPR, labour term already in the core). Nothing in any manuscript.
+- 1 Oct 2026 (46; Sam): Occam's window is NOT used for the robustness checks (they are only relative; not as refined as the main results). Gini (UK vs
+  US/Canada) dropped: not MPR's construct. UK unemployment BESIDE log V/U is invalid as MPR's U (holds V/U fixed); MPR's way = in place of log V/U -> null for
+  non-UK-born British (p .77). british_relinc.R: relative income matched to non-UK-born British regions (weights Asia .46, Africa .30, Oceania .18, N America
+  .07; 61% covered) = relinc_dev (r 1.00); non-UK-born British: 1.37 p .025, projection 0.0032 p .61. relinc_dev's 7 countries were chosen 23 Sep as main-flow
+  origins (determinants_check.R), not for British arrivals -- the region-matched version shows the choice does not matter. Nothing in any manuscript.
+- 1 Oct 2026 (47; Sam): influence_cluster.R: tax core robust to leave-one-year-out (0.0059-0.0077), to leaving out every episode (p<.01) and to a
+  wild cluster bootstrap by two-year vintage blocks (p<.001 / .007). The clean one-term core is weaker on 1977-2019 (without 2002-07: 0.0035 p .13; cluster
+  bootstrap p .019) -- relevant to Sam's pending core decision. Suggested next (not run): DEMIG POLICY index as mechanism/mediation test, specification
+  curve for the headline, net non-EU migration outcome. Nothing in any manuscript.
+- 1 Oct 2026 (48; Sam): remaining points of failure (IPS lag-2 serial correlation, dating conventions, zero-migration projection 1975+ only) = explain in
+  the TEXT, not more tests. Sam's answer on specification search (to refine himself): the core comes from Treasury/OBR/government literature on how fiscal
+  policy is set and has been consistent throughout; macro data assessed the other constraints; looking back from the data for missing constraints
+  (borrowing/expenditure) was limited and justified by Treasury secrecy and the thin literature. robust_extras.R: specification curve 288/288 positive and
+  p<.05 (median 0.0078, range 0.0050-0.0104; specification_curve.png/.csv); net non-EU migration per 1,000 population 0.0158 / 0.0165 (p .016 / <.001; RESET and
+  sup-F reject in level form); IPS-precision WLS 0.0064. DEMIG/QuantMig downloads BLOCKED by the network policy (zenodo.org, imi.socsci.ox.ac.uk, etc.) --
+  Sam to upload or widen access. Nothing in any manuscript.
+- 1 Oct 2026 (49; Sam): Sam does NOT argue that migration permanently offsets ageing, and neither does the model (10-year projected deterioration,
+  short-horizon relief; the title says "delayed the inevitable") -- engage Rowthorn (2008) / Pensions Commission (2004) as agreement, not rebuttal.
+  The tax-burden coefficient is POSITIVE (0.043 / 0.061): opposite to the voter-side fiscal channel (Facchini & Mayda 2009; Hanson, Scheve &
+  Slaughter 2007) and to Razin, Sadka & Swagel (2002) reverse causation -> a point for the text. DEMIG: IMI Oxford closed 2017, all DEMIG links
+  dead; DEMIG POLICY variables survive in the QoG Thematic Dataset on Migration, COUNTRY-YEAR-CHANGE version only (gu.se blocked here) ->
+  Sam to upload that file or its UK rows; test planned: projection -> liberalising UK changes, and does the index absorb the projection (to 2014).
+- 1 Oct 2026 (50; Sam): de Haas, Natter & Vezzoli (2015, CMS 3:15) = DEMIG POLICY methodology (uploaded to the session, not the repo). Unit = policy
+  MEASURE x year; restrictiveness -1/0/+1 (0 = new selection system, e.g. a points system); magnitude 1-4; area/tool/migrant group/origin codes; 'policies
+  on paper' only (no implementation), sources biased to politically salient changes, thin before the 1970s. Implication: a quiet administrative lever
+  need not appear in DEMIG -> projection predicting on-paper changes = corroboration; a null = consistent with the thesis, not against it. Planned UK
+  series: legal entry/stay measures targeting workers, sum of restrictiveness x magnitude per year + cumulative index. Data still needed (Demscore
+  Country-Year-Change download, or HIP from Harvard Dataverse for levels to 2010).
+- 1 Oct 2026 (51; Sam): Demscore Country-Year file uploaded (determinants/demscore/migration_dataset.rds; NO DEMIG -- that needs the Country-Year-Change
+  version). policy_index.R: HIP (UK levels 1-5 to 2010) and IMPIC (1980-2018). Projection predicts HIP labour-entry liberalisation on 1977-2010 (0.0080 p .013)
+  but only via the 1998-2003 liberalisation / 2005-10 tightening (HIP UK labour codes flat 1972-97); null on 1965-2010 (1965/1971 tightenings at high
+  projections); IMPIC null. No policy index enters the inflow equation or moves the projection. Nothing in any manuscript.
+- 1 Oct 2026 (52; Sam): DEMIG dropped by Sam (not worth it for a 45-page paper). gilt_yields.R: DMO-convention GRYs from BGSPrices (determinants/boe_bgs_prices.xlsx),
+  validated (10y r .986 vs Millennium; consols .997); no gilt measure replaces int_tme beside the projection. obr_forecast_terms.R: OBR HOFD Spring 2026
+  (determinants/obr_hofd_spring2026.xlsx; TME from 1990, PSNB GBP 1970, PSNB/GDP 1977, growth 1983): 0 of 18 spending/borrowing rows pass in place of int_tme;
+  planned borrowing/TME negative without the projection; growth forecasts absorbed by the projection. Nothing in any manuscript.
+- 1 Oct 2026 (53; Sam): psnb_paths.R: projected PSNB paths from OBR HOFD (MTFS from 1980; NPP vintage rule; 6 forms x h1-4 x t/t-1) screened alone and with 22
+  interest/yield indicators (alongside/interaction/product; 2,434 rows, 1981-2019 only). 9.5% pass Sam's two halves (~chance). L_chg_2 (last Budget's projected
+  2-year change in borrowing) passes ALONE (0.031 p .024; no-proj 0.040 p .006), robust to 2008-11 / to 2007 / LOO / beside int_tme, BG(2) .20 -- but r -0.79 with
+  L_ln_debt_gdp and null in its place (suppression: partial effect net of the realised debt rise). One window, best of 48 -> screening result. Nothing in any manuscript.
+- 1 Oct 2026 (54; Sam): DEFLATORS: tax_workpop = NA taxes over the HMT GDP deflator (2024-25 = 100) per WAP; debt interest (PUSF accruals) already contains the
+  RPI uplift on index-linked gilts; 'real' interest terms subtract GDP-deflator inflation x net debt (same basis as taxes). rpi_check.R: RPI-based erosion fits
+  WORSE (taxrint_xb dAIC -0.70/+0.18 vs -2.13/-1.96 with the deflator); deflator version stays. Exact IL split needs DMO index-linked share (not held).
+- 1 Oct 2026 (55; Sam): psnb_extend.R. Best forward-borrowing term = L_chg_2 / L_psnd_gdp (planned 2-yr borrowing change over the debt ratio): passes alone 1981-2019
+  (0.0151 p<.001, dAIC -4.4; no proj -3.9). Backfill with the Budget's planned ONE-year change (1971+, zeros before) passes on BOTH samples (dAIC -1.9 / -0.8).
+  GDP deflator beats CPI/RPI for tax and the one-term burden. int_tme-identity ratios (forward clean interest/TME) null; L_chg_2 / interest share passes 1981-2019.
+  Screen forms: alongside = P + I; interaction = P + I + PxI; product = PxI only (not the same). Nothing in any manuscript.
+- 1 Oct 2026 (56; Sam): psnb_ratios.R: 59 ratios with a borrowing or spending measure (incl. growth/inflation-forecast partners and debt-stabilising-deficit
+  constructs) x t-1/t x {where exists, zeros+missing indicator from 1965 / 1977}: 336 rows, 13 pass, all 1980-2019 only; NONE on both samples; none with the
+  indicator. Sam prefers a missing-year indicator to zeros (indicator = own mean for the years without data; slope from real values only). HOFD inflation
+  forecasts only from 2010. Deflator is also the literature/official standard (OBR/HMT real terms); RPI lost National Statistic status (2013). Nothing in any manuscript.
+- 1 Oct 2026 (57; Sam): inflation_rg.R. Millennium Q7: NIESR 1y / composite 1y = st_inf_exp (r 1.00); composite 5-10y from 1985. Forecast r-g interactions
+  pull the projection to 0.0012-0.0044 (1981-2016) -- reject. Planned ONE-year borrowing change (backfilled to 1971, indicator 1965-70) * OUTTURN r-g passes on
+  BOTH samples (product -0.0098 / -0.0081; proj 0.0070 / 0.0060): planned borrowing raises inflows only when r < g; fails to 2007 on both and without 2008-11 on
+  1977-2019 -> crisis-dependent. int_tme = the BANK component ((ANLO-JW2P)/EBFT) entirely; clean, CG gross and CG net-of-APF null; int_tme to 2007 null.
+  APF is not what drives int_tme. Nothing in any manuscript.
+- 1 Oct 2026 (58; Sam): HANDOVER.md rewritten for a takeover (state at 1 Oct: 6-parameter core, protocol, open decisions, exploration verdicts, pitfalls,
+  rejections). handover_2026-10-01/ = every file added/changed since 70cf1f5 (28 Sep) mirrored under repo_files/, 16 session uploads not otherwise in the
+  repo under session_uploads/, MANIFEST.md (paths, status, sizes, retired files). Keep HANDOVER.md current; regenerate the folder only on request.
