@@ -764,3 +764,8 @@ only partial disclosure. Do not repeat that.
   constructs) x t-1/t x {where exists, zeros+missing indicator from 1965 / 1977}: 336 rows, 13 pass, all 1980-2019 only; NONE on both samples; none with the
   indicator. Sam prefers a missing-year indicator to zeros (indicator = own mean for the years without data; slope from real values only). HOFD inflation
   forecasts only from 2010. Deflator is also the literature/official standard (OBR/HMT real terms); RPI lost National Statistic status (2013). Nothing in any manuscript.
+- 1 Oct 2026 (57; Sam): inflation_rg.R. Millennium Q7: NIESR 1y / composite 1y = st_inf_exp (r 1.00); composite 5-10y from 1985. Forecast r-g interactions
+  pull the projection to 0.0012-0.0044 (1981-2016) -- reject. Planned ONE-year borrowing change (backfilled to 1971, indicator 1965-70) * OUTTURN r-g passes on
+  BOTH samples (product -0.0098 / -0.0081; proj 0.0070 / 0.0060): planned borrowing raises inflows only when r < g; fails to 2007 on both and without 2008-11 on
+  1977-2019 -> crisis-dependent. int_tme = the BANK component ((ANLO-JW2P)/EBFT) entirely; clean, CG gross and CG net-of-APF null; int_tme to 2007 null.
+  APF is not what drives int_tme. Nothing in any manuscript.

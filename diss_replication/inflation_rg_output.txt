@@ -1,0 +1,124 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+• `` -> `...37`
+• `` -> `...59`
+New names:
+• `` -> `...37`
+• `` -> `...59`
+New names:
+• `` -> `...37`
+• `` -> `...59`
+A. Inflation expectations (Q1 of each year), coverage and correlation with st_inf_exp:
+   niesr_1y   1965-2010  r with st_inf_exp 1.00
+   comp_1y    1965-2016  r with st_inf_exp 1.00
+   comp_510   1985-2016  r with st_inf_exp 0.90
+   comp_510c  1985-2016  r with st_inf_exp 0.90
+
+B. r - g: outturn 1964-2019; forecast versions from rgf_niesr_1y 1976-2010; rgf_comp_1y 1976-2016; rgf_comp_510 1985-2016; rgf_comp_510c 1985-2016; rgf_st_inf_exp 1976-2016
+
+C. Planned change in borrowing (Budget of t-1) x r - g (t-1)
+   chgb_1 * rg_out                              1981-2019 N 39  product/term  -0.0121 (no proj  -0.0109)  joint p 0.100 dAIC  -4.98 | no proj p 0.016 dAIC  -4.34 | proj 0.0069 (p 0.003)
+   chgb_1 x rg_out                              1981-2019 N 39  product/term  -0.0027 (no proj  -0.0029)  joint p 0.321 dAIC   0.86 | no proj p 0.337 dAIC   0.92 | proj 0.0068 (p 0.007)
+   chgb_1 * rgf_niesr_1y                        1981-2011 N 31  product/term  -0.0068 (no proj  -0.0091)  joint p 0.045 dAIC   0.41 | no proj p 0.004 dAIC  -3.04 | proj 0.0044 (p 0.081)
+   chgb_1 x rgf_niesr_1y                        1981-2011 N 31  product/term  -0.0006 (no proj  -0.0011)  joint p 0.743 dAIC   1.87 | no proj p 0.575 dAIC   1.63 | proj 0.0061 (p 0.013)
+   chgb_1 * rgf_comp_1y                         1981-2017 N 37  product/term  -0.0078 (no proj  -0.0092)  joint p 0.049 dAIC  -5.02 | no proj p 0.007 dAIC  -8.79 | proj 0.0037 (p 0.107)  PASS
+   chgb_1 x rgf_comp_1y                         1981-2017 N 37  product/term  -0.0007 (no proj  -0.0009)  joint p 0.663 dAIC   1.80 | no proj p 0.559 dAIC   1.73 | proj 0.0064 (p 0.013)
+   chgb_1 * rgf_comp_510                        1986-2017 N 32  product/term  -0.0085 (no proj  -0.0089)  joint p 0.096 dAIC  -3.69 | no proj p 0.032 dAIC  -5.42 | proj 0.0012 (p 0.573)  PASS
+   chgb_1 x rgf_comp_510                        1986-2017 N 32  product/term  -0.0008 (no proj  -0.0006)  joint p 0.795 dAIC   1.90 | no proj p 0.837 dAIC   1.95 | proj 0.0040 (p 0.097)
+   chgb_1 * rgf_comp_510c                       1986-2017 N 32  product/term  -0.0085 (no proj  -0.0089)  joint p 0.096 dAIC  -3.69 | no proj p 0.032 dAIC  -5.42 | proj 0.0012 (p 0.573)  PASS
+   chgb_1 x rgf_comp_510c                       1986-2017 N 32  product/term   0.0006 (no proj   0.0010)  joint p 0.757 dAIC   1.92 | no proj p 0.551 dAIC   1.80 | proj 0.0038 (p 0.101)
+   chgb_1 * rgf_st_inf_exp                      1981-2017 N 37  product/term  -0.0078 (no proj  -0.0092)  joint p 0.047 dAIC  -5.03 | no proj p 0.006 dAIC  -8.78 | proj 0.0037 (p 0.104)  PASS
+   chgb_1 x rgf_st_inf_exp                      1981-2017 N 37  product/term  -0.0007 (no proj  -0.0009)  joint p 0.665 dAIC   1.80 | no proj p 0.561 dAIC   1.73 | proj 0.0064 (p 0.013)
+   chgb_2 * rg_out                              1981-2019 N 39  product/term  -0.0087 (no proj  -0.0075)  joint p 0.068 dAIC  -5.27 | no proj p 0.011 dAIC  -4.53 | proj 0.0069 (p 0.002)  PASS
+   chgb_2 x rg_out                              1981-2019 N 39  product/term  -0.0022 (no proj  -0.0027)  joint p 0.327 dAIC   0.79 | no proj p 0.314 dAIC   0.59 | proj 0.0067 (p 0.008)
+   chgb_2 * rgf_niesr_1y                        1981-2011 N 31  product/term  -0.0057 (no proj  -0.0077)  joint p 0.018 dAIC  -0.52 | no proj p <.001 dAIC  -3.88 | proj 0.0044 (p 0.067)  PASS
+   chgb_2 x rgf_niesr_1y                        1981-2011 N 31  product/term  -0.0004 (no proj  -0.0013)  joint p 0.805 dAIC   1.94 | no proj p 0.519 dAIC   1.52 | proj 0.0061 (p 0.017)
+   chgb_2 * rgf_comp_1y                         1981-2017 N 37  product/term  -0.0058 (no proj  -0.0070)  joint p 0.086 dAIC  -4.15 | no proj p 0.014 dAIC  -7.77 | proj 0.0039 (p 0.085)  PASS
+   chgb_2 x rgf_comp_1y                         1981-2017 N 37  product/term  -0.0006 (no proj  -0.0012)  joint p 0.739 dAIC   1.90 | no proj p 0.492 dAIC   1.59 | proj 0.0063 (p 0.014)
+   chgb_2 * rgf_comp_510                        1986-2017 N 32  product/term  -0.0058 (no proj  -0.0064)  joint p 0.046 dAIC  -2.00 | no proj p 0.013 dAIC  -3.58 | proj 0.0016 (p 0.460)  PASS
+   chgb_2 x rgf_comp_510                        1986-2017 N 32  product/term  -0.0029 (no proj  -0.0035)  joint p 0.622 dAIC   1.43 | no proj p 0.537 dAIC   1.21 | proj 0.0037 (p 0.102)
+   chgb_2 * rgf_comp_510c                       1986-2017 N 32  product/term  -0.0058 (no proj  -0.0064)  joint p 0.046 dAIC  -2.00 | no proj p 0.013 dAIC  -3.58 | proj 0.0016 (p 0.460)  PASS
+   chgb_2 x rgf_comp_510c                       1986-2017 N 32  product/term   0.0011 (no proj   0.0012)  joint p 0.727 dAIC   1.86 | no proj p 0.673 dAIC   1.84 | proj 0.0039 (p 0.080)
+   chgb_2 * rgf_st_inf_exp                      1981-2017 N 37  product/term  -0.0058 (no proj  -0.0070)  joint p 0.083 dAIC  -4.19 | no proj p 0.013 dAIC  -7.79 | proj 0.0039 (p 0.083)  PASS
+   chgb_2 x rgf_st_inf_exp                      1981-2017 N 37  product/term  -0.0006 (no proj  -0.0012)  joint p 0.742 dAIC   1.90 | no proj p 0.495 dAIC   1.60 | proj 0.0063 (p 0.013)
+   chg_2 * rg_out                               1981-2019 N 39  product/term  -0.0097 (no proj  -0.0075)  joint p 0.029 dAIC  -3.32 | no proj p 0.004 dAIC  -3.24 | proj 0.0068 (p 0.001)  PASS
+   chg_2 x rg_out                               1981-2019 N 39  product/term  -0.0049 (no proj  -0.0058)  joint p 0.138 dAIC  -0.25 | no proj p 0.076 dAIC  -0.67 | proj 0.0065 (p 0.006)
+   chg_2 * rgf_niesr_1y                         1981-2011 N 31  product/term  -0.0052 (no proj  -0.0071)  joint p 0.383 dAIC   2.00 | no proj p 0.366 dAIC   0.69 | proj 0.0054 (p 0.030)
+   chg_2 x rgf_niesr_1y                         1981-2011 N 31  product/term  -0.0011 (no proj  -0.0027)  joint p 0.706 dAIC   1.90 | no proj p 0.437 dAIC   1.49 | proj 0.0061 (p 0.023)
+   chg_2 * rgf_comp_1y                          1981-2017 N 37  product/term  -0.0037 (no proj  -0.0052)  joint p 0.217 dAIC   1.51 | no proj p 0.102 dAIC  -0.52 | proj 0.0052 (p 0.029)
+   chg_2 x rgf_comp_1y                          1981-2017 N 37  product/term  -0.0006 (no proj  -0.0026)  joint p 0.837 dAIC   1.97 | no proj p 0.391 dAIC   1.47 | proj 0.0063 (p 0.016)
+   chg_2 * rgf_comp_510                         1986-2017 N 32  product/term   0.0012 (no proj   0.0005)  joint p 0.056 dAIC   1.97 | no proj p 0.052 dAIC   1.10 | proj 0.0028 (p 0.203)
+   chg_2 x rgf_comp_510                         1986-2017 N 32  product/term  -0.0036 (no proj  -0.0050)  joint p 0.450 dAIC   1.29 | no proj p 0.297 dAIC   0.63 | proj 0.0032 (p 0.146)
+   chg_2 * rgf_comp_510c                        1986-2017 N 32  product/term   0.0012 (no proj   0.0005)  joint p 0.056 dAIC   1.97 | no proj p 0.052 dAIC   1.10 | proj 0.0028 (p 0.203)
+   chg_2 x rgf_comp_510c                        1986-2017 N 32  product/term  -0.0020 (no proj  -0.0036)  joint p 0.702 dAIC   1.83 | no proj p 0.485 dAIC   1.47 | proj 0.0036 (p 0.115)
+   chg_2 * rgf_st_inf_exp                       1981-2017 N 37  product/term  -0.0037 (no proj  -0.0052)  joint p 0.216 dAIC   1.46 | no proj p 0.101 dAIC  -0.54 | proj 0.0052 (p 0.028)
+   chg_2 x rgf_st_inf_exp                       1981-2017 N 37  product/term  -0.0006 (no proj  -0.0026)  joint p 0.837 dAIC   1.97 | no proj p 0.393 dAIC   1.47 | proj 0.0063 (p 0.016)
+   36 rows, 11 pass
+
+  -- both samples: planned ONE-year change backfilled to the 1971 Budget, x r - g, + indicator for the years without either --
+   bf1 * rg_out, from 1965 (+indicator)         1965-2019 N 55  product/term  -0.0098 (no proj  -0.0095)  joint p 0.013 dAIC  -5.90 | no proj p 0.003 dAIC  -5.53 | proj 0.0070 (p <.001)  PASS
+   bf1 x rg_out, from 1965 (+indicator)         1965-2019 N 55  product/term  -0.0031 (no proj  -0.0039)  joint p 0.532 dAIC   2.22 | no proj p 0.203 dAIC  -0.11 | proj 0.0069 (p <.001)
+   bf1 * rg_out, from 1977                      1977-2019 N 43  product/term  -0.0081 (no proj  -0.0070)  joint p 0.099 dAIC  -1.50 | no proj p 0.011 dAIC  -4.93 | proj 0.0060 (p 0.002)  PASS
+   bf1 x rg_out, from 1977                      1977-2019 N 43  product/term  -0.0031 (no proj  -0.0044)  joint p 0.275 dAIC   0.58 | no proj p 0.127 dAIC  -0.24 | proj 0.0064 (p <.001)
+   bf1 * rgf_niesr_1y, from 1965 (+indicator)   1965-2019 N 55  product/term  -0.0071 (no proj  -0.0107)  joint p 0.030 dAIC  -3.30 | no proj p 0.002 dAIC  -5.65 | proj 0.0070 (p <.001)  PASS
+   bf1 x rgf_niesr_1y, from 1965 (+indicator)   1965-2019 N 55  product/term   0.0001 (no proj  -0.0015)  joint p 0.828 dAIC   3.66 | no proj p 0.399 dAIC   1.75 | proj 0.0076 (p <.001)
+   bf1 * rgf_niesr_1y, from 1977 (+indicator)   1977-2019 N 43  product/term  -0.0079 (no proj  -0.0105)  joint p 0.165 dAIC  -0.25 | no proj p 0.004 dAIC  -6.43 | proj 0.0049 (p 0.009)
+   bf1 x rgf_niesr_1y, from 1977 (+indicator)   1977-2019 N 43  product/term  -0.0008 (no proj  -0.0022)  joint p 0.652 dAIC   3.01 | no proj p 0.128 dAIC  -1.88 | proj 0.0057 (p 0.003)
+   bf1 * rgf_comp_1y, from 1965 (+indicator)    1965-2019 N 55  product/term  -0.0057 (no proj  -0.0095)  joint p 0.031 dAIC  -3.02 | no proj p 0.001 dAIC  -6.74 | proj 0.0067 (p <.001)  PASS
+   bf1 x rgf_comp_1y, from 1965 (+indicator)    1965-2019 N 55  product/term  -0.0002 (no proj  -0.0016)  joint p 0.874 dAIC   3.76 | no proj p 0.578 dAIC   2.87 | proj 0.0074 (p <.001)
+   bf1 * rgf_comp_1y, from 1977 (+indicator)    1977-2019 N 43  product/term  -0.0071 (no proj  -0.0102)  joint p 0.120 dAIC  -1.10 | no proj p 0.006 dAIC  -6.33 | proj 0.0050 (p 0.002)
+   bf1 x rgf_comp_1y, from 1977 (+indicator)    1977-2019 N 43  product/term  -0.0005 (no proj  -0.0015)  joint p 0.731 dAIC   3.40 | no proj p 0.559 dAIC   2.94 | proj 0.0066 (p <.001)
+   bf1 * rgf_comp_510, from 1965 (+indicator)   1965-2019 N 55  product/term  -0.0042 (no proj  -0.0092)  joint p 0.097 dAIC   0.13 | no proj p 0.040 dAIC  -1.73 | proj 0.0068 (p <.001)
+   bf1 x rgf_comp_510, from 1965 (+indicator)   1965-2019 N 55  product/term  -0.0005 (no proj  -0.0030)  joint p 0.962 dAIC   3.91 | no proj p 0.475 dAIC   2.48 | proj 0.0072 (p <.001)
+   bf1 * rgf_comp_510, from 1977 (+indicator)   1977-2019 N 43  product/term  -0.0057 (no proj  -0.0097)  joint p 0.327 dAIC   2.32 | no proj p 0.073 dAIC  -0.84 | proj 0.0057 (p 0.001)
+   bf1 x rgf_comp_510, from 1977 (+indicator)   1977-2019 N 43  product/term  -0.0012 (no proj  -0.0029)  joint p 0.937 dAIC   3.81 | no proj p 0.574 dAIC   2.76 | proj 0.0066 (p <.001)
+   bf1 * rgf_comp_510c, from 1965 (+indicator)  1965-2019 N 55  product/term  -0.0042 (no proj  -0.0080)  joint p 0.088 dAIC  -0.04 | no proj p 0.075 dAIC  -0.86 | proj 0.0069 (p <.001)  PASS
+   bf1 x rgf_comp_510c, from 1965 (+indicator)  1965-2019 N 55  product/term   0.0004 (no proj  -0.0008)  joint p 0.937 dAIC   3.92 | no proj p 0.646 dAIC   3.25 | proj 0.0073 (p <.001)
+   bf1 * rgf_comp_510c, from 1977 (+indicator)  1977-2019 N 43  product/term  -0.0050 (no proj  -0.0084)  joint p 0.343 dAIC   2.74 | no proj p 0.119 dAIC   0.43 | proj 0.0059 (p <.001)
+   bf1 x rgf_comp_510c, from 1977 (+indicator)  1977-2019 N 43  product/term   0.0001 (no proj  -0.0006)  joint p 0.999 dAIC   4.00 | no proj p 0.800 dAIC   3.56 | proj 0.0067 (p <.001)
+   bf1 * rgf_st_inf_exp, from 1965 (+indicator) 1965-2019 N 55  product/term  -0.0057 (no proj  -0.0095)  joint p 0.031 dAIC  -3.01 | no proj p 0.001 dAIC  -6.68 | proj 0.0067 (p <.001)  PASS
+   bf1 x rgf_st_inf_exp, from 1965 (+indicator) 1965-2019 N 55  product/term  -0.0002 (no proj  -0.0016)  joint p 0.874 dAIC   3.76 | no proj p 0.580 dAIC   2.88 | proj 0.0074 (p <.001)
+   bf1 * rgf_st_inf_exp, from 1977 (+indicator) 1977-2019 N 43  product/term  -0.0071 (no proj  -0.0102)  joint p 0.117 dAIC  -1.10 | no proj p 0.006 dAIC  -6.30 | proj 0.0050 (p 0.002)
+   bf1 x rgf_st_inf_exp, from 1977 (+indicator) 1977-2019 N 43  product/term  -0.0005 (no proj  -0.0015)  joint p 0.732 dAIC   3.40 | no proj p 0.560 dAIC   2.95 | proj 0.0066 (p <.001)
+
+  -- the screen's best row, L_chgb_1 * r_g (outturn), checks --
+   all years                                    1981-2019 N 39  product/term  -0.0121 (no proj  -0.0109)  joint p 0.100 dAIC  -4.98 | no proj p 0.016 dAIC  -4.34 | proj 0.0069 (p 0.003)
+   without 2008-11                              1981-2019 N 35  product/term  -0.0131 (no proj  -0.0129)  joint p 0.232 dAIC  -2.13 | no proj p 0.032 dAIC  -3.47 | proj 0.0068 (p 0.005)
+   to 2007                                      1981-2007 N 27  product/term  -0.0115 (no proj  -0.0094)  joint p 0.190 dAIC   1.27 | no proj p 0.377 dAIC   3.13 | proj 0.0082 (p 0.007)
+   leave-one-out, product coefficient: -0.0147 to -0.0094 (all-year -0.0121)
+
+D. int_tme: banks vs the clean part vs the APF (t-1, in place of int_tme)
+   bank part of interest, % of TME: 2006 0.00, 2008 4.16, 2009 6.17, 2011 4.51, 2014 1.99, 2017 1.34; APF transfers (MU74) reduce CG interest from 2009
+  -- from 1965
+   int_tme                                      1965-2019 N 55  product/term   0.0165 (no proj  -0.0023)  joint p 0.036 dAIC  -1.86 | no proj p 0.814 dAIC   1.94 | proj 0.0085 (p <.001)
+   clean_tme                                    1965-2019 N 55  product/term   0.0075 (no proj   0.0139)  joint p 0.497 dAIC   1.68 | no proj p 0.364 dAIC   1.22 | proj 0.0071 (p <.001)
+   bank_tme                                     1965-2019 N 55  product/term   0.0346 (no proj  -0.0069)  joint p 0.003 dAIC  -4.98 | no proj p 0.625 dAIC   1.74 | proj 0.0097 (p <.001)
+   cg_gross_tme                                 1965-2019 N 55  product/term   0.0086 (no proj   0.0239)  joint p 0.483 dAIC   1.50 | no proj p 0.115 dAIC  -0.97 | proj 0.0069 (p <.001)
+   cg_net_apf_tme                               1965-2019 N 55  product/term   0.0059 (no proj   0.0275)  joint p 0.656 dAIC   1.77 | no proj p 0.058 dAIC  -2.20 | proj 0.0069 (p <.001)
+   clean + bank parts together                  1965-2019 N 55  product/term   0.0349 (no proj  -0.0090)  joint p 0.011 dAIC  -2.99 | no proj p 0.502 dAIC   2.78 | proj 0.0097 (p <.001)
+   int_tme, years to 2007 only                  1965-2007 N 43  product/term  -0.0012 (no proj   0.0154)  joint p 0.932 dAIC   1.99 | no proj p 0.361 dAIC   1.22 | proj 0.0091 (p <.001)
+  -- from 1977
+   int_tme                                      1977-2019 N 43  product/term   0.0188 (no proj  -0.0016)  joint p 0.005 dAIC  -2.31 | no proj p 0.858 dAIC   1.97 | proj 0.0088 (p <.001)
+   clean_tme                                    1977-2019 N 43  product/term   0.0164 (no proj   0.0142)  joint p 0.111 dAIC   0.58 | no proj p 0.337 dAIC   1.21 | proj 0.0068 (p <.001)
+   bank_tme                                     1977-2019 N 43  product/term   0.0336 (no proj  -0.0071)  joint p 0.006 dAIC  -3.10 | no proj p 0.608 dAIC   1.74 | proj 0.0097 (p <.001)
+   cg_gross_tme                                 1977-2019 N 43  product/term   0.0112 (no proj   0.0126)  joint p 0.426 dAIC   1.38 | no proj p 0.479 dAIC   1.41 | proj 0.0067 (p <.001)
+   cg_net_apf_tme                               1977-2019 N 43  product/term   0.0132 (no proj   0.0238)  joint p 0.400 dAIC   1.12 | no proj p 0.169 dAIC  -0.28 | proj 0.0063 (p <.001)
+   clean + bank parts together                  1977-2019 N 43  product/term   0.0310 (no proj  -0.0114)  joint p 0.011 dAIC  -1.40 | no proj p 0.419 dAIC   2.58 | proj 0.0095 (p <.001)
+   int_tme, years to 2007 only                  1977-2007 N 31  product/term   0.0124 (no proj   0.0216)  joint p 0.369 dAIC   1.29 | no proj p 0.223 dAIC   0.25 | proj 0.0073 (p 0.003)
+
+Done.
+
+  -- checks on the both-sample version: planned one-year change (backfilled to 1971) * outturn r - g --
+   from 1965, all years                         1965-2019 N 55  product/term  -0.0098 (no proj  -0.0095)  joint p 0.013 dAIC  -5.90 | no proj p 0.003 dAIC  -5.53 | proj 0.0070 (p <.001)  PASS
+   from 1965, without 2008-11                   1965-2019 N 51  product/term  -0.0114 (no proj  -0.0118)  joint p 0.058 dAIC  -3.43 | no proj p 0.008 dAIC  -5.84 | proj 0.0071 (p <.001)  PASS
+   from 1965, to 2007                           1965-2007 N 43  product/term  -0.0097 (no proj  -0.0097)  joint p 0.030 dAIC  -0.22 | no proj p 0.080 dAIC   0.02 | proj 0.0096 (p <.001)
+      main terms: planned change 0.0266 (p 0.001), r - g -0.0096 (p 0.217), product -0.0098 (p 0.002); effect of a 1-point planned rise in borrowing at r - g = -3 / 0 / +3: +0.056 / +0.027 / -0.003
+      leave-one-out product coefficient -0.0112 to -0.0085
+   from 1977, all years                         1977-2019 N 43  product/term  -0.0081 (no proj  -0.0070)  joint p 0.099 dAIC  -1.50 | no proj p 0.011 dAIC  -4.93 | proj 0.0060 (p 0.002)  PASS
+   from 1977, without 2008-11                   1977-2019 N 39  product/term  -0.0093 (no proj  -0.0094)  joint p 0.315 dAIC   0.76 | no proj p 0.049 dAIC  -4.20 | proj 0.0060 (p 0.002)
+   from 1977, to 2007                           1977-2007 N 31  product/term  -0.0053 (no proj  -0.0046)  joint p 0.559 dAIC   4.15 | no proj p 0.492 dAIC   3.80 | proj 0.0076 (p 0.005)
+      main terms: planned change 0.0221 (p 0.053), r - g -0.0042 (p 0.707), product -0.0081 (p 0.055); effect of a 1-point planned rise in borrowing at r - g = -3 / 0 / +3: +0.046 / +0.022 / -0.002
+      leave-one-out product coefficient -0.0109 to -0.0060
+Done.
