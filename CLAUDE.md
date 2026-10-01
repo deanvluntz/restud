@@ -760,3 +760,7 @@ only partial disclosure. Do not repeat that.
   (0.0151 p<.001, dAIC -4.4; no proj -3.9). Backfill with the Budget's planned ONE-year change (1971+, zeros before) passes on BOTH samples (dAIC -1.9 / -0.8).
   GDP deflator beats CPI/RPI for tax and the one-term burden. int_tme-identity ratios (forward clean interest/TME) null; L_chg_2 / interest share passes 1981-2019.
   Screen forms: alongside = P + I; interaction = P + I + PxI; product = PxI only (not the same). Nothing in any manuscript.
+- 1 Oct 2026 (56; Sam): psnb_ratios.R: 59 ratios with a borrowing or spending measure (incl. growth/inflation-forecast partners and debt-stabilising-deficit
+  constructs) x t-1/t x {where exists, zeros+missing indicator from 1965 / 1977}: 336 rows, 13 pass, all 1980-2019 only; NONE on both samples; none with the
+  indicator. Sam prefers a missing-year indicator to zeros (indicator = own mean for the years without data; slope from real values only). HOFD inflation
+  forecasts only from 2010. Deflator is also the literature/official standard (OBR/HMT real terms); RPI lost National Statistic status (2013). Nothing in any manuscript.
