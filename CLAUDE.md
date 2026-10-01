@@ -722,3 +722,10 @@ only partial disclosure. Do not repeat that.
   wild cluster bootstrap by two-year vintage blocks (p<.001 / .007). The clean one-term core is weaker on 1977-2019 (without 2002-07: 0.0035 p .13; cluster
   bootstrap p .019) -- relevant to Sam's pending core decision. Suggested next (not run): DEMIG POLICY index as mechanism/mediation test, specification
   curve for the headline, net non-EU migration outcome. Nothing in any manuscript.
+- 1 Oct 2026 (48; Sam): remaining points of failure (IPS lag-2 serial correlation, dating conventions, zero-migration projection 1975+ only) = explain in
+  the TEXT, not more tests. Sam's answer on specification search (to refine himself): the core comes from Treasury/OBR/government literature on how fiscal
+  policy is set and has been consistent throughout; macro data assessed the other constraints; looking back from the data for missing constraints
+  (borrowing/expenditure) was limited and justified by Treasury secrecy and the thin literature. robust_extras.R: specification curve 288/288 positive and
+  p<.05 (median 0.0078, range 0.0050-0.0104; specification_curve.png/.csv); net non-EU migration per 1,000 population 0.0158 / 0.0165 (p .016 / <.001; RESET and
+  sup-F reject in level form); IPS-precision WLS 0.0064. DEMIG/QuantMig downloads BLOCKED by the network policy (zenodo.org, imi.socsci.ox.ac.uk, etc.) --
+  Sam to upload or widen access. Nothing in any manuscript.
