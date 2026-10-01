@@ -749,3 +749,7 @@ only partial disclosure. Do not repeat that.
   validated (10y r .986 vs Millennium; consols .997); no gilt measure replaces int_tme beside the projection. obr_forecast_terms.R: OBR HOFD Spring 2026
   (determinants/obr_hofd_spring2026.xlsx; TME from 1990, PSNB GBP 1970, PSNB/GDP 1977, growth 1983): 0 of 18 spending/borrowing rows pass in place of int_tme;
   planned borrowing/TME negative without the projection; growth forecasts absorbed by the projection. Nothing in any manuscript.
+- 1 Oct 2026 (53; Sam): psnb_paths.R: projected PSNB paths from OBR HOFD (MTFS from 1980; NPP vintage rule; 6 forms x h1-4 x t/t-1) screened alone and with 22
+  interest/yield indicators (alongside/interaction/product; 2,434 rows, 1981-2019 only). 9.5% pass Sam's two halves (~chance). L_chg_2 (last Budget's projected
+  2-year change in borrowing) passes ALONE (0.031 p .024; no-proj 0.040 p .006), robust to 2008-11 / to 2007 / LOO / beside int_tme, BG(2) .20 -- but r -0.79 with
+  L_ln_debt_gdp and null in its place (suppression: partial effect net of the realised debt rise). One window, best of 48 -> screening result. Nothing in any manuscript.
