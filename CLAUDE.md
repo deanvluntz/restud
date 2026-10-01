@@ -769,3 +769,6 @@ only partial disclosure. Do not repeat that.
   BOTH samples (product -0.0098 / -0.0081; proj 0.0070 / 0.0060): planned borrowing raises inflows only when r < g; fails to 2007 on both and without 2008-11 on
   1977-2019 -> crisis-dependent. int_tme = the BANK component ((ANLO-JW2P)/EBFT) entirely; clean, CG gross and CG net-of-APF null; int_tme to 2007 null.
   APF is not what drives int_tme. Nothing in any manuscript.
+- 1 Oct 2026 (58; Sam): HANDOVER.md rewritten for a takeover (state at 1 Oct: 6-parameter core, protocol, open decisions, exploration verdicts, pitfalls,
+  rejections). handover_2026-10-01/ = every file added/changed since 70cf1f5 (28 Sep) mirrored under repo_files/, 16 session uploads not otherwise in the
+  repo under session_uploads/, MANIFEST.md (paths, status, sizes, retired files). Keep HANDOVER.md current; regenerate the folder only on request.
