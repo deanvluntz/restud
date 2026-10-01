@@ -745,3 +745,7 @@ only partial disclosure. Do not repeat that.
   version). policy_index.R: HIP (UK levels 1-5 to 2010) and IMPIC (1980-2018). Projection predicts HIP labour-entry liberalisation on 1977-2010 (0.0080 p .013)
   but only via the 1998-2003 liberalisation / 2005-10 tightening (HIP UK labour codes flat 1972-97); null on 1965-2010 (1965/1971 tightenings at high
   projections); IMPIC null. No policy index enters the inflow equation or moves the projection. Nothing in any manuscript.
+- 1 Oct 2026 (52; Sam): DEMIG dropped by Sam (not worth it for a 45-page paper). gilt_yields.R: DMO-convention GRYs from BGSPrices (determinants/boe_bgs_prices.xlsx),
+  validated (10y r .986 vs Millennium; consols .997); no gilt measure replaces int_tme beside the projection. obr_forecast_terms.R: OBR HOFD Spring 2026
+  (determinants/obr_hofd_spring2026.xlsx; TME from 1990, PSNB GBP 1970, PSNB/GDP 1977, growth 1983): 0 of 18 spending/borrowing rows pass in place of int_tme;
+  planned borrowing/TME negative without the projection; growth forecasts absorbed by the projection. Nothing in any manuscript.

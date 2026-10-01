@@ -61,3 +61,18 @@ if ("gilt10_yield" %in% names(mil)) cat(sprintf("Check against the Millennium 10
   cor(Y$gry_10, mil$gilt10_yield[k], use = "pair"), mean(Y$gry_10 - mil$gilt10_yield[k], na.rm = TRUE)))
 if ("consol_yield" %in% names(mil)) cat(sprintf("Undated flat yield vs Millennium consol yield: correlation %.3f, mean gap %+.2f\n", cor(Y$flat_undated, mil$consol_yield[k], use = "pair"),
   mean(Y$flat_undated - mil$consol_yield[k], na.rm = TRUE)))
+
+# ---- In place of int_tme (Sam's purpose: borrowing measures back to 1975). 7-parameter version, 1977-2019, t-1, prior sign + (dearer
+# borrowing = more pressure); px_avg entered as the discount below par (100 - mean price), so a positive sign means capital losses on gilts.
+source("screen_engine.R"); S <- build_data()[["1964"]]$S; CORE6 <- setdiff(CORE_A, "L_int_tme"); NP <- setdiff(CORE6, "delta_oadr_10")
+Y$discount <- 100 - Y$px_avg; Y$d_gry_10 <- c(NA, diff(Y$gry_10))
+infl <- S$inflation[match(Y$year, S$year)]; Y$real_gry_10 <- Y$gry_10 - infl
+GV <- c("gry_10", "gry_all", "gry_short", "gry_long", "slope", "real_gry_10", "d_gry_10", "discount")
+for (v in GV) S[[paste0("L_", v)]] <- Y[[v]][match(S$year - 1, Y$year)]
+hc <- function(m, v) { ct <- coeftest(m, vcov. = vcovHAC(m)); if (v %in% rownames(ct)) ct[v, c(1, 4)] else c(NA, NA) }
+d <- subset(S, year >= 1977); m0 <- fit(d, CORE6, "mig_gross"); mi <- fit(d, c(CORE6, "L_int_tme"), "mig_gross"); n0 <- fit(d, NP, "mig_gross")
+cat(sprintf("\nGilt measures in place of int_tme, 1977-2019 (N %d), t-1. int_tme itself: %.4f (p %s), dAIC %.2f\n", nobs(mi), hc(mi, "L_int_tme")[1], pf2(hc(mi, "L_int_tme")[2]), AIC(mi) - AIC(m0)))
+cat(sprintf("   %-12s %16s %16s %8s %16s %8s\n", "term", "term (p)", "projection (p)", "dAIC", "no proj: term", "dAIC"))
+for (v in GV) { x <- paste0("L_", v); m <- fit(d, c(CORE6, x), "mig_gross"); n1 <- fit(d, c(NP, x), "mig_gross"); a <- hc(m, x); b <- hc(m, "delta_oadr_10"); c1 <- hc(n1, x)
+  cat(sprintf("   %-12s %8.4f (%5s) %8.4f (%5s) %8.2f %8.4f (%5s) %8.2f\n", v, a[1], pf2(a[2]), b[1], pf2(b[2]), AIC(m) - AIC(m0), c1[1], pf2(c1[2]), AIC(n1) - AIC(n0))) }
+cat("dAIC against the 6-parameter core on the same years.\n")
