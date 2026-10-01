@@ -756,3 +756,7 @@ only partial disclosure. Do not repeat that.
 - 1 Oct 2026 (54; Sam): DEFLATORS: tax_workpop = NA taxes over the HMT GDP deflator (2024-25 = 100) per WAP; debt interest (PUSF accruals) already contains the
   RPI uplift on index-linked gilts; 'real' interest terms subtract GDP-deflator inflation x net debt (same basis as taxes). rpi_check.R: RPI-based erosion fits
   WORSE (taxrint_xb dAIC -0.70/+0.18 vs -2.13/-1.96 with the deflator); deflator version stays. Exact IL split needs DMO index-linked share (not held).
+- 1 Oct 2026 (55; Sam): psnb_extend.R. Best forward-borrowing term = L_chg_2 / L_psnd_gdp (planned 2-yr borrowing change over the debt ratio): passes alone 1981-2019
+  (0.0151 p<.001, dAIC -4.4; no proj -3.9). Backfill with the Budget's planned ONE-year change (1971+, zeros before) passes on BOTH samples (dAIC -1.9 / -0.8).
+  GDP deflator beats CPI/RPI for tax and the one-term burden. int_tme-identity ratios (forward clean interest/TME) null; L_chg_2 / interest share passes 1981-2019.
+  Screen forms: alongside = P + I; interaction = P + I + PxI; product = PxI only (not the same). Nothing in any manuscript.

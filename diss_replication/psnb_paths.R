@@ -45,7 +45,7 @@ V <- split(P, P$vint); vd <- as.Date(names(V))
 path <- function(t, h) {                                                                                             # P(t-1..t+h) from the NPP-rule vintage
   ok <- which(vd <= as.Date(sprintf("%d-07-31", t)) & vd >= as.Date(sprintf("%d-02-01", t - 1)))
   for (k in rev(ok)) { v <- V[[k]]; if (min(v$target) <= t && max(v$target) >= t + h) {
-    x <- approx(v$target, v$value, xout = (t - 1):(t + h), rule = 1)$y; names(x) <- (t - 1):(t + h); return(x) } }
+    x <- if (nrow(v) < 2) v$value[match((t - 1):(t + h), v$target)] else approx(v$target, v$value, xout = (t - 1):(t + h), rule = 1)$y; names(x) <- (t - 1):(t + h); return(x) } }
   NULL }
 gdpg <- 100 * c(NA, diff(log(ot$gdp_bn))); names(gdpg) <- ot$year
 yrs <- 1975:2019; PV <- data.frame(year = yrs)
@@ -78,6 +78,7 @@ run <- function(xs, add, label, kind, pv, iv) { dd <- d[complete.cases(d[, uniqu
   data.frame(label = label, kind = kind, path = pv, ind = iv, N = nrow(dd), b1 = coef(m)[add[1]], p_with = a[2], dAIC_with = AIC(m) - AIC(b0), p_without = e[2],
              dAIC_without = AIC(n) - AIC(c0), b1_without = coef(n)[add[1]], proj = pr[1], p_proj = pr[4],
              pass = !is.na(a[2]) && a[2] < .10 && AIC(m) < AIC(b0) && !is.na(e[2]) && e[2] < .10 && AIC(n) < AIC(c0), row.names = NULL) }
+if (!isTRUE(getOption("restud.paths_only"))) {                                               # the screen (skipped when another script needs only the paths)
 R <- list()
 for (p in PTS) R[[length(R) + 1]] <- run(p, p, p, "path alone", p, "")
 for (i in IND) R[[length(R) + 1]] <- run(i, i, i, "indicator alone", "", i)
@@ -129,3 +130,5 @@ for (sp in list(list("core (realised debt change)", CORE6), list("core + L_chg_2
               if ("L_ln_debt_gdp" %in% rownames(ct)) sprintf("  debt chg %.3f (p %s)", ct["L_ln_debt_gdp", 1], pf2(ct["L_ln_debt_gdp", 4])) else "",
               if ("L_chg_2" %in% rownames(ct)) sprintf("  chg_2 %.4f (p %s)", ct["L_chg_2", 1], pf2(ct["L_chg_2", 4])) else "")) }
 cat("Done.\n")
+
+}
