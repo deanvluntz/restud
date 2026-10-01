@@ -729,3 +729,9 @@ only partial disclosure. Do not repeat that.
   p<.05 (median 0.0078, range 0.0050-0.0104; specification_curve.png/.csv); net non-EU migration per 1,000 population 0.0158 / 0.0165 (p .016 / <.001; RESET and
   sup-F reject in level form); IPS-precision WLS 0.0064. DEMIG/QuantMig downloads BLOCKED by the network policy (zenodo.org, imi.socsci.ox.ac.uk, etc.) --
   Sam to upload or widen access. Nothing in any manuscript.
+- 1 Oct 2026 (49; Sam): Sam does NOT argue that migration permanently offsets ageing, and neither does the model (10-year projected deterioration,
+  short-horizon relief; the title says "delayed the inevitable") -- engage Rowthorn (2008) / Pensions Commission (2004) as agreement, not rebuttal.
+  The tax-burden coefficient is POSITIVE (0.043 / 0.061): opposite to the voter-side fiscal channel (Facchini & Mayda 2009; Hanson, Scheve &
+  Slaughter 2007) and to Razin, Sadka & Swagel (2002) reverse causation -> a point for the text. DEMIG: IMI Oxford closed 2017, all DEMIG links
+  dead; DEMIG POLICY variables survive in the QoG Thematic Dataset on Migration, COUNTRY-YEAR-CHANGE version only (gu.se blocked here) ->
+  Sam to upload that file or its UK rows; test planned: projection -> liberalising UK changes, and does the index absorb the projection (to 2014).
