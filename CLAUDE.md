@@ -753,3 +753,6 @@ only partial disclosure. Do not repeat that.
   interest/yield indicators (alongside/interaction/product; 2,434 rows, 1981-2019 only). 9.5% pass Sam's two halves (~chance). L_chg_2 (last Budget's projected
   2-year change in borrowing) passes ALONE (0.031 p .024; no-proj 0.040 p .006), robust to 2008-11 / to 2007 / LOO / beside int_tme, BG(2) .20 -- but r -0.79 with
   L_ln_debt_gdp and null in its place (suppression: partial effect net of the realised debt rise). One window, best of 48 -> screening result. Nothing in any manuscript.
+- 1 Oct 2026 (54; Sam): DEFLATORS: tax_workpop = NA taxes over the HMT GDP deflator (2024-25 = 100) per WAP; debt interest (PUSF accruals) already contains the
+  RPI uplift on index-linked gilts; 'real' interest terms subtract GDP-deflator inflation x net debt (same basis as taxes). rpi_check.R: RPI-based erosion fits
+  WORSE (taxrint_xb dAIC -0.70/+0.18 vs -2.13/-1.96 with the deflator); deflator version stays. Exact IL split needs DMO index-linked share (not held).
