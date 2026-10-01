@@ -741,3 +741,7 @@ only partial disclosure. Do not repeat that.
   need not appear in DEMIG -> projection predicting on-paper changes = corroboration; a null = consistent with the thesis, not against it. Planned UK
   series: legal entry/stay measures targeting workers, sum of restrictiveness x magnitude per year + cumulative index. Data still needed (Demscore
   Country-Year-Change download, or HIP from Harvard Dataverse for levels to 2010).
+- 1 Oct 2026 (51; Sam): Demscore Country-Year file uploaded (determinants/demscore/migration_dataset.rds; NO DEMIG -- that needs the Country-Year-Change
+  version). policy_index.R: HIP (UK levels 1-5 to 2010) and IMPIC (1980-2018). Projection predicts HIP labour-entry liberalisation on 1977-2010 (0.0080 p .013)
+  but only via the 1998-2003 liberalisation / 2005-10 tightening (HIP UK labour codes flat 1972-97); null on 1965-2010 (1965/1971 tightenings at high
+  projections); IMPIC null. No policy index enters the inflow equation or moves the projection. Nothing in any manuscript.

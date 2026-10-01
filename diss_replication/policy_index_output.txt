@@ -1,0 +1,111 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+New names:
+* `` -> `...37`
+* `` -> `...59`
+New names:
+* `` -> `...37`
+* `` -> `...59`
+UK policy series (higher = more open), selected years
+ year hip_lab hip_entry impic_lab impic_all
+ 1965   3.375     4.000        NA        NA
+ 1968   3.375     3.750        NA        NA
+ 1971   2.875     3.417        NA        NA
+ 1980   2.875     3.442     0.632     0.669
+ 1990   2.875     3.417     0.614     0.638
+ 1998   2.925     3.475     0.578     0.602
+ 2002   3.375     3.625     0.627     0.607
+ 2003   3.750     3.750     0.581     0.580
+ 2005   3.625     3.700     0.580     0.566
+ 2008   3.425     3.633     0.623     0.498
+ 2010   3.250     3.575     0.611     0.493
+ 2012      NA        NA     0.487     0.524
+ 2018      NA        NA     0.477     0.519
+
+Years in which HIP labour-entry openness changed (1965-2010): 12 of 46
+ year d_hip_lab skill recruit projection_t projection_t1
+ 1965    -0.250  2.50    4.25        34.40         31.80
+ 1971    -0.500  2.25    3.50        14.10         15.10
+ 1998     0.050  2.35    3.50        10.28          6.14
+ 1999     0.025  2.40    3.50        16.08         10.28
+ 2001     0.050  2.50    3.50        15.14         16.54
+ 2002     0.375  2.75    4.00        25.49         15.14
+ 2003     0.375  3.50    4.00        24.38         25.49
+ 2005    -0.125  3.25    4.00        13.93         15.88
+ 2007    -0.125  3.00    4.00         3.13          8.55
+ 2008    -0.075  2.85    4.00        -2.19          3.13
+ 2009    -0.050  2.75    4.00        -7.24         -2.19
+ 2010    -0.125  2.50    4.00       -11.43         -7.24
+Mean projection (t): years liberalising 18.27, tightening 6.39, unchanged 4.78
+Correlation with the projection (levels, own window): hip_lab 0.55; hip_entry 0.73; impic_lab 0.29; impic_all 0.30
+
+==================== A. Policy as the outcome ====================
+   policy     window     model                      N   projection t (p) projection t-1 (p)   other terms
+   hip_lab    1965-2010 change, core terms        46     0.0028 (0.387)                 --   tax_workpop 0.010 (0.258); ln_debt_gdp -0.195 (0.340); ln_vac_unem -0.041 (0.183)
+   hip_lab    1965-2010 change, proj t-1          46                 --     0.0015 (0.514)   tax_workpop 0.009 (0.302); ln_debt_gdp -0.230 (0.362); ln_vac_unem -0.033 (0.231)
+   hip_lab    1965-2010 level on own lag          46     0.0062 (0.042)                 --   hip_lab 0.640 (<.001); tax_workpop 0.016 (0.029); ln_debt_gdp 0.186 (0.400); ln_vac_unem 0.039 (0.167)
+   hip_lab    1977-2010 change, core terms        34     0.0080 (0.013)                 --   tax_workpop -0.004 (0.515); ln_debt_gdp -0.117 (0.302); ln_vac_unem -0.011 (0.720)
+   hip_lab    1977-2010 change, proj t-1          34                 --     0.0063 (0.004)   tax_workpop -0.007 (0.227); ln_debt_gdp -0.196 (0.327); ln_vac_unem 0.003 (0.874)
+   hip_lab    1977-2010 level on own lag          34     0.0078 (0.019)                 --   hip_lab 0.827 (<.001); tax_workpop 0.006 (0.410); ln_debt_gdp -0.023 (0.856); ln_vac_unem 0.007 (0.851)
+   hip_entry  1965-2010 change, core terms        46     0.0002 (0.867)                 --   tax_workpop 0.005 (0.162); ln_debt_gdp -0.097 (0.296); ln_vac_unem -0.013 (0.386)
+   hip_entry  1965-2010 change, proj t-1          46                 --    -0.0006 (0.628)   tax_workpop 0.005 (0.197); ln_debt_gdp -0.106 (0.274); ln_vac_unem -0.005 (0.735)
+   hip_entry  1965-2010 level on own lag          46     0.0030 (0.015)                 --   hip_entry 0.653 (<.001); tax_workpop 0.002 (0.306); ln_debt_gdp 0.152 (0.133); ln_vac_unem 0.036 (0.024)
+   hip_entry  1977-2010 change, core terms        34     0.0028 (0.006)                 --   tax_workpop -0.001 (0.759); ln_debt_gdp -0.030 (0.481); ln_vac_unem -0.007 (0.460)
+   hip_entry  1977-2010 change, proj t-1          34                 --     0.0021 (0.003)   tax_workpop -0.002 (0.461); ln_debt_gdp -0.060 (0.402); ln_vac_unem -0.002 (0.800)
+   hip_entry  1977-2010 level on own lag          34     0.0027 (0.012)                 --   hip_entry 0.781 (<.001); tax_workpop 0.003 (0.232); ln_debt_gdp 0.023 (0.581); ln_vac_unem 0.008 (0.555)
+   impic_lab  1981-2018 change, core terms        38     0.0003 (0.737)                 --   tax_workpop -0.000 (0.931); ln_debt_gdp -0.066 (0.056); ln_vac_unem 0.004 (0.762)
+   impic_lab  1981-2018 change, proj t-1          38                 --    -0.0001 (0.803)   tax_workpop -0.002 (0.627); ln_debt_gdp -0.064 (0.092); ln_vac_unem 0.012 (0.434)
+   impic_lab  1981-2018 level on own lag          38     0.0004 (0.563)                 --   impic_lab 0.907 (<.001); tax_workpop -0.001 (0.792); ln_debt_gdp -0.059 (0.062); ln_vac_unem 0.003 (0.823)
+   impic_all  1981-2018 change, core terms        38    -0.0001 (0.865)                 --   tax_workpop -0.001 (0.384); ln_debt_gdp 0.025 (0.316); ln_vac_unem 0.002 (0.707)
+   impic_all  1981-2018 change, proj t-1          38                 --    -0.0005 (0.026)   tax_workpop -0.002 (0.075); ln_debt_gdp 0.028 (0.264); ln_vac_unem 0.010 (0.059)
+   impic_all  1981-2018 level on own lag          38     0.0011 (0.045)                 --   impic_all 0.280 (0.298); tax_workpop -0.008 (0.014); ln_debt_gdp -0.075 (0.036); ln_vac_unem -0.013 (0.156)
+
+==================== B. Mediation: the inflow equation with measured policy ====================
+   policy     window     model                        N     projection (p)         policy (p)     dAIC
+   hip_lab    1965-2010 core (same years)           46     0.0076 (<.001)                 --     0.00
+   hip_lab    1965-2010 + policy t-1                46     0.0075 (<.001)     0.0345 (0.773)     1.86
+   hip_lab    1965-2010 + policy t                  46     0.0069 (<.001)     0.0853 (0.386)     1.11
+   hip_lab    1965-2010 policy t-1, no projection   46                 --     0.0849 (0.525)    19.75
+   hip_lab    1965-2010 no projection, no policy    46                 --                 --    18.31
+   hip_lab    1977-2010 core (same years)           34     0.0069 (<.001)                 --     0.00
+   hip_lab    1977-2010 + policy t-1                34     0.0072 (<.001)     0.1439 (0.306)     0.15
+   hip_lab    1977-2010 + policy t                  34     0.0063 (<.001)     0.1019 (0.366)     0.98
+   hip_lab    1977-2010 policy t-1, no projection   34                 --     0.0739 (0.678)    12.16
+   hip_lab    1977-2010 no projection, no policy    34                 --                 --    10.50
+   hip_entry  1965-2010 core (same years)           46     0.0076 (<.001)                 --     0.00
+   hip_entry  1965-2010 + policy t-1                46     0.0075 (<.001)     0.0071 (0.972)     2.00
+   hip_entry  1965-2010 + policy t                  46     0.0070 (<.001)     0.0827 (0.607)     1.72
+   hip_entry  1965-2010 policy t-1, no projection   46                 --     0.2986 (0.169)    17.43
+   hip_entry  1965-2010 no projection, no policy    46                 --                 --    18.31
+   hip_entry  1977-2010 core (same years)           34     0.0069 (<.001)                 --     0.00
+   hip_entry  1977-2010 + policy t-1                34     0.0072 (<.001)     0.4086 (0.319)     0.31
+   hip_entry  1977-2010 + policy t                  34     0.0063 (0.001)     0.2637 (0.445)     1.25
+   hip_entry  1977-2010 policy t-1, no projection   34                 --     0.2240 (0.670)    12.15
+   hip_entry  1977-2010 no projection, no policy    34                 --                 --    10.50
+   impic_lab  1981-2018 core (same years)           38     0.0067 (0.010)                 --     0.00
+   impic_lab  1981-2018 + policy t-1                38     0.0065 (0.011)     0.4735 (0.280)     0.66
+   impic_lab  1981-2018 + policy t                  38     0.0063 (0.016)     0.3273 (0.344)     1.18
+   impic_lab  1981-2018 policy t-1, no projection   38                 --     0.5493 (0.256)     5.10
+   impic_lab  1981-2018 no projection, no policy    38                 --                 --     4.63
+   impic_all  1981-2018 core (same years)           38     0.0067 (0.010)                 --     0.00
+   impic_all  1981-2018 + policy t-1                38     0.0072 (0.008)    -0.3619 (0.632)     1.88
+   impic_all  1981-2018 + policy t                  38     0.0059 (0.037)     0.6197 (0.571)     1.82
+   impic_all  1981-2018 policy t-1, no projection   38                 --     0.9900 (0.324)     5.58
+   impic_all  1981-2018 no projection, no policy    38                 --                 --     4.63
+
+dAIC relative to the core on the same years. Policy coefficients: change in log inflows per unit of the index (HIP 1-5 scale; IMPIC 0-1).
+
+==================== C. Episodes: HIP labour-entry openness on the projection, leaving out each episode ====================
+   (HIP UK labour codes are flat 1972-97: the 1977-2010 variation is the 1998-2003 liberalisation and the 2005-10 tightening)
+   1965-2010 without (none)     N 46   change: 0.0028 (0.387)   level on own lag: 0.0062 (0.042)
+   1977-2010 without (none)     N 34   change: 0.0080 (0.013)   level on own lag: 0.0078 (0.019)
+   1965-2010 without 2002-2003  N 44   change: -0.0010 (0.458)   level on own lag: 0.0022 (0.098)
+   1977-2010 without 2002-2003  N 32   change: 0.0021 (0.017)   level on own lag: 0.0022 (<.001)
+   1965-2010 without 1998-2003  N 40   change: -0.0023 (0.114)   level on own lag: 0.0062 (0.184)
+   1977-2010 without 1998-2003  N 28   change: 0.0008 (0.293)   level on own lag: 0.0024 (0.011)
+   1965-2010 without 2005-2010  N 40   change: 0.0003 (0.880)   level on own lag: 0.0043 (0.140)
+   1977-2010 without 2005-2010  N 28   change: 0.0077 (0.128)   level on own lag: 0.0077 (0.137)
+   1965-2010 without 2008-2010  N 43   change: 0.0016 (0.597)   level on own lag: 0.0058 (0.060)
+   1977-2010 without 2008-2010  N 31   change: 0.0108 (0.024)   level on own lag: 0.0098 (0.034)
+Done.
